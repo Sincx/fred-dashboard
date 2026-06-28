@@ -1,21 +1,16 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
+import path from "path";
 
-const WIKI = "C:\\Users\\Mike\\Documents\\Fred\\Fred\\wiki";
-
-const FILES = {
-  p1: `${WIKI}\\finance\\paper-trading\\Paper Trading Portfolio.md`,
-  p2: `${WIKI}\\finance\\paper-trading-vol\\portfolio.md`,
-  equity: `${WIKI}\\finance\\portfolio-overview.md`,
-};
+const DATA_DIR = path.join(process.cwd(), "data", "portfolios");
 
 export async function GET() {
   const result: Record<string, string> = {};
-  for (const [key, filePath] of Object.entries(FILES)) {
+  for (const [key, file] of [["p1", "p1.md"], ["p2", "p2.md"], ["equity", "equity.md"]] as const) {
     try {
-      result[key] = fs.readFileSync(filePath, "utf-8");
+      result[key] = fs.readFileSync(path.join(DATA_DIR, file), "utf-8");
     } catch {
-      result[key] = `Error reading ${filePath}`;
+      result[key] = `Error reading ${file}`;
     }
   }
   return NextResponse.json(result);

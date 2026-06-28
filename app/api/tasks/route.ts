@@ -2,41 +2,36 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const TASKS_DIR = "C:\\Users\\Mike\\.claude\\scheduled-tasks";
-
 export interface Task {
   id: string;
   description: string;
-  schedule: string;
-  enabled: boolean;
-  skill?: string;
+  prompt: string;
 }
+
+const TASKS_FILE = path.join(process.cwd(), "data", "tasks.json");
+
+const SCHEDULE_LABELS: Record<string, string> = {
+  "wiki-memory-update": "Daily 9:53 PM",
+  "clippings-sorter": "Daily 11:18 PM",
+  "daily-paper-trader": "Weekdays 8:06 PM",
+  "portfolio-refresh": "Sat 2:09 PM",
+  "podcast-summarizer": "Sat 10:02 AM",
+  "podcast-recommender": "Thu 10:02 AM",
+  "growth-value-tracker": "Mon 9:02 AM",
+  "sector-performance-tracker": "Mon 9:01 AM",
+  "recipe-recommender": "Fri 9:04 AM",
+  "book-summarizer": "1st of month",
+  "book-recommender": "15th of month",
+  "spinoff-monitor": "1st of month",
+  "daily-paper-trader-vol": "Weekdays 8:06 PM",
+};
 
 export async function GET() {
   try {
-    const entries = fs.readdirSync(TASKS_DIR, { withFileTypes: true });
-    const tasks: Task[] = [];
-
-    for (const entry of entries) {
-      if (!entry.isDirectory()) continue;
-      const skillPath = path.join(TASKS_DIR, entry.name, "SKILL.md");
-      let description = entry.name;
-      let schedule = "";
-      let skill = "";
-
-      if (fs.existsSync(skillPath)) {
-        const raw = fs.readFileSync(skillPath, "utf-8");
-        const descMatch = raw.match(/^#\s+(.+)/m);
-        const schedMatch = raw.match(/schedule[:\s]+(.+)/i);
-        if (descMatch) description = descMatch[1].trim();
-        if (schedMatch) schedule = schedMatch[1].trim();
-        skill = raw.slice(0, 500);
-      }
-
-      tasks.push({ id: entry.name, description, schedule, enabled: true, skill });
-    }
-
-    return NextResponse.json(tasks);
+    const raw = fs.readFileSync(TASKS_FILE, "utf-8");
+    const tasks: Task[] = JSON.parse(raw);
+    const enriched = tasks.map((t) => ({ ...t, schedule: SCHEDULE_LABELS[t.id] ?? "" }));
+    return NextResponse.json(enriched);
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }

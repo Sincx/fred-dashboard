@@ -1,47 +1,54 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { exec } from "child_process";
-import { promisify } from "util";
+import Anthropic from "@anthropic-ai/sdk";
 
-const execAsync = promisify(exec);
-const TASKS_DIR = "C:\\Users\\Mike\\.claude\\scheduled-tasks";
-const OUTPUTS_DIR = "C:\\Users\\Mike\\fred-dashboard\\outputs";
+const TASKS_FILE = path.join(process.cwd(), "data", "tasks.json");
+
+interface Task {
+  id: string;
+  description: string;
+  prompt: string;
+}
 
 export async function POST(
   _req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   const { id } = params;
-  const skillPath = path.join(TASKS_DIR, id, "SKILL.md");
 
-  if (!fs.existsSync(skillPath)) {
+  let task: Task | undefined;
+  try {
+    const tasks: Task[] = JSON.parse(fs.readFileSync(TASKS_FILE, "utf-8"));
+    task = tasks.find((t) => t.id === id);
+  } catch (err) {
+    return NextResponse.json({ error: `Failed to load tasks: ${err}` }, { status: 500 });
+  }
+
+  if (!task) {
     return NextResponse.json({ error: "Task not found" }, { status: 404 });
   }
 
-  if (!fs.existsSync(OUTPUTS_DIR)) {
-    fs.mkdirSync(OUTPUTS_DIR, { recursive: true });
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ error: "ANTHROPIC_API_KEY not set" }, { status: 500 });
   }
 
-  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-  const outFile = path.join(OUTPUTS_DIR, `${id}-${timestamp}.txt`);
-
-  // Run via Claude Code CLI: claude --print <skill prompt>
-  // The skill prompt is the content of SKILL.md
-  const skill = fs.readFileSync(skillPath, "utf-8");
-  const firstLine = skill.split("\n").find((l) => l.trim())?.trim() ?? id;
-
   try {
-    const { stdout, stderr } = await execAsync(
-      `claude --print "${firstLine.replace(/"/g, '\\"')}"`,
-      { timeout: 300_000, windowsHide: true }
-    );
-    const output = stdout || stderr || "(no output)";
-    fs.writeFileSync(outFile, `# ${id}\nRun at: ${new Date().toISOString()}\n\n${output}`);
-    return NextResponse.json({ success: true, output, file: path.basename(outFile) });
-  } catch (err: unknown) {
-    const msg = err instanceof Error ? err.message : String(err);
-    fs.writeFileSync(outFile, `# ${id}\nRun at: ${new Date().toISOString()}\n\nERROR: ${msg}`);
-    return NextResponse.json({ success: false, error: msg, file: path.basename(outFile) }, { status: 500 });
+    const client = new Anthropic({ apiKey });
+    const message = await client.messages.create({
+      model: "claude-sonnet-4-6",
+      max_tokens: 4096,
+      messages: [{ role: "user", content: task.prompt }],
+    });
+
+    const output = message.content
+      .filter((b) => b.type === "text")
+      .map((b) => (b as { type: "text"; text: string }).text)
+      .join("\n");
+
+    return NextResponse.json({ success: true, output, taskId: id, runAt: new Date().toISOString() });
+  } catch (err) {
+    return NextResponse.json({ success: false, error: String(err) }, { status: 500 });
   }
 }
