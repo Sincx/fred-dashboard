@@ -14,11 +14,13 @@ Copy-Item "$WIKI\finance\portfolio-overview.md"                    "$REPO\data\p
 # Rebuild tasks.json from SKILL.md files
 Write-Host "Rebuilding tasks.json..."
 $tasks = Get-ChildItem $TASKS_SRC -Directory | ForEach-Object {
-  $skill = Get-Content "$($_.FullName)\SKILL.md" -Raw -ErrorAction SilentlyContinue
-  $firstLine = ($skill -split "`n" | Where-Object { $_.Trim() } | Select-Object -First 1) -replace '^#+\s*', ''
-  @{ id = $_.Name; description = $firstLine.Trim(); prompt = $skill }
+  $skill = [System.IO.File]::ReadAllText("$($_.FullName)\SKILL.md")
+  $desc = if ($skill -match 'description:\s*(.+)') { $matches[1] -replace '[—–].*','' | ForEach-Object { $_.Trim() } } else { $_.Name }
+  [ordered]@{ id = $_.Name; description = $desc; prompt = $skill }
 }
-$tasks | ConvertTo-Json -Depth 5 | Out-File "$REPO\data\tasks.json" -Encoding utf8
+$json = ConvertTo-Json -InputObject @($tasks) -Depth 3 -Compress:$false
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText("$REPO\data\tasks.json", $json, $utf8NoBom)
 
 # Commit and push
 Set-Location $REPO
