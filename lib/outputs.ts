@@ -25,3 +25,7 @@ export function loadOutputs(): StoredOutput[] {
 export function clearOutputs() {
   localStorage.removeItem(OUTPUTS_KEY);
 }
+
+export function saveOutputList(items: StoredOutput[]) {
+  try { localStorage.setItem(OUTPUTS_KEY, JSON.stringify(items)); } catch {}
+}

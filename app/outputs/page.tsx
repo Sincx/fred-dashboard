@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { RefreshCw, FileText, ChevronDown, ChevronRight, Trash2 } from "lucide-react";
-import { type StoredOutput, loadOutputs, clearOutputs } from "@/lib/outputs";
+import { type StoredOutput, loadOutputs, clearOutputs, saveOutputList } from "@/lib/outputs";
 
 function timeAgo(iso: string): string {
   try {
@@ -34,7 +34,7 @@ export default function OutputsPage() {
 
   function removeOne(id: string) {
     const updated = outputs.filter((o) => o.id !== id);
-    localStorage.setItem(OUTPUTS_KEY, JSON.stringify(updated));
+    saveOutputList(updated);
     setOutputs(updated);
     if (expanded === id) setExpanded(null);
   }
