@@ -21,10 +21,19 @@ function parsePositionsTable(md: string): { headers: string[]; rows: string[][] 
   const lines = md.split("\n");
   const tableStart = lines.findIndex((l) => l.trim().startsWith("|") && l.includes("Ticker"));
   if (tableStart === -1) return null;
-  const tableLines = lines.slice(tableStart).filter((l) => l.trim().startsWith("|") && !l.match(/^\|[-: |]+\|$/));
-  if (tableLines.length < 2) return null;
-  const parse = (line: string) => line.split("|").map((c) => c.trim()).filter((_, i, a) => i > 0 && i < a.length - 1);
-  return { headers: parse(tableLines[0]), rows: tableLines.slice(1).map(parse) };
+
+  // Collect only the contiguous block — stop at first non-| line so we don't bleed into later tables
+  const block: string[] = [];
+  for (let i = tableStart; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (!t.startsWith("|")) break;
+    if (!t.match(/^\|[-: |]+\|$/)) block.push(lines[i]); // skip separator rows
+  }
+
+  if (block.length < 2) return null;
+  const parse = (line: string) =>
+    line.split("|").map((c) => c.trim()).filter((_, i, a) => i > 0 && i < a.length - 1);
+  return { headers: parse(block[0]), rows: block.slice(1).map(parse) };
 }
 
 function PnlBadge({ val }: { val: string }) {
@@ -40,7 +49,11 @@ function isPnlHeader(h: string) {
 
 function PortfolioTable({ md }: { md: string }) {
   const table = parsePositionsTable(md);
-  if (!table) return <pre className="text-xs whitespace-pre-wrap" style={{ color: "var(--text-secondary)" }}>{md.slice(0, 2000)}</pre>;
+  if (!table) return (
+    <pre className="text-xs whitespace-pre-wrap" style={{ color: "var(--text-secondary)" }}>
+      {md.slice(0, 2000)}
+    </pre>
+  );
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-xs border-collapse">
@@ -53,8 +66,7 @@ function PortfolioTable({ md }: { md: string }) {
         </thead>
         <tbody>
           {table.rows.map((row, i) => (
-            <tr key={i} className="border-b transition-colors hover:opacity-80"
-              style={{ borderColor: "var(--border)" }}>
+            <tr key={i} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
               {row.map((cell, j) => (
                 <td key={j} className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
                   {isPnlHeader(table.headers[j] ?? "") ? <PnlBadge val={cell} /> : cell}
@@ -76,18 +88,22 @@ function extractSection(md: string, heading: string): string {
   return lines.slice(start, end === -1 ? undefined : end).join("\n");
 }
 
-function SummaryStats({ md }: { md: string }) {
-  const pnlMatch = md.match(/Net P&L.*?\*\*([^*]+)\*\*/i) ??
-    md.match(/Net P&L[^|]+\|([^|]+)\|/i);
+// Stats for P1/P2 — extracted from markdown summary text
+function TradingStats({ md }: { md: string }) {
+  const pnlMatch = md.match(/Net P&L.*?\*\*([^*]+)\*\*/i) ?? md.match(/Net P&L[^|]+\|([^|]+)\|/i);
   const totalMatch = md.match(/Total portfolio value[^|]+\|([^|]+)\|/i);
   const tradesMatch = md.match(/Total trades[^:]*:\s*(\d+)/i);
+
+  if (!pnlMatch && !totalMatch && !tradesMatch) return null;
 
   return (
     <div className="grid grid-cols-3 gap-3 mb-4">
       {pnlMatch && (
         <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
           <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Net P&L</p>
-          <p className="font-semibold text-sm" style={{ color: pnlMatch[1].includes("−") || pnlMatch[1].includes("-") ? "var(--accent-red)" : "var(--accent-green)" }}>
+          <p className="font-semibold text-sm" style={{
+            color: pnlMatch[1].includes("−") || pnlMatch[1].includes("-") ? "var(--accent-red)" : "var(--accent-green)"
+          }}>
             {pnlMatch[1].trim()}
           </p>
         </div>
@@ -104,6 +120,57 @@ function SummaryStats({ md }: { md: string }) {
           <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{tradesMatch[1]}</p>
         </div>
       )}
+    </div>
+  );
+}
+
+// Stats for Equity tab — computed from the table's Change column
+function EquityStats({ md }: { md: string }) {
+  const table = parsePositionsTable(md);
+  if (!table) return null;
+
+  const changeIdx = table.headers.findIndex((h) => /change/i.test(h));
+  const tickerIdx = table.headers.findIndex((h) => /ticker/i.test(h));
+  if (changeIdx === -1) return null;
+
+  const parseVal = (v: string) => {
+    const m = v.replace("−", "-").match(/([-+]?\d+\.?\d*)/);
+    return m ? parseFloat(m[1]) : null;
+  };
+
+  const changes = table.rows
+    .map((r, i) => ({ val: parseVal(r[changeIdx] ?? ""), ticker: r[tickerIdx] ?? String(i) }))
+    .filter((x): x is { val: number; ticker: string } => x.val !== null);
+
+  if (!changes.length) return null;
+
+  const avg = changes.reduce((s, x) => s + x.val, 0) / changes.length;
+  const best = changes.reduce((a, b) => b.val > a.val ? b : a);
+  const worst = changes.reduce((a, b) => b.val < a.val ? b : a);
+  const pos = changes.filter((x) => x.val >= 0).length;
+
+  return (
+    <div className="grid grid-cols-4 gap-3 mb-4">
+      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Positions</p>
+        <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
+          {changes.length} &nbsp;<span style={{ color: "var(--text-muted)", fontWeight: 400 }}>({pos} up)</span>
+        </p>
+      </div>
+      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Avg Change</p>
+        <p className="font-semibold text-sm" style={{ color: avg >= 0 ? "var(--accent-green)" : "var(--accent-red)" }}>
+          {avg >= 0 ? "+" : ""}{avg.toFixed(1)}%
+        </p>
+      </div>
+      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Best · {best.ticker}</p>
+        <p className="font-semibold text-sm" style={{ color: "var(--accent-green)" }}>+{best.val.toFixed(1)}%</p>
+      </div>
+      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Worst · {worst.ticker}</p>
+        <p className="font-semibold text-sm" style={{ color: "var(--accent-red)" }}>{worst.val.toFixed(1)}%</p>
+      </div>
     </div>
   );
 }
@@ -144,8 +211,11 @@ export default function PortfoliosPage() {
         </div>
       ) : data ? (
         <div className="card">
-          <SummaryStats md={data[tab]} />
-          <PortfolioTable md={extractSection(data[tab], "Open Positions")} />
+          {tab === "equity"
+            ? <EquityStats md={data.equity} />
+            : <TradingStats md={data[tab]} />
+          }
+          <PortfolioTable md={tab === "equity" ? data.equity : extractSection(data[tab], "Open Positions")} />
         </div>
       ) : (
         <p style={{ color: "var(--accent-red)" }}>Failed to load portfolios</p>
