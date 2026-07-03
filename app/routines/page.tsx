@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Play, Clock, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { saveOutput } from "@/lib/outputs";
+import { Clock, Copy, Check, Loader2 } from "lucide-react";
 
 interface Task {
   id: string;
@@ -10,12 +9,27 @@ interface Task {
   schedule: string;
 }
 
-type RunState = "idle" | "running" | "done" | "error";
+function CopyBtn({ text, label = "Copy" }: { text: string; label?: string }) {
+  const [copied, setCopied] = useState(false);
+  function handle() {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
+  return (
+    <button
+      className="btn-primary flex items-center gap-1.5 flex-shrink-0"
+      onClick={handle}
+      style={copied ? { backgroundColor: "var(--accent-green)" } : {}}
+    >
+      {copied ? <><Check size={13} /> Copied!</> : <><Copy size={13} /> {label}</>}
+    </button>
+  );
+}
 
 export default function RoutinesPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [states, setStates] = useState<Record<string, RunState>>({});
-  const [outputs, setOutputs] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,46 +39,21 @@ export default function RoutinesPage() {
       .catch(() => setLoading(false));
   }, []);
 
-  async function runTask(task: Task) {
-    setStates((s) => ({ ...s, [task.id]: "running" }));
-    setOutputs((o) => ({ ...o, [task.id]: "" }));
-    try {
-      const res = await fetch(`/api/tasks/${task.id}/run`, { method: "POST" });
-      const data = await res.json();
-      const output = data.output ?? data.error ?? "";
-      const success = res.ok && data.success;
-      setOutputs((o) => ({ ...o, [task.id]: output }));
-      setStates((s) => ({ ...s, [task.id]: success ? "done" : "error" }));
-      // Persist to localStorage so Outputs tab can read it
-      saveOutput({
-        taskId: task.id,
-        title: task.description || task.id,
-        output,
-        runAt: data.runAt ?? new Date().toISOString(),
-        success,
-      });
-    } catch (err) {
-      const msg = String(err);
-      setOutputs((o) => ({ ...o, [task.id]: msg }));
-      setStates((s) => ({ ...s, [task.id]: "error" }));
-      saveOutput({
-        taskId: task.id,
-        title: task.description || task.id,
-        output: msg,
-        runAt: new Date().toISOString(),
-        success: false,
-      });
-    }
-  }
-
   return (
     <div>
       <h1 className="text-2xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
         Daily Routines
       </h1>
-      <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>
-        {tasks.length} scheduled tasks · click Run to trigger on demand via Claude API
+      <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
+        {tasks.length} scheduled tasks
       </p>
+
+      {/* Explanation banner */}
+      <div className="rounded-lg px-4 py-3 mb-6 text-sm"
+        style={{ backgroundColor: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", color: "var(--text-secondary)" }}>
+        <strong style={{ color: "var(--accent)" }}>How to run:</strong> These routines use Claude Code skills and need local wiki file access.
+        Copy the command below and paste it into <strong style={{ color: "var(--text-primary)" }}>Claude Code</strong> (this app or the CLI) to execute.
+      </div>
 
       {loading ? (
         <div className="flex items-center gap-2" style={{ color: "var(--text-muted)" }}>
@@ -73,53 +62,29 @@ export default function RoutinesPage() {
       ) : (
         <div className="grid gap-3">
           {tasks.map((task) => {
-            const state = states[task.id] ?? "idle";
+            const cmd = `/${task.id}`;
             return (
               <div key={task.id} className="card">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-medium text-sm" style={{ color: "var(--text-primary)" }}>
-                        {task.description || task.id}
-                      </span>
-                      {state === "done" && <span className="badge-green">Done</span>}
-                      {state === "error" && <span className="badge-red">Error</span>}
-                    </div>
-                    <div className="flex items-center gap-1.5 mt-1">
-                      <Clock size={12} style={{ color: "var(--text-muted)" }} />
-                      <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-                        {task.schedule || "—"}
-                      </span>
-                      <span className="text-xs" style={{ color: "var(--text-muted)" }}>·</span>
-                      <span className="text-xs font-mono" style={{ color: "var(--text-muted)" }}>{task.id}</span>
+                    <p className="font-medium text-sm mb-1" style={{ color: "var(--text-primary)" }}>
+                      {task.description || task.id}
+                    </p>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <div className="flex items-center gap-1.5">
+                        <Clock size={12} style={{ color: "var(--text-muted)" }} />
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                          {task.schedule || "On demand"}
+                        </span>
+                      </div>
+                      <code className="text-xs px-2 py-0.5 rounded font-mono"
+                        style={{ backgroundColor: "var(--bg-tertiary)", color: "var(--accent)", border: "1px solid var(--border)" }}>
+                        {cmd}
+                      </code>
                     </div>
                   </div>
-
-                  <button
-                    className="btn-primary flex items-center gap-1.5 flex-shrink-0"
-                    onClick={() => runTask(task)}
-                    disabled={state === "running"}
-                  >
-                    {state === "running" ? (
-                      <><Loader2 size={13} className="animate-spin" /> Running…</>
-                    ) : (
-                      <><Play size={13} /> Run</>
-                    )}
-                  </button>
+                  <CopyBtn text={cmd} label="Copy to Claude Code" />
                 </div>
-
-                {outputs[task.id] && (
-                  <div className="mt-3 rounded-lg p-3 text-xs font-mono overflow-x-auto"
-                    style={{ backgroundColor: "var(--bg-tertiary)", color: state === "error" ? "var(--accent-red)" : "var(--text-secondary)" }}>
-                    <div className="flex items-center gap-1.5 mb-1">
-                      {state === "error"
-                        ? <><AlertCircle size={12} /><span className="font-medium">Error</span></>
-                        : <><CheckCircle size={12} style={{ color: "var(--accent-green)" }} /><span style={{ color: "var(--accent-green)" }}>Completed — saved to Outputs</span></>
-                      }
-                    </div>
-                    <pre className="whitespace-pre-wrap break-words">{outputs[task.id].slice(0, 600)}{outputs[task.id].length > 600 ? "\n…(see Outputs tab)" : ""}</pre>
-                  </div>
-                )}
               </div>
             );
           })}
