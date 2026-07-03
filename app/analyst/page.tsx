@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Play, Copy, Check, Loader2, TrendingUp, BarChart2 } from "lucide-react";
-import { saveOutput } from "../routines/page";
+import { saveOutput } from "@/lib/outputs";
 
 const EQUITY_TICKERS = [
   "GOOGL","AMZN","MSFT","WDAY","MSTR","BRK.B","TER","NGLOY","GLNCY",

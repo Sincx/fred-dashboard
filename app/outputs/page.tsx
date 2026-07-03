@@ -2,25 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { RefreshCw, FileText, ChevronDown, ChevronRight, Trash2 } from "lucide-react";
-
-interface StoredOutput {
-  id: string;
-  taskId: string;
-  title: string;
-  output: string;
-  runAt: string;
-  success: boolean;
-}
-
-const OUTPUTS_KEY = "fred_outputs";
-
-function loadOutputs(): StoredOutput[] {
-  try { return JSON.parse(localStorage.getItem(OUTPUTS_KEY) || "[]"); } catch { return []; }
-}
-
-function clearOutputs() {
-  localStorage.removeItem(OUTPUTS_KEY);
-}
+import { type StoredOutput, loadOutputs, clearOutputs } from "@/lib/outputs";
 
 function timeAgo(iso: string): string {
   try {

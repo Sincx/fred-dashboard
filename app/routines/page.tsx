@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Play, Clock, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { saveOutput } from "@/lib/outputs";
 
 interface Task {
   id: string;
@@ -10,26 +11,6 @@ interface Task {
 }
 
 type RunState = "idle" | "running" | "done" | "error";
-
-export interface StoredOutput {
-  id: string;
-  taskId: string;
-  title: string;
-  output: string;
-  runAt: string;
-  success: boolean;
-}
-
-const OUTPUTS_KEY = "fred_outputs";
-const MAX_OUTPUTS = 50;
-
-export function saveOutput(entry: Omit<StoredOutput, "id">) {
-  try {
-    const existing: StoredOutput[] = JSON.parse(localStorage.getItem(OUTPUTS_KEY) || "[]");
-    const updated = [{ ...entry, id: `${entry.taskId}-${Date.now()}` }, ...existing].slice(0, MAX_OUTPUTS);
-    localStorage.setItem(OUTPUTS_KEY, JSON.stringify(updated));
-  } catch {}
-}
 
 export default function RoutinesPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
