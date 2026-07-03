@@ -71,4 +71,18 @@ body {
     background-color: rgba(71, 85, 105, 0.3);
     color: var(--text-secondary);
   }
+  .input-field {
+    @apply w-full px-3 py-2 rounded-lg text-sm;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .input-field:focus {
+    border-color: var(--accent);
+  }
+  .input-field option {
+    background-color: var(--bg-tertiary);
+  }
 }

@@ -90,7 +90,8 @@ function extractSection(md: string, heading: string): string {
 
 // Stats for P1/P2 — extracted from markdown summary text
 function TradingStats({ md }: { md: string }) {
-  const pnlMatch = md.match(/Net P&L.*?\*\*([^*]+)\*\*/i) ?? md.match(/Net P&L[^|]+\|([^|]+)\|/i);
+  // Match table row: | **Net P&L** | **+$1,869 (+7.48%)** |
+  const pnlMatch = md.match(/\|\s*\*\*Net P&L\*\*\s*\|\s*\*\*([^*]+)\*\*/i);
   const totalMatch = md.match(/Total portfolio value[^|]+\|([^|]+)\|/i);
   const tradesMatch = md.match(/Total trades[^:]*:\s*(\d+)/i);
 

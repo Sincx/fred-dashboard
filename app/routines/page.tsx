@@ -11,6 +11,26 @@ interface Task {
 
 type RunState = "idle" | "running" | "done" | "error";
 
+export interface StoredOutput {
+  id: string;
+  taskId: string;
+  title: string;
+  output: string;
+  runAt: string;
+  success: boolean;
+}
+
+const OUTPUTS_KEY = "fred_outputs";
+const MAX_OUTPUTS = 50;
+
+export function saveOutput(entry: Omit<StoredOutput, "id">) {
+  try {
+    const existing: StoredOutput[] = JSON.parse(localStorage.getItem(OUTPUTS_KEY) || "[]");
+    const updated = [{ ...entry, id: `${entry.taskId}-${Date.now()}` }, ...existing].slice(0, MAX_OUTPUTS);
+    localStorage.setItem(OUTPUTS_KEY, JSON.stringify(updated));
+  } catch {}
+}
+
 export default function RoutinesPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [states, setStates] = useState<Record<string, RunState>>({});
@@ -24,26 +44,35 @@ export default function RoutinesPage() {
       .catch(() => setLoading(false));
   }, []);
 
-  async function runTask(id: string) {
-    setStates((s) => ({ ...s, [id]: "running" }));
-    setOutputs((o) => ({ ...o, [id]: "" }));
+  async function runTask(task: Task) {
+    setStates((s) => ({ ...s, [task.id]: "running" }));
+    setOutputs((o) => ({ ...o, [task.id]: "" }));
     try {
-      const res = await fetch(`/api/tasks/${id}/run`, { method: "POST" });
+      const res = await fetch(`/api/tasks/${task.id}/run`, { method: "POST" });
       const data = await res.json();
       const output = data.output ?? data.error ?? "";
-      setOutputs((o) => ({ ...o, [id]: output }));
-      setStates((s) => ({ ...s, [id]: res.ok && data.success ? "done" : "error" }));
-      // Save to outputs store
-      if (data.runAt) {
-        fetch("/api/outputs", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ taskId: id, output, runAt: data.runAt, success: data.success }),
-        }).catch(() => {});
-      }
+      const success = res.ok && data.success;
+      setOutputs((o) => ({ ...o, [task.id]: output }));
+      setStates((s) => ({ ...s, [task.id]: success ? "done" : "error" }));
+      // Persist to localStorage so Outputs tab can read it
+      saveOutput({
+        taskId: task.id,
+        title: task.description || task.id,
+        output,
+        runAt: data.runAt ?? new Date().toISOString(),
+        success,
+      });
     } catch (err) {
-      setOutputs((o) => ({ ...o, [id]: String(err) }));
-      setStates((s) => ({ ...s, [id]: "error" }));
+      const msg = String(err);
+      setOutputs((o) => ({ ...o, [task.id]: msg }));
+      setStates((s) => ({ ...s, [task.id]: "error" }));
+      saveOutput({
+        taskId: task.id,
+        title: task.description || task.id,
+        output: msg,
+        runAt: new Date().toISOString(),
+        success: false,
+      });
     }
   }
 
@@ -87,9 +116,8 @@ export default function RoutinesPage() {
 
                   <button
                     className="btn-primary flex items-center gap-1.5 flex-shrink-0"
-                    onClick={() => runTask(task.id)}
+                    onClick={() => runTask(task)}
                     disabled={state === "running"}
-                    aria-label={`Run ${task.id}`}
                   >
                     {state === "running" ? (
                       <><Loader2 size={13} className="animate-spin" /> Running…</>
@@ -105,7 +133,7 @@ export default function RoutinesPage() {
                     <div className="flex items-center gap-1.5 mb-1">
                       {state === "error"
                         ? <><AlertCircle size={12} /><span className="font-medium">Error</span></>
-                        : <><CheckCircle size={12} style={{ color: "var(--accent-green)" }} /><span style={{ color: "var(--accent-green)" }}>Completed — see Outputs tab for full result</span></>
+                        : <><CheckCircle size={12} style={{ color: "var(--accent-green)" }} /><span style={{ color: "var(--accent-green)" }}>Completed — saved to Outputs</span></>
                       }
                     </div>
                     <pre className="whitespace-pre-wrap break-words">{outputs[task.id].slice(0, 600)}{outputs[task.id].length > 600 ? "\n…(see Outputs tab)" : ""}</pre>

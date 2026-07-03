@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calendar, BarChart2, FileText } from "lucide-react";
+import { Calendar, BarChart2, FileText, TrendingUp, BookOpen } from "lucide-react";
 
 const nav = [
-  { href: "/routines", label: "Daily Routines", icon: Calendar },
-  { href: "/portfolios", label: "Portfolios", icon: BarChart2 },
-  { href: "/outputs", label: "Outputs", icon: FileText },
+  { href: "/routines",  label: "Daily Routines",  icon: Calendar },
+  { href: "/portfolios",label: "Portfolios",       icon: BarChart2 },
+  { href: "/analyst",   label: "Analyst",          icon: TrendingUp },
+  { href: "/logger",    label: "Logger",           icon: BookOpen },
+  { href: "/outputs",   label: "Outputs",          icon: FileText },
 ];
 
 export default function Sidebar() {
