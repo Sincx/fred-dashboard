@@ -3,5 +3,11 @@
   "label": "Clippings Sorter",
   "schedule": "Daily 11:18 PM",
   "icon": "📎",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-05T21:19:11.000Z",
+      "summary": "No new clippings",
+      "content": "Clippings folder empty."
+    }
+  ]
 }
