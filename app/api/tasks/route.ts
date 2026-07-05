@@ -23,6 +23,7 @@ const SCHEDULE_LABELS: Record<string, string> = {
   "book-summarizer": "1st of month",
   "book-recommender": "15th of month",
   "spinoff-monitor": "1st of month",
+  "wiki-thinker": "Daily 12:17 PM",
   "daily-paper-trader-vol": "Weekdays 8:06 PM",
 };
 

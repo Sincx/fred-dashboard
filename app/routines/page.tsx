@@ -226,6 +226,7 @@ const TASK_ORDER = [
   "book-summarizer",
   "spinoff-monitor",
   "clippings-sorter",
+  "wiki-thinker",
   "wiki-memory-update",
 ];
 

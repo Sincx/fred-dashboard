@@ -1,0 +1,7 @@
+{
+  "taskId": "wiki-thinker",
+  "label": "Wiki Thinker",
+  "schedule": "Daily 12:17 PM",
+  "icon": "💡",
+  "runs": []
+}
