@@ -3,5 +3,18 @@
   "label": "Wiki Memory Update",
   "schedule": "Daily 9:53 PM",
   "icon": "🧠",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-05T21:54:31.8378140+02:00",
+      "summary": "Memory index updated — new Meta domain (wiki-thinker) added, 1 new scheduled task noted, 1 new open thread",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-05",
+        "Added new scheduled task wiki-thinker to the Scheduled Maintenance table, noting its first run occurred 2026-07-05 (same day as creation, ahead of its 2026-07-06 schedule)",
+        "Added a new 'Meta' row to Domain Content Status summarizing wiki/cross-domain-themes.md and the wiki-thinker task's first-run output (2 investigation ideas, 2 cross-domain connections)",
+        "Added a new Open Threads entry pointing to the 4 unactioned items surfaced by wiki-thinker's first run (creatine dosing gap, Learning/Finance framework cross-link, Books/Finance fraud-memoir cross-link, AI-capex-bubble thesis not extended to Crypto), with a note to check wiki/cross-domain-themes.md directly going forward rather than duplicating detail in memory",
+        "No open threads were resolved this run",
+        "Appended scheduled-task log line to log.md for 2026-07-05"
+      ]
+    }
+  ]
 }
