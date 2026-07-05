@@ -1,0 +1,7 @@
+{
+  "taskId": "clippings-sorter",
+  "label": "Clippings Sorter",
+  "schedule": "Daily 11:18 PM",
+  "icon": "📎",
+  "runs": []
+}

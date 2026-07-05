@@ -1,0 +1,7 @@
+{
+  "taskId": "podcast-summarizer",
+  "label": "Podcast Summarizer",
+  "schedule": "Sat 10:02 AM",
+  "icon": "🎙",
+  "runs": []
+}

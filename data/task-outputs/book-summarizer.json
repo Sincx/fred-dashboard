@@ -1,0 +1,7 @@
+{
+  "taskId": "book-summarizer",
+  "label": "Book Summarizer",
+  "schedule": "1st of month",
+  "icon": "📚",
+  "runs": []
+}

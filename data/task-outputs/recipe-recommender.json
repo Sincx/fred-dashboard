@@ -1,0 +1,7 @@
+{
+  "taskId": "recipe-recommender",
+  "label": "Recipe Recommender",
+  "schedule": "Fri 9:04 AM",
+  "icon": "🍽",
+  "runs": []
+}

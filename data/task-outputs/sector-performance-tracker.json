@@ -1,0 +1,7 @@
+{
+  "taskId": "sector-performance-tracker",
+  "label": "Sector Tracker",
+  "schedule": "Mon 9:01 AM",
+  "icon": "🏭",
+  "runs": []
+}

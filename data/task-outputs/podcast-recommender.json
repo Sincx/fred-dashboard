@@ -1,0 +1,7 @@
+{
+  "taskId": "podcast-recommender",
+  "label": "Podcast Recommender",
+  "schedule": "Thu 10:02 AM",
+  "icon": "🎧",
+  "runs": []
+}

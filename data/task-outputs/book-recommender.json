@@ -1,0 +1,7 @@
+{
+  "taskId": "book-recommender",
+  "label": "Book Recommender",
+  "schedule": "15th of month",
+  "icon": "📖",
+  "runs": []
+}

@@ -1,0 +1,7 @@
+{
+  "taskId": "daily-paper-trader",
+  "label": "Paper Trader",
+  "schedule": "Weekdays 8:06 PM",
+  "icon": "📈",
+  "runs": []
+}

@@ -1,0 +1,7 @@
+{
+  "taskId": "spinoff-monitor",
+  "label": "Spinoff Monitor",
+  "schedule": "1st of month",
+  "icon": "🔍",
+  "runs": []
+}
