@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-06T21:55:20+02:00",
+      "summary": "Memory index updated — paper trading + market tracker figures refreshed, 1 new open thread (2 unindexed pages)",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-06",
+        "Finance domain row: added 2026-07-06 paper trading update (P1 WMT / P2 GPC trades, P1 24 open @ +6.70%, P2 8 open @ -3.95%, LHA T1 hit) and market tracker refresh (growth/value spread -1090bps, sector tracker data-quality flag on SMH/XLK)",
+        "Finance domain row: noted new 2026-07-05 research page model-meta-compute-release-market-impact-2026-07-05.md (Mode D scenario model)",
+        "AI & Tech domain row: noted new 2026-07-05 research page data-meta-compute-cloud-pivot-2026-07-05.md (Meta Compute rental pivot)",
+        "Open Threads: replaced stale 2026-07-03 paper-trading snapshot with current 2026-07-06 figures",
+        "Open Threads: added new thread flagging that both 2026-07-05 Meta-compute pages are not yet added to wiki/index.md",
+        "No open threads were resolved this run",
+        "Appended scheduled-task log line to log.md for 2026-07-06"
+      ]
+    },
+    {
       "runAt": "2026-07-05T21:54:31.8378140+02:00",
       "summary": "Memory index updated — new Meta domain (wiki-thinker) added, 1 new scheduled task noted, 1 new open thread",
       "content": [
