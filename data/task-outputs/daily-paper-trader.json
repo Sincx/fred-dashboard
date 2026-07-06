@@ -3,5 +3,28 @@
   "label": "Paper Trader",
   "schedule": "Weekdays 8:06 PM",
   "icon": "📈",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-06T20:20:24+02:00",
+      "summary": "P1: WMT (E) · P2: GPC (C)",
+      "picks": {
+        "p1": {
+          "ticker": "WMT",
+          "strategy": "E — Sector Rotation",
+          "entry": 111.84,
+          "stop": 95.06,
+          "t1": 139.80,
+          "t2": 167.76
+        },
+        "p2": {
+          "ticker": "GPC",
+          "strategy": "C — Volume Spike",
+          "entry": 129.89,
+          "stop": 110.41,
+          "t1": 162.36
+        }
+      },
+      "content": "Walmart rides the 2026 rotation out of AI-semiconductors into Consumer Staples/Industrials/Energy, reinforced by weak June NFP data pushing rate-cut expectations that favor defensives.\n\nGenuine Parts spiked +12% on ~2.27x average volume after a Bloomberg report of O'Reilly Automotive's ~$10bn cash bid for its NAPA auto-parts division, confirming GPC's own February 2026 breakup review."
+    }
+  ]
 }
