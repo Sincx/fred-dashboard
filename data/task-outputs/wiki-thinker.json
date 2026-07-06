@@ -3,5 +3,11 @@
   "label": "Wiki Thinker",
   "schedule": "Daily 12:17 PM",
   "icon": "💡",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-06T12:13:00+02:00",
+      "summary": "1 new idea, 1 new connection logged",
+      "content": "**Investigation idea:** Meta Compute scenario model (model-meta-compute-release-market-impact-2026-07-05) explicitly flags idea-crwv.md for an update that hasn't happened — CoreWeave's page still shows only the 2026-06-27 MONITOR verdict with no mention of the Jul 1 Meta Compute news or the model's Bear-case neocloud risk (customer concentration, contract non-renewal). Next step: fold in the model's investment implications (avoid/underweight near-term; watch MSFT/GOOGL/AMZN 2027 capex guidance language as the Neutral-to-Bear trigger).\n\n**Cross-domain connection:** Finance's own fraud-detection framework (concept-short-selling.md's Hindenburg red-flags checklist) has never been turned on Fred's own Crypto holdings. Two of his six Crypto portfolio positions, $LUCKY and $TEST, show exactly the pattern the checklist is built to catch — CertiK security ratings of 3.5/10 (both) and −89%/−98% drawdowns from ATH — with no dedicated company page explaining thesis or continued-hold rationale, unlike $EV and $SDEX which do have company pages. The rigor Fred applies to shorting other people's frauds has never been pointed at his own bag."
+    }
+  ]
 }
