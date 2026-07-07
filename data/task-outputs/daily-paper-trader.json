@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-07T20:19:13+02:00",
+      "summary": "P1: RIGL (F) · P2: SKIP",
+      "picks": {
+        "p1": {
+          "ticker": "RIGL",
+          "strategy": "F — Small Cap Value",
+          "entry": 40.26,
+          "stop": 34.22,
+          "t1": 50.33,
+          "t2": 60.39
+        }
+      },
+      "content": "Rigel Pharmaceuticals trades at a ~2.2x P/E against guided full-year 2026 profitability and 26% YoY product-sales growth, a rare cheap-and-growing small-cap picked up as capital rotated out of a broad semiconductor selloff (-4.5%) into value.\n\nNo Portfolio 2 trade today — the volume-spike candidate (Crinetics, on Vertex's $10B all-cash bid) was rejected as a capped merger-arb with no upside, and yesterday's chip-sector gainers (WDC, TER) were themselves caught in today's rout."
+    },
+    {
       "runAt": "2026-07-06T20:20:24+02:00",
       "summary": "P1: WMT (E) · P2: GPC (C)",
       "picks": {
