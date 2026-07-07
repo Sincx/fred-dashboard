@@ -7,14 +7,16 @@ interface Portfolios {
   p1: string;
   p2: string;
   equity: string;
+  trading: string;
 }
 
-type Tab = "p1" | "p2" | "equity";
+type Tab = "p1" | "p2" | "equity" | "trading";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "p1", label: "P1 — 7-Strategy Rotation" },
   { id: "p2", label: "P2 — Volume Spike" },
   { id: "equity", label: "Equity Portfolio" },
+  { id: "trading", label: "Trading Portfolio" },
 ];
 
 function parsePositionsTable(md: string): { headers: string[]; rows: string[][] } | null {
@@ -212,11 +214,11 @@ export default function PortfoliosPage() {
         </div>
       ) : data ? (
         <div className="card">
-          {tab === "equity"
-            ? <EquityStats md={data.equity} />
-            : <TradingStats md={data[tab]} />
+          {tab === "p1" || tab === "p2"
+            ? <TradingStats md={data[tab]} />
+            : <EquityStats md={tab === "equity" ? data.equity : data.trading} />
           }
-          <PortfolioTable md={tab === "equity" ? data.equity : extractSection(data[tab], "Open Positions")} />
+          <PortfolioTable md={tab === "p1" || tab === "p2" ? extractSection(data[tab], "Open Positions") : tab === "equity" ? data.equity : data.trading} />
         </div>
       ) : (
         <p style={{ color: "var(--accent-red)" }}>Failed to load portfolios</p>
