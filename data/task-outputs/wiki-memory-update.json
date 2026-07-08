@@ -5,6 +5,17 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-08T21:55:00+02:00",
+      "summary": "Memory index updated — Meta/wiki-thinker rollup (4th run), no other domain changes logged today",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-08",
+        "Meta domain row: rolled the 2026-07-08 wiki-thinker run into the summary — new open idea (Health's Goals section still a stub despite Learning's framework-opportunity-cost naming the exact P11 exercise to close it) and 2 new connections (Seth Godin and Tim Ferriss both bridge Learning and Health as unlinked authors — Godin's breathwork post and Wood's Ferriss-published brain-health post have no back-links to their respective author/source pages)",
+        "Run count now 4 (2026-07-05, -06, -07, -08); no other scheduled task produced a log entry today as of this run (no new paper trade, no clippings-sorter activity)",
+        "No open threads resolved this run; no new Open Threads entries added (Meta domain row explicitly defers detail to wiki/cross-domain-themes.md rather than duplicating in Open Threads)",
+        "Appended scheduled-task log line to log.md for 2026-07-08"
+      ]
+    },
+    {
       "runAt": "2026-07-07T21:55:00+02:00",
       "summary": "Memory index updated — Meta/wiki-thinker rollup, paper trading refreshed, 1 open thread resolved, 1 new open thread added",
       "content": [
@@ -17,20 +28,6 @@
         "Open Threads: added new thread flagging Micron (MU) has no fundamental idea page despite AI & Tech's HBM research ranking it structurally advantaged — next step /equity-analyst MU",
         "Left the pre-existing 'Meta-compute pages not in wiki/index.md' open thread in place — still unresolved, confirmed both files still exist and are still unindexed",
         "Appended scheduled-task log line to log.md for 2026-07-07"
-      ]
-    },
-    {
-      "runAt": "2026-07-06T21:55:20+02:00",
-      "summary": "Memory index updated — paper trading + market tracker figures refreshed, 1 new open thread (2 unindexed pages)",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-06",
-        "Finance domain row: added 2026-07-06 paper trading update (P1 WMT / P2 GPC trades, P1 24 open @ +6.70%, P2 8 open @ -3.95%, LHA T1 hit) and market tracker refresh (growth/value spread -1090bps, sector tracker data-quality flag on SMH/XLK)",
-        "Finance domain row: noted new 2026-07-05 research page model-meta-compute-release-market-impact-2026-07-05.md (Mode D scenario model)",
-        "AI & Tech domain row: noted new 2026-07-05 research page data-meta-compute-cloud-pivot-2026-07-05.md (Meta Compute rental pivot)",
-        "Open Threads: replaced stale 2026-07-03 paper-trading snapshot with current 2026-07-06 figures",
-        "Open Threads: added new thread flagging that both 2026-07-05 Meta-compute pages are not yet added to wiki/index.md",
-        "No open threads were resolved this run",
-        "Appended scheduled-task log line to log.md for 2026-07-06"
       ]
     }
   ]
