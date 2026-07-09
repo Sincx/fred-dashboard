@@ -23,6 +23,7 @@ updated: 2026-07-09 (APH price corrected 2026-07-09)
 | Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 799.5p | £719.55 | −0.1% | UK homewares retailer; downtrend from 1,249p high |
 | IQVIA Holdings | IQV | NYSE | USD | 12 | $163.99 | $1,967.88 | $204.64 | $2,455.68 | +24.8% | Healthcare data + CRO; earnings 22 Jul |
 | Keller Group | KLR | LSE | GBp | 50 | 2,418p | £1,209.00 | 3,108p | £1,554.00 | +28.5% | Ground engineering; +16% today on profit upgrade |
+| **Cash** | — | — | EUR | — | — | — | — | **€3,000** | — | Available capital |
 
 > LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). Prices last updated: **2026-07-07**.
 > No stop losses currently in place.
