@@ -5,6 +5,28 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-09T20:27:45+02:00",
+      "summary": "P1: PENG (C) · P2: PENG (C)",
+      "picks": {
+        "p1": {
+          "ticker": "PENG",
+          "strategy": "C — Volume Spike",
+          "entry": 78.47,
+          "stop": 66.70,
+          "t1": 98.09,
+          "t2": 117.71
+        },
+        "p2": {
+          "ticker": "PENG",
+          "strategy": "C — Volume Spike",
+          "entry": 82.60,
+          "stop": 70.21,
+          "t1": 103.25
+        }
+      },
+      "content": "Penguin Solutions picked up in Portfolio 1 at the previous close after a Q3 FY26 double beat (revenue +47.6% YoY) and raised guidance (22% vs prior ~12%) drove a +25.1% session on ~4.0x average volume.\n\nSame name entered in Portfolio 2 at today's open (+5.26% gap from prior close) to test whether the volume-spike momentum survives an overnight gap, alongside the same AI/semiconductor tailwind lifting the sector +4.5% despite fresh US-Iran airstrikes."
+    },
+    {
       "runAt": "2026-07-08T20:21:54+02:00",
       "summary": "P1: CVX (E) · P2: SKIP",
       "picks": {
@@ -18,21 +40,6 @@
         }
       },
       "content": "Chevron picked up as a macro-override sector-rotation trade after the Iran ceasefire collapsed, sending WTI/Brent up 3% and energy stocks sharply higher (CVX +3.5%) while AI/semiconductor names extended their selloff.\n\nNo Portfolio 2 trade today — Fiserv (bank M&A interest in its Star debit network) was the closest candidate, but its volume was only ~1.3x average and the stock faded intraday, short of the 2x volume-spike bar."
-    },
-    {
-      "runAt": "2026-07-07T20:19:13+02:00",
-      "summary": "P1: RIGL (F) · P2: SKIP",
-      "picks": {
-        "p1": {
-          "ticker": "RIGL",
-          "strategy": "F — Small Cap Value",
-          "entry": 40.26,
-          "stop": 34.22,
-          "t1": 50.33,
-          "t2": 60.39
-        }
-      },
-      "content": "Rigel Pharmaceuticals trades at a ~2.2x P/E against guided full-year 2026 profitability and 26% YoY product-sales growth, a rare cheap-and-growing small-cap picked up as capital rotated out of a broad semiconductor selloff (-4.5%) into value.\n\nNo Portfolio 2 trade today — the volume-spike candidate (Crinetics, on Vertex's $10B all-cash bid) was rejected as a capped merger-arb with no upside, and yesterday's chip-sector gainers (WDC, TER) were themselves caught in today's rout."
     }
   ]
 }
