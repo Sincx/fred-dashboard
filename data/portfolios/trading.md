@@ -16,7 +16,7 @@ updated: 2026-07-09
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $176.35 | $1,939.85 | +22.9% | Connector/interconnect leader; AI data centre demand |
+| Amphenol Corp | APH | NYSE | USD | 5 | $143.50 | $717.50 | $176.35 | $881.75 | +22.9% | Connector/interconnect leader; AI data centre demand |
 | Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 737p | £1,474.00 | +7.1% | UK luxury watch retailer; FY26 results 14 Jul |
 | Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,948p | £890.64 | +7.0% | UK construction & infrastructure |
 | Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $373.91 | $1,495.64 | −3.4% | AI networking + custom chips; semi sector |
