@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-09 (APH price corrected 2026-07-09)
+updated: 2026-07-09
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-07**.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-09**.
 
 ---
 
@@ -21,12 +21,30 @@ updated: 2026-07-09 (APH price corrected 2026-07-09)
 | Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,456p | £802.08 | −3.6% | UK construction & infrastructure |
 | Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $388.69 | $1,554.76 | +0.4% | AI networking + custom chips; semi sector |
 | Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 779.5p | £701.55 | −2.6% | UK homewares retailer; downtrend from 1,249p high |
-| IQVIA Holdings | IQV | NYSE | USD | 12 | $163.99 | $1,967.88 | $203.79 | $2,445.48 | +24.3% | Healthcare data + CRO; earnings 22 Jul |
+| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $208.00 | $1,872.00 | +26.8% | Healthcare data + CRO; earnings 22 Jul — trimmed 3 shares |
 | Keller Group | KLR | LSE | GBp | 50 | 2,418p | £1,209.00 | 3,108p | £1,554.00 | +28.5% | Ground engineering; price stale (unavailable 2026-07-09) |
-| **Cash** | — | — | EUR | — | — | — | — | **€3,000** | — | Available capital |
+| **Cash** | — | — | EUR | — | — | — | — | **€3,517** | — | Available capital |
 
 > LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). Prices last updated: **2026-07-09** (KLR stale).
 > No stop losses currently in place.
+
+---
+
+## Realised Gains & Losses
+
+| Date | Ticker | Shares | Entry | Exit | Gross P&L | Gross P&L (€) | CGT @21% | Commission | Net Gain (€) | Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-07-09 | IQV | 3 sold | $163.99 | $208.00 | +$132.03 | +€115.39 | −€24.23 | −€4.37 | **+€86.79** | Trim — RSI 71 overbought, earnings risk 22 Jul |
+
+**YTD Summary**
+
+| Metric | Value |
+| --- | --- |
+| Total gross gains (€) | €115.39 |
+| Total CGT paid (€) | €24.23 |
+| Total commissions (€) | €4.37 |
+| **Net realised gains (€)** | **€86.79** |
+| Transactions | 1 |
 
 ---
 
@@ -47,7 +65,7 @@ updated: 2026-07-09 (APH price corrected 2026-07-09)
 
 | Currency | Amount | Notes |
 | --- | --- | --- |
-| EUR | €3,000 | Standing cash reserve — available for new trades and rebalancing |
+| EUR | €3,517 | €3,000 starting reserve + €517 net from IQV trim (2026-07-09) |
 
 ---
 
