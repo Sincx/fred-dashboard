@@ -3,5 +3,11 @@
   "label": "Recipe Recommender",
   "schedule": "Fri 9:04 AM",
   "icon": "🍽",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-10T09:06:38.8948026+02:00",
+      "summary": "3 new recipes: Skillet Gnocchi with Sausage & Cherry Tomatoes, Bordeaux-Style Steak Frites, Cereal Milk Panna Cotta",
+      "content": "1. Skillet Gnocchi with Sausage, Cherry Tomatoes and Basil — inspired by Lucinda Scala Quinn (Mad Hungry). A one-pan, 25-minute weeknight fix built on peak-season cherry tomatoes.\n2. Bordeaux-Style Steak Frites with Peppercorn Sauce — inspired by Anthony Bourdain's classical French training. A weekend technique project: hard sear, double-fried chips, brandy pan sauce.\n3. Cereal Milk Panna Cotta — inspired by David Chang / Momofuku's Milk Bar. The wild card: a make-ahead dessert built on steeped cornflake milk."
+    }
+  ]
 }
