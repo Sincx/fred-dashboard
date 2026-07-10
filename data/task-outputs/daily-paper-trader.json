@@ -5,6 +5,28 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-10T20:23:21+02:00",
+      "summary": "P1: OTIS (A) · P2: AZZ (C)",
+      "picks": {
+        "p1": {
+          "ticker": "OTIS",
+          "strategy": "A — Value",
+          "entry": 72.00,
+          "stop": 61.20,
+          "t1": 90.00,
+          "t2": 108.00
+        },
+        "p2": {
+          "ticker": "AZZ",
+          "strategy": "C — Volume Spike",
+          "entry": 141.43,
+          "stop": 120.22,
+          "t1": 176.79
+        }
+      },
+      "content": "Otis Worldwide picked up in Portfolio 1 at the previous close as a wide-moat, Service-segment-driven industrial trading near its 52-week low, a ~31% discount to Morningstar's $105 fair value estimate, amid a broad Materials/Financials/Discretionary sell-off.\n\nAZZ Inc entered Portfolio 2 at today's open (+0.38% gap) after a Q1 FY2027 EPS beat and raised FY26 guidance drove a genuine ~2.39x average-volume spike, confirmed by computing a 20-day average directly from price history after two other candidates (MXL, WDFC) failed to clear the 2x bar."
+    },
+    {
       "runAt": "2026-07-09T20:27:45+02:00",
       "summary": "P1: PENG (C) · P2: PENG (C)",
       "picks": {
@@ -25,21 +47,6 @@
         }
       },
       "content": "Penguin Solutions picked up in Portfolio 1 at the previous close after a Q3 FY26 double beat (revenue +47.6% YoY) and raised guidance (22% vs prior ~12%) drove a +25.1% session on ~4.0x average volume.\n\nSame name entered in Portfolio 2 at today's open (+5.26% gap from prior close) to test whether the volume-spike momentum survives an overnight gap, alongside the same AI/semiconductor tailwind lifting the sector +4.5% despite fresh US-Iran airstrikes."
-    },
-    {
-      "runAt": "2026-07-08T20:21:54+02:00",
-      "summary": "P1: CVX (E) · P2: SKIP",
-      "picks": {
-        "p1": {
-          "ticker": "CVX",
-          "strategy": "E — Sector Rotation",
-          "entry": 174.01,
-          "stop": 147.91,
-          "t1": 217.51,
-          "t2": 261.02
-        }
-      },
-      "content": "Chevron picked up as a macro-override sector-rotation trade after the Iran ceasefire collapsed, sending WTI/Brent up 3% and energy stocks sharply higher (CVX +3.5%) while AI/semiconductor names extended their selloff.\n\nNo Portfolio 2 trade today — Fiserv (bank M&A interest in its Star debit network) was the closest candidate, but its volume was only ~1.3x average and the stock faded intraday, short of the 2x volume-spike bar."
     }
   ]
 }
