@@ -3,5 +3,11 @@
   "label": "Podcast Summarizer",
   "schedule": "Sat 10:02 AM",
   "icon": "🎙",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-11T10:02:00+01:00",
+      "summary": "No new podcasts to summarise",
+      "content": "Nothing to summarise this run."
+    }
+  ]
 }
