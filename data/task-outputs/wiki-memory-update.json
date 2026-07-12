@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-12T23:56:25+02:00",
+      "summary": "Memory index updated — 6 new AI-Tech/Finance source pages, Finance folder reorg, email-to-clipping task, Meta rollup (3 missed thinker runs)",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-12",
+        "Scheduled Maintenance: fixed stale wiki-memory-update time (was 9:47 PM, now 11:45 PM); added email-to-clipping (daily 1:06 PM — checks botfred47@gmail.com for unread mail, saves as .md clippings, labels processed in Gmail; created 2026-07-12)",
+        "Key Decisions: added Finance root reorg (2026-07-12) — 24 flat root files split into finance/technical-analysis-snapshots/ (11 TA write-ups) and finance/morningstar/ (12 source-morningstar-* + watchlist); ~40 wikilinks rewritten vault-wide",
+        "Domain Content Status — AI & Tech: added 3 new source pages (Micron US chipmaking, Arora token pricing, Information AM digest) plus HBM/constraint-model updates (GlobalWafers wafer oligopoly node, Micron Q3 earnings, SK Hynix IPO, CoreWeave bull counterpoint) and a Meta Compute capacity-figure update, all not yet in wiki/index.md",
+        "Domain Content Status — Finance: added 3 new source pages (Morningstar cheap stocks, 10 best companies, InvestWithAI data sources), OTIS/AZZ/PENG paper trades (P1 28 open +6.07%, P2 9 open −5.50%), trading portfolio KLR trim, and the 8-subfolder reorg note",
+        "Domain Content Status — Meta: run count corrected from 4 to 7 (had missed 2026-07-09, -10, -11 wiki-thinker runs still sitting unprocessed in log.md); rolled in newest connections (Sports Betting/Kelly Criterion; Workday deploy-time claim vs AI adoption survey data)",
+        "Open Threads: refreshed paper-trading and trading-portfolio snapshots to 2026-07-10 figures; expanded the 'pages not yet in wiki/index.md' thread from 2 to 8 pages; added 2 new AI-Tech threads (Meta capacity reconciliation gap, Workday/AI-adoption contradiction); trimmed two stale month-old health-check paragraphs (2026-06-07, 2026-06-13) to short pointers since superseded by current Domain Content Status data",
+        "Note: log.md has an ordering quirk — most new entries append at the bottom in true chronological order, but a block of entries also gets prepended at the top; had to grep the whole file for date patterns to confirm no entries were missed (found and incorporated a reorg entry and a thinker run that were sitting past the last memory-update marker in the bottom block)",
+        "Appended memory-update log line to log.md for 2026-07-12"
+      ]
+    },
+    {
       "runAt": "2026-07-09T21:55:00+02:00",
       "summary": "Memory index updated — portfolio-management skill + scheduled task, Morning Briefing tab, trading portfolio configured, IQV trim recorded",
       "content": [
@@ -14,17 +29,6 @@
         "Key Decisions: added 3 new entries — (1) scheduler SKILL.md overwrite nuance (full instructions kept in SKILL.md, never call update_scheduled_task); (2) trading portfolio mirrors wiki and must be kept in sync; (3) Morning Briefing tab parsing format (ALL-CAPS section headers)",
         "Open Threads (Finance/Paper Trading): updated to 2026-07-08 figures (P1: 26 open, +5.68%; P2: 7 open, −5.93%) and added trading portfolio live state (7 positions, €3,517 cash, IQV trimmed 3 shares @$208, net realised +€86.79 YTD)",
         "Appended memory-update log line to log.md for 2026-07-09"
-      ]
-    },
-    {
-      "runAt": "2026-07-08T21:55:00+02:00",
-      "summary": "Memory index updated — Meta/wiki-thinker rollup (4th run), no other domain changes logged today",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-08",
-        "Meta domain row: rolled the 2026-07-08 wiki-thinker run into the summary — new open idea (Health's Goals section still a stub despite Learning's framework-opportunity-cost naming the exact P11 exercise to close it) and 2 new connections (Seth Godin and Tim Ferriss both bridge Learning and Health as unlinked authors — Godin's breathwork post and Wood's Ferriss-published brain-health post have no back-links to their respective author/source pages)",
-        "Run count now 4 (2026-07-05, -06, -07, -08); no other scheduled task produced a log entry today as of this run (no new paper trade, no clippings-sorter activity)",
-        "No open threads resolved this run; no new Open Threads entries added (Meta domain row explicitly defers detail to wiki/cross-domain-themes.md rather than duplicating in Open Threads)",
-        "Appended scheduled-task log line to log.md for 2026-07-08"
       ]
     }
   ]
