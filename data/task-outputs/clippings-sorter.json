@@ -5,12 +5,12 @@
   "icon": "📎",
   "runs": [
     {
-      "runAt": "2026-07-10T23:19:26+02:00",
-      "summary": "No new clippings",
-      "content": "Clippings folder empty."
+      "runAt": "2026-07-12T18:29:36+02:00",
+      "summary": "6 clippings processed, 1 flagged",
+      "content": "ai-tech: Micron US chipmaking $250bn/2035 -> source-micron-us-chipmaking-2026-07-09.md; Palo Alto CEO Arora token pricing -90% needed -> source-arora-token-pricing-2026-07-09.md; The Information AM digest (OpenAI ChatGPT Work, Meta Muse Spark 1.1 API + 7GW->14GW capacity, SK Hynix $26.5bn IPO) -> source-information-am-2026-07-10.md. finance: Morningstar 2 Cheap Stocks (AVGO/NVDA) -> source-morningstar-cheap-stocks-july-2026.md; Morningstar 10 Best Companies -> source-morningstar-10-best-companies-2026-06-30.md; Invest with AI - 19 finance data sources -> source-investwithai-llm-data-sources-2026-07-01.md. Flagged: 'Meta jumps into AI coding market...md' contained mismatched/duplicate Micron content -- left in Clippings for user review, not moved."
     },
     {
-      "runAt": "2026-07-09T23:19:09+02:00",
+      "runAt": "2026-07-10T23:19:26+02:00",
       "summary": "No new clippings",
       "content": "Clippings folder empty."
     }
