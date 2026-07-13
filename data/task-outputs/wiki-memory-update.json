@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-13T23:52:56+02:00",
+      "summary": "Memory index updated — Meta wiki-thinker run count to 9, Palantir/Nemotron AI-Tech source page, trading portfolio review (IQV trim recommended), new open thread on AI-capex bear case vs Fred's live holdings",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-13",
+        "Domain Content Status — Meta: run count updated from 7 to 9 (2026-07-05 through -13, daily); newest connection logged — Fred's live trading portfolio (APH, AVGO) is a direct real-money bet on the AI capex thesis, never checked against the wiki's own bear-case research (Grantham, Klement, Clapham)",
+        "Domain Content Status — Finance: added 2026-07-13 trading-portfolio review — 7 positions (APH/MGNS/AVGO/DNLM Watch); WOSG signaled ADD but disqualified (€1,500 sizing cap + earnings 14 Jul); IQV recommended TRIM 2/9 shares (RSI 87.5 + earnings 22 Jul); KLR Watch (RSI 83.7); no new entries. No new paper-trading (P1/P2) trades since 2026-07-10 — figures unchanged",
+        "Domain Content Status — AI & Tech: added source-palantir-nvidia-nemotron-2026-07-02.md (Palantir CEO Karp — some U.S. government customers switched from Anthropic/OpenAI to Nvidia Nemotron via Palantir); already in wiki/index.md with reverse links",
+        "Open Threads: added new thread — AI-capex bear-case research (Grantham/Klement/Clapham) never checked against Fred's own APH/AVGO holdings; the 8-page 'not yet in wiki/index.md' thread confirmed still open (grepped index.md, no matches)",
+        "Appended memory-update log line to log.md for 2026-07-13"
+      ]
+    },
+    {
       "runAt": "2026-07-12T23:56:25+02:00",
       "summary": "Memory index updated — 6 new AI-Tech/Finance source pages, Finance folder reorg, email-to-clipping task, Meta rollup (3 missed thinker runs)",
       "content": [
@@ -17,18 +29,6 @@
         "Open Threads: refreshed paper-trading and trading-portfolio snapshots to 2026-07-10 figures; expanded the 'pages not yet in wiki/index.md' thread from 2 to 8 pages; added 2 new AI-Tech threads (Meta capacity reconciliation gap, Workday/AI-adoption contradiction); trimmed two stale month-old health-check paragraphs (2026-06-07, 2026-06-13) to short pointers since superseded by current Domain Content Status data",
         "Note: log.md has an ordering quirk — most new entries append at the bottom in true chronological order, but a block of entries also gets prepended at the top; had to grep the whole file for date patterns to confirm no entries were missed (found and incorporated a reorg entry and a thinker run that were sitting past the last memory-update marker in the bottom block)",
         "Appended memory-update log line to log.md for 2026-07-12"
-      ]
-    },
-    {
-      "runAt": "2026-07-09T21:55:00+02:00",
-      "summary": "Memory index updated — portfolio-management skill + scheduled task, Morning Briefing tab, trading portfolio configured, IQV trim recorded",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-09",
-        "Active Skills: added /portfolio-management (morning portfolio review — live prices, TA signals per position, portfolio shape, trade ideas; leverages technical-analyst and equity-analyst skills)",
-        "Scheduled Maintenance: added portfolio-management-briefing (Mon–Fri 3AM CEST — writes morning briefing to fred-dashboard data file, commits/pushes to GitHub). Note on SKILL.md overwrite risk documented.",
-        "Key Decisions: added 3 new entries — (1) scheduler SKILL.md overwrite nuance (full instructions kept in SKILL.md, never call update_scheduled_task); (2) trading portfolio mirrors wiki and must be kept in sync; (3) Morning Briefing tab parsing format (ALL-CAPS section headers)",
-        "Open Threads (Finance/Paper Trading): updated to 2026-07-08 figures (P1: 26 open, +5.68%; P2: 7 open, −5.93%) and added trading portfolio live state (7 positions, €3,517 cash, IQV trimmed 3 shares @$208, net realised +€86.79 YTD)",
-        "Appended memory-update log line to log.md for 2026-07-09"
       ]
     }
   ]
