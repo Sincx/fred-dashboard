@@ -80,9 +80,13 @@ TODAY'S TRADE IDEAS
   ── NEW POSITIONS ──────────────────────────────────────────────────────────────
   No trades today / Capital held in reserve: checked wiki/finance/Investment ideas.md
   — Eden Red (ERF.PA) is the only Active thesis and it has no live TA trigger recorded
-  (no daily bars pulled for it this session). morningstar-watchlist.md does not exist
-  at the expected path, so it could not be checked this run. Nothing warranted a new
-  entry today; €4,078 remains in reserve after accounting for the IQV trim above.
+  (no daily bars pulled for it this session). Also checked
+  wiki/finance/morningstar/morningstar-watchlist.md (moved there in the 2026-07-12
+  vault reorg — 24 names across Wide/Narrow/No-moat tiers, incl. AVGO and APH already
+  held). Prices on that page are stale (last checked 2026-05-10) and no fresh TA was
+  pulled for any of the ~20 watchlist names this session (out of scope for a daily
+  pass — would need ~20 additional API calls). Nothing warranted a new entry today;
+  €4,078 remains in reserve after accounting for the IQV trim above.
 
 PORTFOLIO RISKS TO WATCH
   - No stop losses are in place on any of the 7 positions — the full book carries
@@ -97,9 +101,6 @@ PORTFOLIO RISKS TO WATCH
     €1,500 large-position cap; no further sizing headroom regardless of outcome.
   - Tech/AI is the single largest sector exposure (30.8% of invested) via APH + AVGO,
     both of which would likely move together in an AI-infrastructure drawdown.
-  - morningstar-watchlist.md referenced in the task instructions was not found at
-    C:\Users\Mike\Documents\Fred\Fred\wiki\finance\morningstar-watchlist.md — new-idea
-    screening this run was limited to Investment ideas.md only.
 
 NEXT ACTIONS
   1. Execute IQV trim: sell 2 of 9 shares (~25%) at market near $207.85 — nets ~€56
@@ -110,6 +111,7 @@ NEXT ACTIONS
      technical Add signal — position already exceeds the €1,500 large-position cap.
   4. Monitor KLR (RSI 83.7); reassess a further trim only if RSI stays elevated
      without a fresh catalyst, or if weight approaches the 20% threshold.
-  5. Locate or recreate morningstar-watchlist.md so new-idea screening can resume
-     covering both source files next session.
+  5. Pull fresh TA (60d bars, RSI/MACD/SMA50) for the ~20 morningstar-watchlist.md
+     names next session — prices there are stale since 2026-05-10 and none have been
+     screened against the same signal rules used for the live book.
 ════════════════════════════════════════════════════════
