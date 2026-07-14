@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-14T20:28:46+02:00",
+      "summary": "P1: CMCL (F) · P2: SKIP",
+      "picks": {
+        "p1": {
+          "ticker": "CMCL",
+          "strategy": "F — Small Cap Value",
+          "entry": 17.33,
+          "stop": 14.73,
+          "t1": 21.66,
+          "t2": 26.00
+        }
+      },
+      "content": "Caledonia Mining picked up in Portfolio 1 at the previous close as a deep-value small-cap gold miner (P/E ~6x, P/B ~1.4x) with BlackRock crossing major shareholding thresholds three days running and a gold-price tailwind from escalating Strait of Hormuz tensions; SKYT was stopped out (−18.39%) and TNET hit T1 (+26.79%) the same session.\n\nNo Portfolio 2 trade today — checked GS, BAC, WFC, BIIB, ST, CRCL, WDFC, SAIA, RTX and LMT but none cleared the ≥2x average-volume bar with an intact catalyst; AppLovin (APP) was stopped out (−19.52%) on a single volatile session amid a broader high-multiple tech de-rating."
+    },
+    {
       "runAt": "2026-07-10T20:23:21+02:00",
       "summary": "P1: OTIS (A) · P2: AZZ (C)",
       "picks": {
@@ -25,28 +40,6 @@
         }
       },
       "content": "Otis Worldwide picked up in Portfolio 1 at the previous close as a wide-moat, Service-segment-driven industrial trading near its 52-week low, a ~31% discount to Morningstar's $105 fair value estimate, amid a broad Materials/Financials/Discretionary sell-off.\n\nAZZ Inc entered Portfolio 2 at today's open (+0.38% gap) after a Q1 FY2027 EPS beat and raised FY26 guidance drove a genuine ~2.39x average-volume spike, confirmed by computing a 20-day average directly from price history after two other candidates (MXL, WDFC) failed to clear the 2x bar."
-    },
-    {
-      "runAt": "2026-07-09T20:27:45+02:00",
-      "summary": "P1: PENG (C) · P2: PENG (C)",
-      "picks": {
-        "p1": {
-          "ticker": "PENG",
-          "strategy": "C — Volume Spike",
-          "entry": 78.47,
-          "stop": 66.70,
-          "t1": 98.09,
-          "t2": 117.71
-        },
-        "p2": {
-          "ticker": "PENG",
-          "strategy": "C — Volume Spike",
-          "entry": 82.60,
-          "stop": 70.21,
-          "t1": 103.25
-        }
-      },
-      "content": "Penguin Solutions picked up in Portfolio 1 at the previous close after a Q3 FY26 double beat (revenue +47.6% YoY) and raised guidance (22% vs prior ~12%) drove a +25.1% session on ~4.0x average volume.\n\nSame name entered in Portfolio 2 at today's open (+5.26% gap from prior close) to test whether the volume-spike momentum survives an overnight gap, alongside the same AI/semiconductor tailwind lifting the sector +4.5% despite fresh US-Iran airstrikes."
     }
   ]
 }
