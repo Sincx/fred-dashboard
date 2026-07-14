@@ -5,14 +5,14 @@
   "icon": "📎",
   "runs": [
     {
+      "runAt": "2026-07-14T23:22:53.9199975+02:00",
+      "summary": "1 clipping processed",
+      "content": "finance: 'The Briefing: Meta's Smart PR Approach' (The Information Briefing, 2026-07-13) -> moved to raw/finance/the-information-briefing-meta-spacex-2026-07-13.md (tags updated: removed clipping/unsorted, added meta, spacex, stock-valuation, data-center-capex, ipo-lockup, ingested); wiki summary created at wiki/finance/source-the-information-briefing-meta-spacex-2026-07-13.md. Key content: Meta's Louisiana DC PR spin ($40B more, $50B total) vs shareholder reality (META -8.6% 12mo, forward sales multiple 9.3x->6.3x); rental-capacity rally judged an overreaction; SpaceX -34% from post-IPO high, nearing its $135 IPO price with a lockup unlock ahead; Samsung Yongin chip plant accelerated to 2029; global smartphone shipments -11% in Q2 (weakest Q2 in 13yr, Counterpoint Research). Reverse links added in data-meta-compute-cloud-pivot-2026-07-05.md, source-the-information-meta-ai-briefing-2026.md, source-morningstar-mega-ipos-market-impact-2026.md, data-hbm-supply-chain-2026-06-27.md, source-semianalysis-cxmt-dram-incumbents-2026-06-23.md. index.md updated. Clippings folder now empty."
+    },
+    {
       "runAt": "2026-07-13T23:21:32+02:00",
       "summary": "1 clipping processed",
       "content": "ai-tech: 'Fw: Palantir CEO: Some U.S. Government Customers Switched to Open Source AI' (The Information/Applied AI, 2026-07-02) -> moved to raw/ai-tech/palantir-nvidia-nemotron-govt-switch-2026-07-02.md (tags updated: palantir, nvidia, nemotron, open-source-models, anthropic, government-ai, ingested); wiki summary created at wiki/ai-tech/source-palantir-nvidia-nemotron-2026-07-02.md. Reverse links added in data-foundation-model-companies-2026-06-27.md and source-evans-openai-compete-feb2026.md. index.md updated. Clippings folder now empty."
-    },
-    {
-      "runAt": "2026-07-12T23:19:47+02:00",
-      "summary": "1 clipping deleted (confirmed duplicate), 0 processed",
-      "content": "'Meta jumps into AI coding market in effort to chase Anthropic and OpenAI.md' -- filename was mismatched; actual content was the Micron US chipmaking article, previously flagged by the prior run as a probable duplicate. Diffed against raw/ai-tech/Micron shares rise almost 5%...md: identical body text, already fully ingested (raw file + source-micron-us-chipmaking-2026-07-09.md wiki page). Deleted the stray Clippings file. No new wiki pages created this run."
     }
   ]
 }
