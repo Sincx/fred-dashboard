@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-14T23:55:37+02:00",
+      "summary": "Memory index updated — corrected stale Technology overview.md note, new Quantinuum/Bitcoin quantum-risk thread, full paper-trading + trading-portfolio refresh, flagged a briefing-log vs. dashboard-file trim discrepancy",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-14",
+        "Domain Content Status — Technology: corrected stale claim 'no overview.md yet for this domain' — technology/overview.md has existed since 2026-07-05 (8 sources); wiki-thinker caught this discrepancy 2026-07-14",
+        "Domain Content Status — Finance: added 2026-07-14 clipping (source-the-information-briefing-meta-spacex-2026-07-13, already indexed), paper trading activity (P1 CMCL added; SKYT stopped out −18.39%; TNET T1 hit +26.79%; P2 APP stopped out −19.52%; no P2 new trade), IBM Q2 profit-warning heads-up not yet priced in, and the 2026-07-14 trading-portfolio review (KLR trim recommended again, RSI 86.3)",
+        "Domain Content Status — Meta: run count updated 9→10; newest connection logged (Quantinuum quantum-computing buildout as an unexamined tail risk to Fred's BTC holding via Shor's algorithm/ECDSA)",
+        "Open Threads: refreshed Finance/Paper Trading snapshot to 2026-07-14 figures (P1 28 open+3 closed, net +$1,508/+4.86%; P2 8 open+4 closed, net −$1,079.50/−9.00%); added new thread — Quantinuum/Bitcoin quantum risk; added new thread — a discrepancy between the portfolio-management-briefing log (claims KLR trimmed 50%/25 shares on 2026-07-10) and the actual fred-dashboard trading.md trade history (shows only a 15-share KLR trim on 2026-07-11, and no second IQV trim despite one being recommended 2026-07-13) — flagged for reconciliation against Fred's real broker records, not resolved this run",
+        "Fixed a pre-existing label/count mismatch in the 'pages not yet in wiki/index.md' open thread (said 6, actually lists 8; confirmed all 8 still unindexed)",
+        "Appended memory-update log line to log.md for 2026-07-14, inserted at the top of the 2026-07-14 block (log.md uses newest-day-block-first ordering, chronological within each day's block)"
+      ]
+    },
+    {
       "runAt": "2026-07-13T23:52:56+02:00",
       "summary": "Memory index updated — Meta wiki-thinker run count to 9, Palantir/Nemotron AI-Tech source page, trading portfolio review (IQV trim recommended), new open thread on AI-capex bear case vs Fred's live holdings",
       "content": [
@@ -14,21 +27,6 @@
         "Domain Content Status — AI & Tech: added source-palantir-nvidia-nemotron-2026-07-02.md (Palantir CEO Karp — some U.S. government customers switched from Anthropic/OpenAI to Nvidia Nemotron via Palantir); already in wiki/index.md with reverse links",
         "Open Threads: added new thread — AI-capex bear-case research (Grantham/Klement/Clapham) never checked against Fred's own APH/AVGO holdings; the 8-page 'not yet in wiki/index.md' thread confirmed still open (grepped index.md, no matches)",
         "Appended memory-update log line to log.md for 2026-07-13"
-      ]
-    },
-    {
-      "runAt": "2026-07-12T23:56:25+02:00",
-      "summary": "Memory index updated — 6 new AI-Tech/Finance source pages, Finance folder reorg, email-to-clipping task, Meta rollup (3 missed thinker runs)",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-12",
-        "Scheduled Maintenance: fixed stale wiki-memory-update time (was 9:47 PM, now 11:45 PM); added email-to-clipping (daily 1:06 PM — checks botfred47@gmail.com for unread mail, saves as .md clippings, labels processed in Gmail; created 2026-07-12)",
-        "Key Decisions: added Finance root reorg (2026-07-12) — 24 flat root files split into finance/technical-analysis-snapshots/ (11 TA write-ups) and finance/morningstar/ (12 source-morningstar-* + watchlist); ~40 wikilinks rewritten vault-wide",
-        "Domain Content Status — AI & Tech: added 3 new source pages (Micron US chipmaking, Arora token pricing, Information AM digest) plus HBM/constraint-model updates (GlobalWafers wafer oligopoly node, Micron Q3 earnings, SK Hynix IPO, CoreWeave bull counterpoint) and a Meta Compute capacity-figure update, all not yet in wiki/index.md",
-        "Domain Content Status — Finance: added 3 new source pages (Morningstar cheap stocks, 10 best companies, InvestWithAI data sources), OTIS/AZZ/PENG paper trades (P1 28 open +6.07%, P2 9 open −5.50%), trading portfolio KLR trim, and the 8-subfolder reorg note",
-        "Domain Content Status — Meta: run count corrected from 4 to 7 (had missed 2026-07-09, -10, -11 wiki-thinker runs still sitting unprocessed in log.md); rolled in newest connections (Sports Betting/Kelly Criterion; Workday deploy-time claim vs AI adoption survey data)",
-        "Open Threads: refreshed paper-trading and trading-portfolio snapshots to 2026-07-10 figures; expanded the 'pages not yet in wiki/index.md' thread from 2 to 8 pages; added 2 new AI-Tech threads (Meta capacity reconciliation gap, Workday/AI-adoption contradiction); trimmed two stale month-old health-check paragraphs (2026-06-07, 2026-06-13) to short pointers since superseded by current Domain Content Status data",
-        "Note: log.md has an ordering quirk — most new entries append at the bottom in true chronological order, but a block of entries also gets prepended at the top; had to grep the whole file for date patterns to confirm no entries were missed (found and incorporated a reorg entry and a thinker run that were sitting past the last memory-update marker in the bottom block)",
-        "Appended memory-update log line to log.md for 2026-07-12"
       ]
     }
   ]
