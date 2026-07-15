@@ -5,6 +5,28 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-15T20:25:40+02:00",
+      "summary": "P1: ASML (D) · P2: CLSK (C)",
+      "picks": {
+        "p1": {
+          "ticker": "ASML",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 1843.04,
+          "stop": 1566.58,
+          "t1": 2303.80,
+          "t2": 2764.56
+        },
+        "p2": {
+          "ticker": "CLSK",
+          "strategy": "C — Volume Spike",
+          "entry": 13.84,
+          "stop": 11.76,
+          "t1": 17.30
+        }
+      },
+      "content": "ASML picked up in Portfolio 1 at the previous close ($1,843.04) — set the day before today's Q2 earnings beat (€9.33B revenue) and second FY26 guidance raise of the year (to €43–45B on AI demand), so entry captures the pre-announcement price. CSCO hit its 60-day max hold and closed flat (−0.95%); CRWD triggered T1 (+27.05%); IBM repriced sharply to −3.52% after yesterday's Q2 profit warning.\n\nCleanSpark (CLSK) entered Portfolio 2 at today's open (+2.9% gap) after a 20-year, $6.6B data-centre lease (Sandersville, GA, extendable to $11.6B) drove an elevated-volume +8.8% session on Jul 14 — the cleanest single-stock catalyst available versus the more diffuse semiconductor-sector rebound or the multi-day oil-refiner rally."
+    },
+    {
       "runAt": "2026-07-14T20:28:46+02:00",
       "summary": "P1: CMCL (F) · P2: SKIP",
       "picks": {
@@ -18,28 +40,6 @@
         }
       },
       "content": "Caledonia Mining picked up in Portfolio 1 at the previous close as a deep-value small-cap gold miner (P/E ~6x, P/B ~1.4x) with BlackRock crossing major shareholding thresholds three days running and a gold-price tailwind from escalating Strait of Hormuz tensions; SKYT was stopped out (−18.39%) and TNET hit T1 (+26.79%) the same session.\n\nNo Portfolio 2 trade today — checked GS, BAC, WFC, BIIB, ST, CRCL, WDFC, SAIA, RTX and LMT but none cleared the ≥2x average-volume bar with an intact catalyst; AppLovin (APP) was stopped out (−19.52%) on a single volatile session amid a broader high-multiple tech de-rating."
-    },
-    {
-      "runAt": "2026-07-10T20:23:21+02:00",
-      "summary": "P1: OTIS (A) · P2: AZZ (C)",
-      "picks": {
-        "p1": {
-          "ticker": "OTIS",
-          "strategy": "A — Value",
-          "entry": 72.00,
-          "stop": 61.20,
-          "t1": 90.00,
-          "t2": 108.00
-        },
-        "p2": {
-          "ticker": "AZZ",
-          "strategy": "C — Volume Spike",
-          "entry": 141.43,
-          "stop": 120.22,
-          "t1": 176.79
-        }
-      },
-      "content": "Otis Worldwide picked up in Portfolio 1 at the previous close as a wide-moat, Service-segment-driven industrial trading near its 52-week low, a ~31% discount to Morningstar's $105 fair value estimate, amid a broad Materials/Financials/Discretionary sell-off.\n\nAZZ Inc entered Portfolio 2 at today's open (+0.38% gap) after a Q1 FY2027 EPS beat and raised FY26 guidance drove a genuine ~2.39x average-volume spike, confirmed by computing a 20-day average directly from price history after two other candidates (MXL, WDFC) failed to clear the 2x bar."
     }
   ]
 }
