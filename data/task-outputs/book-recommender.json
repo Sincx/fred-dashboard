@@ -3,5 +3,11 @@
   "label": "Book Recommender",
   "schedule": "15th of month",
   "icon": "📖",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-07-15T08:06:39.000Z",
+      "summary": "4 recommendations for Jul 2026",
+      "content": "Chip War: The Fight for the World's Most Critical Technology — Chris Miller (Non-fiction)\nWhy Fred: FT Business Book of the Year — semiconductors as the geopolitical chokepoint of US-China power; direct match for his TSMC/NVIDIA/HBM supply-chain research in the AI & Tech wiki domain.\n\nKarla's Choice — Nick Harkaway (Spy Thriller)\nWhy Fred: Le Carré's son writing an authorized new Smiley novel set between The Spy Who Came in from the Cold and Tinker Tailor — reviewers say it reads like \"a long-lost le Carré classic\"; natural next step after The Constant Gardener.\n\nNumber Go Up: Inside Crypto's Wild Rise and Staggering Fall — Zeke Faux (Non-fiction)\nWhy Fred: Multiple Book of the Year pick (FT, Washington Post); a Bloomberg reporter chases crypto fraud from Sam Bankman-Fried to a Cambodian scam compound — same fraud-detective energy as Red Notice and his short-selling research, aimed at his live crypto portfolio.\n\nKlara and the Sun — Kazuo Ishiguro (Literary Fiction)\nWhy Fred: Outside territory — Nobel laureate's quietly devastating novel narrated by an AI companion — a literary, character-driven take on the consciousness questions his AI & Tech research keeps circling from the technical side."
+    }
+  ]
 }
