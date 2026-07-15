@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-15T23:54:36+02:00",
+      "summary": "Memory index updated — wiki-thinker run 11 (Outlive/health-protocol connection), paper trading (ASML/CLSK added, IBM warning repriced), trading-portfolio review (MGNS new watch), log.md ordering issue found and a duplicate line cleaned up",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-15",
+        "Domain Content Status — Books: added 2026-07-15 book-recommender run (4 recommendations added to suggestions.md for July 2026)",
+        "Domain Content Status — Meta: run count updated 10→11; newest highlight logged — Books' own June recommender named Outlive (Attia) as a direct match for Health's empty protocol page five weeks ago, still unread/unactioned (1 idea + 1 connection + 1 resolved this run)",
+        "Domain Content Status — Finance: added 2026-07-15 paper trading (P1 ASML added Strategy D; P2 CLSK added Vol Spike; CSCO closed flat at max 60-day hold; CRWD hit T1 +27.05%) and the 2026-07-15 trading-portfolio review (KLR flagged Trim a third consecutive day, still not executed; MGNS newly flagged as closest position to a mechanical Exit signal)",
+        "Open Threads: resolved the 2026-07-14 IBM Q2-profit-warning heads-up — the expected repricing landed today (IBM fell from +28.99% to −3.52%); refreshed the Finance/Paper Trading snapshot to current open-position counts (P1 28, P2 9)",
+        "Data-quality finding (not a memory-file edit): log.md is not consistently newest-first — a block of 2026-07-15 entries (portfolio-management-briefing review, wiki-thinker run, paper-trading trade) was appended near the end of the file after older 2026-07-07/08/11/12/13 entries, rather than at the top. Also found and removed a duplicate memory-update line this run accidentally created via a failed path attempt before the correct append. Left the pre-existing ordering issue as-is (out of scope to re-sort 630+ lines) but flagging here in case future runs want to re-establish strict ordering",
+        "Appended one memory-update log line to log.md for 2026-07-15 (after de-duplicating)"
+      ]
+    },
+    {
       "runAt": "2026-07-14T23:55:37+02:00",
       "summary": "Memory index updated — corrected stale Technology overview.md note, new Quantinuum/Bitcoin quantum-risk thread, full paper-trading + trading-portfolio refresh, flagged a briefing-log vs. dashboard-file trim discrepancy",
       "content": [
@@ -15,18 +28,6 @@
         "Open Threads: refreshed Finance/Paper Trading snapshot to 2026-07-14 figures (P1 28 open+3 closed, net +$1,508/+4.86%; P2 8 open+4 closed, net −$1,079.50/−9.00%); added new thread — Quantinuum/Bitcoin quantum risk; added new thread — a discrepancy between the portfolio-management-briefing log (claims KLR trimmed 50%/25 shares on 2026-07-10) and the actual fred-dashboard trading.md trade history (shows only a 15-share KLR trim on 2026-07-11, and no second IQV trim despite one being recommended 2026-07-13) — flagged for reconciliation against Fred's real broker records, not resolved this run",
         "Fixed a pre-existing label/count mismatch in the 'pages not yet in wiki/index.md' open thread (said 6, actually lists 8; confirmed all 8 still unindexed)",
         "Appended memory-update log line to log.md for 2026-07-14, inserted at the top of the 2026-07-14 block (log.md uses newest-day-block-first ordering, chronological within each day's block)"
-      ]
-    },
-    {
-      "runAt": "2026-07-13T23:52:56+02:00",
-      "summary": "Memory index updated — Meta wiki-thinker run count to 9, Palantir/Nemotron AI-Tech source page, trading portfolio review (IQV trim recommended), new open thread on AI-capex bear case vs Fred's live holdings",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-13",
-        "Domain Content Status — Meta: run count updated from 7 to 9 (2026-07-05 through -13, daily); newest connection logged — Fred's live trading portfolio (APH, AVGO) is a direct real-money bet on the AI capex thesis, never checked against the wiki's own bear-case research (Grantham, Klement, Clapham)",
-        "Domain Content Status — Finance: added 2026-07-13 trading-portfolio review — 7 positions (APH/MGNS/AVGO/DNLM Watch); WOSG signaled ADD but disqualified (€1,500 sizing cap + earnings 14 Jul); IQV recommended TRIM 2/9 shares (RSI 87.5 + earnings 22 Jul); KLR Watch (RSI 83.7); no new entries. No new paper-trading (P1/P2) trades since 2026-07-10 — figures unchanged",
-        "Domain Content Status — AI & Tech: added source-palantir-nvidia-nemotron-2026-07-02.md (Palantir CEO Karp — some U.S. government customers switched from Anthropic/OpenAI to Nvidia Nemotron via Palantir); already in wiki/index.md with reverse links",
-        "Open Threads: added new thread — AI-capex bear-case research (Grantham/Klement/Clapham) never checked against Fred's own APH/AVGO holdings; the 8-page 'not yet in wiki/index.md' thread confirmed still open (grepped index.md, no matches)",
-        "Appended memory-update log line to log.md for 2026-07-13"
       ]
     }
   ]
