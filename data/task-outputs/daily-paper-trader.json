@@ -5,6 +5,28 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-16T20:25:36+02:00",
+      "summary": "P1: VRTX (B) · P2: FHN (C)",
+      "picks": {
+        "p1": {
+          "ticker": "VRTX",
+          "strategy": "B — Momentum",
+          "entry": 477.08,
+          "stop": 405.52,
+          "t1": 596.35,
+          "t2": 715.62
+        },
+        "p2": {
+          "ticker": "FHN",
+          "strategy": "C — Volume Spike",
+          "entry": 24.72,
+          "stop": 21.01,
+          "t1": 30.90
+        }
+      },
+      "content": "Vertex Pharmaceuticals (VRTX) picked up in Portfolio 1 at the previous close ($477.08) — up ~24% over the trailing month on the $10B Crinetics Pharmaceuticals acquisition and a UBS price-target hike to $585, a momentum entry rather than another earnings-day gap-chase (Strategy D was used yesterday on ASML). No exits today; the broad chip-sector selloff eased MU (+9.74%→+0.94%) and AMAT (+30.02%→+26.47%), both with T1/T2 already banked.\n\nFirst Horizon (FHN) entered Portfolio 2 at today's open (−0.9% gap) after a clean Q2 earnings beat (EPS $0.54 vs $0.53 est., net income +12% YoY) drove ~3.0× average volume on Jul 15 — a cleaner signal than BlackRock's own Q2 beat, which only ran ~1.9× average volume, just under the 2× threshold."
+    },
+    {
       "runAt": "2026-07-15T20:25:40+02:00",
       "summary": "P1: ASML (D) · P2: CLSK (C)",
       "picks": {
@@ -25,21 +47,6 @@
         }
       },
       "content": "ASML picked up in Portfolio 1 at the previous close ($1,843.04) — set the day before today's Q2 earnings beat (€9.33B revenue) and second FY26 guidance raise of the year (to €43–45B on AI demand), so entry captures the pre-announcement price. CSCO hit its 60-day max hold and closed flat (−0.95%); CRWD triggered T1 (+27.05%); IBM repriced sharply to −3.52% after yesterday's Q2 profit warning.\n\nCleanSpark (CLSK) entered Portfolio 2 at today's open (+2.9% gap) after a 20-year, $6.6B data-centre lease (Sandersville, GA, extendable to $11.6B) drove an elevated-volume +8.8% session on Jul 14 — the cleanest single-stock catalyst available versus the more diffuse semiconductor-sector rebound or the multi-day oil-refiner rally."
-    },
-    {
-      "runAt": "2026-07-14T20:28:46+02:00",
-      "summary": "P1: CMCL (F) · P2: SKIP",
-      "picks": {
-        "p1": {
-          "ticker": "CMCL",
-          "strategy": "F — Small Cap Value",
-          "entry": 17.33,
-          "stop": 14.73,
-          "t1": 21.66,
-          "t2": 26.00
-        }
-      },
-      "content": "Caledonia Mining picked up in Portfolio 1 at the previous close as a deep-value small-cap gold miner (P/E ~6x, P/B ~1.4x) with BlackRock crossing major shareholding thresholds three days running and a gold-price tailwind from escalating Strait of Hormuz tensions; SKYT was stopped out (−18.39%) and TNET hit T1 (+26.79%) the same session.\n\nNo Portfolio 2 trade today — checked GS, BAC, WFC, BIIB, ST, CRCL, WDFC, SAIA, RTX and LMT but none cleared the ≥2x average-volume bar with an intact catalyst; AppLovin (APP) was stopped out (−19.52%) on a single volatile session amid a broader high-multiple tech de-rating."
     }
   ]
 }
