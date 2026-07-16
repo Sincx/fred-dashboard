@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-16T00:00:00+02:00",
+      "summary": "Memory index updated — light day, only the 2026-07-16 portfolio-management-briefing review to fold in (no new wiki pages, no wiki-thinker run today)",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-16",
+        "Domain Content Status — Finance: added 2026-07-16 trading-portfolio review (same 7 positions; KLR flagged Trim a 4th consecutive session, RSI 83.6, still not executed; no mechanical signals triggered; Alpha Vantage daily quota exhausted, LSE prices sourced from stockanalysis.com instead)",
+        "Open Threads: updated the Finance/Paper Trading + trading-portfolio thread with the 2026-07-16 KLR trim flag (now 4 consecutive sessions unexecuted since 2026-07-13) and the data-source note",
+        "No new wiki pages found in index.md or log.md since the last update — no wiki-thinker, book/podcast recommender, or paper-trading run occurred today, so Meta/Books/Paper-Trading sections otherwise unchanged",
+        "Verified log.md ordering stayed newest-first this run (prior run's data-quality flag about a misordered 2026-07-15 block was not something this run needed to fix — today's entries inserted cleanly at the top)",
+        "Appended one memory-update log line to log.md for 2026-07-16, placed above today's existing review entry at the top of the file"
+      ]
+    },
+    {
       "runAt": "2026-07-15T23:54:36+02:00",
       "summary": "Memory index updated — wiki-thinker run 11 (Outlive/health-protocol connection), paper trading (ASML/CLSK added, IBM warning repriced), trading-portfolio review (MGNS new watch), log.md ordering issue found and a duplicate line cleaned up",
       "content": [
@@ -15,19 +27,6 @@
         "Open Threads: resolved the 2026-07-14 IBM Q2-profit-warning heads-up — the expected repricing landed today (IBM fell from +28.99% to −3.52%); refreshed the Finance/Paper Trading snapshot to current open-position counts (P1 28, P2 9)",
         "Data-quality finding (not a memory-file edit): log.md is not consistently newest-first — a block of 2026-07-15 entries (portfolio-management-briefing review, wiki-thinker run, paper-trading trade) was appended near the end of the file after older 2026-07-07/08/11/12/13 entries, rather than at the top. Also found and removed a duplicate memory-update line this run accidentally created via a failed path attempt before the correct append. Left the pre-existing ordering issue as-is (out of scope to re-sort 630+ lines) but flagging here in case future runs want to re-establish strict ordering",
         "Appended one memory-update log line to log.md for 2026-07-15 (after de-duplicating)"
-      ]
-    },
-    {
-      "runAt": "2026-07-14T23:55:37+02:00",
-      "summary": "Memory index updated — corrected stale Technology overview.md note, new Quantinuum/Bitcoin quantum-risk thread, full paper-trading + trading-portfolio refresh, flagged a briefing-log vs. dashboard-file trim discrepancy",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-14",
-        "Domain Content Status — Technology: corrected stale claim 'no overview.md yet for this domain' — technology/overview.md has existed since 2026-07-05 (8 sources); wiki-thinker caught this discrepancy 2026-07-14",
-        "Domain Content Status — Finance: added 2026-07-14 clipping (source-the-information-briefing-meta-spacex-2026-07-13, already indexed), paper trading activity (P1 CMCL added; SKYT stopped out −18.39%; TNET T1 hit +26.79%; P2 APP stopped out −19.52%; no P2 new trade), IBM Q2 profit-warning heads-up not yet priced in, and the 2026-07-14 trading-portfolio review (KLR trim recommended again, RSI 86.3)",
-        "Domain Content Status — Meta: run count updated 9→10; newest connection logged (Quantinuum quantum-computing buildout as an unexamined tail risk to Fred's BTC holding via Shor's algorithm/ECDSA)",
-        "Open Threads: refreshed Finance/Paper Trading snapshot to 2026-07-14 figures (P1 28 open+3 closed, net +$1,508/+4.86%; P2 8 open+4 closed, net −$1,079.50/−9.00%); added new thread — Quantinuum/Bitcoin quantum risk; added new thread — a discrepancy between the portfolio-management-briefing log (claims KLR trimmed 50%/25 shares on 2026-07-10) and the actual fred-dashboard trading.md trade history (shows only a 15-share KLR trim on 2026-07-11, and no second IQV trim despite one being recommended 2026-07-13) — flagged for reconciliation against Fred's real broker records, not resolved this run",
-        "Fixed a pre-existing label/count mismatch in the 'pages not yet in wiki/index.md' open thread (said 6, actually lists 8; confirmed all 8 still unindexed)",
-        "Appended memory-update log line to log.md for 2026-07-14, inserted at the top of the 2026-07-14 block (log.md uses newest-day-block-first ordering, chronological within each day's block)"
       ]
     }
   ]
