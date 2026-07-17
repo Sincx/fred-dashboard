@@ -5,6 +5,17 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-17T00:00:00+02:00",
+      "summary": "Memory index updated — light day, only the 2026-07-17 portfolio-management-briefing review to fold in (no new wiki pages, no wiki-thinker run today)",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-17",
+        "Open Threads: extended the Finance trading-portfolio thread with the 2026-07-17 review — KLR flagged Trim again (RSI 79.1, still unactioned) plus a new IQV Trim signal (RSI 80.0 extreme, earnings 22 Jul in 5 days); WOSG newly flagged Watch as RSI crossed 70 with weight 19.5% nearing the 20% cap; recommended-but-unconfirmed trims: KLR 50% (~€135 net), IQV ~33% (~€92 net)",
+        "Flagged a new operational item in Open Threads: this run's git commit (42e39a9) to fred-dashboard succeeded locally but the push was blocked by the auto-mode permission classifier (unattended, no user present) — the briefing is committed but not yet published; needs a manual `git push`",
+        "No new wiki pages found in index.md or log.md since the last update — no wiki-thinker, book/podcast recommender, or paper-trading run occurred today, so Domain Content Status table left unchanged this run",
+        "Appended one memory-update log line to log.md for 2026-07-17, above today's existing review entry"
+      ]
+    },
+    {
       "runAt": "2026-07-16T00:00:00+02:00",
       "summary": "Memory index updated — light day, only the 2026-07-16 portfolio-management-briefing review to fold in (no new wiki pages, no wiki-thinker run today)",
       "content": [
@@ -14,19 +25,6 @@
         "No new wiki pages found in index.md or log.md since the last update — no wiki-thinker, book/podcast recommender, or paper-trading run occurred today, so Meta/Books/Paper-Trading sections otherwise unchanged",
         "Verified log.md ordering stayed newest-first this run (prior run's data-quality flag about a misordered 2026-07-15 block was not something this run needed to fix — today's entries inserted cleanly at the top)",
         "Appended one memory-update log line to log.md for 2026-07-16, placed above today's existing review entry at the top of the file"
-      ]
-    },
-    {
-      "runAt": "2026-07-15T23:54:36+02:00",
-      "summary": "Memory index updated — wiki-thinker run 11 (Outlive/health-protocol connection), paper trading (ASML/CLSK added, IBM warning repriced), trading-portfolio review (MGNS new watch), log.md ordering issue found and a duplicate line cleaned up",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-15",
-        "Domain Content Status — Books: added 2026-07-15 book-recommender run (4 recommendations added to suggestions.md for July 2026)",
-        "Domain Content Status — Meta: run count updated 10→11; newest highlight logged — Books' own June recommender named Outlive (Attia) as a direct match for Health's empty protocol page five weeks ago, still unread/unactioned (1 idea + 1 connection + 1 resolved this run)",
-        "Domain Content Status — Finance: added 2026-07-15 paper trading (P1 ASML added Strategy D; P2 CLSK added Vol Spike; CSCO closed flat at max 60-day hold; CRWD hit T1 +27.05%) and the 2026-07-15 trading-portfolio review (KLR flagged Trim a third consecutive day, still not executed; MGNS newly flagged as closest position to a mechanical Exit signal)",
-        "Open Threads: resolved the 2026-07-14 IBM Q2-profit-warning heads-up — the expected repricing landed today (IBM fell from +28.99% to −3.52%); refreshed the Finance/Paper Trading snapshot to current open-position counts (P1 28, P2 9)",
-        "Data-quality finding (not a memory-file edit): log.md is not consistently newest-first — a block of 2026-07-15 entries (portfolio-management-briefing review, wiki-thinker run, paper-trading trade) was appended near the end of the file after older 2026-07-07/08/11/12/13 entries, rather than at the top. Also found and removed a duplicate memory-update line this run accidentally created via a failed path attempt before the correct append. Left the pre-existing ordering issue as-is (out of scope to re-sort 630+ lines) but flagging here in case future runs want to re-establish strict ordering",
-        "Appended one memory-update log line to log.md for 2026-07-15 (after de-duplicating)"
       ]
     }
   ]
