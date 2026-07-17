@@ -5,6 +5,28 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-17T20:29:05+02:00",
+      "summary": "P1: JBHT (C) · P2: ABT (C)",
+      "picks": {
+        "p1": {
+          "ticker": "JBHT",
+          "strategy": "C — Volume Spike",
+          "entry": 298.41,
+          "stop": 253.65,
+          "t1": 373.01,
+          "t2": 447.62
+        },
+        "p2": {
+          "ticker": "ABT",
+          "strategy": "C — Volume Spike",
+          "entry": 101.00,
+          "stop": 85.85,
+          "t1": 126.25
+        }
+      },
+      "content": "J.B. Hunt (JBHT) picked up in Portfolio 1 at the previous close ($298.41) — beat Q2 EPS by ~12% and revenue by ~9.5% on ~2.47× average volume, chosen over the deepening chip-sector selloff dominating today's tape. Two exits: XOM hit its 60-day max hold and closed at −7.48%; PENG stopped out at −15.93% on the chip weakness.\n\nAbbott (ABT) entered Portfolio 2 at today's open (+2.20% gap) after raising FY26 adjusted EPS guidance on ~2.47× average volume. Two stop-outs today: ABSI (−25.45%, post-initiation pullback) and PENG (−20.13%, chip-sector selloff) — both full-position exits with no T1/T2 previously triggered."
+    },
+    {
       "runAt": "2026-07-16T20:25:36+02:00",
       "summary": "P1: VRTX (B) · P2: FHN (C)",
       "picks": {
@@ -25,28 +47,6 @@
         }
       },
       "content": "Vertex Pharmaceuticals (VRTX) picked up in Portfolio 1 at the previous close ($477.08) — up ~24% over the trailing month on the $10B Crinetics Pharmaceuticals acquisition and a UBS price-target hike to $585, a momentum entry rather than another earnings-day gap-chase (Strategy D was used yesterday on ASML). No exits today; the broad chip-sector selloff eased MU (+9.74%→+0.94%) and AMAT (+30.02%→+26.47%), both with T1/T2 already banked.\n\nFirst Horizon (FHN) entered Portfolio 2 at today's open (−0.9% gap) after a clean Q2 earnings beat (EPS $0.54 vs $0.53 est., net income +12% YoY) drove ~3.0× average volume on Jul 15 — a cleaner signal than BlackRock's own Q2 beat, which only ran ~1.9× average volume, just under the 2× threshold."
-    },
-    {
-      "runAt": "2026-07-15T20:25:40+02:00",
-      "summary": "P1: ASML (D) · P2: CLSK (C)",
-      "picks": {
-        "p1": {
-          "ticker": "ASML",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 1843.04,
-          "stop": 1566.58,
-          "t1": 2303.80,
-          "t2": 2764.56
-        },
-        "p2": {
-          "ticker": "CLSK",
-          "strategy": "C — Volume Spike",
-          "entry": 13.84,
-          "stop": 11.76,
-          "t1": 17.30
-        }
-      },
-      "content": "ASML picked up in Portfolio 1 at the previous close ($1,843.04) — set the day before today's Q2 earnings beat (€9.33B revenue) and second FY26 guidance raise of the year (to €43–45B on AI demand), so entry captures the pre-announcement price. CSCO hit its 60-day max hold and closed flat (−0.95%); CRWD triggered T1 (+27.05%); IBM repriced sharply to −3.52% after yesterday's Q2 profit warning.\n\nCleanSpark (CLSK) entered Portfolio 2 at today's open (+2.9% gap) after a 20-year, $6.6B data-centre lease (Sandersville, GA, extendable to $11.6B) drove an elevated-volume +8.8% session on Jul 14 — the cleanest single-stock catalyst available versus the more diffuse semiconductor-sector rebound or the multi-day oil-refiner rally."
     }
   ]
 }
