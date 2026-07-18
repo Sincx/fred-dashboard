@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-11
+updated: 2026-07-17
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-11**.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-17**.
 
 ---
 
@@ -16,16 +16,16 @@ updated: 2026-07-11
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $162.24 | $1,784.64 | +13.1% | Connector/interconnect leader; AI data centre demand |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 730p | £1,460.00 | +6.1% | UK luxury watch retailer; FY26 results 14 Jul |
-| Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,882p | £878.76 | +5.6% | UK construction & infrastructure |
-| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $401.11 | $1,604.44 | +3.6% | AI networking + custom chips; semi sector |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 798p | £718.20 | −0.2% | UK homewares retailer; downtrend from 1,249p high |
-| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $208.97 | $1,880.73 | +27.4% | Healthcare data + CRO; earnings 22 Jul — trimmed 3 shares |
-| Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,430p | £1,200.50 | +41.9% | Ground engineering; trimmed 15 shares 2026-07-11 at 3,430p |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $157.04 | $1,727.44 | +9.4% | Connector/interconnect leader; AI data centre demand |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 801.5p | £1,603.00 | +16.5% | UK luxury watch retailer; RSI 73.0 (crossed overbought), MACD bullish; weight 19.5% — approaching 20% Trim threshold |
+| Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,766p | £857.88 | +3.1% | UK construction & infrastructure; RSI 40.5, MACD still bearish; earnings 23 Jul (6d) |
+| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $386.74 | $1,546.96 | -0.1% | AI networking + custom chips; semi sector — still below 50d SMA, only position showing a loss |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 860.5p | £774.45 | +7.6% | UK homewares retailer; MACD bullish, RSI 64.4, above 50d SMA |
+| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $210.49 | $1,894.41 | +28.3% | Healthcare data + CRO; RSI 80.0 (extreme), earnings 22 Jul (5d) — trim flagged (judgment override, weight 17.1% < 20% threshold) |
+| Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,300p | £1,155.00 | +36.5% | Ground engineering; trimmed 15 shares 2026-07-11 at 3,430p; RSI 79.1, MACD momentum fading — trim flagged again 07-17, fourth session unactioned |
 | **Cash** | — | — | EUR | — | — | — | — | **€4,078** | — | Available capital |
 
-> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). Prices last updated: **2026-07-11**.
+> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). Prices last updated: **2026-07-17**.
 > No stop losses currently in place.
 
 ---
