@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-18T23:55:38+02:00",
+      "summary": "Memory index updated — folded in today's portfolio review/refresh plus several misplaced log entries from 2026-07-16/17/18 that a log-ordering quirk had hidden from the previous run",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-18",
+        "Domain Content Status — Finance: added 2026-07-18 trading-portfolio review (APH flagged Exit for the first time — RSI 38.6, below SMA50, MACD bearish, deferred to Monday; new candidates NEE/AXP/BMY) and portfolio-refresh (25 prices, IBM −26.5%); also backfilled the 2026-07-16 (VRTX/FHN) and 2026-07-17 (JBHT/ABT, 3 stop-outs) paper-trading runs that were missing from the prior update",
+        "Domain Content Status — Meta: updated wiki-thinker run count 11→14, added highlights for the 2026-07-16, -17, and -18 runs (Chip War/Micron bridge; Lightfin AI-animation question already answered; ABT trade vs. Health biomarker-tracking gap)",
+        "Domain Content Status — Podcasts: added the 2026-07-16 podcast-recommender run (4 shows); Cooking: updated recipe-recommender's 'latest run' pointer from a stale 2026-07-03 reference to 2026-07-17",
+        "Open Threads: added the APH first-Exit-signal item (tied to the existing AI-capex bear-case thread) and the new NEE/AXP/BMY investment-opportunity candidates",
+        "Data-quality note for future runs: log.md is not consistently newest-first — several scheduled tasks (daily-paper-trader, wiki-thinker) append to the true end of the file rather than prepending to the top, so entries from the last few days can be physically located near the bottom of a 600+ line file. Confirmed this by grepping full-file for `## \\[2026-07-1[3-8]\\]` rather than trusting a top-of-file read alone — worth doing this each run until the underlying logging behavior is unified",
+        "Appended one memory-update log line to log.md for 2026-07-18, placed at the top above today's other entries to match the file's dominant (if inconsistently applied) newest-first convention"
+      ]
+    },
+    {
       "runAt": "2026-07-17T00:00:00+02:00",
       "summary": "Memory index updated — light day, only the 2026-07-17 portfolio-management-briefing review to fold in (no new wiki pages, no wiki-thinker run today)",
       "content": [
@@ -13,18 +26,6 @@
         "Flagged a new operational item in Open Threads: this run's git commit (42e39a9) to fred-dashboard succeeded locally but the push was blocked by the auto-mode permission classifier (unattended, no user present) — the briefing is committed but not yet published; needs a manual `git push`",
         "No new wiki pages found in index.md or log.md since the last update — no wiki-thinker, book/podcast recommender, or paper-trading run occurred today, so Domain Content Status table left unchanged this run",
         "Appended one memory-update log line to log.md for 2026-07-17, above today's existing review entry"
-      ]
-    },
-    {
-      "runAt": "2026-07-16T00:00:00+02:00",
-      "summary": "Memory index updated — light day, only the 2026-07-16 portfolio-management-briefing review to fold in (no new wiki pages, no wiki-thinker run today)",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-16",
-        "Domain Content Status — Finance: added 2026-07-16 trading-portfolio review (same 7 positions; KLR flagged Trim a 4th consecutive session, RSI 83.6, still not executed; no mechanical signals triggered; Alpha Vantage daily quota exhausted, LSE prices sourced from stockanalysis.com instead)",
-        "Open Threads: updated the Finance/Paper Trading + trading-portfolio thread with the 2026-07-16 KLR trim flag (now 4 consecutive sessions unexecuted since 2026-07-13) and the data-source note",
-        "No new wiki pages found in index.md or log.md since the last update — no wiki-thinker, book/podcast recommender, or paper-trading run occurred today, so Meta/Books/Paper-Trading sections otherwise unchanged",
-        "Verified log.md ordering stayed newest-first this run (prior run's data-quality flag about a misordered 2026-07-15 block was not something this run needed to fix — today's entries inserted cleanly at the top)",
-        "Appended one memory-update log line to log.md for 2026-07-16, placed above today's existing review entry at the top of the file"
       ]
     }
   ]
