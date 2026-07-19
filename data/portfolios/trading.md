@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-18
+updated: 2026-07-19
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-18**.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-19**.
 
 ---
 
@@ -23,12 +23,12 @@ updated: 2026-07-18
 | Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 876p | £788.40 | +9.5% | UK homewares retailer; RSI ~65, MACD bullish, above 50d SMA — Hold |
 | IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $206.26 | $1,856.34 | +25.8% | Healthcare data + CRO; RSI 69.1, MACD bullish; earnings 22 Jul — Watch |
 | Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,336p | £1,167.60 | +38.0% | Ground engineering; trimmed 15 shares 07-11; RSI ~79, MACD fading — Watch, mental stop 3,200p |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €136.70 | €956.90 | 0.0% | Enterprise software / ERP; AI integration tailwind; EUR-denominated |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $21.90 | $1,314.00 | 0.0% | US consumer staples; soup & snacks brand |
-| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1939.5p | £969.75 | 0.0% | UK pharma & vaccines; cheap valuation, Buy signal |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €139.06 | €973.42 | +1.7% | Enterprise software / ERP; AI integration tailwind; EUR-denominated; RSI 55.3, MACD bullish, Watch |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.08 | $1,324.80 | +0.8% | US consumer staples; RSI 45.3, above SMA50 $21.77, MACD bullish — Add signal |
+| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1916.5p | £958.25 | −1.2% | UK pharma & vaccines; Camlipixant Ph3 failed 07-19 (−2%) — Watch, assess Monday open |
 | **Cash** | — | — | EUR | — | — | — | — | **€813** | — | Available capital |
 
-> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-18**.
+> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-19**.
 > No stop losses currently in place.
 
 ---
