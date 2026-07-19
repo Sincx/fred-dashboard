@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-17
+updated: 2026-07-18
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-17**.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-18**.
 
 ---
 
@@ -16,16 +16,19 @@ updated: 2026-07-17
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $157.04 | $1,727.44 | +9.4% | Connector/interconnect leader; AI data centre demand |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 801.5p | £1,603.00 | +16.5% | UK luxury watch retailer; RSI 73.0 (crossed overbought), MACD bullish; weight 19.5% — approaching 20% Trim threshold |
-| Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,766p | £857.88 | +3.1% | UK construction & infrastructure; RSI 40.5, MACD still bearish; earnings 23 Jul (6d) |
-| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $386.74 | $1,546.96 | -0.1% | AI networking + custom chips; semi sector — still below 50d SMA, only position showing a loss |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 860.5p | £774.45 | +7.6% | UK homewares retailer; MACD bullish, RSI 64.4, above 50d SMA |
-| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $210.49 | $1,894.41 | +28.3% | Healthcare data + CRO; RSI 80.0 (extreme), earnings 22 Jul (5d) — trim flagged (judgment override, weight 17.1% < 20% threshold) |
-| Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,300p | £1,155.00 | +36.5% | Ground engineering; trimmed 15 shares 2026-07-11 at 3,430p; RSI 79.1, MACD momentum fading — trim flagged again 07-17, fourth session unactioned |
-| **Cash** | — | — | EUR | — | — | — | — | **€4,078** | — | Available capital |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $151.20 | $1,663.20 | +5.4% | Connector/interconnect leader; AI data centre demand — EXIT signal 07-18 (RSI 38.6, below SMA50, MACD bearish); watch for SMA50 recovery |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 780p | £1,560.00 | +13.4% | UK luxury watch retailer; RSI ~70 easing, MACD bullish; weight 19.3% |
+| Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,742p | £853.56 | +2.6% | UK construction & infrastructure; RSI ~40, MACD bearish; earnings 23 Jul |
+| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $370.82 | $1,483.28 | −4.2% | AI networking + custom chips; RSI 52.3, below SMA50 ($397.95), MACD bearish — Watch |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 876p | £788.40 | +9.5% | UK homewares retailer; RSI ~65, MACD bullish, above 50d SMA — Hold |
+| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $206.26 | $1,856.34 | +25.8% | Healthcare data + CRO; RSI 69.1, MACD bullish; earnings 22 Jul — Watch |
+| Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,336p | £1,167.60 | +38.0% | Ground engineering; trimmed 15 shares 07-11; RSI ~79, MACD fading — Watch, mental stop 3,200p |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €136.70 | €956.90 | 0.0% | Enterprise software / ERP; AI integration tailwind; EUR-denominated |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $21.90 | $1,314.00 | 0.0% | US consumer staples; soup & snacks brand |
+| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1939.5p | £969.75 | 0.0% | UK pharma & vaccines; cheap valuation, Buy signal |
+| **Cash** | — | — | EUR | — | — | — | — | **€813** | — | Available capital |
 
-> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). Prices last updated: **2026-07-17**.
+> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-18**.
 > No stop losses currently in place.
 
 ---
@@ -66,7 +69,7 @@ updated: 2026-07-17
 
 | Currency | Amount | Notes |
 | --- | --- | --- |
-| EUR | €4,078 | €3,000 starting reserve + €517 net from IQV trim (2026-07-09) + €561 net from KLR trim (2026-07-11) |
+| EUR | €813 | €3,000 starting reserve + €517 net IQV trim (07-09) + €561 net KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) |
 
 ---
 
