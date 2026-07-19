@@ -5,17 +5,15 @@ import { Loader2, TrendingUp, TrendingDown, AlertTriangle, CheckCircle2, Clock }
 
 interface Portfolios {
   p1: string;
-  p2: string;
   equity: string;
   trading: string;
   briefing: string;
 }
 
-type Tab = "p1" | "p2" | "equity" | "trading" | "briefing";
+type Tab = "p1" | "equity" | "trading" | "briefing";
 
 const TABS: { id: Tab; label: string }[] = [
-  { id: "p1", label: "P1 — 7-Strategy Rotation" },
-  { id: "p2", label: "P2 — Volume Spike" },
+  { id: "p1", label: "Paper Trading" },
   { id: "equity", label: "Equity Portfolio" },
   { id: "trading", label: "Trading Portfolio" },
   { id: "briefing", label: "Morning Briefing" },
@@ -630,13 +628,13 @@ export default function PortfoliosPage() {
             <MorningBriefing md={data.briefing ?? ""} />
           ) : (
             <div className="card">
-              {tab === "p1" || tab === "p2"
-                ? <TradingStats md={data[tab]} />
+              {tab === "p1"
+                ? <TradingStats md={data.p1} />
                 : <EquityStats md={tab === "equity" ? data.equity : data.trading} />
               }
               <PortfolioTable md={
-                tab === "p1" || tab === "p2"
-                  ? extractSection(data[tab], "Open Positions")
+                tab === "p1"
+                  ? extractSection(data.p1, "Open Positions")
                   : tab === "equity" ? data.equity : data.trading
               } />
             </div>
