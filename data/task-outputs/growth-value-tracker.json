@@ -5,14 +5,14 @@
   "icon": "📊",
   "runs": [
     {
+      "runAt": "2026-07-21T08:22:26.000Z",
+      "summary": "Data through Jul 20 (all 7 ETFs). YTD leaders: IWN +22.6%, IWM +19.2%, IWD +18.2%. Growth/value spread: -1708 bps (value leads), widened sharply from -1090 bps as growth sold off again in early Q3.",
+      "content": "YTD 2026 (all through Jul 20): IWN +22.6%, IWM +19.2%, IWD +18.2%, QQQ +13.6%, SPY +9.4%, IVE +9.2%, IWF +1.1%. Growth vs value spread: IWD +18.2% vs IWF +1.1% -> value leads by 1708 bps, up sharply from 1090 bps on Jul 2 -- a new YTD high for the value lead. Q2 2026 closed as a full quarter (QQQ +27.7%, IWF +16.6%, IWD +13.8%). New Q3 2026 partial quarter (Jul 1-20) shows growth selling off again -- QQQ -5.5%, IWF -3.8% -- while value held firm: IWD +1.9%, IVE +1.2%. Small caps mixed: IWM -2.7%, IWN roughly flat -0.2%. QQQ-IWF divergence narrowed to 1243 bps (from 1510 bps Jul 2) as QQQ pulled back harder than IWF in early Q3."
+    },
+    {
       "runAt": "2026-07-06T07:32:00.000Z",
       "summary": "Data through Jul 2 (all 7 ETFs). YTD leaders: IWN +22.8%, IWM +22.6%, QQQ +20.2%. Growth/value spread: -1090 bps (value leads), narrowed from -1543 bps as growth rallied hard.",
       "content": "YTD 2026 (all through Jul 2): IWN +22.8%, IWM +22.6%, QQQ +20.2%, IWD +16.1%, SPY +10.1%, IVE +7.9%, IWF +5.1%. Growth vs value spread: IWD +16.1% vs IWF +5.1% -> value leads by 1090 bps, down sharply from 1543 bps on Jun 26. Notable: QQQ surged from +15.3% (Jun 26) to +20.2% as its Q2 partial jumped +22.5% -> +27.7%, nearly reclaiming its Jun 18 intraday peak of +28.3%; IWF also rallied (YTD +0.8% -> +5.1%). QQQ-IWF divergence widened back out to 1510 bps (from 1450 bps Jun 26) since QQQ's rebound outpaced IWF's. Earlier this run hit a persistent ETFreplay 529 outage for QQQ/SPY/IVE/IWN; all 4 were successfully retried and fetched on a later retry."
-    },
-    {
-      "runAt": "2026-07-06T07:06:26.000Z",
-      "summary": "Partial update (ETFreplay outage on QQQ/SPY/IVE/IWN). IWF/IWD/IWM through Jul 2: IWN +23.0%, IWM +22.6% lead YTD. Growth/value spread: -1090 bps, narrowed from -1543 bps as IWF rallied.",
-      "content": "YTD 2026 leaders (mixed dates): IWN +23.0% (Jun 26), IWM +22.6% (Jul 2), IWD +16.1% (Jul 2), QQQ +15.3% (Jun 26, stale). Growth vs value spread: IWD +16.1% vs IWF +5.1% -> value leads by 1090 bps, down sharply from 1543 bps on Jun 26. Notable change: IWF staged a sharp rebound between Jun 26 and Jul 2, YTD jumping from +0.8% to +5.1% (Q2 partial +11.8% -> +16.6%), cutting the growth deficit versus value nearly in half. IWD and IWM were roughly flat to slightly better over the same span. QQQ, SPY, IVE, and IWN could not be refreshed this run due to a persistent ETFreplay 529 outage (5 retry attempts over ~25 minutes) -- their figures remain as of Jun 26."
     }
   ]
 }
