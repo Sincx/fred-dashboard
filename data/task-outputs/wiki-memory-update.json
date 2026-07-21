@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-21T23:53:43+02:00",
+      "summary": "Memory index updated — today's Finance activity folded in: 2 market-tracker runs, a live-portfolio review (APH exit, KLR trim, 2 new positions), and a paper-trading P1 update (4 max-hold exits, 1 new trade), plus a new Meta cross-domain connection",
+      "content": [
+        "Domain Content Status — Meta: run count 15→16, added the 2026-07-21 highlight (NY's first-in-nation data-centre moratorium is a new demand-side political risk to idea-bloom-energy and idea-ge-vernova, neither of which addresses it) and noted the 07-20 gap (no thinker run logged that day)",
+        "Domain Content Status — Finance: added 07-21 sector-performance-tracker (SPY P/E 26.20x, SMH/XLE/CIBR YTD leaders, CIBR crossed into Expensive P/E band) and growth-value-tracker (spread widened to -1708bps, Q3 partial shows growth selling off again) runs",
+        "Domain Content Status — Finance: added the 2026-07-21 trading-portfolio-management review — APH EXIT executed (~€1,492), KLR TRIM 50% executed (~€667), 2 new positions opened (SHEL €1,000, BMY €750); portfolio now 11 positions, cash €813/€2,972 post-settlement",
+        "Domain Content Status — Finance: added the 2026-07-21 paper-trading P1 update — AMD added (Strategy E); CAT/IQV/IBM all hit 60-day max hold same day (IQV +17.18%, portfolio's first closed win); LRCX stopped out -18.16%; net P&L fell to +$634 (+1.81%) from +$1,145 (+3.37%) on 07-17",
+        "Open Threads: resolved the APH-exit half of the AI-capex-bear-thesis thread (AVGO remains open); marked BMY as actioned and flagged the same-day SHEL entry as previously unflagged; added a new thread on the CAT/IQV/IBM same-day max-hold cluster and the trade log's own entry-pacing concern",
+        "Appended one memory-update log line to log.md for 2026-07-21, above today's other entries"
+      ]
+    },
+    {
       "runAt": "2026-07-21T00:00:00+02:00",
       "summary": "Memory index bumped to 2026-07-21 — no new wiki content since 07-19, but recovered one buried wiki-thinker entry the last run's top-of-file read had missed",
       "content": [
@@ -14,17 +26,6 @@
         "Domain Content Status — Games: corrected a stale claim — only 2 of the previously-listed 4 prototype stubs are real files in raw/games/ (Mobile Wood Chopping Game, Children's Financial Literacy Game); verified by directory listing. 'Crypto Portfolio Tracker' and 'Project Planning Interface' do not exist as files",
         "Bumped 'Last updated' date to 2026-07-21",
         "Appended one memory-update log line to log.md for 2026-07-21, at the top"
-      ]
-    },
-    {
-      "runAt": "2026-07-19T23:55:00+02:00",
-      "summary": "Memory index updated — 3 new AI-Tech source pages, 1 new Finance source page, and the live trading portfolio's 3 new positions (SAP/CPB/GSK) folded in",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-19",
-        "Domain Content Status — AI & Tech: added the 2026-07-19 clippings-sorter's 3 new source pages (Moonshot Kimi K3, Trump AI executive order 'Gold Eagle', TSMC $100B US investment)",
-        "Domain Content Status — Finance: added source-morningstar-q3-sector-outlooks-2026.md (07-19 clipping); added the 07-18 trading-portfolio update that had been missing — 3 new live positions opened (SAP, CPB, GSK), cash down to €813, portfolio now 10 positions; added the 2026-07-19 portfolio-management-briefing review (10 positions — APH:Exit still deferred, CPB:Add, GSK newly flagged Watch after a Camlipixant Ph3 trial failure just days after that position was opened)",
-        "Open Threads: updated the NEE/AXP/BMY opportunity-candidates note (still unactioned) and split out the separate SAP/CPB/GSK live-position addition so the two don't get conflated; added a new item flagging GSK's post-purchase negative catalyst for a closer look",
-        "Appended one memory-update log line to log.md for 2026-07-19, above today's clippings-sorter entry"
       ]
     }
   ]
