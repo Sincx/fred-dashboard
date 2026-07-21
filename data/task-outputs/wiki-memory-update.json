@@ -5,6 +5,17 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-19T23:55:00+02:00",
+      "summary": "Memory index updated — 3 new AI-Tech source pages, 1 new Finance source page, and the live trading portfolio's 3 new positions (SAP/CPB/GSK) folded in",
+      "content": [
+        "Bumped 'Last updated' date to 2026-07-19",
+        "Domain Content Status — AI & Tech: added the 2026-07-19 clippings-sorter's 3 new source pages (Moonshot Kimi K3, Trump AI executive order 'Gold Eagle', TSMC $100B US investment)",
+        "Domain Content Status — Finance: added source-morningstar-q3-sector-outlooks-2026.md (07-19 clipping); added the 07-18 trading-portfolio update that had been missing — 3 new live positions opened (SAP, CPB, GSK), cash down to €813, portfolio now 10 positions; added the 2026-07-19 portfolio-management-briefing review (10 positions — APH:Exit still deferred, CPB:Add, GSK newly flagged Watch after a Camlipixant Ph3 trial failure just days after that position was opened)",
+        "Open Threads: updated the NEE/AXP/BMY opportunity-candidates note (still unactioned) and split out the separate SAP/CPB/GSK live-position addition so the two don't get conflated; added a new item flagging GSK's post-purchase negative catalyst for a closer look",
+        "Appended one memory-update log line to log.md for 2026-07-19, above today's clippings-sorter entry"
+      ]
+    },
+    {
       "runAt": "2026-07-18T23:55:38+02:00",
       "summary": "Memory index updated — folded in today's portfolio review/refresh plus several misplaced log entries from 2026-07-16/17/18 that a log-ordering quirk had hidden from the previous run",
       "content": [
@@ -15,17 +26,6 @@
         "Open Threads: added the APH first-Exit-signal item (tied to the existing AI-capex bear-case thread) and the new NEE/AXP/BMY investment-opportunity candidates",
         "Data-quality note for future runs: log.md is not consistently newest-first — several scheduled tasks (daily-paper-trader, wiki-thinker) append to the true end of the file rather than prepending to the top, so entries from the last few days can be physically located near the bottom of a 600+ line file. Confirmed this by grepping full-file for `## \\[2026-07-1[3-8]\\]` rather than trusting a top-of-file read alone — worth doing this each run until the underlying logging behavior is unified",
         "Appended one memory-update log line to log.md for 2026-07-18, placed at the top above today's other entries to match the file's dominant (if inconsistently applied) newest-first convention"
-      ]
-    },
-    {
-      "runAt": "2026-07-17T00:00:00+02:00",
-      "summary": "Memory index updated — light day, only the 2026-07-17 portfolio-management-briefing review to fold in (no new wiki pages, no wiki-thinker run today)",
-      "content": [
-        "Bumped 'Last updated' date to 2026-07-17",
-        "Open Threads: extended the Finance trading-portfolio thread with the 2026-07-17 review — KLR flagged Trim again (RSI 79.1, still unactioned) plus a new IQV Trim signal (RSI 80.0 extreme, earnings 22 Jul in 5 days); WOSG newly flagged Watch as RSI crossed 70 with weight 19.5% nearing the 20% cap; recommended-but-unconfirmed trims: KLR 50% (~€135 net), IQV ~33% (~€92 net)",
-        "Flagged a new operational item in Open Threads: this run's git commit (42e39a9) to fred-dashboard succeeded locally but the push was blocked by the auto-mode permission classifier (unattended, no user present) — the briefing is committed but not yet published; needs a manual `git push`",
-        "No new wiki pages found in index.md or log.md since the last update — no wiki-thinker, book/podcast recommender, or paper-trading run occurred today, so Domain Content Status table left unchanged this run",
-        "Appended one memory-update log line to log.md for 2026-07-17, above today's existing review entry"
       ]
     }
   ]
