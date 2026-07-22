@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-22T23:53:00+02:00",
+      "summary": "Memory index updated — folded in today's live-portfolio briefing plus flagged a new APH exit/re-entry discrepancy and a KLR trim double-count",
+      "content": [
+        "Domain Content Status — Finance: added the 2026-07-22 trading-portfolio-management briefing (10 positions) — IQV/MGNS Watch (earnings this week), WOSG/DNLM/CPB Hold, AVGO/SAP Watch, GSK Watch (drifting post Ph3 failure, no stop), KLR Trim (50% recommended, carried from 07-21); recommended trades: KLR trim 50% (~€139 net) + new NEE entry (€1,000, funded from the trim) — neither confirmed executed",
+        "Flagged: APH is listed as an open Watch position today ('prior Exit signal cancelled') directly contradicting yesterday's log entry 'APH EXIT executed (~€1,492)' — added as a new Open Thread needing reconciliation against the actual fred-dashboard trade history",
+        "Flagged: today's briefing recommends the same KLR 50% trim that 07-21's log already reported as executed (~€667) — either that trim didn't go through or KLR was re-bought/re-sized since; noted alongside the APH discrepancy",
+        "Flagged: SHEL and BMY (both opened 07-21) don't appear in today's 10-name signal list (down from 11 positions on 07-21) — folded into the same reconciliation thread rather than treated as a separate issue",
+        "Open Threads: updated the NEE/AXP thread to note NEE is now recommended for entry (funded from the KLR trim proceeds), AXP still untouched",
+        "Bumped 'Last updated' date to 2026-07-22",
+        "Appended one memory-update log line to log.md for 2026-07-22, above today's briefing entry"
+      ]
+    },
+    {
       "runAt": "2026-07-21T23:53:43+02:00",
       "summary": "Memory index updated — today's Finance activity folded in: 2 market-tracker runs, a live-portfolio review (APH exit, KLR trim, 2 new positions), and a paper-trading P1 update (4 max-hold exits, 1 new trade), plus a new Meta cross-domain connection",
       "content": [
@@ -14,18 +27,6 @@
         "Domain Content Status — Finance: added the 2026-07-21 paper-trading P1 update — AMD added (Strategy E); CAT/IQV/IBM all hit 60-day max hold same day (IQV +17.18%, portfolio's first closed win); LRCX stopped out -18.16%; net P&L fell to +$634 (+1.81%) from +$1,145 (+3.37%) on 07-17",
         "Open Threads: resolved the APH-exit half of the AI-capex-bear-thesis thread (AVGO remains open); marked BMY as actioned and flagged the same-day SHEL entry as previously unflagged; added a new thread on the CAT/IQV/IBM same-day max-hold cluster and the trade log's own entry-pacing concern",
         "Appended one memory-update log line to log.md for 2026-07-21, above today's other entries"
-      ]
-    },
-    {
-      "runAt": "2026-07-21T00:00:00+02:00",
-      "summary": "Memory index bumped to 2026-07-21 — no new wiki content since 07-19, but recovered one buried wiki-thinker entry the last run's top-of-file read had missed",
-      "content": [
-        "Confirmed via file-mtime scan that no wiki content files changed since the 2026-07-19 update (only .obsidian config touched) — no new pages, trades, or reviews to fold in from 07-20/07-21; laptop/task activity appears to have paused over that gap",
-        "Per the data-quality note left by the 07-18 run, grepped the full log.md (not just the top) for recent dates and found a 2026-07-19 wiki-thinker (Meta) entry appended at the true end of the 688-line file (line 688) — missed by the same-day 07-19 memory-update run",
-        "Domain Content Status — Meta: run count 14→15, added the 07-19 highlight (Games' Children's Financial Literacy Game raw stub already documents a Finance+Lightfin crossover in its own Cross-Domain Notes, unlinked everywhere) and a standing note to always full-file-grep log.md rather than trust a top read",
-        "Domain Content Status — Games: corrected a stale claim — only 2 of the previously-listed 4 prototype stubs are real files in raw/games/ (Mobile Wood Chopping Game, Children's Financial Literacy Game); verified by directory listing. 'Crypto Portfolio Tracker' and 'Project Planning Interface' do not exist as files",
-        "Bumped 'Last updated' date to 2026-07-21",
-        "Appended one memory-update log line to log.md for 2026-07-21, at the top"
       ]
     }
   ]
