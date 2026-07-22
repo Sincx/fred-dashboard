@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-22T20:17:44+02:00",
+      "summary": "FICO (A)",
+      "picks": {
+        "p1": {
+          "ticker": "FICO",
+          "strategy": "A — Value",
+          "entry": 1227.34,
+          "stop": 1043.24,
+          "t1": 1534.18,
+          "t2": 1841.01
+        }
+      },
+      "content": "Fair Isaac (FICO) picked up at the previous close ($1,227.34) — still ~39% below Morningstar's $2,020 fair value on a wide-moat, dominant credit-scoring franchise, with no earnings until Jul 29 avoiding the binary risk other watchlist names carry this week. No exits today: all 25 legacy positions repriced with no new stop-loss, T1, or T2 triggers, though chip-adjacent names extended gains on the continuing sector rebound (AMAT +23.22% with T1+T2 already banked, TNET +32.03% the largest open gain)."
+    },
+    {
       "runAt": "2026-07-21T10:32:58+02:00",
       "summary": "AMD (E)",
       "picks": {
@@ -18,28 +33,6 @@
         }
       },
       "content": "AMD picked up at the previous close ($503.57) as the clearest catalyst-rich leader of the chip-sector rebound (SOX +3% Jul 20) after last week's semiconductor bear market — confirmed Microsoft/OpenAI/Meta/Oracle AI demand, three analyst price-target hikes this week, and the dated Advancing AI 2026 conference (Jul 22–23) landing while the position is open. Three positions (CAT, IQV, IBM) hit the 60-day max-hold limit on the same day and closed out (+0.05%, +17.18%, +7.2% blended respectively — IQV was the portfolio's first closed win); LRCX was stopped out at −18.16% on the lingering chip selloff."
-    },
-    {
-      "runAt": "2026-07-17T20:29:05+02:00",
-      "summary": "P1: JBHT (C) · P2: ABT (C)",
-      "picks": {
-        "p1": {
-          "ticker": "JBHT",
-          "strategy": "C — Volume Spike",
-          "entry": 298.41,
-          "stop": 253.65,
-          "t1": 373.01,
-          "t2": 447.62
-        },
-        "p2": {
-          "ticker": "ABT",
-          "strategy": "C — Volume Spike",
-          "entry": 101.00,
-          "stop": 85.85,
-          "t1": 126.25
-        }
-      },
-      "content": "J.B. Hunt (JBHT) picked up in Portfolio 1 at the previous close ($298.41) — beat Q2 EPS by ~12% and revenue by ~9.5% on ~2.47× average volume, chosen over the deepening chip-sector selloff dominating today's tape. Two exits: XOM hit its 60-day max hold and closed at −7.48%; PENG stopped out at −15.93% on the chip weakness.\n\nAbbott (ABT) entered Portfolio 2 at today's open (+2.20% gap) after raising FY26 adjusted EPS guidance on ~2.47× average volume. Two stop-outs today: ABSI (−25.45%, post-initiation pullback) and PENG (−20.13%, chip-sector selloff) — both full-position exits with no T1/T2 previously triggered."
     }
   ]
 }
