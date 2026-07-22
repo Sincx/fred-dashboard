@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-19
+updated: 2026-07-22
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-19**.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-22** (US: Tue 21 Jul close via Massive; LSE: Tue 21 Jul close via stockanalysis.com — massive.com has no UK exchange coverage and AV daily quota was exhausted before this run).
 
 ---
 
@@ -16,20 +16,21 @@ updated: 2026-07-19
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $151.20 | $1,663.20 | +5.4% | Connector/interconnect leader; AI data centre demand — EXIT signal 07-18 (RSI 38.6, below SMA50, MACD bearish); watch for SMA50 recovery |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 780p | £1,560.00 | +13.4% | UK luxury watch retailer; RSI ~70 easing, MACD bullish; weight 19.3% |
-| Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,742p | £853.56 | +2.6% | UK construction & infrastructure; RSI ~40, MACD bearish; earnings 23 Jul |
-| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $370.82 | $1,483.28 | −4.2% | AI networking + custom chips; RSI 52.3, below SMA50 ($397.95), MACD bearish — Watch |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 876p | £788.40 | +9.5% | UK homewares retailer; RSI ~65, MACD bullish, above 50d SMA — Hold |
-| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $206.26 | $1,856.34 | +25.8% | Healthcare data + CRO; RSI 69.1, MACD bullish; earnings 22 Jul — Watch |
-| Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,336p | £1,167.60 | +38.0% | Ground engineering; trimmed 15 shares 07-11; RSI ~79, MACD fading — Watch, mental stop 3,200p |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €139.06 | €973.42 | +1.7% | Enterprise software / ERP; AI integration tailwind; EUR-denominated; RSI 55.3, MACD bullish, Watch |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.08 | $1,324.80 | +0.8% | US consumer staples; RSI 45.3, above SMA50 $21.77, MACD bullish — Add signal |
-| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1916.5p | £958.25 | −1.2% | UK pharma & vaccines; Camlipixant Ph3 failed 07-19 (−2%) — Watch, assess Monday open |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $157.81 | $1,735.91 | +10.0% | Connector/interconnect leader; AI data centre demand — prior EXIT signal (07-18/07-21) cancelled: price rallied +4.9% on 07-21, back above 50d SMA ($149.25); RSI 31.6 (oversold), MACD improving — Watch |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 758.50p | £1,517.00 | +10.3% | UK luxury watch retailer; pulled back from 780p; RSI ~65 easing (carried, LSE data unavailable), MACD bullish; weight 13.9% — Hold |
+| Morgan Sindall Group | MGNS | LSE | GBp | 18 | 4,624p | £832.32 | 4,844p | £871.92 | +4.8% | UK construction & infrastructure; RSI ~40 (carried), MACD bearish; earnings 23 Jul (TOMORROW) — Watch |
+| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $390.58 | $1,562.32 | +0.9% | AI networking + custom chips; RSI 54.8, below SMA50 ($401.56), MACD turning bullish — Watch |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 864.50p | £778.05 | +8.1% | UK homewares retailer; RSI ~65 (carried), MACD bullish, above 50d SMA — Hold |
+| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $203.97 | $1,835.73 | +24.4% | Healthcare data + CRO; RSI 63.5, MACD turning bearish; earnings 22 Jul (TODAY) — Watch; stop $195 |
+| Keller Group | KLR | LSE | GBp | 35 | 2,418p | £846.30 | 3,328p | £1,164.80 | +37.6% | Ground engineering; trimmed 15 shares 07-11; RSI ~79 (carried), MACD fading — TRIM 50% (17 shares) recommended 07-21, still valid 07-22; stop 3,100p on remainder |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €136.42 | €954.94 | −0.2% | Enterprise software / ERP; AI integration tailwind; EUR-denominated; RSI 50.3 (ADR proxy), MACD fading+ — Watch |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.66 | $1,359.60 | +3.5% | US consumer staples; RSI 53.0 (past add band), above SMA50, MACD flat — Hold; add window from 07-21 closed |
+| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1893.00p | £946.50 | −2.4% | UK pharma & vaccines; Camlipixant Ph3 failed 07-19, continuing to drift lower — Watch; no stop in place |
 | **Cash** | — | — | EUR | — | — | — | — | **€813** | — | Available capital |
 
-> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-19**.
-> No stop losses currently in place.
+> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-22**.
+> No stop losses currently in place except IQV ($195, unofficial) and KLR (3,100p on remainder post-trim).
+> LSE RSI/MACD/50d-SMA readings carried forward from 07-18/07-21 — no fresh LSE technicals today (massive.com: no UK coverage; Alpha Vantage: daily quota exhausted).
 
 ---
 
