@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-23T20:22:19+02:00",
+      "summary": "RTX (D)",
+      "picks": {
+        "p1": {
+          "ticker": "RTX",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 194.88,
+          "stop": 165.65,
+          "t1": 243.60,
+          "t2": 292.32
+        }
+      },
+      "content": "RTX Corporation picked up at the previous close ($194.88) after a blowout Q2 print — EPS and revenue beat consensus by double digits, FY26 guidance raised on both lines, and backlog hit a record $289B; the ~5% pop is far smaller than sector-mate Lockheed Martin's ~10% move on its own beat-and-raise today, and RTX already carries a Morningstar wide-moat, undervalued flag. No exits today: all 26 legacy positions repriced with no new stop-loss, T1, or T2 triggers, though GEV reversed sharply from +11.25% to +1.58% on AI-infrastructure payback jitters, and LHA is now 59 days held — 1 day from the 60-day max-hold limit."
+    },
+    {
       "runAt": "2026-07-22T20:17:44+02:00",
       "summary": "FICO (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Fair Isaac (FICO) picked up at the previous close ($1,227.34) — still ~39% below Morningstar's $2,020 fair value on a wide-moat, dominant credit-scoring franchise, with no earnings until Jul 29 avoiding the binary risk other watchlist names carry this week. No exits today: all 25 legacy positions repriced with no new stop-loss, T1, or T2 triggers, though chip-adjacent names extended gains on the continuing sector rebound (AMAT +23.22% with T1+T2 already banked, TNET +32.03% the largest open gain)."
-    },
-    {
-      "runAt": "2026-07-21T10:32:58+02:00",
-      "summary": "AMD (E)",
-      "picks": {
-        "p1": {
-          "ticker": "AMD",
-          "strategy": "E — Sector Rotation",
-          "entry": 503.57,
-          "stop": 428.03,
-          "t1": 629.46,
-          "t2": 755.36
-        }
-      },
-      "content": "AMD picked up at the previous close ($503.57) as the clearest catalyst-rich leader of the chip-sector rebound (SOX +3% Jul 20) after last week's semiconductor bear market — confirmed Microsoft/OpenAI/Meta/Oracle AI demand, three analyst price-target hikes this week, and the dated Advancing AI 2026 conference (Jul 22–23) landing while the position is open. Three positions (CAT, IQV, IBM) hit the 60-day max-hold limit on the same day and closed out (+0.05%, +17.18%, +7.2% blended respectively — IQV was the portfolio's first closed win); LRCX was stopped out at −18.16% on the lingering chip selloff."
     }
   ]
 }
