@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-23T23:55:03+02:00",
+      "summary": "Memory index updated — folded in today's briefing, a new wiki-thinker cross-domain connection, and two 2026-07-22 items (a clipping batch and a paper trade) that the prior run's append-timing gap had missed",
+      "content": [
+        "Domain Content Status — Meta: run count 16→17, added the 2026-07-23 highlight (today's podcast-recommender picks 'Me Myself and AI' and 'On The Margin' each map onto an existing gap — AI & Tech's open retraining question, and the 'BTC as macro hedge' framing missing from Finance's global-macro stub and Crypto's overview); noted 07-22 also had no thinker run logged (gap now spans both 07-20 and 07-22)",
+        "Domain Content Status — Finance: added the 2026-07-23 trading-portfolio-management briefing (same 10-name list as 07-22) — KLR Trim recommended for a 4th consecutive session (still unactioned since 07-21), WOSG/SAP newly pulling back, MGNS/IQV earnings-related Watch; new candidates EIX/IMB/PRU (€750 starter each) surfaced from the Market Watchlist 5/5 tier but only €813 cash available, so at most one is fundable",
+        "Domain Content Status — Finance: caught up two 2026-07-22 items missed by the prior memory-update (they were appended to log.md after that run's 11:45pm cutoff) — the FICO paper trade (Strategy A Value, 26 open positions) and a clippings-sorter batch (2 new Morningstar source pages, 7 new morningstar-watchlist.md rows)",
+        "Domain Content Status — Finance: added the 2026-07-23 paper-trading P1 trade — RTX added (Strategy D Earnings Catalyst, Q2 beat-and-raise reinforcing an existing Morningstar wide-moat thesis); 27 open positions, net P&L +$747 (+2.02%)",
+        "Domain Content Status — Podcasts: added the 2026-07-23 podcast-recommender run (Business Breakdowns, Me Myself and AI, On The Margin, Writing Excuses)",
+        "Open Threads: added a new thread for today's wiki-thinker cross-domain connection (podcast recs vs. AI & Tech retraining gap / BTC-macro-hedge gap); reinforced the ongoing APH/SHEL/BMY/KLR reconciliation discrepancy as still unresolved through 07-23; added a thread for the EIX/IMB/PRU candidates and the €813 cash constraint",
+        "Bumped 'Last updated' date to 2026-07-23",
+        "Appended one memory-update log line to log.md for 2026-07-23"
+      ]
+    },
+    {
       "runAt": "2026-07-22T23:53:00+02:00",
       "summary": "Memory index updated — folded in today's live-portfolio briefing plus flagged a new APH exit/re-entry discrepancy and a KLR trim double-count",
       "content": [
@@ -15,18 +29,6 @@
         "Open Threads: updated the NEE/AXP thread to note NEE is now recommended for entry (funded from the KLR trim proceeds), AXP still untouched",
         "Bumped 'Last updated' date to 2026-07-22",
         "Appended one memory-update log line to log.md for 2026-07-22, above today's briefing entry"
-      ]
-    },
-    {
-      "runAt": "2026-07-21T23:53:43+02:00",
-      "summary": "Memory index updated — today's Finance activity folded in: 2 market-tracker runs, a live-portfolio review (APH exit, KLR trim, 2 new positions), and a paper-trading P1 update (4 max-hold exits, 1 new trade), plus a new Meta cross-domain connection",
-      "content": [
-        "Domain Content Status — Meta: run count 15→16, added the 2026-07-21 highlight (NY's first-in-nation data-centre moratorium is a new demand-side political risk to idea-bloom-energy and idea-ge-vernova, neither of which addresses it) and noted the 07-20 gap (no thinker run logged that day)",
-        "Domain Content Status — Finance: added 07-21 sector-performance-tracker (SPY P/E 26.20x, SMH/XLE/CIBR YTD leaders, CIBR crossed into Expensive P/E band) and growth-value-tracker (spread widened to -1708bps, Q3 partial shows growth selling off again) runs",
-        "Domain Content Status — Finance: added the 2026-07-21 trading-portfolio-management review — APH EXIT executed (~€1,492), KLR TRIM 50% executed (~€667), 2 new positions opened (SHEL €1,000, BMY €750); portfolio now 11 positions, cash €813/€2,972 post-settlement",
-        "Domain Content Status — Finance: added the 2026-07-21 paper-trading P1 update — AMD added (Strategy E); CAT/IQV/IBM all hit 60-day max hold same day (IQV +17.18%, portfolio's first closed win); LRCX stopped out -18.16%; net P&L fell to +$634 (+1.81%) from +$1,145 (+3.37%) on 07-17",
-        "Open Threads: resolved the APH-exit half of the AI-capex-bear-thesis thread (AVGO remains open); marked BMY as actioned and flagged the same-day SHEL entry as previously unflagged; added a new thread on the CAT/IQV/IBM same-day max-hold cluster and the trade log's own entry-pacing concern",
-        "Appended one memory-update log line to log.md for 2026-07-21, above today's other entries"
       ]
     }
   ]
