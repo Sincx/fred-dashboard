@@ -1,18 +1,18 @@
-{
+﻿{
     "taskId":  "clippings-sorter",
     "label":  "Clippings Sorter",
     "schedule":  "Daily 11:18 PM",
     "icon":  "📎",
     "runs":  [
                  {
-                     "runAt":  "2026-07-22T23:23:37.1609062+02:00",
-                     "summary":  "3 clippings processed (1 duplicate deleted, 2 new pages)",
-                     "content":  "1 duplicate deleted: 'The 10 Best Dividend Stocks' (exact re-clip of already-ingested article, no new page). 2 new wiki pages -> finance/morningstar/: 'Morningstar - 3 New Analyst Picks for Q3 2026' (Antero Resources FV $42, Lennar FV $124, Nvidia FV $280 reconfirmed) and 'Morningstar - 5 Stocks to Buy That Defy Value vs. Growth' (ICE, AMT, NOC, HSY, AMZN; barbell strategy replaced with equal-weight value/core/growth). morningstar-watchlist.md updated with 7 new rows; index.md and 3 existing source pages updated with reverse links."
-                 },
-                 {
-                     "runAt":  "2026-07-21T23:19:47.4705313+02:00",
+                     "runAt":  "2026-07-23T23:20:01.0621571+02:00",
                      "summary":  "No new clippings",
                      "content":  "Clippings folder empty."
+                 },
+                 {
+                     "runAt":  "2026-07-22T23:23:37.1609062+02:00",
+                     "summary":  "3 clippings processed (1 duplicate deleted, 2 new pages)",
+                     "content":  "1 duplicate deleted: \u0027The 10 Best Dividend Stocks\u0027 (exact re-clip of already-ingested article, no new page). 2 new wiki pages -\u003e finance/morningstar/: \u0027Morningstar - 3 New Analyst Picks for Q3 2026\u0027 (Antero Resources FV $42, Lennar FV $124, Nvidia FV $280 reconfirmed) and \u0027Morningstar - 5 Stocks to Buy That Defy Value vs. Growth\u0027 (ICE, AMT, NOC, HSY, AMZN; barbell strategy replaced with equal-weight value/core/growth). morningstar-watchlist.md updated with 7 new rows; index.md and 3 existing source pages updated with reverse links."
                  }
              ]
 }
