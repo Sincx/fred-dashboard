@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-24T20:26:01+02:00",
+      "summary": "ISTR (F)",
+      "picks": {
+        "p1": {
+          "ticker": "ISTR",
+          "strategy": "F — Small Cap Value",
+          "entry": 29.32,
+          "stop": 24.92,
+          "t1": 36.65,
+          "t2": 43.98
+        }
+      },
+      "content": "Investar Holding (ISTR) picked up at the previous close ($29.32) — a Louisiana community bank trading at ~13x trailing / ~9.3x forward P/E and ~1.2x book value despite double-digit revenue and earnings growth. Exits today: LHA (Lufthansa) hit the 60-day max-hold limit and closed for a blended +18.2% (+$182), the portfolio's largest closed win; CMCSA dropped to −9.50% on a high-volume selloff and is now within $1.33 of its stop."
+    },
+    {
       "runAt": "2026-07-23T20:22:19+02:00",
       "summary": "RTX (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "RTX Corporation picked up at the previous close ($194.88) after a blowout Q2 print — EPS and revenue beat consensus by double digits, FY26 guidance raised on both lines, and backlog hit a record $289B; the ~5% pop is far smaller than sector-mate Lockheed Martin's ~10% move on its own beat-and-raise today, and RTX already carries a Morningstar wide-moat, undervalued flag. No exits today: all 26 legacy positions repriced with no new stop-loss, T1, or T2 triggers, though GEV reversed sharply from +11.25% to +1.58% on AI-infrastructure payback jitters, and LHA is now 59 days held — 1 day from the 60-day max-hold limit."
-    },
-    {
-      "runAt": "2026-07-22T20:17:44+02:00",
-      "summary": "FICO (A)",
-      "picks": {
-        "p1": {
-          "ticker": "FICO",
-          "strategy": "A — Value",
-          "entry": 1227.34,
-          "stop": 1043.24,
-          "t1": 1534.18,
-          "t2": 1841.01
-        }
-      },
-      "content": "Fair Isaac (FICO) picked up at the previous close ($1,227.34) — still ~39% below Morningstar's $2,020 fair value on a wide-moat, dominant credit-scoring franchise, with no earnings until Jul 29 avoiding the binary risk other watchlist names carry this week. No exits today: all 25 legacy positions repriced with no new stop-loss, T1, or T2 triggers, though chip-adjacent names extended gains on the continuing sector rebound (AMAT +23.22% with T1+T2 already banked, TNET +32.03% the largest open gain)."
     }
   ]
 }
