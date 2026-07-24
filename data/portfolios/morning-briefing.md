@@ -1,90 +1,124 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-07-23
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-07-24
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
   Positions:        10 open
-  Total Value:      ~€13,617 (positions €12,804 + cash €813)
+  Total Value:      ~€13,375 (positions €12,562 + cash €813)
   Available Cap:    €813
-  Best Performer:   KLR +39.4%
-  Worst Performer:  SAP −3.4%
-  Largest Position: WOSG (13.4% of portfolio)
+  Best Performer:   KLR +35.65%
+  Worst Performer:  SAP −6.13%
+  Largest Position: IQV (13.03% of portfolio)
 
 POSITION SIGNALS
-  ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────────────────┐
+  ┌──────────┬────────────┬─────────┬───────┬──────────┬────────────────────────────────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst                       │
-  ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────────────────┤
-  │ APH      │ +9.8%      │ 50.8    │ ↑     │ Watch    │ —                               │
-  │ WOSG     │ +6.1%      │ ~65*    │ ↑     │ Watch    │ Pulled back −3.8% today         │
-  │ MGNS     │ +7.8%      │ ~40*    │ ↑     │ Watch    │ Earnings TODAY (23 Jul)         │
-  │ AVGO     │ +2.5%      │ 53.5    │ ↓     │ Watch    │ —                               │
-  │ DNLM     │ +8.2%      │ ~65*    │ ↑     │ Hold     │ —                               │
-  │ IQV      │ +23.6%     │ 56.8    │ ↑     │ Watch    │ Earnings reaction (22 Jul); stop $195 │
-  │ KLR      │ +39.4%     │ ~79*    │ ↑     │ Trim     │ Stop 3,100p on remainder        │
-  │ SAP      │ −3.4%      │ ~50*    │ —     │ Watch    │ Fell −3.2% today                │
-  │ CPB      │ +3.7%      │ 55.7    │ ↑     │ Hold     │ —                               │
-  │ GSK      │ −1.5%      │ —*      │ —     │ Watch    │ No stop in place                │
-  └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────────────────┘
-  * = carried forward from prior session — no fresh LSE/XETRA technicals available today
-    (massive.com has no UK/German exchange coverage; Alpha Vantage daily quota exhausted).
-    Prices themselves are fresh (07-22 close, via stockanalysis.com for LSE/XETRA,
-    massive.com for US names).
+  ├──────────┼────────────┼─────────┼───────┼──────────┼────────────────────────────────┤
+  │ APH      │ +9.71%     │ 40.8    │ ↑     │ Add      │ —                              │
+  │ WOSG     │ +1.60%     │ 39.5    │ ↓     │ Exit     │ broke 50d SMA today (−4.25%)   │
+  │ MGNS     │ +2.94%     │ 36.3    │ ↑     │ Watch    │ earnings 23 Jul — miss (−4.5%) │
+  │ AVGO     │ +1.35%     │ 62.5    │ ↓     │ Watch    │ —                              │
+  │ DNLM     │ +7.19%     │ 67.4    │ ↑     │ Hold     │ —                              │
+  │ IQV      │ +26.42%    │ 50.4    │ ↑     │ Hold     │ stop $195 (unofficial)         │
+  │ KLR      │ +35.65%    │ 72.1    │ ↑     │ Trim     │ trim rec. unexecuted since 07-21│
+  │ SAP      │ −6.13%     │ 30.6    │ ↓     │ Exit     │ —                              │
+  │ CPB      │ −2.24%     │ 33.5    │ ↓     │ Watch    │ −5.7% single-day drop, check news│
+  │ GSK      │ −1.75%     │ 31.1    │ ↓     │ Exit     │ Camlipixant Ph3 failure (07-19)│
+  └──────────┴────────────┴─────────┴───────┴──────────┴────────────────────────────────┘
+  Note: LSE/XETRA RSI/MACD/ATR computed fresh today from Alpha Vantage daily series (not carried
+  forward this time). US names (APH/AVGO/IQV/CPB) computed fresh from Massive daily bars + latest close.
 
 PORTFOLIO SHAPE
-  Concentration:   OK (largest WOSG at 13.4% of portfolio, below 25% threshold)
-  Sector spread:   Tech/AI 29.9% | Healthcare 21.2% | UK Consumer 20.5% | UK Industrials 19.0% | Consumer Staples 9.3%
-  Currency split:  USD 44.5% | GBp 48.3% | EUR 7.2%
+  Concentration:   OK — largest position IQV at 13.03%, no position ≥25%
+  Sector spread:   Tech/AI 30.2% | Healthcare/CRO 21.9% | UK Consumer 20.2% | UK Industrials 18.7% | Consumer Staples 9.0%
+                   Tech/AI (APH+AVGO+SAP) is the largest single sector bucket — worth watching since
+                   SAP is now an Exit signal and AVGO is Watch.
+  Currency split:  USD 45.1% | GBp 47.8% | EUR 7.2%
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  KLR: Trim 50% (17 shares) — RSI ~79 (carried, extreme overbought), MACD fading, +39.4% unrealised gain. First flagged 07-21, still unexecuted after 3 sessions — concentration/profit-taking risk grows the longer this sits.
-    Gross profit (17 sh): £161.84 (~€189.68)
-    CGT @21%: −€39.83
-    Commission: −€4.38
-    Net profit: ~€145.47
-  Expected proceeds: £572.90 (~€671.53)
+  WOSG: Full Exit — RSI 39.5 (below 40), price broke below 50d SMA (699p vs 715.3p) on today's
+  −4.25% drop, MACD histogram bearish and expanding. All three exit criteria triggered; protect the
+  small gain before it turns into a loss.
+    Gross profit: £22.00 (€25.75) | CGT @21%: −€5.41 | Commission: −€4.39 | Net profit: €15.95
+  Expected proceeds: £1,398.00 (≈€1,631.96 net of commission)
+
+  GSK: Full Exit — Camlipixant Ph3 failure (07-19) continues to weigh; RSI 31.1 and falling, below
+  50d SMA, MACD bearish. No stop was in place — cut the loss now rather than let it compound.
+    Loss position (no CGT). Realised loss: −£17.00 (−€19.90) + commission −€4.39 = −€24.29 total
+  Expected proceeds: £952.75 (≈€1,110.85 net of commission)
+
+  SAP: Full Exit — broke below 50d SMA (€128.32 vs €144.07), RSI 30.6 and still falling, MACD
+  bearish and expanding. AI-integration thesis not showing up in the price; cut the loss.
+    Loss position (no CGT). Realised loss: −€58.66 + commission −€4.39 = −€63.05 total
+  Expected proceeds: €893.85 (net of commission)
+
+  KLR: Trim 50% (17 of 35 shares) — RSI 72.1, still overbought (cooled from the 86.3 extreme that
+  triggered this call on 07-21) but MACD histogram just turned negative and is expanding — momentum
+  rolling over after a +35.65% run. This recommendation has been outstanding for 3+ sessions.
+    Gross profit (17 sh): £146.54 (€171.53) | CGT @21%: −€36.02 | Commission: −€4.39 | Net profit: €131.12
+  Expected proceeds: £557.60 (≈€648.26 net of commission)
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No Add signals triggered today — none of APH/AVGO/IQV/CPB met the RSI 35–50 + above-50d + bullish-MACD pullback criteria.
+  APH: Add at $157.43 (current) — RSI 40.8 sits in the 35–50 pullback zone, price is above the 50d
+  SMA ($150.54), MACD just crossed positive and is expanding (bullish crossover forming).
+  Stop: $149.01 (entry − 1.5×ATR14 of $5.61) | Size: 1 share (~$157/€138) only — existing cost
+  basis (€1,385) is already near the €1,500 large-position cap; a full-size add would breach it.
+  Skip if strict adherence to the cap is preferred.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  EIX: Enter at $78.17 — Market Watchlist 5/5, Utilities, cheap + healthy RSI + bullish MACD
-  Stop: $75.54 | Size: €750 (~10 shares)
+  BATS: Enter at 4,480p (current) — Market Watchlist source, 5/5 score, Cheap (P/E 12.78, div yield
+  5.49%, EPS growth 156.7%). Fresh data shows a −2.93% pullback today that the watchlist snapshot
+  (dated 07-23 but built on 07-22 close) missed — price just broke below its 50d SMA (4,480p vs
+  4,606p), RSI 41.7 still healthy, MACD histogram positive but contracting. Treat as buy-the-dip;
+  wait for confirmation of support if cautious.
+  Stop: 4,318p (entry − 1.5×ATR14 of 108p) | Size: €1,500
 
-  IMB: Enter at 2,793p — Market Watchlist 5/5, Consumer Staples, cheap + healthy RSI + bullish MACD
-  Stop: ~2,709p (approx — no fresh LSE ATR available) | Size: €750 (~22 shares)
+  NEE: Enter at $89.79 (current) — Market Watchlist source, 4/5 score, Fair value, RSI 63.5, bullish
+  MACD, div yield 2.83%. Confirmed still in a healthy uptrend (above 20d SMA of $88.20).
+  Stop: $87.76 (entry − 1.5×ATR14 of $1.36) | Size: €1,000
 
-  PRU: Enter at 1,068p — Market Watchlist 5/5, Financials, cheap + healthy RSI + bullish MACD
-  Stop: ~1,036p (approx — no fresh LSE ATR available) | Size: €750 (~59 shares)
-
-  Note: only €813 cash on hand — enough for one starter-size add today. Executing the KLR trim above would free a further ~€671 (~€1,484 combined), enough to fund a normal-size position. Prioritise EIX first: it's USD/Utilities, diversifying away from the portfolio's already-heavy 48.3% GBp / UK-consumer-and-industrials tilt, whereas IMB/PRU would add further GBp exposure.
+  BAC: Enter at $61.28 (current) — Market Watchlist source, 4/5 score, Cheap (P/E 14.15), RSI 67.8
+  (upper end of healthy, not yet overbought); bearish MACD is the only gap per the screener, but
+  price remains above its 20d SMA.
+  Stop: $59.47 (entry − 1.5×ATR14 of $1.20) | Size: €1,000
 
 INVESTMENT OPPORTUNITIES
-  5/5 · EIX (Morningstar-US, Utilities) — Cheap, P/E 8.65, EPS +30.7%
-  Entry: $78.17 | Stop: $75.54 | Size: €750 | RSI: 66.8 | MACD: Bullish
-  Conviction: Cheap utility with double-digit EPS growth and a 4.41% yield; RSI healthy (just under overbought), momentum bullish.
-  Portfolio fit: New sector (Utilities), USD-denominated — improves diversification away from the portfolio's heavy UK/GBp weighting; no overlap with existing Tech/AI, Healthcare, or Consumer holdings.
+  5/5 · BATS (FTSE100, Consumer Staples) — Cheap, P/E 12.78, EPS +156.7%
+  Entry: 4,480p (pulled back below 50d SMA today) | Stop: 4,318p | Size: €1,500 | RSI: 41.7 | MACD: Bullish (contracting)
+  Conviction: Full 5/5 screener setup; today's pullback improves the entry vs the sheet's stale snapshot.
+  Portfolio fit: adds a second Consumer Staples name alongside CPB (combined ~21%); diversifies away
+  from the 30.2%-weighted Tech/AI bucket; adds GBp exposure (already 47.8% of book).
 
-  5/5 · IMB (FTSE100, Consumer Staples) — Cheap, P/E 12.65, Div yield 5.91%
-  Entry: 2,793p | Stop: ~2,709p (approx) | Size: €750 | RSI: 52.3 | MACD: Bullish
-  Conviction: Deeply cheap tobacco/staples name, high yield, healthy RSI, bullish MACD.
-  Portfolio fit: Adds to Consumer Staples (already CPB at 9.3%; combined ~14.9%, still well below concentration threshold) but pushes GBp exposure further above its already-elevated 48.3%.
+  4/5 · NEE (S&P500, Utilities) — Fair value, P/E 22.34, EPS +47.4%
+  Entry: $89.79 | Stop: $87.76 | Size: €1,000 | RSI: 63.5 | MACD: Bullish
+  Conviction: Fair value, healthy RSI, bullish MACD — no gaps per the screener.
+  Portfolio fit: brand-new sector (Utilities), zero overlap with current holdings — pure diversification.
 
-  5/5 · PRU (FTSE100, Financials) — Cheap, P/E 9.15, EPS +82.7%
-  Entry: 1,068p | Stop: ~1,036p (approx) | Size: €750 | RSI: 58.0 | MACD: Bullish
-  Conviction: Cheap financials with very strong EPS growth, healthy RSI, bullish MACD.
-  Portfolio fit: New sector (Financials) diversifies thematically, but GBp-denominated — adds further to already-high UK currency concentration.
+  4/5 · BAC (S&P500, Financials) — Cheap, P/E 14.15, EPS +28%
+  Entry: $61.28 | Stop: $59.47 | Size: €1,000 | RSI: 67.8 | MACD: Bearish
+  Conviction: Cheap valuation and Buy signal; bearish MACD is the only gap, RSI still healthy.
+  Portfolio fit: brand-new sector (Financials), zero overlap; further reduces Tech/AI concentration.
 
 PORTFOLIO RISKS TO WATCH
-  - LSE/XETRA data blind spot: 5 of 10 positions (WOSG, MGNS, DNLM, KLR, GSK) and SAP are running on carried-forward technicals — no fresh RSI/MACD/50d-SMA today (massive.com has no UK/German coverage, AV quota exhausted).
-  - No stop losses on 8 of 10 positions — only IQV ($195, unofficial) and KLR (3,100p on remainder) are protected, despite large unrealised gains on KLR (+39.4%) and IQV (+23.6%).
-  - KLR TRIM 50% recommendation has now sat unexecuted for 3 sessions (since 07-21) on an extreme-overbought (RSI ~79 carried) position — the longer it's delayed, the more concentrated the unrealised gain risk.
-  - MGNS reports earnings today (23 Jul) against an already RSI-neutral, MACD-bearish setup — binary event risk.
-  - Currency concentration: 48.3% of the book is GBp-denominated — a further add in IMB or PRU would push this higher; EIX (USD) is the better diversifier if capital allows.
+  - Tech/AI is the largest sector bucket at 30.2% of the book (APH/AVGO/SAP) — SAP is now Exit and
+    AVGO is Watch, so a further pullback across the group would hit the portfolio broadly.
+  - CPB dropped ~5.7% in a single session ($22.71 → $21.41) with no obvious catalyst identified —
+    check for company news before the next session.
+  - No stop-losses are in place on WOSG, MGNS, DNLM, SAP, CPB or GSK (only IQV at $195 and KLR at
+    3,100p have informal stops) — three fresh Exit signals underline the case for tightening risk
+    controls across the book.
+  - MGNS missed earnings today (−4.49% reaction); RSI 36.3 and MACD are turning bearish — a close
+    below the ~4,681p 50d SMA next session would flip this to a mechanical Exit signal.
 
 NEXT ACTIONS
-  1. Execute the KLR trim (17 shares at ~3,370p) to lock in gains and free ~€671 in capital — pending since 07-21.
-  2. Watch MGNS earnings (today, 23 Jul) — reassess RSI/MACD once results and fresh LSE data are available.
-  3. If capital allows post-trim, place a starter position in EIX (~€750, 10 shares) at $78.17 with a $75.54 stop for USD/sector diversification.
+  1. Execute WOSG full exit (200 sh @ ~699p) — lock in the small gain before it turns into a loss.
+  2. Execute GSK and SAP full exits to cut losses — neither has a stop in place.
+  3. Execute the outstanding KLR trim (17 sh @ ~3,280p) — unexecuted since 2026-07-21.
+  4. Consider a 1-share APH add given the fresh bullish crossover; skip if the €1,500 cap is to be
+     strictly enforced.
+  5. Redeploy freed capital (~€5,100 if all above trades execute) into BATS / NEE / BAC per sizing above.
+  6. Monitor MGNS — a close below the 4,681p 50d SMA would trigger a mechanical Exit signal.
+  7. Check CPB for company-specific news given today's outsized −5.7% move.
 ════════════════════════════════════════════════════════
