@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-24T23:55:00+02:00",
+      "summary": "Memory index updated — folded in today's paper trade (LHA fully exited, largest closed win yet), a briefing with three simultaneous EXIT signals for the first time, and a new wiki-thinker cross-domain connection",
+      "content": [
+        "Domain Content Status — Meta: run count 17→18, added the 2026-07-24 highlight — Lightfin's Optimised Jungle satire ('Empowerment Trap') mirrors Finance's real-world Meta PR-vs-shareholder-reality reporting; also flagged David Chang's memoir Eat a Peach as missing from Books despite being covered on Cooking's chef-david-chang page",
+        "Domain Content Status — Finance: added the 2026-07-24 paper-trading P1 trade — ISTR added (Strategy F Small Cap Value, Louisiana community bank at ~9.3x forward P/E); LHA fully exited at the 60-day max-hold limit, resolving yesterday's '1 day from limit' flag — blended realised gain +$182 (+18.2%), the portfolio's largest closed win to date",
+        "Domain Content Status — Finance: added the 2026-07-24 trading-portfolio-management briefing — first time three positions (WOSG, SAP, GSK) all show mechanical EXIT signals simultaneously, alongside the still-unexecuted KLR trim; if all four actions execute, ~€5,100 would free up for new BATS/NEE/BAC candidates from the Market Watchlist",
+        "Open Threads: added a new thread for the 07-24 triple-EXIT signal cluster, cross-referenced against the ongoing briefing-vs-dashboard reconciliation issue (verify against fred-dashboard/data/portfolios/trading.md before assuming these executed); added a thread for the Eat a Peach / Books gap flagged by wiki-thinker",
+        "Bumped 'Last updated' date to 2026-07-24",
+        "Appended one memory-update log line to log.md for 2026-07-24"
+      ]
+    },
+    {
       "runAt": "2026-07-23T23:55:03+02:00",
       "summary": "Memory index updated — folded in today's briefing, a new wiki-thinker cross-domain connection, and two 2026-07-22 items (a clipping batch and a paper trade) that the prior run's append-timing gap had missed",
       "content": [
@@ -16,19 +28,6 @@
         "Open Threads: added a new thread for today's wiki-thinker cross-domain connection (podcast recs vs. AI & Tech retraining gap / BTC-macro-hedge gap); reinforced the ongoing APH/SHEL/BMY/KLR reconciliation discrepancy as still unresolved through 07-23; added a thread for the EIX/IMB/PRU candidates and the €813 cash constraint",
         "Bumped 'Last updated' date to 2026-07-23",
         "Appended one memory-update log line to log.md for 2026-07-23"
-      ]
-    },
-    {
-      "runAt": "2026-07-22T23:53:00+02:00",
-      "summary": "Memory index updated — folded in today's live-portfolio briefing plus flagged a new APH exit/re-entry discrepancy and a KLR trim double-count",
-      "content": [
-        "Domain Content Status — Finance: added the 2026-07-22 trading-portfolio-management briefing (10 positions) — IQV/MGNS Watch (earnings this week), WOSG/DNLM/CPB Hold, AVGO/SAP Watch, GSK Watch (drifting post Ph3 failure, no stop), KLR Trim (50% recommended, carried from 07-21); recommended trades: KLR trim 50% (~€139 net) + new NEE entry (€1,000, funded from the trim) — neither confirmed executed",
-        "Flagged: APH is listed as an open Watch position today ('prior Exit signal cancelled') directly contradicting yesterday's log entry 'APH EXIT executed (~€1,492)' — added as a new Open Thread needing reconciliation against the actual fred-dashboard trade history",
-        "Flagged: today's briefing recommends the same KLR 50% trim that 07-21's log already reported as executed (~€667) — either that trim didn't go through or KLR was re-bought/re-sized since; noted alongside the APH discrepancy",
-        "Flagged: SHEL and BMY (both opened 07-21) don't appear in today's 10-name signal list (down from 11 positions on 07-21) — folded into the same reconciliation thread rather than treated as a separate issue",
-        "Open Threads: updated the NEE/AXP thread to note NEE is now recommended for entry (funded from the KLR trim proceeds), AXP still untouched",
-        "Bumped 'Last updated' date to 2026-07-22",
-        "Appended one memory-update log line to log.md for 2026-07-22, above today's briefing entry"
       ]
     }
   ]
