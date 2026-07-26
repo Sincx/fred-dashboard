@@ -5,12 +5,12 @@
     "icon":  "📎",
     "runs":  [
                  {
-                     "runAt":  "2026-07-24T23:18:59.4520273+02:00",
-                     "summary":  "No new clippings",
-                     "content":  "Clippings folder empty."
+                     "runAt":  "2026-07-26T23:22:44.2104780+02:00",
+                     "summary":  "1 clipping processed",
+                     "content":  "\"Trading Post July 24, 2026 - 4 Shorts, 3 Longs\" (Michael Burry Substack) → domain: finance. Moved to raw/finance/burry-trading-post-2026-07-24.md; created wiki/finance/investor-letters/source-burry-trading-post-2026-07-24.md. 4 shorts added (NVDA, SOXX, CAT, MU) + 3 longs added (FLUT, DKNG, MOH); circular AI-financing short thesis; Palantir/DIA MARS critique. Reverse links added to 3 existing pages."
                  },
                  {
-                     "runAt":  "2026-07-23T23:20:01.0621571+02:00",
+                     "runAt":  "2026-07-24T23:18:59.4520273+02:00",
                      "summary":  "No new clippings",
                      "content":  "Clippings folder empty."
                  }
