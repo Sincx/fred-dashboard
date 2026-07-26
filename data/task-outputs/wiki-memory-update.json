@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-26T18:30:00+02:00",
+      "summary": "Memory index was stale since 2026-07-24 (a 2-day laptop/task gap) — caught up two days of paper trading, live-portfolio, wiki-thinker, and a new Michael Burry ingest in one pass",
+      "content": [
+        "Domain Content Status — Meta: run count 18→20, added two new highlights — 07-26: Jeremy Grantham's 'Bitcoin heading to zero' call sits unchecked against Fred's own doubled-up Bitcoin exposure (real BTC + MSTR as a leveraged proxy); 07-25: the Mobley v. Workday age-discrimination lawsuit lands on both Health's 'men ~50' scope and AI & Tech's retraining worry, plus Lightfin's own Little Ninja story already dramatizes the breathwork mechanism from Health's Godin/Nestor source",
+        "Domain Content Status — Finance: added the 2026-07-24 paper-trading P1 trade — ISTR added (Strategy F Small Cap Value); LHA fully exited at the 60-day max-hold limit, blended realised gain +$182 (+18.2%), the portfolio's largest closed win to date; 27 open positions, net P&L +$670 (+1.76%)",
+        "Domain Content Status — Finance: added the 2026-07-26 clippings-sorter ingest — Michael Burry's 'Trading Post' Substack (source dated Jul 24): 4 new shorts (NVDA/SOXX/CAT/MU), 3 new longs (FLUT/DKNG/MOH), circular AI-financing thesis, Palantir/DIA MARS critique; cross-linked to person-jeremy-grantham.md and concept-short-selling.md",
+        "Domain Content Status — Finance header count corrected: '12 paper trading positions' was stale from May — updated to '27 P1 paper trading positions'",
+        "Open Threads: resolved the 07-24 WOSG/SAP/GSK triple-EXIT thread — the briefing log shows all three actually executed (WOSG +€15.95, GSK −€24.29, SAP −€63.05); KLR trim still outstanding, new BATS/NEE/BAC candidates sourced, standing reconciliation caveat still applies until checked against trading.md",
+        "Open Threads: marked the EIX/IMB/PRU candidates thread superseded — the 07-24 briefing moved to a different candidate set (BATS/NEE/BAC) after the exits freed cash; EIX/IMB/PRU never actioned",
+        "Open Threads: added the Paper Trading P1 2026-07-24 status line (ISTR add, LHA close), the Mobley v. Workday cross-domain thread (07-25), and the Grantham/Bitcoin exposure thread (07-26)",
+        "Bumped 'Last updated' date to 2026-07-26",
+        "Appended one memory-update log line to log.md for 2026-07-26"
+      ]
+    },
+    {
       "runAt": "2026-07-24T23:55:00+02:00",
       "summary": "Memory index updated — folded in today's paper trade (LHA fully exited, largest closed win yet), a briefing with three simultaneous EXIT signals for the first time, and a new wiki-thinker cross-domain connection",
       "content": [
@@ -14,20 +29,6 @@
         "Open Threads: added a new thread for the 07-24 triple-EXIT signal cluster, cross-referenced against the ongoing briefing-vs-dashboard reconciliation issue (verify against fred-dashboard/data/portfolios/trading.md before assuming these executed); added a thread for the Eat a Peach / Books gap flagged by wiki-thinker",
         "Bumped 'Last updated' date to 2026-07-24",
         "Appended one memory-update log line to log.md for 2026-07-24"
-      ]
-    },
-    {
-      "runAt": "2026-07-23T23:55:03+02:00",
-      "summary": "Memory index updated — folded in today's briefing, a new wiki-thinker cross-domain connection, and two 2026-07-22 items (a clipping batch and a paper trade) that the prior run's append-timing gap had missed",
-      "content": [
-        "Domain Content Status — Meta: run count 16→17, added the 2026-07-23 highlight (today's podcast-recommender picks 'Me Myself and AI' and 'On The Margin' each map onto an existing gap — AI & Tech's open retraining question, and the 'BTC as macro hedge' framing missing from Finance's global-macro stub and Crypto's overview); noted 07-22 also had no thinker run logged (gap now spans both 07-20 and 07-22)",
-        "Domain Content Status — Finance: added the 2026-07-23 trading-portfolio-management briefing (same 10-name list as 07-22) — KLR Trim recommended for a 4th consecutive session (still unactioned since 07-21), WOSG/SAP newly pulling back, MGNS/IQV earnings-related Watch; new candidates EIX/IMB/PRU (€750 starter each) surfaced from the Market Watchlist 5/5 tier but only €813 cash available, so at most one is fundable",
-        "Domain Content Status — Finance: caught up two 2026-07-22 items missed by the prior memory-update (they were appended to log.md after that run's 11:45pm cutoff) — the FICO paper trade (Strategy A Value, 26 open positions) and a clippings-sorter batch (2 new Morningstar source pages, 7 new morningstar-watchlist.md rows)",
-        "Domain Content Status — Finance: added the 2026-07-23 paper-trading P1 trade — RTX added (Strategy D Earnings Catalyst, Q2 beat-and-raise reinforcing an existing Morningstar wide-moat thesis); 27 open positions, net P&L +$747 (+2.02%)",
-        "Domain Content Status — Podcasts: added the 2026-07-23 podcast-recommender run (Business Breakdowns, Me Myself and AI, On The Margin, Writing Excuses)",
-        "Open Threads: added a new thread for today's wiki-thinker cross-domain connection (podcast recs vs. AI & Tech retraining gap / BTC-macro-hedge gap); reinforced the ongoing APH/SHEL/BMY/KLR reconciliation discrepancy as still unresolved through 07-23; added a thread for the EIX/IMB/PRU candidates and the €813 cash constraint",
-        "Bumped 'Last updated' date to 2026-07-23",
-        "Appended one memory-update log line to log.md for 2026-07-23"
       ]
     }
   ]
