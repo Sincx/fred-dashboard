@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-27T20:16:34+02:00",
+      "summary": "ROK (B)",
+      "picks": {
+        "p1": {
+          "ticker": "ROK",
+          "strategy": "B — Momentum",
+          "entry": 462.16,
+          "stop": 392.84,
+          "t1": 577.70,
+          "t2": 693.24
+        }
+      },
+      "content": "Rockwell Automation (ROK) picked up at the previous close ($462.16) after raising FY26 EPS guidance on a Q2 beat — up 32.7% over three months with Zacks Rank #1 momentum, chosen over chip-sector momentum to stay clear of Burry's semiconductor short thesis. No exits today: all 27 legacy positions repriced with no new stop-loss, T1, or T2 triggers; Burry's short list (re-read today) added MU and CAT as direct shorts, newly flagging open position MU (+2.80%, WATCH — above water)."
+    },
+    {
       "runAt": "2026-07-24T20:26:01+02:00",
       "summary": "ISTR (F)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Investar Holding (ISTR) picked up at the previous close ($29.32) — a Louisiana community bank trading at ~13x trailing / ~9.3x forward P/E and ~1.2x book value despite double-digit revenue and earnings growth. Exits today: LHA (Lufthansa) hit the 60-day max-hold limit and closed for a blended +18.2% (+$182), the portfolio's largest closed win; CMCSA dropped to −9.50% on a high-volume selloff and is now within $1.33 of its stop."
-    },
-    {
-      "runAt": "2026-07-23T20:22:19+02:00",
-      "summary": "RTX (D)",
-      "picks": {
-        "p1": {
-          "ticker": "RTX",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 194.88,
-          "stop": 165.65,
-          "t1": 243.60,
-          "t2": 292.32
-        }
-      },
-      "content": "RTX Corporation picked up at the previous close ($194.88) after a blowout Q2 print — EPS and revenue beat consensus by double digits, FY26 guidance raised on both lines, and backlog hit a record $289B; the ~5% pop is far smaller than sector-mate Lockheed Martin's ~10% move on its own beat-and-raise today, and RTX already carries a Morningstar wide-moat, undervalued flag. No exits today: all 26 legacy positions repriced with no new stop-loss, T1, or T2 triggers, though GEV reversed sharply from +11.25% to +1.58% on AI-infrastructure payback jitters, and LHA is now 59 days held — 1 day from the 60-day max-hold limit."
     }
   ]
 }
