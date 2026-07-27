@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-27T23:53:31+02:00",
+      "summary": "Memory index updated — folded in today's clippings batch (7 sources incl. two-part Burry Palantir thesis), a trading-portfolio review that retired the long-running KLR-trim thread, and a recurring dashboard-push blocker",
+      "content": [
+        "Domain Content Status — Finance: added the 2026-07-27 clippings-sorter batch — 7 new source pages: NYT DealBook (Alphabet Q2 capex/FCF, Anthropic-AMD chip deal, Moonshot AI Nvidia-access accusation), Morningstar FTSE100-under-Burnham piece, two-part Burry Palantir bear thesis (accounting forensics + DCF), and two Burry Trading Post entries (VIX/VIXEQ divergence, Tencent/Meituan/Temple & Webster longs)",
+        "Domain Content Status — Finance: added the 2026-07-27 trading-portfolio review — MGNS Full Exit recommended (small €29.28 net loss); KLR's RSI cooled to 65.3, dropping below its Trim threshold, effectively retiring the KLR-trim-unexecuted thread open since 07-17; new BATS position opened (€750, no wiki idea page yet)",
+        "Domain Content Status — Finance: added the 2026-07-27 portfolio-refresh (25 prices, $EV -26.78% biggest mover, Massive.com now returning HTTP 403 not-entitled) and both market trackers (sector: XLE now tracker-best at +35.2% YTD; growth-value: value leads by 1924bps, IWF negative YTD for the first time in 2026)",
+        "Domain Content Status — Crypto: added source-morningstar-crypto-winter-2026-07-24.md (BTC -25% YTD, $2.7B spot-ETF outflows, macro- not ecosystem-driven)",
+        "Open Threads: added the KLR-trim-thread-lapsed note, the new BATS-has-no-idea-page item (joins SHEL/BMY backlog), and the recurring fred-dashboard git-push-blocked issue (531f364, needs manual push — same pattern as 07-17)",
+        "Bumped 'Last updated' date to 2026-07-27",
+        "Appended one memory-update log line to log.md for 2026-07-27"
+      ]
+    },
+    {
       "runAt": "2026-07-26T18:30:00+02:00",
       "summary": "Memory index was stale since 2026-07-24 (a 2-day laptop/task gap) — caught up two days of paper trading, live-portfolio, wiki-thinker, and a new Michael Burry ingest in one pass",
       "content": [
@@ -17,18 +30,6 @@
         "Open Threads: added the Paper Trading P1 2026-07-24 status line (ISTR add, LHA close), the Mobley v. Workday cross-domain thread (07-25), and the Grantham/Bitcoin exposure thread (07-26)",
         "Bumped 'Last updated' date to 2026-07-26",
         "Appended one memory-update log line to log.md for 2026-07-26"
-      ]
-    },
-    {
-      "runAt": "2026-07-24T23:55:00+02:00",
-      "summary": "Memory index updated — folded in today's paper trade (LHA fully exited, largest closed win yet), a briefing with three simultaneous EXIT signals for the first time, and a new wiki-thinker cross-domain connection",
-      "content": [
-        "Domain Content Status — Meta: run count 17→18, added the 2026-07-24 highlight — Lightfin's Optimised Jungle satire ('Empowerment Trap') mirrors Finance's real-world Meta PR-vs-shareholder-reality reporting; also flagged David Chang's memoir Eat a Peach as missing from Books despite being covered on Cooking's chef-david-chang page",
-        "Domain Content Status — Finance: added the 2026-07-24 paper-trading P1 trade — ISTR added (Strategy F Small Cap Value, Louisiana community bank at ~9.3x forward P/E); LHA fully exited at the 60-day max-hold limit, resolving yesterday's '1 day from limit' flag — blended realised gain +$182 (+18.2%), the portfolio's largest closed win to date",
-        "Domain Content Status — Finance: added the 2026-07-24 trading-portfolio-management briefing — first time three positions (WOSG, SAP, GSK) all show mechanical EXIT signals simultaneously, alongside the still-unexecuted KLR trim; if all four actions execute, ~€5,100 would free up for new BATS/NEE/BAC candidates from the Market Watchlist",
-        "Open Threads: added a new thread for the 07-24 triple-EXIT signal cluster, cross-referenced against the ongoing briefing-vs-dashboard reconciliation issue (verify against fred-dashboard/data/portfolios/trading.md before assuming these executed); added a thread for the Eat a Peach / Books gap flagged by wiki-thinker",
-        "Bumped 'Last updated' date to 2026-07-24",
-        "Appended one memory-update log line to log.md for 2026-07-24"
       ]
     }
   ]
