@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-28T23:55:01+02:00",
+      "summary": "Memory index updated — a long-running Games data-integrity thread finally resolved, a fresh Micron bear/bull tension, a new AMD circular-financing gap, and another briefing-vs-dashboard reconciliation flag on the live trading portfolio",
+      "content": [
+        "Domain Content Status — Games: resolved the 2026-07-19 'only 2 of 4 prototype stubs are real' correction — wiki-thinker found all 4 are real files after all, just misfiled (Crypto Portfolio Tracker under raw/crypto/, Project Planning Interface under raw/ai-tech/); games/prototypes.md's table is still unpopulated, that's the next step",
+        "Domain Content Status — Cooking: updated recipe-recommender's latest run to 2026-07-27 (Nigel Slater, David Chang, Anthony Bourdain); noted David Chang still has no wiki page despite repeated use as a reference chef",
+        "Domain Content Status — Finance: added 2026-07-27/28 paper trading (P1: ROK added Strategy B Momentum; SHW added Strategy C Volume Spike; ASML signal-exited −10.19% on a new 'Burry Sector Warning' semis flag; 28 open positions, net P&L +$839/+2.10% on $40,000) and the 2026-07-27/28 live trading-portfolio reviews (MGNS Full Exit executed, BATS opened, then a pipeline bug found and fixed — EDEN.PA had no ticker-routing config and was silently reading an unrelated US ticker)",
+        "Domain Content Status — Meta: run count 20→22, added two new wiki-thinker highlights — 07-28: Anthropic's 2GW AMD chip deal (AMD investing $5B back) mirrors CoreWeave's already-scrutinised Meta relationship, unmentioned in idea-amd.md; 07-27: Games prototypes resolved + Burry's fresh Micron short directly rebuts AI & Tech's own HBM bull case for MU",
+        "Key Decisions: added the EDEN.PA ticker-routing bug/fix in portfolio_update.py as a new tool workaround — flagged that other non-US tickers (e.g. BATS) may have the same latent risk",
+        "Open Threads: sharpened the year-old Micron thread with Burry's new short as a named bear case; added a new AMD/Anthropic circular-financing gap in idea-amd.md; added a new discrepancy — BATS (opened 07-27) is missing from the 07-28 position list while EDEN appears for the first time, extending the standing briefing-vs-dashboard reconciliation pattern",
+        "Bumped 'Last updated' date to 2026-07-28",
+        "Appended one memory-update log line to log.md for 2026-07-28"
+      ]
+    },
+    {
       "runAt": "2026-07-27T23:53:31+02:00",
       "summary": "Memory index updated — folded in today's clippings batch (7 sources incl. two-part Burry Palantir thesis), a trading-portfolio review that retired the long-running KLR-trim thread, and a recurring dashboard-push blocker",
       "content": [
@@ -15,21 +29,6 @@
         "Open Threads: added the KLR-trim-thread-lapsed note, the new BATS-has-no-idea-page item (joins SHEL/BMY backlog), and the recurring fred-dashboard git-push-blocked issue (531f364, needs manual push — same pattern as 07-17)",
         "Bumped 'Last updated' date to 2026-07-27",
         "Appended one memory-update log line to log.md for 2026-07-27"
-      ]
-    },
-    {
-      "runAt": "2026-07-26T18:30:00+02:00",
-      "summary": "Memory index was stale since 2026-07-24 (a 2-day laptop/task gap) — caught up two days of paper trading, live-portfolio, wiki-thinker, and a new Michael Burry ingest in one pass",
-      "content": [
-        "Domain Content Status — Meta: run count 18→20, added two new highlights — 07-26: Jeremy Grantham's 'Bitcoin heading to zero' call sits unchecked against Fred's own doubled-up Bitcoin exposure (real BTC + MSTR as a leveraged proxy); 07-25: the Mobley v. Workday age-discrimination lawsuit lands on both Health's 'men ~50' scope and AI & Tech's retraining worry, plus Lightfin's own Little Ninja story already dramatizes the breathwork mechanism from Health's Godin/Nestor source",
-        "Domain Content Status — Finance: added the 2026-07-24 paper-trading P1 trade — ISTR added (Strategy F Small Cap Value); LHA fully exited at the 60-day max-hold limit, blended realised gain +$182 (+18.2%), the portfolio's largest closed win to date; 27 open positions, net P&L +$670 (+1.76%)",
-        "Domain Content Status — Finance: added the 2026-07-26 clippings-sorter ingest — Michael Burry's 'Trading Post' Substack (source dated Jul 24): 4 new shorts (NVDA/SOXX/CAT/MU), 3 new longs (FLUT/DKNG/MOH), circular AI-financing thesis, Palantir/DIA MARS critique; cross-linked to person-jeremy-grantham.md and concept-short-selling.md",
-        "Domain Content Status — Finance header count corrected: '12 paper trading positions' was stale from May — updated to '27 P1 paper trading positions'",
-        "Open Threads: resolved the 07-24 WOSG/SAP/GSK triple-EXIT thread — the briefing log shows all three actually executed (WOSG +€15.95, GSK −€24.29, SAP −€63.05); KLR trim still outstanding, new BATS/NEE/BAC candidates sourced, standing reconciliation caveat still applies until checked against trading.md",
-        "Open Threads: marked the EIX/IMB/PRU candidates thread superseded — the 07-24 briefing moved to a different candidate set (BATS/NEE/BAC) after the exits freed cash; EIX/IMB/PRU never actioned",
-        "Open Threads: added the Paper Trading P1 2026-07-24 status line (ISTR add, LHA close), the Mobley v. Workday cross-domain thread (07-25), and the Grantham/Bitcoin exposure thread (07-26)",
-        "Bumped 'Last updated' date to 2026-07-26",
-        "Appended one memory-update log line to log.md for 2026-07-26"
       ]
     }
   ]
