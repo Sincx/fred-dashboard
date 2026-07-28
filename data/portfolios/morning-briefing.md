@@ -1,107 +1,109 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-07-27
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-07-28
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
   Positions:        10 open
-  Total Value:      ~€13,406 (positions €12,593 + cash €813)
-  Available Cap:    €813
+  Total Value:      ~€13,733 (positions €12,525 + cash €1,208)
+  Available Cap:    €1,208
   Best Performer:   KLR +36.39%
-  Worst Performer:  MGNS -2.55%
-  Largest Position: WOSG (13.19% of portfolio)
+  Worst Performer:  AVGO −1.04%
+  Largest Position: WOSG (13.3% of invested portfolio)
 
 POSITION SIGNALS
   ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst          │
   ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────┤
-  │ APH      │ +6.39%     │ 45.9    │ ↓     │ Watch    │ —                 │
-  │ AVGO     │ -1.38%     │ 47.4    │ ↓     │ Watch    │ —                 │
-  │ IQV      │ +26.87%    │ 63.3    │ ↑     │ Hold     │ stop $195 (unoff.)│
-  │ CPB      │ -0.27%     │ 49.9    │ ↓     │ Watch    │ —                 │
-  │ WOSG     │ +3.05%     │ 45.1    │ ↓     │ Watch    │ RSI recovered >40 │
-  │ MGNS     │ -2.55%     │ 38.5    │ ↓     │ EXIT     │ earnings miss 23/7│
-  │ DNLM     │ +8.44%     │ 65.2    │ ↑     │ Hold     │ —                 │
-  │ KLR      │ +36.39%    │ 65.3    │ ↑     │ Watch    │ MACD rolling over │
-  │ GSK      │ -1.03%     │ 46.6    │ ↓     │ Watch    │ RSI recovered >40 │
-  │ SAP      │ +2.56%     │ 51.3    │ ↓     │ Watch    │ MACD turned bull. │
+  │ APH      │ +4.03%     │ 42.4    │ ↓     │ Watch    │ —                 │
+  │ WOSG     │ +3.05%     │ 45.0    │ ↓     │ Watch    │ —                 │
+  │ AVGO     │ −1.04%     │ 48.3    │ ↓     │ Watch    │ —                 │
+  │ DNLM     │ +8.44%     │ 65.4    │ ↑     │ Hold     │ —                 │
+  │ IQV      │ +30.02%    │ 65.3    │ ↑     │ Watch    │ stop $195 (unoff.)│
+  │ KLR      │ +36.39%    │ 65.3    │ ↑     │ Watch    │ stop 3,100p       │
+  │ SAP      │ +2.56%     │ 52.0    │ ↓     │ Watch    │ —                 │
+  │ CPB      │ +2.15%     │ 53.7    │ ↑     │ Watch    │ —                 │
+  │ GSK      │ −1.03%     │ 46.8    │ ↓     │ Watch    │ —                 │
+  │ EDEN     │ −0.45%     │ 67.5    │ ↑     │ Hold     │ —                 │
   └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────┘
-  Note: LSE/XETRA closes + 60-day history sourced via Yahoo Finance (Massive has no non-US equity
-  coverage on this plan; Alpha Vantage daily quota was exhausted). US names (APH/AVGO/IQV/CPB)
-  computed fresh from Massive daily bars + latest close.
+  No upcoming earnings flagged in Notes within the next 14 days.
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest position WOSG at 13.19%, no position ≥25%
-  Sector spread:   Tech/AI 30.14% | Healthcare/CRO 21.98% | UK Consumer 20.46% | UK Industrials 18.29% | Consumer Staples 9.13%
-                   Tech/AI (APH+AVGO+SAP) remains the single largest sector bucket at 30% of invested
-                   capital — no individual position breaches the 25% flag, but the sector as a whole
-                   is a concentrated bet on the AI capex thesis. Otherwise reasonably balanced across
-                   Healthcare, UK Consumer and UK Industrials.
-  Currency split:  USD 44.53% | GBp 47.68% | EUR (SAP) 7.79%
+  Concentration:   OK — largest position WOSG at 13.3%, well below the 25% warning threshold.
+  Sector spread:   Tech/AI 31.2% | Healthcare/CRO 23.1% | UK Consumer 20.6% | UK Industrials 5.6% | Consumer Staples 9.9% | Other (EDEN, French benefits) 9.5%
+                   Tech/AI (APH+AVGO+SAP) is the single largest bucket — no position breaches the 25%
+                   flag individually, but it remains a concentrated bet on the AI capex thesis. UK
+                   Industrials has thinned to just KLR since MGNS was exited on 07-27.
+  Currency split:  USD 47.4% | GBp 35.2% | EUR 17.3%
+                   USD tilt is now the heaviest single-currency exposure — favour non-USD names on the
+                   next add, all else equal.
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  MGNS: Full Exit — mechanical Exit signal confirmed: RSI 38.5 (<40), price below 50d SMA (4,506p vs
-  4,678.60p), MACD histogram negative and expanding (-29.98 vs -11.33 prior session). Earnings miss
-  reaction (23 Jul) has now been confirmed by a clean technical breakdown.
-    Gross P&L: -€24.89 (loss — 18 sh × 4,506p = £811.08 vs cost basis £832.32)
-    Tax (21%): €0.00 (no CGT on a realised loss) | Commission: -€4.39 ($5 @ live rate)
-    Net result: -€29.28 (net loss)
-  Expected proceeds: £811.08 (~€950 gross, ~€946 net cash added after commission)
+  No exit signals triggered today.
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No mechanical Add signals triggered today. APH, AVGO and CPB all sit in the RSI 35-50 pullback zone
-  but remain below their 50d SMA, failing the "above SMA" condition; KLR and DNLM are above their 50d
-  SMA but RSI is too high (>65) for an Add signal.
+  No mechanical Add signals triggered today — all 10 positions read Watch or Hold, none combine
+  RSI 35-50 + above-50d-SMA + bullish MACD simultaneously.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  BATS: Enter at 4,572p — Market Watchlist screener, Score 5/5 (Cheap + Buy signal + healthy RSI +
-  bullish MACD). RSI 47.2, price just above its 20-day MA, bullish MACD confirmed on a fresh 30-day
-  check — the only new-position idea that fits within today's available cash.
-  Stop: 4,160p (entry − 1.5×ATR14 of 274.9p) | Size: €750
+  AGCO: Enter at $117.27 — Market Watchlist screener, Score 5/5 (Undervalued + Buy signal + healthy
+  RSI + bullish MACD), best-timed of today's three 5/5 candidates.
+  Stop: $111.83 (entry − 1.5×ATR14 of $3.63) | Size: €1,000
+
+  HON: Watch for pullback — $246.27 current, RSI 65.2 sits right at the extended edge; better entry
+  is a dip back under RSI 65, roughly toward $235.
+  Stop: $235.21 if entered now | Size: €750 starter only (RSI >65 rule)
+
+  EIX: Watch for pullback — $79.64 current, RSI 68.8 is extended after a +10.5% one-month run; better
+  entry near $77 (recent higher-low / ≈1.5×ATR14 pullback).
+  Stop: $76.96 if entered now | Size: €750 starter only (RSI >65 rule)
+
+  Only ~€1,208 cash is available — prioritise AGCO as the single highest-conviction, best-timed entry;
+  treat HON and EIX as watchlist adds pending a healthier RSI rather than simultaneous buys.
 
 INVESTMENT OPPORTUNITIES
-  5/5 · BATS (FTSE100, Consumer Staples) — Cheap, P/E 12.78, EPS +156.7%
-  Entry: 4,572p | Stop: 4,160p | Size: €750 | RSI: 47.2 | MACD: Bullish
-  Conviction: Full 5/5 setup — cheap valuation, healthy RSI, bullish MACD, no overbought risk.
-  Portfolio fit: Consumer Staples currently only 9.13% via CPB, so room to add; GBp exposure adds to
-  an already GBp-heavy book (47.68%) but no concentration conflict. Only trade sized to fit €813 cash.
+  5/5 · AGCO (Morningstar-US, Industrials) — Undervalued, P/E 11.6
+  Entry: $117.27 | Stop: $111.83 | Size: €1,000 | RSI: 55.6 | MACD: Bullish
+  Conviction: Undervalued (P/E 11.6x), bullish MACD, RSI healthy at 56, +5.4% past month — the
+  cleanest technical timing of the 5/5 cohort.
+  Portfolio fit: No existing Industrials exposure outside UK-listed KLR; adds USD exposure (already
+  47.4% of the book), so sized normal (€1,000) rather than large.
 
-  4/5 · GS (DJI, Financials) — Fair, P/E 19.32, EPS +27.1%
-  Entry: $1,061.23 | Stop: $1,004 (entry − 1.5×ATR14 of $37.83) | Size: €1,000 | RSI: 54.2 | MACD: Bullish
-  Conviction: Fair value, healthy RSI pulled back just below its 20-day MA, bullish MACD — quality
-  blue-chip entry into a sector the book currently has zero exposure to.
-  Portfolio fit: New sector (Financials, 0% current exposure) — good diversifier away from Tech/AI's
-  30% weight. Capital-constrained today; revisit once MGNS exit proceeds land.
+  5/5 · HON (DJI, Industrials) — Undervalued, P/E 9.4
+  Entry: $246.27 (better: pullback to ~$235) | Stop: $235.21 | Size: €750 | RSI: 65.2 | MACD: Bullish
+  Conviction: Deeply undervalued (P/E 9.4x) with bullish MACD, but RSI is right at the extended
+  threshold — favour a small starter or wait for RSI to cool.
+  Portfolio fit: Same Industrials/USD considerations as AGCO; with only €1,208 cash, only one of the
+  two should be entered near-term.
 
-  4/5 · TSCO (FTSE100, Consumer Staples) — Fair, P/E 17.41, EPS +15.4%
-  Entry: 480.3p | Stop: 467p (entry − 1.5×ATR14 of 8.7p) | Size: €1,000 | RSI: 61.2 | MACD: Bullish
-  Conviction: Fair value, RSI in the upper-healthy range, bullish MACD, steady EPS growth, 3.07% yield.
-  Portfolio fit: UK retail/staples — some thematic overlap with WOSG/DNLM's UK Consumer bucket (20.46%)
-  but a different sub-sector (staples grocery vs discretionary retail). Capital-constrained today.
+  5/5 · EIX (Morningstar-US, Utilities) — Undervalued, P/E 8.7
+  Entry: $79.64 (better: pullback to ~$77) | Stop: $76.96 | Size: €750 | RSI: 68.8 | MACD: Bullish
+  Conviction: Cheapest of the three on P/E (8.7x) but the most technically extended (+10.5% in a
+  month, RSI approaching 70) — treat as a watchlist name for a pullback entry.
+  Portfolio fit: New sector (Utilities), USD-denominated — diversifying but adds to an already-heavy
+  USD tilt.
 
 PORTFOLIO RISKS TO WATCH
-  - Tech/AI concentration: APH + AVGO + SAP together are 30% of invested capital, all riding the same
-    AI capex thesis with no position-level hedge — a sector-wide de-rating would hit all three at once.
-  - MGNS Exit signal is confirmed and unexecuted as of this briefing — every session it's held past
-    today extends exposure to a name already down -2.55% on an earnings miss with a still-expanding
-    bearish MACD.
-  - WOSG, GSK and SAP all carried mechanical Exit signals as recently as the last briefing and have
-    only just recovered above the RSI-40 threshold (45.1, 46.6, 51.3 respectively) — a modest pullback
-    re-triggers Exit on any of the three.
-  - KLR is up +36.39% with RSI cooled to 65.3 (below the 70 Trim threshold) but MACD histogram is
-    deepening negative (-19.81 vs -13.10 prior session) even as price holds above its 50d SMA — an
-    early momentum-loss warning after an extended run, with no formal stop beyond the unofficial 3,100p.
-  - No formal stop-loss is in place on 8 of 10 positions (only IQV $195 and KLR 3,100p are noted, both
-    unofficial) — full downside exposure remains if any position gaps down overnight.
+  - 7 of 10 positions carry no protective stop loss (only IQV $195 unofficial and KLR 3,100p are
+    covered) — meaningful downside exposure if any Watch-rated name (APH, WOSG, AVGO, SAP, GSK) rolls
+    over.
+  - WOSG and GSK remain just above their prior Exit thresholds (RSI recovered but still below 50d SMA,
+    MACD still bearish) — a renewed RSI break under 40 would flip both back to Exit; the Burry-lens
+    patience-override caps any trim at 50% given intact fundamental theses.
+  - USD exposure is already 47.4% of the invested book, and all three new-idea candidates (AGCO, HON,
+    EIX) are USD-denominated — entering more than one would push the tilt further without an
+    offsetting GBp/EUR add.
+  - IQV (+30%) and KLR (+36%) are extended (RSI ~65) but sit below the 20%-weight threshold needed to
+    trigger a mechanical Trim — worth a manual profit-taking review even without a formal signal.
 
 NEXT ACTIONS
-  1. Execute MGNS Full Exit (18 sh @ ~4,506p) — realizes a small €24.89 loss (no CGT), €29.28 net after
-     commission, but closes out a confirmed technical breakdown before it compounds further.
-  2. Place a limit/watch order for BATS at 4,572p, €750, stop 4,160p — the only new-position idea that
-     fits within today's €813 available cash.
-  3. Revisit GS and TSCO once MGNS exit proceeds (~€946) land, bringing available cash to ~€1,759 —
-     re-check RSI and entry level at that time rather than chasing today's price.
-  4. Monitor WOSG, GSK and SAP for any renewed RSI break below 40 — all three are one down session away
-     from a fresh mechanical Exit signal.
+  1. Place a limit/starter order for AGCO at $117.27 (stop $111.83, ~€1,000) — best-timed of today's
+     new entry ideas.
+  2. Set price alerts on HON (pullback to ~$235) and EIX (pullback to ~$77) rather than chasing
+     today's extended levels.
+  3. Add manual protective stops to WOSG, AVGO, SAP, GSK, CPB, DNLM, APH and EDEN — none currently
+     have one in place.
+  4. Monitor WOSG and GSK for a fresh RSI break below 40, which would flip them to Exit under current
+     rules.
 ════════════════════════════════════════════════════════
