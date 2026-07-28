@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-28T20:22:12+02:00",
+      "summary": "SHW (C)",
+      "picks": {
+        "p1": {
+          "ticker": "SHW",
+          "strategy": "C — Volume Spike",
+          "entry": 327.27,
+          "stop": 278.18,
+          "t1": 409.09,
+          "t2": 490.91
+        }
+      },
+      "content": "Sherwin-Williams (SHW) picked up at the previous close ($327.27) after a heavy-volume ~8% earnings-day breakout on a Q2 beat and raised full-year guidance, chosen with zero semiconductor/AI-capex exposure given today's chip-sector weakness. ASML signal-exited at −10.19% ($1,655.26, −$102) as its Burry Sector Warning combined with P&L crossing the ≤−10% threshold; no other stops, T1s or T2s fired. Portfolio net P&L: +$839 (+2.10% on $40,000)."
+    },
+    {
       "runAt": "2026-07-27T20:16:34+02:00",
       "summary": "ROK (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Rockwell Automation (ROK) picked up at the previous close ($462.16) after raising FY26 EPS guidance on a Q2 beat — up 32.7% over three months with Zacks Rank #1 momentum, chosen over chip-sector momentum to stay clear of Burry's semiconductor short thesis. No exits today: all 27 legacy positions repriced with no new stop-loss, T1, or T2 triggers; Burry's short list (re-read today) added MU and CAT as direct shorts, newly flagging open position MU (+2.80%, WATCH — above water)."
-    },
-    {
-      "runAt": "2026-07-24T20:26:01+02:00",
-      "summary": "ISTR (F)",
-      "picks": {
-        "p1": {
-          "ticker": "ISTR",
-          "strategy": "F — Small Cap Value",
-          "entry": 29.32,
-          "stop": 24.92,
-          "t1": 36.65,
-          "t2": 43.98
-        }
-      },
-      "content": "Investar Holding (ISTR) picked up at the previous close ($29.32) — a Louisiana community bank trading at ~13x trailing / ~9.3x forward P/E and ~1.2x book value despite double-digit revenue and earnings growth. Exits today: LHA (Lufthansa) hit the 60-day max-hold limit and closed for a blended +18.2% (+$182), the portfolio's largest closed win; CMCSA dropped to −9.50% on a high-volume selloff and is now within $1.33 of its stop."
     }
   ]
 }
