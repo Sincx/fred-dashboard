@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-07-28T23:19:29.5814644+02:00",
+                     "summary":  "No new clippings",
+                     "content":  "Clippings folder empty."
+                 },
+                 {
                      "runAt":  "2026-07-27T21:27:45.0000000+00:00",
                      "summary":  "7 clippings processed",
                      "content":  "1. \"Fwd: DealBook: Google sets the pace\" (NYT DealBook email) → finance. Alphabet Q2: $112B profit, Cloud +82%, capex raised to $195-205B (negative FCF); Anthropic-AMD circular chip deal; Moonshot/Kimi K3 export-control accusation; EU $1B Google fine. 2. \"Crypto Winter or the Big Crash?\" (Morningstar) → crypto. BTC -25% YTD, tested $60k; macro-driven not structural; institutions still accumulating despite $2.7B ETF outflows. 3. \"FTSE 100 Stocks to Watch Under an Andy Burnham Government\" (Morningstar) → finance/morningstar. New UK PM's sector impact: utilities/housebuilders/gambling/banks. 4. \"Palantir's New Clothes\" (Michael Burry) → finance/short-research. ~10,000-word Palantir bear thesis: consultancy not SaaS, AIP a rebranded ML wrapper, Stanford LLM-reasoning-failures applied to AIP, fair value ~$46/share. 5. \"Palantir: An Accounting\" (Michael Burry) → finance/short-research. 10-K forensic follow-up: AR concentration, deferred-revenue signature matches Accenture not SaaS, $9B SBC-driven NOLs, Karp's $17.2M jet. 6. \"Trading Post July 17\" (Michael Burry) → finance/investor-letters. Netflix valued as Chapel not Castle; VIX/VIXEQ divergence masking historic Momentum Pair Trade unwind. 7. \"Trading Post July 23\" (Michael Burry) → finance/investor-letters. Tencent/Meituan/Temple & Webster buys; BIS report validates circular AI-financing thesis. Reverse links added across ~13 existing pages (Grantham, short-selling concept, Palantir/Nemotron, hyperscaler capex, g-zero-world, technical-analysis, crypto overview/portfolio). Zero duplicates, zero errors."
-                 },
-                 {
-                     "runAt":  "2026-07-26T23:22:44.2104780+02:00",
-                     "summary":  "1 clipping processed",
-                     "content":  "\"Trading Post July 24, 2026 - 4 Shorts, 3 Longs\" (Michael Burry Substack) → domain: finance. Moved to raw/finance/burry-trading-post-2026-07-24.md; created wiki/finance/investor-letters/source-burry-trading-post-2026-07-24.md. 4 shorts added (NVDA, SOXX, CAT, MU) + 3 longs added (FLUT, DKNG, MOH); circular AI-financing short thesis; Palantir/DIA MARS critique. Reverse links added to 3 existing pages."
                  }
              ]
 }
