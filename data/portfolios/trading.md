@@ -21,7 +21,7 @@ updated: 2026-07-29
 | Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 717.25p | £1,434.50 | +4.25% | UK luxury watch retailer; RSI 47.4, below 50d SMA (720.98p), MACD bearish — Watch |
 | Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $383.22 | $1,532.88 | −1.04% | AI networking + custom chips; RSI 48.4, below SMA50 ($398.35), MACD bullish — Watch; Burry SOXX-short flag |
 | Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 893.00p | £803.70 | +11.62% | UK homewares retailer; RSI 71.0 (overbought), above 50d SMA (806.14p), MACD bullish — Hold |
-| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $213.22 | $1,918.98 | +30.02% | Healthcare data + CRO; RSI 65.3, above SMA50 ($187.69), MACD bearish — Watch; stop $195 stale, well below market, consider trailing to $200-205 |
+| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $242.94 | $2,186.46 | +48.14% | Healthcare data + CRO; RSI 78.8 (extreme overbought), above SMA50 ($187.69), MACD bullish — Hold; stop $195 stale, well below market, consider trailing to $215-220 |
 | Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,066.00p | £551.88 | +26.80% | Ground engineering; RSI 48.7, above 50d SMA (2,802.07p), MACD bearish — Watch; **price has fallen through the 3,100p stop** (now 34p below) — stop was not executed, reassess urgently. Trimmed 15 shares 07-11, trimmed 17 shares 07-23 at 3,318p |
 | SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €159.90 | €1,119.30 | +16.97% | Enterprise software / ERP; RSI 68.1, above 50d SMA (€144.24), MACD bullish — Hold |
 | Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.37 | $1,342.20 | +2.15% | US consumer staples; RSI 53.7, above SMA50 ($21.40), MACD bearish — Watch |

@@ -7,7 +7,7 @@ PORTFOLIO SNAPSHOT
   Positions:        10 open
   Total Value:      ~€14,023 (estimated)
   Available Cap:    €1,208
-  Best Performer:   IQV +30.02%
+  Best Performer:   IQV +48.14%
   Worst Performer:  AVGO -1.04%
   Largest Position: WOSG (13.2% of invested capital)
 
@@ -19,7 +19,7 @@ POSITION SIGNALS
   │ WOSG     │ +4.25%     │ 47.4    │ ↓     │ Watch    │ —                 │
   │ AVGO     │ -1.04%     │ 48.4    │ ↓     │ Watch    │ —                 │
   │ DNLM     │ +11.62%    │ 71.0    │ ↑     │ Hold     │ —                 │
-  │ IQV      │ +30.02%    │ 65.3    │ ↑     │ Watch    │ —                 │
+  │ IQV      │ +48.14%    │ 78.8    │ ↑     │ Hold     │ RSI extreme       │
   │ KLR      │ +26.80%    │ 48.7    │ ↑     │ Watch    │ —                 │
   │ SAP      │ +16.97%    │ 68.1    │ ↑     │ Hold     │ —                 │
   │ CPB      │ +2.15%     │ 53.7    │ ↑     │ Watch    │ —                 │
