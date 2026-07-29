@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-28
+updated: 2026-07-29
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-28** (US via Massive; LSE + XETRA (SAP) + Euronext (EDEN) via Yahoo Finance chart API — all positions now live-priced).
+> Live page — update whenever positions change. Prices last fetched: **2026-07-29** (US via Massive; LSE + XETRA (SAP) + Euronext (EDEN) via Yahoo Finance chart API — all positions now live-priced).
 
 ---
 
@@ -16,21 +16,22 @@ updated: 2026-07-28
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $149.28 | $1,642.08 | +4.03% | Connector/interconnect leader; AI data centre demand — RSI 42.4, below 50d SMA ($150.86), MACD bearish — Watch |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 709.00p | £1,418.00 | +3.05% | UK luxury watch retailer; RSI 45.0, still below 50d SMA (716.82p), MACD bearish — Watch (near-Exit) |
-| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $383.22 | $1,532.88 | −1.04% | AI networking + custom chips; RSI 48.3, below SMA50 ($399.03), MACD bullish — Watch |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 867.50p | £780.75 | +8.44% | UK homewares retailer; RSI 65.4, above 50d SMA (797.38p), MACD bullish — Hold |
-| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $213.22 | $1,918.98 | +30.02% | Healthcare data + CRO; RSI 65.3, above SMA50 ($187.69), MACD bearish — Watch; stop $195 |
-| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,298.00p | £593.64 | +36.39% | Ground engineering; RSI 65.3, above 50d SMA (2,751.86p), MACD bearish — Watch; stop 3,100p. Trimmed 15 shares 07-11, trimmed 17 shares 07-23 at 3,318p |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €140.20 | €981.40 | +2.56% | Enterprise software / ERP; RSI 52.0, still below 50d SMA (€143.99), MACD bullish — Watch |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.37 | $1,342.20 | +2.15% | US consumer staples; RSI 53.7, above SMA50 ($21.40), MACD bearish — Watch |
-| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1919.50p | £959.75 | −1.03% | UK pharma & vaccines; RSI 46.8, below 50d SMA (1,931.38p), MACD bearish — Watch (near-Exit); no stop in place |
-| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €26.41 | €1,188.45 | −0.45% | French employee benefits platform; RSI 67.5, above 50d SMA (€22.69), MACD bullish — Hold; new position 07-23 |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $143.85 | $1,582.35 | +0.24% | Connector/interconnect leader; AI data centre demand — RSI 37.4, below 50d SMA ($151.72), MACD bearish — **Exit signal** (Burry Lens override: hold, tighten stop ~$134.50, reassess 10 trading days — trim uneconomic at breakeven) |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 718.50p | £1,437.00 | +4.43% | UK luxury watch retailer; RSI 47.5, essentially flat vs 50d SMA (718.28p), MACD bearish — Watch (near-Exit) |
+| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $380.91 | $1,523.64 | −1.64% | AI networking + custom chips; RSI 47.5, below SMA50 ($397.18), MACD bullish — Watch; Burry SOXX-short flag |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 877.00p | £789.30 | +9.62% | UK homewares retailer; RSI 67.6, above 50d SMA (800.43p), MACD bullish — Hold |
+| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $242.94 | $2,186.46 | +48.14% | Healthcare data + CRO; RSI 78.8 (extreme overbought), above SMA50 ($189.10), MACD bullish — Hold; stop $195 now stale ~20% below market, consider trailing to $215-220 |
+| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,230.00p | £581.40 | +33.58% | Ground engineering; RSI 59.7, above 50d SMA (2,770.11p), MACD bearish — Watch; stop 3,100p. Trimmed 15 shares 07-11, trimmed 17 shares 07-23 at 3,318p |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €151.28 | €1,058.96 | +10.67% | Enterprise software / ERP; RSI 62.3, above 50d SMA (€144.06), MACD bullish — Hold |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.81 | $1,368.60 | +4.16% | US consumer staples; RSI 56.9, above SMA50 ($21.45), MACD bearish — Watch |
+| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 1961.00p | £980.50 | +1.11% | UK pharma & vaccines; RSI 53.9, above 50d SMA (1,933.35p), MACD bearish — Watch; no stop in place |
+| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €26.93 | €1,211.85 | +1.51% | French employee benefits platform; RSI 70.2 (just overbought), above 50d SMA (€22.82), MACD bullish — Hold |
 | **Cash** | — | — | EUR | — | — | — | — | **€1,208** | — | Available capital |
 
-> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-28** (all positions live-priced, incl. KLR and EDEN).
-> No stop losses currently in place except IQV ($195, unofficial) and KLR (3,100p on 18 remaining shares).
+> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-29** (all positions live-priced, incl. KLR and EDEN).
+> No stop losses currently in place except IQV ($195, unofficial — now stale, ~20% below market) and KLR (3,100p on 18 remaining shares).
 > MGNS exited 07-27 (all 18 shares at 4,456p, −£30.24 loss). KLR trimmed again 07-23 (17 shares at 3,318p, +£153.00). EDEN initiated 07-23 (45 shares at €26.53).
+> 2026-07-29: APH crossed into a mechanical Exit signal (RSI 37.4, below SMA50, MACD bearish); held per Burry Lens patience-override (trim uneconomic at breakeven). No trades executed today.
 
 ---
 
