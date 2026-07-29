@@ -4,112 +4,113 @@
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
-  Positions:        10 open
-  Total Value:      ~€14,084 (positions €12,876 + cash €1,208)
-  Available Cap:    €1,208
-  Best Performer:   IQV +48.14%
-  Worst Performer:  AVGO −1.64%
-  Largest Position: IQV (15.7% of invested portfolio)
+  Positions:        9 open
+  Total Value:      ~€14,201 (positions €11,271 + cash €2,930)
+  Available Cap:    €2,930
+  Best Performer:   IQV +50.96%
+  Worst Performer:  GSK +3.48%
+  Largest Position: WOSG (14.9% of portfolio)
 
 POSITION SIGNALS
-  ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────┐
-  │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst          │
-  ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────┤
-  │ APH      │ +0.24%     │ 37.4    │ ↓     │ Exit     │ —                 │
-  │ WOSG     │ +4.43%     │ 47.5    │ ~     │ Watch    │ —                 │
-  │ AVGO     │ −1.64%     │ 47.5    │ ↓     │ Watch    │ Burry SOXX short  │
-  │ DNLM     │ +9.62%     │ 67.6    │ ↑     │ Hold     │ —                 │
-  │ IQV      │ +48.14%    │ 78.8    │ ↑     │ Hold     │ RSI extreme; stale stop │
-  │ KLR      │ +33.58%    │ 59.7    │ ↑     │ Watch    │ —                 │
-  │ SAP      │ +10.67%    │ 62.3    │ ↑     │ Hold     │ —                 │
-  │ CPB      │ +4.16%     │ 56.9    │ ↑     │ Watch    │ —                 │
-  │ GSK      │ +1.11%     │ 53.9    │ ↑     │ Watch    │ —                 │
-  │ EDEN     │ +1.51%     │ 70.2    │ ↑     │ Hold     │ RSI just overbought │
-  └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────┘
-  APH crossed into a mechanical Exit signal today (RSI fell 42.4 → 37.4). WOSG's 718.5p is
-  essentially flat vs its 718.3p SMA50 — a coin-flip either way. No earnings catalysts flagged
-  in Notes within the next 14 days.
+  ┌──────────┬────────────┬─────────┬───────┬──────────┬────────────────────────────────────┐
+  │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst                          │
+  ├──────────┼────────────┼─────────┼───────┼──────────┼────────────────────────────────────┤
+  │ APH      │ +4.75%     │ 45.3    │ ↓     │ Watch    │ Patience override to 2026-08-08   │
+  │ WOSG     │ +3.85%     │ 46.6    │ ↓     │ Watch    │ —                                  │
+  │ DNLM     │ +11.75%    │ 71.2    │ ↑     │ Hold     │ Overbought, no formal stop         │
+  │ IQV      │ +50.96%    │ 80.9    │ ↑     │ Hold     │ Extreme overbought — see trims     │
+  │ KLR      │ +23.74%    │ 44.7    │ ↑     │ Watch    │ 3,100p stop breached, unexecuted   │
+  │ SAP      │ +18.54%    │ 69.3    │ ↑     │ Hold     │ —                                  │
+  │ CPB      │ +4.84%     │ 58.5    │ ↑     │ Hold     │ —                                  │
+  │ GSK      │ +3.48%     │ 58.7    │ ↑     │ Hold     │ No stop in place                   │
+  │ EDEN     │ +8.52%     │ 77.5    │ ↑     │ Hold     │ Extreme overbought, entered 07-23  │
+  └──────────┴────────────┴─────────┴───────┴──────────┴────────────────────────────────────┘
+  Note: mechanical Trim signal requires RSI>70 AND position ≥20% of portfolio — no position meets
+  the weight threshold today, so IQV/DNLM/EDEN show Hold despite extreme RSI. See discretionary
+  trim note on IQV below. No earnings catalysts flagged in Notes within the next 14 days.
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest position IQV at 15.7%, well below the 25% warning threshold.
-  Sector spread:   Tech/AI 30.4% | Healthcare/CRO 24.7% | UK Consumer 20.4% | UK Industrials 5.3% | Consumer Staples 9.8% | Other (EDEN, French benefits) 9.4%
-                   Tech/AI remains the single largest bucket and, combined with Healthcare/CRO,
-                   accounts for ~55% of the book — no individual position breaches 25%, but the
-                   thematic concentration (AI capex + healthcare data) is worth keeping in view.
-  Currency split:  USD 47.7% | GBp 34.7% | EUR 17.6%
-                   USD is still the heaviest single-currency exposure; all three of today's new-idea
-                   screener candidates are also USD-denominated.
+  Concentration:   OK — largest position WOSG at 14.9%, no position ≥25%
+  Sector spread:   Tech/AI 23.6% (APH+SAP) | Healthcare/CRO 24.7% (IQV+GSK) | UK Consumer 23.3%
+                   (WOSG+DNLM) | UK Industrials 5.6% (KLR) | Consumer Staples 11.3% (CPB) |
+                   Unmapped 11.5% (EDEN — business services/vouchers)
+                   Healthcare/CRO at 24.7% is close to the 25% concentration ceiling — no further
+                   healthcare adds recommended until this comes down.
+  Currency split:  USD 39.0% (APH, IQV, CPB) | GBp 39.4% (WOSG, DNLM, KLR, GSK) | EUR 21.6% (SAP, EDEN)
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  APH: No trim executed. Mechanical Exit signal triggered (RSI 37.4 <40, price $143.85 below SMA50
-  $151.72, MACD bearish), but the position is essentially breakeven (+0.24% vs $143.50 entry). A
-  50% trim (5 sh) would generate gross profit of just €1.61 — after 21% CGT (−€0.34) and the €4.61
-  commission, that's a **net −€3.34**, i.e. paying to sell. Per the Burry Lens patience-override rule
-  (a mechanical exit alone doesn't override an intact thesis — AI data-centre connector demand — max
-  trim 50%, reassess within 10 trading days), recommend holding and tightening risk control instead
-  of realising a net loss.
-  Expected proceeds: n/a — no trade recommended, capital preserved
+  KLR: Full Exit (stop-loss discipline) — 3,100p stop was breached at 3,066p on a prior review and
+  left unexecuted; price has since fallen further to 2,992p, still below the stop, with MACD
+  bearish and momentum stalling. Recommend executing the exit now rather than letting the breach
+  compound further.
+  Expected proceeds: £538.56 (~€634.85) | Gross P&L: £103.32 (~€121.79) | CGT (21%): ~€25.58 |
+  Commission: ~€4.61 | Net: ~€91.60
+
+  IQV: Discretionary Trim ~25% (2 of 7 shares) — RSI 80.9 extreme overbought (highest in the book),
+  no formal stop in place beyond a "trail to ~$225" note, +50.96% unrealised. Mirrors the two prior
+  IQV trims taken at RSI 71 and RSI 78.8. Not a mechanical Trim signal (position is only 14.2% of
+  portfolio, below the 20% weight threshold) but justified on RSI extremity and to keep locking gains.
+  Expected proceeds: $495.12 (~€456.35) | Gross P&L: $167.14 (~€154.05) | CGT (21%): ~€32.35 |
+  Commission: ~€4.61 | Net: ~€117.09
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No mechanical Add signals triggered today — none of the 10 positions combine RSI 35–50 + above
-  50d-SMA + bullish MACD simultaneously.
+  No adds today — no position meets RSI 35–50 + above SMA50 + MACD bullish simultaneously (APH and
+  WOSG have RSI in range but are below SMA50; KLR is above SMA50 but MACD is bearish).
 
   ── NEW POSITIONS ──────────────────────────────────────
-  EIX: Enter at $78.64 (current price; RSI 63.2 sits in the healthy 40–70 zone) — Market Watchlist
-  screener, Score 5/5 (Undervalued P/E 8.7×, bullish MACD, RSI healthy, +7.2% past month). Best
-  diversification value of today's candidates: new Utilities exposure, uncorrelated to the AI-capex
-  theme that already drives ~30% of the book.
-  Stop: $76.06 (entry − 1.5×ATR14 of $1.72) | Size: €750 starter (sized to fit within the €1,208
-  cash balance, ~10 shares, leaves ~€460 buffer)
+  EIX: Enter at $78.64 — Market Watchlist Buy Opportunities, score 5/5 (undervalued, P/E 8.7, RSI
+  63.2, MACD bullish, +7.2% 1M). Clean uptrend, no gap risk.
+  Stop: $75.96 (entry − 1.5×ATR14 ≈ $1.79) | Size: €1,500
 
-  Capital held in reserve: ~€460 after the EIX entry — HON and AGCO (also 5/5) are watch-only today
-  given limited cash; fund from a future trim or realised gain rather than stretching the position
-  size on all three at once.
+  HON: Enter at $245.75 — Buy Opportunities, score 5/5 (undervalued, P/E 9.4, RSI 64.5, MACD bullish).
+  Stop: $236.30 (entry − 1.5×ATR14 ≈ $6.29) | Size: €1,000 (capped below normal €1,500 given cash
+  constraints — see Next Actions)
+
+  No trades today / Capital held in reserve: EIX and HON together would use ~€2,500 of the €2,930
+  cash on hand; hold VZ as watch-only (see below) rather than a funded entry this cycle.
 
 INVESTMENT OPPORTUNITIES
-  5/5 · HON (DJI, Industrials) — Undervalued, P/E 9.4
-  Entry: $245.75 (market) | Stop: $235.45 (1.5×ATR14 $6.87) | Size: €1,500 ideal (watch — capital
-  constrained today) | RSI: 64.5 | MACD: Bullish
-  Conviction: Undervalued industrial conglomerate, healthy RSI, bullish trend confirmed.
-  Portfolio fit: New sector vs. UK-listed KLR; adds USD exposure (already 47.7% of the book) — better
-  funded from a future trim/realised gain than today's remaining cash.
+  5/5 · EIX (Morningstar-US, Utilities) — Undervalued, P/E 8.7, EPS Gr% n/a
+  Entry: $78.64 | Stop: $75.96 | Size: €1,500 | RSI: 63.2 | MACD: Bullish
+  Conviction: Undervalued regulated utility, healthy RSI, bullish MACD, +7.2% past month — clean
+  entry with no gap risk.
+  Portfolio fit: Opens a brand-new sector (Utilities) with zero overlap against current holdings;
+  USD-denominated, which nudges USD weight up from 39.0% but the diversification benefit outweighs it.
 
-  5/5 · AGCO (Morningstar-US, Industrials) — Undervalued, P/E 11.6
-  Entry: $120.24 (market) | Stop: $115.02 (1.5×ATR14 $3.48) | Size: €1,500 ideal (watch — capital
-  constrained today) | RSI: 61.4 | MACD: Bullish
-  Conviction: Deep-value ag-equipment name, +4.9% past month, technical setup intact.
-  Portfolio fit: Overlaps sector-wise with HON (both Industrials) — if funding only one Industrials
-  add later, prefer HON for scale; also USD-denominated, adding to the largest currency bucket.
+  5/5 · HON (DJI, Industrials) — Undervalued, P/E 9.4, EPS Gr% n/a
+  Entry: $245.75 | Stop: $236.30 | Size: €1,000 | RSI: 64.5 | MACD: Bullish
+  Conviction: Undervalued industrial conglomerate, RSI healthy at 65, bullish MACD.
+  Portfolio fit: Distinct from existing UK Industrials exposure (KLR, 5.6%) — US large-cap
+  industrial diversifier; USD-denominated.
 
-  5/5 · EIX (Morningstar-US, Utilities) — Undervalued, P/E 8.7
-  Entry: $78.64 | Stop: $76.06 | Size: €750 starter (recommended for today — see Trade Ideas above)
-  | RSI: 63.2 | MACD: Bullish
-  Conviction: Cheapest of the 5/5 names on P/E, regulated utility — defensive ballast to an otherwise
-  cyclical/tech-heavy book, +7.2% past month.
-  Portfolio fit: Best diversification value — no existing Utilities exposure and lower correlation to
-  the AI-capex theme.
+  4/5 · VZ (S&P500, Communication Services) — Fair value, P/E 12.1
+  Entry: WATCH ONLY — do not chase. Stock gapped from ~$44 to ~$48 (+9%) over the last two
+  sessions, RSI 67.7 and rising. Wait for a pullback/consolidation toward ~$46–46.50 before entry.
+  Stop (if triggered): entry − 1.5×ATR14 (~$1.11) | Size: €750 (starter, given late-stage entry risk)
+  Conviction: Fair value, bullish MACD, but the recent gap looks earnings-driven — chasing here has
+  poor risk/reward until it consolidates.
+  Portfolio fit: New sector (Communication Services), USD-denominated.
 
 PORTFOLIO RISKS TO WATCH
-  - 8 of 10 positions carry no protective stop loss (only IQV $195 unofficial and KLR 3,100p are
-    covered) — APH just triggered a mechanical Exit signal with zero downside protection in place.
-  - IQV is +48% unrealized at RSI 78.84 (extreme overbought), but its informal stop ($195) sits ~20%
-    below the current price ($242.94) — a large share of the gain is currently unprotected; consider
-    trailing the stop up.
-  - AVGO carries a direct Burry/SOXX-short structural flag; RSI 47.5 and price still below SMA50 — if
-    AI-capex sentiment sours further, this is the most exposed single name in the book.
-  - Tech/AI + Healthcare/CRO combine for ~55% of the portfolio by value — no single position breaches
-    the 25% concentration limit, but thematic concentration is real.
-  - USD exposure (47.7%) is already the largest currency bucket, and all three new-position candidates
-    (HON, AGCO, EIX) are also USD-denominated — entering more than one would push this tilt further.
+  - KLR: 3,100p stop-loss has now been breached twice without execution (3,066p, then 2,992p) —
+    stop-loss discipline is slipping; recommend acting on the exit above rather than deferring again.
+  - IQV: RSI 80.9, extreme overbought, no formal stop — a sharp reversal from these levels would
+    give back a large chunk of the +50.96% unrealised gain if unprotected.
+  - EDEN: RSI 77.5 just six trading days after entry (07-23) — extended very early in the position's
+    life with no profit cushion built up yet.
+  - FX concentration: USD 39.0% + GBp 39.4% of the book — EUR/USD or EUR/GBP moves are a material
+    swing factor on portfolio value in euro terms.
+  - No earnings dates within the next 14 days were flagged in current position notes; APH's
+    patience-override window closes 2026-08-08 and should be reassessed then regardless.
 
 NEXT ACTIONS
-  1. Place a protective stop on APH at ~$134.50 (current price − 1.5×ATR14 of $6.25) rather than
-     trimming at a net loss; reassess within 10 trading days per the Burry Lens patience-override rule.
-  2. Enter a starter position in EIX at $78.64, €750, stop $76.06 — best-diversifying of today's
-     screener candidates and the only one sized to fit within available cash.
-  3. Trail IQV's stop up from $195 toward $215–220 given RSI 78.84 (extreme overbought) and no
-     upcoming catalyst identified in the next 14 days.
-  4. Watch WOSG (RSI 47.5, MACD bearish, price essentially at SMA50, no stop in place) — a break
-     below ~700p would likely flip it to a mechanical Exit signal.
+  1. Decide on KLR: execute the overdue stop-loss exit (~2,992p, ~€634.85 proceeds) or explicitly
+     accept the risk and set a new, tighter stop.
+  2. Consider the IQV discretionary trim (2 shares, ~€117 net) to bank gains at RSI 80.9.
+  3. If KLR/IQV proceeds are taken, fund EIX (€1,500) and HON (€1,000) from the ~€1,750 freed up
+     plus existing €2,930 cash, keeping a cash reserve rather than deploying all capital at once.
+  4. Watch VZ for a pullback to ~$46–46.50 before considering a starter entry.
+  5. Reassess APH's mechanical exit signal (RSI<40, below SMA50, MACD bearish) when the patience
+     override expires 2026-08-08.
 ════════════════════════════════════════════════════════

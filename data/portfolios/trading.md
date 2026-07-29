@@ -8,52 +8,92 @@ updated: 2026-07-29
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-29** (US via Massive; LSE + XETRA (SAP) + Euronext (EDEN) via Yahoo Finance chart API — all positions now live-priced).
-> Morning briefing generated 2026-07-29 — see fred-dashboard Portfolios → Morning Briefing tab for full sell/add/new-position analysis.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-29** (US via Massive; LSE + XETRA (SAP) + Euronext (EDEN) via Yahoo Finance chart API/Massive pipeline). Cash: **€2,930**. 9 open positions.
 
 ---
 
 ## Open Positions
 
-| Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $143.85 | $1,582.35 | +0.24% | Connector/interconnect leader; AI data centre demand — RSI 37.4 (below 40), below 50d SMA ($151.72), MACD bearish — **Exit signal** (Burry Lens patience override: hold, tighten stop ~$134.50; reassess within 10 trading days) |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 717.25p | £1,434.50 | +4.25% | UK luxury watch retailer; RSI 47.4, below 50d SMA (720.98p), MACD bearish — Watch |
-| Broadcom | AVGO | NASDAQ | USD | 4 | $387.25 | $1,549.00 | $380.91 | $1,523.64 | −1.64% | AI networking + custom chips; RSI 47.5, below SMA50 ($398.35), MACD bearish — Watch; Burry SOXX-short flag |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 893.00p | £803.70 | +11.62% | UK homewares retailer; RSI 71.0 (overbought), above 50d SMA (806.14p), MACD bullish — Hold |
-| IQVIA Holdings | IQV | NYSE | USD | 9 | $163.99 | $1,475.91 | $242.94 | $2,186.46 | +48.14% | Healthcare data + CRO; RSI 78.8 (extreme overbought), above SMA50 ($187.69), MACD bullish — Hold; stop $195 stale, well below market, consider trailing to $215-220 |
-| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,066.00p | £551.88 | +26.80% | Ground engineering; RSI 48.7, above 50d SMA (2,802.07p), MACD bearish — Watch; **price has fallen through the 3,100p stop** (now 34p below) — stop was not executed, reassess urgently. Trimmed 15 shares 07-11, trimmed 17 shares 07-23 at 3,318p |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €159.90 | €1,119.30 | +16.97% | Enterprise software / ERP; RSI 68.1, above 50d SMA (€144.24), MACD bullish — Hold |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.81 | $1,368.60 | +4.16% | US consumer staples; RSI 56.9, above SMA50 ($21.40), MACD bearish — Watch |
-| GSK | GSK | LSE | GBp | 50 | 1939.5p | £969.75 | 2034.48p | £1,017.24 | +4.90% | UK pharma & vaccines; RSI 63.2, above 50d SMA (1,939.05p), MACD bullish — Hold; no stop in place |
-| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.35 | €1,275.75 | +6.86% | French employee benefits platform; RSI 76.0 (extreme overbought), above 50d SMA (€23.13), MACD bullish — Hold |
-| **Cash** | — | — | EUR | — | — | — | — | **€1,208** | — | Available capital |
+| Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Signal | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $150.31 | $1,653.41 | +4.75% | 👀 Watch | RSI 45.3, below SMA50 ($152.23), MACD bearish — Patience override applied: hold, stop ~$134.50; reassess by 2026-08-08 |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 714.50p | £1,429.00 | +3.85% | 👀 Watch | RSI 46.6, below 50d SMA (720.92p), MACD bearish |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 894.00p | £804.60 | +11.75% | ✅ Hold | RSI 71.2 (overbought), above 50d SMA (806.16p), MACD bullish |
+| IQVIA Holdings | IQV | NYSE | USD | 7 | $163.99 | $1,147.93 | $247.56 | $1,732.92 | +50.96% | ✅ Hold | RSI 80.9 (extreme overbought), above SMA50 ($191.41), MACD bullish; no formal stop — discretionary trim recommended in 2026-07-29 briefing |
+| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 2,992.00p | £538.56 | +23.74% | 👀 Watch | RSI 44.7, above 50d SMA (2,800.59p), MACD bearish; **3,100p stop breached at 3,066p, still unexecuted — price now 2,992p, further below stop — urgent decision needed** |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €162.04 | €1,134.28 | +18.54% | ✅ Hold | RSI 69.3, above 50d SMA (€144.28), MACD bullish |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.96 | $1,377.60 | +4.84% | ✅ Hold | RSI 58.5, above SMA50 ($21.56), MACD bullish |
+| GSK | GSK | LSE | GBp | 50 | 1,939.5p | £969.75 | 2,007.00p | £1,003.50 | +3.48% | ✅ Hold | RSI 58.7, above 50d SMA (1,938.50p), MACD bullish; no stop in place |
+| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.79 | €1,295.55 | +8.52% | ✅ Hold | RSI 77.5 (extreme overbought), above 50d SMA (€23.14), MACD bullish; extended just 6 trading days after entry |
 
-> LSE prices in pence (GBp). Cost basis and Mkt Value in native currency (USD or GBP). EUR positions in EUR. Prices last updated: **2026-07-29** (all positions live-priced, incl. KLR and EDEN).
-> No stop losses currently in place except IQV ($195, unofficial — stale, well below market) and KLR (3,100p on 18 remaining shares — **price has now fallen through this level to 3,066p, unexecuted, needs urgent reassessment**).
-> MGNS exited 07-27 (all 18 shares at 4,456p, −£30.24 loss). KLR trimmed again 07-23 (17 shares at 3,318p, +£153.00). EDEN initiated 07-23 (45 shares at €26.53).
-> 2026-07-29 (data as of Tue Jul 28 close): APH at $143.85 (RSI 37.4) triggered mechanical Exit signal; Burry Lens patience-override applied — hold, tighten stop to ~$134.50, reassess within 10 trading days. KLR's 3,100p stop has been breached (price 3,066p) without execution — flagged for urgent review. No trades executed today.
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. Prices as of **2026-07-29** (US via Massive; LSE/XETRA/Euronext via pipeline).
+> **Active alerts:** APH — mechanical Watch signal (RSI 45.3, below SMA50, MACD bearish), patience override running to 2026-08-08. KLR — 3,100p stop breached at 3,066p, still not executed; price has since fallen further to 2,992p — needs urgent decision. IQV — RSI 80.9 extreme overbought, discretionary trim recommended.
 
 ---
 
-## Realised Gains & Losses
+## Closed Positions
 
-| Date | Ticker | Shares | Entry | Exit | Gross P&L | Gross P&L (€) | CGT @21% | Commission | Net Gain (€) | Reason |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-07-09 | IQV | 3 sold | $163.99 | $208.00 | +$132.03 | +€115.39 | −€24.23 | −€4.37 | **+€86.79** | Trim — RSI 71 overbought, earnings risk 22 Jul |
-| 2026-07-11 | KLR | 15 sold | 2,418p | 3,430p | +£151.80 | +€177.91 | −€37.36 | −€4.37 | **+€136.18** | Trim — RSI 86.3 extreme overbought, reduce concentration |
-| 2026-07-23 | KLR | 17 sold | 2,418p | 3,318p | +£153.00 | +€179.32 | −€37.66 | −€4.37 | **+€137.29** | Trim — technical exit signal |
-| 2026-07-27 | MGNS | 18 sold | 4,624p | 4,456p | −£30.24 | −€35.44 | €0 | −€4.37 | **−€39.81** | Full exit — earnings miss confirmed by technical breakdown |
+Fully exited positions. Partial trims of open positions are in the [[#Performance|Transaction Log]] below.
 
-**YTD Summary**
+| Company | Ticker | Exchange | Shares | Entry | Exit Price | Exit Date | Gross P&L (€) | Net P&L (€) | Exit Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Morgan Sindall Group | MGNS | LSE | 18 | 4,624p | 4,456p | 2026-07-27 | −€35.44 | **−€39.81** | Full exit — earnings miss; technical breakdown confirmed |
+| Broadcom | AVGO | NASDAQ | 4 | $387.25 | $371.42 | 2026-07-29 | −€55.54 | **−€59.91** | Full exit — Burry SOXX-short thesis; below SMA50; position closed |
+
+---
+
+## Performance
+
+### Transaction Log
+
+All realised transactions (full exits and partial trims), ordered by date.
+
+| Date | Ticker | Action | Shares | Entry | Exit | Gross P&L | Gross P&L (€) | CGT @21% | Commission | Net (€) | Note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-07-09 | IQV | Trim | 3 | $163.99 | $208.00 | +$132.03 | +€115.39 | −€24.23 | −€4.37 | **+€86.79** | RSI 71 overbought; earnings risk |
+| 2026-07-11 | KLR | Trim | 15 | 2,418p | 3,430p | +£151.80 | +€177.91 | −€37.36 | −€4.37 | **+€136.18** | RSI 86.3 extreme overbought |
+| 2026-07-23 | KLR | Trim | 17 | 2,418p | 3,318p | +£153.00 | +€179.32 | −€37.66 | −€4.37 | **+€137.29** | Technical exit signal |
+| 2026-07-27 | MGNS | Full exit | 18 | 4,624p | 4,456p | −£30.24 | −€35.44 | €0 | −€4.37 | **−€39.81** | Earnings miss; technical breakdown |
+| 2026-07-28 | IQV | Trim | 2 | $163.99 | $243.50 | +$159.02 | +€139.49 | −€29.29 | −€4.37 | **+€105.83** | RSI 78.8 extreme overbought |
+| 2026-07-29 | AVGO | Full exit | 4 | $387.25 | $371.42 | −$63.32 | −€55.54 | €0 | −€4.37 | **−€59.91** | Burry SOXX thesis; below SMA50 |
+
+---
+
+### Position Summary
+
+Realised P&L grouped by position (trims + full exits combined).
+
+| Ticker | Transactions | Status | Shares Sold | Realised Gross (€) | CGT (€) | Commissions (€) | Realised Net (€) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IQV | 2 trims | Open (7 remain) | 5 | +€254.88 | −€53.52 | −€8.74 | **+€192.62** |
+| KLR | 2 trims | Open (18 remain) | 32 | +€357.23 | −€75.02 | −€8.74 | **+€273.47** |
+| MGNS | Full exit | Closed | 18 | −€35.44 | €0 | −€4.37 | **−€39.81** |
+| AVGO | Full exit | Closed | 4 | −€55.54 | €0 | −€4.37 | **−€59.91** |
+| **TOTAL** | **6** | | **59** | **€521.13** | **−€128.54** | **−€26.22** | **€366.37** |
+
+---
+
+### YTD Summary
 
 | Metric | Value |
 | --- | --- |
-| Total gross P&L (€) | €437.18 |
-| Total CGT paid (€) | €99.25 |
-| Total commissions (€) | €17.48 |
-| **Net realised gains (€)** | **€320.45** |
-| Transactions | 4 |
+| Total gross P&L (€) | €521.13 |
+| Total CGT paid (€) | €128.54 |
+| Total commissions (€) | €26.22 |
+| **Net realised gains (€)** | **€366.37** |
+| Transactions | 6 |
+| Positions fully closed | 2 (MGNS, AVGO) |
+| Positions partially trimmed | 2 (IQV, KLR) |
+
+---
+
+## Cash Position
+
+| Currency | Amount | Movement Log |
+| --- | --- | --- |
+| EUR | **€2,930** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) |
+
+> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
 
 ---
 
@@ -70,25 +110,16 @@ updated: 2026-07-29
 
 ---
 
-## Cash Position
-
-| Currency | Amount | Notes |
-| --- | --- | --- |
-| EUR | €1,208 | €3,000 starting reserve + €517 net IQV trim (07-09) + €561 net KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 net KLR trim (07-23) + €936 net MGNS exit (07-27) − €1,198 EDEN buy (07-23) |
-
----
-
 ## Structural Risk Notes (Burry Lens)
 
-*Added 2026-07-27 — see [[finance/models/model-portfolio-management]] for the full framework.*
+*See [[finance/models/model-portfolio-management]] for the full framework.*
 
-| Position | Burry Signal | Action |
+| Position | Burry Signal | Guidance |
 |---|---|---|
-| AVGO | 🔴 SOXX short (direct) | Treat as **Small** position; do not add until Burry refutation triggers confirmed |
-| APH | 🟠 AI data centre connector (indirect) | Monitor; holds as normal size pending technical signals |
-| IQV | 🟢 Healthcare — positive alignment | No Burry conflict; size can be normal/large if thesis intact |
-| KLR, DNLM, WOSG, GSK, CPB, EDEN | 🟢 European value — no signal | No Burry conflict; Grantham also prefers non-US |
-| SAP | 🟡 Enterprise software — mild indirect | SAP's AI revenue is enterprise-contracted, less circular than hyperscalers |
+| APH | 🟠 AI data centre connector (indirect) | Monitor; normal size; patience override active |
+| IQV | 🟢 Healthcare — positive alignment | No Burry conflict; size can be normal or large if thesis intact |
+| KLR, DNLM, WOSG, GSK, CPB, EDEN | 🟢 European value — no signal | No conflict; Grantham also prefers non-US value |
+| SAP | 🟡 Enterprise software — mild indirect | SAP AI is enterprise-contracted; less circular-financing exposed than hyperscalers |
 
 **Patience override rule:** A mechanical EXIT signal (RSI < 40 + below 50d SMA + MACD bearish expanding) alone is not sufficient to exit a position with an intact fundamental thesis. Maximum trim: 50%. Reassess within 10 trading days.
 
@@ -98,5 +129,5 @@ updated: 2026-07-29
 
 - [[Finance - overview]]
 - [[finance/portfolio-overview]] — equity pension portfolio
-- [[finance/models/model-portfolio-management]] — integrated risk framework; Burry/Grantham structural risk layer; position sizing rules
-- [[finance/people/person-michael-burry]] — AI circular-financing thesis; AVGO/SOXX short rationale
+- [[finance/models/model-portfolio-management]] — integrated risk framework; Burry/Grantham structural risk layer; position sizing rules; decision matrix
+- [[finance/people/person-michael-burry]] — AI circular-financing thesis; rationale for AVGO exit

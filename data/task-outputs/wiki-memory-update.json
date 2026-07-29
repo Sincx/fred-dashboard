@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-29T23:53:56+02:00",
+      "summary": "Memory index updated — a busy clippings day (6 sources incl. Burry's SW50 series and a new Ukraine defence-tech thread), 3 same-day trading-portfolio briefings surfacing a fresh AVGO discrepancy, and a Meta/Games cross-link from wiki-thinker",
+      "content": [
+        "Domain Content Status — Finance: added the 2026-07-29 paper trading update (P1 TRV added Strategy E Sector Rotation; TNET hit T2 +50.62% second tranche; 29 open positions, net P&L +$1,070/+2.61% on $41,000) and the 2026-07-29 clippings batch (NYT DealBook chip-sector meltdown, Burry's two-part SW50 Office Software/Payments valuation series)",
+        "Domain Content Status — Finance: added the 3 same-day live trading-portfolio briefing runs (10→10→9 positions) — AVGO disappeared entirely between runs with no exit logged; KLR's 3,100p stop flagged breached and unexecuted, escalating from a trim to a full discretionary exit recommendation",
+        "Domain Content Status — AI & Tech: added two new Benedict Evans source pages (newsletter #653 — OpenAI sandbox hack, Anthropic/OpenAI China-model lobbying, Alphabet's first negative FCF; token-pricing essay on frontier-lab pricing power)",
+        "Domain Content Status — Technology: added source-guardian-fire-point-ukraine-missiles-2026-07-27.md (Fire Point drone/missile manufacturer) — filed here as a judgment call since no defence/geopolitics domain exists",
+        "Domain Content Status — Meta: run count 22→23, added the 2026-07-29 wiki-thinker highlight — Health's dementia-prevention research names game-building as protective cognitive stimulation, unlinked to Fred's own still-stub Games domain",
+        "Open Threads: added the new AVGO/KLR trading-portfolio discrepancy, the Meta/Games cross-link, and a note on the wiki's missing defence/geopolitics domain",
+        "Bumped 'Last updated' date to 2026-07-29",
+        "Appended one memory-update log line to log.md for 2026-07-29"
+      ]
+    },
+    {
       "runAt": "2026-07-28T23:55:01+02:00",
       "summary": "Memory index updated — a long-running Games data-integrity thread finally resolved, a fresh Micron bear/bull tension, a new AMD circular-financing gap, and another briefing-vs-dashboard reconciliation flag on the live trading portfolio",
       "content": [
@@ -16,19 +30,6 @@
         "Open Threads: sharpened the year-old Micron thread with Burry's new short as a named bear case; added a new AMD/Anthropic circular-financing gap in idea-amd.md; added a new discrepancy — BATS (opened 07-27) is missing from the 07-28 position list while EDEN appears for the first time, extending the standing briefing-vs-dashboard reconciliation pattern",
         "Bumped 'Last updated' date to 2026-07-28",
         "Appended one memory-update log line to log.md for 2026-07-28"
-      ]
-    },
-    {
-      "runAt": "2026-07-27T23:53:31+02:00",
-      "summary": "Memory index updated — folded in today's clippings batch (7 sources incl. two-part Burry Palantir thesis), a trading-portfolio review that retired the long-running KLR-trim thread, and a recurring dashboard-push blocker",
-      "content": [
-        "Domain Content Status — Finance: added the 2026-07-27 clippings-sorter batch — 7 new source pages: NYT DealBook (Alphabet Q2 capex/FCF, Anthropic-AMD chip deal, Moonshot AI Nvidia-access accusation), Morningstar FTSE100-under-Burnham piece, two-part Burry Palantir bear thesis (accounting forensics + DCF), and two Burry Trading Post entries (VIX/VIXEQ divergence, Tencent/Meituan/Temple & Webster longs)",
-        "Domain Content Status — Finance: added the 2026-07-27 trading-portfolio review — MGNS Full Exit recommended (small €29.28 net loss); KLR's RSI cooled to 65.3, dropping below its Trim threshold, effectively retiring the KLR-trim-unexecuted thread open since 07-17; new BATS position opened (€750, no wiki idea page yet)",
-        "Domain Content Status — Finance: added the 2026-07-27 portfolio-refresh (25 prices, $EV -26.78% biggest mover, Massive.com now returning HTTP 403 not-entitled) and both market trackers (sector: XLE now tracker-best at +35.2% YTD; growth-value: value leads by 1924bps, IWF negative YTD for the first time in 2026)",
-        "Domain Content Status — Crypto: added source-morningstar-crypto-winter-2026-07-24.md (BTC -25% YTD, $2.7B spot-ETF outflows, macro- not ecosystem-driven)",
-        "Open Threads: added the KLR-trim-thread-lapsed note, the new BATS-has-no-idea-page item (joins SHEL/BMY backlog), and the recurring fred-dashboard git-push-blocked issue (531f364, needs manual push — same pattern as 07-17)",
-        "Bumped 'Last updated' date to 2026-07-27",
-        "Appended one memory-update log line to log.md for 2026-07-27"
       ]
     }
   ]
