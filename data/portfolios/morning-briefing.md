@@ -1,116 +1,120 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-07-29
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-07-30
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
   Positions:        9 open
-  Total Value:      ~€14,201 (positions €11,271 + cash €2,930)
+  Total Value:      ~€13,860 (positions €10,930 + cash €2,930)
   Available Cap:    €2,930
-  Best Performer:   IQV +50.96%
-  Worst Performer:  GSK +3.48%
-  Largest Position: WOSG (14.9% of portfolio)
+  Best Performer:   IQV +45.00%
+  Worst Performer:  GSK +0.03%
+  Largest Position: WOSG (15.9% of invested capital)
 
 POSITION SIGNALS
   ┌──────────┬────────────┬─────────┬───────┬──────────┬────────────────────────────────────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst                          │
   ├──────────┼────────────┼─────────┼───────┼──────────┼────────────────────────────────────┤
-  │ APH      │ +4.75%     │ 45.3    │ ↓     │ Watch    │ Patience override to 2026-08-08   │
-  │ WOSG     │ +3.85%     │ 46.6    │ ↓     │ Watch    │ —                                  │
-  │ DNLM     │ +11.75%    │ 71.2    │ ↑     │ Hold     │ Overbought, no formal stop         │
-  │ IQV      │ +50.96%    │ 80.9    │ ↑     │ Hold     │ Extreme overbought — see trims     │
-  │ KLR      │ +23.74%    │ 44.7    │ ↑     │ Watch    │ 3,100p stop breached, unexecuted   │
-  │ SAP      │ +18.54%    │ 69.3    │ ↑     │ Hold     │ —                                  │
-  │ CPB      │ +4.84%     │ 58.5    │ ↑     │ Hold     │ —                                  │
-  │ GSK      │ +3.48%     │ 58.7    │ ↑     │ Hold     │ No stop in place                   │
-  │ EDEN     │ +8.52%     │ 77.5    │ ↑     │ Hold     │ Extreme overbought, entered 07-23  │
+  │ APH      │ +11.37%    │ 54.5    │ ↑     │ Watch    │ Price back above SMA50; MACD bearish│
+  │ WOSG     │ +8.14%     │ 54.4    │ ↑     │ Watch    │ MACD bearish                        │
+  │ DNLM     │ +11.25%    │ 69.2    │ ↑     │ Hold     │ Nearing overbought                  │
+  │ IQV      │ +45.00%    │ 70.6    │ ↑     │ Hold     │ RSI cooling from 80.9; 2 trims done  │
+  │ KLR      │ +26.55%    │ 48.8    │ ↑     │ Watch    │ 3,100p stop breached, still unexecuted│
+  │ SAP      │ +14.06%    │ 61.9    │ ↑     │ Hold     │ —                                    │
+  │ CPB      │ +0.82%     │ 50.1    │ ↑     │ Watch    │ MACD bearish                        │
+  │ GSK      │ +0.03%     │ 48.8    │ ↑     │ Add      │ Mechanical add, but size-capped      │
+  │ EDEN     │ +6.45%     │ 71.6    │ ↑     │ Hold     │ Extended, overbought                │
   └──────────┴────────────┴─────────┴───────┴──────────┴────────────────────────────────────┘
   Note: mechanical Trim signal requires RSI>70 AND position ≥20% of portfolio — no position meets
-  the weight threshold today, so IQV/DNLM/EDEN show Hold despite extreme RSI. See discretionary
-  trim note on IQV below. No earnings catalysts flagged in Notes within the next 14 days.
+  the weight threshold today, so IQV/EDEN show Hold despite elevated RSI. No earnings catalysts
+  flagged in Notes within the next 14 days.
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest position WOSG at 14.9%, no position ≥25%
-  Sector spread:   Tech/AI 23.6% (APH+SAP) | Healthcare/CRO 24.7% (IQV+GSK) | UK Consumer 23.3%
-                   (WOSG+DNLM) | UK Industrials 5.6% (KLR) | Consumer Staples 11.3% (CPB) |
-                   Unmapped 11.5% (EDEN — business services/vouchers)
-                   Healthcare/CRO at 24.7% is close to the 25% concentration ceiling — no further
-                   healthcare adds recommended until this comes down.
-  Currency split:  USD 39.0% (APH, IQV, CPB) | GBp 39.4% (WOSG, DNLM, KLR, GSK) | EUR 21.6% (SAP, EDEN)
+  Concentration:   OK — largest position WOSG at 15.9%, no position ≥25%
+  Sector spread:   Tech/AI 24.0% (APH+SAP) | Healthcare/CRO 23.6% (IQV+GSK) | UK Consumer 24.5%
+                   (WOSG+DNLM) | UK Industrials 5.9% (KLR) | Consumer Staples 10.5% (CPB) |
+                   Unmapped 11.6% (EDEN — business services/vouchers)
+                   Three sectors (Tech/AI, Healthcare, UK Consumer) are all bunched at 23.6–24.5%,
+                   within a point of the 25% ceiling — avoid adding to any of these until one clears out.
+  Currency split:  USD 37.7% (APH, IQV, CPB) | GBp 40.8% (WOSG, DNLM, KLR, GSK) | EUR 21.6% (SAP, EDEN)
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  KLR: Full Exit (stop-loss discipline) — 3,100p stop was breached at 3,066p on a prior review and
-  left unexecuted; price has since fallen further to 2,992p, still below the stop, with MACD
-  bearish and momentum stalling. Recommend executing the exit now rather than letting the breach
-  compound further.
-  Expected proceeds: £538.56 (~€634.85) | Gross P&L: £103.32 (~€121.79) | CGT (21%): ~€25.58 |
-  Commission: ~€4.61 | Net: ~€91.60
-
-  IQV: Discretionary Trim ~25% (2 of 7 shares) — RSI 80.9 extreme overbought (highest in the book),
-  no formal stop in place beyond a "trail to ~$225" note, +50.96% unrealised. Mirrors the two prior
-  IQV trims taken at RSI 71 and RSI 78.8. Not a mechanical Trim signal (position is only 14.2% of
-  portfolio, below the 20% weight threshold) but justified on RSI extremity and to keep locking gains.
-  Expected proceeds: $495.12 (~€456.35) | Gross P&L: $167.14 (~€154.05) | CGT (21%): ~€32.35 |
-  Commission: ~€4.61 | Net: ~€117.09
+  No exit signals triggered today (mechanical Exit/Trim thresholds not met on any position).
+  KLR's 3,100p stop remains breached and unexecuted from prior sessions — price has since recovered
+  to 3,060p (still below the stop, and +26.55% unrealised). IQV (RSI 70.6, cooled from 80.9) and
+  EDEN (RSI 71.6) remain technically extended but both sit below the 20%-of-portfolio weight needed
+  to trigger a mechanical Trim.
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No adds today — no position meets RSI 35–50 + above SMA50 + MACD bullish simultaneously (APH and
-  WOSG have RSI in range but are below SMA50; KLR is above SMA50 but MACD is bearish).
+  GSK: Add signal triggered (RSI 48.8, price marginally above SMA50 — 1,940p vs 1,939.3p, MACD
+  bullish) — but current cost basis (~€1,133) is already near the €1,500 position cap. Max
+  incremental add room is ~€367, at/below the ~€465 minimum viable trade size (commission would run
+  ~1.2% of trade value).
+  Stop: 1,841p (entry 1,940p − 1.5×ATR14 65.96p) | Size: SKIP — would need explicit conviction
+  override to exceed the €1,500 cap for a marginal add.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  EIX: Enter at $78.64 — Market Watchlist Buy Opportunities, score 5/5 (undervalued, P/E 8.7, RSI
-  63.2, MACD bullish, +7.2% 1M). Clean uptrend, no gap risk.
-  Stop: $75.96 (entry − 1.5×ATR14 ≈ $1.79) | Size: €1,500
+  HON: Enter at $241.12 — Market Watchlist Buy Opportunities, score 5/5 (undervalued, P/E 9.4, RSI
+  57.3, MACD bullish). Cleanest healthy-range entry of the three screener ideas.
+  Stop: $231.64 (entry − 1.5×ATR14 ≈ $6.32) | Size: €1,500
 
-  HON: Enter at $245.75 — Buy Opportunities, score 5/5 (undervalued, P/E 9.4, RSI 64.5, MACD bullish).
-  Stop: $236.30 (entry − 1.5×ATR14 ≈ $6.29) | Size: €1,000 (capped below normal €1,500 given cash
-  constraints — see Next Actions)
+  AGCO: Enter at $116.17 — score 5/5 (undervalued, P/E 11.6, RSI 49.7, MACD bullish, -2.6% 1M
+  pullback into a fresh bullish cross).
+  Stop: $110.81 (entry − 1.5×ATR14 ≈ $3.57) | Size: €1,000
 
-  No trades today / Capital held in reserve: EIX and HON together would use ~€2,500 of the €2,930
-  cash on hand; hold VZ as watch-only (see below) rather than a funded entry this cycle.
+  EIX: Enter at $78.63 — score 5/5 (undervalued, P/E 8.7, RSI 59.9, MACD bullish, +5.4% 1M), opens a
+  brand-new Utilities sector.
+  Stop: $75.87 (entry − 1.5×ATR14 ≈ $1.84) | Size: €750 (capital-constrained — treat as next-cycle
+  if HON/AGCO are taken first)
+
+  No trades today / Capital held in reserve: HON + AGCO would use ~€2,500 of the €2,930 cash on
+  hand; EIX held as a watch-list candidate for the next cycle rather than a funded entry today.
 
 INVESTMENT OPPORTUNITIES
-  5/5 · EIX (Morningstar-US, Utilities) — Undervalued, P/E 8.7, EPS Gr% n/a
-  Entry: $78.64 | Stop: $75.96 | Size: €1,500 | RSI: 63.2 | MACD: Bullish
-  Conviction: Undervalued regulated utility, healthy RSI, bullish MACD, +7.2% past month — clean
-  entry with no gap risk.
-  Portfolio fit: Opens a brand-new sector (Utilities) with zero overlap against current holdings;
-  USD-denominated, which nudges USD weight up from 39.0% but the diversification benefit outweighs it.
-
   5/5 · HON (DJI, Industrials) — Undervalued, P/E 9.4, EPS Gr% n/a
-  Entry: $245.75 | Stop: $236.30 | Size: €1,000 | RSI: 64.5 | MACD: Bullish
-  Conviction: Undervalued industrial conglomerate, RSI healthy at 65, bullish MACD.
-  Portfolio fit: Distinct from existing UK Industrials exposure (KLR, 5.6%) — US large-cap
-  industrial diversifier; USD-denominated.
+  Entry: $241.12 | Stop: $231.64 | Size: €1,500 | RSI: 57.3 | MACD: Bullish
+  Conviction: Cheapest blue-chip industrial in the screen with clean healthy-range RSI and bullish
+  MACD — no extension risk.
+  Portfolio fit: New name, no overlap with UK Industrials (KLR, 5.9%); adds USD exposure (currently
+  37.7%).
 
-  4/5 · VZ (S&P500, Communication Services) — Fair value, P/E 12.1
-  Entry: WATCH ONLY — do not chase. Stock gapped from ~$44 to ~$48 (+9%) over the last two
-  sessions, RSI 67.7 and rising. Wait for a pullback/consolidation toward ~$46–46.50 before entry.
-  Stop (if triggered): entry − 1.5×ATR14 (~$1.11) | Size: €750 (starter, given late-stage entry risk)
-  Conviction: Fair value, bullish MACD, but the recent gap looks earnings-driven — chasing here has
-  poor risk/reward until it consolidates.
-  Portfolio fit: New sector (Communication Services), USD-denominated.
+  5/5 · AGCO (Morningstar-US, Industrials) — Undervalued, P/E 11.6, EPS Gr% n/a
+  Entry: $116.17 | Stop: $110.81 | Size: €1,000 | RSI: 49.7 | MACD: Bullish
+  Conviction: Recent -2.6% 1M pullback into a fresh bullish MACD cross — best risk/reward entry of
+  the three.
+  Portfolio fit: Second Industrials name alongside HON/KLR — would concentrate the sector if both
+  HON and AGCO are taken; consider picking one over the other rather than both.
+
+  5/5 · EIX (Morningstar-US, Utilities) — Undervalued, P/E 8.7, EPS Gr% n/a
+  Entry: $78.63 | Stop: $75.87 | Size: €750 | RSI: 59.9 | MACD: Bullish
+  Conviction: Cheapest of the three on P/E, strongest 1M momentum (+5.4%); true diversifier into a
+  sector with zero current exposure.
+  Portfolio fit: Opens a brand-new sector (Utilities); USD-denominated, so would push USD weight
+  higher on top of HON/AGCO if all three are taken.
 
 PORTFOLIO RISKS TO WATCH
-  - KLR: 3,100p stop-loss has now been breached twice without execution (3,066p, then 2,992p) —
-    stop-loss discipline is slipping; recommend acting on the exit above rather than deferring again.
-  - IQV: RSI 80.9, extreme overbought, no formal stop — a sharp reversal from these levels would
-    give back a large chunk of the +50.96% unrealised gain if unprotected.
-  - EDEN: RSI 77.5 just six trading days after entry (07-23) — extended very early in the position's
-    life with no profit cushion built up yet.
-  - FX concentration: USD 39.0% + GBp 39.4% of the book — EUR/USD or EUR/GBP moves are a material
-    swing factor on portfolio value in euro terms.
-  - No earnings dates within the next 14 days were flagged in current position notes; APH's
-    patience-override window closes 2026-08-08 and should be reassessed then regardless.
+  - KLR: 3,100p stop breached at 3,066p and never executed; price has since recovered to 3,060p
+    (still below the stop) — this gap has now carried over multiple sessions and needs resolving
+    one way or the other rather than deferring again.
+  - Sector spread is tightly bunched: UK Consumer (24.5%), Tech/AI (24.0%), and Healthcare/CRO
+    (23.6%) are all within a point of the 25% concentration warning — further appreciation in any
+    one could trip the flag without a single ticker doing so.
+  - No formal stop-loss in place on GSK, IQV, or EDEN — IQV (+45%) and EDEN (RSI 71.6, extended)
+    have no downside protection against a reversal after a strong run.
+  - Combined USD + GBp exposure is ~78.5% of invested capital; taking on the USD-denominated
+    screener ideas (HON/AGCO/EIX) would push this higher and add FX-driven volatility on top of
+    price risk.
 
 NEXT ACTIONS
-  1. Decide on KLR: execute the overdue stop-loss exit (~2,992p, ~€634.85 proceeds) or explicitly
-     accept the risk and set a new, tighter stop.
-  2. Consider the IQV discretionary trim (2 shares, ~€117 net) to bank gains at RSI 80.9.
-  3. If KLR/IQV proceeds are taken, fund EIX (€1,500) and HON (€1,000) from the ~€1,750 freed up
-     plus existing €2,930 cash, keeping a cash reserve rather than deploying all capital at once.
-  4. Watch VZ for a pullback to ~$46–46.50 before considering a starter entry.
-  5. Reassess APH's mechanical exit signal (RSI<40, below SMA50, MACD bearish) when the patience
-     override expires 2026-08-08.
+  1. Resolve the KLR stop situation — either execute the breached 3,100p stop now or explicitly
+     reset a trailing stop (e.g. ~2,900p) to protect the +26.55% gain.
+  2. Reassess the APH patience override ahead of its 2026-08-08 deadline — price has now recovered
+     above SMA50 (159.82 vs 152.99), so the original override rationale may no longer apply.
+  3. Deploy available cash (€2,930) selectively into HON (€1,500) and AGCO (€1,000) from the
+     screener; hold EIX for the next cycle given USD concentration is already a flagged risk.
+  4. Skip the GSK mechanical Add — position is already near its €1,500 sizing cap; revisit on a
+     future dip that creates more room.
+  5. Monitor IQV (RSI 70.6) and EDEN (RSI 71.6) — both extended but under the 20%-weight threshold
+     for a mechanical Trim; watch for weight growth or RSI >75 before the next review.
 ════════════════════════════════════════════════════════
