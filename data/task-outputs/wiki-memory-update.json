@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-31T00:02:12+02:00",
+      "summary": "Memory index condensed and updated — trimmed two runaway log-like cells (Finance, Meta) and consolidated a decade of duplicate trading-portfolio discrepancy threads into one, on top of the day's normal content update",
+      "content": [
+        "Major cleanup: the Finance domain-status cell had grown to a single 36KB line duplicating months of trade-by-trade history already in log.md — replaced with a concise current-state summary (subfolder structure, paper trading P1/P2 totals, live portfolio tickers, key conventions) and a pointer to log.md for chronological detail",
+        "Major cleanup: the Meta domain-status cell (wiki-thinker run log) was similarly bloated — trimmed to the 5 most recent highlights plus a pointer to wiki/cross-domain-themes.md for full history",
+        "Major cleanup: Open Threads had accumulated 10+ near-duplicate 'briefing log vs. trading.md discrepancy' entries (dated 07-14 through 07-29, one per KLR/APH/SHEL/BMY/BATS/EDEN/AVGO incident) — consolidated into a single standing thread describing the recurring pattern, updated with today's instance; also removed threads already marked resolved/superseded (stale Technology 'no overview.md' note, a stale 2026-07-15 paper-trading snapshot, the resolved 2026-07-24 WOSG/SAP/GSK exit thread, and two already-closed wiki health-check entries)",
+        "File shrank from ~145KB (two single lines each 30-40KB) to ~49KB, 302 lines to 287 lines, with no loss of currently-open information",
+        "Content update — Finance: rolled in 2026-07-30's portfolio-management-briefing (9 positions; GSK mechanical Add signal triggered but skipped on size cap; new candidates HON/AGCO/EIX flagged, none placed) and folded it into the consolidated reconciliation thread",
+        "Content update — Meta: added 2026-07-30's wiki-thinker highlight (new 'Dementia Matters' podcast recommendation is a dedicated clinical-research show on the same mechanism as Health's Wood source page) as both a Meta highlight and a new Open Thread",
+        "Bumped 'Last updated' date to 2026-07-30",
+        "Appended one memory-update log line to log.md for 2026-07-30"
+      ]
+    },
+    {
       "runAt": "2026-07-29T23:53:56+02:00",
       "summary": "Memory index updated — a busy clippings day (6 sources incl. Burry's SW50 series and a new Ukraine defence-tech thread), 3 same-day trading-portfolio briefings surfacing a fresh AVGO discrepancy, and a Meta/Games cross-link from wiki-thinker",
       "content": [
@@ -16,20 +30,6 @@
         "Open Threads: added the new AVGO/KLR trading-portfolio discrepancy, the Meta/Games cross-link, and a note on the wiki's missing defence/geopolitics domain",
         "Bumped 'Last updated' date to 2026-07-29",
         "Appended one memory-update log line to log.md for 2026-07-29"
-      ]
-    },
-    {
-      "runAt": "2026-07-28T23:55:01+02:00",
-      "summary": "Memory index updated — a long-running Games data-integrity thread finally resolved, a fresh Micron bear/bull tension, a new AMD circular-financing gap, and another briefing-vs-dashboard reconciliation flag on the live trading portfolio",
-      "content": [
-        "Domain Content Status — Games: resolved the 2026-07-19 'only 2 of 4 prototype stubs are real' correction — wiki-thinker found all 4 are real files after all, just misfiled (Crypto Portfolio Tracker under raw/crypto/, Project Planning Interface under raw/ai-tech/); games/prototypes.md's table is still unpopulated, that's the next step",
-        "Domain Content Status — Cooking: updated recipe-recommender's latest run to 2026-07-27 (Nigel Slater, David Chang, Anthony Bourdain); noted David Chang still has no wiki page despite repeated use as a reference chef",
-        "Domain Content Status — Finance: added 2026-07-27/28 paper trading (P1: ROK added Strategy B Momentum; SHW added Strategy C Volume Spike; ASML signal-exited −10.19% on a new 'Burry Sector Warning' semis flag; 28 open positions, net P&L +$839/+2.10% on $40,000) and the 2026-07-27/28 live trading-portfolio reviews (MGNS Full Exit executed, BATS opened, then a pipeline bug found and fixed — EDEN.PA had no ticker-routing config and was silently reading an unrelated US ticker)",
-        "Domain Content Status — Meta: run count 20→22, added two new wiki-thinker highlights — 07-28: Anthropic's 2GW AMD chip deal (AMD investing $5B back) mirrors CoreWeave's already-scrutinised Meta relationship, unmentioned in idea-amd.md; 07-27: Games prototypes resolved + Burry's fresh Micron short directly rebuts AI & Tech's own HBM bull case for MU",
-        "Key Decisions: added the EDEN.PA ticker-routing bug/fix in portfolio_update.py as a new tool workaround — flagged that other non-US tickers (e.g. BATS) may have the same latent risk",
-        "Open Threads: sharpened the year-old Micron thread with Burry's new short as a named bear case; added a new AMD/Anthropic circular-financing gap in idea-amd.md; added a new discrepancy — BATS (opened 07-27) is missing from the 07-28 position list while EDEN appears for the first time, extending the standing briefing-vs-dashboard reconciliation pattern",
-        "Bumped 'Last updated' date to 2026-07-28",
-        "Appended one memory-update log line to log.md for 2026-07-28"
       ]
     }
   ]
