@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-07-31T23:51:10+02:00",
+      "summary": "RDW (G)",
+      "picks": {
+        "p1": {
+          "ticker": "RDW",
+          "strategy": "G — Small Cap High Growth",
+          "entry": 8.47,
+          "stop": 7.20,
+          "t1": 10.59,
+          "t2": 12.71
+        }
+      },
+      "content": "Redwire (RDW) picked up at the previous close ($8.47) — a space/defense infrastructure name that just landed a $1.8B, 10-year U.S. Space Systems Command contract, with revenue +57.95% YoY and gross margin expanding 9.6%→26.6%. No exits today: no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO reversed sharply (+11.87%→−7.15%) on a Q3 earnings revenue miss and JBHT drifted to −9.79% on valuation-driven profit-taking. Portfolio net P&L: +$570 (+1.33% on $43,000)."
+    },
+    {
       "runAt": "2026-07-31T00:05:29+02:00",
       "summary": "F (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Ford (F) picked up at the previous close ($15.28) on a Q2 beat-and-raise (guidance upper end lifted $500M to $10.5B) and a fresh Citi upgrade to Buy. MU stopped out at −17.51% (blended −2.81% incl. earlier T1, −$28) and AMD signal-exited at −14.70% (Burry Sector Warning, −$147) — both casualties of the broad Jul 29 semiconductor-sector selloff (Micron CEO share sale, China DUV lithography competition fears). Portfolio net P&L: +$695 (+1.65% on $42,000)."
-    },
-    {
-      "runAt": "2026-07-29T10:10:13+02:00",
-      "summary": "TRV (E)",
-      "picks": {
-        "p1": {
-          "ticker": "TRV",
-          "strategy": "E — Sector Rotation",
-          "entry": 397.22,
-          "stop": 337.64,
-          "t1": 496.53,
-          "t2": 595.83
-        }
-      },
-      "content": "Travelers (TRV) picked up at the previous close ($397.22) as a Dow 30 insurer riding the day's broad rotation out of semiconductors into insurance/financials, after an ~88% Q2 EPS beat drove XLF to a record high. TNET hit its T2 target at $68.38 (+50.62%), second take-profit tranche sold (~$502); no stop-losses or signal exits fired, though MU (Burry Direct Short, −8.41%) and AMD (Burry Sector Warning, −9.72%) are both nearing the −10% signal-exit threshold. Portfolio net P&L: +$1,070 (+2.61% on $41,000)."
     }
   ]
 }
