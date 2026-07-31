@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-07-30
+updated: 2026-07-31
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-07-30** (US via Massive; LSE + XETRA (SAP) + Euronext (EDEN) via Yahoo Finance chart API/Massive pipeline). Cash: **€2,930**. 9 open positions.
+> Live page — update whenever positions change. Prices last fetched: **2026-07-31** (intraday refresh; US via Massive; LSE + XETRA (SAP) + Euronext (EDEN) via Yahoo Finance chart API/Massive pipeline; ACN/IBIS price not refreshed this run — see note below). Cash: **€8,029**. 10 open positions.
 
 ---
 
@@ -16,18 +16,19 @@ updated: 2026-07-30
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $159.82 | $1,758.02 | +11.37% | 👀 Watch | RSI 54.5, back above SMA50 ($152.99), MACD bearish — patience override still active, reassess by 2026-08-08 |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 744.00p | £1,488.00 | +8.14% | 👀 Watch | RSI 54.4, above 50d SMA (722.15p), MACD bearish |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 890.00p | £801.00 | +11.25% | ✅ Hold | RSI 69.2, above 50d SMA (808.61p), MACD bullish |
-| IQVIA Holdings | IQV | NYSE | USD | 7 | $163.99 | $1,147.93 | $237.79 | $1,664.53 | +45.00% | ✅ Hold | RSI 70.6 (cooling from 80.9), above SMA50 ($192.71), MACD bullish; no formal stop |
-| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,060.00p | £550.80 | +26.55% | 👀 Watch | RSI 48.8, above 50d SMA (2,815.12p), MACD bearish; **3,100p stop breached at 3,066p, still unexecuted — price recovered to 3,060p, still below stop — decision needed** |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €155.92 | €1,091.44 | +14.06% | ✅ Hold | RSI 61.9, above 50d SMA (€144.38), MACD bullish |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.08 | $1,324.80 | +0.82% | 👀 Watch | RSI 50.1, above SMA50 ($21.60), MACD bearish |
-| GSK | GSK | LSE | GBp | 50 | 1,939.5p | £969.75 | 1,940.00p | £970.00 | +0.03% | ➕ Add | RSI 48.8, marginally above 50d SMA (1,939.33p), MACD bullish; mechanical Add signal triggered but position near €1,500 size cap |
-| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.24 | €1,270.80 | +6.45% | ✅ Hold | RSI 71.6 (overbought), above 50d SMA (€23.29), MACD bullish; extended |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $160.70 | $1,767.70 | +11.99% | 👀 Watch | RSI 55.3, above SMA50 ($153.83), MACD bearish — patience override still active, reassess by 2026-08-08 |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 729.50p | £1,459.00 | +6.03% | 👀 Watch | RSI 50.5, above 50d SMA (723.08p), MACD bearish |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 869.50p | £782.55 | +8.69% | ✅ Hold | RSI 59.6, above 50d SMA (810.80p), MACD bullish |
+| IQVIA Holdings | IQV | NYSE | USD | 7 | $163.99 | $1,147.93 | $235.02 | $1,645.14 | +43.31% | ✅ Hold | RSI 68.0 (cooling), above SMA50 ($193.95), MACD bullish; no formal stop |
+| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,024.00p | £544.32 | +25.06% | 👀 Watch | RSI 46.8, above 50d SMA (2,828.69p), MACD bearish; **3,100p stop breached at 3,066p, still unexecuted — price now 3,024p, further below stop — decision needed** |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €157.68 | €1,103.76 | +15.35% | ✅ Hold | RSI 63.1, above 50d SMA (€144.50), MACD bullish |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $21.98 | $1,318.80 | +0.37% | 👀 Watch | RSI 49.3, above SMA50 ($21.64), MACD bearish |
+| GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,931.50p | £1,004.38 | -0.42% | 👀 Watch | RSI 47.7, slipped below 50d SMA (1,939.67p) overnight, MACD bullish |
+| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.52 | €1,283.40 | +7.50% | ✅ Hold | RSI 72.7 (overbought), above 50d SMA (€23.44), MACD bullish; extended |
+| Accenture | ACN | IBIS | EUR | 6 | €141.10 | €846.60 | €141.10 | €846.60 | 0.00% | ✅ Hold | Global IT services & consulting; initiated 2026-07-31. **Pricing pipeline has no IBIS/EUR routing for ACN and fell back to a NYSE USD quote ($165.92) — not representative of this EUR position; price left unchanged pending manual verification of the correct EUR quote.** |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. Prices as of **2026-07-30** (US via Massive; LSE/XETRA/Euronext via pipeline).
-> **Active alerts:** APH — Watch signal (RSI 54.5, back above SMA50, MACD bearish), patience override still running to 2026-08-08 though price has recovered. KLR — 3,100p stop breached at 3,066p, still not executed; price has since recovered to 3,060p but remains below the stop — needs a decision. GSK — mechanical Add signal triggered (RSI 48.8, above SMA50, MACD bullish) but position is near its €1,500 size cap.
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN) in EUR. Prices as of **2026-07-31** (US via Massive; LSE/XETRA/Euronext via pipeline; ACN not refreshed this run — see alert below).
+> **Active alerts:** APH — patience override still running to 2026-08-08; MACD still bearish despite price above SMA50, monitor. KLR — 3,100p stop still breached (price now 3,024p, further below stop); decision needed. ACN — pricing pipeline has no IBIS/EUR routing and fell back to an unrelated NYSE USD quote; manual price verification needed before next update. GSK — dipped back below its 50d SMA overnight; signal downgraded to Watch.
 
 ---
 
@@ -91,7 +92,7 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€2,930** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) |
+| EUR | **€8,029** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) |
 
 > Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
 
