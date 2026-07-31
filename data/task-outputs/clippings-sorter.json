@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-07-31T23:25:41.4674608+02:00",
+                     "summary":  "2 clippings processed",
+                     "content":  "1. \"Fw: The Briefing: Meta's Compute Hesitation\" (The Information Briefing, email) → finance. Meta/Microsoft Q2 earnings cost-discipline contrast — Meta opex +55%, FCF -91% to <$800M on ~$30B capex, stock -10% AH; Microsoft opex +10%, operating income +18%, stock +9%, 365 Copilot subs doubled to 30M; Zuckerberg still won't commit on renting spare AI compute. 2. \"Trading Post July 30, 2026\" (Michael Burry Substack) → finance/investor-letters. All-buys day — added DraftKings, Zoetis, lululemon as de-risked basing longs; added NVDA/QQQ puts; shorted more Micron and SOXX; judges the Paired Momentum snap-back as \"tired\"; previews an MSFT/Meta earnings-quality post. Reverse links added across 8 existing pages (Meta-compute cluster + Burry trading-post hub pages). Zero errors."
+                 },
+                 {
                      "runAt":  "2026-07-30T23:19:45.2363439+02:00",
                      "summary":  "No new clippings",
                      "content":  "Clippings folder empty."
-                 },
-                 {
-                     "runAt":  "2026-07-29T21:27:39.0000000+00:00",
-                     "summary":  "6 clippings processed, 2 duplicates removed",
-                     "content":  "1. \"Fw: Benedict's Newsletter: No. 653\" (email) → ai-tech. OpenAI model hacked its own sandbox+HuggingFace during a cyber benchmark; OpenAI/Anthropic lobbying to ban Chinese models amid regulatory-capture tension; Alphabet's first-ever negative FCF; Nvidia in talks for $250B OpenAI DC backstop; Stripe eyeing OpenRouter; EU fines Google ~$1B. 2. \"Fw: DealBook: Chips meltdown\" (email) → finance. Chip sell-off (Kospi -10%, NVDA -5%/-$250B) on AI-capex-payoff/circular-financing/China-competition fears; Nvidia-OpenAI $250B lease-guarantee backstop for $500B Ohio DC. 3. \"D'AI of the Triffids: Office Software Triage\" (Michael Burry) → finance/investor-letters. Part 1 of a 6-part SW46/50 software valuation series; introduces AICT threat-tier + IV15 + Composite Score framework; 8 Office SaaS names covered (Paycom, Salesforce, ServiceNow, etc). 4. \"Software & Payments Stocks Part II\" (Michael Burry) → finance/investor-letters. Part 2: Productivity Tools (Adobe, Intuit, Autodesk, Unity) + Cybersecurity (Zscaler, Palo Alto, CrowdStrike); only Adobe clears into Fat Pitch territory. 5. \"The Ukrainian startup taking the missile fight deep into Russia\" (Guardian) → technology. Fire Point: ~100 Flamingo cruise missiles/month + hundreds of drones/day, 18→6,000 employees since 2022, sustaining Ukraine's deep-strike campaign into Russia. 6. \"Ways to think about token pricing\" (Benedict Evans) → ai-tech. Long-form essay on whether frontier AI labs keep pricing power or become commodity infrastructure; 4 top-down framing questions. Duplicates removed: \"Palantir An Accounting\" and \"Palantir's New Clothes\" — both already ingested (matching raw/finance files from Feb 2026). Reverse links added across 15 existing pages. Zero errors."
                  }
              ]
 }
