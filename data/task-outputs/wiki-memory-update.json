@@ -5,6 +5,22 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-07-31T23:55:00+02:00",
+      "summary": "Memory index updated — new options-trading research area + skill, a Games Workshop cross-link from wiki-thinker, and a fresh instance of the trading-portfolio reconciliation gap (ACN routing bug)",
+      "content": [
+        "Domain Content Status — Finance: added the 2026-07-31 options-trading research batch (concept-options-trading.md, finance/michael-burry/burry-options-approach.md, new /options-trade-recommender skill — first run generated 5 WDAY recommendations) and 2 new clippings (Meta compute-hesitation briefing, Burry's 2026-07-30 Trading Post)",
+        "Active Skills / Slash Commands: added /options-trade-recommender row",
+        "Domain Content Status — Finance: updated paper trading P1 to 29 positions / +1.3% ($43K) after the RDW entry; flagged that the live trading portfolio's 10-position list showed ACN in place of AVGO on 2026-07-31, with ACN's price pipeline falling back to an unrelated NYSE quote (no IBIS/EUR routing) — same bug class as the 2026-07-28 EDEN fix",
+        "Open Threads: updated the standing trading-portfolio reconciliation-gap thread with the ACN instance (still open since 2026-07-14); added two new threads from wiki-thinker — Games Workshop (GAW.L, +300% pension gain) has no Finance idea page and is never cross-linked from the Games domain; Burry's options approach rejects formal Kelly sizing, a second sizing philosophy Sports Betting's bankroll-management stub doesn't reference",
+        "Open Threads: added burry-options-approach.md to the standing 'pages not yet in wiki/index.md' list (now 9 pages)",
+        "Domain Content Status — Meta: run count 27→28, added the 2026-07-31 wiki-thinker highlight (Games Workshop)",
+        "Domain Content Status — Podcasts: backfilled a missed 2026-07-30 podcast-recommender run (Dividend Talk, Unchained, Dementia Matters, The Cognitive Revolution) that the prior day's memory-update run hadn't captured",
+        "Domain Content Status — Cooking: updated to the 2026-07-31 recipe-recommender run (week of 2026-08-03; same 3 chefs as the prior batch — David Chang, Bourdain, Slater)",
+        "Bumped 'Last updated' date to 2026-07-31",
+        "Appended one memory-update log line to log.md for 2026-07-31"
+      ]
+    },
+    {
       "runAt": "2026-07-31T00:02:12+02:00",
       "summary": "Memory index condensed and updated — trimmed two runaway log-like cells (Finance, Meta) and consolidated a decade of duplicate trading-portfolio discrepancy threads into one, on top of the day's normal content update",
       "content": [
@@ -16,20 +32,6 @@
         "Content update — Meta: added 2026-07-30's wiki-thinker highlight (new 'Dementia Matters' podcast recommendation is a dedicated clinical-research show on the same mechanism as Health's Wood source page) as both a Meta highlight and a new Open Thread",
         "Bumped 'Last updated' date to 2026-07-30",
         "Appended one memory-update log line to log.md for 2026-07-30"
-      ]
-    },
-    {
-      "runAt": "2026-07-29T23:53:56+02:00",
-      "summary": "Memory index updated — a busy clippings day (6 sources incl. Burry's SW50 series and a new Ukraine defence-tech thread), 3 same-day trading-portfolio briefings surfacing a fresh AVGO discrepancy, and a Meta/Games cross-link from wiki-thinker",
-      "content": [
-        "Domain Content Status — Finance: added the 2026-07-29 paper trading update (P1 TRV added Strategy E Sector Rotation; TNET hit T2 +50.62% second tranche; 29 open positions, net P&L +$1,070/+2.61% on $41,000) and the 2026-07-29 clippings batch (NYT DealBook chip-sector meltdown, Burry's two-part SW50 Office Software/Payments valuation series)",
-        "Domain Content Status — Finance: added the 3 same-day live trading-portfolio briefing runs (10→10→9 positions) — AVGO disappeared entirely between runs with no exit logged; KLR's 3,100p stop flagged breached and unexecuted, escalating from a trim to a full discretionary exit recommendation",
-        "Domain Content Status — AI & Tech: added two new Benedict Evans source pages (newsletter #653 — OpenAI sandbox hack, Anthropic/OpenAI China-model lobbying, Alphabet's first negative FCF; token-pricing essay on frontier-lab pricing power)",
-        "Domain Content Status — Technology: added source-guardian-fire-point-ukraine-missiles-2026-07-27.md (Fire Point drone/missile manufacturer) — filed here as a judgment call since no defence/geopolitics domain exists",
-        "Domain Content Status — Meta: run count 22→23, added the 2026-07-29 wiki-thinker highlight — Health's dementia-prevention research names game-building as protective cognitive stimulation, unlinked to Fred's own still-stub Games domain",
-        "Open Threads: added the new AVGO/KLR trading-portfolio discrepancy, the Meta/Games cross-link, and a note on the wiki's missing defence/geopolitics domain",
-        "Bumped 'Last updated' date to 2026-07-29",
-        "Appended one memory-update log line to log.md for 2026-07-29"
       ]
     }
   ]
