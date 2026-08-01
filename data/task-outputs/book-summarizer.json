@@ -3,5 +3,14 @@
   "label": "Book Summarizer",
   "schedule": "1st of month",
   "icon": "📚",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-08-01T10:12:01.2298109+02:00",
+      "summary": "2 book pages created: Bad Actors, Gladiator",
+      "content": [
+        "Bad Actors — Mick Herron. Slough House book 8: a Downing Street think-tank member vanishes and the trail leads back into MI5's own leadership, dragging the slow horses into the fallout.",
+        "Gladiator — Con Iggulden. Roman gladiatorial-combat historical fiction; note: no standalone novel by this exact title could be confirmed in Iggulden's published bibliography during research — page flags this for Fred to verify/correct."
+      ]
+    }
+  ]
 }
