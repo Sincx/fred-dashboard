@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-08-01T23:19:01.9957144+02:00",
+                     "summary":  "No new clippings",
+                     "content":  "Clippings folder empty."
+                 },
+                 {
                      "runAt":  "2026-07-31T23:25:41.4674608+02:00",
                      "summary":  "2 clippings processed",
                      "content":  "1. \"Fw: The Briefing: Meta's Compute Hesitation\" (The Information Briefing, email) → finance. Meta/Microsoft Q2 earnings cost-discipline contrast — Meta opex +55%, FCF -91% to <$800M on ~$30B capex, stock -10% AH; Microsoft opex +10%, operating income +18%, stock +9%, 365 Copilot subs doubled to 30M; Zuckerberg still won't commit on renting spare AI compute. 2. \"Trading Post July 30, 2026\" (Michael Burry Substack) → finance/investor-letters. All-buys day — added DraftKings, Zoetis, lululemon as de-risked basing longs; added NVDA/QQQ puts; shorted more Micron and SOXX; judges the Paired Momentum snap-back as \"tired\"; previews an MSFT/Meta earnings-quality post. Reverse links added across 8 existing pages (Meta-compute cluster + Burry trading-post hub pages). Zero errors."
-                 },
-                 {
-                     "runAt":  "2026-07-30T23:19:45.2363439+02:00",
-                     "summary":  "No new clippings",
-                     "content":  "Clippings folder empty."
                  }
              ]
 }
