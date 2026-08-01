@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-01T23:52:08+02:00",
+      "summary": "Memory index updated — 2 new book pages, 1 new wiki-thinker cross-link (Fire Point ↔ Rheinmetall), and spinoff-monitor's new Delivery Hero candidate + Bayer catalyst date",
+      "content": [
+        "Domain Content Status — Books: added 2026-08-01 book-summarizer output — book-gladiator.md (Con Iggulden, title unverified) and book-bad-actors.md (Slow Horses book 8); Slow Horses series now spans books 1-8",
+        "Domain Content Status — Meta: run count 28→29, added the 2026-08-01 wiki-thinker highlight — Technology's Fire Point (Ukraine defence manufacturing) source page is a live proof point for the exact NATO capability gap Finance's Rheinmetall bull case cites in the abstract, unlinked",
+        "Open Threads: updated the Bayer AG (BAYN/BAYRY) spinoff thread with the next hard catalyst — an Aug 19 2026 Missouri Roundup settlement hearing (per today's spinoff-monitor run)",
+        "Open Threads: added a new thread — Delivery Hero flagged as the standout new spinoff candidate (Aspex-forced CEO exit + $600M Taiwan divestment), not yet ingested as a wiki page; also noted Disney's ESPN breakup narrative deflated this run",
+        "Bumped 'Last updated' date to 2026-08-01",
+        "Appended one memory-update log line to log.md for 2026-08-01"
+      ]
+    },
+    {
       "runAt": "2026-07-31T23:55:00+02:00",
       "summary": "Memory index updated — new options-trading research area + skill, a Games Workshop cross-link from wiki-thinker, and a fresh instance of the trading-portfolio reconciliation gap (ACN routing bug)",
       "content": [
@@ -18,20 +30,6 @@
         "Domain Content Status — Cooking: updated to the 2026-07-31 recipe-recommender run (week of 2026-08-03; same 3 chefs as the prior batch — David Chang, Bourdain, Slater)",
         "Bumped 'Last updated' date to 2026-07-31",
         "Appended one memory-update log line to log.md for 2026-07-31"
-      ]
-    },
-    {
-      "runAt": "2026-07-31T00:02:12+02:00",
-      "summary": "Memory index condensed and updated — trimmed two runaway log-like cells (Finance, Meta) and consolidated a decade of duplicate trading-portfolio discrepancy threads into one, on top of the day's normal content update",
-      "content": [
-        "Major cleanup: the Finance domain-status cell had grown to a single 36KB line duplicating months of trade-by-trade history already in log.md — replaced with a concise current-state summary (subfolder structure, paper trading P1/P2 totals, live portfolio tickers, key conventions) and a pointer to log.md for chronological detail",
-        "Major cleanup: the Meta domain-status cell (wiki-thinker run log) was similarly bloated — trimmed to the 5 most recent highlights plus a pointer to wiki/cross-domain-themes.md for full history",
-        "Major cleanup: Open Threads had accumulated 10+ near-duplicate 'briefing log vs. trading.md discrepancy' entries (dated 07-14 through 07-29, one per KLR/APH/SHEL/BMY/BATS/EDEN/AVGO incident) — consolidated into a single standing thread describing the recurring pattern, updated with today's instance; also removed threads already marked resolved/superseded (stale Technology 'no overview.md' note, a stale 2026-07-15 paper-trading snapshot, the resolved 2026-07-24 WOSG/SAP/GSK exit thread, and two already-closed wiki health-check entries)",
-        "File shrank from ~145KB (two single lines each 30-40KB) to ~49KB, 302 lines to 287 lines, with no loss of currently-open information",
-        "Content update — Finance: rolled in 2026-07-30's portfolio-management-briefing (9 positions; GSK mechanical Add signal triggered but skipped on size cap; new candidates HON/AGCO/EIX flagged, none placed) and folded it into the consolidated reconciliation thread",
-        "Content update — Meta: added 2026-07-30's wiki-thinker highlight (new 'Dementia Matters' podcast recommendation is a dedicated clinical-research show on the same mechanism as Health's Wood source page) as both a Meta highlight and a new Open Thread",
-        "Bumped 'Last updated' date to 2026-07-30",
-        "Appended one memory-update log line to log.md for 2026-07-30"
       ]
     }
   ]
