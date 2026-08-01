@@ -3,5 +3,47 @@
   "label": "Spinoff Monitor",
   "schedule": "1st of month",
   "icon": "🔍",
-  "runs": []
+  "runs": [
+    {
+      "runAt": "2026-08-01T08:11:47.000Z",
+      "summary": "2 new candidates found (Delivery Hero, Valmet), 4 status changes (Bayer, BP, Voya, Disney)",
+      "content": {
+        "newCandidates": [
+          {
+            "company": "Delivery Hero",
+            "ticker": "DHER.DE / DHERF",
+            "priority": "high",
+            "score": "~6/7",
+            "note": "Aspex Management (~9.2% stake) forced founder-CEO Niklas Östberg's resignation (announced May 12 2026); pushing for exits from non-core markets (Asia/MENA/LatAm); first divestment already done — Taiwan ops sold to Grab for $600M. Stock -30% YoY to ~€5B mkt cap. Closest analogue on the list to SOLV/VOYA-style escalating pressure."
+          },
+          {
+            "company": "Valmet",
+            "ticker": "VALMT.HE / VMTOY",
+            "priority": "watch",
+            "score": "~2/7",
+            "note": "Board launched a formal strategic review July 24 2026 to evaluate separating Process Performance Solutions from Biomaterial Solutions and Services into two standalone Nasdaq Helsinki companies. Unusual — management/board-initiated, not activist-forced. Update due with FY2026 results (~Feb 2027)."
+          }
+        ],
+        "statusChanges": [
+          {
+            "company": "Bayer AG (BAYN.DE / BAYRY)",
+            "change": "Missouri court set to hold a hearing Aug 19 2026 for final approval of the $7.25B Roundup class settlement — next hard catalyst date following the June 25 SCOTUS win. Still no formal 3-way split announcement."
+          },
+          {
+            "company": "BP",
+            "change": "Castrol 65% stake sale to Stonepeak (~$10B EV, ~$6B net proceeds) progressing toward a year-end 2026 close, part of Elliott's push for $20B of divestitures by 2027. Still asset-by-asset sales, not a structural spinoff."
+          },
+          {
+            "company": "Voya Financial (VOYA)",
+            "change": "Informal takeover interest surfacing, including reported interest from Principal Financial (Semafor, Jul 16 2026). No talks ongoing; board/management not yet seeking a deal."
+          },
+          {
+            "company": "Walt Disney (DIS)",
+            "change": "Downgraded to ⚪ thesis-weakening/dormant — new CEO Josh D'Amaro explicitly ruled out an ESPN spinoff in July 2026, confirming ESPN stays inside Disney. No activist stake ever materialised."
+          }
+        ],
+        "recommendation": "Run /market-analyst DHER (Delivery Hero) — activist-forced CEO exit plus a completed $600M divestment is meaningfully further along than a typical new watch-list entry."
+      }
+    }
+  ]
 }
