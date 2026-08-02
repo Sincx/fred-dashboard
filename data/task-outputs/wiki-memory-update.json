@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-02T23:52:00+02:00",
+      "summary": "Memory index updated — 1 new wiki-thinker connection (Burry DraftKings/Flutter vs. Sports Betting's empty bookmaker tracker) plus a backfilled options-trade-recommender output-file gap",
+      "content": [
+        "Domain Content Status — Meta: run count 29→30, added the 2026-08-02 wiki-thinker highlight — Michael Burry's DraftKings/Flutter 'anti-prediction-markets' long thesis is live market-structure information for the exact industry Sports Betting exists to find edge in, but sports-betting/markets.md's bookmaker table has been an empty placeholder since May",
+        "Domain Content Status — Sports Betting: noted the recommender/wiki-thinker has now flagged this same gap 4 times since 2026-06-11 with zero domain movement",
+        "Open Threads: added new thread — Burry building DraftKings + Flutter into a larger position as a named bet on regulated sportsbooks beating Kalshi/Polymarket-style prediction markets; next step is adding DKNG/FLUT to markets.md's Bookmakers table",
+        "Open Threads: added new thread — options-trade-recommender's first run (2026-07-31, 5 WDAY recs) wrote no output file, unlike every other recommender skill (book/podcast/recipe); its top pick ($150 Sep 19 covered call) exists only in a log.md line, and idea-wday.md still only has its stale May 29 options section",
+        "Bumped 'Last updated' date to 2026-08-02",
+        "Appended one memory-update log line to log.md for 2026-08-02"
+      ]
+    },
+    {
       "runAt": "2026-08-01T23:52:08+02:00",
       "summary": "Memory index updated — 2 new book pages, 1 new wiki-thinker cross-link (Fire Point ↔ Rheinmetall), and spinoff-monitor's new Delivery Hero candidate + Bayer catalyst date",
       "content": [
@@ -14,22 +26,6 @@
         "Open Threads: added a new thread — Delivery Hero flagged as the standout new spinoff candidate (Aspex-forced CEO exit + $600M Taiwan divestment), not yet ingested as a wiki page; also noted Disney's ESPN breakup narrative deflated this run",
         "Bumped 'Last updated' date to 2026-08-01",
         "Appended one memory-update log line to log.md for 2026-08-01"
-      ]
-    },
-    {
-      "runAt": "2026-07-31T23:55:00+02:00",
-      "summary": "Memory index updated — new options-trading research area + skill, a Games Workshop cross-link from wiki-thinker, and a fresh instance of the trading-portfolio reconciliation gap (ACN routing bug)",
-      "content": [
-        "Domain Content Status — Finance: added the 2026-07-31 options-trading research batch (concept-options-trading.md, finance/michael-burry/burry-options-approach.md, new /options-trade-recommender skill — first run generated 5 WDAY recommendations) and 2 new clippings (Meta compute-hesitation briefing, Burry's 2026-07-30 Trading Post)",
-        "Active Skills / Slash Commands: added /options-trade-recommender row",
-        "Domain Content Status — Finance: updated paper trading P1 to 29 positions / +1.3% ($43K) after the RDW entry; flagged that the live trading portfolio's 10-position list showed ACN in place of AVGO on 2026-07-31, with ACN's price pipeline falling back to an unrelated NYSE quote (no IBIS/EUR routing) — same bug class as the 2026-07-28 EDEN fix",
-        "Open Threads: updated the standing trading-portfolio reconciliation-gap thread with the ACN instance (still open since 2026-07-14); added two new threads from wiki-thinker — Games Workshop (GAW.L, +300% pension gain) has no Finance idea page and is never cross-linked from the Games domain; Burry's options approach rejects formal Kelly sizing, a second sizing philosophy Sports Betting's bankroll-management stub doesn't reference",
-        "Open Threads: added burry-options-approach.md to the standing 'pages not yet in wiki/index.md' list (now 9 pages)",
-        "Domain Content Status — Meta: run count 27→28, added the 2026-07-31 wiki-thinker highlight (Games Workshop)",
-        "Domain Content Status — Podcasts: backfilled a missed 2026-07-30 podcast-recommender run (Dividend Talk, Unchained, Dementia Matters, The Cognitive Revolution) that the prior day's memory-update run hadn't captured",
-        "Domain Content Status — Cooking: updated to the 2026-07-31 recipe-recommender run (week of 2026-08-03; same 3 chefs as the prior batch — David Chang, Bourdain, Slater)",
-        "Bumped 'Last updated' date to 2026-07-31",
-        "Appended one memory-update log line to log.md for 2026-07-31"
       ]
     }
   ]
