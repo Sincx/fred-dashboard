@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-08-03T23:52:20+02:00",
+      "summary": "O (A)",
+      "picks": {
+        "p1": {
+          "ticker": "O",
+          "strategy": "A — Value",
+          "entry": 63.87,
+          "stop": 54.29,
+          "t1": 79.84,
+          "t2": 95.81
+        }
+      },
+      "content": "Realty Income (O) picked up at the previous close ($63.87) — Morningstar flagged it 9% undervalued (FV $72) on Jul 29, and today brought a fresh Fitch 'A' credit rating plus raised FY26 AFFO guidance and a 135th consecutive dividend increase. No exits today: no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; RIVN crossed −11.41% but carries no Burry conflict so it's a WATCH, not an exit. Portfolio net P&L: +$411 (+0.93% on $44,000)."
+    },
+    {
       "runAt": "2026-07-31T23:51:10+02:00",
       "summary": "RDW (G)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Redwire (RDW) picked up at the previous close ($8.47) — a space/defense infrastructure name that just landed a $1.8B, 10-year U.S. Space Systems Command contract, with revenue +57.95% YoY and gross margin expanding 9.6%→26.6%. No exits today: no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO reversed sharply (+11.87%→−7.15%) on a Q3 earnings revenue miss and JBHT drifted to −9.79% on valuation-driven profit-taking. Portfolio net P&L: +$570 (+1.33% on $43,000)."
-    },
-    {
-      "runAt": "2026-07-31T00:05:29+02:00",
-      "summary": "F (D)",
-      "picks": {
-        "p1": {
-          "ticker": "F",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 15.28,
-          "stop": 12.99,
-          "t1": 19.10,
-          "t2": 22.92
-        }
-      },
-      "content": "Ford (F) picked up at the previous close ($15.28) on a Q2 beat-and-raise (guidance upper end lifted $500M to $10.5B) and a fresh Citi upgrade to Buy. MU stopped out at −17.51% (blended −2.81% incl. earlier T1, −$28) and AMD signal-exited at −14.70% (Burry Sector Warning, −$147) — both casualties of the broad Jul 29 semiconductor-sector selloff (Micron CEO share sale, China DUV lithography competition fears). Portfolio net P&L: +$695 (+1.65% on $42,000)."
     }
   ]
 }
