@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-03T23:55:22+02:00",
+      "summary": "Memory index updated — 3 resolved threads (Kelly/Burry sizing, options-recommender output gap, Gladiator title error), 1 new cross-domain connection (gold miners vs. Bitcoin), and the live trading portfolio's growth to 13 positions",
+      "content": [
+        "Domain Content Status — Meta: run count 30→31, added the 2026-08-03 wiki-thinker highlight — Gold miners (GDX) and Bitcoin, both marketed as the same 'scarcity hedge' trade, cratered together in 2026 after historic 2025 runs, unlinked between Finance's sector tracker and Crypto's portfolio page",
+        "Domain Content Status — Finance: live trading portfolio grew to 13 positions (APH, WOSG, DNLM, IQV, KLR, SAP, CPB, GSK, EDEN, ACN, ADBE, DKNG, PRX) — AVGO no longer appears with no exit logged; PRX pricing gap resolved (yfinance CA-bundle fix); ACN EUR/IBIS listing unresolved for a 3rd consecutive run",
+        "Domain Content Status — Finance: added 2 new pages — finance/michael-burry/burry-vs-kelly-sizing.md (Burry-patience vs. formal Kelly sizing comparison) and finance/options-suggestions.md (persistent output file for /options-trade-recommender, backfilled with the 2026-07-31 WDAY run)",
+        "Domain Content Status — Books: corrected the Gladiator entry — it was never a real Con Iggulden title, it was Fred's own reading-list typo for The Gates of Rome (Emperor book 1); book-gladiator.md deleted and replaced by book-the-gates-of-rome.md",
+        "Open Threads: removed the resolved Sports Betting/Finance Kelly-sizing thread (closed by burry-vs-kelly-sizing.md)",
+        "Open Threads: updated the recurring trading-portfolio reconciliation-gap thread with 2026-08-03 status — 13 positions, AVGO dropped, ACN/ADBE/DKNG/PRX undocumented appearances, PRX resolved, KLR trim + HON/PRU entries recommended but unexecuted",
+        "Open Threads: added new thread — Gold miners (GDX) vs. Bitcoin parallel 2026 collapse, unlinked between market-sector-performance.md and Crypto portfolio.md",
+        "Bumped 'Last updated' date to 2026-08-03",
+        "Appended one memory-update log line to log.md for 2026-08-03"
+      ]
+    },
+    {
       "runAt": "2026-08-02T23:52:00+02:00",
       "summary": "Memory index updated — 1 new wiki-thinker connection (Burry DraftKings/Flutter vs. Sports Betting's empty bookmaker tracker) plus a backfilled options-trade-recommender output-file gap",
       "content": [
@@ -14,18 +29,6 @@
         "Open Threads: added new thread — options-trade-recommender's first run (2026-07-31, 5 WDAY recs) wrote no output file, unlike every other recommender skill (book/podcast/recipe); its top pick ($150 Sep 19 covered call) exists only in a log.md line, and idea-wday.md still only has its stale May 29 options section",
         "Bumped 'Last updated' date to 2026-08-02",
         "Appended one memory-update log line to log.md for 2026-08-02"
-      ]
-    },
-    {
-      "runAt": "2026-08-01T23:52:08+02:00",
-      "summary": "Memory index updated — 2 new book pages, 1 new wiki-thinker cross-link (Fire Point ↔ Rheinmetall), and spinoff-monitor's new Delivery Hero candidate + Bayer catalyst date",
-      "content": [
-        "Domain Content Status — Books: added 2026-08-01 book-summarizer output — book-gladiator.md (Con Iggulden, title unverified) and book-bad-actors.md (Slow Horses book 8); Slow Horses series now spans books 1-8",
-        "Domain Content Status — Meta: run count 28→29, added the 2026-08-01 wiki-thinker highlight — Technology's Fire Point (Ukraine defence manufacturing) source page is a live proof point for the exact NATO capability gap Finance's Rheinmetall bull case cites in the abstract, unlinked",
-        "Open Threads: updated the Bayer AG (BAYN/BAYRY) spinoff thread with the next hard catalyst — an Aug 19 2026 Missouri Roundup settlement hearing (per today's spinoff-monitor run)",
-        "Open Threads: added a new thread — Delivery Hero flagged as the standout new spinoff candidate (Aspex-forced CEO exit + $600M Taiwan divestment), not yet ingested as a wiki page; also noted Disney's ESPN breakup narrative deflated this run",
-        "Bumped 'Last updated' date to 2026-08-01",
-        "Appended one memory-update log line to log.md for 2026-08-01"
       ]
     }
   ]
