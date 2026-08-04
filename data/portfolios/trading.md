@@ -8,7 +8,7 @@ updated: 2026-08-03
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-03** (Python pipeline: Polygon/AV/yfinance; PRX resolved via yfinance PRX.AS with CA bundle fix; ACN still has no genuine EUR/IBIS listing — using FX-converted NYSE USD quote as proxy, see note below). Cash: **€4,760**. 13 open positions.
+> Live page — update whenever positions change. Prices last fetched: **2026-08-03** for all positions except ACN, re-fetched **2026-08-04** after its correct Xetra listing (CSA) was confirmed by Fred and wired into the pipeline — see note below. Cash: **€4,760**. 13 open positions.
 
 ---
 
@@ -25,13 +25,13 @@ updated: 2026-08-03
 | Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.37 | $1,342.20 | +2.15% | 👀 Watch | RSI 52.7, above SMA50 ($21.70), MACD bearish |
 | GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,909.50p | £992.94 | -1.55% | 👀 Watch | RSI 44.9, below 50d SMA (1,939.56p), MACD bearish |
 | Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.34 | €1,275.30 | +6.82% | ✅ Hold | RSI 72.0 (overbought), above 50d SMA (€23.43), MACD bullish; extended |
-| Accenture | ACN | IBIS | EUR | 6 | €141.10 | €846.60 | ~€143.98* | ~€863.87* | ~+2.04%* | ✅ Hold | Global IT services & consulting. **No genuine EUR/IBIS listing found (checked Xetra/Frankfurt/Milan/Berlin/Duisburg/Hamburg/Stuttgart) — using NYSE USD price ($165.76) converted to EUR at live FX as proxy. Manual verification of the correct EUR quote still needed (unresolved 3rd consecutive update).** |
+| Accenture | ACN | Xetra | EUR | 6 | €141.10 | €846.60 | €140.00 | €840.00 | -0.78% | ✅ Hold | Global IT services & consulting. **RESOLVED 2026-08-04**: correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA) — Fred supplied these details; entry €141.10 matches CSA.DE's actual 2026-07-31 close exactly, confirming this was the right instrument all along. RSI 56.4, MACD bullish; 50d SMA not yet computable (only 44 days of Xetra history on record since 2026-06-04) — 20d SMA €129.25, price above it. Pipeline routing fixed in portfolio_update.py. |
 | Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $251.34 | $1,256.70 | +0.60% | ✅ Hold | Creative & document software; AI integration (Firefly); RSI 60.2, above SMA50 ($228.30), MACD bullish |
 | DraftKings | DKNG | NASDAQ | USD | 45 | $23.46 | $1,055.70 | $23.50 | $1,057.50 | +0.17% | 👀 Watch | US online sports betting; Burry-aligned long; RSI 41.2, below SMA50 ($25.46), MACD bearish |
 | Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €40.91 | €1,227.30 | -0.62% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 58.8, above SMA50 (€39.00), MACD bullish |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX) in EUR. Prices as of **2026-08-03** (Python pipeline: Polygon/AV/yfinance; ACN still not resolved to a genuine EUR listing — see alert below).
-> **Active alerts:** APH — patience override still running to 2026-08-08; MACD turned bullish, price above SMA50, continue to monitor into the deadline. KLR — 3,100p stop still breached (price now 3,050p, still below stop); decision needed. ACN — no genuine EUR/IBIS listing found after checking Xetra/Frankfurt/Milan/Berlin/Duisburg/Hamburg/Stuttgart; using FX-converted NYSE USD quote as a proxy (~€143.98/share); manual verification needed — unresolved for 3 consecutive updates. GSK — remains below its 50d SMA with bearish MACD; RSI 44.9, one leg from a mechanical Exit signal alongside DKNG (RSI 41.2, also below SMA50 with bearish MACD).
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX) in EUR. Prices as of **2026-08-03** (Python pipeline: Polygon/AV/yfinance), except ACN which is **2026-08-04**.
+> **Active alerts:** APH — patience override still running to 2026-08-08; MACD bullish, price above SMA50, continue to monitor into the deadline. KLR — 3,100p stop still breached (price now 3,050p, still below stop); decision needed. GSK — remains below its 50d SMA with bearish MACD; RSI 44.9, one leg from a mechanical Exit signal alongside DKNG (RSI 41.2, also below SMA50 with bearish MACD). ACN pricing issue resolved 2026-08-04 (see Notes) — no longer an active alert.
 
 ---
 
