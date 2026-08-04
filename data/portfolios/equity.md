@@ -107,6 +107,16 @@ updated: 2026-08-01
 
 ---
 
+## Magic Formula
+
+*Greenblatt Magic Formula ranking — updated weekly by scheduled task. Ranks by combined ROIC + Earnings Yield.*
+
+| Ticker | MF Rank | ROIC | Earnings Yield | Last Updated |
+|---|---|---|---|---|
+| — | — | — | — | Not yet computed |
+
+---
+
 ## See Also
 
 - [[Finance - overview]]
