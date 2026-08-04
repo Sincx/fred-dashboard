@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-08-04T23:55:11+02:00",
+      "summary": "ICFI (F)",
+      "picks": {
+        "p1": {
+          "ticker": "ICFI",
+          "strategy": "F — Small Cap Value",
+          "entry": 84.12,
+          "stop": 71.50,
+          "t1": 105.15,
+          "t2": 126.18
+        }
+      },
+      "content": "ICF International (ICFI) picked up at the previous close ($84.12) — re-rated down on a federal-budget-driven Q1 revenue miss despite reaffirmed FY26 guidance, trading at ~11.6-12.1x forward earnings with consistent buybacks. No exits today despite a broad market rally (S&P +1.79%, Nasdaq +2.59%): no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO slid to −14.82% (just above its −15% stop) and RIVN improved slightly to −10.62%, both WATCH with no Burry conflict. Portfolio net P&L: +$599 (+1.33% on $45,000)."
+    },
+    {
       "runAt": "2026-08-03T23:52:20+02:00",
       "summary": "O (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Realty Income (O) picked up at the previous close ($63.87) — Morningstar flagged it 9% undervalued (FV $72) on Jul 29, and today brought a fresh Fitch 'A' credit rating plus raised FY26 AFFO guidance and a 135th consecutive dividend increase. No exits today: no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; RIVN crossed −11.41% but carries no Burry conflict so it's a WATCH, not an exit. Portfolio net P&L: +$411 (+0.93% on $44,000)."
-    },
-    {
-      "runAt": "2026-07-31T23:51:10+02:00",
-      "summary": "RDW (G)",
-      "picks": {
-        "p1": {
-          "ticker": "RDW",
-          "strategy": "G — Small Cap High Growth",
-          "entry": 8.47,
-          "stop": 7.20,
-          "t1": 10.59,
-          "t2": 12.71
-        }
-      },
-      "content": "Redwire (RDW) picked up at the previous close ($8.47) — a space/defense infrastructure name that just landed a $1.8B, 10-year U.S. Space Systems Command contract, with revenue +57.95% YoY and gross margin expanding 9.6%→26.6%. No exits today: no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO reversed sharply (+11.87%→−7.15%) on a Q3 earnings revenue miss and JBHT drifted to −9.79% on valuation-driven profit-taking. Portfolio net P&L: +$570 (+1.33% on $43,000)."
     }
   ]
 }
