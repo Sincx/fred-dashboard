@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-08-04T23:27:12.7913286+02:00",
+                     "summary":  "3 clippings processed (1 duplicate)",
+                     "content":  "1 duplicate deleted: 'D'AI of the Triffids: Office Software Triage' (Burry, May-15) was already ingested as burry-sw50-part1-office-software-2026-05-15. 2 new -> Finance domain. Michael Burry Trading Post Jun 8: HCA Healthcare bought at 10-12x earnings ('simple rule' mechanical compounding; Samsung Electronics as template) -> source-burry-trading-post-2026-06-08. Trading Post Jun 12: 4 full-position deep-value buyback longs -- Adobe $199.59, Alibaba $111.90, PayPal $40.98, Veeva $159.05 (explicit 2000 dot-com-value analogue) -> source-burry-trading-post-2026-06-12. Stock parsing: HCA/BABA/PYPL/VEEV added to morningstar-watchlist.md Burry Longs section and market-watchlist-tracker pipeline config (Burry group); ADBE already tracked, reaffirmed only; Samsung Electronics skipped (no US-listed pipeline ticker). Reverse links added to finance/michael-burry/trading-posts.md, finance/michael-burry/index.md, finance/people/person-michael-burry.md, finance/morningstar/morningstar-watchlist.md, index.md."
+                 },
+                 {
                      "runAt":  "2026-08-03T23:30:54.3932723+02:00",
                      "summary":  "14 clippings processed",
                      "content":  "All 14 -> Finance domain, 0 duplicates. Morningstar (11): Palantir earnings preview ($153 FV) -> source-morningstar-palantir-ahead-of-earnings-2026; Amazon Q2 earnings (FV $280->$300) -> source-morningstar-amazon-q2-earnings-2026; Chip-to-software rotation -> source-morningstar-chip-software-rotation-2026; British American Tobacco earnings (FV GBX 4,350->4,700) -> source-morningstar-bat-earnings-2026; Coinbase earnings ($150 FV) -> source-morningstar-coinbase-earnings-2026; LVMH rebound (first FV: EUR620) -> source-morningstar-lvmh-rebound-2026; Meta earnings ($850 FV reiterated) -> source-morningstar-meta-earnings-2026; Microsoft earnings ($600 FV, Azure +43%) -> source-morningstar-microsoft-earnings-2026; Novo Nordisk trial failure (DKK311 FV) -> source-morningstar-novo-nordisk-trial-failure-2026; Roblox earnings (FV cut pending) -> source-morningstar-roblox-earnings-2026; Top high-dividend stocks (CLX/PEP/O) -> source-morningstar-top-high-dividend-stocks-2026. Michael Burry (2): lululemon deep-value thesis (IV18, underlies Jul-30 LULU long) -> source-burry-lulu-athletica-2026-06-25; Foundations market structure (vol-targeting, pod shops, CAPE 45 record) -> source-burry-foundations-market-structure-vol-2026-07-31. Ray Dalio (1): Strait of Hormuz 'final battle' -> source-dalio-strait-of-hormuz. morningstar-watchlist.md updated (7 rows, sources 16->21); index.md +14 entries; 7 existing pages got reverse links."
-                 },
-                 {
-                     "runAt":  "2026-08-02T23:19:20.4907490+02:00",
-                     "summary":  "No new clippings",
-                     "content":  "Clippings folder empty."
                  }
              ]
 }
