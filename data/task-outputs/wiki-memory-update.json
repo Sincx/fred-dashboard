@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-04T23:53:00+02:00",
+      "summary": "Memory index updated — ACN's EUR/IBIS listing resolved (Xetra/Frankfurt CSA), 2 new Burry Trading Post buys (HCA, plus ADBE/BABA/PYPL/VEEV), 1 new Meta cross-domain connection",
+      "content": [
+        "Key Decisions Made: added ACN listing resolution — correct ticker is Xetra/Frankfurt CSA (ISIN IE00B4BNMY34), confirmed by Fred; yfinance CSA.DE 2026-07-31 close (€141.10) matched the recorded entry exactly; trading-portfolio.md and portfolio_update.py's TICKER_FETCH routing both updated",
+        "Domain Content Status — Finance: updated the 13-position live trading portfolio note — ACN's listing issue now resolved (was a 3-run-running flag), PRX pricing gap resolution reframed as 2026-08-03",
+        "Domain Content Status — Finance: added 2 new Burry Trading Post source pages — source-burry-trading-post-2026-06-08.md (new long: HCA Healthcare, mechanical 'simple rule' trigger using Samsung Electronics as template) and source-burry-trading-post-2026-06-12.md (4 full-position deep-value buyback longs: Adobe, Alibaba, PayPal, Veeva); HCA/BABA/PYPL/VEEV added to the market-watchlist-tracker pipeline, ADBE reaffirmed",
+        "Domain Content Status — Meta: run count 31→32, added the 2026-08-04 wiki-thinker highlight — an OpenAI model's sandbox-escape-to-cheat-a-benchmark (Evans newsletter 653) is a live instance of the 'unreliable guardrails'/'dual-use' risk Technology's own Project Glasswing writeup already warned about two months earlier, uncross-linked",
+        "Open Threads: updated the recurring trading-portfolio reconciliation-gap thread — marked ACN's listing issue resolved 2026-08-04; noted the entry-trade traceability gap for ADBE/DKNG/PRX (distinct from the now-resolved pricing/listing issues) remains open",
+        "Bumped 'Last updated' date to 2026-08-04",
+        "Appended one memory-update log line to log.md for 2026-08-04"
+      ]
+    },
+    {
       "runAt": "2026-08-03T23:55:22+02:00",
       "summary": "Memory index updated — 3 resolved threads (Kelly/Burry sizing, options-recommender output gap, Gladiator title error), 1 new cross-domain connection (gold miners vs. Bitcoin), and the live trading portfolio's growth to 13 positions",
       "content": [
@@ -17,18 +30,6 @@
         "Open Threads: added new thread — Gold miners (GDX) vs. Bitcoin parallel 2026 collapse, unlinked between market-sector-performance.md and Crypto portfolio.md",
         "Bumped 'Last updated' date to 2026-08-03",
         "Appended one memory-update log line to log.md for 2026-08-03"
-      ]
-    },
-    {
-      "runAt": "2026-08-02T23:52:00+02:00",
-      "summary": "Memory index updated — 1 new wiki-thinker connection (Burry DraftKings/Flutter vs. Sports Betting's empty bookmaker tracker) plus a backfilled options-trade-recommender output-file gap",
-      "content": [
-        "Domain Content Status — Meta: run count 29→30, added the 2026-08-02 wiki-thinker highlight — Michael Burry's DraftKings/Flutter 'anti-prediction-markets' long thesis is live market-structure information for the exact industry Sports Betting exists to find edge in, but sports-betting/markets.md's bookmaker table has been an empty placeholder since May",
-        "Domain Content Status — Sports Betting: noted the recommender/wiki-thinker has now flagged this same gap 4 times since 2026-06-11 with zero domain movement",
-        "Open Threads: added new thread — Burry building DraftKings + Flutter into a larger position as a named bet on regulated sportsbooks beating Kalshi/Polymarket-style prediction markets; next step is adding DKNG/FLUT to markets.md's Bookmakers table",
-        "Open Threads: added new thread — options-trade-recommender's first run (2026-07-31, 5 WDAY recs) wrote no output file, unlike every other recommender skill (book/podcast/recipe); its top pick ($150 Sep 19 covered call) exists only in a log.md line, and idea-wday.md still only has its stale May 29 options section",
-        "Bumped 'Last updated' date to 2026-08-02",
-        "Appended one memory-update log line to log.md for 2026-08-02"
       ]
     }
   ]
