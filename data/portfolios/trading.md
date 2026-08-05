@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-04** for all positions. Cash: **€3,689**. 14 open positions.
+> Live page — update whenever positions change. Prices last fetched: **2026-08-05** for all positions. Cash: **€3,689**. 14 open positions.
 
 ---
 
@@ -16,23 +16,23 @@ updated: 2026-08-04
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $171.33 | $1,884.63 | +19.39% | ✅ Hold | RSI 63.5, above SMA50 ($155.57), MACD bullish — patience override still active, reassess by 2026-08-08 |
-| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 733.50p | £1,467.00 | +6.61% | 👀 Watch | RSI 51.6, above 50d SMA (724.84p), MACD bearish |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 886.00p | £797.40 | +10.75% | ✅ Hold | RSI 63.3, above 50d SMA (814.88p), MACD bullish |
-| IQVIA Holdings | IQV | NYSE | USD | 7 | $163.99 | $1,147.93 | $228.20 | $1,597.40 | +39.15% | ✅ Hold | RSI 61.6 (cooling), above SMA50 ($196.39), MACD bullish; no formal stop |
-| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,050.00p | £549.00 | +26.14% | 👀 Watch | RSI 48.5, above 50d SMA (2,856.23p), MACD bearish; **3,100p stop breached, still unexecuted — price now 3,050p, still below stop — decision needed** |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €167.38 | €1,171.66 | +22.44% | ✅ Hold | RSI 68.8, above 50d SMA (€144.90), MACD bullish |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $22.76 | $1,365.60 | +3.93% | ✅ Hold | RSI 55.9, above SMA50 ($21.76), MACD bullish |
-| GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,914.50p | £995.54 | -1.29% | 👀 Watch | RSI 45.7, below 50d SMA (1,939.35p), MACD bearish; one leg from mechanical Exit |
-| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.60 | €1,287.00 | +7.80% | ✅ Hold | RSI 73.1 (overbought), above 50d SMA (€23.58), MACD bullish; extended |
-| Accenture | ACN | Xetra | EUR | 6 | €141.10 | €846.60 | €143.60 | €861.60 | +1.77% | 👀 Watch | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA), confirmed 2026-08-04. RSI 60.1, MACD bullish; 50d SMA not yet computable (only 44 days of Xetra history on record since 2026-06-04) — 20d SMA €129.43, price above it. |
-| Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $257.49 | $1,287.45 | +3.06% | ✅ Hold | Creative & document software; AI integration (Firefly); RSI 62.7, above SMA50 ($228.56), MACD bullish |
-| DraftKings | DKNG | NASDAQ | USD | 45 | $23.46 | $1,055.70 | $23.61 | $1,062.45 | +0.64% | 👀 Watch | US online sports betting; Burry-aligned long; RSI 42.2, below SMA50 ($25.43), MACD bearish; one leg from mechanical Exit |
-| Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €41.94 | €1,258.20 | +1.88% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 62.3, above SMA50 (€39.03), MACD bullish |
-| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €71.08 | €1,066.20 | 0.00% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05 |
+| Amphenol Corp | APH | NYSE | USD | 11 | $143.50 | $1,578.50 | $172.24 | $1,894.64 | +20.03% | ✅ Hold | RSI 64.1, above SMA50 ($156.38), MACD bullish — patience override still active, reassess by 2026-08-08 |
+| Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 745.00p | £1,490.00 | +8.28% | 👀 Watch | RSI 54.6, above 50d SMA (725.48p), MACD bearish |
+| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 892.50p | £803.25 | +11.56% | ✅ Hold | RSI 65.0, above 50d SMA (816.56p), MACD bullish |
+| IQVIA Holdings | IQV | NYSE | USD | 7 | $163.99 | $1,147.93 | $236.05 | $1,652.35 | +43.94% | ✅ Hold | RSI 65.7, above SMA50 ($197.75), MACD bullish; no formal stop |
+| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,080.00p | £554.40 | +27.38% | 👀 Watch | RSI 50.5, above 50d SMA (2,870.28p), MACD bearish; **3,100p stop breached, still unexecuted — price now 3,080p, still below stop — decision needed** |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €169.26 | €1,184.82 | +23.82% | ✅ Hold | RSI 69.8, above 50d SMA (€145.25), MACD bullish |
+| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $23.05 | $1,383.00 | +5.25% | ✅ Hold | RSI 58.2, above SMA50 ($21.81), MACD bullish |
+| GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,915.50p | £996.06 | -1.24% | 👀 Watch | RSI 45.9, below 50d SMA (1,938.87p), MACD bearish; one leg from mechanical Exit |
+| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €29.29 | €1,318.05 | +10.40% | ✅ Hold | RSI 75.9 (overbought), above 50d SMA (€23.74), MACD bullish; extended |
+| Accenture | ACN | Xetra | EUR | 6 | €141.10 | €846.60 | €145.30 | €871.80 | +2.98% | 👀 Watch | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA), confirmed 2026-08-04. RSI 61.3, MACD bullish; 50d SMA not yet computable (only 45 days of Xetra history on record since 2026-06-04) — 20d SMA €130.58, price above it. |
+| Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $259.32 | $1,296.60 | +3.79% | ✅ Hold | Creative & document software; AI integration (Firefly); RSI 63.5, above SMA50 ($228.85), MACD bullish |
+| DraftKings | DKNG | NASDAQ | USD | 45 | $23.46 | $1,055.70 | $21.76 | $979.20 | -7.25% | ⛔ Exit | US online sports betting; Burry-aligned long; RSI 32.3, below SMA50 ($25.36), MACD bearish; **mechanical Exit signal triggered 2026-08-05 — Trim 50% recommended per patience override, reassess by ~2026-08-19** |
+| Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €41.57 | €1,247.10 | +0.98% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 60.3, above SMA50 (€39.08), MACD bullish |
+| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €70.24 | €1,053.60 | -1.18% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 62.7, above SMA50 (€61.61), MACD bullish |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX) in EUR. Prices as of **2026-08-04** (Python pipeline: Polygon/AV/yfinance).
-> **Active alerts:** APH — patience override still running to 2026-08-08; MACD bullish, price above SMA50, continue to monitor into the deadline. KLR — 3,100p stop still breached (price now 3,050p, still below stop); decision needed. GSK — remains below its 50d SMA with bearish MACD; RSI 45.7, one leg from a mechanical Exit signal alongside DKNG (RSI 42.2, also below SMA50 with bearish MACD).
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL) in EUR. Prices as of **2026-08-05** (Python pipeline: Polygon/AV/yfinance).
+> **Active alerts:** DKNG — mechanical Exit signal triggered today (RSI 32.3 <40, below SMA50, MACD bearish); Trim 50% recommended per patience override, reassess by ~2026-08-19. KLR — 3,100p stop still breached (price now 3,080p, still below stop), unresolved for a second session; decision needed. APH — patience override still running to 2026-08-08 (effectively reassess by Friday 2026-08-07 close); MACD bullish, price above SMA50. GSK — remains below its 50d SMA with bearish MACD; RSI 45.9, one leg from a mechanical Exit signal.
 
 ---
 
