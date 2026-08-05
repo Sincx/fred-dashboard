@@ -45,7 +45,7 @@ updated: 2026-08-01
 
 ## Crypto Holdings
 
-*See [[Crypto portfolio]] for full crypto breakdown.*
+*See [[crypto-portfolio]] for full crypto breakdown.*
 
 | Asset | Symbol | Notes |
 |---|---|---|
@@ -113,13 +113,35 @@ updated: 2026-08-01
 
 | Ticker | MF Rank | ROIC | Earnings Yield | Last Updated |
 |---|---|---|---|---|
-| — | — | — | — | Not yet computed |
-
+| MGNS | 1 | 43.56% | 14.37% | 2026-08-05 |
+| ADBE | 2 | 59.71% | 8.76% | 2026-08-05 |
+| DNLM | 3 | 39.03% | 10.52% | 2026-08-05 |
+| GSK | 4 | 26.38% | 10.59% | 2026-08-05 |
+| GAW | 5 | 98.6% | 4.46% | 2026-08-05 |
+| ACN | 6 | 24.89% | 10.33% | 2026-08-05 |
+| WKL | 7 | 28.59% | 8.68% | 2026-08-05 |
+| KLR | 8 | 22.63% | 10.19% | 2026-08-05 |
+| MSFT | 9 | 30.69% | 4.18% | 2026-08-05 |
+| ASML | 10 | 55.32% | 2.24% | 2026-08-05 |
+| PEP | 11 | 17.91% | 6.18% | 2026-08-05 |
+| GOOGL | 12 | 25.28% | 3.28% | 2026-08-05 |
+| SAP | 13 | 17.18% | 5.44% | 2026-08-05 |
+| TER | 14 | 37.65% | 2.15% | 2026-08-05 |
+| WOSG | 15 | 11.34% | 7.75% | 2026-08-05 |
+| IBM | 16 | 13.88% | 4.44% | 2026-08-05 |
+| APH | 17 | 19.4% | 3.49% | 2026-08-05 |
+| CPB | 18 | 8.11% | 8.14% | 2026-08-05 |
+| AVGO | 19 | 23.8% | 1.61% | 2026-08-05 |
+| AMZN | 20 | 12.5% | 3.0% | 2026-08-05 |
+| IQV | 21 | 9.05% | 4.25% | 2026-08-05 |
+| WDAY | 22 | 11.11% | 2.44% | 2026-08-05 |
+| DKNG | 23 | 2.69% | 2.48% | 2026-08-05 |
+| NOW | 24 | 9.46% | 1.36% | 2026-08-05 |
 ---
 
 ## See Also
 
-- [[Finance - overview]]
-- [[Investment ideas]]
+- [[finance-overview]]
+- [[investment-ideas]]
 - [[factor-investing]] — benchmark framework for evaluating concentrated positions
-- [[Crypto - overview]]
+- [[crypto-overview]]

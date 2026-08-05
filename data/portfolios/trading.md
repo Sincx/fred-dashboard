@@ -8,7 +8,7 @@ updated: 2026-08-04
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-04** for all positions. Cash: **€4,760**. 13 open positions.
+> Live page — update whenever positions change. Prices last fetched: **2026-08-04** for all positions. Cash: **€3,689**. 14 open positions.
 
 ---
 
@@ -29,6 +29,7 @@ updated: 2026-08-04
 | Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $257.49 | $1,287.45 | +3.06% | ✅ Hold | Creative & document software; AI integration (Firefly); RSI 62.7, above SMA50 ($228.56), MACD bullish |
 | DraftKings | DKNG | NASDAQ | USD | 45 | $23.46 | $1,055.70 | $23.61 | $1,062.45 | +0.64% | 👀 Watch | US online sports betting; Burry-aligned long; RSI 42.2, below SMA50 ($25.43), MACD bearish; one leg from mechanical Exit |
 | Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €41.94 | €1,258.20 | +1.88% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 62.3, above SMA50 (€39.03), MACD bullish |
+| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €71.08 | €1,066.20 | 0.00% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05 |
 
 > Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX) in EUR. Prices as of **2026-08-04** (Python pipeline: Polygon/AV/yfinance).
 > **Active alerts:** APH — patience override still running to 2026-08-08; MACD bullish, price above SMA50, continue to monitor into the deadline. KLR — 3,100p stop still breached (price now 3,050p, still below stop); decision needed. GSK — remains below its 50d SMA with bearish MACD; RSI 45.7, one leg from a mechanical Exit signal alongside DKNG (RSI 42.2, also below SMA50 with bearish MACD).
@@ -95,7 +96,7 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€4,760** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) |
+| EUR | **€3,689** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) |
 
 > Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
 
@@ -127,9 +128,42 @@ Realised P&L grouped by position (trims + full exits combined).
 | ADBE | 🟡 US large-cap tech — mild indirect | Caught in QQQ puts thesis; AI features (Firefly) add narrative risk; creative software moat partially offsets |
 | DKNG | 🟢 Burry-aligned long | Scion added DKNG at ~$23.40 on Jul 30 — direct alignment; sports betting vs. prediction markets thesis |
 | PRX | 🟢 Non-US value / SOTP — no signal | Prosus: international, non-AI, NAV-discount thesis; aligns with Grantham non-US preference and MOI SOTP framework |
+| WKL | 🟢 Intangible moat / non-US — no signal | Wolters Kluwer: recurring professional information revenue; no AI infrastructure exposure; Grantham-aligned non-US quality |
 
 **Patience override rule:** A mechanical EXIT signal (RSI < 40 + below 50d SMA + MACD bearish expanding) alone is not sufficient to exit a position with an intact fundamental thesis. Maximum trim: 50%. Reassess within 10 trading days.
 
+---
+
+## Magic Formula
+
+*Greenblatt Magic Formula ranking — updated weekly by scheduled task. Ranks by combined ROIC + Earnings Yield.*
+
+| Ticker | MF Rank | ROIC | Earnings Yield | Last Updated |
+|---|---|---|---|---|
+| MGNS | 1 | 43.56% | 14.37% | 2026-08-05 |
+| ADBE | 2 | 59.71% | 8.76% | 2026-08-05 |
+| DNLM | 3 | 39.03% | 10.52% | 2026-08-05 |
+| GSK | 4 | 26.38% | 10.59% | 2026-08-05 |
+| GAW | 5 | 98.6% | 4.46% | 2026-08-05 |
+| ACN | 6 | 24.89% | 10.33% | 2026-08-05 |
+| WKL | 7 | 28.59% | 8.68% | 2026-08-05 |
+| KLR | 8 | 22.63% | 10.19% | 2026-08-05 |
+| MSFT | 9 | 30.69% | 4.18% | 2026-08-05 |
+| ASML | 10 | 55.32% | 2.24% | 2026-08-05 |
+| PEP | 11 | 17.91% | 6.18% | 2026-08-05 |
+| GOOGL | 12 | 25.28% | 3.28% | 2026-08-05 |
+| SAP | 13 | 17.18% | 5.44% | 2026-08-05 |
+| TER | 14 | 37.65% | 2.15% | 2026-08-05 |
+| WOSG | 15 | 11.34% | 7.75% | 2026-08-05 |
+| IBM | 16 | 13.88% | 4.44% | 2026-08-05 |
+| APH | 17 | 19.4% | 3.49% | 2026-08-05 |
+| CPB | 18 | 8.11% | 8.14% | 2026-08-05 |
+| AVGO | 19 | 23.8% | 1.61% | 2026-08-05 |
+| AMZN | 20 | 12.5% | 3.0% | 2026-08-05 |
+| IQV | 21 | 9.05% | 4.25% | 2026-08-05 |
+| WDAY | 22 | 11.11% | 2.44% | 2026-08-05 |
+| DKNG | 23 | 2.69% | 2.48% | 2026-08-05 |
+| NOW | 24 | 9.46% | 1.36% | 2026-08-05 |
 ---
 
 ## See Also
