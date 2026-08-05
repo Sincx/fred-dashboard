@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-05T23:53:00+02:00",
+      "summary": "Memory index updated — paper trading grew to 32 positions (RDW hit T1, new ICFI/AMGN entries), 3 new researcher pages flagged as unindexed, 1 new Meta cross-domain connection (Learning/Sports Betting)",
+      "content": [
+        "Domain Content Status — Finance: paper trading P1 now 32 open positions as of 2026-08-05 — RDW hit T1 (+25.50%, 1/3 sold), new entries ICFI (2026-08-04, Small Cap Value) and AMGN (2026-08-05, Volume Spike beat-and-raise); live trading portfolio unchanged at 13 positions",
+        "Domain Content Status — Finance: added finance/models/model-hyperscaler-gpu-token-debt-2026-08-05.md (researcher Mode D) — $1.65T off-balance-sheet AI debt traces via private credit to PE-owned life insurers with state guaranty funds as backstop; CoreWeave CDS implies ~50% 5yr default probability; debt-service channel judged the faster visible risk vs. token-pricing demand collapse",
+        "Domain Content Status — AI & Tech: added source-meta-blackrock-el-paso-datacenter-2026-08-05.md (clipping, already in wiki/index.md — Meta+BlackRock 1GW El Paso DC JV, BlackRock now majority equity owner) and 2 new researcher Mode C pages not yet indexed — data-token-generation-pricing-gpu-comparison-2026-08-05.md (frontier pricing +36% YoY vs. commodity −35% YoY) and data-gpu-costs-lease-pricing-2026-08-05.md (H100 rental down 64-75% from peak)",
+        "Domain Content Status — Meta: run count 32→34 (covers both 2026-08-04 and 2026-08-05 thinker runs), added the 2026-08-05 highlight — Learning's decision-making framework is explicitly built on Annie Duke's poker theory, and Sports Betting's own CLV-as-primary-metric philosophy is the same discipline applied, unlinked",
+        "Open Threads: extended the 'wiki pages not yet added to index.md' thread from 9 to 12 pages (added the 3 new 2026-08-05 researcher pages)",
+        "Open Threads: added new thread — Learning/Sports Betting Annie Duke decision-theory connection (2026-08-05), concrete next step to cross-link framework-decision-making.md and bankroll-management.md",
+        "Bumped 'Last updated' date to 2026-08-05",
+        "Appended one memory-update log line to log.md for 2026-08-05"
+      ]
+    },
+    {
       "runAt": "2026-08-04T23:53:00+02:00",
       "summary": "Memory index updated — ACN's EUR/IBIS listing resolved (Xetra/Frankfurt CSA), 2 new Burry Trading Post buys (HCA, plus ADBE/BABA/PYPL/VEEV), 1 new Meta cross-domain connection",
       "content": [
@@ -15,21 +29,6 @@
         "Open Threads: updated the recurring trading-portfolio reconciliation-gap thread — marked ACN's listing issue resolved 2026-08-04; noted the entry-trade traceability gap for ADBE/DKNG/PRX (distinct from the now-resolved pricing/listing issues) remains open",
         "Bumped 'Last updated' date to 2026-08-04",
         "Appended one memory-update log line to log.md for 2026-08-04"
-      ]
-    },
-    {
-      "runAt": "2026-08-03T23:55:22+02:00",
-      "summary": "Memory index updated — 3 resolved threads (Kelly/Burry sizing, options-recommender output gap, Gladiator title error), 1 new cross-domain connection (gold miners vs. Bitcoin), and the live trading portfolio's growth to 13 positions",
-      "content": [
-        "Domain Content Status — Meta: run count 30→31, added the 2026-08-03 wiki-thinker highlight — Gold miners (GDX) and Bitcoin, both marketed as the same 'scarcity hedge' trade, cratered together in 2026 after historic 2025 runs, unlinked between Finance's sector tracker and Crypto's portfolio page",
-        "Domain Content Status — Finance: live trading portfolio grew to 13 positions (APH, WOSG, DNLM, IQV, KLR, SAP, CPB, GSK, EDEN, ACN, ADBE, DKNG, PRX) — AVGO no longer appears with no exit logged; PRX pricing gap resolved (yfinance CA-bundle fix); ACN EUR/IBIS listing unresolved for a 3rd consecutive run",
-        "Domain Content Status — Finance: added 2 new pages — finance/michael-burry/burry-vs-kelly-sizing.md (Burry-patience vs. formal Kelly sizing comparison) and finance/options-suggestions.md (persistent output file for /options-trade-recommender, backfilled with the 2026-07-31 WDAY run)",
-        "Domain Content Status — Books: corrected the Gladiator entry — it was never a real Con Iggulden title, it was Fred's own reading-list typo for The Gates of Rome (Emperor book 1); book-gladiator.md deleted and replaced by book-the-gates-of-rome.md",
-        "Open Threads: removed the resolved Sports Betting/Finance Kelly-sizing thread (closed by burry-vs-kelly-sizing.md)",
-        "Open Threads: updated the recurring trading-portfolio reconciliation-gap thread with 2026-08-03 status — 13 positions, AVGO dropped, ACN/ADBE/DKNG/PRX undocumented appearances, PRX resolved, KLR trim + HON/PRU entries recommended but unexecuted",
-        "Open Threads: added new thread — Gold miners (GDX) vs. Bitcoin parallel 2026 collapse, unlinked between market-sector-performance.md and Crypto portfolio.md",
-        "Bumped 'Last updated' date to 2026-08-03",
-        "Appended one memory-update log line to log.md for 2026-08-03"
       ]
     }
   ]
