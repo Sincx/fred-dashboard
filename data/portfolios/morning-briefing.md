@@ -1,131 +1,129 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-08-05
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-08-06
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
-  Positions:        14 open
-  Total Value:      ~€20,078 (positions €16,389 + cash €3,689)
-  Available Cap:    €3,689
+  Positions:        14 open long equity (+1 short NBIS, +1 option ORCL)
+  Total Value:      ~€18,679 (14 long positions + cash, estimated)
+  Available Cap:    €1,715 (cash)
   Best Performer:   IQV +43.94%
-  Worst Performer:  DKNG -7.25%
-  Largest Position: WOSG (10.6% of invested capital)
+  Worst Performer:  GSK -1.24%
+  Largest Position: WOSG (9.4% of portfolio)
 
 POSITION SIGNALS
-  ┌──────────┬────────────┬─────────┬───────┬──────────┬────────────────────────────────────┬─────┐
-  │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst                           │ MF# │
-  ├──────────┼────────────┼─────────┼───────┼──────────┼────────────────────────────────────┼─────┤
-  │ APH      │ +20.03%    │ 64.1    │ ↑     │ Hold     │ Patience override — reassess 08-08 │ 17  │
-  │ WOSG     │ +8.28%     │ 54.6    │ ↑     │ Watch    │ —                                  │ 15  │
-  │ DNLM     │ +11.56%    │ 65.0    │ ↑     │ Hold     │ —                                  │  3  │
-  │ IQV      │ +43.94%    │ 65.7    │ ↑     │ Hold     │ —                                  │ 21  │
-  │ KLR      │ +27.38%    │ 50.5    │ ↑     │ Watch    │ 3,100p stop breached — unresolved  │  8  │
-  │ SAP      │ +23.82%    │ 69.8    │ ↑     │ Hold     │ —                                  │ 13  │
-  │ CPB      │ +5.25%     │ 58.2    │ ↑     │ Hold     │ —                                  │ 18  │
-  │ GSK      │ -1.24%     │ 45.9    │ ↓     │ Watch    │ One leg from mechanical Exit       │  4  │
-  │ EDEN     │ +10.40%    │ 75.9    │ ↑     │ Hold     │ Overbought, extended               │  —  │
-  │ ACN      │ +2.98%     │ 61.3    │ ↑*    │ Watch    │ *vs 20d — SMA50 not yet computable │  6  │
-  │ ADBE     │ +3.79%     │ 63.5    │ ↑     │ Hold     │ —                                  │  2  │
-  │ DKNG     │ -7.25%     │ 32.3    │ ↓     │ ⛔ Exit  │ MECHANICAL EXIT TRIGGERED today    │ 23  │
-  │ PRX      │ +0.98%     │ 60.3    │ ↑     │ Hold     │ —                                  │  —  │
-  │ WKL      │ -1.18%     │ 62.7    │ ↑     │ Hold     │ New position, initiated 2026-08-05 │  7  │
-  └──────────┴────────────┴─────────┴───────┴──────────┴────────────────────────────────────┴─────┘
-  *ACN: 50d SMA still not computable on the Xetra/CSA listing history; using 20d SMA (€130.58), price
-  is above it.
+  ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────────────┬─────┐
+  │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst                  │ MF# │
+  ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────────────┼─────┤
+  │ APH      │ +20.03%    │ 64.1    │ ↑     │ ✅ Hold  │ Override expires 08-08    │ 17  │
+  │ WOSG     │ +8.28%     │ 54.6    │ ↑     │ 👀 Watch │ MACD bearish              │ 15  │
+  │ DNLM     │ +11.56%    │ 65.0    │ ↑     │ ✅ Hold  │ —                         │ 3   │
+  │ IQV      │ +43.94%    │ 65.7    │ ↑     │ ✅ Hold  │ Free-ride candidate       │ 21  │
+  │ KLR      │ +27.38%    │ 50.5    │ ↑     │ 👀 Watch │ 3,100p stop breached      │ 8   │
+  │ SAP      │ +23.82%    │ 69.8    │ ↑     │ ✅ Hold  │ —                         │ 13  │
+  │ CPB      │ +5.25%     │ 58.2    │ ↑     │ ✅ Hold  │ —                         │ 18  │
+  │ GSK      │ -1.24%     │ 45.9    │ ↓     │ 👀 Watch │ One leg from Exit         │ 4   │
+  │ EDEN     │ +10.40%    │ 75.9    │ ↑     │ ✅ Hold  │ Overbought, extended      │ —   │
+  │ ACN      │ +2.98%     │ 61.3    │ ↑*    │ 👀 Watch │ 50d SMA not computable    │ 6   │
+  │ ADBE     │ +3.79%     │ 63.5    │ ↑     │ ✅ Hold  │ —                         │ 2   │
+  │ FLUT     │ 0.00%      │ —       │ —     │ ✅ Hold  │ Initiated today           │ —   │
+  │ PRX      │ +0.98%     │ 60.3    │ ↑     │ ✅ Hold  │ —                         │ —   │
+  │ WKL      │ -1.18%     │ 62.7    │ ↑     │ ✅ Hold  │ Initiated 08-05           │ 7   │
+  └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────────────┴─────┘
+  * ACN: 50d SMA not yet computable (only 45d Xetra history); using 20d SMA (€130.58), price above it.
+
+  Short: NBIS — Hold. Not re-priced this run (data constraint); thesis unchanged, entry $194.78.
+  Option: ORCL long put $120 strike — Hold. Underlying last $144.39 (well above $108.62 break-even);
+  put remains deep OTM, thesis unfavorable at current price.
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest position WOSG at 10.6% of invested capital, no position ≥25%
-  Sector spread:   Tech/Enterprise SW 19.3% (SAP+ACN+ADBE) | UK Consumer 16.3% (WOSG+DNLM) |
-                   Healthcare/CRO 15.8% (IQV+GSK) | AI Infra 10.0% (APH) | European Fintech 8.0%
-                   (EDEN) | International/SOTP 7.6% (PRX) | Consumer Staples 7.3% (CPB) | US Sports
-                   Betting 5.2% (DKNG) | UK Industrials 3.9% (KLR) | Info Services 6.4% (WKL, no
-                   dedicated bucket in the standard taxonomy — European non-AI quality compounder)
-                   Tech/Enterprise Software remains the largest sector bucket at 19.3%, below the 25%
-                   WARNING threshold but worth watching before adding further SAP/ACN/ADBE exposure.
-  Currency split:  USD 38.0% (APH, IQV, CPB, ADBE, DKNG) | EUR 34.6% (SAP, EDEN, ACN, PRX, WKL) |
-                   GBp 27.3% (WOSG, DNLM, KLR, GSK)
+  Concentration:   OK — no position ≥25% (largest is WOSG at 9.4%)
+  Sector spread:   Tech/Enterprise (SAP/ACN/ADBE) 17.4% | AI Infra (APH) 9.4% | Healthcare/CRO (IQV/GSK) 14.4%
+                   | UK Consumer (WOSG/DNLM) 14.5% | UK Industrials (KLR) 3.5% | Staples (CPB) 6.8%
+                   | EU Fintech (EDEN) 7.1% | Sports Betting (FLUT) 5.5% | Intl SOTP (PRX) 6.7%
+                   | Info Services (WKL) 5.6% — well diversified, no sector concentration flag
+  Currency split:  USD 36.2% | GBp 24.3% | EUR 30.4% | Cash 9.2%
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  DKNG: Trim 50% (22 of 45 shares) — mechanical Exit signal fully triggered today (RSI 32.3 <40, price
-  $21.76 is 14.2% below its rising-then-flattening 50d SMA of $25.36, MACD bearish). Per the patience
-  override rule, a mechanical Exit alone doesn't force a full close if the fundamental thesis is
-  intact — DKNG remains Burry-aligned (Scion opened at ~$23.40 on Jul 30, still holding). Trim half now,
-  reassess the remainder within 10 trading days (by ~2026-08-19).
-  This is a loss trim, not a profit-take: gross loss on 22 shares ≈ -$37.40 (-€32.36); no CGT applies to
-  a loss; commission -€4.33; net realised loss ≈ -€36.69. Expected proceeds: ~$473.72 (~€409.98) net
-  cash back.
+  No exit signals triggered today (mechanical Exit/Trim thresholds not met on any position).
+  KLR's 3,100p manual stop remains breached and unresolved from a prior session — see Portfolio Risks
+  and Next Actions; this is a discretionary stop-discipline decision, not a mechanical Trim signal
+  (RSI 50.5 is neutral, well below the RSI>70 Trim threshold).
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No Add signals triggered on any of the 14 existing positions today (closest is KLR — RSI 50.5, above
-  its 50d SMA, but MACD stays bearish, so the Add condition isn't met).
+  No Add signals triggered today (no position shows RSI 35–50 + above SMA50 + MACD bullish).
 
   ── NEW POSITIONS ──────────────────────────────────────
-  PRU: Enter at 1,095p — Score 5/5, Undervalued (P/E 9.8×), RSI 60.4, MACD Bullish; opens new
-  Financials exposure (0% currently held).
-  Stop: 1,053.4p (entry − 1.5×ATR14 27.73) | Size: €1,500
+  PRU: Enter at 1095p — Market Watchlist 5/5, MF#11, RSI 56.2 healthy, MACD bullish
+  Stop: ~1029p (est. −6%; ATR14 unavailable this run) | Size: €1,500
 
-  HON: Enter at $248.79 — Score 5/5, Undervalued (P/E 9.4×, EPS Gr +46.6%), RSI 63.7, MACD Bullish;
-  opens new Industrials exposure.
-  Stop: $237.96 (entry − 1.5×ATR14 7.22) | Size: €1,500
+  HON: Enter at $248.12 — Market Watchlist 5/5, MF#18, RSI 62.7 healthy, MACD bullish
+  Stop: $235.82 (entry − 1.5×ATR14 $8.20) | Size: €1,500
 
-  SHEL: Enter at 3,321.5p — Score 5/5, Undervalued (P/E 10.0×), RSI healthy, MACD Bullish; opens new
-  Energy exposure. Pulled back ~2.5% intraday from yesterday's 3,405.5p print — still comfortably
-  inside the healthy RSI band, arguably a better entry than yesterday's quote.
-  Stop: 3,203.9p (entry − 1.5×ATR14 78.39) | Size: €1,500
+  SHEL: Enter at 3321.5p — Market Watchlist 5/5, MF#19, RSI 59.5 healthy, MACD bullish
+  Stop: ~3122p (est. −6%; ATR14 unavailable this run) | Size: €1,500
 
-  Combined new-position capital if all three fill: €4,500 vs. €3,689 available (or ~€4,099 if the DKNG
-  trim proceeds land first) — capital doesn't stretch to all three. Prioritize by MF-rank tiebreaker:
-  PRU (MF#11) first, then HON (MF#18); treat SHEL (MF#19) as a watch-and-wait or size down to €750.
+  Note: available cash (€1,715) only funds one full €1,500 entry — see Next Actions for sequencing.
 
 INVESTMENT OPPORTUNITIES
-  5/5 · PRU (FTSE 100, Financials) — Undervalued, P/E 9.8×, EPS n/a | MF#11
-  Entry: 1,095p | Stop: 1,053.4p | Size: €1,500 | RSI: 60.4 | MACD: Bullish
-  Conviction: Cheapest-on-P/E of the batch with a disclosed MF rank; healthy (not extended) RSI and a
-  clean bullish MACD — best-timed entry of the three, same pick as yesterday's screen.
-  Portfolio fit: No existing Financials exposure; GBp-denominated (adds to an already 27.3% GBp weight,
-  still well short of any concentration limit).
+  5/5 · PRU (FTSE 100, Financials) — Undervalued, P/E 9.8, EPS Gr% n/a | MF#11
+  Entry: 1095p | Stop: ~1029p (est., ATR data unavailable) | Size: €1,500 | RSI: 56.2 | MACD: Bullish
+  Conviction: Undervalued (P/E 9.8×); bullish MACD; RSI healthy at 56.
+  Portfolio fit: No existing Financials exposure; not held; GBp allocation 24.3% before add.
 
-  5/5 · HON (DJIA, Industrials) — Undervalued, P/E 9.4×, EPS +46.6% | MF#18
-  Entry: $248.79 | Stop: $237.96 | Size: €1,500 | RSI: 63.7 | MACD: Bullish
-  Conviction: Strongest EPS growth of the three candidates, RSI still comfortably under 70, bullish
-  MACD confirmed on today's 30-day check (price unchanged vs. yesterday's snapshot).
-  Portfolio fit: No existing Industrials exposure; USD-denominated (portfolio already 38.0% USD — a
-  modest incremental tilt).
+  5/5 · HON (DJIA, Industrials) — Undervalued, P/E 9.4, EPS Gr% +46.6% | MF#18
+  Entry: $248.12 | Stop: $235.82 (entry − 1.5×ATR14) | Size: €1,500 | RSI: 62.7 | MACD: Bullish
+  Conviction: Undervalued (P/E 9.4×); bullish MACD; RSI healthy at 63.
+  Portfolio fit: New sector (US Industrials, distinct from UK Industrials/KLR at 3.5%); USD allocation
+  36.2% before add — monitor overall USD concentration if executed alongside other USD ideas.
 
-  5/5 · SHEL (FTSE 100, Energy) — Undervalued, P/E 10.0× | MF#19
-  Entry: 3,321.5p | Stop: 3,203.9p | Size: €1,500 | RSI: healthy | MACD: Bullish
-  Conviction: Cheap on P/E with a confirmed bullish setup; today's ~2.5% pullback from 3,405.5p is a
-  slightly better entry than yesterday's, but this remains the least-differentiated of the three picks.
-  Portfolio fit: No existing Energy exposure; GBp-denominated — stacking with PRU would push GBp weight
-  toward ~34%; consider skipping SHEL if PRU is also entered, or size it down to €750.
+  5/5 · SHEL (FTSE 100, Energy) — Undervalued, P/E 10.0, EPS Gr% n/a | MF#19
+  Entry: 3321.5p | Stop: ~3122p (est., ATR data unavailable) | Size: €1,500 | RSI: 59.5 | MACD: Bullish
+  Conviction: Undervalued (P/E 10.0×); bullish MACD; RSI healthy at 59.
+  Portfolio fit: No existing Energy exposure; not held; GBp allocation 24.3% before add.
 
-  Note: same three candidates as yesterday's screen (AR and NWG remain the other two 5/5s but carry no
-  Magic Formula rank, so the tiebreaker again favours PRU/HON/SHEL).
+  Tie-break note: all three scored 5/5 (Undervalued + Buy signal + healthy RSI + bullish MACD); ranked
+  by MF rank per playbook rule — PRU (#11) > HON (#18) > SHEL (#19). NWG also scored 5/5 but has no
+  MF# (Financials excluded from the Greenblatt screen), so ranked below the three with MF data.
+
+FREE RIDE OPPORTUNITIES
+  IQV: Adjusted calc (2 prior trims, €192.62 already realised) — sell 4 of 7 shares at $236.05 →
+  ~€865.63 net proceeds (after $5 commission) covers remaining cost basis (~€789.75)
+  Free position: 3 shares at zero effective cost | Current value: ~€652.68
+  Status: Monitor — RSI 65.7 (above 65, approaching overbought, but below the RSI>70 Trim threshold);
+  execute at next RSI extension rather than immediately
+
+  KLR: Adjusted calc (2 prior trims, €273.47 already realised) — sell 5 of 18 shares at 3,080p →
+  ~€176.93 net proceeds (after commission) covers remaining cost basis (~€153.75)
+  Free position: 13 shares at zero effective cost | Current value: ~€472.00
+  Status: Monitor — RSI 50.5 (neutral, below the 65 threshold for immediate execution). Note: this is
+  separate from the unresolved 3,100p stop-loss breach, which is a stop-discipline decision, not a
+  free-ride trigger — resolve the stop question first.
 
 PORTFOLIO RISKS TO WATCH
-  - DKNG: mechanical Exit signal fully triggered today for the first time (RSI crossed below 40) —
-    needs an actual decision (trim, not just a watch note) rather than being left unresolved like KLR.
-  - KLR: manual 3,100p stop-loss remains breached and unexecuted for a second consecutive session
-    (price 3,080p today, still below the stop) — this now needs a firm decision, not another deferral.
-  - GSK is one leg from a mechanical Exit (RSI 45.9, below 50d SMA, bearish MACD) — watch for RSI
-    crossing below 40, same as DKNG did today.
-  - Tech/Enterprise Software (SAP+ACN+ADBE) is the largest sector bucket at 19.3% — avoid routing more
-    new capital there until it's trimmed back or other sectors catch up.
-  - No formal stop-loss is in place on any position except KLR's (already breached) — the largest
-    unprotected gains sit in IQV (+43.94%) and KLR itself (+27.38%).
-  - EDEN is extended (RSI 75.9, no formal stop) — natural pullback risk after a strong run.
-  - WKL (new today) has no TA track record yet on this desk — treat the -1.18% opening print as noise,
-    not a signal, until more data accumulates.
+  - KLR: 3,100p stop-loss breached and unexecuted since a prior session (price now 3,080p) — unresolved
+    discretionary decision; RSI neutral (50.5), MACD bearish
+  - APH: patience override on the RSI/MACD mixed picture expires 2026-08-08 — must formally reassess
+    Hold vs Trim by Friday 2026-08-07 close
+  - GSK: one signal away from a mechanical Exit (RSI 45.9 vs <40 threshold; already below 50d SMA with
+    bearish MACD) — watch for RSI to break below 40
+  - EDEN: RSI 75.9, extended/overbought; below the 20%-of-portfolio Trim threshold (7.1% weight) so no
+    formal Trim signal fires, but pullback risk is elevated
+  - Cash reserve is thin (€1,715, 9.2% of portfolio) — cannot fund all three new-position ideas at full
+    €1,500 size simultaneously without a trim elsewhere
+  - Data caveat this run: the Python/yfinance TA pipeline failed outright (data source outage); Massive
+    and Alpha Vantage both hit rate limits mid-session. Live-verified 5 of 14 positions (APH, IQV, CPB,
+    WOSG, KLR) against the file's recorded prices — all matched exactly, so the remaining 9 positions'
+    prices/TA (already dated 2026-08-06 in the file) are treated as current. NBIS short and ORCL put
+    were not re-priced this run.
 
 NEXT ACTIONS
-  1. Decide on DKNG: execute the 50% trim (22 shares at $21.76, ~-€36.69 net realised loss) to respect
-     the fresh mechanical Exit signal, or explicitly document why the Burry-aligned thesis overrides it.
-  2. Resolve KLR: the 3,100p stop has now been breached and left unactioned across two sessions —
-     execute the trim or formally reaffirm holding the full position today.
-  3. If deploying new capital: place a limit order for PRU (~1,095p, stop 1,053.4p, €1,500) first, then
-     HON (~$248.79, stop $237.96, €1,500) if cash allows; hold SHEL as a watch item or size down to €750
-     given the ~€3,689 cash buffer doesn't cover all three at full size.
-  4. Monitor the APH patience-override reassessment deadline — 2026-08-08 (a Saturday; effectively
-     reassess by Friday 2026-08-07 close, 2 trading days out).
+  1. Resolve the KLR stop-loss decision: 3,100p stop breached, price now 3,080p — trim 25–50% or reset
+     the stop; the adjusted free-ride sell (5 shares) is one option that also covers remaining cost basis
+  2. Reassess APH by Friday 2026-08-07 close — patience override formally expires 2026-08-08
+  3. Watch GSK for an RSI break below 40, which would complete the mechanical Exit signal
+  4. If deploying new capital, prioritize PRU (MF#11, 5/5 score, no existing Financials exposure) at up
+     to €1,500 — current cash supports one full-size entry; HON and SHEL remain on the shortlist
+  5. Watch IQV for RSI to push through 70 — would trigger the formal Trim/free-ride execution case
 ════════════════════════════════════════════════════════

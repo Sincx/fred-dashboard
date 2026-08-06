@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-08-05
+updated: 2026-08-06
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-05** for all positions. Cash: **€3,689**. 14 open positions.
+> Live page — update whenever positions change. Prices last fetched: **2026-08-06** for all positions. Cash: **€1,715**. 16 open positions (14 long equity, 1 short, 1 option).
 
 ---
 
@@ -27,12 +27,34 @@ updated: 2026-08-05
 | Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €29.29 | €1,318.05 | +10.40% | ✅ Hold | RSI 75.9 (overbought), above 50d SMA (€23.74), MACD bullish; extended |
 | Accenture | ACN | Xetra | EUR | 6 | €141.10 | €846.60 | €145.30 | €871.80 | +2.98% | 👀 Watch | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA), confirmed 2026-08-04. RSI 61.3, MACD bullish; 50d SMA not yet computable (only 45 days of Xetra history on record since 2026-06-04) — 20d SMA €130.58, price above it. |
 | Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $259.32 | $1,296.60 | +3.79% | ✅ Hold | Creative & document software; AI integration (Firefly); RSI 63.5, above SMA50 ($228.85), MACD bullish |
-| DraftKings | DKNG | NASDAQ | USD | 45 | $23.46 | $1,055.70 | $21.76 | $979.20 | -7.25% | ⛔ Exit | US online sports betting; Burry-aligned long; RSI 32.3, below SMA50 ($25.36), MACD bearish; **mechanical Exit signal triggered 2026-08-05 — Trim 50% recommended per patience override, reassess by ~2026-08-19** |
+| Flutter Entertainment | FLUT | NASDAQ | USD | 12 | $92.10 | $1,105.20 | $92.10 | $1,105.20 | 0.00% | ✅ Hold | Sports betting & iGaming global operator; Burry long at $100.72 (Jul 24 2026); entered at better price; anti-prediction-markets thesis; initiated 2026-08-06 |
 | Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €41.57 | €1,247.10 | +0.98% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 60.3, above SMA50 (€39.08), MACD bullish |
 | Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €70.24 | €1,053.60 | -1.18% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 62.7, above SMA50 (€61.61), MACD bullish |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL) in EUR. Prices as of **2026-08-05** (Python pipeline: Polygon/AV/yfinance).
-> **Active alerts:** DKNG — mechanical Exit signal triggered today (RSI 32.3 <40, below SMA50, MACD bearish); Trim 50% recommended per patience override, reassess by ~2026-08-19. KLR — 3,100p stop still breached (price now 3,080p, still below stop), unresolved for a second session; decision needed. APH — patience override still running to 2026-08-08 (effectively reassess by Friday 2026-08-07 close); MACD bullish, price above SMA50. GSK — remains below its 50d SMA with bearish MACD; RSI 45.9, one leg from a mechanical Exit signal.
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL) in EUR. Prices as of **2026-08-06** (entry prices used for FLUT opened today).
+> **Active alerts:** KLR — 3,100p stop still breached; decision needed. APH — patience override expires 2026-08-08, reassess by Friday 2026-08-07 close. GSK — below 50d SMA with bearish MACD; one leg from mechanical Exit signal.
+
+---
+
+## Short Positions
+
+Active short equity positions (profit if price falls below entry; loss if price rises above entry).
+
+| Company | Ticker | Exchange | Currency | Shares Short | Entry | Short Value | Signal | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Nebius Group | NBIS | NASDAQ | USD | 5 | $194.78 | $973.90 | ✅ Hold | AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure; initiated 2026-08-06 |
+
+> Margin posted (−€850) to cover short. Profit if NBIS price falls below $194.78; loss if it rises. Position closes with a buyback — margin returned net of P&L.
+
+---
+
+## Options Positions
+
+| Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium | Total Cost (€) | Signal | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | €992 | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06 |
+
+> Long put: profitable if ORCL closes below $108.62 at expiry. Maximum loss = premium paid (€992).
 
 ---
 
@@ -44,6 +66,7 @@ Fully exited positions. Partial trims of open positions are in the [[#Performanc
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Morgan Sindall Group | MGNS | LSE | 18 | 4,624p | 4,456p | 2026-07-27 | −€35.44 | **−€39.81** | Full exit — earnings miss; technical breakdown confirmed |
 | Broadcom | AVGO | NASDAQ | 4 | $387.25 | $371.42 | 2026-07-29 | −€55.54 | **−€59.91** | Full exit — Burry SOXX-short thesis; below SMA50; position closed |
+| DraftKings | DKNG | NASDAQ | 45 | $23.46 | $21.43 | 2026-08-06 | −€80.13 | **−€84.50** | Full exit — mechanical Exit signal (RSI <40, below SMA50, MACD bearish); technical breakdown confirmed |
 
 ---
 
@@ -61,6 +84,7 @@ All realised transactions (full exits and partial trims), ordered by date.
 | 2026-07-27 | MGNS | Full exit | 18 | 4,624p | 4,456p | −£30.24 | −€35.44 | €0 | −€4.37 | **−€39.81** | Earnings miss; technical breakdown |
 | 2026-07-28 | IQV | Trim | 2 | $163.99 | $243.50 | +$159.02 | +€139.49 | −€29.29 | −€4.37 | **+€105.83** | RSI 78.8 extreme overbought |
 | 2026-07-29 | AVGO | Full exit | 4 | $387.25 | $371.42 | −$63.32 | −€55.54 | €0 | −€4.37 | **−€59.91** | Burry SOXX thesis; below SMA50 |
+| 2026-08-06 | DKNG | Full exit | 45 | $23.46 | $21.43 | −$91.35 | −€80.13 | €0 | −€4.37 | **−€84.50** | Mechanical Exit signal triggered; technical breakdown |
 
 ---
 
@@ -74,7 +98,8 @@ Realised P&L grouped by position (trims + full exits combined).
 | KLR | 2 trims | Open (18 remain) | 32 | +€357.23 | −€75.02 | −€8.74 | **+€273.47** |
 | MGNS | Full exit | Closed | 18 | −€35.44 | €0 | −€4.37 | **−€39.81** |
 | AVGO | Full exit | Closed | 4 | −€55.54 | €0 | −€4.37 | **−€59.91** |
-| **TOTAL** | **6** | | **59** | **€521.13** | **−€128.54** | **−€26.22** | **€366.37** |
+| DKNG | Full exit | Closed | 45 | −€80.13 | €0 | −€4.37 | **−€84.50** |
+| **TOTAL** | **7** | | **104** | **€441.00** | **−€128.54** | **−€30.59** | **€281.87** |
 
 ---
 
@@ -82,12 +107,12 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Metric | Value |
 | --- | --- |
-| Total gross P&L (€) | €521.13 |
+| Total gross P&L (€) | €441.00 |
 | Total CGT paid (€) | €128.54 |
-| Total commissions (€) | €26.22 |
-| **Net realised gains (€)** | **€366.37** |
-| Transactions | 6 |
-| Positions fully closed | 2 (MGNS, AVGO) |
+| Total commissions (€) | €30.59 |
+| **Net realised gains (€)** | **€281.87** |
+| Transactions | 7 |
+| Positions fully closed | 3 (MGNS, AVGO, DKNG) |
 | Positions partially trimmed | 2 (IQV, KLR) |
 
 ---
@@ -96,7 +121,7 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€3,689** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) |
+| EUR | **€1,715** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) |
 
 > Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
 
@@ -126,9 +151,11 @@ Realised P&L grouped by position (trims + full exits combined).
 | KLR, DNLM, WOSG, GSK, CPB, EDEN | 🟢 European value — no signal | No conflict; Grantham also prefers non-US value |
 | SAP, ACN | 🟡 Enterprise software — mild indirect | Enterprise-contracted revenue; less circular-financing exposed than hyperscalers |
 | ADBE | 🟡 US large-cap tech — mild indirect | Caught in QQQ puts thesis; AI features (Firefly) add narrative risk; creative software moat partially offsets |
-| DKNG | 🟢 Burry-aligned long | Scion added DKNG at ~$23.40 on Jul 30 — direct alignment; sports betting vs. prediction markets thesis |
+| FLUT | 🟢 Burry-aligned long | Flutter Entertainment — Burry long at $100.72 (Jul 24 2026); entered at $92.10 (better price); anti-prediction-markets / sports betting thesis; direct Scion alignment |
 | PRX | 🟢 Non-US value / SOTP — no signal | Prosus: international, non-AI, NAV-discount thesis; aligns with Grantham non-US preference and MOI SOTP framework |
 | WKL | 🟢 Intangible moat / non-US — no signal | Wolters Kluwer: recurring professional information revenue; no AI infrastructure exposure; Grantham-aligned non-US quality |
+| NBIS (short) | 🟢 Burry/model-aligned short | Nebius Group neocloud short — directly implements model framework "Avoid/underweight Nebius" call; Burry SOXX/AI-infrastructure bear thesis extends to GPU cloud neoclouds; customer-concentration risk if Meta compute overbuild unfolds |
+| ORCL (put) | 🟡 Partially Burry-aligned option | Long put $120 strike, Dec 2026; bearish overlay on Oracle AI/OCI narrative; OCI revenue +93% YoY (current data contradicts thesis); put profitable only if AI capex unwinds materially; break-even $108.62 |
 
 **Patience override rule:** A mechanical EXIT signal (RSI < 40 + below 50d SMA + MACD bearish expanding) alone is not sufficient to exit a position with an intact fundamental thesis. Maximum trim: 50%. Reassess within 10 trading days.
 
