@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-08-06T23:28:25.3194823+02:00",
+                     "summary":  "2 clippings processed (1 duplicate)",
+                     "content":  "1 duplicate deleted: 'Trading Post June 12, 2026' was already ingested as burry-trading-post-2026-06-12. 1 new -> Finance domain. Michael Burry Trading Post Aug 6: two new outright shorts -- Oracle $144.63, Nebius $211.77 (puts passed on, IV >100%) -- framed as 'shooting fish in a barrel' off-balance-sheet-liability thesis; added to Fiserv (avg cost $48) and made Flutter a full position; held Zoetis and Mercado Libre through soft earnings; first-ever disclosure of Fiserv, Mercado Libre and JD.com as active Scion positions, with ADBE and JD now named as Burry's two largest holdings -> source-burry-trading-post-2026-08-06. Stock parsing: ORCL/NBIS added to short watchlist; FISV/MELI/JD added to morningstar-watchlist.md Burry Longs and market-watchlist-tracker pipeline config (Burry group); ZTS/FLUT/ORCL already tracked, reaffirmed/updated only. Reverse links added to finance/michael-burry/trading-posts.md, finance/michael-burry/index.md, finance/people/person-michael-burry.md, finance/morningstar/morningstar-watchlist.md, finance/short-research/ideas-short-selling.md, finance/michael-burry/burry-options-approach.md, finance/michael-burry/burry-vs-kelly-sizing.md, index.md."
+                 },
+                 {
                      "runAt":  "2026-08-05T23:23:11.8105057+02:00",
                      "summary":  "1 clipping processed",
                      "content":  "Meta press release (Aug 5, deal announced Jul 28): Meta + BlackRock 1GW data center JV in El Paso, TX -> AI-Tech domain -> source-meta-blackrock-el-paso-datacenter-2026-08-05. BlackRock-managed funds own 80%, Meta 20%, ~$14bn total development cost; Meta sole tenant on a 4yr lease (up to 20yr with extensions) plus ~$13bn declining residual value guarantee -- same leased-back + RVG structure as the Hyperion (Louisiana) SPV, but BlackRock is now the majority equity owner rather than a minority debt anchor. Capacity online 2028. Not a Morningstar/Burry source, no stock parsing applicable. Reverse links added to ai-tech/data-meta-compute-cloud-pivot-2026-07-05, finance/models/model-meta-compute-release-market-impact-2026-07-05, finance/source-the-information-briefing-meta-compute-hesitation-2026-07-29, technology/source-meta-cloud-computing-2026, ai-tech/data-dc-power-construction-tracker-2026-06-25, index.md."
-                 },
-                 {
-                     "runAt":  "2026-08-04T23:27:12.7913286+02:00",
-                     "summary":  "3 clippings processed (1 duplicate)",
-                     "content":  "1 duplicate deleted: 'D'AI of the Triffids: Office Software Triage' (Burry, May-15) was already ingested as burry-sw50-part1-office-software-2026-05-15. 2 new -> Finance domain. Michael Burry Trading Post Jun 8: HCA Healthcare bought at 10-12x earnings ('simple rule' mechanical compounding; Samsung Electronics as template) -> source-burry-trading-post-2026-06-08. Trading Post Jun 12: 4 full-position deep-value buyback longs -- Adobe $199.59, Alibaba $111.90, PayPal $40.98, Veeva $159.05 (explicit 2000 dot-com-value analogue) -> source-burry-trading-post-2026-06-12. Stock parsing: HCA/BABA/PYPL/VEEV added to morningstar-watchlist.md Burry Longs section and market-watchlist-tracker pipeline config (Burry group); ADBE already tracked, reaffirmed only; Samsung Electronics skipped (no US-listed pipeline ticker). Reverse links added to finance/michael-burry/trading-posts.md, finance/michael-burry/index.md, finance/people/person-michael-burry.md, finance/morningstar/morningstar-watchlist.md, index.md."
                  }
              ]
 }
