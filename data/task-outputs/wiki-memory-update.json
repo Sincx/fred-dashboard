@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-06T23:53:00+02:00",
+      "summary": "Memory index updated — new podcast-recommender batch (Training Data et al.), 1 new Meta cross-domain connection (ElevenLabs productivity data vs. AI & Tech's future-of-work page), no threads resolved",
+      "content": [
+        "Domain Content Status — Meta: run count 34→35, added the 2026-08-06 wiki-thinker highlight — today's new \"Training Data\" podcast recommendation names ElevenLabs' ~$400M revenue on ~400 people, a concrete real-world data point for the \"who captures the productivity gains\" question AI & Tech's own future-of-work page poses only in the abstract",
+        "Domain Content Status — Podcasts: added the 2026-08-06 podcast-recommender batch — Training Data, Forward Guidance, FoundMyFitness, Nudge — none of the recommendation batches since 07-16 have yet produced actual podcast-{slug}.md pages",
+        "Open Threads: added new thread — AI-Tech/Podcasts ElevenLabs-productivity-gains connection (2026-08-06), cross-link candidate for ai-tech/ai-future-of-work.md",
+        "No change needed: 2026-08-06's Burry Trading Post clipping (ORCL/NBIS shorts, FISV/FLUT/MELI/JD longs) was already fully indexed by clippings-sorter with reverse links — no memory-index update required beyond what log.md already records",
+        "Bumped 'Last updated' date to 2026-08-06",
+        "Appended one memory-update log line to log.md for 2026-08-06"
+      ]
+    },
+    {
       "runAt": "2026-08-05T23:53:00+02:00",
       "summary": "Memory index updated — paper trading grew to 32 positions (RDW hit T1, new ICFI/AMGN entries), 3 new researcher pages flagged as unindexed, 1 new Meta cross-domain connection (Learning/Sports Betting)",
       "content": [
@@ -16,19 +28,6 @@
         "Open Threads: added new thread — Learning/Sports Betting Annie Duke decision-theory connection (2026-08-05), concrete next step to cross-link framework-decision-making.md and bankroll-management.md",
         "Bumped 'Last updated' date to 2026-08-05",
         "Appended one memory-update log line to log.md for 2026-08-05"
-      ]
-    },
-    {
-      "runAt": "2026-08-04T23:53:00+02:00",
-      "summary": "Memory index updated — ACN's EUR/IBIS listing resolved (Xetra/Frankfurt CSA), 2 new Burry Trading Post buys (HCA, plus ADBE/BABA/PYPL/VEEV), 1 new Meta cross-domain connection",
-      "content": [
-        "Key Decisions Made: added ACN listing resolution — correct ticker is Xetra/Frankfurt CSA (ISIN IE00B4BNMY34), confirmed by Fred; yfinance CSA.DE 2026-07-31 close (€141.10) matched the recorded entry exactly; trading-portfolio.md and portfolio_update.py's TICKER_FETCH routing both updated",
-        "Domain Content Status — Finance: updated the 13-position live trading portfolio note — ACN's listing issue now resolved (was a 3-run-running flag), PRX pricing gap resolution reframed as 2026-08-03",
-        "Domain Content Status — Finance: added 2 new Burry Trading Post source pages — source-burry-trading-post-2026-06-08.md (new long: HCA Healthcare, mechanical 'simple rule' trigger using Samsung Electronics as template) and source-burry-trading-post-2026-06-12.md (4 full-position deep-value buyback longs: Adobe, Alibaba, PayPal, Veeva); HCA/BABA/PYPL/VEEV added to the market-watchlist-tracker pipeline, ADBE reaffirmed",
-        "Domain Content Status — Meta: run count 31→32, added the 2026-08-04 wiki-thinker highlight — an OpenAI model's sandbox-escape-to-cheat-a-benchmark (Evans newsletter 653) is a live instance of the 'unreliable guardrails'/'dual-use' risk Technology's own Project Glasswing writeup already warned about two months earlier, uncross-linked",
-        "Open Threads: updated the recurring trading-portfolio reconciliation-gap thread — marked ACN's listing issue resolved 2026-08-04; noted the entry-trade traceability gap for ADBE/DKNG/PRX (distinct from the now-resolved pricing/listing issues) remains open",
-        "Bumped 'Last updated' date to 2026-08-04",
-        "Appended one memory-update log line to log.md for 2026-08-04"
       ]
     }
   ]
