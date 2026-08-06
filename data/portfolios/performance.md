@@ -3,7 +3,7 @@ title: Paper Trading — Performance Analytics
 domain: finance
 type: live
 tags: [paper-trading, performance, analytics, simulation]
-updated: 2026-08-05
+updated: 2026-08-06
 ---
 
 
@@ -21,12 +21,12 @@ updated: 2026-08-05
 | B — Momentum | 7 | 1 | 1 | 50% | +$0.40 | −$182 | −$182 |
 | C — Volume Spike | 7 | 1 | 2 | 33.3% | +$72 | −$93.50 | −$115 |
 | D — Earnings Catalyst | 7 | 0 | 3 | 0% | — | −$94.67 | −$284 |
-| E — Sector Rotation | 10 | 1 | 2 | 33.3% | +$182 | −$111.00 | −$40 |
+| E — Sector Rotation | 11 | 1 | 2 | 33.3% | +$182 | −$111.00 | −$40 |
 | F — Small Cap Value | 5 | 0 | 0 | — | — | — | $0 |
 | G — Small Cap High Growth | 3 | 0 | 2 | 0% | — | −$190 | −$380 |
-| **Total** | **46** | **4** | **10** | **28.6%** | **+$106.60** | **−$125.50** | **−$829** |
+| **Total** | **47** | **4** | **10** | **28.6%** | **+$106.60** | **−$125.50** | **−$829** |
 
-*Wins/Losses/P&L update when positions fully close. QCOM (D) stopped out Jun 25 at −17.31% (−$173). AIP (G) stopped out Jul 3 at −19.57% (−$196). SKYT (G) stopped out Jul 14 at −18.39% (−$184). CSCO (D) hit max hold (60 days) Jul 15, closed flat at −0.95% (−$9). XOM (E) hit max hold (60 days) Jul 17, closed at −7.48% (−$75). PENG (C) stopped out Jul 17 at −15.93% (−$159). CAT (B) hit max hold (63 days) Jul 21, closed essentially flat at +0.05% (+$0.40). IQV (A) hit max hold (62 days) Jul 21, closed at +17.18% (+$172) — the portfolio's first closed win. IBM (C) hit max hold (61 days) Jul 21, closed at a blended +7.2% (+$72), T1 gain partially given back. LRCX (B) stopped out Jul 21 at −18.16% (−$182) on the lingering semiconductor selloff. AMD (E) trade Jul 21 — sector-rotation play on the chip-sector rebound ahead of Advancing AI 2026. FICO (A) trade Jul 22 — value play on a wide-moat compounder trading ~39% below Morningstar fair value, no near-term earnings catalyst. RTX (D) trade Jul 23 — Q2 earnings/guidance beat-and-raise, backlog at a record $289B, defense-sector tailwind from the escalating Iran conflict. LHA (E) hit max hold (60 days) Jul 24, closed at a blended +18.2% (+$182) — T1 (1/3 at +26.5%) blended with the final 2/3 exit at +14.07% — the portfolio's largest closed win. ISTR (F) new trade Jul 24 — small-cap community bank at ~13x trailing / ~9.3x forward P/E and ~1.2x book value, steady double-digit earnings growth. ROK (B) new trade Jul 27 — industrial-automation momentum play on a post-earnings guidance raise, chosen over chip-sector momentum to stay clear of Burry's semiconductor short thesis. ASML (D) signal-exited Jul 28 at −10.19% (−$102) — Burry Sector Warning (semis) combined with P&L crossing ≤−10% triggered an automatic exit; neither T1 nor T2 was ever reached. SHW (C) new trade Jul 28 — Dow 30 paint & coatings name on a heavy-volume earnings beat and raised guidance, deliberately chosen with zero semiconductor/AI-capex exposure. TNET (F) hit T2 Jul 29 at $68.38 (+50.62%) — second take-profit tranche sold, final 1/3 running uncapped. TRV (E) new trade Jul 29 — Dow 30 insurer riding the day's rotation into financials/insurance after an ~88% Q2 EPS beat; XLF hit a record high the same session. MU (C) stopped out Jul 30 at −17.51% (blended −2.81%, −$28) — chip-sector rout (CEO share sale, China competition, AI-capex jitters); the Jun 18 T1 tranche cushioned the blended loss. AMD (E) signal-exited Jul 30 at −14.70% (−$147) — Burry Sector Warning combined with the broad Jul 29 semiconductor selloff crossed the −10% threshold, just short of the −15% hard stop. F (D) new trade Jul 30 — Ford beat-and-raise Q2 earnings, Citi upgrade to Buy, entered on the Jul 29 previous close ahead of the Jul 30 Fed-relief rally. RDW (G) new trade Jul 31 — space/defense infrastructure name on a freshly announced $1.8B, 10-year U.S. Space Systems Command contract, ~42-58% revenue growth and expanding gross margins, no exits today (no position breached stop/T1/T2/signal thresholds). O (A) new trade Aug 3 — Realty Income, first trading day of the week; weekly review (Step 3G) leaned toward A (100% win rate) and away from D/G (both 0% win rate) — Morningstar 9%-undervalued REIT flag (Jul 29) with a fresh Fitch 'A' rating and raised AFFO guidance the same day, chosen over CLX (same-day earnings, guided EPS decline) and ICE (thesis already ~17% played out). No exits Aug 3; RIVN crossed −11.41% (WATCH, no Burry conflict). ICFI (F) new trade Aug 4 — ICF International, re-rated down on a federal-budget-driven Q1 revenue miss despite reaffirmed FY26 guidance, ~11.6-12.1x forward earnings, consistent buybacks; chosen over Momentum (B) candidates (XPO, CASY, GLW, ZION/WAL) that didn't hold up on actual 3-month price history, and over EYE (too expensive on forward P/E). No exits Aug 4 despite a broad market rally (S&P +1.79%); FICO crossed to −14.82% (WATCH, just above its −15% stop) and RIVN improved slightly to −10.62% (still WATCH). RDW (G) hit T1 Aug 5 at $10.63 (+25.50%) — 1/3 sold, proceeds ~$418, remaining 2/3 runs toward T2 $12.71. AMGN (C) new trade Aug 5 — Amgen beat-and-raised Q2 EPS $6.29 vs. $5.62 consensus, revenue $10.1B vs. $9.4B, stock closed at a record high on a volume spike; chosen over QLYS (smaller-cap) and ANET (AI-datacenter-networking, Burry sector-adjacent), and over PLTR/CAT (both direct Burry shorts despite also spiking on volume). No stop-loss or signal exits Aug 5 despite Dow/S&P record closes; FICO improved marginally to −14.70% (still WATCH, $3.75 above stop) and RIVN improved to −8.27% (off the −10% signal threshold).*
+*Wins/Losses/P&L update when positions fully close. QCOM (D) stopped out Jun 25 at −17.31% (−$173). AIP (G) stopped out Jul 3 at −19.57% (−$196). SKYT (G) stopped out Jul 14 at −18.39% (−$184). CSCO (D) hit max hold (60 days) Jul 15, closed flat at −0.95% (−$9). XOM (E) hit max hold (60 days) Jul 17, closed at −7.48% (−$75). PENG (C) stopped out Jul 17 at −15.93% (−$159). CAT (B) hit max hold (63 days) Jul 21, closed essentially flat at +0.05% (+$0.40). IQV (A) hit max hold (62 days) Jul 21, closed at +17.18% (+$172) — the portfolio's first closed win. IBM (C) hit max hold (61 days) Jul 21, closed at a blended +7.2% (+$72), T1 gain partially given back. LRCX (B) stopped out Jul 21 at −18.16% (−$182) on the lingering semiconductor selloff. AMD (E) trade Jul 21 — sector-rotation play on the chip-sector rebound ahead of Advancing AI 2026. FICO (A) trade Jul 22 — value play on a wide-moat compounder trading ~39% below Morningstar fair value, no near-term earnings catalyst. RTX (D) trade Jul 23 — Q2 earnings/guidance beat-and-raise, backlog at a record $289B, defense-sector tailwind from the escalating Iran conflict. LHA (E) hit max hold (60 days) Jul 24, closed at a blended +18.2% (+$182) — T1 (1/3 at +26.5%) blended with the final 2/3 exit at +14.07% — the portfolio's largest closed win. ISTR (F) new trade Jul 24 — small-cap community bank at ~13x trailing / ~9.3x forward P/E and ~1.2x book value, steady double-digit earnings growth. ROK (B) new trade Jul 27 — industrial-automation momentum play on a post-earnings guidance raise, chosen over chip-sector momentum to stay clear of Burry's semiconductor short thesis. ASML (D) signal-exited Jul 28 at −10.19% (−$102) — Burry Sector Warning (semis) combined with P&L crossing ≤−10% triggered an automatic exit; neither T1 nor T2 was ever reached. SHW (C) new trade Jul 28 — Dow 30 paint & coatings name on a heavy-volume earnings beat and raised guidance, deliberately chosen with zero semiconductor/AI-capex exposure. TNET (F) hit T2 Jul 29 at $68.38 (+50.62%) — second take-profit tranche sold, final 1/3 running uncapped. TRV (E) new trade Jul 29 — Dow 30 insurer riding the day's rotation into financials/insurance after an ~88% Q2 EPS beat; XLF hit a record high the same session. MU (C) stopped out Jul 30 at −17.51% (blended −2.81%, −$28) — chip-sector rout (CEO share sale, China competition, AI-capex jitters); the Jun 18 T1 tranche cushioned the blended loss. AMD (E) signal-exited Jul 30 at −14.70% (−$147) — Burry Sector Warning combined with the broad Jul 29 semiconductor selloff crossed the −10% threshold, just short of the −15% hard stop. F (D) new trade Jul 30 — Ford beat-and-raise Q2 earnings, Citi upgrade to Buy, entered on the Jul 29 previous close ahead of the Jul 30 Fed-relief rally. RDW (G) new trade Jul 31 — space/defense infrastructure name on a freshly announced $1.8B, 10-year U.S. Space Systems Command contract, ~42-58% revenue growth and expanding gross margins, no exits today (no position breached stop/T1/T2/signal thresholds). O (A) new trade Aug 3 — Realty Income, first trading day of the week; weekly review (Step 3G) leaned toward A (100% win rate) and away from D/G (both 0% win rate) — Morningstar 9%-undervalued REIT flag (Jul 29) with a fresh Fitch 'A' rating and raised AFFO guidance the same day, chosen over CLX (same-day earnings, guided EPS decline) and ICE (thesis already ~17% played out). No exits Aug 3; RIVN crossed −11.41% (WATCH, no Burry conflict). ICFI (F) new trade Aug 4 — ICF International, re-rated down on a federal-budget-driven Q1 revenue miss despite reaffirmed FY26 guidance, ~11.6-12.1x forward earnings, consistent buybacks; chosen over Momentum (B) candidates (XPO, CASY, GLW, ZION/WAL) that didn't hold up on actual 3-month price history, and over EYE (too expensive on forward P/E). No exits Aug 4 despite a broad market rally (S&P +1.79%); FICO crossed to −14.82% (WATCH, just above its −15% stop) and RIVN improved slightly to −10.62% (still WATCH). RDW (G) hit T1 Aug 5 at $10.63 (+25.50%) — 1/3 sold, proceeds ~$418, remaining 2/3 runs toward T2 $12.71. AMGN (C) new trade Aug 5 — Amgen beat-and-raised Q2 EPS $6.29 vs. $5.62 consensus, revenue $10.1B vs. $9.4B, stock closed at a record high on a volume spike; chosen over QLYS (smaller-cap) and ANET (AI-datacenter-networking, Burry sector-adjacent), and over PLTR/CAT (both direct Burry shorts despite also spiking on volume). No stop-loss or signal exits Aug 5 despite Dow/S&P record closes; FICO improved marginally to −14.70% (still WATCH, $3.75 above stop) and RIVN improved to −8.27% (off the −10% signal threshold). COP (E) new trade Aug 6 — Energy was the day's leading sector as Brent/WTI spiked on fresh Iran Strait-of-Hormuz shipping restrictions, and COP layered a same-day Q2 earnings beat (EPS $3.24 vs. $2.88 est.) on top; chosen over XOM (no fresh catalyst), EOG and SLB (liquid but no catalyst today). No stop-loss or signal exits Aug 6 despite a softer broad tape (Dow −0.9%, S&P −0.2%, Nasdaq −0.1% on rising yields); FICO rallied +4.3% to −11.06% (still WATCH, well off the stop) while RIVN (−9.43%) and JBHT (−8.63%) both drifted further into WATCH territory, no Burry conflicts on either. A data correction was applied to NVO — yesterday's posted $49.15 did not reflect the confirmed Jul 31 ZEUS trial failure (−8.8%) or Aug 4 earnings-day drop (−6.0%); today's verified $44.53 close is now the basis, moving NVO's P&L from a stale +10.33% to a corrected −0.04%.*
 
 ---
 
@@ -34,7 +34,7 @@ updated: 2026-08-05
 
 | Exchange | Trades | Win Rate | Net P&L |
 |---|---|---|---|
-| NYSE (incl. NYSE American) | 20 | 75% (4 closed) | +$169 |
+| NYSE (incl. NYSE American) | 21 | 75% (4 closed) | +$169 |
 | NASDAQ | 19 | 0% (9 closed) | −$1,180 |
 | XETRA (DAX) | 1 | 100% (1 closed) | +$182 |
 | LSE | 0 | — | $0 |
@@ -53,7 +53,7 @@ updated: 2026-08-05
 | May 2026 | 11 | 0 | 0 | $0 | $0 |
 | June 2026 | 13 | 0 | 1 | −$173 | −$173 |
 | July 2026 | 19 | 4 | 9 | −$656 | −$656 |
-| August 2026 | 3 | 0 | 0 | $0 | $0 |
+| August 2026 | 4 | 0 | 0 | $0 | $0 |
 
 ---
 
@@ -87,51 +87,54 @@ updated: 2026-08-05
 | 2026-07-30 | AMD 📊 Signal exit | −$147 | +$5 |
 | 2026-08-05 | RDW 🟡 T1 @ $10.63 | +$85 | +$90 |
 
+*No realised cash event on 2026-08-06 — no position crossed a fresh T1/T2/stop/signal threshold.*
+
 ---
 
-## Open Book Snapshot (unrealised, updated 2026-08-05)
+## Open Book Snapshot (unrealised, updated 2026-08-06)
 
-*For reference only — not included in realised P&L tracking. Previous close (Aug 4) via Massive/Polygon `/prev` (EUR/USD, CRWD, NVO, HPQ, AMAT, GEV) before the free-tier rate limit hit, then Alpha Vantage `previousClose` for the remaining 25 open tickers plus the new AMGN entry (see portfolio page for full sourcing note), all 32 open tickers.*
+*For reference only — not included in realised P&L tracking. Previous close (Aug 5) via Massive/Polygon `/prev` for all 33 open tickers (including the new COP entry); a handful of Alpha Vantage `previousClose` reads (TNET, AVGO, NOC, MRNA, RIVN, WMT, CVX, CMCL, JBHT, RTX, ROK) were taken before its daily cap was hit and confirmed to align with the same Aug 5 date basis.*
 
 | Ticker | Entry | Curr | P&L% | Open P&L $ | Notes |
 |---|---|---|---|---|---|
-| TNET | $45.40 | $69.30 | +52.64% | +$175 (incl T1+T2) | 🟠 T1+T2 hit; final 1/3 running uncapped — largest open gain by a wide margin |
-| CRWD | $165.87* | $211.22 | +27.35% | +$183 (incl T1) | T1 hit Jul 15; 2/3 running toward T2 $248.80 |
-| RDW | $8.47 | $10.63 | +25.50% | +$170 (incl T1) | 🟡 T1 hit today; remaining 2/3 running toward T2 $12.71 |
-| AMAT | $458.17 | $546.62 | +19.31% | +$64 (T1+T2 realised separately + remaining − cost) | 🟠 T1+T2 hit; ⚠️ Burry Sector Warning (semis) — thesis intact |
-| HPQ | $25.01 | $28.82 | +15.23% | +$152 | |
-| JPM | $310.89 | $357.52 | +15.00% | +$150 | |
-| CMCL | $17.33 | $19.35 | +11.66% | +$117 | |
-| RTX | $194.88 | $217.93 | +11.83% | +$118 | |
-| SHW | $327.27 | $361.57 | +10.48% | +$105 | |
-| NVO | $44.55 | $49.15 | +10.33% | +$103 | ✅ Burry Long Aligned (defensive healthcare) |
-| CVX | $174.01 | $190.40 | +9.42% | +$94 | |
-| AVGO | $385.73 | $418.16 | +8.41% | +$84 | ⚠️ Burry Sector Warning (semis) — thesis intact |
-| GEV | $969.67 | $1,018.53 | +5.04% | +$50 | |
-| ISTR | $29.32 | $30.55 | +4.20% | +$42 | |
-| CMCSA | $24.22 | $24.93 | +2.93% | +$29 | |
-| DHI | $146.01 | $150.37 | +2.99% | +$30 | |
-| ICFI | $84.12 | $86.22 | +2.50% | +$25 | |
-| OTIS | $72.00 | $73.64 | +2.28% | +$23 | |
-| VRTX | $477.08 | $478.71 | +0.34% | +$3 | |
-| NOC | $548.01 | $551.55 | +0.65% | +$6 | |
-| AMGN | $390.02 | $390.02 | 0.00% | $0 | New today — Strategy C, Volume Spike; no Burry conflict |
-| O | $63.87 | $62.90 | −1.52% | −$15 | ✅ Burry Long Aligned (defensive REIT) |
-| PEP | $141.92 | $139.10 | −1.99% | −$20 | ✅ Burry Long Aligned (defensive consumer) |
-| WMT | $111.84 | $111.55 | −0.26% | −$3 | |
-| RIGL | $40.26 | $38.70 | −3.87% | −$39 | |
-| ROK | $462.16 | $445.23 | −3.66% | −$37 | |
-| TRV | $397.22 | $377.15 | −5.05% | −$51 | |
-| F | $15.28 | $14.24 | −6.81% | −$68 | |
-| MRNA | $59.75 | $56.99 | −4.62% | −$31 (incl T1) | T1 hit Jul 2; stop $50.79 well below, no Burry conflict |
-| JBHT | $298.41 | $274.48 | −8.02% | −$80 | Post-earnings valuation pullback, no Burry conflict |
-| RIVN | $17.18 | $15.76 | −8.27% | −$83 | Improved off the −10% signal threshold; no Burry conflict; stop $14.60 $1.16 away |
-| FICO | $1,227.34 | $1,046.99 | −14.70% | −$147 | ⚠️ WATCH (critical) — $3.75 above the $1,043.24 stop; no Burry conflict, no new fact pattern beyond the existing Q1 miss |
-| **Open book total** | | | | **+$1,149** | |
+| TNET | $45.40 | $68.37 | +50.60% | +$169 (incl T1+T2) | 🟠 T1+T2 hit; final 1/3 running uncapped — largest open gain by a wide margin |
+| RDW | $8.47 | $10.72 | +26.56% | +$177 (incl T1) | 🟡 T1 hit Aug 5; remaining 2/3 running toward T2 $12.71 |
+| CRWD | $165.87* | $209.86 | +26.52% | +$177 (incl T1) | T1 hit Jul 15; 2/3 running toward T2 $248.80 |
+| CMCL | $17.33 | $20.69 | +19.39% | +$194 | Only $0.97 from a T1 trigger tomorrow |
+| AMAT | $458.17 | $534.24 | +16.60% | +$56 (T1+T2 realised separately + remaining − cost) | 🟠 T1+T2 hit; ⚠️ Burry Sector Warning (semis) — thesis intact |
+| JPM | $310.89 | $359.24 | +15.55% | +$156 | |
+| RTX | $194.88 | $222.31 | +14.07% | +$141 | |
+| HPQ | $25.01 | $28.52 | +14.03% | +$140 | |
+| SHW | $327.27 | $369.68 | +12.96% | +$130 | |
+| CVX | $174.01 | $186.41 | +7.13% | +$71 | |
+| AVGO | $385.73 | $418.28 | +8.44% | +$84 | ⚠️ Burry Sector Warning (semis) — thesis intact |
+| GEV | $969.67 | $1,017.96 | +4.98% | +$50 | |
+| AMGN | $390.02 | $407.83 | +4.57% | +$46 | Strategy C, Volume Spike; no Burry conflict |
+| ISTR | $29.32 | $30.51 | +4.06% | +$41 | |
+| DHI | $146.01 | $151.45 | +3.73% | +$37 | |
+| CMCSA | $24.22 | $24.75 | +2.19% | +$22 | |
+| OTIS | $72.00 | $73.10 | +1.53% | +$15 | |
+| VRTX | $477.08 | $484.83 | +1.62% | +$16 | |
+| NOC | $548.01 | $557.47 | +1.73% | +$17 | |
+| ICFI | $84.12 | $84.81 | +0.82% | +$8 | |
+| RIGL | $40.26 | $40.48 | +0.55% | +$6 | |
+| WMT | $111.84 | $112.34 | +0.45% | +$4 | |
+| COP | $115.04 | $115.04 | 0.00% | $0 | New today — Strategy E, Sector Rotation; no Burry conflict |
+| NVO | $44.55 | $44.53 | −0.04% | $0 | Data-corrected today (see Strategy Breakdown note); ✅ Burry Long Aligned (defensive healthcare) |
+| O | $63.87 | $62.70 | −1.83% | −$18 | ✅ Burry Long Aligned (defensive REIT) |
+| ROK | $462.16 | $450.05 | −2.62% | −$26 | |
+| PEP | $141.92 | $138.78 | −2.21% | −$22 | ✅ Burry Long Aligned (defensive consumer) |
+| TRV | $397.22 | $382.45 | −3.72% | −$37 | |
+| MRNA | $59.75 | $56.26 | −5.85% | −$39 (incl T1) | T1 hit Jul 2; stop $50.79 well below, no Burry conflict |
+| F | $15.28 | $14.13 | −7.53% | −$75 | |
+| JBHT | $298.41 | $272.66 | −8.63% | −$86 | Post-earnings valuation pullback, no Burry conflict — drifting further into WATCH |
+| RIVN | $17.18 | $15.56 | −9.43% | −$94 | No Burry conflict; stop $14.60 $1.43 away — drifting further into WATCH |
+| FICO | $1,227.34 | $1,091.55 | −11.06% | −$111 | ⚠️ WATCH — improved +4.3% today, now $48.31 above the $1,043.24 stop; no Burry conflict |
+| **Open book total** | | | | **+$1,249** | |
 
 *CRWD entry split-adjusted 4:1 effective Jul 2 ($663.46→$165.87).*
 *🔴 QCOM closed Jun 25: −$173 realised. 🔴 AIP closed Jul 3: −$196 realised. 🔴 SKYT closed Jul 14: −$184 realised. ⚪ CSCO closed Jul 15: −$9 realised (max hold). ⚪ XOM closed Jul 17: −$75 realised (max hold). 🔴 PENG closed Jul 17: −$159 realised (stopped out). ⚪ CAT closed Jul 21: +$0.40 realised (max hold, 63 days). ⚪ IQV closed Jul 21: +$172 realised (max hold, 62 days). ⚪ IBM closed Jul 21: +$72 realised (max hold, 61 days, blended with May 30 T1). 🔴 LRCX closed Jul 21: −$182 realised (stopped out at $306.76, −18.16%). ⚪ LHA closed Jul 24: +$182 realised (max hold, 60 days, blended: T1 1/3 at +26.5% + final 2/3 at +14.07%). 📊 ASML closed Jul 28: −$102 realised (signal exit, −10.19%, Burry Sector Warning + P&L ≤ −10%). 🔴 MU closed Jul 30: −$28 realised (stopped out at $739.00, −17.51%, blended −2.81% incl. Jun 18 T1). 📊 AMD closed Jul 30: −$147 realised (signal exit at $429.56, −14.70%, Burry Sector Warning + P&L ≤ −10%). 🟡 RDW T1 Aug 5: +$85 realised on the tranche. Total realised (all cash events): +$90 | Closed positions blended: −$829 | T1/T2 on open positions: +$919.*
-*AMGN (Amgen Inc.) added as the day's new trade (Strategy C, Volume Spike) — Q2 beat-and-raise (EPS $6.29 vs. $5.62 est., revenue $10.1B vs. $9.4B est.) drove a record-high close on outsized volume, entered at the Aug 4 previous close. RDW hit T1 today at $10.63 (+25.50%) — the only mechanical threshold crossed. No stop-loss or signal exits despite Dow/S&P record closes (Nasdaq lagged as capital rotated out of expensive AI names). FICO improved marginally to −14.70% (still WATCH, $3.75 above stop) and RIVN improved to −8.27% (off the −10% signal threshold, no Burry conflict on either).*
+*COP (ConocoPhillips) added as the day's new trade (Strategy E, Sector Rotation) — Energy was today's leading sector on a fresh Strait of Hormuz risk premium (Brent +3.8%, WTI +2.8%), reinforced by a same-day Q2 earnings beat (EPS $3.24 vs. $2.88 est.). No stop-loss or signal exits Aug 6 despite a softer broad tape (Dow −0.9%, S&P −0.2%, Nasdaq −0.1%). FICO rallied to −11.06% (still WATCH, well off stop) while RIVN (−9.43%) and JBHT (−8.63%) drifted further into WATCH, no Burry conflicts on either. NVO's price was corrected today (see Strategy Breakdown note) after yesterday's figure was found to be stale.*
 
 ---
 

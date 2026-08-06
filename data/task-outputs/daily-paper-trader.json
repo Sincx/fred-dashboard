@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-08-06T23:53:06+02:00",
+      "summary": "COP (E)",
+      "picks": {
+        "p1": {
+          "ticker": "COP",
+          "strategy": "E — Sector Rotation",
+          "entry": 115.04,
+          "stop": 97.78,
+          "t1": 143.80,
+          "t2": 172.56
+        }
+      },
+      "content": "ConocoPhillips (COP) picked up at the previous close ($115.04) — Energy was today's leading sector as Brent/WTI spiked on fresh Iran Strait-of-Hormuz shipping restrictions, reinforced by a same-day Q2 earnings beat (EPS $3.24 vs. $2.88 est.) and $3.0B returned to shareholders. No exits today despite a softer broad tape (Dow −0.9%, S&P −0.2%): no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO rallied to −11.06% (still WATCH, well off stop) while RIVN (−9.43%) and JBHT (−8.63%) drifted further into WATCH, none with a Burry conflict. A stale NVO price from yesterday was corrected to its verified $44.53 close. Portfolio net P&L: +$1,248 (+2.66% on $47,000)."
+    },
+    {
       "runAt": "2026-08-05T23:48:26+02:00",
       "summary": "AMGN (C)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Amgen (AMGN) picked up at the previous close ($390.02) — Q2 2026 beat-and-raise (EPS $6.29 vs. $5.62 est., revenue $10.1B vs. $9.4B est.) drove a record-high close on outsized volume, with no Burry conflict. RDW hit T1 today (+25.50% @ $10.63) — 1/3 sold, ~$418 proceeds, remaining 2/3 runs toward T2. No other exits: FICO improved marginally to −14.70% (WATCH, $3.75 above stop) and RIVN improved to −8.27% (off the −10% signal threshold), neither with a Burry conflict. Portfolio net P&L: +$1,148 (+2.50% on $46,000)."
-    },
-    {
-      "runAt": "2026-08-04T23:55:11+02:00",
-      "summary": "ICFI (F)",
-      "picks": {
-        "p1": {
-          "ticker": "ICFI",
-          "strategy": "F — Small Cap Value",
-          "entry": 84.12,
-          "stop": 71.50,
-          "t1": 105.15,
-          "t2": 126.18
-        }
-      },
-      "content": "ICF International (ICFI) picked up at the previous close ($84.12) — re-rated down on a federal-budget-driven Q1 revenue miss despite reaffirmed FY26 guidance, trading at ~11.6-12.1x forward earnings with consistent buybacks. No exits today despite a broad market rally (S&P +1.79%, Nasdaq +2.59%): no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO slid to −14.82% (just above its −15% stop) and RIVN improved slightly to −10.62%, both WATCH with no Burry conflict. Portfolio net P&L: +$599 (+1.33% on $45,000)."
     }
   ]
 }
