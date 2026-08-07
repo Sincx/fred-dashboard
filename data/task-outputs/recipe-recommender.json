@@ -5,14 +5,14 @@
   "icon": "🍽",
   "runs": [
     {
+      "runAt": "2026-08-07T09:00:00+01:00",
+      "summary": "3 new recipes: Sheet-Pan Sausage & Sweetcorn Traybake, Dan Dan Noodles, Grilled Figs with Prosciutto & Blue Cheese",
+      "content": "1. Sheet-Pan Sausage, Sweetcorn and Pepper Traybake — inspired by Lucinda Scala Quinn. A 40-minute, one-tray weeknight fix built on peak-season corn and peppers.\n2. Dan Dan Noodles — inspired by Anthony Bourdain. A Sichuan technique piece: homemade chilli oil and numbing peppercorn balanced against salt, sour and heat.\n3. Grilled Figs with Prosciutto, Blue Cheese and Honey — inspired by Nigel Slater. The wild card: an assembly built around figs just coming into season, barely cooked."
+    },
+    {
       "runAt": "2026-07-31T09:00:00+02:00",
       "summary": "3 new recipes: Ginger Scallion Noodles, Bún Chả, Plum and Almond Frangipane Tart",
       "content": "1. Ginger Scallion Noodles with Crispy Chilli Oil — inspired by David Chang. A 20-minute Momofuku pantry classic: spring onion, ginger, and hot oil doing all the work.\n2. Bún Chả (Vietnamese Grilled Pork with Noodles) — inspired by Anthony Bourdain. The Hanoi dish he shared with Obama — grilled pork, herbs, and a sharp nuoc cham dipping sauce.\n3. Plum and Almond Frangipane Tart — inspired by Nigel Slater. The wild card: a weekend bake built around early-August plums at their sharp-sweet best."
-    },
-    {
-      "runAt": "2026-07-27T09:16:12.8694965+02:00",
-      "summary": "3 new recipes: Seared Trout with Brown Butter & Capers, Momofuku-Style Pork and Miso Ramen, The Perfect French Omelette",
-      "content": "1. Seared Trout with Brown Butter, Capers and Green Beans — inspired by Nigel Slater. A fast, 25-minute weeknight supper built on one good piece of fish and a simple brown butter sauce.\n2. Momofuku-Style Pork and Miso Ramen — inspired by David Chang. A weekend technique project: slow-poached pork, a miso-tare broth, and soft-cooked ramen eggs.\n3. The Perfect French Omelette (Bourdain's Kitchen Confidential Test) — inspired by Anthony Bourdain. The wild card: the plain omelette he used to judge a cook's real skill, ready in 10 minutes."
     }
   ]
 }
