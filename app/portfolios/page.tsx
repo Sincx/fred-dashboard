@@ -39,10 +39,11 @@ function parsePositionsTable(md: string): { headers: string[]; rows: string[][] 
 }
 
 function PnlBadge({ val }: { val: string }) {
-  const neg = val.startsWith("−") || val.startsWith("-");
-  const pos = val.startsWith("+");
+  const clean = val.replace(/\*\*/g, "").trim();
+  const neg = clean.startsWith("−") || clean.startsWith("-");
+  const pos = clean.startsWith("+");
   const cls = neg ? "badge-red" : pos ? "badge-green" : "badge-gray";
-  return <span className={cls}>{val}</span>;
+  return <span className={cls}>{clean}</span>;
 }
 
 function isPnlHeader(h: string) {
@@ -165,6 +166,35 @@ function EquityStats({ md }: { md: string }) {
   );
 }
 
+function extractSectionOrNull(md: string, heading: string): string | null {
+  const lines = md.split("\n");
+  const start = lines.findIndex((l) => l.toLowerCase().includes(heading.toLowerCase()) && l.startsWith("#"));
+  if (start === -1) return null;
+  const end = lines.findIndex((l, i) => i > start && l.match(/^#{1,2} /));
+  return lines.slice(start, end === -1 ? undefined : end).join("\n");
+}
+
+function parseSectionTable(md: string, sectionName: string) {
+  const section = extractSectionOrNull(md, sectionName);
+  if (!section) return null;
+  return parsePositionsTable(section);
+}
+
+function parseTradingYTD(md: string) {
+  const section = extractSectionOrNull(md, "YTD Summary");
+  if (!section) return null;
+  const get = (label: string) => {
+    const m = section.match(new RegExp(label + "[^|]*\\|\\s*([^|\\n]+)", "i"));
+    return m ? m[1].replace(/\*\*/g, "").trim() : "";
+  };
+  return { net: get("Net realised gains"), gross: get("Total gross P&L"), transactions: get("Transactions") };
+}
+
+function parseTradingCash(md: string): string {
+  const m = md.match(/\|\s*EUR\s*\|\s*\*\*([^*]+)\*\*/);
+  return m ? m[1].trim() : "";
+}
+
 // ── Equity Portfolio — custom view with TA recommendations + MF ─────────────
 
 function parseEquityMF(md: string): Record<string, string> {
@@ -258,6 +288,151 @@ function EquityPortfolioView({ md }: { md: string }) {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+// ── Trading Portfolio — long equity, shorts, options, closed ────────────────
+
+function SectionTable({
+  table,
+  type = "long",
+}: {
+  table: { headers: string[]; rows: string[][] };
+  type?: "long" | "short" | "options" | "closed";
+}) {
+  const signalIdx  = table.headers.findIndex((h) => /^signal$/i.test(h.trim()));
+  const typeColIdx = table.headers.findIndex((h) => /^type$/i.test(h.trim()));
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-xs border-collapse">
+        <thead>
+          <tr style={{ borderBottom: "1px solid var(--border)" }}>
+            {table.headers.map((h) => (
+              <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.rows.map((row, i) => (
+            <tr key={i} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
+              {row.map((cell, j) => {
+                const h   = table.headers[j] ?? "";
+                const raw = cell.replace(/\*\*/g, "").trim();
+                if (j === signalIdx) {
+                  const text = raw.replace(/[^\w\s]/g, "").trim();
+                  return (
+                    <td key={j} className="py-2 px-3">
+                      {text ? <SignalBadge signal={text} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
+                    </td>
+                  );
+                }
+                if (isPnlHeader(h) || /net.*€/i.test(h) || /gross.*€/i.test(h)) {
+                  return <td key={j} className="py-2 px-3"><PnlBadge val={raw} /></td>;
+                }
+                if (j === typeColIdx && typeColIdx !== -1) {
+                  const isPut = /put/i.test(raw);
+                  return (
+                    <td key={j} className="py-2 px-3">
+                      <span className="px-2 py-0.5 rounded text-xs font-semibold"
+                        style={{ backgroundColor: isPut ? "rgba(139,92,246,0.15)" : "rgba(16,185,129,0.15)", color: isPut ? "#a78bfa" : "var(--accent-green)" }}>
+                        {raw}
+                      </span>
+                    </td>
+                  );
+                }
+                if (/^notes$/i.test(h.trim())) {
+                  const truncated = raw.length > 90 ? raw.slice(0, 90) + "…" : raw;
+                  return <td key={j} className="py-2 px-3" style={{ color: "var(--text-muted)", maxWidth: 220 }}>{truncated}</td>;
+                }
+                return <td key={j} className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{raw}</td>;
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function TradingPortfolioView({ md }: { md: string }) {
+  const ytd         = parseTradingYTD(md);
+  const cash        = parseTradingCash(md);
+  const openTable   = parseSectionTable(md, "Open Positions");
+  const shortTable  = parseSectionTable(md, "Short Positions");
+  const optsTable   = parseSectionTable(md, "Options Positions");
+  const closedTable = parseSectionTable(md, "Closed Positions");
+
+  return (
+    <div className="space-y-6">
+      {/* Stats bar */}
+      <div className="grid grid-cols-3 gap-3">
+        {cash && (
+          <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Cash</p>
+            <p className="font-semibold text-sm" style={{ color: "var(--accent-green)" }}>{cash}</p>
+          </div>
+        )}
+        {ytd?.net && (
+          <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>YTD Net</p>
+            <p className="font-semibold text-sm" style={{
+              color: ytd.net.includes("−") || ytd.net.includes("-") ? "var(--accent-red)" : "var(--accent-green)"
+            }}>{ytd.net}</p>
+          </div>
+        )}
+        {ytd?.transactions && (
+          <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Transactions</p>
+            <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{ytd.transactions}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Long equity positions */}
+      {openTable && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-green)", opacity: 0.85 }}>
+            Long Equity · {openTable.rows.length} positions
+          </p>
+          <SectionTable table={openTable} type="long" />
+        </div>
+      )}
+
+      {/* Short equity positions */}
+      {shortTable && shortTable.rows.length > 0 && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-red)", opacity: 0.85 }}>
+            Short Equity · {shortTable.rows.length} position{shortTable.rows.length !== 1 ? "s" : ""}
+          </p>
+          <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(239,68,68,0.3)", backgroundColor: "rgba(239,68,68,0.03)" }}>
+            <SectionTable table={shortTable} type="short" />
+          </div>
+        </div>
+      )}
+
+      {/* Options positions */}
+      {optsTable && optsTable.rows.length > 0 && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "#a78bfa", opacity: 0.9 }}>
+            Options · {optsTable.rows.length} position{optsTable.rows.length !== 1 ? "s" : ""}
+          </p>
+          <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(139,92,246,0.3)", backgroundColor: "rgba(139,92,246,0.03)" }}>
+            <SectionTable table={optsTable} type="options" />
+          </div>
+        </div>
+      )}
+
+      {/* Closed positions */}
+      {closedTable && closedTable.rows.length > 0 && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)", opacity: 0.85 }}>
+            Closed Positions · {closedTable.rows.length} exits
+          </p>
+          <SectionTable table={closedTable} type="closed" />
+        </div>
+      )}
     </div>
   );
 }
@@ -503,6 +678,13 @@ interface TradeIdea {
   detail: string;
 }
 
+interface FreeRideItem {
+  ticker: string;
+  detail: string;
+  freePos: string;
+  status: string;
+}
+
 interface BriefingData {
   raw: string;
   isPlaceholder: boolean;
@@ -514,6 +696,7 @@ interface BriefingData {
   adds: TradeIdea[];
   newPositions: TradeIdea[];
   noTrades: string;
+  freeRides: FreeRideItem[];
   risks: string[];
   actions: string[];
 }
@@ -612,6 +795,24 @@ function parseBriefing(md: string): BriefingData {
     if (noTradesMatch) noTrades = noTradesMatch[0].trim();
   }
 
+  // Extract free ride opportunities
+  const freeRidesBlock = md.match(/FREE RIDE OPPORTUNITIES([\s\S]*?)(?=PORTFOLIO RISKS|NEXT ACTIONS|═|$)/i);
+  const freeRides: FreeRideItem[] = [];
+  if (freeRidesBlock) {
+    let current: FreeRideItem | null = null;
+    for (const line of freeRidesBlock[1].split("\n").map((l) => l.trim()).filter(Boolean)) {
+      const tickerMatch = line.match(/^([A-Z]{1,6})\s*:/);
+      if (tickerMatch && !/^status/i.test(line)) {
+        if (current) freeRides.push(current);
+        current = { ticker: tickerMatch[1], detail: line.slice(tickerMatch[0].length).trim(), freePos: "", status: "" };
+      } else if (current) {
+        if (/^Status:/i.test(line)) current.status = line.replace(/^Status:\s*/i, "").trim();
+        else if (/Free position:|shares at zero/i.test(line)) current.freePos = line;
+      }
+    }
+    if (current) freeRides.push(current);
+  }
+
   // Extract risks
   const risksBlock = md.match(/PORTFOLIO RISKS TO WATCH([\s\S]*?)(?=NEXT ACTIONS|$)/i);
   const risks: string[] = [];
@@ -632,7 +833,7 @@ function parseBriefing(md: string): BriefingData {
     }
   }
 
-  return { raw: md, isPlaceholder, date, snapshot: snap, signals, shape, sells, adds, newPositions, noTrades, risks, actions };
+  return { raw: md, isPlaceholder, date, snapshot: snap, signals, shape, sells, adds, newPositions, noTrades, freeRides, risks, actions };
 }
 
 const SIGNAL_STYLES: Record<string, { bg: string; color: string; label: string }> = {
@@ -674,6 +875,27 @@ function TradeCard({ idea, type }: { idea: TradeIdea; type: "sell" | "add" | "ne
       <p className="text-sm font-medium mb-1" style={{ color: "var(--text-primary)" }}>{idea.action}</p>
       {idea.rationale && <p className="text-xs" style={{ color: "var(--text-secondary)" }}>{idea.rationale}</p>}
       {idea.detail    && <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{idea.detail.trim()}</p>}
+    </div>
+  );
+}
+
+function FreeRideCard({ item }: { item: FreeRideItem }) {
+  const isAlreadyFree = /already free/i.test(item.status);
+  const isExecute     = /execute/i.test(item.status);
+  const borderColor   = isAlreadyFree ? "var(--accent-green)" : isExecute ? "#f97316" : "#60a5fa";
+  const bgColor       = isAlreadyFree ? "rgba(16,185,129,0.06)" : isExecute ? "rgba(249,115,22,0.06)" : "rgba(96,165,250,0.06)";
+  const label         = isAlreadyFree ? "✓ ALREADY FREE" : "FREE RIDE";
+
+  return (
+    <div className="rounded-lg p-4" style={{ border: `1px solid ${borderColor}`, backgroundColor: bgColor }}>
+      <div className="flex items-center gap-2 mb-2">
+        <span className="font-mono font-bold text-sm" style={{ color: "var(--text-primary)" }}>{item.ticker}</span>
+        <span className="text-xs px-1.5 py-0.5 rounded font-semibold"
+          style={{ backgroundColor: borderColor + "22", color: borderColor }}>{label}</span>
+      </div>
+      {item.detail  && <p className="text-sm mb-1" style={{ color: "var(--text-primary)" }}>{item.detail}</p>}
+      {item.freePos && <p className="text-xs mb-1" style={{ color: "var(--text-secondary)" }}>{item.freePos}</p>}
+      {item.status  && <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>Status: {item.status}</p>}
     </div>
   );
 }
@@ -861,6 +1083,18 @@ function MorningBriefing({ md }: { md: string }) {
         )}
       </div>
 
+      {/* Free ride opportunities */}
+      {b.freeRides.length > 0 && (
+        <div>
+          <h3 className="text-sm font-semibold mb-3" style={{ color: "var(--text-secondary)" }}>
+            Free Ride Opportunities
+          </h3>
+          <div className="space-y-2">
+            {b.freeRides.map((item, i) => <FreeRideCard key={i} item={item} />)}
+          </div>
+        </div>
+      )}
+
       {/* Risks */}
       {b.risks.length > 0 && (
         <div className="card">
@@ -947,8 +1181,7 @@ export default function PortfoliosPage() {
             </div>
           ) : (
             <div className="card">
-              <EquityStats md={data.trading} />
-              <PortfolioTable md={data.trading} />
+              <TradingPortfolioView md={data.trading} />
             </div>
           )}
         </>
