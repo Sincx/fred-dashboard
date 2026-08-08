@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-08T23:54:53+02:00",
+      "summary": "Memory index updated — 7 new podcast pages created (resolving the long-standing recommendation-batches-produce-no-pages gap), portfolio-refresh Alpha Vantage fallback logged, 1 new Meta cross-domain connection (WKL vs. IBM AI-doom narrative), 1 open thread lightly updated (GSK recovered)",
+      "content": [
+        "Domain Content Status — Podcasts: 7 new podcast-{slug}.md pages created 2026-08-08 by podcast-summarizer — Gavin Baker (Invest Like the Best), Bernard Hampton (Me Myself and AI), Business Breakdown x2 (Toast, Auto1), Dividend Talk Q2 2026, Diary of a CEO x2 (Ray Dalio, Alex Hormozi); verified against actual files in wiki/podcasts/ — true count is 35 pages, correcting a stale '25' tally that had drifted out of sync",
+        "Domain Content Status — Crypto: portfolio-refresh ran 2026-08-08 — 25 prices updated, biggest mover TST +27.19%; massive.com batch snapshot 403'd and yfinance hit an SSL cert error, so equities were fetched via Alpha Vantage GLOBAL_QUOTE instead (18 calls, within free-tier limit) — logged as a tool workaround for future refresh runs",
+        "Domain Content Status — Finance: paper trading — LAD entered 2026-08-07 (Strategy B Momentum, Lithia Motors), FICO stopped out same day (-15.93%) on a Wolfe Research downgrade; RIVN and JBHT both crossed the -10% watch threshold but held; net open positions still 33",
+        "Domain Content Status — Meta: run count 35→37 (covers 08-07 and 08-08 runs), added the 2026-08-08 highlight — Fred's live Wolters Kluwer position is directly tested by a same-day podcast covering RELX/WKL/TXN resilience vs. IBM's AI-doom crash, unlinked",
+        "Open Threads: GSK thread updated — portfolio-management-briefing marked it 'Hold (recovered)' on 2026-08-07; still no wiki write-up of the recovery",
+        "Bumped 'Last updated' date to 2026-08-08",
+        "Appended one memory-update log line to log.md for 2026-08-08"
+      ]
+    },
+    {
       "runAt": "2026-08-07T23:53:00+02:00",
       "summary": "Memory index updated — live trading portfolio reshuffled (DKNG exited, FLUT/WKL/NBIS/ORCL added), Oracle short-corroboration model page flagged unindexed, 1 new Meta cross-domain connection (Workday short-vs-long gap)",
       "content": [
@@ -18,18 +31,6 @@
         "Open Threads: reconciliation-gap thread narrowed — DKNG's exit is now fully traceable in trading.md; ADBE/PRX still lack a traceable entry-trade log line",
         "Bumped 'Last updated' date to 2026-08-07",
         "Appended one memory-update log line to log.md for 2026-08-07"
-      ]
-    },
-    {
-      "runAt": "2026-08-06T23:53:00+02:00",
-      "summary": "Memory index updated — new podcast-recommender batch (Training Data et al.), 1 new Meta cross-domain connection (ElevenLabs productivity data vs. AI & Tech's future-of-work page), no threads resolved",
-      "content": [
-        "Domain Content Status — Meta: run count 34→35, added the 2026-08-06 wiki-thinker highlight — today's new \"Training Data\" podcast recommendation names ElevenLabs' ~$400M revenue on ~400 people, a concrete real-world data point for the \"who captures the productivity gains\" question AI & Tech's own future-of-work page poses only in the abstract",
-        "Domain Content Status — Podcasts: added the 2026-08-06 podcast-recommender batch — Training Data, Forward Guidance, FoundMyFitness, Nudge — none of the recommendation batches since 07-16 have yet produced actual podcast-{slug}.md pages",
-        "Open Threads: added new thread — AI-Tech/Podcasts ElevenLabs-productivity-gains connection (2026-08-06), cross-link candidate for ai-tech/ai-future-of-work.md",
-        "No change needed: 2026-08-06's Burry Trading Post clipping (ORCL/NBIS shorts, FISV/FLUT/MELI/JD longs) was already fully indexed by clippings-sorter with reverse links — no memory-index update required beyond what log.md already records",
-        "Bumped 'Last updated' date to 2026-08-06",
-        "Appended one memory-update log line to log.md for 2026-08-06"
       ]
     }
   ]
