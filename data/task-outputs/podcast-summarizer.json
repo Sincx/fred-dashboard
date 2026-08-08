@@ -5,12 +5,20 @@
   "icon": "🎙",
   "runs": [
     {
-      "runAt": "2026-08-01T10:02:59+02:00",
-      "summary": "No new podcasts to summarise",
-      "content": "Nothing to summarise this run."
+      "runAt": "2026-08-08T10:05:41+02:00",
+      "summary": "7 podcast pages created",
+      "content": [
+        "Invest Like the Best — Gavin Baker, \"AI Market Jitters\"",
+        "Me, Myself and AI — AI Upskilling at Scale: Bank of America's Bernard Hampton",
+        "Business Breakdown — Toast",
+        "Business Breakdown — Auto1",
+        "Dividend Talk — Q2 2026 Earnings Season",
+        "Diary of a CEO — Ray Dalio: I Predicted the 2008 Crash, I Know What Comes Next",
+        "Diary of a CEO — Alex Hormozi's Warning: Stop Chasing AI, Build This Instead!"
+      ]
     },
     {
-      "runAt": "2026-07-27T09:14:38+02:00",
+      "runAt": "2026-08-01T10:02:59+02:00",
       "summary": "No new podcasts to summarise",
       "content": "Nothing to summarise this run."
     }
