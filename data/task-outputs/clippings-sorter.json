@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-08-09T23:20:13+02:00",
+                     "summary":  "No new clippings",
+                     "content":  "Clippings folder empty."
+                 },
+                 {
                      "runAt":  "2026-08-09T11:31:25+02:00",
                      "summary":  "6 clippings processed, 1 duplicate removed",
                      "content":  "1. \"10 Best Growth Stocks to Buy for the Long Term\" (Morningstar, Aug 5) -> finance/morningstar. 10 wide-moat undervalued growth picks (SAP, Ferrovial, TSMC, Tradeweb, Amphenol, Rollins, Bentley Systems, Autodesk, Ecolab, TransDigm).\n2. \"2 Undervalued Stocks That Just Raised Dividends\" (Morningstar, Aug 7) -> finance/morningstar. Albemarle (new) + Clorox (reconfirmed).\n3. \"Are LSEG and RELX Stocks Really 'AI Losers'?\" (Morningstar, Aug 6) -> finance/morningstar. Both retain wide moat; AI framed as tailwind, not threat.\n4. \"The 10 Best Companies to Invest in Now\" (Morningstar, Aug 3 edition) -> finance/morningstar. Not a duplicate of the June 30 edition -- same recurring screen, new data cutoff, 6 of 10 names replaced.\n5. \"Trading Post August 6, 2026\" (Michael Burry) -> exact duplicate of an already-ingested clipping, deleted without reprocessing.\n6. \"Trading Post August 7, 2026\" (Michael Burry) -> finance/investor-letters. New long: Freddie Mac (FMCC) at $5.43. Added to MELI/LULU/FISV/ZTS; more SOXX puts + outright SOXX short.\n\nParsed 24 stock recommendations total. morningstar-watchlist.md updated (14 new rows, 4 refreshed). Pipeline config.py updated: 8 new Morningstar-US tickers (FER, TSM, TW, ROL, BSY, ECL, TDG, ALB), 1 new Burry ticker (FMCC); row mapping validated with no gaps. index.md updated (5 entries)."
-                 },
-                 {
-                     "runAt":  "2026-08-08T12:20:00+02:00",
-                     "summary":  "No new clippings",
-                     "content":  "Clippings folder empty."
                  }
              ]
 }
