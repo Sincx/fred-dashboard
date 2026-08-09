@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-09T23:54:21+02:00",
+      "summary": "Memory index updated — 5 new Finance source pages logged (4 Morningstar screens + Burry's Aug 7 letter, new FMCC long), first RELX/ZTS/LULU/MELI Magic Formula + TA screen, and a first-time 24-stock mf-update ranking run with no dedicated page yet",
+      "content": [
+        "Domain Content Status — Finance: clippings-sorter (2026-08-09) added source-morningstar-10-growth-stocks-2026-08-05.md, source-morningstar-dividend-raises-2026-08-07.md, source-morningstar-lseg-relx-ai-losers-2026-08-06.md, source-morningstar-10-best-companies-2026-08-03.md, and source-burry-trading-post-2026-08-07.md (new long Freddie Mac FMCC @ $5.43, GSE-reform thesis; topped up MELI/lululemon/Fiserv, averaged down Zoetis, added SOXX puts + outright SOXX short); morningstar-watchlist.md grew by 14 wide-moat names + 1 narrow-moat (Albemarle); all pages already wired into index.md by the sorter itself",
+        "Domain Content Status — Finance: new finance/magic-formula-relx-zts-lulu-meli-2026-08-09.md (Magic Formula screen on Burry/Morningstar picks — LULU & ZTS tie top, RELX ROC disregarded as NWC-distorted) paired with 4 technical-analyst verdicts (RELX/ZTS bearish, LULU/MELI neutral-mixed)",
+        "Domain Content Status — Finance: logged a first-time 'mf-update' run scoring Magic Formula ranks across 24 stocks spanning both live portfolios (top 3: MGNS, DNLM, ADBE) — flagged as having no dedicated wiki page yet; unclear if this becomes a recurring task, worth watching",
+        "No open threads resolved or added this run; podcast/trade/wiki-thinker counts unchanged from 2026-08-08 (verified via log.md — no new entries in those categories)",
+        "Bumped 'Last updated' date to 2026-08-09",
+        "Appended one memory-update log line to log.md for 2026-08-09"
+      ]
+    },
+    {
       "runAt": "2026-08-08T23:54:53+02:00",
       "summary": "Memory index updated — 7 new podcast pages created (resolving the long-standing recommendation-batches-produce-no-pages gap), portfolio-refresh Alpha Vantage fallback logged, 1 new Meta cross-domain connection (WKL vs. IBM AI-doom narrative), 1 open thread lightly updated (GSK recovered)",
       "content": [
@@ -15,22 +27,6 @@
         "Open Threads: GSK thread updated — portfolio-management-briefing marked it 'Hold (recovered)' on 2026-08-07; still no wiki write-up of the recovery",
         "Bumped 'Last updated' date to 2026-08-08",
         "Appended one memory-update log line to log.md for 2026-08-08"
-      ]
-    },
-    {
-      "runAt": "2026-08-07T23:53:00+02:00",
-      "summary": "Memory index updated — live trading portfolio reshuffled (DKNG exited, FLUT/WKL/NBIS/ORCL added), Oracle short-corroboration model page flagged unindexed, 1 new Meta cross-domain connection (Workday short-vs-long gap)",
-      "content": [
-        "Domain Content Status — Finance: live trading portfolio now 14 positions + 1 short (NBIS) + 1 option (ORCL put) as of 2026-08-07 — DKNG fully exited 2026-08-06 (mechanical Exit signal, −€84.50 net, traceable in trading.md Recent Exits) and replaced by FLUT (Burry-aligned long, initiated 2026-08-06); WKL initiated 2026-08-05; NBIS short + ORCL Dec-2026 $120 put both initiated 2026-08-06; FLUT's own mechanical Exit signal triggered 2026-08-07 (1 day post-entry) and was overridden per the patience rule",
-        "Domain Content Status — Finance: paper trading P1 now 33 open positions as of 2026-08-06 — new entry COP (Sector Rotation, Strait of Hormuz shipping restrictions + Q2 beat); net P&L +$1,248 (+2.66% on $47,000)",
-        "Domain Content Status — Finance: added source-burry-trading-post-2026-08-06.md (clipping) — Burry's first-ever disclosure of Fiserv/Mercado Libre/JD.com as active Scion positions, two new outright shorts (ORCL @ $144.63, NBIS @ $211.77); and finance/models/model-oracle-cashflow-debt-rpo-2026-08-07.md (researcher Mode C+D, not yet in wiki/index.md) — Oracle FY2026 FCF −$23.7bn, FY2027 financing gap risk, corroborates Burry's Aug 6 ORCL short",
-        "Domain Content Status — Cooking: recipe-recommender ran 2026-08-07 for week of 2026-08-10 (Lucinda Scala Quinn, Bourdain, Slater)",
-        "Domain Content Status — Meta: added the 2026-08-07 wiki-thinker highlight — idea-wday.md's own Bear Case (Mobley v. Workday lawsuit) makes it a short-research candidate, but Fred holds WDAY long and the short-research tracker has never evaluated it",
-        "Open Threads: added new thread — Finance idea-wday.md short-vs-long gap (2026-08-07), overlaps existing AI-Tech/Health Mobley v. Workday thread",
-        "Open Threads: extended the 'wiki pages not yet added to index.md' thread with model-oracle-cashflow-debt-rpo-2026-08-07.md",
-        "Open Threads: reconciliation-gap thread narrowed — DKNG's exit is now fully traceable in trading.md; ADBE/PRX still lack a traceable entry-trade log line",
-        "Bumped 'Last updated' date to 2026-08-07",
-        "Appended one memory-update log line to log.md for 2026-08-07"
       ]
     }
   ]
