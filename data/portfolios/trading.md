@@ -8,7 +8,7 @@ updated: 2026-08-10
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-07** for all positions except LULU (bought 2026-08-10, priced at entry). Cash: **€816**. 17 open positions (15 long equity, 1 short, 1 option).
+> Live page — update whenever positions change. Prices last fetched: **2026-08-07** for all positions except LULU and ZOE (bought 2026-08-10, priced at entry). Cash: **€267**. 18 open positions (16 long equity, 1 short, 1 option).
 
 ---
 
@@ -20,7 +20,7 @@ updated: 2026-08-10
 | Watches of Switzerland | WOSG | LSE | GBp | 200 | 688p | £1,376.00 | 752.50p | £1,505.00 | +9.38% | ✅ Hold | RSI 56.5, above 50d SMA (726.69p), MACD bullish (flipped from bearish) |
 | Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 895.00p | £805.50 | +11.88% | 👀 Watch | RSI 64.8, above 50d SMA (820.63p), MACD bearish |
 | IQVIA Holdings | IQV | NYSE | USD | 7 | $163.99 | $1,147.93 | $238.70 | $1,670.90 | +45.56% | ✅ Hold | RSI 65.6, above SMA50 ($200.62), MACD bullish; free-ride eligible (5 of 7 shares) — see morning briefing |
-| Keller Group | KLR | LSE | GBp | 18 | 2,418p | £435.24 | 3,076.00p | £553.68 | +27.21% | 👀 Watch | RSI 50.2, above 50d SMA (2,899.96p), MACD bearish; **3,100p stop breached, still unexecuted — price now 3,076p, still below stop — decision needed** |
+| Keller Group | KLR | LSE | GBp | 10 | 2,418p | £241.80 | 3,098.00p | £309.80 | +28.12% | 👀 Watch | RSI 50.2, above 50d SMA (2,899.96p), MACD bearish; 3,100p stop triggered — trimmed 8 shares at 3,098p on 2026-08-07; 10 shares remain, monitor for further stop action |
 | SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €177.96 | €1,245.72 | +30.18% | ✅ Hold | RSI 74.2 (overbought), above 50d SMA (€146.20), MACD bullish; extended |
 | Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $23.05 | $1,383.00 | +5.25% | ✅ Hold | RSI 57.1, above SMA50 ($21.93), MACD bullish |
 | GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,960.50p | £1,019.46 | +1.08% | ✅ Hold | RSI 53.1, above 50d SMA (1,940.82p), MACD bullish — recovered, exit risk resolved |
@@ -31,9 +31,10 @@ updated: 2026-08-10
 | Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €42.48 | €1,274.40 | +3.19% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 62.9, above SMA50 (€39.20), MACD bullish |
 | Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €70.08 | €1,051.20 | -1.41% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 61.8, above SMA50 (€61.97), MACD bullish |
 | Lululemon Athletica | LULU | NASDAQ | USD | 8 | $127.59 | $1,020.72 | $127.59 | $1,020.72 | 0.00% | ✅ Hold | Athletic apparel & accessories retailer; initiated 2026-08-10. New position — technicals (RSI/SMA/MACD) pending next data refresh |
+| Zoe | ZOE | NASDAQ | USD | 15 | $63.22 | $948.30 | $63.22 | $948.30 | 0.00% | ✅ Hold | Personalized nutrition / metabolic health; initiated 2026-08-10. New position — exchange/listing unverified, confirm before next review; technicals pending next data refresh |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL) in EUR; USD positions priced in USD. Prices as of **2026-08-07** except LULU (2026-08-10, entry price).
-> **Active alerts:** KLR — 3,100p stop still breached; decision needed. FLUT — mechanical Exit signal 1 day post-entry; patience override applied, reassess by 2026-08-21. APH patience override expired 2026-08-07 and has been lifted (technicals recovered). GSK has recovered above 50d SMA with MACD now bullish — exit risk resolved.
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL) in EUR; USD positions priced in USD. Prices as of **2026-08-07** except LULU and ZOE (2026-08-10, entry price) and KLR (partial trim executed 2026-08-07 at 3,098p).
+> **Active alerts:** KLR — 3,100p stop triggered and executed on 2026-08-07 (8 shares trimmed at 3,098p); 10 shares remain, monitor for further stop action. FLUT — mechanical Exit signal 1 day post-entry; patience override applied, reassess by 2026-08-21. APH patience override expired 2026-08-07 and has been lifted (technicals recovered). GSK has recovered above 50d SMA with MACD now bullish — exit risk resolved.
 
 ---
 
@@ -86,6 +87,7 @@ All realised transactions (full exits and partial trims), ordered by date.
 | 2026-07-28 | IQV | Trim | 2 | $163.99 | $243.50 | +$159.02 | +€139.49 | −€29.29 | −€4.37 | **+€105.83** | RSI 78.8 extreme overbought |
 | 2026-07-29 | AVGO | Full exit | 4 | $387.25 | $371.42 | −$63.32 | −€55.54 | €0 | −€4.37 | **−€59.91** | Burry SOXX thesis; below SMA50 |
 | 2026-08-06 | DKNG | Full exit | 45 | $23.46 | $21.43 | −$91.35 | −€80.13 | €0 | −€4.37 | **−€84.50** | Mechanical Exit signal triggered; technical breakdown |
+| 2026-08-07 | KLR | Trim | 8 | 2,418p | 3,098p | +£54.40 | +€63.76 | −€13.39 | −€4.37 | **+€46.00** | 3,100p stop triggered; partial trim executed |
 
 ---
 
@@ -96,11 +98,11 @@ Realised P&L grouped by position (trims + full exits combined).
 | Ticker | Transactions | Status | Shares Sold | Realised Gross (€) | CGT (€) | Commissions (€) | Realised Net (€) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | IQV | 2 trims | Open (7 remain) | 5 | +€254.88 | −€53.52 | −€8.74 | **+€192.62** |
-| KLR | 2 trims | Open (18 remain) | 32 | +€357.23 | −€75.02 | −€8.74 | **+€273.47** |
+| KLR | 3 trims | Open (10 remain) | 40 | +€420.99 | −€88.41 | −€13.11 | **+€319.47** |
 | MGNS | Full exit | Closed | 18 | −€35.44 | €0 | −€4.37 | **−€39.81** |
 | AVGO | Full exit | Closed | 4 | −€55.54 | €0 | −€4.37 | **−€59.91** |
 | DKNG | Full exit | Closed | 45 | −€80.13 | €0 | −€4.37 | **−€84.50** |
-| **TOTAL** | **7** | | **104** | **€441.00** | **−€128.54** | **−€30.59** | **€281.87** |
+| **TOTAL** | **8** | | **112** | **€504.76** | **−€141.93** | **−€34.96** | **€327.87** |
 
 ---
 
@@ -108,11 +110,11 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Metric | Value |
 | --- | --- |
-| Total gross P&L (€) | €441.00 |
-| Total CGT paid (€) | €128.54 |
-| Total commissions (€) | €30.59 |
-| **Net realised gains (€)** | **€281.87** |
-| Transactions | 7 |
+| Total gross P&L (€) | €504.76 |
+| Total CGT paid (€) | €141.93 |
+| Total commissions (€) | €34.96 |
+| **Net realised gains (€)** | **€327.87** |
+| Transactions | 8 |
 | Positions fully closed | 3 (MGNS, AVGO, DKNG) |
 | Positions partially trimmed | 2 (IQV, KLR) |
 
@@ -122,7 +124,7 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€816** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) − €899 LULU buy (08-10) |
+| EUR | **€267** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) + €286 KLR trim (08-07) − €899 LULU buy (08-10) − €835 ZOE buy (08-10) |
 
 > Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
 
@@ -158,6 +160,7 @@ Realised P&L grouped by position (trims + full exits combined).
 | NBIS (short) | 🟢 Burry/model-aligned short | Nebius Group neocloud short — directly implements model framework "Avoid/underweight Nebius" call; Burry SOXX/AI-infrastructure bear thesis extends to GPU cloud neoclouds; customer-concentration risk if Meta compute overbuild unfolds |
 | ORCL (put) | 🟡 Partially Burry-aligned option | Long put $120 strike, Dec 2026; bearish overlay on Oracle AI/OCI narrative; OCI revenue +93% YoY (current data contradicts thesis); put profitable only if AI capex unwinds materially; break-even $108.62 |
 | LULU | 🟢 Consumer discretionary — no signal | Lululemon Athletica: athletic apparel retailer; no AI infrastructure or circular-financing exposure; initiated 2026-08-10 |
+| ZOE | 🟢 Consumer health — no signal | Zoe: personalized nutrition / metabolic health; no AI infrastructure or circular-financing exposure; initiated 2026-08-10; exchange/listing unverified |
 
 **Patience override rule:** A mechanical EXIT signal (RSI < 40 + below 50d SMA + MACD bearish expanding) alone is not sufficient to exit a position with an intact fundamental thesis. Maximum trim: 50%. Reassess within 10 trading days.
 
