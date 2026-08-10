@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-08-10T23:51:07+02:00",
+      "summary": "YUMC (A)",
+      "picks": {
+        "p1": {
+          "ticker": "YUMC",
+          "strategy": "A — Value",
+          "entry": 47.72,
+          "stop": 40.56,
+          "t1": 59.65,
+          "t2": 71.58
+        }
+      },
+      "content": "Yum China (YUMC) picked up at the previous close ($47.72) — Morningstar flags it 40% undervalued (FV $77), reinforced by a Q2 beat-and-raise (EPS $0.70 vs $0.67 est, revenue +13% YoY) and a fresh multi-analyst buy wave (Citic, Nomura, Jefferies, UOB Kay Hian, Huatai, Guotai Haitong), chosen over CLX (post-earnings double analyst downgrade, PTs below spot) and CPB (deepest discount but structurally challenged category). CMCL hit T1 (+25.50% @ $21.75) and RDW hit T2 (+60.45% @ $13.59) — both mechanical tranche sales, positions remain open. RIVN and MRNA recovered off WATCH; JBHT remains WATCH (−10.02%), no Burry conflict. Portfolio net P&L: +$1,851 (+3.78% on $49,000)."
+    },
+    {
       "runAt": "2026-08-07T00:00:00+02:00",
       "summary": "LAD (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Lithia Motors (LAD) picked up at the previous close ($375.78) — a still-early 3-month momentum setup (+29.0%, RSI 58.8) reinforced by a Q2 EPS beat and a cheap ~12.5x P/E, chosen as market leadership broadens away from the narrow AI-megacap trade (Dow record close vs. Nasdaq −0.8% on weak AI names). FICO was stopped out today at $1,031.89 (−15.93%, −$159.25) after a Wolfe Research downgrade on VantageScore competitive-pressure concerns breached the −15% stop. RIVN (−10.48%) and JBHT (−10.44%) both crossed the −10% signal-assessment threshold but were held — neither carries a Burry conflict. Portfolio net P&L: +$1,154 (+2.40% on $48,000)."
-    },
-    {
-      "runAt": "2026-08-06T23:53:06+02:00",
-      "summary": "COP (E)",
-      "picks": {
-        "p1": {
-          "ticker": "COP",
-          "strategy": "E — Sector Rotation",
-          "entry": 115.04,
-          "stop": 97.78,
-          "t1": 143.80,
-          "t2": 172.56
-        }
-      },
-      "content": "ConocoPhillips (COP) picked up at the previous close ($115.04) — Energy was today's leading sector as Brent/WTI spiked on fresh Iran Strait-of-Hormuz shipping restrictions, reinforced by a same-day Q2 earnings beat (EPS $3.24 vs. $2.88 est.) and $3.0B returned to shareholders. No exits today despite a softer broad tape (Dow −0.9%, S&P −0.2%): no position breached the −15% stop, hit a new T1/T2, or tripped the Burry signal-exit rule; FICO rallied to −11.06% (still WATCH, well off stop) while RIVN (−9.43%) and JBHT (−8.63%) drifted further into WATCH, none with a Burry conflict. A stale NVO price from yesterday was corrected to its verified $44.53 close. Portfolio net P&L: +$1,248 (+2.66% on $47,000)."
     }
   ]
 }
