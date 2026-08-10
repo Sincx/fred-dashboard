@@ -8,7 +8,7 @@ updated: 2026-08-10
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-07** for all positions except LULU and ZOE (bought 2026-08-10, priced at entry). Cash: **€267**. 18 open positions (16 long equity, 1 short, 1 option).
+> Live page — update whenever positions change. Prices last fetched: **2026-08-07** for all positions except LULU and ZOE (bought 2026-08-10, priced at entry). Cash: **€154**. 18 open positions (16 long equity, 1 short, 1 option).
 
 ---
 
@@ -31,9 +31,9 @@ updated: 2026-08-10
 | Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €42.48 | €1,274.40 | +3.19% | ✅ Hold | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 62.9, above SMA50 (€39.20), MACD bullish |
 | Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €70.08 | €1,051.20 | -1.41% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 61.8, above SMA50 (€61.97), MACD bullish |
 | Lululemon Athletica | LULU | NASDAQ | USD | 8 | $127.59 | $1,020.72 | $127.59 | $1,020.72 | 0.00% | ✅ Hold | Athletic apparel & accessories retailer; initiated 2026-08-10. New position — technicals (RSI/SMA/MACD) pending next data refresh |
-| Zoetis Inc | ZOE | NYSE | USD | 15 | $63.22 | $948.30 | $63.22 | $948.30 | 0.00% | ✅ Hold | Animal health — pharmaceuticals, vaccines & diagnostics for pets/livestock; initiated 2026-08-10. New position — technicals (RSI/SMA/MACD) pending next data refresh |
+| Zoetis Inc | ZOE | Xetra | EUR | 15 | €63.22 | €948.30 | €63.22 | €948.30 | 0.00% | ✅ Hold | Animal health — pharmaceuticals, vaccines & diagnostics for pets/livestock; German (Xetra) listing, not primary NYSE line (ZTS); confirm Xetra symbol matches broker execution. Initiated 2026-08-10. New position — technicals (RSI/SMA/MACD) pending next data refresh |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL) in EUR; USD positions priced in USD. Prices as of **2026-08-07** except LULU and ZOE (2026-08-10, entry price) and KLR (partial trim executed 2026-08-07 at 3,098p).
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR; USD positions priced in USD. Prices as of **2026-08-07** except LULU and ZOE (2026-08-10, entry price) and KLR (partial trim executed 2026-08-07 at 3,098p).
 > **Active alerts:** KLR — 3,100p stop triggered and executed on 2026-08-07 (8 shares trimmed at 3,098p); 10 shares remain, monitor for further stop action. FLUT — mechanical Exit signal 1 day post-entry; patience override applied, reassess by 2026-08-21. APH patience override expired 2026-08-07 and has been lifted (technicals recovered). GSK has recovered above 50d SMA with MACD now bullish — exit risk resolved.
 
 ---
@@ -124,7 +124,7 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€267** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) + €286 KLR trim (08-07) − €899 LULU buy (08-10) − €835 ZOE buy (08-10) |
+| EUR | **€154** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) + €286 KLR trim (08-07) − €899 LULU buy (08-10) − €948 ZOE buy (08-10) |
 
 > Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
 
@@ -160,7 +160,7 @@ Realised P&L grouped by position (trims + full exits combined).
 | NBIS (short) | 🟢 Burry/model-aligned short | Nebius Group neocloud short — directly implements model framework "Avoid/underweight Nebius" call; Burry SOXX/AI-infrastructure bear thesis extends to GPU cloud neoclouds; customer-concentration risk if Meta compute overbuild unfolds |
 | ORCL (put) | 🟡 Partially Burry-aligned option | Long put $120 strike, Dec 2026; bearish overlay on Oracle AI/OCI narrative; OCI revenue +93% YoY (current data contradicts thesis); put profitable only if AI capex unwinds materially; break-even $108.62 |
 | LULU | 🟢 Consumer discretionary — no signal | Lululemon Athletica: athletic apparel retailer; no AI infrastructure or circular-financing exposure; initiated 2026-08-10 |
-| ZOE | 🟢 Healthcare/animal health — no signal | Zoetis Inc: animal health pharmaceuticals, vaccines & diagnostics; no AI infrastructure or circular-financing exposure; initiated 2026-08-10 |
+| ZOE | 🟢 Healthcare/animal health — no signal | Zoetis Inc: animal health pharmaceuticals, vaccines & diagnostics; German (Xetra) listing; no AI infrastructure or circular-financing exposure; initiated 2026-08-10 |
 
 **Patience override rule:** A mechanical EXIT signal (RSI < 40 + below 50d SMA + MACD bearish expanding) alone is not sufficient to exit a position with an intact fundamental thesis. Maximum trim: 50%. Reassess within 10 trading days.
 
