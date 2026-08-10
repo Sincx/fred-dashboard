@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-10T23:55:00+02:00",
+      "summary": "Memory index updated — new Peter Lynch/Burry FMCC cross-domain connection logged, paper trading grew to 34 positions (YUMC added), wiki-thinker run count bumped with a gap noted for 2026-08-09",
+      "content": [
+        "Domain Content Status — Meta: run count 37→38, date range extended through 2026-08-10 with a new gap noted on 2026-08-09 (no thinker entry found in log.md that day); added the 2026-08-10 highlight — Books' own unread Peter Lynch chapter on Fannie Mae's 1980s turnaround (Beating the Street) is the historical template for Burry's fresh Freddie Mac (FMCC) GSE-reform long, neither page cites the other; rolled the oldest explicit daily entry (2026-07-29, Games/dementia-prevention) into the 'older entries' catch-all range to keep the cell from growing unbounded",
+        "Domain Content Status — Finance: paper trading grew to 34 open positions as of 2026-08-10 — YUMC entered (Strategy A Value, Morningstar 40%-undervalued FV $77, Q2 beat-and-raise + multi-analyst buy wave); CMCL hit T1 and RDW hit T2 (both mechanical tranche sales, positions remain open, no exits)",
+        "Open Threads: added a new Books/Finance thread — add book-lynch-beating-the-street to reading-list.md's aspirational section and cross-link to source-burry-trading-post-2026-08-07.md, since Lynch's 4-step framework is a ready-made lens for testing Burry's FMCC thesis",
+        "Live trading portfolio unchanged — same 14 positions, no exits/adds executed per today's portfolio-management-briefing (IQV/KLR free-ride flagged but not yet executed); routine tracker runs (sector-performance, growth-value) reviewed, no memory-worthy threshold crossings beyond what the trackers' own pages already show",
+        "Bumped 'Last updated' date to 2026-08-10",
+        "Appended one memory-update log line to log.md for 2026-08-10"
+      ]
+    },
+    {
       "runAt": "2026-08-09T23:54:21+02:00",
       "summary": "Memory index updated — 5 new Finance source pages logged (4 Morningstar screens + Burry's Aug 7 letter, new FMCC long), first RELX/ZTS/LULU/MELI Magic Formula + TA screen, and a first-time 24-stock mf-update ranking run with no dedicated page yet",
       "content": [
@@ -14,19 +26,6 @@
         "No open threads resolved or added this run; podcast/trade/wiki-thinker counts unchanged from 2026-08-08 (verified via log.md — no new entries in those categories)",
         "Bumped 'Last updated' date to 2026-08-09",
         "Appended one memory-update log line to log.md for 2026-08-09"
-      ]
-    },
-    {
-      "runAt": "2026-08-08T23:54:53+02:00",
-      "summary": "Memory index updated — 7 new podcast pages created (resolving the long-standing recommendation-batches-produce-no-pages gap), portfolio-refresh Alpha Vantage fallback logged, 1 new Meta cross-domain connection (WKL vs. IBM AI-doom narrative), 1 open thread lightly updated (GSK recovered)",
-      "content": [
-        "Domain Content Status — Podcasts: 7 new podcast-{slug}.md pages created 2026-08-08 by podcast-summarizer — Gavin Baker (Invest Like the Best), Bernard Hampton (Me Myself and AI), Business Breakdown x2 (Toast, Auto1), Dividend Talk Q2 2026, Diary of a CEO x2 (Ray Dalio, Alex Hormozi); verified against actual files in wiki/podcasts/ — true count is 35 pages, correcting a stale '25' tally that had drifted out of sync",
-        "Domain Content Status — Crypto: portfolio-refresh ran 2026-08-08 — 25 prices updated, biggest mover TST +27.19%; massive.com batch snapshot 403'd and yfinance hit an SSL cert error, so equities were fetched via Alpha Vantage GLOBAL_QUOTE instead (18 calls, within free-tier limit) — logged as a tool workaround for future refresh runs",
-        "Domain Content Status — Finance: paper trading — LAD entered 2026-08-07 (Strategy B Momentum, Lithia Motors), FICO stopped out same day (-15.93%) on a Wolfe Research downgrade; RIVN and JBHT both crossed the -10% watch threshold but held; net open positions still 33",
-        "Domain Content Status — Meta: run count 35→37 (covers 08-07 and 08-08 runs), added the 2026-08-08 highlight — Fred's live Wolters Kluwer position is directly tested by a same-day podcast covering RELX/WKL/TXN resilience vs. IBM's AI-doom crash, unlinked",
-        "Open Threads: GSK thread updated — portfolio-management-briefing marked it 'Hold (recovered)' on 2026-08-07; still no wiki write-up of the recovery",
-        "Bumped 'Last updated' date to 2026-08-08",
-        "Appended one memory-update log line to log.md for 2026-08-08"
       ]
     }
   ]
