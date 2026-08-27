@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-08-27T21:46:58+02:00",
+      "summary": "EVTC (F)",
+      "picks": {
+        "p1": {
+          "ticker": "EVTC",
+          "strategy": "F — Small Cap Value",
+          "entry": 29.76,
+          "stop": 25.30,
+          "t1": 37.20,
+          "t2": 44.64
+        }
+      },
+      "content": "Evertec (EVTC) picked up at the previous close ($29.76) — a LatAm payments/fintech name at ~13.8x P/E near its May 2026 low after a Q1 EPS miss and June data-breach disclosure, but with the Dimensa acquisition now closed, 2026 EPS guidance raised (~9.9%), ~$210M TTM FCF, and analyst targets of $32.60-35.80, chosen away from today's narrow Nvidia/Salesforce/CrowdStrike-driven tech rally to avoid Burry's semiconductor/AI-capex conflict zone. This run follows a 17-day scheduling gap (last run 2026-08-10) — only today was processed, no back-dated trades. MRNA hit T2 (+150.49% @ $149.66) on Moderna's Merck-partnered melanoma vaccine Phase 3 win (announced during the gap) — mechanical tranche sale (~$835), final 1/3 now runs uncapped as the portfolio's largest open gainer. No stop-losses or signal exits. Portfolio net P&L: +$2,745 (+5.49% on $50,000)."
+    },
+    {
       "runAt": "2026-08-10T23:51:07+02:00",
       "summary": "YUMC (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Yum China (YUMC) picked up at the previous close ($47.72) — Morningstar flags it 40% undervalued (FV $77), reinforced by a Q2 beat-and-raise (EPS $0.70 vs $0.67 est, revenue +13% YoY) and a fresh multi-analyst buy wave (Citic, Nomura, Jefferies, UOB Kay Hian, Huatai, Guotai Haitong), chosen over CLX (post-earnings double analyst downgrade, PTs below spot) and CPB (deepest discount but structurally challenged category). CMCL hit T1 (+25.50% @ $21.75) and RDW hit T2 (+60.45% @ $13.59) — both mechanical tranche sales, positions remain open. RIVN and MRNA recovered off WATCH; JBHT remains WATCH (−10.02%), no Burry conflict. Portfolio net P&L: +$1,851 (+3.78% on $49,000)."
-    },
-    {
-      "runAt": "2026-08-07T00:00:00+02:00",
-      "summary": "LAD (B)",
-      "picks": {
-        "p1": {
-          "ticker": "LAD",
-          "strategy": "B — Momentum",
-          "entry": 375.78,
-          "stop": 319.41,
-          "t1": 469.73,
-          "t2": 563.67
-        }
-      },
-      "content": "Lithia Motors (LAD) picked up at the previous close ($375.78) — a still-early 3-month momentum setup (+29.0%, RSI 58.8) reinforced by a Q2 EPS beat and a cheap ~12.5x P/E, chosen as market leadership broadens away from the narrow AI-megacap trade (Dow record close vs. Nasdaq −0.8% on weak AI names). FICO was stopped out today at $1,031.89 (−15.93%, −$159.25) after a Wolfe Research downgrade on VantageScore competitive-pressure concerns breached the −15% stop. RIVN (−10.48%) and JBHT (−10.44%) both crossed the −10% signal-assessment threshold but were held — neither carries a Burry conflict. Portfolio net P&L: +$1,154 (+2.40% on $48,000)."
     }
   ]
 }
