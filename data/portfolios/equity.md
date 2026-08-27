@@ -4,12 +4,12 @@ domain: finance
 type: live
 tags: [portfolio, positions, active-thesis]
 sources: 0
-updated: 2026-08-08
+updated: 2026-08-27
 ---
 
 # Portfolio Overview
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-08** (via Alpha Vantage GLOBAL_QUOTE for US & OTC tickers, reflecting the Aug 7 close; Massive.com batch snapshot returned 403 Not Authorized so Alpha Vantage was used per-ticker instead; GAW.L via stockanalysis.com, CHIP.PA via stockanalysis.com, Aug 7 close).
+> Live page — update whenever positions change. Prices last fetched: **2026-08-27** (Massive.com batch snapshot returned 403 Not Authorized, so the market-watchlist-tracker Python pipeline (`fetchers.py`) was used for US & OTC tickers; GAW.L and CHIP.PA fetched via the same pipeline's yfinance backend — no yfinance MCP tools were available this run).
 
 ---
 
@@ -17,25 +17,25 @@ updated: 2026-08-08
 
 | Company | Ticker | Exchange | Currency | Entry Price | Last Price | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Alphabet | GOOGL | NASDAQ | USD | $106.62 * | $354.30 | Above 200d SMA; earnings Jul 22 |
-| Amazon | AMZN | NASDAQ | USD | $175.97 | $274.48 | AWS + AI; approaching 200d SMA |
-| Microsoft | MSFT | NASDAQ | USD | $167.76 | $499.99 | Below 200d SMA ~$432; Copilot lag |
-| Workday | WDAY | NASDAQ | USD | $210.95 | $179.64 | Below 200d SMA ~$180; SaaS under pressure |
-| MicroStrategy (Strategy) | MSTR | NASDAQ | USD | $20.45 | $100.01 | Bitcoin proxy; RSI oversold; earnings Jul 30 |
-| Berkshire Hathaway | BRK.B | NYSE | USD | $217.10 | $521.80 | Near 52w high; quality anchor |
-| Teradyne | TER | NASDAQ | USD | $140.90 | $379.31 | −14.5% today — semi sector contagion; reassess |
-| Anglo American | NGLOY | OTC | USD | $31.40 | $27.33 | ADR (LSE: AAL.L); copper + platinum metals |
-| Glencore | GLNCY | OTC | USD | $1.26 | $14.97 | ADR (LSE: GLEN.L); above 200d SMA; MACD buy |
-| ASML Holding | ASML | NASDAQ | USD | $1,987.87 | $1,740.99 | EUV lithography monopoly; semi sector; −7.3% today |
-| Amundi MSCI Semiconductors ETF | CHIP | Euronext Paris | EUR | €112.60 | €110.86 | ISIN LU1900066033; TER 0.35%; semi sector ETF |
-| Broadcom | AVGO | NASDAQ | USD | $515.42 | $427.76 | AI networking + custom chips; semi sector down |
-| Constellation Energy | CEG | NASDAQ | USD | $482.84 | $269.89 | Nuclear power; AI data centre electricity thesis; near 52w low |
-| CrowdStrike | CRWD | NASDAQ | USD | $166.78 | $214.42 | 4:1 split effective Jul 2; cybersecurity AI platform |
-| ServiceNow | NOW | NYSE | USD | $180.37 | $124.88 | Enterprise AI/workflow; 52w range $81–$211; earnings Jul 22 |
-| IBM | IBM | NYSE | USD | $115.24 | $237.28 | AI/hybrid cloud; −25% Jul 14 on Q2 earnings warning (mainframe/software weakness); earnings call Jul 22 |
-| Games Workshop | GAW | LSE | GBp | 5,045p | 18,940p | Warhammer IP; LSE: GAW.L; 52w range 14,070–22,260p |
-| IQVIA Holdings | IQV | NYSE | USD | $243.18 | $238.70 | Healthcare data + CRO; above 200d SMA |
-| PepsiCo | PEP | NASDAQ | USD | $190.28 | $139.02 | Defensive consumer; near 200d SMA |
+| Alphabet | GOOGL | NASDAQ | USD | $106.62 * | $340.76 | Above 200d SMA; earnings Jul 22 |
+| Amazon | AMZN | NASDAQ | USD | $175.97 | $255.67 | AWS + AI; approaching 200d SMA |
+| Microsoft | MSFT | NASDAQ | USD | $167.76 | $504.89 | Below 200d SMA ~$432; Copilot lag |
+| Workday | WDAY | NASDAQ | USD | $210.95 | $190.87 | Below 200d SMA ~$180; SaaS under pressure |
+| MicroStrategy (Strategy) | MSTR | NASDAQ | USD | $20.45 | $137.77 | Bitcoin proxy; RSI oversold; earnings Jul 30 |
+| Berkshire Hathaway | BRK.B | NYSE | USD | $217.10 | $503.70 | Near 52w high; quality anchor |
+| Teradyne | TER | NASDAQ | USD | $140.90 | $364.46 | −14.5% today — semi sector contagion; reassess |
+| Anglo American | NGLOY | OTC | USD | $31.40 | $28.84 | ADR (LSE: AAL.L); copper + platinum metals |
+| Glencore | GLNCY | OTC | USD | $1.26 | $16.42 | ADR (LSE: GLEN.L); above 200d SMA; MACD buy |
+| ASML Holding | ASML | NASDAQ | USD | $1,987.87 | $1,725.29 | EUV lithography monopoly; semi sector; −7.3% today |
+| Amundi MSCI Semiconductors ETF | CHIP | Euronext Paris | EUR | €112.60 | €109.16 | ISIN LU1900066033; TER 0.35%; semi sector ETF |
+| Broadcom | AVGO | NASDAQ | USD | $515.42 | $369.38 | AI networking + custom chips; semi sector down |
+| Constellation Energy | CEG | NASDAQ | USD | $482.84 | $281.33 | Nuclear power; AI data centre electricity thesis; near 52w low |
+| CrowdStrike | CRWD | NASDAQ | USD | $166.78 | $226.18 | 4:1 split effective Jul 2; cybersecurity AI platform |
+| ServiceNow | NOW | NYSE | USD | $180.37 | $138.11 | Enterprise AI/workflow; 52w range $81–$211; earnings Jul 22 |
+| IBM | IBM | NYSE | USD | $115.24 | $239.54 | AI/hybrid cloud; −25% Jul 14 on Q2 earnings warning (mainframe/software weakness); earnings call Jul 22 |
+| Games Workshop | GAW | LSE | GBp | 5,045p | 18,320p | Warhammer IP; LSE: GAW.L; 52w range 14,070–22,260p |
+| IQVIA Holdings | IQV | NYSE | USD | $243.18 | $262.92 | Healthcare data + CRO; above 200d SMA |
+| PepsiCo | PEP | NASDAQ | USD | $190.28 | $140.43 | Defensive consumer; near 200d SMA |
 
 > \* GOOGL entry price is the average of two tranches: Class A (£69.49 → $92.76) and Class C (£90.28 → $120.49). GBP/USD rate used: 1.3347 (Jul 3 2026). GBP/EUR rate used: 1.16761 (Jul 3 2026).
 >
