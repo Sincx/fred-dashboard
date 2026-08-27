@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-27T21:57:08+02:00",
+      "summary": "Memory index caught up after a 17-day scheduler outage — paper trading to 35 positions (EVTC added, MRNA hit T2), 4 new wiki-thinker/Open-Thread items, 5 new AI-Tech source pages (incl. Nvidia buying Hugging Face for $12.9bn), new Burry Build-A-Bear (BBW) disclosure, and podcast/recipe/book recommender catch-up runs logged",
+      "content": [
+        "Domain Content Status — Finance: paper trading P1 grew to 35 open positions (EVTC entered 2026-08-27, Strategy F Small Cap Value — Evertec; MRNA hit T2 @ $149.66 on a Merck/Moderna Phase 3 win, mechanical tranche sale, only today processed post-outage, no back-dated trades for the 12 missed sessions); live trading portfolio still 14 positions per 2026-08-27 portfolio-management-briefing (IQV free-ride sell flagged, KLR stop still unresolved); mf-update re-run with 25 stocks (top 3: MGNS/DNLM/GSK); growth-value-tracker and sector-performance-tracker both refreshed through Aug 26 (value's YTD lead hit a new 2026 high; energy/GDX rally accelerated further, XLY flipped negative)",
+        "Domain Content Status — Finance: clippings-sorter cleared a 17-day backlog (9 clippings) — new source-burry-trading-post-2026-08-27.md discloses a pre-existing Build-A-Bear (BBW) long that just triggered Burry's mechanical 20% down rule (holding pending the 10-Q) plus a tactical NVDA call-hedge trim around Q2 earnings; BBW added to morningstar-watchlist.md and pipeline config.py (Burry group now 24 tickers)",
+        "Domain Content Status — AI & Tech: 5 new source pages from the catch-up window, headlined by source-information-am-nvidia-hugging-face-2026-08-27.md (Nvidia agrees to buy Hugging Face for $12.9bn; Nvidia Q2 FY2027 revenue +106% to $96.2bn but FCF fell >50% QoQ; new circular-financing disclosures) and source-information-am-nvidia-backstop-2026-08-11.md ($500bn Nvidia PE/private-credit backstop alliance); 2 pages are stub-only (source-reuters-nebius-finland-datacenter-2026-08-11.md, source-meta-nebius-nvidia-27b-deal-2026-08-12.md) since WebFetch was blocked by anti-automation gates",
+        "Domain Content Status — Meta: wiki-thinker run count 38→39, date range extended through 2026-08-27 noting the 17-day scheduler-outage gap (08-11 through 08-26); added the 2026-08-27 highlight — a fully-written Dwarkesh podcast page is missing from wiki/index.md's Podcasts table, and Michael Lewis's Liar's Poker parallels the hyperscaler off-balance-sheet debt model four decades apart",
+        "Domain Content Status — Podcasts/Cooking/Books/Crypto: logged catch-up runs — podcast-recommender (4 new shows), recipe-recommender (3 suggestions for week of 08-31), book-recommender (4 August recommendations, covering the missed 08-15 cycle), portfolio-refresh (25 prices, LINK +43.08%)",
+        "Open Threads: added 5 new items — missing Dwarkesh podcast page, Liar's Poker/debt-model connection, Burry's BBW 20%-down-rule pending resolution, 2 WebFetch-blocked stub pages needing backfill, and an unconfirmed podcast-summarizer run this window",
+        "Bumped 'Last updated' date to 2026-08-27",
+        "Appended one memory-update log line to log.md for 2026-08-27"
+      ]
+    },
+    {
       "runAt": "2026-08-10T23:55:00+02:00",
       "summary": "Memory index updated — new Peter Lynch/Burry FMCC cross-domain connection logged, paper trading grew to 34 positions (YUMC added), wiki-thinker run count bumped with a gap noted for 2026-08-09",
       "content": [
@@ -14,18 +28,6 @@
         "Live trading portfolio unchanged — same 14 positions, no exits/adds executed per today's portfolio-management-briefing (IQV/KLR free-ride flagged but not yet executed); routine tracker runs (sector-performance, growth-value) reviewed, no memory-worthy threshold crossings beyond what the trackers' own pages already show",
         "Bumped 'Last updated' date to 2026-08-10",
         "Appended one memory-update log line to log.md for 2026-08-10"
-      ]
-    },
-    {
-      "runAt": "2026-08-09T23:54:21+02:00",
-      "summary": "Memory index updated — 5 new Finance source pages logged (4 Morningstar screens + Burry's Aug 7 letter, new FMCC long), first RELX/ZTS/LULU/MELI Magic Formula + TA screen, and a first-time 24-stock mf-update ranking run with no dedicated page yet",
-      "content": [
-        "Domain Content Status — Finance: clippings-sorter (2026-08-09) added source-morningstar-10-growth-stocks-2026-08-05.md, source-morningstar-dividend-raises-2026-08-07.md, source-morningstar-lseg-relx-ai-losers-2026-08-06.md, source-morningstar-10-best-companies-2026-08-03.md, and source-burry-trading-post-2026-08-07.md (new long Freddie Mac FMCC @ $5.43, GSE-reform thesis; topped up MELI/lululemon/Fiserv, averaged down Zoetis, added SOXX puts + outright SOXX short); morningstar-watchlist.md grew by 14 wide-moat names + 1 narrow-moat (Albemarle); all pages already wired into index.md by the sorter itself",
-        "Domain Content Status — Finance: new finance/magic-formula-relx-zts-lulu-meli-2026-08-09.md (Magic Formula screen on Burry/Morningstar picks — LULU & ZTS tie top, RELX ROC disregarded as NWC-distorted) paired with 4 technical-analyst verdicts (RELX/ZTS bearish, LULU/MELI neutral-mixed)",
-        "Domain Content Status — Finance: logged a first-time 'mf-update' run scoring Magic Formula ranks across 24 stocks spanning both live portfolios (top 3: MGNS, DNLM, ADBE) — flagged as having no dedicated wiki page yet; unclear if this becomes a recurring task, worth watching",
-        "No open threads resolved or added this run; podcast/trade/wiki-thinker counts unchanged from 2026-08-08 (verified via log.md — no new entries in those categories)",
-        "Bumped 'Last updated' date to 2026-08-09",
-        "Appended one memory-update log line to log.md for 2026-08-09"
       ]
     }
   ]
