@@ -5,14 +5,14 @@
   "icon": "🍽",
   "runs": [
     {
+      "runAt": "2026-08-28T09:00:00+01:00",
+      "summary": "Skipped — week of 2026-08-31 already covered by the 2026-08-27 run",
+      "content": "No new recipes generated this run. The previous run (2026-08-27) already produced 3 suggestions for the week of 2026-08-31 (Kimchi Fried Rice with Crispy Fried Egg, Confit Duck Legs with Puy Lentils, Slow-Roasted Tomatoes with Anchovy, Garlic and Thyme) — one day of schedule drift meant both runs targeted the same upcoming Monday. Generating a second set would have duplicated that week's entry in recipe-suggestions.md. Next scheduled run should target the week of 2026-09-07."
+    },
+    {
       "runAt": "2026-08-27T14:05:00+01:00",
       "summary": "3 new recipes: Kimchi Fried Rice, Confit Duck Legs with Puy Lentils, Slow-Roasted Tomatoes with Anchovy",
       "content": "1. Kimchi Fried Rice with Crispy Fried Egg — inspired by David Chang. A 20-minute fermented-pantry fix that turns leftover rice and a jar of turned kimchi into a craveable weeknight meal.\n2. Confit Duck Legs with Puy Lentils — inspired by Anthony Bourdain. A weekend technique piece marking the turn toward autumn — classical French confit built on patience, fat and time.\n3. Slow-Roasted Tomatoes with Anchovy, Garlic and Thyme — inspired by Nigel Slater. The wild card: the classic way to use up the last big tomato glut before the season turns."
-    },
-    {
-      "runAt": "2026-08-07T09:00:00+01:00",
-      "summary": "3 new recipes: Sheet-Pan Sausage & Sweetcorn Traybake, Dan Dan Noodles, Grilled Figs with Prosciutto & Blue Cheese",
-      "content": "1. Sheet-Pan Sausage, Sweetcorn and Pepper Traybake — inspired by Lucinda Scala Quinn. A 40-minute, one-tray weeknight fix built on peak-season corn and peppers.\n2. Dan Dan Noodles — inspired by Anthony Bourdain. A Sichuan technique piece: homemade chilli oil and numbing peppercorn balanced against salt, sour and heat.\n3. Grilled Figs with Prosciutto, Blue Cheese and Honey — inspired by Nigel Slater. The wild card: an assembly built around figs just coming into season, barely cooked."
     }
   ]
 }
