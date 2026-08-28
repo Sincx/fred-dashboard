@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-28T23:53:13+02:00",
+      "summary": "Quiet catch-up day — memory index updated with today's briefing signal changes; recipe-recommender and wiki-thinker both found nothing new to add",
+      "content": [
+        "Domain Content Status — Finance: portfolio-management-briefing (08-28) — still 14 positions; GSK moved to Watch and flagged 1 tick from an Exit signal; CPB's MACD flipped bearish; 3 new candidates screened (T, BMY, RIO) but combined size exceeds available cash, so a funding priority was set and none were executed",
+        "Domain Content Status — Cooking: recipe-recommender's 08-28 run was skipped — week of 2026-08-31 already has 3 suggestions from the 08-27 catch-up run (Kimchi Fried Rice, Confit Duck Legs with Puy Lentils, Slow-Roasted Tomatoes with Anchovy); next real run targets week of 2026-09-07",
+        "Domain Content Status — Meta: wiki-thinker logged a quiet day (0 new ideas/connections) — Friday's domain rotation (Lightfin/Games/Cooking/Sports Betting/Work) re-checked every previously-flagged angle (Games prototype stubs, GAW idea page, WDAY short-research gap, Sports Betting bookmaker tracker) and found none had moved",
+        "No new wiki pages created today and no Open Threads added or resolved — index.md and the Open Threads list are unchanged from the 2026-08-27 catch-up update",
+        "Bumped 'Last updated' date to 2026-08-28",
+        "Appended one memory-update log line to log.md for 2026-08-28"
+      ]
+    },
+    {
       "runAt": "2026-08-27T21:57:08+02:00",
       "summary": "Memory index caught up after a 17-day scheduler outage — paper trading to 35 positions (EVTC added, MRNA hit T2), 4 new wiki-thinker/Open-Thread items, 5 new AI-Tech source pages (incl. Nvidia buying Hugging Face for $12.9bn), new Burry Build-A-Bear (BBW) disclosure, and podcast/recipe/book recommender catch-up runs logged",
       "content": [
@@ -16,18 +28,6 @@
         "Open Threads: added 5 new items — missing Dwarkesh podcast page, Liar's Poker/debt-model connection, Burry's BBW 20%-down-rule pending resolution, 2 WebFetch-blocked stub pages needing backfill, and an unconfirmed podcast-summarizer run this window",
         "Bumped 'Last updated' date to 2026-08-27",
         "Appended one memory-update log line to log.md for 2026-08-27"
-      ]
-    },
-    {
-      "runAt": "2026-08-10T23:55:00+02:00",
-      "summary": "Memory index updated — new Peter Lynch/Burry FMCC cross-domain connection logged, paper trading grew to 34 positions (YUMC added), wiki-thinker run count bumped with a gap noted for 2026-08-09",
-      "content": [
-        "Domain Content Status — Meta: run count 37→38, date range extended through 2026-08-10 with a new gap noted on 2026-08-09 (no thinker entry found in log.md that day); added the 2026-08-10 highlight — Books' own unread Peter Lynch chapter on Fannie Mae's 1980s turnaround (Beating the Street) is the historical template for Burry's fresh Freddie Mac (FMCC) GSE-reform long, neither page cites the other; rolled the oldest explicit daily entry (2026-07-29, Games/dementia-prevention) into the 'older entries' catch-all range to keep the cell from growing unbounded",
-        "Domain Content Status — Finance: paper trading grew to 34 open positions as of 2026-08-10 — YUMC entered (Strategy A Value, Morningstar 40%-undervalued FV $77, Q2 beat-and-raise + multi-analyst buy wave); CMCL hit T1 and RDW hit T2 (both mechanical tranche sales, positions remain open, no exits)",
-        "Open Threads: added a new Books/Finance thread — add book-lynch-beating-the-street to reading-list.md's aspirational section and cross-link to source-burry-trading-post-2026-08-07.md, since Lynch's 4-step framework is a ready-made lens for testing Burry's FMCC thesis",
-        "Live trading portfolio unchanged — same 14 positions, no exits/adds executed per today's portfolio-management-briefing (IQV/KLR free-ride flagged but not yet executed); routine tracker runs (sector-performance, growth-value) reviewed, no memory-worthy threshold crossings beyond what the trackers' own pages already show",
-        "Bumped 'Last updated' date to 2026-08-10",
-        "Appended one memory-update log line to log.md for 2026-08-10"
       ]
     }
   ]
