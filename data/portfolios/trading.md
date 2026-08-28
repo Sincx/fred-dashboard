@@ -9,6 +9,8 @@ updated: 2026-08-21
 # Trading Portfolio
 
 > Live page — update whenever positions change. Prices last fetched: **2026-08-07** for original positions; LULU/ZOE (2026-08-10), PLTR put (2026-08-11), IQV/APH/WOSG/REL/NBIS/ORCL (2026-08-14) and SFM (2026-08-21) priced at entry/trade. Cash: **−€1,056** ⚠️ significantly negative — deposit required before further trades. 22 open positions (18 long equity, 2 short, 2 options).
+>
+> **Unrealized P&L: +€1,410.61** — Long equity +€1,410.61 · Short equity €0.00 · Options €0.00. Short and options legs show €0.00 because their "Current Price"/"Current Premium" hasn't been refreshed past trade date yet (both opened 2026-08-14/08-11 with no repricing since) — see formulas in *P&L Calculation Methodology* below Account Settings.
 
 ---
 
@@ -44,11 +46,12 @@ updated: 2026-08-21
 
 Active short equity positions (profit if price falls below entry; loss if price rises above entry).
 
-| Company | Ticker | Exchange | Currency | Shares Short | Entry | Short Value | Signal | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Nebius Group | NBIS | NASDAQ | USD | 3 | $273.32 | $819.96 | 👀 Watch | AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure. Original 5-share short (initiated 2026-08-06 at $194.78) fully closed at a loss on 2026-08-12 (see Closed Positions); re-shorted 3 shares at $273.32 on 2026-08-14, doubling down on the same thesis at a higher entry |
-| Oracle | ORCL | NYSE | USD | 3 | $149.89 | $449.67 | 👀 Watch | Direct equity short complementing the existing ORCL long put; bearish Oracle AI/OCI narrative (OCI +93% YoY currently contradicts thesis); initiated 2026-08-14 |
+| Company | Ticker | Exchange | Currency | Shares Short | Entry | Current Price | Short Value | P&L | Signal | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Nebius Group | NBIS | NASDAQ | USD | 3 | $273.32 | $273.32 | $819.96 | $0.00 (0.00%) | 👀 Watch | AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure. Original 5-share short (initiated 2026-08-06 at $194.78) fully closed at a loss on 2026-08-12 (see Closed Positions); re-shorted 3 shares at $273.32 on 2026-08-14, doubling down on the same thesis at a higher entry. Current Price not yet refreshed since re-short |
+| Oracle | ORCL | NYSE | USD | 3 | $149.89 | $149.89 | $449.67 | $0.00 (0.00%) | 👀 Watch | Direct equity short complementing the existing ORCL long put; bearish Oracle AI/OCI narrative (OCI +93% YoY currently contradicts thesis); initiated 2026-08-14. Current Price not yet refreshed since entry |
 
+> **P&L formula (short):** `(Entry − Current Price) × Shares Short` — positive when price has fallen below entry, negative when it has risen. Shown in native currency; both rows above read $0.00 only because Current Price still equals Entry (no repricing has happened since trade date) — update the Current Price cell on next refresh and this recalculates automatically.
 > **NBIS:** original margin (−€850, 5 shares) fully released on the 2026-08-12 close, net of P&L → **+€673** returned to cash. New margin of **−€716** posted for the 2026-08-14 re-short (3 shares). Profit if NBIS price falls below $273.32; loss if it rises.
 > **ORCL (short):** margin posted **−€392** for 3 shares at $149.89. Profit if ORCL price falls below $149.89; loss if it rises.
 > Both positions close with a buyback — margin returned net of P&L.
@@ -57,11 +60,12 @@ Active short equity positions (profit if price falls below entry; loss if price 
 
 ## Options Positions
 
-| Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium | Total Cost (€) | Signal | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | €992 | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06 |
-| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | €718 | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; bearish overlay on AI/data-analytics valuation (rich multiple); break-even $116.76; initiated 2026-08-11 |
+| Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium | Current Premium | Total Cost (€) | P&L (€) | Signal | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | $11.38/sh | €992 | €0.00 (0.00%) | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06. Current Premium not yet refreshed since entry |
+| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | $8.24/sh | €718 | €0.00 (0.00%) | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; bearish overlay on AI/data-analytics valuation (rich multiple); break-even $116.76; initiated 2026-08-11. Current Premium not yet refreshed since entry |
 
+> **P&L formula (long put):** `(Current Premium − Entry Premium) × Shares per contract × Contracts`, converted to EUR at the trade-date FX rate — positive when the premium has risen (typically as the underlying falls toward/through the strike or time value shifts), negative when it has fallen. "Current Price" for an option means the option's own market premium, not the underlying stock's price. Both rows read €0.00 only because Current Premium still equals the entry premium — update that cell on next refresh to recalculate.
 > ORCL long put: profitable if ORCL closes below $108.62 at expiry. Maximum loss = premium paid (€992).
 > PLTR long put: profitable if PLTR closes below $116.76 at expiry. Maximum loss = premium paid (€718).
 
@@ -156,6 +160,18 @@ Realised P&L grouped by position (trims + full exits combined).
 | Position size — large | ~€1,500 (high conviction) |
 | Position size — small | ~€750 (starter / low conviction) |
 | Base currency | EUR |
+
+### P&L Calculation Methodology
+
+No live price feed is wired into this page — see the dashboard build notes for why. Every P&L figure here is computed from whatever price was last typed into the relevant "Current Price"/"Current Premium"/"Last Price" cell, so these formulas only stay accurate if that cell is refreshed by hand (or by a future scheduled task) alongside the position tables.
+
+| Position type | Unrealized P&L formula | Notes |
+| --- | --- | --- |
+| Long equity | `(Last Price − Entry) × Shares` = `Mkt Value − Cost Basis` | Already shown via the P&L% column in Open Positions |
+| Short equity | `(Entry − Current Price) × Shares Short` | Positive when price has fallen below entry |
+| Options (long put) | `(Current Premium − Entry Premium) × Shares per contract × Contracts` | "Current Price" = the option's own premium, not the underlying's price |
+
+**FX conversion for the portfolio-wide Unrealized P&L total:** each position's native-currency P&L is converted to EUR using the rate implied by this page's own buy/sell entries (USD ≈ 1.14 per EUR, GBP ≈ 1.1720 EUR per GBP — both drift slightly by date in practice) and summed across all open long, short, and option positions.
 
 ---
 
