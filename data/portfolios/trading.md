@@ -3,12 +3,12 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-08-10
+updated: 2026-08-21
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Prices last fetched: **2026-08-07** for all positions except LULU and ZOE (bought 2026-08-10, priced at entry). Cash: **€154**. 18 open positions (16 long equity, 1 short, 1 option).
+> Live page — update whenever positions change. Prices last fetched: **2026-08-07** for all positions except LULU, ZOE (bought 2026-08-10) and SFM (bought 2026-08-21), priced at entry. Cash: **−€254** ⚠️ negative — SFM buy exceeded available cash, deposit or trim needed. 19 open positions (17 long equity, 1 short, 1 option).
 
 ---
 
@@ -32,9 +32,10 @@ updated: 2026-08-10
 | Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €70.08 | €1,051.20 | -1.41% | ✅ Hold | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 61.8, above SMA50 (€61.97), MACD bullish |
 | Lululemon Athletica | LULU | NASDAQ | USD | 8 | $127.59 | $1,020.72 | $127.59 | $1,020.72 | 0.00% | ✅ Hold | Athletic apparel & accessories retailer; initiated 2026-08-10. New position — technicals (RSI/SMA/MACD) pending next data refresh |
 | Zoetis Inc | ZOE | Xetra | EUR | 15 | €63.22 | €948.30 | €63.22 | €948.30 | 0.00% | ✅ Hold | Animal health — pharmaceuticals, vaccines & diagnostics for pets/livestock; German (Xetra) listing, not primary NYSE line (ZTS); confirm Xetra symbol matches broker execution. Initiated 2026-08-10. New position — technicals (RSI/SMA/MACD) pending next data refresh |
+| Sprouts Farmers Market | SFM | NASDAQ | USD | 10 | $80.16 | $801.60 | $80.16 | $801.60 | 0.00% | ✅ Hold | Natural & organic grocery retailer; initiated 2026-08-21. New position — technicals (RSI/SMA/MACD) pending next data refresh |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR; USD positions priced in USD. Prices as of **2026-08-07** except LULU and ZOE (2026-08-10, entry price) and KLR (partial trim executed 2026-08-07 at 3,098p).
-> **Active alerts:** KLR — 3,100p stop triggered and executed on 2026-08-07 (8 shares trimmed at 3,098p); 10 shares remain, monitor for further stop action. FLUT — mechanical Exit signal 1 day post-entry; patience override applied, reassess by 2026-08-21. APH patience override expired 2026-08-07 and has been lifted (technicals recovered). GSK has recovered above 50d SMA with MACD now bullish — exit risk resolved.
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR; USD positions priced in USD. Prices as of **2026-08-07** except LULU, ZOE (2026-08-10) and SFM (2026-08-21), entry price, and KLR (partial trim executed 2026-08-07 at 3,098p).
+> **Active alerts:** Cash balance is negative (−€254) after the SFM buy — deposit or trim a position before further trades. KLR — 3,100p stop triggered and executed on 2026-08-07 (8 shares trimmed at 3,098p); 10 shares remain, monitor for further stop action. FLUT — mechanical Exit signal 1 day post-entry; patience override applied, reassess by 2026-08-21. APH patience override expired 2026-08-07 and has been lifted (technicals recovered). GSK has recovered above 50d SMA with MACD now bullish — exit risk resolved.
 
 ---
 
@@ -44,9 +45,9 @@ Active short equity positions (profit if price falls below entry; loss if price 
 
 | Company | Ticker | Exchange | Currency | Shares Short | Entry | Short Value | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Nebius Group | NBIS | NASDAQ | USD | 5 | $194.78 | $973.90 | ✅ Hold | AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure; initiated 2026-08-06 |
+| Nebius Group | NBIS | NASDAQ | USD | 2 | $194.78 | $389.56 | 👀 Watch | AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure; initiated 2026-08-06. Partially covered — bought back 3 shares at $273.32 on 2026-08-14 for a loss (thesis not yet playing out, price up sharply); 2 shares remain short |
 
-> Margin posted (−€850) to cover short. Profit if NBIS price falls below $194.78; loss if it rises. Position closes with a buyback — margin returned net of P&L.
+> Margin originally posted (−€850) for 5 shares; €510 (3/5) released on the 2026-08-14 partial cover, net of P&L → **+€298** returned to cash. €340 margin remains held for the 2 shares still short. Profit if NBIS price falls below $194.78; loss if it rises. Position closes fully with a final buyback — margin returned net of P&L.
 
 ---
 
@@ -88,6 +89,7 @@ All realised transactions (full exits and partial trims), ordered by date.
 | 2026-07-29 | AVGO | Full exit | 4 | $387.25 | $371.42 | −$63.32 | −€55.54 | €0 | −€4.37 | **−€59.91** | Burry SOXX thesis; below SMA50 |
 | 2026-08-06 | DKNG | Full exit | 45 | $23.46 | $21.43 | −$91.35 | −€80.13 | €0 | −€4.37 | **−€84.50** | Mechanical Exit signal triggered; technical breakdown |
 | 2026-08-07 | KLR | Trim | 8 | 2,418p | 3,098p | +£54.40 | +€63.76 | −€13.39 | −€4.37 | **+€46.00** | 3,100p stop triggered; partial trim executed |
+| 2026-08-14 | NBIS | Cover | 3 | $194.78 | $273.32 | −$235.62 | −€207.47 | €0 | −€4.37 | **−€211.84** | Short partially covered at a loss; price up sharply, thesis not yet playing out |
 
 ---
 
@@ -99,10 +101,11 @@ Realised P&L grouped by position (trims + full exits combined).
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | IQV | 2 trims | Open (7 remain) | 5 | +€254.88 | −€53.52 | −€8.74 | **+€192.62** |
 | KLR | 3 trims | Open (10 remain) | 40 | +€420.99 | −€88.41 | −€13.11 | **+€319.47** |
+| NBIS | 1 cover | Open (2 remain) | 3 | −€207.47 | €0 | −€4.37 | **−€211.84** |
 | MGNS | Full exit | Closed | 18 | −€35.44 | €0 | −€4.37 | **−€39.81** |
 | AVGO | Full exit | Closed | 4 | −€55.54 | €0 | −€4.37 | **−€59.91** |
 | DKNG | Full exit | Closed | 45 | −€80.13 | €0 | −€4.37 | **−€84.50** |
-| **TOTAL** | **8** | | **112** | **€504.76** | **−€141.93** | **−€34.96** | **€327.87** |
+| **TOTAL** | **9** | | **115** | **€297.29** | **−€141.93** | **−€39.33** | **€116.03** |
 
 ---
 
@@ -110,13 +113,13 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Metric | Value |
 | --- | --- |
-| Total gross P&L (€) | €504.76 |
+| Total gross P&L (€) | €297.29 |
 | Total CGT paid (€) | €141.93 |
-| Total commissions (€) | €34.96 |
-| **Net realised gains (€)** | **€327.87** |
-| Transactions | 8 |
+| Total commissions (€) | €39.33 |
+| **Net realised gains (€)** | **€116.03** |
+| Transactions | 9 |
 | Positions fully closed | 3 (MGNS, AVGO, DKNG) |
-| Positions partially trimmed | 2 (IQV, KLR) |
+| Positions partially trimmed | 3 (IQV, KLR, NBIS) |
 
 ---
 
@@ -124,9 +127,9 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€154** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) + €286 KLR trim (08-07) − €899 LULU buy (08-10) − €948 ZOE buy (08-10) |
+| EUR | **−€254** ⚠️ | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) + €286 KLR trim (08-07) − €899 LULU buy (08-10) − €948 ZOE buy (08-10) + €298 NBIS partial cover, margin release (08-14) − €706 SFM buy (08-21) |
 
-> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually).
+> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually). **Balance is currently negative — a deposit or position trim is needed before placing further buy orders.**
 
 ---
 
@@ -157,10 +160,11 @@ Realised P&L grouped by position (trims + full exits combined).
 | FLUT | 🟢 Burry-aligned long | Flutter Entertainment — Burry long at $100.72 (Jul 24 2026); entered at $92.10 (better price); anti-prediction-markets / sports betting thesis; direct Scion alignment |
 | PRX | 🟢 Non-US value / SOTP — no signal | Prosus: international, non-AI, NAV-discount thesis; aligns with Grantham non-US preference and MOI SOTP framework |
 | WKL | 🟢 Intangible moat / non-US — no signal | Wolters Kluwer: recurring professional information revenue; no AI infrastructure exposure; Grantham-aligned non-US quality |
-| NBIS (short) | 🟢 Burry/model-aligned short | Nebius Group neocloud short — directly implements model framework "Avoid/underweight Nebius" call; Burry SOXX/AI-infrastructure bear thesis extends to GPU cloud neoclouds; customer-concentration risk if Meta compute overbuild unfolds |
+| NBIS (short) | 🟢 Burry/model-aligned short | Nebius Group neocloud short — directly implements model framework "Avoid/underweight Nebius" call; Burry SOXX/AI-infrastructure bear thesis extends to GPU cloud neoclouds; customer-concentration risk if Meta compute overbuild unfolds. Partially covered at a loss 2026-08-14 (price up sharply) — thesis not yet confirmed, 2 shares remain short |
 | ORCL (put) | 🟡 Partially Burry-aligned option | Long put $120 strike, Dec 2026; bearish overlay on Oracle AI/OCI narrative; OCI revenue +93% YoY (current data contradicts thesis); put profitable only if AI capex unwinds materially; break-even $108.62 |
 | LULU | 🟢 Consumer discretionary — no signal | Lululemon Athletica: athletic apparel retailer; no AI infrastructure or circular-financing exposure; initiated 2026-08-10 |
 | ZOE | 🟢 Healthcare/animal health — no signal | Zoetis Inc: animal health pharmaceuticals, vaccines & diagnostics; German (Xetra) listing; no AI infrastructure or circular-financing exposure; initiated 2026-08-10 |
+| SFM | 🟢 Consumer staples/grocery — no signal | Sprouts Farmers Market: natural & organic grocery retailer; no AI infrastructure or circular-financing exposure; initiated 2026-08-21 |
 
 **Patience override rule:** A mechanical EXIT signal (RSI < 40 + below 50d SMA + MACD bearish expanding) alone is not sufficient to exit a position with an intact fundamental thesis. Maximum trim: 50%. Reassess within 10 trading days.
 
