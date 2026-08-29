@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-29T23:52:39+02:00",
+      "summary": "Quiet weekend day — folded in the 08-28 BR/JBHT paper trade and the 08-29 portfolio-refresh into memory; wiki-thinker logged its second straight quiet day",
+      "content": [
+        "Domain Content Status — Finance: added the 08-28 paper-trading trade that had landed after the prior memory-update run — BR entered (Strategy A Value, Broadridge, ~28% discount to Morningstar FV) and JBHT discretionary exit (-11.73%/-$117), net open positions unchanged at 35",
+        "Domain Content Status — Finance/Crypto: logged the 08-29 portfolio-refresh — 25 prices updated, 0 unavailable, biggest mover $EV +18.57%; Massive.com batch snapshot 403'd again and yfinance was stale, so Alpha Vantage GLOBAL_QUOTE covered all 19 equity/ADR positions (used the full 25/day AV quota) while BTC/ETH/LINK fell back to Massive's /v2/aggs prev-day endpoint",
+        "Domain Content Status — Meta: wiki-thinker run count 39->40, added the 2026-08-29 quiet-day highlight (Saturday full-sweep across all 11 domains found nothing new beyond the routine trade)",
+        "No new wiki pages created and no Open Threads added or resolved — index.md is unchanged from the 2026-08-27 catch-up update",
+        "Bumped 'Last updated' date to 2026-08-29",
+        "Appended one memory-update log line to log.md for 2026-08-29"
+      ]
+    },
+    {
       "runAt": "2026-08-28T23:53:13+02:00",
       "summary": "Quiet catch-up day — memory index updated with today's briefing signal changes; recipe-recommender and wiki-thinker both found nothing new to add",
       "content": [
@@ -14,20 +26,6 @@
         "No new wiki pages created today and no Open Threads added or resolved — index.md and the Open Threads list are unchanged from the 2026-08-27 catch-up update",
         "Bumped 'Last updated' date to 2026-08-28",
         "Appended one memory-update log line to log.md for 2026-08-28"
-      ]
-    },
-    {
-      "runAt": "2026-08-27T21:57:08+02:00",
-      "summary": "Memory index caught up after a 17-day scheduler outage — paper trading to 35 positions (EVTC added, MRNA hit T2), 4 new wiki-thinker/Open-Thread items, 5 new AI-Tech source pages (incl. Nvidia buying Hugging Face for $12.9bn), new Burry Build-A-Bear (BBW) disclosure, and podcast/recipe/book recommender catch-up runs logged",
-      "content": [
-        "Domain Content Status — Finance: paper trading P1 grew to 35 open positions (EVTC entered 2026-08-27, Strategy F Small Cap Value — Evertec; MRNA hit T2 @ $149.66 on a Merck/Moderna Phase 3 win, mechanical tranche sale, only today processed post-outage, no back-dated trades for the 12 missed sessions); live trading portfolio still 14 positions per 2026-08-27 portfolio-management-briefing (IQV free-ride sell flagged, KLR stop still unresolved); mf-update re-run with 25 stocks (top 3: MGNS/DNLM/GSK); growth-value-tracker and sector-performance-tracker both refreshed through Aug 26 (value's YTD lead hit a new 2026 high; energy/GDX rally accelerated further, XLY flipped negative)",
-        "Domain Content Status — Finance: clippings-sorter cleared a 17-day backlog (9 clippings) — new source-burry-trading-post-2026-08-27.md discloses a pre-existing Build-A-Bear (BBW) long that just triggered Burry's mechanical 20% down rule (holding pending the 10-Q) plus a tactical NVDA call-hedge trim around Q2 earnings; BBW added to morningstar-watchlist.md and pipeline config.py (Burry group now 24 tickers)",
-        "Domain Content Status — AI & Tech: 5 new source pages from the catch-up window, headlined by source-information-am-nvidia-hugging-face-2026-08-27.md (Nvidia agrees to buy Hugging Face for $12.9bn; Nvidia Q2 FY2027 revenue +106% to $96.2bn but FCF fell >50% QoQ; new circular-financing disclosures) and source-information-am-nvidia-backstop-2026-08-11.md ($500bn Nvidia PE/private-credit backstop alliance); 2 pages are stub-only (source-reuters-nebius-finland-datacenter-2026-08-11.md, source-meta-nebius-nvidia-27b-deal-2026-08-12.md) since WebFetch was blocked by anti-automation gates",
-        "Domain Content Status — Meta: wiki-thinker run count 38→39, date range extended through 2026-08-27 noting the 17-day scheduler-outage gap (08-11 through 08-26); added the 2026-08-27 highlight — a fully-written Dwarkesh podcast page is missing from wiki/index.md's Podcasts table, and Michael Lewis's Liar's Poker parallels the hyperscaler off-balance-sheet debt model four decades apart",
-        "Domain Content Status — Podcasts/Cooking/Books/Crypto: logged catch-up runs — podcast-recommender (4 new shows), recipe-recommender (3 suggestions for week of 08-31), book-recommender (4 August recommendations, covering the missed 08-15 cycle), portfolio-refresh (25 prices, LINK +43.08%)",
-        "Open Threads: added 5 new items — missing Dwarkesh podcast page, Liar's Poker/debt-model connection, Burry's BBW 20%-down-rule pending resolution, 2 WebFetch-blocked stub pages needing backfill, and an unconfirmed podcast-summarizer run this window",
-        "Bumped 'Last updated' date to 2026-08-27",
-        "Appended one memory-update log line to log.md for 2026-08-27"
       ]
     }
   ]
