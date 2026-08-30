@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-08-30T23:51:54+02:00",
+      "summary": "Quiet day — folded in wiki-thinker's new Bill Gates/robot-tax cross-link and the 08-30 mf-update re-run into memory",
+      "content": [
+        "Domain Content Status — Meta: added the 2026-08-30 wiki-thinker highlight — Bill Gates' newly-ingested 'token tax' AI-unemployment proposal (source-information-am-nvidia-hugging-face-2026-08-27) directly answers ai-future-of-work.md's own untested 'robot tax' question, unlinked",
+        "Domain Content Status — Finance: logged the 08-30 mf-update re-run — Magic Formula rankings recomputed across the same 25 stocks, top 3 unchanged from 08-27 (MGNS, DNLM, GSK)",
+        "Open Threads: added one new thread for the Bill Gates token-tax / ai-future-of-work.md 'robot tax' cross-link gap, with a concrete next step",
+        "No new wiki pages created and no Open Threads resolved — index.md is unchanged from the 2026-08-27 catch-up update",
+        "Bumped 'Last updated' date to 2026-08-30",
+        "Appended one memory-update log line to log.md for 2026-08-30"
+      ]
+    },
+    {
       "runAt": "2026-08-29T23:52:39+02:00",
       "summary": "Quiet weekend day — folded in the 08-28 BR/JBHT paper trade and the 08-29 portfolio-refresh into memory; wiki-thinker logged its second straight quiet day",
       "content": [
@@ -14,18 +26,6 @@
         "No new wiki pages created and no Open Threads added or resolved — index.md is unchanged from the 2026-08-27 catch-up update",
         "Bumped 'Last updated' date to 2026-08-29",
         "Appended one memory-update log line to log.md for 2026-08-29"
-      ]
-    },
-    {
-      "runAt": "2026-08-28T23:53:13+02:00",
-      "summary": "Quiet catch-up day — memory index updated with today's briefing signal changes; recipe-recommender and wiki-thinker both found nothing new to add",
-      "content": [
-        "Domain Content Status — Finance: portfolio-management-briefing (08-28) — still 14 positions; GSK moved to Watch and flagged 1 tick from an Exit signal; CPB's MACD flipped bearish; 3 new candidates screened (T, BMY, RIO) but combined size exceeds available cash, so a funding priority was set and none were executed",
-        "Domain Content Status — Cooking: recipe-recommender's 08-28 run was skipped — week of 2026-08-31 already has 3 suggestions from the 08-27 catch-up run (Kimchi Fried Rice, Confit Duck Legs with Puy Lentils, Slow-Roasted Tomatoes with Anchovy); next real run targets week of 2026-09-07",
-        "Domain Content Status — Meta: wiki-thinker logged a quiet day (0 new ideas/connections) — Friday's domain rotation (Lightfin/Games/Cooking/Sports Betting/Work) re-checked every previously-flagged angle (Games prototype stubs, GAW idea page, WDAY short-research gap, Sports Betting bookmaker tracker) and found none had moved",
-        "No new wiki pages created today and no Open Threads added or resolved — index.md and the Open Threads list are unchanged from the 2026-08-27 catch-up update",
-        "Bumped 'Last updated' date to 2026-08-28",
-        "Appended one memory-update log line to log.md for 2026-08-28"
       ]
     }
   ]
