@@ -5,14 +5,14 @@
   "icon": "📊",
   "runs": [
     {
+      "runAt": "2026-08-31T07:04:12.000Z",
+      "summary": "Data through Aug 28 (all 7 ETFs). YTD leaders: IWN +23.9%, IWD +23.7%. Growth/value spread: -1980 bps (value leads), down from -2060 bps on Aug 26.",
+      "content": "YTD 2026 (all through Aug 28, independently compounded from Q1 x Q2 x Q3 -- matched ETFreplay's own annual/YTD readout to within rounding this run, no discrepancies found): IWN +23.9%, IWD +23.7%, IWM +20.6%, QQQ +16.9%, SPY +13.4%, IVE +12.8%, IWF +3.9%. Growth vs value spread: IWD +23.7% vs IWF +3.9% -> value leads by 1980 bps, down from 2060 bps on Aug 26 -- a second compression this quarter after the brief Aug 7 dip. Notable: growth stabilized over the final two days of August -- IWF's Q3 partial improved from -2.0% to -1.1% (YTD +3.1% -> +3.9%) and QQQ's Q3 partial improved from -3.4% to -2.7% (YTD +16.1% -> +16.9%) -- while value/small caps gave back a little ground (IWD flat at +23.7%, IVE +13.0% -> +12.8%, IWM +21.9% -> +20.6%, IWN +24.6% -> +23.9%). QQQ-IWF divergence held flat at 1300 bps. IWN remains top YTD performer, just ahead of IWD."
+    },
+    {
       "runAt": "2026-08-27T00:00:00.000Z",
       "summary": "Data through Aug 26 (all 7 ETFs). YTD leaders: IWN +24.6%, IWD +23.7%. Growth/value spread: -2060 bps (value leads), a new 2026 high, up from -1780 bps on Aug 7.",
       "content": "YTD 2026 (all through Aug 26, independently compounded from Q1 x Q2 x Q3 -- matched ETFreplay's own annual/YTD readout to within rounding this run, no discrepancies found): IWN +24.6%, IWD +23.7%, IWM +21.9%, QQQ +16.1%, IVE +13.0%, SPY +12.9%, IWF +3.1%. Growth vs value spread: IWD +23.7% vs IWF +3.1% -> value leads by 2060 bps, up from 1780 bps on Aug 7 -- a new YTD high, surpassing the prior Jul 31 peak of 2038 bps. Notable: growth reversed the early-August rally -- IWF's Q3 partial fell from +0.4% to -2.0% (YTD +5.5% -> +3.1%) and QQQ's Q3 partial fell from -1.8% to -3.4% (YTD +18.0% -> +16.1%) -- while value kept compounding (IWD Q3 +6.2% -> +6.6%, IVE +3.8% -> +4.8%) and small caps eased (IWM YTD +23.0% -> +21.9%, IWN +25.2% -> +24.6%). QQQ-IWF divergence widened to 1300 bps (from 1248 bps Aug 7). IWN remains top YTD performer; IWD closed to within 0.9pp of the top spot."
-    },
-    {
-      "runAt": "2026-08-10T00:00:00.000Z",
-      "summary": "Data through Aug 7 (all 7 ETFs). YTD leaders: IWN +25.2%, IWD +23.3%. Growth/value spread: -1780 bps (value leads), narrowed from -2038 bps on Jul 31 -- first compression this year.",
-      "content": "YTD 2026 (all through Aug 7, independently compounded from Q1 x Q2 x Q3 -- ETFreplay's own YTD readout had arithmetic errors this run for QQQ, IWF, IVE, IWN): IWN +25.2%, IWD +23.3%, IWM +23.0%, QQQ +18.0%, SPY +14.0%, IVE +12.0%, IWF +5.5%. Growth vs value spread: IWD +23.3% vs IWF +5.5% -> value leads by 1780 bps, down from 2038 bps on Jul 31 -- the first narrowing of the year after five consecutive widenings. Notable: every ETF rallied in the first week of August, but growth gained more percentage points than value -- IWF's Q3 partial swung from -4.7% to +0.4% (largest single-week improvement of the year) while IWD's Q3 partial rose only from +3.9% to +6.2%. QQQ-IWF divergence ticked up slightly to 1248 bps (from 1209 bps Jul 31) as QQQ's rally (+12.3% -> +18.0% YTD) slightly outpaced IWF's. IWN remains top YTD performer; IWD edged ahead of IWM for second place."
     }
   ]
 }
