@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-08-31T23:53:17+02:00",
+      "summary": "OXY (E)",
+      "picks": {
+        "p1": {
+          "ticker": "OXY",
+          "strategy": "E — Sector Rotation",
+          "entry": 59.10,
+          "stop": 50.24,
+          "t1": 73.88,
+          "t2": 88.65
+        }
+      },
+      "content": "Occidental Petroleum (OXY) picked up at the previous close ($59.10) — pure-play E&P leverage to the weekend US-Iran Strait of Hormuz strikes and resulting oil-price spike (WTI ~$85.46), backed by a standalone Aug 5 beat-and-raise (EPS $2.40 vs. $1.88 est., record production, debt cut $1.5B to $11.8B, 8% dividend increase), chosen over XOM/HAL (less direct crude torque) and VLO (refining margins can compress on a fast crude spike). WMT was exited discretionarily (−7.82%, −$78) to keep the book at 35 open positions after OXY's entry — no mechanical stop-losses or signal exits on the other 34 continuing positions. Portfolio net P&L: +$2,775 (+5.34% on $52,000)."
+    },
+    {
       "runAt": "2026-08-28T23:59:42+02:00",
       "summary": "BR (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Broadridge Financial Solutions (BR) picked up at the previous close ($183.08) — wide-moat proxy/governance infrastructure at a ~28% discount to Morningstar's $255 fair value, fresh Q4 FY2026 beat-and-raise (Aug 4) plus a new 12% dividend increase and $1.5B buyback, chosen over Zoetis (a Burry long, but just cut FY26 guidance) and Hershey (already re-rated above fair value). CrowdStrike's own Thursday earnings beat lifted CRWD +20.5% in one session to +37.44% overall, now within ~9% of T2. JBHT was exited discretionarily (−11.73%, −$117) to keep the book at 35 open positions after BR's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions. Portfolio net P&L: +$2,721 (+5.34% on $51,000)."
-    },
-    {
-      "runAt": "2026-08-27T21:46:58+02:00",
-      "summary": "EVTC (F)",
-      "picks": {
-        "p1": {
-          "ticker": "EVTC",
-          "strategy": "F — Small Cap Value",
-          "entry": 29.76,
-          "stop": 25.30,
-          "t1": 37.20,
-          "t2": 44.64
-        }
-      },
-      "content": "Evertec (EVTC) picked up at the previous close ($29.76) — a LatAm payments/fintech name at ~13.8x P/E near its May 2026 low after a Q1 EPS miss and June data-breach disclosure, but with the Dimensa acquisition now closed, 2026 EPS guidance raised (~9.9%), ~$210M TTM FCF, and analyst targets of $32.60-35.80, chosen away from today's narrow Nvidia/Salesforce/CrowdStrike-driven tech rally to avoid Burry's semiconductor/AI-capex conflict zone. This run follows a 17-day scheduling gap (last run 2026-08-10) — only today was processed, no back-dated trades. MRNA hit T2 (+150.49% @ $149.66) on Moderna's Merck-partnered melanoma vaccine Phase 3 win (announced during the gap) — mechanical tranche sale (~$835), final 1/3 now runs uncapped as the portfolio's largest open gainer. No stop-losses or signal exits. Portfolio net P&L: +$2,745 (+5.49% on $50,000)."
     }
   ]
 }
