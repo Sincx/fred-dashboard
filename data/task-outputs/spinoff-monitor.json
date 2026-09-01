@@ -5,6 +5,44 @@
   "icon": "🔍",
   "runs": [
     {
+      "runAt": "2026-09-01T10:11:16+02:00",
+      "summary": "0 new candidates found, 7 status changes (Solventum announced HIS separation; WEX board rejected spinoff)",
+      "content": {
+        "newCandidates": [],
+        "statusChanges": [
+          {
+            "company": "Solventum (SOLV)",
+            "change": "ANNOUNCED — Aug 5 2026: formally announced intent to separate its Health Information Systems business ($1.4B revenue, 30+ countries, 75%+ of US hospitals), evaluating spin-off/sale/merger structures, targeting close within 12-18 months (advised by Morgan Stanley, Goldman Sachs, Cleary Gottlieb). Directly answers Trian's April open letter. Dental remains bundled with MedSurg for now — that part of Trian's demand is still unresolved. Checklist now 7/7 on the HIS piece."
+          },
+          {
+            "company": "WEX",
+            "change": "THESIS DROPPED — After the May cooperation agreement seated 3 Impactive directors and split Chair/CEO, WEX's board formally rejected the Benefits spin-off proposal (and a related mega-grant ask) after its strategic review, citing lower standalone growth, customer-concentration risk, and reduced access to low-cost capital. Removed from active watch — no near-term catalyst."
+          },
+          {
+            "company": "Bayer AG (BAYN.DE / BAYRY)",
+            "change": "Missouri final-approval hearing for the $7.25B Roundup class settlement, originally Aug 19, postponed twice — first to Sept 10 by joint motion, then formally rescheduled by the court to Sept 14 2026 to process opt-out revocation requests. Still no formal separation announcement from Anderson."
+          },
+          {
+            "company": "Tripadvisor (TRIP)",
+            "change": "TheFork sale advanced from put-option (June 15) to a signed Equity Purchase Agreement with American Express Travel, Aug 2 2026, $700M cash subject to adjustments. Not yet closed. Starboard's broader push for a full company sale/board majority still unresolved."
+          },
+          {
+            "company": "Voya Financial (VOYA)",
+            "change": "ESCALATING FURTHER — TOMS Capital (TCIM) filed DFAN14A proxy materials in early Aug 2026, moving from private pressure to a public push including a call for a shareholder vote of no confidence. Combined economic exposure across TOMS/TCIM funds now ~5.7M shares (~4.5%+). Informal takeover interest (incl. Principal Financial) still circling but no talks confirmed."
+          },
+          {
+            "company": "BP",
+            "change": "Castrol/Stonepeak sale (~$10B EV) cleared EU (unconditional) and China SAMR antitrust; Australia (ACCC) and India (CCI) reviews still pending. Deal remains on track for a year-end 2026 close."
+          },
+          {
+            "company": "Delivery Hero (DHER)",
+            "change": "Aspex built its stake to ~15% (from ~9.2%), including a further 5% purchase from Prosus for €335M in May, reportedly under EU pressure on Prosus to reduce its holding. CEO search targeting a decision by end of 2026 (hard cutoff Mar 31 2027)."
+          }
+        ],
+        "recommendation": "Run /market-analyst SOLV (Solventum) — Trian's HIS separation demand was answered within 4 months of the open letter; worth modeling the surviving MedSurg+Dental entity and the HIS separation structures once terms firm up."
+      }
+    },
+    {
       "runAt": "2026-08-01T08:11:47.000Z",
       "summary": "2 new candidates found (Delivery Hero, Valmet), 4 status changes (Bayer, BP, Voya, Disney)",
       "content": {
