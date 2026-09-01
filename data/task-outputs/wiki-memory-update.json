@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-01T23:55:00+02:00",
+      "summary": "1 new page (book-breath.md), 2 new Open Threads, no threads resolved — caught entries appended at the true end of log.md, not just the top",
+      "content": [
+        "Reviewed log.md since the 2026-08-31 memory-update: top-of-file entries (09-01 portfolio-management-briefing — 16 positions/14 long+1 short+1 option, no mechanical triggers, IQV free-ride sell recommended; 09-01 spinoff-monitor — 0 new candidates, Solventum HIS separation formally announced, WEX board rejected its Benefits spinoff, Bayer's Roundup hearing postponed to Sept 14) plus 3 entries landed appended at the true bottom of the file instead of the top (08-31 wiki-thinker CIBR/Burry SW50 valuation connection, 09-01 book-summarizer creating book-breath.md, 09-01 wiki-thinker Nestor cross-link) — per the known log.md quirk, checked the full file rather than just a top read",
+        "Domain Content Status — Finance: logged the 08-31 OXY paper-trading entry (Strategy E Sector Rotation, Iran/Hormuz oil spike play) + WMT exit, the 09-01 portfolio-management-briefing, and the 09-01 spinoff-monitor run",
+        "Domain Content Status — Books: added the new book-breath.md page (James Nestor, monthly book-summarizer run) — already wired into index.md",
+        "Domain Content Status — Meta: added two new wiki-thinker highlights (08-31 CIBR sector reacceleration vs. Burry's SW50 cybersecurity valuation warning; 09-01 book-breath.md vs. Health's own Nestor breathwork source page)",
+        "Open Threads: added 2 new threads (CIBR/Burry SW50 cross-link gap; book-breath.md/source-godin-breathwork-2026.md cross-link gap), both with concrete next steps",
+        "Open Threads: updated the existing Bayer spinoff thread with the new Sept 14 2026 hearing date (was Aug 19)",
+        "No Open Threads resolved; no naming/convention changes",
+        "Bumped 'Last updated' date to 2026-09-01",
+        "Appended one memory-update log line to log.md for 2026-09-01"
+      ]
+    },
+    {
       "runAt": "2026-08-31T23:52:00+02:00",
       "summary": "Quietest day yet — only routine weekly tracker refreshes since the last memory update, no new pages or threads",
       "content": [
@@ -13,18 +28,6 @@
         "No new wiki pages, no new Open Threads, no Open Threads resolved, no naming/convention changes — index.md and Open Threads unchanged from the 2026-08-27 catch-up update",
         "Bumped 'Last updated' date to 2026-08-31",
         "Appended one memory-update log line to log.md for 2026-08-31"
-      ]
-    },
-    {
-      "runAt": "2026-08-30T23:51:54+02:00",
-      "summary": "Quiet day — folded in wiki-thinker's new Bill Gates/robot-tax cross-link and the 08-30 mf-update re-run into memory",
-      "content": [
-        "Domain Content Status — Meta: added the 2026-08-30 wiki-thinker highlight — Bill Gates' newly-ingested 'token tax' AI-unemployment proposal (source-information-am-nvidia-hugging-face-2026-08-27) directly answers ai-future-of-work.md's own untested 'robot tax' question, unlinked",
-        "Domain Content Status — Finance: logged the 08-30 mf-update re-run — Magic Formula rankings recomputed across the same 25 stocks, top 3 unchanged from 08-27 (MGNS, DNLM, GSK)",
-        "Open Threads: added one new thread for the Bill Gates token-tax / ai-future-of-work.md 'robot tax' cross-link gap, with a concrete next step",
-        "No new wiki pages created and no Open Threads resolved — index.md is unchanged from the 2026-08-27 catch-up update",
-        "Bumped 'Last updated' date to 2026-08-30",
-        "Appended one memory-update log line to log.md for 2026-08-30"
       ]
     }
   ]
