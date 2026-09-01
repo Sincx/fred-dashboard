@@ -5,6 +5,13 @@
   "icon": "📚",
   "runs": [
     {
+      "runAt": "2026-09-01T10:07:51.7510945+02:00",
+      "summary": "1 book page created: Breath",
+      "content": [
+        "Breath — James Nestor. Journalist's global investigation into breathing science: nasal vs. mouth breathing, ancient techniques (pranayama, Buteyko) validated by modern research, and how ~90% of people breathe badly in ways that quietly drive chronic ailments."
+      ]
+    },
+    {
       "runAt": "2026-08-01T10:12:01.2298109+02:00",
       "summary": "2 book pages created: Bad Actors, Gladiator",
       "content": [
