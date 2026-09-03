@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-03T23:50:54+02:00",
+      "summary": "V (E)",
+      "picks": {
+        "p1": {
+          "ticker": "V",
+          "strategy": "E — Sector Rotation",
+          "entry": 378.40,
+          "stop": 321.64,
+          "t1": 473.00,
+          "t2": 567.60
+        }
+      },
+      "content": "Visa (V) picked up at the previous close ($378.40) — entered on the financials sector's breakout to fresh all-time highs (XLF), a rally explicitly framed as capital rotating away from chip/AI-hyperscaler names, reinforced by Visa's own record high, a fiscal Q3 beat (+14% revenue, +10% payments volume) and Bill Ackman's disclosed ~$1.1B stake. RIVN was exited discretionarily (−9.14%, −$91) to keep the book at 35 open positions after V's entry — no mechanical stop-losses or T1/T2 triggers on the other 33 continuing positions; CMCL closed to within $0.39 of its T2 target. Portfolio net P&L: +$2,610 (+4.75% on $55,000)."
+    },
+    {
       "runAt": "2026-09-02T23:49:35+02:00",
       "summary": "MDT (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Medtronic (MDT) picked up at the previous close ($92.04) — a clean Q1 FY2027 beat-and-raise (EPS $1.45 vs $1.39 est., revenue $9.8B vs $9.55B est., +13.7% YoY, broad-based across Cardiovascular +18.9%/Electrophysiology +29.1%) with a raised full-year guide on both revenue and EPS and only a modest ~3% stock reaction, chosen over today's bigger earnings movers Dell (Burry AI-capex conflict) and GitLab (already up 20%+, disqualified by strategy D's own rule). HPQ hit T1 @ $31.32 (+25.23%), banking ~$417 on the first tranche. ROK was exited discretionarily (−9.66%, −$97) to keep the book at 35 open positions after MDT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions. Portfolio net P&L: +$2,445 (+4.53% on $54,000)."
-    },
-    {
-      "runAt": "2026-09-01T23:55:43+02:00",
-      "summary": "ICE (A)",
-      "picks": {
-        "p1": {
-          "ticker": "ICE",
-          "strategy": "A — Value",
-          "entry": 160.70,
-          "stop": 136.60,
-          "t1": 200.88,
-          "t2": 241.05
-        }
-      },
-      "content": "Intercontinental Exchange (ICE) picked up at the previous close ($160.70) — wide-moat, 5-star-at-flag Morningstar pick with a 22% discount and a Strong Buy analyst consensus (~15% upside to the $185.36 average target), chosen over Clorox (fresh multi-broker downgrades, deteriorating revenue/earnings) and Hershey (already re-rated near its target). Its pending $6B MarketAxess acquisition ties directly into today's dominant headline — a global bond sell-off and the 10-year Treasury yield hitting levels last seen January 2025, compounded by renewed U.S.-Iran Strait of Hormuz tension. F was exited discretionarily (−8.77%, −$88) to keep the book at 35 open positions after ICE's entry — no mechanical stop-losses or signal exits on the other 34 continuing positions. Portfolio net P&L: +$2,504 (+4.72% on $53,000)."
     }
   ]
 }
