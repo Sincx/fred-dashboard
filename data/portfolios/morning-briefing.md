@@ -1,113 +1,127 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-09-02
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-09-03
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
-  Positions:        16 open (14 long equity, 1 short, 1 option)
-  Total Value:      ~€18,236 (€16,521 invested + €1,715 cash; excludes NBIS short margin & ORCL put mark-to-market)
+  Positions:        14 open long (+ 1 short, 1 option)
+  Total Value:      ~€18,358 (€16,643 invested + €1,715 cash)
   Available Cap:    €1,715
-  Best Performer:   IQV +60.89%
-  Worst Performer:  PRX -10.47%
-  Largest Position: IQV (9.6% of portfolio)
+  Best Performer:   IQV +65.6%
+  Worst Performer:  PRX -10.4%
+  Largest Position: IQV (9.8% of portfolio)
+
+  Note: Amphenol (APH) underwent a 2-for-1 stock split effective today — position
+  adjusted from 11 to 22 shares, entry from $143.50 to $71.75; cost basis unchanged
+  at $1,578.50. Verify this matches your broker statement.
 
 POSITION SIGNALS
-  ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────────────┬─────┐
-  │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst                  │ MF# │
-  ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────────────┼─────┤
-  │ APH      │ +11.55%    │ 89.7    │ ↑     │ Hold     │ RSI extreme (overbought)  │ 17  │
-  │ WOSG     │ -0.87%     │ 39.0    │ ↓     │ Exit     │ Mechanical exit — see TI  │ 13  │
-  │ DNLM     │ +4.00%     │ 35.8    │ ↓     │ Exit     │ Mechanical exit — see TI  │ 2   │
-  │ IQV      │ +60.89%    │ 70.8    │ ↑     │ Watch*   │ Free-ride: execute now    │ 22  │
-  │ KLR      │ +24.57%    │ 49.1    │ ↓     │ Watch    │ 3,100p stop still breached│ 7   │
-  │ SAP      │ +32.73%    │ 56.1    │ ↑     │ Watch    │ —                          │ 15  │
-  │ CPB      │ +8.58%     │ 58.3    │ ↑     │ Watch    │ —                          │ 16  │
-  │ GSK      │ -4.03%     │ 43.3    │ ↓     │ Watch    │ —                          │ 3   │
-  │ EDEN     │ +12.33%    │ 62.0    │ ↑     │ Watch    │ —                          │ —   │
-  │ ACN      │ +13.68%    │ 60.7    │ ↑     │ Watch    │ —                          │ 5   │
-  │ ADBE     │ +11.98%    │ 58.4    │ ↑     │ Hold     │ —                          │ 4   │
-  │ FLUT     │ +10.73%    │ 52.3    │ ↓     │ Watch    │ Reassess deadline 09-10   │ —   │
-  │ PRX      │ -10.47%    │ 39.8    │ ↓     │ Exit     │ Mechanical exit — see TI  │ 19  │
-  │ WKL      │ -4.33%     │ 50.4    │ ↑     │ Watch    │ —                          │ 8   │
-  └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────────────┴─────┘
-  *IQV: mechanical Trim rule (RSI>70 + weight≥20%) not triggered — weight only 9.6% — but RSI 70.8 is above the 65 "approaching overbought" line; see Free Ride section.
-  Three mechanical Exit signals fired today (WOSG, DNLM, PRX) — RSI<40 + below 50d SMA + MACD bearish, all three. Per the patience-override rule (fundamental thesis intact on all three), max trim is 50%, not full exit — see Trade Ideas.
+  ┌──────────┬────────────┬─────────┬───────┬──────────┬─────────────────────┬─────┐
+  │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst            │ MF# │
+  ├──────────┼────────────┼─────────┼───────┼──────────┼─────────────────────┼─────┤
+  │ APH      │ +14.4%     │ 54.0    │ ↑     │ Hold     │ 2:1 split today     │ 17  │
+  │ WOSG     │ -3.6%      │ 34.8    │ ↓     │ Exit     │ —                   │ 13  │
+  │ DNLM     │ +8.2%      │ 48.9    │ ↑     │ Watch    │ —                   │ 2   │
+  │ IQV      │ +65.6%     │ 75.2    │ ↑     │ Watch*   │ Free-ride today     │ 22  │
+  │ KLR      │ +25.1%     │ 50.5    │ ↓     │ Watch    │ —                   │ 7   │
+  │ SAP      │ +35.8%     │ 59.9    │ ↑     │ Watch    │ —                   │ 15  │
+  │ CPB      │ +1.0%      │ 40.9    │ ↓     │ Watch    │ —                   │ 16  │
+  │ GSK      │ -3.8%      │ 44.4    │ ↓     │ Watch    │ —                   │ 3   │
+  │ EDEN     │ +13.1%     │ 63.6    │ ↑     │ Watch    │ —                   │ —   │
+  │ ACN      │ +18.3%     │ 66.8    │ ↑     │ Watch    │ —                   │ 5   │
+  │ ADBE     │ +14.4%     │ 61.5    │ ↑     │ Watch    │ —                   │ 4   │
+  │ FLUT     │ +11.1%     │ 52.8    │ ↓     │ Watch    │ Reassess 09-10 (7d) │ —   │
+  │ PRX      │ -10.4%     │ 40.0    │ ↓     │ Watch    │ Borderline exit     │ 19  │
+  │ WKL      │ -0.7%      │ 58.5    │ ↑     │ Watch    │ —                   │ 8   │
+  └──────────┴────────────┴─────────┴───────┴──────────┴─────────────────────┴─────┘
+  *IQV: mechanical Trim needs RSI>70 AND weight≥20%; weight is only 9.8% so signal
+  reads Watch, but RSI 75.2 is deep overbought — free-ride sell recommended below.
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest position IQV at 9.6%, no position near the 25% warning threshold
-  Sector spread:   Tech/Enterprise SW (SAP/ACN/ADBE) 20.8% | Healthcare/CRO (IQV/GSK) 16.4% | UK Consumer (WOSG/DNLM) 14.9% | AI Connectivity (APH) 9.2% | Fintech (EDEN) 8.1% | Consumer Staples (CPB) 7.5% | Int'l/SOTP (PRX) 6.7% | Sports Betting (FLUT) 6.4% | Info Services (WKL) 6.2% | UK Industrials (KLR) 3.8%
-  Currency split:  USD 40.0% | EUR 34.5% | GBp 25.5% — USD is the largest single bucket but no currency dominates the book
+  Concentration:   OK — largest position IQV at 9.8%, no position near 25%
+  Sector spread:   Tech/Enterprise SW (SAP/ACN/ADBE) 21.2% | Healthcare/CRO (IQV/GSK) 16.6%
+                   | UK Consumer (WOSG/DNLM) 14.7% | Fintech (EDEN) 8.1% | Connectors/AI
+                   Infra (APH) 9.3% | SOTP Intl (PRX) 6.7% | Sports Betting (FLUT) 6.4%
+                   | Staples (CPB) 6.9% | UK Industrials (KLR) 3.8% | Info Services (WKL) 6.4%
+                   No sector exceeds 25%; Tech+Healthcare+UK Consumer combined = 52.5%,
+                   the heaviest cluster but still well diversified across 10 groups.
+  Currency split:  USD 39.7% | GBp 25.3% | EUR 34.9%
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  WOSG: Trim 50% (100 of 200 sh) — RSI 39.0, below 50d SMA (727.78p), MACD bearish; patience-override applies (thesis intact, max 50% trim)
-  Proceeds: sell 100 sh @ 682p → £682.00 gross (£678.29 net of commission, ~€789 net). Position is at a small loss (entry 688p) — gross P&L on the trimmed shares ≈ -£6.00 (-€6.98), no CGT due; net after commission ≈ -€11.29. This is a risk-reduction trim, not profit-taking.
+  WOSG: Trim 50% (100 of 200 shares) — RSI 34.8, below 50d SMA (726.9p), MACD bearish;
+  mechanical Exit signal now persisting for a 2nd consecutive session. Patience-override
+  caps the trim at 50% given the UK consumer/retail thesis is still considered intact.
+  This trim realises a small loss, not a gain: Gross P&L ≈ -€28.50 (-£24.50), CGT €0
+  (no tax on losses), commission -€4.30, Net ≈ -€32.80. The loss is minor and can be
+  used to offset gains elsewhere for CGT purposes — technical risk reduction is the
+  primary rationale, not tax efficiency.
+  Expected proceeds: ~£663.50 (~€772)
 
-  DNLM: Trim 50% (45 of 90 sh) — RSI 35.8, below 50d SMA (853.41p), MACD bearish; patience-override applies
-  Proceeds: sell 45 sh @ 832p → £374.40 gross (£370.69 net of commission, ~€431 net). Gross P&L on trimmed shares ≈ +£14.40 (+€16.76); CGT (21%) -€3.52; commission -€4.31; net profit ≈ +€8.93 — marginal, tax+commission eat most of the gain, but the trim is technically (not profit) driven.
-
-  PRX: Trim 50% (15 of 30 sh) — RSI 39.8, below 50d SMA (€38.83), MACD bearish; worst performer, thesis (SOTP discount) not yet working. Patience-override applies
-  Proceeds: sell 15 sh @ €36.855 → €552.83 gross (€548.52 net of commission). Gross P&L on trimmed shares ≈ -€64.65, no CGT due; net after commission ≈ -€68.96 (realized loss) — again risk reduction, not profit-taking.
-
-  Combined trim proceeds (net of commission): ~€1,768 (WOSG €789 + DNLM €431 + PRX €549). Reassess all three within 10 trading days per the patience-override rule.
+  IQV: Free-ride sell 4 of 7 shares (adjusted for prior trims) — see FREE RIDE
+  OPPORTUNITIES below for full detail. RSI 75.2 is deep overbought with MACD now
+  bearish; this is the priority sell action today.
+  Expected proceeds: ~$1,081 net (~€930)
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No adds triggered — no position shows the mechanical Add signal (RSI 35–50 + above 50d SMA + MACD bullish) today.
+  No Add signals triggered today — all 14 positions cleared the Add screen (RSI 35-50
+  + above SMA50 + MACD bullish) without qualifying.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  CI: Enter at $283.06 (current price, RSI 52.8 comfortably inside 40–70, MACD bullish) — screen 5/5 Undervalued
-  Stop: $275.65 (entry − 1.5×ATR14 of ~$4.94) | Size: €1,500 (score 5/5 + Undervalued)
+  CI: Enter at $282.84 (current price, RSI 52.6 — healthy zone) — Market Watchlist
+  screen, Score 5/5, Undervalued (P/E 11.5x), MF#19, passes 3 of 4 Magic Formula checks
+  (EV/EBIT 8.9x✓, Fwd P/E 8.8x✓, ROE 16.8%✓, ROIC 13.4%✗) — strongest quality profile
+  of today's candidates.
+  Stop: $275.44 (entry - 1.5×ATR14 ≈ $4.93) | Size: €1,500
 
-  DVN: Enter at $49.05 (current price, RSI 64.1, MACD bullish, +10.05% past month — mildly extended) — screen 5/5 Undervalued
-  Stop: $47.48 (entry − 1.5×ATR14 of ~$1.05) | Size: €1,500 (score 5/5 + Undervalued)
+  T: Enter at $25.95 (current price, RSI 67.1 — approaching upper end of healthy
+  range) — Score 5/5, Undervalued (P/E 8.6x), MF#61, passes 2 of 4 checks (Fwd P/E✓,
+  ROE✓). New sector for the portfolio (Communication Services).
+  Stop: $25.34 (entry - 1.5×ATR14 ≈ $0.41) | Size: €1,500
 
-  T: Pullback entry preferred near $25.20 (RSI 68.0, close to overbought, +10.22% past month — extended) — screen 5/5 Undervalued
-  Stop: $24.59 (pullback entry − 1.5×ATR14 of ~$0.41) | Size: €750 (starter — RSI >65)
+  DVN: Enter at $49.03 (current price, RSI 63.9 — healthy) — Score 5/5, Undervalued
+  (P/E 10.2x), MF#57, passes 1 of 4 checks (Fwd P/E✓). New sector (Energy); note no
+  Burry conflict on DVN specifically.
+  Stop: $47.42 (entry - 1.5×ATR14 ≈ $1.07) | Size: €1,500
 
-  Capital note: total size of all three ideas (€3,750) exceeds available cash (€1,715) but is well covered once the IQV free-ride (~€906) and the three risk-reduction trims (~€1,768) land — combined potential dry powder ≈ €4,389. CI is the highest-conviction pick (lowest MF rank, cleanest entry, diversifies into Healthcare without extending an already-large sector); fund it first.
-
-INVESTMENT OPPORTUNITIES
-  5/5 · CI (S&P 500, Healthcare) — Undervalued, P/E 11.5, EPS +32.6% | MF#19
-  Entry: $283.06 (current) | Stop: $275.65 | Size: €1,500 | RSI: 52.8 | MACD: Bullish
-  Conviction: Undervalued (P/E 11.5×); bullish MACD; RSI healthy at 53; roughly flat past month (0.35%) — not chasing a recent spike.
-  Portfolio fit: Adds to Healthcare/CRO (currently 16.4% via IQV+GSK) — would bring the sector to ~24-25%, close to the concentration cap; size conservatively or watch this bucket if executed. MF screen 3/4 (EV/EBIT✓, Fwd P/E✓, ROE✓; ROIC✗) — best quality among the 5/5 candidates. USD position.
-
-  5/5 · DVN (S&P 500, Energy) — Undervalued, P/E 10.2, Div Yield 2.7% | MF#57
-  Entry: $49.05 (current) | Stop: $47.48 | Size: €1,500 | RSI: 64.1 | MACD: Bullish
-  Conviction: Undervalued (P/E 10.2×); bullish MACD; RSI 64, approaching the extended zone; +10.05% past month.
-  Portfolio fit: No existing Energy exposure — clean diversification, no Burry-thesis conflict. MF screen 1/4 (Fwd P/E✓ only) — cheap on price, weak on quality signals; treat as value/momentum, not a compounder. USD position — adding both CI and DVN would push USD exposure well past 40%.
-
-  5/5 · T (S&P 500, Communication Services) — Undervalued, P/E 8.6, Div Yield 4.27% | MF#61
-  Entry: pullback to ~$25.20 preferred (current $26.00, RSI 68.0) | Stop: $24.59 | Size: €750 | RSI: 68.0 | MACD: Bullish
-  Conviction: Deeply undervalued on P/E (8.6×) with a 4.27% dividend yield; bullish MACD but RSI is already at 68 after a 10.2% 1-month run — chase risk is elevated, prefer the pullback level.
-  Portfolio fit: No existing Communication Services exposure. MF screen 2/4 (Fwd P/E✓, ROE✓; EV/EBIT✗, ROIC✗) — moderate quality. USD position; starter size only given RSI extension.
+  Capital note: available cash (€1,715) does not cover all three at full €1,500 size —
+  prioritise CI first (best MF rank + pass-count); T and DVN become fundable after the
+  IQV free-ride and/or WOSG trim proceeds land (~€1,700 combined), see NEXT ACTIONS.
 
 FREE RIDE OPPORTUNITIES
-  IQV: Sell 4 of 7 shares at $263.84 (adjusted for 2 prior trims: remaining uncovered cost ~$857 of the $1,147.93 current cost basis) → $1,055.36 gross ($1,050.36 net of $5 commission, ~€906 net) covers remaining cost basis
-  Free position: 3 shares at zero effective cost | Current value: ~$791.52 (~€683)
-  Realised on this trim: gross +€344.56 | CGT (21%) -€72.36 | Commission -€4.31 | Net +€267.89
-  Status: Execute now — RSI 70.8 is above the 65 threshold and now technically overbought (>70)
+  IQV: Sell 4 of 7 shares (adjusted for €192.62 already realised via 2 prior trims) at
+  $271.62 → ~$1,081 net proceeds, fully recovers the ~$852 remaining uncovered cost
+  basis. Free position: 3 shares at zero effective cost | Current value: ~$815 (~€701)
+  Status: Execute now — RSI 75.2 is well above the 65 threshold and overbought
 
-  KLR: Sell 5 of 18 shares at 3,012p (adjusted for 2 prior trims: remaining uncovered cost ~£130 of the £435.24 current cost basis) → £150.60 gross (£146.89 net of commission, ~€171 net) covers remaining cost basis
-  Free position: 13 shares at zero effective cost | Current value: ~£391.56 (~€456)
-  Realised on this trim: gross +€34.56 | CGT (21%) -€7.26 | Commission -€4.31 | Net +€22.99
-  Status: Monitor — RSI 49.1 is neutral, well below the 65 threshold for immediate execution. The separate 3,100p stop-loss (breached, unexecuted) still needs resolving independently — see Next Actions.
+  KLR: Sell 5 of 18 shares (adjusted for £307.09 already realised via 2 prior trims) at
+  3,026p → ~£147.60 net proceeds, fully recovers the ~£128 remaining uncovered cost
+  basis. Free position: 13 shares at zero effective cost | Current value: ~£393 (~€457)
+  Status: Monitor — RSI 50.5 not yet extended, no Trim signal active; hold for a
+  stronger overbought reading before executing
 
-No other position meets free-ride criteria (free shares ≥2 and P&L ≥25%) this cycle.
+FREE RIDE — WATCHLIST (below current thresholds)
+  APH: 2 shares would be free (22 held, 20 needed to cover cost basis) but P&L is only
+  +14.4%, below the 25% qualifying threshold — not flagged, note only.
 
 PORTFOLIO RISKS TO WATCH
-  - Three mechanical Exit signals fired simultaneously (WOSG, DNLM, PRX) — broad-based technical weakness across UK Consumer and the SOTP/international bucket; watch for a market-wide pullback rather than idiosyncratic breakdowns
-  - KLR: 3,100p stop-loss has been breached and left unexecuted for multiple sessions; price is now 3,012p, still below the 50d SMA (3,057.84p) — an unresolved risk-management gap that needs an active decision
-  - APH: RSI 89.7 is extremely overbought (highest in the book by far) but the mechanical Trim rule doesn't fire because weight is only 9.2% (<20% threshold) — a sharp mean-reversion move is a real risk here even without a formal signal
-  - USD concentration: already the largest currency bucket at 40.0%; two of the three new-idea candidates (CI, DVN) are USD-denominated — fund at most one alongside T to avoid pushing USD exposure materially higher
-  - NBIS short / ORCL put: not refreshed this run (data provider rate-limited) — last known marks from 2026-09-01 showed NBIS +5.9% against the short entry and ORCL deep out-of-the-money; both worth a manual check
-  - FLUT: patience-override reassessment deadline is 2026-09-10, now 8 days out — RSI 52.3 has improved but price is still just below the 50d SMA ($102.43)
-  - Tech/Enterprise Software remains the largest sector bucket at 20.8% (SAP+ACN+ADBE) — adding CI would push Healthcare close to 25%, so avoid stacking both sectors at once
+  - WOSG mechanical Exit signal has now fired 2 sessions running — deteriorating UK
+    consumer momentum; patience-override trim window narrowing if it doesn't stabilise
+  - IQV RSI 75.2 with MACD bearish — sharp reversal risk on this year's best performer;
+    free-ride sell reduces exposure without abandoning the position
+  - PRX sits right at the RSI 40 Exit boundary (40.0) — one more weak session could
+    retrigger the mechanical Exit signal after today's narrow escape
+  - FLUT reassessment deadline is 7 days out (2026-09-10) with price still below SMA50
+  - GBp exposure (25.3%, spread across WOSG/DNLM/KLR/GSK) includes the one active
+    Exit signal (WOSG) — currency and technical risk compounding in that sleeve
 
 NEXT ACTIONS
-  1. Execute IQV free-ride sell: 4 shares at $263.84 (~€906 net proceeds, ~€268 net after tax & commission) — RSI 70.8 favors selling into strength now
-  2. Execute the three patience-override trims (WOSG, DNLM, PRX) at 50% each — combined ~€1,768 net proceeds; these are risk-reduction moves on intact theses, not profit-taking
-  3. Resolve the stale KLR stop decision: either execute the 5-share adjusted free-ride trim now (locks in cost-basis recovery, converts remaining 13 shares to house money) or formally reset/honor the 3,100p stop
-  4. Once proceeds land (~€4,389 available), fund CI (€1,500) first — best MF rank and Healthcare diversification without over-concentrating; consider T (€750) as a lower-conviction USD-diversifying add
-  5. Revisit FLUT ahead of the 2026-09-10 reassessment deadline (8 days out); manually refresh NBIS/ORCL marks (rate-limited this run)
+  1. Execute IQV free-ride sell: 4 of 7 shares at $271.62 (~€930 net proceeds)
+  2. Decide on WOSG 50% trim (100 shares at 663.5p, ~€772 proceeds, small realised loss
+     ~-€33) — mechanical signal has now persisted 2 sessions
+  3. If proceeds executed, place CI entry at $282.84, size €1,500, stop $275.44
+  4. Verify broker reflects the APH 2-for-1 split (22 shares, $71.75 entry) —
+     wiki position already adjusted
+  5. Monitor FLUT — reassessment deadline 2026-09-10 (7 days out)
+  6. Watch PRX — RSI sitting at 40.0, right on the mechanical Exit boundary
 ════════════════════════════════════════════════════════
