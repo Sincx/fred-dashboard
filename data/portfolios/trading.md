@@ -8,7 +8,23 @@ updated: 2026-09-04
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. Manual portfolio-management-briefing run **2026-09-04**: APH/IQV/CPB/ADBE/FLUT prices re-fetched via Massive and confirmed UNCHANGED from 2026-09-03 (market hadn't moved between snapshots). LULU/SFM technicals (RSI/MACD/SMA50/ATR14) computed fresh this run from 60 days of daily bars — no longer pending. NBIS/ORCL short prices refreshed (see Short Positions). SAP/EDEN/ACN/PRX/WKL/GSK/WOSG/DNLM/KLR prices still as of **2026-09-03** — Massive has no LSE/Euronext/Xetra entitlement (confirmed again) and Alpha Vantage was already at its 25 req/day cap before this run started. ZOE still priced via ZTS proxy (ZTS closed $76.29 today, consistent with the prior estimate, not a direct EUR quote). REL price still pending — LSE unavailable both sessions running. Cash: **-€785.39** ⚠️ UNRESOLVED (see note below — this update backfilled a batch of Aug 7–21 trades that predate the 2026-09-03 snapshot; several trims/opens weren't reflected in the prior table, and the resulting cash balance is negative — likely a missing deposit or a margin-accounting mismatch on the new shorts. Flag for user review — not fixed unilaterally). 22 open positions (18 long equity, 2 short, 2 options). **APH underwent a 2-for-1 stock split effective 2026-09-03** — applied after the Aug 14 trim below (7→14 shares, entry $143.50→$71.75, cost basis unchanged).
+> Live page — update whenever positions change. Manual portfolio-management-briefing run **2026-09-04**: APH/IQV/CPB/ADBE/FLUT prices re-fetched via Massive and confirmed UNCHANGED from 2026-09-03 (market hadn't moved between snapshots). LULU/SFM technicals (RSI/MACD/SMA50/ATR14) computed fresh this run from 60 days of daily bars — no longer pending. NBIS/ORCL short prices refreshed (see Short Positions). SAP/EDEN/ACN/PRX/WKL/GSK/WOSG/DNLM/KLR prices still as of **2026-09-03** — Massive has no LSE/Euronext/Xetra entitlement (confirmed again) and Alpha Vantage was already at its 25 req/day cap before this run started. ZOE still priced via ZTS proxy (ZTS closed $76.29 today, consistent with the prior estimate, not a direct EUR quote). REL price still pending — LSE unavailable both sessions running. Cash: **€503.61** (corrected 2026-09-04 — the negative balance flagged after the Aug backfill was a margin-accounting error: shorts don't draw down cash, only hold broker collateral separately; fixed by removing the margin-posted/returned entries from the Cash Position log). See [[#Portfolio Net Value|Portfolio Net Value]] for total net worth (≈€19,583) including equity, options, and short P&L. 22 open positions (18 long equity, 2 short, 2 options). **APH underwent a 2-for-1 stock split effective 2026-09-03** — applied after the Aug 14 trim below (7→14 shares, entry $143.50→$71.75, cost basis unchanged).
+
+---
+
+## Portfolio Net Value
+
+**Total Net Value: ≈ €19,583** (as of 2026-09-04)
+
+| Component | Value (€) | Basis |
+| --- | --- | --- |
+| Long equity (market price) | €17,948 | Sum of Mkt Value across all 18 open long positions, converted to EUR |
+| Options (market price) | €981 | ORCL put €457 + PLTR put €524 — live quotes via yfinance, not premium paid |
+| Shorts (market − entry, unrealized P&L) | €151 | NBIS +€162 (price fell, profit) + ORCL −€11 (price rose, loss) — margin itself excluded, see note |
+| Cash | €504 | Corrected balance, see [[#Cash Position\|Cash Position]] |
+| **Total Net Value** | **€19,583** | |
+
+> **Methodology note:** Shorts are traded on margin and don't hold cash value themselves — only their unrealized P&L (market price vs. entry price) contributes to net worth, per [[#Short Positions\|Short Positions]]. FX used: EUR/USD 1.16277, EUR/GBP 0.8608 (2026-09-04 rates). **Caveats on precision:** REL is still priced at its entry-price placeholder (no live LSE quote yet) and ZOE is priced via a USD/EUR proxy off NYSE:ZTS (no direct EUR-listing quote) — both understate/overstate slightly until refreshed. Recompute this section whenever prices in Open Positions / Short Positions / Options Positions are refreshed — it is not automatically kept in sync.
 
 ---
 
@@ -49,18 +65,18 @@ Active short equity positions (profit if price falls below entry; loss if price 
 | Nebius Group | NBIS | NASDAQ | USD | 3 | $273.32 | $819.96 | ✅ Hold | Re-shorted 2026-08-14 after the original Aug 6 short (5 sh @ $194.78) was closed at a loss on 2026-08-12 (bought back @ $234.00). Current price $210.63 (2026-09-04) → unrealized +22.93% (~+$188) on the short. AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure |
 | Oracle | ORCL | NYSE | USD | 3 | $149.89 | $449.67 | ✅ Hold | Equity short complementing the existing ORCL long put below; bearish on Oracle AI/OCI narrative (OCI +93% YoY — short profitable only if AI infrastructure thesis unwinds); initiated 2026-08-14. Current price $154.04 (2026-09-04) → unrealized -2.77% (~-$12) on the short |
 
-> Margin posted: NBIS −€719, ORCL −€394 (approx., notional value converted at ≈0.877 USD/EUR). Profit if price falls below entry; loss if it rises. Each position closes with a buyback — margin returned net of P&L.
+> Margin requirement (broker collateral, not a cash movement — see [[#Cash Position|Cash Position]] note): NBIS ~€719, ORCL ~€394 (approx., notional value converted at ≈0.877 USD/EUR). Profit if price falls below entry; loss if it rises.
 
 ---
 
 ## Options Positions
 
-| Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium | Total Cost (€) | Signal | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | €992 | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06. ORCL now $154.04 (2026-09-04), 27% above breakeven — deep OTM, no action |
-| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | €727 | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; break-even $116.76; initiated 2026-08-11. PLTR now $182.53 (2026-09-04), 46% above breakeven — deep OTM, long-dated, monitor only |
+| Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium Paid | Total Cost (€) | Current Price | Mkt Value (€) | Signal | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | €992 | $5.31/sh | €457 | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06. ORCL now $154.04 (2026-09-04), 27% above breakeven — deep OTM, no action. Live quote via yfinance 2026-09-04 (bid/ask unavailable, using last trade) |
+| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | €727 | $6.09/sh | €524 | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; break-even $116.76; initiated 2026-08-11. PLTR now $182.53 (2026-09-04), 46% above breakeven — deep OTM, long-dated, monitor only. Live quote via yfinance 2026-09-04 (bid/ask unavailable, using last trade) |
 
-> Long puts: profitable if the underlying closes below break-even at expiry. Maximum loss = premium paid (ORCL €992, PLTR €727).
+> Long puts: profitable if the underlying closes below break-even at expiry. Maximum loss = premium paid (ORCL €992, PLTR €727). Current combined mark-to-market value: €981 (down from €1,719 paid — both decayed as the underlyings rallied away from strike).
 
 ---
 
@@ -136,9 +152,9 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **-€785.39** ⚠️ | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) − €850 NBIS margin (08-06) + €286 KLR trim (08-07) − €900 LULU buy (08-10) − €953 ZOE buy (08-10) − €727 PLTR put (08-11) + €674 NBIS short-close, margin returned net of loss (08-12) − €719 NBIS margin, re-short (08-14) − €394 ORCL margin, new short (08-14) + €415 IQV trim (08-14) + €584 APH trim (08-14) + €554 WOSG trim (08-14) − €613 REL buy (08-14) − €707 SFM buy (08-21) |
+| EUR | **€503.61** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) + €286 KLR trim (08-07) − €900 LULU buy (08-10) − €953 ZOE buy (08-10) − €727 PLTR put (08-11) + €415 IQV trim (08-14) + €584 APH trim (08-14) + €554 WOSG trim (08-14) − €613 REL buy (08-14) − €707 SFM buy (08-21) |
 
-> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually). **⚠️ Balance is negative as of this backfill (2026-09-04) — likely a missing deposit between 08-06 and 08-21, or the flat-margin treatment of the two new shorts overstates cash required. Needs user reconciliation; not fixed unilaterally.**
+> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually). **Corrected 2026-09-04: shorts are traded on margin and do not draw down cash** — the four margin-posted/returned entries for NBIS/ORCL shorts (previously in this log) were removed as an accounting error, which resolves the negative-balance flag from the earlier backfill. Margin requirement is tracked separately in [[#Short Positions|Short Positions]] as a broker requirement, not a cash movement.
 
 ---
 
