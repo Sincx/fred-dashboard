@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-04T23:49:50+02:00",
+      "summary": "RELX (A)",
+      "picks": {
+        "p1": {
+          "ticker": "RELX",
+          "strategy": "A — Value",
+          "entry": 36.65,
+          "stop": 31.15,
+          "t1": 45.81,
+          "t2": 54.98
+        }
+      },
+      "content": "RELX PLC picked up at the previous close ($36.65) — entered on a hot August jobs report (+162K vs. +53K est.) that pushed rate-hike odds up and stocks down broadly, favouring defensive/value names; RELX's wide-moat Morningstar discount (FV $57, reconfirmed Aug 6, ~36% discount at entry) carries no negative earnings catalyst, chosen over Clorox (confirmed value trap, still falling), Ecolab (shallow discount) and Ameriprise (no longer discounted). CMCL hit T2 @ $26.32 (+51.88%), banking ~$506 on the second tranche. YUMC was exited discretionarily (−8.45%, −$84) to keep the book at 35 open positions after RELX's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AVGO (Burry Sector Warning) is now the weakest continuing position at −7.41%. Portfolio net P&L: +$2,839 (+5.07% on $56,000)."
+    },
+    {
       "runAt": "2026-09-03T23:50:54+02:00",
       "summary": "V (E)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Visa (V) picked up at the previous close ($378.40) — entered on the financials sector's breakout to fresh all-time highs (XLF), a rally explicitly framed as capital rotating away from chip/AI-hyperscaler names, reinforced by Visa's own record high, a fiscal Q3 beat (+14% revenue, +10% payments volume) and Bill Ackman's disclosed ~$1.1B stake. RIVN was exited discretionarily (−9.14%, −$91) to keep the book at 35 open positions after V's entry — no mechanical stop-losses or T1/T2 triggers on the other 33 continuing positions; CMCL closed to within $0.39 of its T2 target. Portfolio net P&L: +$2,610 (+4.75% on $55,000)."
-    },
-    {
-      "runAt": "2026-09-02T23:49:35+02:00",
-      "summary": "MDT (D)",
-      "picks": {
-        "p1": {
-          "ticker": "MDT",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 92.04,
-          "stop": 78.23,
-          "t1": 115.05,
-          "t2": 138.06
-        }
-      },
-      "content": "Medtronic (MDT) picked up at the previous close ($92.04) — a clean Q1 FY2027 beat-and-raise (EPS $1.45 vs $1.39 est., revenue $9.8B vs $9.55B est., +13.7% YoY, broad-based across Cardiovascular +18.9%/Electrophysiology +29.1%) with a raised full-year guide on both revenue and EPS and only a modest ~3% stock reaction, chosen over today's bigger earnings movers Dell (Burry AI-capex conflict) and GitLab (already up 20%+, disqualified by strategy D's own rule). HPQ hit T1 @ $31.32 (+25.23%), banking ~$417 on the first tranche. ROK was exited discretionarily (−9.66%, −$97) to keep the book at 35 open positions after MDT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions. Portfolio net P&L: +$2,445 (+4.53% on $54,000)."
     }
   ]
 }
