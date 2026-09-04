@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-04T23:53:00+02:00",
+      "summary": "19-file clippings-sorter ingest, 2 portfolio-management-briefing runs surfaced a 16→22 position jump with a cash-reconciliation discrepancy, 1 paper trade logged, 0 threads resolved",
+      "content": [
+        "Reviewed log.md since the 2026-09-03 memory-update: top-of-file 09-04 entries (clippings-sorter — 19 new files: 17 Burry pieces + 2 Dalio investor-letters, plus 2 AI-tech pieces; recipe-recommender — 3 recipes for week of 09-07; wiki-thinker — quiet day) and 4 entries appended at the true bottom (2× portfolio-management-briefing manual runs, 1 RELX paper trade/YUMC exit/CMCL T2, 1 memory-update line) — checked the full file per the known log.md append-at-end quirk",
+        "Domain Content Status — Finance: added the 09-04 clippings-sorter summary (new Burry watchlist entries BIRK/SFM/CRWV/FOUR, LULU flagged red), the two 09-04 portfolio-management-briefing runs (live trading portfolio jumped from 16 to 22 positions — LULU/SFM/ZOE/REL appeared for the first time via an unexplained 'Aug 7-21 trade backfill'; LULU crashed -21.15%; the two runs disagreed on cash balance), and the 09-04 RELX entry/YUMC exit/CMCL T2 hit",
+        "Domain Content Status — AI & Tech: added the 2 new 09-04 source pages (Dwarkesh 'Agent Civilizations', Blodget 'AI Bubble Burst')",
+        "Domain Content Status — Cooking: added the 09-04 recipe-recommender run (Turkey Sausage/Kale Skillet, Momofuku Bao Buns, Blackberry Crumble)",
+        "Domain Content Status — Meta: added today's quiet-day wiki-thinker note; trimmed the row's older day-by-day highlights (07-30 through 08-10) into the existing 'Older entries' summary to keep the row from growing unbounded, and updated the run count to 46",
+        "Open Threads: extended the existing recurring trading-portfolio reconciliation-gap thread with the 09-04 developments (16→22 position jump, no matching trade-entry log lines for LULU/SFM/ZOE/REL, conflicting cash figures across the two same-day briefing runs) rather than opening a new thread, since it's the same underlying gap",
+        "No Open Threads resolved; no naming/convention changes",
+        "Bumped 'Last updated' date to 2026-09-04",
+        "Appended one memory-update log line to log.md for 2026-09-04"
+      ]
+    },
+    {
       "runAt": "2026-09-03T23:53:01+02:00",
       "summary": "1 new paper trade + 1 briefing logged, 2 new Open Threads (Exponential View / ai-future-of-work; Sound School Podcast / Lightfin), no threads resolved",
       "content": [
@@ -17,20 +32,6 @@
         "No Open Threads resolved; no naming/convention changes",
         "Bumped 'Last updated' date to 2026-09-03",
         "Appended one memory-update log line to log.md for 2026-09-03"
-      ]
-    },
-    {
-      "runAt": "2026-09-02T00:00:00+02:00",
-      "summary": "2 new paper trades logged, 2 new Open Threads (Buffett concentration / ABN framework), no threads resolved",
-      "content": [
-        "Reviewed log.md since the 2026-09-01 memory-update: 09-01 ICE paper trade (Strategy A Value — Intercontinental Exchange, F discretionary exit, book held at 35 positions) and 09-02 MDT paper trade (Strategy D Earnings Catalyst — Medtronic beat-and-raise, ROK discretionary exit, HPQ hit T1 @ +25.23%) — both landed appended at the true bottom of log.md rather than the top, per the known quirk, so checked the full file",
-        "Domain Content Status — Finance: added the 09-01 ICE entry/F exit and 09-02 MDT entry/ROK exit/HPQ T1 hit to the paper trading P1 summary",
-        "Domain Content Status — Meta: added today's wiki-thinker highlight (09-02) — Buffett's 'concentrate, avoid the rest' principle unlinked across idea-berkshire-principles.md, source-buffett-525-rule.md, and Fred's own P12 AltMBA breakthrough; Learning's ABN framework never applied to resolve Work's Workday disruption debate",
-        "Open Threads: added 2 new threads (Buffett concentration principle cross-link gap; ABN framework applicability to the Workday disruption debate), both with concrete next steps",
-        "Confirmed via file-mtime scan of wiki/ that no genuinely new pages exist beyond what log.md already reported (only routine trade/portfolio pages + cross-domain-themes.md touched)",
-        "No Open Threads resolved; no naming/convention changes",
-        "Bumped 'Last updated' date to 2026-09-02",
-        "Appended one memory-update log line to log.md for 2026-09-02"
       ]
     }
   ]
