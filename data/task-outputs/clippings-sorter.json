@@ -5,14 +5,14 @@
     "icon":  "📎",
     "runs":  [
                  {
+                     "runAt":  "2026-09-07T23:30:49.5636973+02:00",
+                     "summary":  "4 clippings processed (1 empty stub deleted)",
+                     "content":  "5 files found in Clippings: 1 empty (0-byte) stub deleted, 4 processed. 3 general macro/AI-capex pieces (Stephen Clapham 'The $4.4 Trillion Question', Vlad Djukanovic 'The AI Capital Cycle', unattributed 'The Bond Market Isn't Listening to Bessent') + 1 Michael Burry Trading Post (Sep 4, 2026). All 4 moved to raw/finance/, tags updated, 4 wiki summary pages created in wiki/finance/investor-letters/. Updated finance/michael-burry/trading-posts.md, index.md, and person-michael-burry.md with the new Trading Post entry. Flagged an unreconciled discrepancy: the new post claims Burry doesn't yet own Alibaba, conflicting with the existing Jun 12, 2026 BABA long — filed as-is with discrepancy notes, no ticker changes made. Parsed Burry stock mentions (LULU/JD/BABA, all already tracked — no new pipeline tickers). Added reverse links across 14 cross-referenced pages. Updated main index.md with 4 new rows."
+                 },
+                 {
                      "runAt":  "2026-09-05T23:19:56.8343499+02:00",
                      "summary":  "No new clippings",
                      "content":  "Clippings folder empty."
-                 },
-                 {
-                     "runAt":  "2026-09-04T23:42:22.1919753+02:00",
-                     "summary":  "19 clippings processed (5 duplicates removed)",
-                     "content":  "24 files found; 5 duplicates deleted (already in raw/, or self-duplicate). 19 new files sorted: 17 to finance/ (Michael Burry: AP SBC/Tragic Algebra, Build-A-Bear Part 1, Fannie/Freddie/Housing, Foundations x2, Cassandra in Flames, Heretic's Guide Part III, Payments Giants, 7 Trading Posts (Aug 4/5/10/12/13/18-20/26); Ray Dalio: Investment Principles, Bond Market Supply & Demand), 2 to ai-tech/ (Dwarkesh: Agent Civilizations; Blodget: AI Bubble Burst). Created 19 wiki summary pages. Parsed Burry stock recommendations: added BIRK, SFM (new longs) and CRWV (new short) to morningstar-watchlist.md and pipeline config.py; updated MU/CAT/PLTR/ORCL/NBIS/TSLA/AMAT/SOXX/QQQ short-side entries and ZTS/LULU/FMCC/JD/BBW/FISV long-side entries; flagged FOUR (Shift4) as watch-only research, not a position. Updated finance/michael-burry/trading-posts.md and index.md running position trackers. Added reverse links across 6 cross-referenced pages. Updated main index.md with 19 new entries."
                  }
              ]
 }
