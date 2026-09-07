@@ -3,7 +3,7 @@ title: Paper Trading — Performance Analytics
 domain: finance
 type: live
 tags: [paper-trading, performance, analytics, simulation]
-updated: 2026-09-04
+updated: 2026-09-07
 ---
 
 
@@ -104,51 +104,51 @@ updated: 2026-09-04
 
 ---
 
-## Open Book Snapshot (unrealised, updated 2026-09-04)
+## Open Book Snapshot (unrealised, updated 2026-09-07)
 
-*For reference only — not included in realised P&L tracking. Previous close (Sept 3) via Massive/Polygon `/prev` for CRWD, NVO, HPQ, AMAT, GEV plus EUR/USD; yfinance `batch_download` for the remaining 30 tickers (Massive hit its free-tier rate limit and Alpha Vantage its daily quota).*
+*For reference only — not included in realised P&L tracking. 2026-09-07 is Labor Day (US markets closed, confirmed via news search); previous close remains Friday Sept 4. Massive/Polygon's free-tier batch snapshot endpoint returned HTTP 403 (not authorized on this plan), so yfinance `batch_download` fetched all 35 tickers in one call; EUR/USD (1.1616) via Massive/Polygon `/prev`.*
 
 | Ticker | Entry | Curr | P&L% | Open P&L $ | Notes |
 |---|---|---|---|---|---|
-| MRNA | $59.75 | $148.87 | +149.16% | +$497 (incl T1+T2) | 🟠 T1+T2 hit; still by far the largest open gain |
-| TNET | $45.40 | $69.42 | +52.91% | +$176 (incl T1+T2) | T1+T2 hit; final 1/3 running uncapped |
-| CMCL | $17.33 | $26.32 | +51.88% | +$173 (incl T1+T2) | T2 hit today @ $26.32; final 1/3 running uncapped |
-| CRWD | $165.87* | $215.10 | +29.68% | +$198 (incl T1) | T1 hit Jul 15; T2 ($248.80) ~14% away |
-| HPQ | $25.01 | $31.93 | +27.67% | +$185 (incl T1) | T1 hit Sep 2; running toward T2 ($37.52) |
-| RDW | $8.47 | $10.37 | +22.43% | +$75 (incl T1+T2) | T1+T2 hit; final 1/3 running uncapped |
-| CVX | $174.01 | $211.32 | +21.44% | +$214 | |
-| RIGL | $40.26 | $48.50 | +20.47% | +$205 | |
-| COP | $115.04 | $135.72 | +17.98% | +$180 | No Burry conflict |
-| VRTX | $477.08 | $557.96 | +16.95% | +$170 | |
-| JPM | $310.89 | $362.06 | +16.46% | +$165 | |
-| AMGN | $390.02 | $444.12 | +13.87% | +$139 | No Burry conflict |
-| CMCSA | $24.22 | $26.65 | +10.03% | +$100 | |
-| ICFI | $84.12 | $90.00 | +6.99% | +$70 | |
-| NVO | $44.55 | $47.51 | +6.64% | +$66 | ✅ Burry Long Aligned (defensive healthcare) |
-| ISTR | $29.32 | $30.71 | +4.74% | +$47 | |
-| EVTC | $29.76 | $30.57 | +2.72% | +$27 | No Burry conflict |
-| OXY | $59.10 | $60.61 | +2.55% | +$26 | No Burry conflict |
-| ICE | $160.70 | $164.59 | +2.42% | +$24 | Strategy A, Value; no Burry conflict |
-| SHW | $327.27 | $332.26 | +1.53% | +$15 | |
-| MDT | $92.04 | $93.10 | +1.15% | +$12 | Strategy D, Earnings Catalyst; ✅ Burry Long Aligned (healthcare) |
-| LAD | $375.78 | $378.98 | +0.85% | +$9 | |
-| V | $378.40 | $378.75 | +0.09% | +$1 | Strategy E, Sector Rotation; no Burry conflict |
-| RELX | $36.65 | $36.65 | 0.00% | $0 | New today — Strategy A, Value; no Burry conflict |
-| OTIS | $72.00 | $71.48 | −0.72% | −$7 | |
-| DHI | $146.01 | $144.41 | −1.10% | −$11 | |
-| PEP | $141.92 | $140.02 | −1.34% | −$13 | ✅ Burry Long Aligned (defensive consumer) |
-| BR | $183.08 | $178.91 | −2.28% | −$23 | Strategy A, Value; no Burry conflict |
-| O | $63.87 | $61.74 | −3.33% | −$33 | ✅ Burry Long Aligned (defensive REIT) |
-| NOC | $548.01 | $528.24 | −3.61% | −$36 | |
-| GEV | $969.67 | $941.84 | −2.87% | −$29 | |
-| AMAT | $458.17 | $435.91 | −4.86% | −$16 | T1+T2 hit; ⚠️ Burry Sector Warning (semis) — thesis intact |
-| TRV | $397.22 | $374.34 | −5.76% | −$58 | |
-| AVGO | $385.73 | $357.16 | −7.41% | −$74 | ⚠️ Burry Sector Warning (semis) — continued falling despite its earnings beat; weakest continuing position, still clear of the −10% signal-exit line |
-| **Open book total** | | | | **+$2,511** | |
+| MRNA | $59.75 | $145.55 | +143.60% | +$478 (incl T1+T2) | 🟠 T1+T2 hit; still by far the largest open gain |
+| TNET | $45.40 | $69.06 | +52.11% | +$174 (incl T1+T2) | T1+T2 hit; final 1/3 running uncapped |
+| CMCL | $17.33 | $26.33 | +51.93% | +$173 (incl T1+T2) | T1+T2 hit; final 1/3 running uncapped |
+| HPQ | $25.01 | $32.64 | +30.51% | +$204 (incl T1) | T1 hit Sep 2; running toward T2 ($37.52) |
+| CRWD | $165.87* | $213.10 | +28.48% | +$190 (incl T1) | T1 hit Jul 15; T2 ($248.80) ~17% away |
+| RDW | $8.47 | $10.53 | +24.32% | +$81 (incl T1+T2) | T1+T2 hit; final 1/3 running uncapped |
+| RIGL | $40.26 | $48.67 | +20.89% | +$209 | |
+| CVX | $174.01 | $208.60 | +19.88% | +$199 | |
+| COP | $115.04 | $134.26 | +16.71% | +$167 | No Burry conflict |
+| JPM | $310.89 | $358.64 | +15.36% | +$154 | |
+| VRTX | $477.08 | $546.12 | +14.47% | +$145 | |
+| AMGN | $390.02 | $437.23 | +12.10% | +$121 | No Burry conflict |
+| CMCSA | $24.22 | $26.49 | +9.37% | +$94 | |
+| ISTR | $29.32 | $31.10 | +6.07% | +$61 | |
+| ICFI | $84.12 | $88.00 | +4.61% | +$46 | |
+| NVO | $44.55 | $46.60 | +4.60% | +$46 | ✅ Burry Long Aligned (defensive healthcare) |
+| EVTC | $29.76 | $30.35 | +1.98% | +$20 | No Burry conflict |
+| SHW | $327.27 | $333.71 | +1.97% | +$20 | |
+| OXY | $59.10 | $60.04 | +1.59% | +$16 | No Burry conflict |
+| MDT | $92.04 | $94.17 | +2.31% | +$23 | Strategy D, Earnings Catalyst; ✅ Burry Long Aligned (healthcare) |
+| LAD | $375.78 | $386.81 | +2.94% | +$29 | |
+| ICE | $160.70 | $161.26 | +0.35% | +$3 | Strategy A, Value; no Burry conflict |
+| V | $378.40 | $375.07 | −0.88% | −$9 | Strategy E, Sector Rotation; no Burry conflict |
+| AMAT | $458.17 | $454.71 | −0.76% | −$3 | T1+T2 hit; ⚠️ Burry Sector Warning (semis) — sharply improved, thesis intact |
+| OTIS | $72.00 | $71.21 | −1.10% | −$11 | |
+| DHI | $146.01 | $142.75 | −2.23% | −$22 | |
+| GEV | $969.67 | $941.95 | −2.86% | −$29 | |
+| PEP | $141.92 | $137.63 | −3.02% | −$30 | ✅ Burry Long Aligned (defensive consumer) |
+| RELX | $36.65 | $35.51 | −3.11% | −$31 | Strategy A, Value; no Burry conflict |
+| O | $63.87 | $61.25 | −4.10% | −$41 | ✅ Burry Long Aligned (defensive REIT) |
+| BR | $183.08 | $172.88 | −5.57% | −$56 | Strategy A, Value; no Burry conflict |
+| NOC | $548.01 | $514.98 | −6.03% | −$60 | |
+| TRV | $397.22 | $369.35 | −7.02% | −$70 | |
+| AVGO | $385.73 | $357.90 | −7.21% | −$72 | ⚠️ Burry Sector Warning (semis) — improved slightly; weakest continuing position, still clear of the −10% signal-exit line |
+| **Open book total** | | | | **+$2,249** | |
 
 *CRWD entry split-adjusted 4:1 effective Jul 2 ($663.46→$165.87).*
 *🔴 QCOM closed Jun 25: −$173 realised. 🔴 AIP closed Jul 3: −$196 realised. 🔴 SKYT closed Jul 14: −$184 realised. ⚪ CSCO closed Jul 15: −$9 realised (max hold). ⚪ XOM closed Jul 17: −$75 realised (max hold). 🔴 PENG closed Jul 17: −$159 realised (stopped out). ⚪ CAT closed Jul 21: +$0.40 realised (max hold, 63 days). ⚪ IQV closed Jul 21: +$172 realised (max hold, 62 days). ⚪ IBM closed Jul 21: +$72 realised (max hold, 61 days, blended with May 30 T1). 🔴 LRCX closed Jul 21: −$182 realised (stopped out at $306.76, −18.16%). ⚪ LHA closed Jul 24: +$182 realised (max hold, 60 days, blended: T1 1/3 at +26.5% + final 2/3 at +14.07%). 📊 ASML closed Jul 28: −$102 realised (signal exit, −10.19%, Burry Sector Warning + P&L ≤ −10%). 🔴 MU closed Jul 30: −$28 realised (stopped out at $739.00, −17.51%, blended −2.81% incl. Jun 18 T1). 📊 AMD closed Jul 30: −$147 realised (signal exit at $429.56, −14.70%, Burry Sector Warning + P&L ≤ −10%). 🟡 RDW T1 Aug 5: +$85 realised on the tranche. 🔴 FICO closed Aug 7: −$159 realised (stopped out at $1,031.89, −15.93%). 🟡 CMCL T1 Aug 10: +$85 realised on the tranche. 🟠 RDW T2 Aug 10: +$201 realised on the tranche. 🟠 MRNA T2 Aug 27: +$502 realised on the tranche. 🔵 JBHT closed Aug 28: −$117 realised (discretionary exit, −11.73%, portfolio-size trim). 🔵 WMT closed Aug 31: −$78 realised (discretionary exit, −7.82%, portfolio-size trim). 🔵 F closed Sep 1: −$88 realised (discretionary exit, −8.77%, portfolio-size trim). 🟡 HPQ T1 Sep 2: +$84 realised on the tranche. 🔵 ROK closed Sep 2: −$97 realised (discretionary exit, −9.66%, portfolio-size trim). 🔵 RIVN closed Sep 3: −$91 realised (discretionary exit, −9.14%, portfolio-size trim). 🟠 CMCL T2 Sep 4: +$173 realised on the tranche. 🔵 YUMC closed Sep 4: −$84 realised (discretionary exit, −8.45%, portfolio-size trim). Total realised (all cash events): +$421 | Closed positions blended: −$1,543 | T1/T2 on open positions: +$1,964 (includes MU's pre-closure Jun 18 T1, folded into MU's own blended closed-position figure — a known running-total quirk when a position that banked a T1/T2 later closes; not corrected retroactively).*
-*RELX added as the day's new trade (Strategy A, Value) — a hot August jobs report (+162K vs. +53K est.) pushed rate-hike odds up and stocks down broadly, favouring defensive/value names; RELX's wide-moat discount (reconfirmed Aug 6, deeper today than at flag) with no negative catalyst behind the move made it the strongest candidate over CLX (a confirmed value trap, still falling), ECL (shallow discount, downtrend), AMP (no longer discounted) and POR/ZTS (rate-sensitive or guidance-cut-pattern concerns). YUMC was exited discretionarily (not a mechanical/signal trigger) to keep the book at 35 positions after RELX's entry — the Aug 10 Q2-beat thesis had simply drifted lower with no fresh negative catalyst. CMCL crossed its T2 target today (+51.88%); AVGO (Burry Sector Warning, −7.41%) is now the weakest continuing position but remains well clear of the −10% signal line.*
+*RELX added as the day's new trade (Strategy A, Value) — a hot August jobs report (+162K vs. +53K est.) pushed rate-hike odds up and stocks down broadly, favouring defensive/value names; RELX's wide-moat discount (reconfirmed Aug 6, deeper today than at flag) with no negative catalyst behind the move made it the strongest candidate over CLX (a confirmed value trap, still falling), ECL (shallow discount, downtrend), AMP (no longer discounted) and POR/ZTS (rate-sensitive or guidance-cut-pattern concerns). YUMC was exited discretionarily (not a mechanical/signal trigger) to keep the book at 35 positions after RELX's entry — the Aug 10 Q2-beat thesis had simply drifted lower with no fresh negative catalyst. CMCL crossed its T2 target today (+51.88%); AVGO (Burry Sector Warning, −7.41%) is now the weakest continuing position but remains well clear of the −10% signal line. 2026-09-07 (Labor Day, US markets closed) — no trading session, so no new trade; book repriced off Friday Sept 4's close only, no mechanical/signal triggers, no discretionary action, no strategy increment. First trading day of the week (and Step 3G weekly review) shifts to Tuesday Sept 8.*
 
 ---
 
