@@ -5,25 +5,25 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-08T23:52:24+02:00",
+      "summary": "LMT (E)",
+      "picks": {
+        "p1": {
+          "ticker": "LMT",
+          "strategy": "E — Sector Rotation",
+          "entry": 536.15,
+          "stop": 455.73,
+          "t1": 670.19,
+          "t2": 804.23
+        }
+      },
+      "content": "Lockheed Martin picked up at the previous close ($536.15) — entered on a same-day UBS upgrade to Buy (PT $674 from $581, missile-segment revenue +150% 2025-2030) tied directly to fresh Iran/Saudi Arabia strikes pushing oil toward 3-month highs and a broad risk-off tape (Dow −600pts). TRV was exited discretionarily (−7.95%, −$79) to keep the book at 35 open positions after LMT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AMGN fell −9.0% intraday on a Novartis Lp(a) trial-failure read-through (sector-wide biotech selling) but stayed net positive and was held. BR is now the weakest continuing position at −7.90%, no Burry conflict. Portfolio net P&L: +$2,055 (+3.60% on $57,000)."
+    },
+    {
       "runAt": "2026-09-07T23:44:48+02:00",
       "summary": "No trade — Labor Day",
       "picks": {},
       "content": "US markets (NYSE/NASDAQ) were closed for Labor Day, so no new trade was entered. All 35 open positions were repriced off Friday Sept 4's close: no stop-losses, T1/T2 triggers, or signal exits fired, and no discretionary action was warranted — the healthiest cross-section of the book in recent runs, with zero positions at or below the −10% watch threshold. AVGO (Burry Sector Warning) remains the weakest continuing position at −7.21%, improved from −7.41%. Portfolio net P&L: +$2,577 (+4.60% on $56,000). Strategy selection and the weekly performance review resume Tuesday Sept 8."
-    },
-    {
-      "runAt": "2026-09-04T23:49:50+02:00",
-      "summary": "RELX (A)",
-      "picks": {
-        "p1": {
-          "ticker": "RELX",
-          "strategy": "A — Value",
-          "entry": 36.65,
-          "stop": 31.15,
-          "t1": 45.81,
-          "t2": 54.98
-        }
-      },
-      "content": "RELX PLC picked up at the previous close ($36.65) — entered on a hot August jobs report (+162K vs. +53K est.) that pushed rate-hike odds up and stocks down broadly, favouring defensive/value names; RELX's wide-moat Morningstar discount (FV $57, reconfirmed Aug 6, ~36% discount at entry) carries no negative earnings catalyst, chosen over Clorox (confirmed value trap, still falling), Ecolab (shallow discount) and Ameriprise (no longer discounted). CMCL hit T2 @ $26.32 (+51.88%), banking ~$506 on the second tranche. YUMC was exited discretionarily (−8.45%, −$84) to keep the book at 35 open positions after RELX's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AVGO (Burry Sector Warning) is now the weakest continuing position at −7.41%. Portfolio net P&L: +$2,839 (+5.07% on $56,000)."
     }
   ]
 }
