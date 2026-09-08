@@ -3,28 +3,28 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-09-07
+updated: 2026-09-08
 ---
 
 # Trading Portfolio
 
-> Live page — update whenever positions change. **portfolio-management-briefing run, 2026-09-07**: US markets closed for Labor Day — APH, IQV, CPB, ADBE, FLUT, LULU, SFM (and NBIS/ORCL/PLTR) carry Friday 2026-09-04's closing prices unchanged. LSE and European markets traded live and mostly softened. **GSK and PRX both crossed into fresh mechanical Exit signals this session** (RSI 39.75 and 38.31 respectively, both below 50d SMA, MACD bearish) — Patience Override applied to both (no thesis-breaking catalyst identified, looks like broad European value drift), no trims executed. PRX is now the second-worst performer at -11.44% (from -9.81%). CPB and LULU continue under their existing Patience Overrides, unchanged (US holiday). IQV free-ride still due: RSI 69.63, sell 2 of 5 shares recovers the full remaining cost basis ($378.76) — recommended execute now. KLR remains **already free-ridden**, all 10 remaining shares at zero effective cost. ZOE re-priced via ZTS proxy (ZTS closed $75.81, unchanged — Labor Day) — still not a direct EUR quote; technicals fall inside the mechanical Add band but the margin is noise-level, not actionable. REL price refreshed (2,572p, live LSE quote) — placeholder cleared. Cash unchanged at **€503.61** (see [[#Cash Position|Cash Position]]). Total net value now ≈**€19,165** (down from €19,286, driven mainly by softer European/UK prices — SAP, EDEN, ACN, WKL, GSK, PRX all lower) — see [[#Portfolio Net Value|Portfolio Net Value]]. 22 open positions (18 long equity, 2 short, 2 options).
+> Live page — update whenever positions change. **2026-09-08, evening update**: no new trades this pass — prices refreshed for all 15 open long positions (ZOE and REL priced live for the first time in several sessions; all others refreshed from 2026-09-07 carries). ADBE, GSK, PRX, SFM, LULU stand out: ADBE reports earnings 2026-09-10 (2 days out); GSK and PRX continue their mechanical Exit signals from this morning (patience-override still applies); SFM crossed into a **new** mechanical Exit signal (RSI 39.7, below 50d SMA, MACD bearish) that wasn't present this morning; LULU remains the top portfolio risk post its 09-03 earnings miss. ORCL short and both options also refreshed — ORCL rallied to $162.52, pushing both the equity short and the long put further against thesis. Cash unchanged at **€2,808.51** (no trades today). Total net value now ≈**€18,440** (down from €18,729 this morning — LULU/GSK/PRX/SFM declines plus ORCL rallying against the short/put overlay) — see [[#Portfolio Net Value|Portfolio Net Value]]. 18 open positions (15 long equity, 1 short, 2 options).
 
 ---
 
 ## Portfolio Net Value
 
-**Total Net Value: ≈ €19,165** (as of 2026-09-07)
+**Total Net Value: ≈ €18,440** (as of 2026-09-08, evening refresh)
 
 | Component | Value (€) | Basis |
 | --- | --- | --- |
-| Long equity (market price) | €17,560 | Sum of Mkt Value across all 18 open long positions, converted to EUR |
-| Options (market price) | €1,004 | ORCL put €409 + PLTR put €595 — unchanged, US holiday (underlyings stale) |
-| Shorts (market − entry, unrealized P&L) | €98 | NBIS +€121 + ORCL −€23 — unchanged, US holiday (underlyings stale); margin itself excluded, see note |
-| Cash | €504 | Unchanged, see [[#Cash Position\|Cash Position]] |
-| **Total Net Value** | **€19,165** | |
+| Long equity (market price) | €14,666 | Sum of Mkt Value across all 15 open long positions, converted to EUR at live 2026-09-08 rates. ZOE and REL priced live (ZOE via ZTS proxy) for the first time in several sessions |
+| Options (market price) | €999 | ORCL put €365 + PLTR put €632 — refreshed today; ORCL put decayed further (ORCL rallied to $162.52), PLTR put rose as PLTR pulled back to $170.30 |
+| Shorts (market − entry, unrealized P&L) | −€33 | ORCL only — refreshed today; ORCL rallied from $158.78 to $162.52, worsening the unrealized loss |
+| Cash | €2,809 | Unchanged — no trades today, see [[#Cash Position\|Cash Position]] |
+| **Total Net Value** | **€18,440** | |
 
-> **Methodology note:** Shorts are traded on margin and don't hold cash value themselves — only their unrealized P&L (market price vs. entry price) contributes to net worth, per [[#Short Positions\|Short Positions]]. FX used: EUR/USD 1.162385, EUR/GBP 0.858236 (2026-09-07 rates). **Caveats on precision:** ZOE is still priced via a USD/EUR proxy off NYSE:ZTS (no direct EUR-listing quote) — REL now has a live LSE quote (placeholder cleared this session). US markets were closed for Labor Day 2026-09-07 — APH, IQV, CPB, ADBE, FLUT, LULU, SFM plus NBIS/ORCL/PLTR and both options all carry Friday 2026-09-04 closing prices unchanged. The €121 decline from the prior session is driven by softer European/UK markets today (SAP, EDEN, ACN, WKL, GSK, PRX all lower), partly offset by gains in DNLM and KLR. Recompute this section whenever prices in Open Positions / Short Positions / Options Positions are refreshed — it is not automatically kept in sync.
+> **Methodology note:** Shorts are traded on margin and don't hold cash value themselves while open — only their unrealized P&L (market price vs. entry price) contributes to net worth, per [[#Short Positions\|Short Positions]]. FX used: EUR/USD 1.162791, EUR/GBP 0.859 (2026-09-08 live rates). ZOE has no direct EUR-listing feed and is priced via NYSE:ZTS close converted at the EUR/USD rate — confirmed methodology (this approach reproduced the prior session's price to within 0.05%). The drop from €18,729 (this morning) to €18,440 reflects real price moves: LULU, GSK, PRX and SFM all declined further, and ORCL's rally to $162.52 hurt both the equity short and the long put mark. No commissions or CGT this pass — no trades executed. Recompute this section whenever prices in Open Positions / Short Positions / Options Positions are refreshed — it is not automatically kept in sync.
 
 ---
 
@@ -32,27 +32,24 @@ updated: 2026-09-07
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Cost Basis | Last Price | Mkt Value | P&L% | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Amphenol Corp | APH | NYSE | USD | 14 | $71.75 | $1,004.50 | $82.78 | $1,158.92 | +15.37% | ✅ Hold | Trimmed 4 sh @ $167.58 on 2026-08-14 (pre-split, 11→7). **2-for-1 stock split effective 2026-09-03** (7→14 shares, entry $143.50→$71.75, cost basis unchanged). US markets closed 2026-09-07 (Labor Day) — RSI 55.5, SMA50 $80.51, MACD bullish carried unchanged from Friday's clean read |
-| Watches of Switzerland | WOSG | LSE | GBp | 135 | 688p | £928.80 | 685.00p | £924.75 | -0.44% | 👀 Watch | Trimmed 65 sh @ 733.5p on 2026-08-14. RSI 43.1, below 50d SMA (726.19p), MACD bearish |
-| Dunelm Group | DNLM | LSE | GBp | 90 | 800p | £720.00 | 886.50p | £797.85 | +10.81% | 👀 Watch | RSI 55.1, above 50d SMA (857.42p), MACD bearish |
-| IQVIA Holdings | IQV | NYSE | USD | 5 | $163.99 | $819.95 | $267.77 | $1,338.85 | +63.28% | 👀 Watch* | Trimmed 2 sh @ $239.06 on 2026-08-14. US holiday 2026-09-07 — price unchanged. RSI 69.6, above SMA50 ($230.13), MACD bearish; free-ride due — sell 2 of 5 shares recovers the full remaining cost basis ($378.76 of the original 12-share lot) — **recommended execute now**, see 2026-09-07 morning briefing |
-| Keller Group | KLR | LSE | GBp | 10 | 2,418p | £241.80 | 3,038.00p | £303.80 | +25.64% | 👀 Watch | Trimmed 8 sh @ 3,098p on 2026-08-07. RSI 51.8, below 50d SMA (3,082.25p), MACD bullish; **✅ already free-ridden** — gross trim proceeds (£1,326.40) exceed the original £1,209.00 cost basis, all 10 remaining shares at zero effective cost |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €182.80 | €1,279.60 | +33.72% | 👀 Watch | RSI 56.1, above 50d SMA (€162.26), MACD bearish |
-| Campbell's | CPB | NYSE | USD | 60 | $21.90 | $1,314.00 | $21.38 | $1,282.80 | -2.37% | 🔴 Exit | US holiday 2026-09-07 — price unchanged. RSI 35.7, below SMA50 ($22.69), MACD bearish — mechanical Exit continues; patience-override applied given deep Morningstar value thesis (FV $56, 59% discount) — hold, reassess within 10 sessions of 2026-09-04 trigger |
-| GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,837.50p | £955.50 | -5.26% | 🔴 Exit | RSI 39.8, below 50d SMA (1,920.28p), MACD bearish — **mechanical Exit triggered this session** (was Watch at RSI 41.2); no thesis-breaking catalyst identified, looks like broad European value drift; patience-override applied — hold, reassess within 10 sessions |
-| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €29.63 | €1,333.35 | +11.68% | 👀 Watch | RSI 56.6, above 50d SMA (€27.41), MACD bearish |
-| Accenture | ACN | Xetra | EUR | 6 | €141.10 | €846.60 | €159.55 | €957.30 | +13.08% | 👀 Watch | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA), confirmed 2026-08-04. RSI 56.0, above 50d SMA (€140.89), MACD bearish |
-| Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $266.51 | $1,332.55 | +6.67% | 👀 Watch | Creative & document software; AI integration (Firefly); US holiday 2026-09-07 — price unchanged. RSI 48.9, above SMA50 ($248.85), MACD bearish |
-| Flutter Entertainment | FLUT | NASDAQ | USD | 12 | $92.10 | $1,105.20 | $100.11 | $1,201.32 | +8.70% | 👀 Watch | Sports betting & iGaming global operator; Burry long at $100.72 (Jul 24 2026); entered at better price; anti-prediction-markets thesis; initiated 2026-08-06. US holiday 2026-09-07 — price unchanged. RSI 49.7, below SMA50 ($102.58), MACD bullish — reassess deadline 2026-09-10 (3 days out) |
-| Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €36.455 | €1,093.65 | -11.44% | 🔴 Exit | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 38.3, below 50d SMA (€38.76), MACD bearish — **mechanical Exit triggered this session** (was Watch at RSI 41.9); now the 2nd-worst performer after LULU; SOTP thesis intact, patience-override applied — hold, reassess within 10 sessions |
-| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €67.90 | €1,018.50 | -4.47% | 👀 Watch | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 49.3, above SMA50 (€65.33), MACD bearish |
-| Lululemon Athletica | LULU | NASDAQ | USD | 8 | $127.59 | $1,020.72 | $100.61 | $804.88 | -21.15% | 🔴 Exit | Athletic apparel; initiated 2026-08-10. **Crashed post-Q2-earnings 2026-09-03** (EPS $2.92 beat vs $1.79 est, +63% surprise, but cut forward guidance on declining revenue). US holiday 2026-09-07 — price unchanged. RSI 31.8, below SMA50 ($118.40), MACD bearish — mechanical Exit continues; patience-override applied (Burry's largest position, plans to buy more aggressively under $100, "well under IV15") — hold, no stop-loss in place, flagged as top portfolio risk |
-| Sprouts Farmers Market | SFM | NASDAQ | USD | 10 | $80.16 | $801.60 | $81.40 | $814.00 | +1.55% | 👀 Watch | Specialty grocery; initiated 2026-08-21. US holiday 2026-09-07 — price unchanged. RSI 49.1, essentially at SMA50 ($81.41), MACD bearish |
-| Zoetis Inc | ZOE | Xetra | EUR | 15 | €63.22 | €948.30 | €65.22 | €978.30 | +3.16% | 👀 Watch | Animal health pharma; European (EUR) listing — primary US listing is NYSE:ZTS, price here estimated via ZTS close ($75.81, unchanged — US holiday) × USD/EUR ≈0.8603, **not a direct EUR-listing quote — verify next refresh**. RSI 49.1, price barely above SMA50 (both in USD terms), MACD hist +0.006 — technically inside the mechanical Add band but the margin is noise-level, not actionable. Initiated 2026-08-10 |
-| RELX plc | REL | LSE | GBp | 20 | 2,595p | £519.00 | 2,572.00p | £514.40 | -0.89% | 👀 Watch | Information & analytics / events group; initiated 2026-08-14. **Live LSE quote obtained this session** (placeholder cleared). RSI 47.7, above 50d SMA (2,549.41p), MACD bearish |
+| Amphenol Corp | APH | NYSE | USD | 14 | $71.75 | $1,004.50 | $81.76 | $1,144.64 | +13.95% | ✅ Hold | Trimmed 4 sh @ $167.58 on 2026-08-14 (pre-split, 11→7). **2-for-1 stock split effective 2026-09-03** (7→14 shares, entry $143.50→$71.75, cost basis unchanged). RSI 52.8, above SMA50 ($80.51), MACD bullish |
+| IQVIA Holdings | IQV | NYSE | USD | 5 | $163.99 | $819.95 | $259.21 | $1,296.05 | +58.06% | 👀 Watch | Trimmed 2 sh @ $239.06 on 2026-08-14. RSI 59.2 (down from 69.6), above SMA50 ($231.49), MACD bearish; free-ride still available — sell 2 of 5 shares recovers the full remaining cost basis ($378.76 of the original 12-share lot) — RSI now below the 65 execute threshold, **monitor, execute at next RSI extension** |
+| Keller Group | KLR | LSE | GBp | 10 | 2,418p | £241.80 | 2,968.00p | £296.80 | +22.75% | 👀 Watch | Trimmed 8 sh @ 3,098p on 2026-08-07. RSI 44.4, below 50d SMA (3,089.46p), MACD bullish; **✅ already free-ridden** — gross trim proceeds (£1,326.40) exceed the original £1,209.00 cost basis, all 10 remaining shares at zero effective cost |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | €956.90 | €181.70 | €1,271.90 | +32.92% | 👀 Watch | RSI 54.7, above 50d SMA (€162.23), MACD bearish |
+| GSK | GSK | LSE | GBp | 52 | 1,939.6p | £1,008.58 | 1,796.50p | £934.18 | -7.38% | 🔴 Exit | RSI 34.1 (deteriorating from 39.8), below 50d SMA (1,916.63p), MACD bearish — mechanical Exit continues from 09-08 trigger; no thesis-breaking catalyst identified, next earnings 2026-10-28; patience-override applied — hold, reassess by ~2026-09-22 |
+| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | €1,193.85 | €28.61 | €1,287.45 | +7.84% | 👀 Watch | RSI 47.4, above 50d SMA (€27.39), MACD bearish |
+| Accenture | ACN | Xetra | EUR | 6 | €141.10 | €846.60 | €153.75 | €922.50 | +8.97% | 👀 Watch | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA), confirmed 2026-08-04. RSI 49.0, above 50d SMA (€141.84), MACD bearish |
+| Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | $1,249.25 | $257.26 | $1,286.30 | +2.97% | 👀 Watch | Creative & document software; AI integration (Firefly). RSI 44.2, above SMA50 ($249.94), MACD bearish — **earnings 2026-09-10 (2 days out)**, no pre-earnings de-risking planned |
+| Flutter Entertainment | FLUT | NASDAQ | USD | 12 | $92.10 | $1,105.20 | $100.70 | $1,208.40 | +9.34% | 👀 Watch | Sports betting & iGaming global operator; Burry long at $100.72 (Jul 24 2026); entered at better price; anti-prediction-markets thesis; initiated 2026-08-06. RSI 50.5, below SMA50 ($102.51), MACD bullish — reassess deadline 2026-09-10 (2 days out); next earnings not until 2026-11-12 |
+| Prosus | PRX | Euronext AMS | EUR | 30 | €41.165 | €1,234.95 | €36.23 | €1,086.90 | -11.99% | 🔴 Exit | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP value thesis. RSI 37.2, below 50d SMA (€38.76), MACD bearish — mechanical Exit continues from 09-08 trigger; SOTP thesis intact, patience-override applied — hold, reassess by ~2026-09-22 |
+| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €71.08 | €1,066.20 | €67.26 | €1,008.90 | -5.37% | 👀 Watch | Dutch professional information services (legal, tax, compliance); intangible moat / recurring revenue compounder; initiated 2026-08-05. RSI 47.4, above SMA50 (€65.32), MACD bearish |
+| Lululemon Athletica | LULU | NASDAQ | USD | 13 | $118.13 | $1,535.72 | $103.19 | $1,341.47 | -12.65% | 🔴 Exit | Athletic apparel; initiated 2026-08-10, added 5 sh @ $103.00 on 2026-09-08 (averaging down post-crash — new blended entry $118.13, was $127.59). Earnings reported 2026-09-03 (miss, drove the crash). RSI 35.2, below SMA50 ($118.11, essentially flat), MACD bearish — mechanical Exit continues; patience-override applied (Burry's largest position, plans to buy more aggressively under $100, "well under IV15") — hold, no stop-loss in place, flagged as top portfolio risk |
+| Sprouts Farmers Market | SFM | NASDAQ | USD | 10 | $80.16 | $801.60 | $76.11 | $761.10 | -5.05% | 🔴 Exit | Specialty grocery; initiated 2026-08-21. RSI 39.7, below SMA50 ($81.29), MACD bearish — **NEW mechanical Exit signal today** (was Watch RSI 49.1 yesterday); no catalyst identified, next earnings not until 2026-10-28; patience-override applied — hold, reassess by ~2026-09-22 |
+| Zoetis Inc | ZOE | Xetra | EUR | 15 | €63.22 | €948.30 | €63.26 | €948.90 | +0.06% | 👀 Watch | Animal health pharma; European (EUR) listing — primary US listing is NYSE:ZTS, price here estimated via ZTS close ($73.56) ÷ EUR/USD, **not a direct EUR-listing quote**. RSI 42.5, below SMA50 (~€64.84 proxy), MACD bearish. Initiated 2026-08-10 |
+| RELX plc | REL | LSE | GBp | 22 | 2,593.27p | £570.52 | 2,551.00p | £561.22 | -1.63% | 👀 Watch | Information & analytics / events group; initiated 2026-08-14, added 2 sh @ 2,576p on 2026-09-08 (new blended entry 2,593.27p, was 2,595p). RSI 46.1, essentially at 50d SMA (2,553.24p), MACD bearish |
 
-> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR. Prices last fetched: **2026-09-07**.
-> **Active alerts:** LULU — remains at -21.15% post-Q2-earnings (guidance cut); mechanical Exit continues, patience-override applied (Burry's largest position, plans to add under $100), no stop-loss in place — top portfolio risk. GSK and PRX — **both crossed into mechanical Exit this session** (RSI 39.8 and 38.3); patience-override applied to both, no forced trim, reassess within 10 sessions. PRX is now the 2nd-worst performer at -11.44%. CPB — mechanical Exit continues from 2026-09-04 (RSI 35.7); patience-override applied given deep value thesis. IQV — free-ride sell (2 of 5 shares) recommended today, recovers full remaining cost basis. KLR — confirmed **already free-ridden**, all 10 shares at zero effective cost, no action needed. FLUT — reassessment deadline 2026-09-10 (3 days out). **US markets closed 2026-09-07 (Labor Day)** — APH, IQV, CPB, ADBE, FLUT, LULU, SFM (and NBIS/ORCL/PLTR) carry Friday 2026-09-04 closing prices unchanged. **REL — live LSE quote obtained this session, placeholder cleared.**
+> Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR. Prices last fetched: **2026-09-08** (evening refresh, all 15 positions live).
+> **Active alerts:** LULU — no stop-loss, mechanical Exit continues post 09-03 earnings miss, top portfolio risk. ADBE — earnings 2026-09-10 (2 days out). GSK, PRX — mechanical Exit continues from this morning's trigger, patience-override applied, reassess by ~2026-09-22. SFM — **NEW mechanical Exit signal today** (RSI 39.7), patience-override applied, reassess by ~2026-09-22. IQV — free-ride sell (2 of 5 shares) available but RSI (59.2) now below the 65 execute threshold — monitor. KLR — confirmed **already free-ridden**, all 10 shares at zero effective cost. FLUT — reassessment deadline 2026-09-10 (2 days out). ORCL short/put — both losing ground as ORCL rallied to $162.52.
 
 ---
 
@@ -62,10 +59,9 @@ Active short equity positions (profit if price falls below entry; loss if price 
 
 | Company | Ticker | Exchange | Currency | Shares Short | Entry | Short Value | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Nebius Group | NBIS | NASDAQ | USD | 3 | $273.32 | $819.96 | ✅ Hold | Re-shorted 2026-08-14 after the original Aug 6 short (5 sh @ $194.78) was closed at a loss on 2026-08-12 (bought back @ $234.00). Current price $226.39 (2026-09-04, 2nd run) → unrealized +17.17% (~+$141, ~€121) on the short — profit nearly halved from earlier today (+22.93%/+€162) as the stock rallied +7.5%. AI neocloud / GPU cloud compute; model framework explicitly "Avoid/underweight Nebius" (Meta compute overbuild, customer-concentration risk per [[finance/models/model-meta-compute-release-market-impact-2026-07-05]]); Burry SOXX short thesis extends to neocloud infrastructure — thesis under near-term pressure from today's rally |
-| Oracle | ORCL | NYSE | USD | 3 | $149.89 | $449.67 | ✅ Hold | Equity short complementing the existing ORCL long put below; bearish on Oracle AI/OCI narrative (OCI +93% YoY — short profitable only if AI infrastructure thesis unwinds); initiated 2026-08-14. Current price $158.78 (2026-09-04, 2nd run) → unrealized -5.93% (~-$27, ~-€23) on the short, loss widened from -2.77%/-€12 earlier today as ORCL rallied further |
+| Oracle | ORCL | NYSE | USD | 3 | $149.89 | $449.67 | ✅ Hold | Equity short complementing the existing ORCL long put below; bearish on Oracle AI/OCI narrative (OCI +93% YoY — short profitable only if AI infrastructure thesis unwinds); initiated 2026-08-14. Refreshed 2026-09-08 — ORCL now $162.52 (up from $158.78) — unrealized -8.43% (~-$37.89, ~-€32.59), thesis under continued pressure |
 
-> Margin requirement (broker collateral, not a cash movement — see [[#Cash Position|Cash Position]] note): NBIS ~€719, ORCL ~€394 (approx., notional value converted at ≈0.877 USD/EUR). Profit if price falls below entry; loss if it rises.
+> Margin requirement (broker collateral, not a cash movement — see [[#Cash Position|Cash Position]] note): ORCL ~€394 (approx., notional value converted at ≈0.877 USD/EUR). Profit if price falls below entry; loss if it rises. **NBIS short fully closed 2026-09-08** (bought back 3 sh @ $246.84, gain — see [[#Closed Positions|Closed Positions]]); no NBIS short position remains open.
 
 ---
 
@@ -73,10 +69,10 @@ Active short equity positions (profit if price falls below entry; loss if price 
 
 | Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium Paid | Total Cost (€) | Current Price | Mkt Value (€) | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | €992 | $4.75/sh | €409 | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06. ORCL now $158.78 (2026-09-04, 2nd run), 32% above breakeven — deep OTM, decayed further as ORCL rallied — no action. Live options chain via yfinance 2026-09-04 |
-| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | €727 | $6.91/sh | €595 | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; break-even $116.76; initiated 2026-08-11. PLTR now $174.33 (2026-09-04, 2nd run), down from $182.53 earlier today — 40% above breakeven, deep OTM, long-dated, but put value rose as PLTR pulled back — monitor only. Live options chain via yfinance 2026-09-04 |
+| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.38/sh | €992 | $4.25/sh | €365 | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; bearish on Oracle AI/OCI narrative (OCI +93% YoY — put profitable only if AI infrastructure thesis accelerates); break-even $108.62; initiated 2026-08-06. ORCL now $162.52 (2026-09-08), 50% above breakeven — deep OTM, decayed further as ORCL rallied — no action. Live options chain via yfinance 2026-09-08 |
+| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | €727 | $7.35/sh | €632 | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; break-even $116.76; initiated 2026-08-11. PLTR now $170.30 (2026-09-08), down from $174.33 — 46% above breakeven, deep OTM, long-dated, but put value rose as PLTR pulled back further — monitor only. Live options chain via yfinance 2026-09-08 |
 
-> Long puts: profitable if the underlying closes below break-even at expiry. Maximum loss = premium paid (ORCL €992, PLTR €727). Current combined mark-to-market value: €1,003 (down from €1,719 paid), up slightly from €981 earlier today as PLTR's pullback offset further ORCL decay.
+> Long puts: profitable if the underlying closes below break-even at expiry. Maximum loss = premium paid (ORCL €992, PLTR €727). Current combined mark-to-market value: €997 (down from €1,719 paid) — ORCL put continued decaying as ORCL rallied to $162.52, offset by PLTR's put rising as PLTR pulled back to $170.30.
 
 ---
 
@@ -89,7 +85,11 @@ Fully exited positions. Partial trims of open positions are in the [[#Performanc
 | Morgan Sindall Group | MGNS | LSE | 18 | 4,624p | 4,456p | 2026-07-27 | −€35.44 | **−€39.81** | Full exit — earnings miss; technical breakdown confirmed |
 | Broadcom | AVGO | NASDAQ | 4 | $387.25 | $371.42 | 2026-07-29 | −€55.54 | **−€59.91** | Full exit — Burry SOXX-short thesis; below SMA50; position closed |
 | DraftKings | DKNG | NASDAQ | 45 | $23.46 | $21.43 | 2026-08-06 | −€80.13 | **−€84.50** | Full exit — mechanical Exit signal (RSI <40, below SMA50, MACD bearish); technical breakdown confirmed |
-| Nebius Group (short) | NBIS | NASDAQ | 5 | $194.78 | $234.00 | 2026-08-12 | −€172.02 | **−€176.39** | Short position closed at a loss — price rose against the short; bought back to cover. Re-shorted at a different size/price 2026-08-14, see [[#Short Positions\|Short Positions]] |
+| Nebius Group (short #1) | NBIS | NASDAQ | 5 | $194.78 | $234.00 | 2026-08-12 | −€172.02 | **−€176.39** | Short position closed at a loss — price rose against the short; bought back to cover. Re-shorted at a different size/price 2026-08-14 (short #2, below) |
+| Watches of Switzerland | WOSG | LSE | 135 | 688p | 670p | 2026-09-08 | −€28.31 | **−€32.68** | Full exit — sold below entry; remaining 135 shares (post the 2026-08-14 partial trim) closed out |
+| Dunelm Group | DNLM | LSE | 90 | 800p | 776p | 2026-09-08 | −€25.16 | **−€29.53** | Full exit — sold below entry, notably below the 2026-09-07 last quote (886.50p) |
+| Campbell's | CPB | NYSE | 60 | $21.90 | $21.11 | 2026-09-08 | −€40.76 | **−€45.13** | Full exit — mechanical Exit signal had been active since 2026-09-04; sold below entry |
+| Nebius Group (short #2) | NBIS | NASDAQ | 3 | $273.32 | $246.84 | 2026-09-08 | +€68.32 | **+€49.60** | Short position closed at a gain — price fell against the short as expected; bought back to cover |
 
 ---
 
@@ -113,6 +113,10 @@ All realised transactions (full exits and partial trims), ordered by date.
 | 2026-08-14 | IQV | Trim | 2 | $163.99 | $239.06 | +$150.14 | +€131.67 | −€27.65 | −€4.37 | **+€99.65** | Profit-take |
 | 2026-08-14 | APH | Trim | 4 | $143.50 | $167.58 | +$96.32 | +€84.49 | −€17.74 | −€4.37 | **+€62.38** | Profit-take (pre-split) |
 | 2026-08-14 | WOSG | Trim | 65 | 688p | 733.5p | +£29.58 | +€34.66 | −€7.28 | −€4.37 | **+€23.01** | Partial trim |
+| 2026-09-08 | WOSG | Full exit | 135 | 688p | 670p | −£24.30 | −€28.31 | €0 | −€4.37 | **−€32.68** | Sold below entry |
+| 2026-09-08 | DNLM | Full exit | 90 | 800p | 776p | −£21.60 | −€25.16 | €0 | −€4.37 | **−€29.53** | Sold below entry, well below last quote |
+| 2026-09-08 | CPB | Full exit | 60 | $21.90 | $21.11 | −$47.40 | −€40.76 | €0 | −€4.37 | **−€45.13** | Mechanical Exit signal since 09-04; sold below entry |
+| 2026-09-08 | NBIS | Short close (gain) | 3 | $273.32 | $246.84 | +$79.44 | +€68.32 | −€14.35 | −€4.37 | **+€49.60** | Bought back to close short #2 at a gain |
 
 ---
 
@@ -125,12 +129,15 @@ Realised P&L grouped by position (trims + full exits combined).
 | IQV | 3 trims | Open (5 remain) | 7 | +€386.55 | −€81.17 | −€13.11 | **+€292.27** |
 | KLR | 3 trims | Open (10 remain) | 40 | +€420.98 | −€88.41 | −€13.11 | **+€319.46** |
 | APH | 1 trim | Open (14 remain, post-split) | 4 | +€84.49 | −€17.74 | −€4.37 | **+€62.38** |
-| WOSG | 1 trim | Open (135 remain) | 65 | +€34.66 | −€7.28 | −€4.37 | **+€23.01** |
+| WOSG | 1 trim + full exit | Closed | 200 | +€6.35 | −€7.28 | −€8.74 | **−€9.67** |
+| DNLM | Full exit | Closed | 90 | −€25.16 | €0 | −€4.37 | **−€29.53** |
+| CPB | Full exit | Closed | 60 | −€40.76 | €0 | −€4.37 | **−€45.13** |
 | MGNS | Full exit | Closed | 18 | −€35.44 | €0 | −€4.37 | **−€39.81** |
 | AVGO | Full exit | Closed | 4 | −€55.54 | €0 | −€4.37 | **−€59.91** |
 | DKNG | Full exit | Closed | 45 | −€80.13 | €0 | −€4.37 | **−€84.50** |
-| NBIS (short) | Full close | Closed | 5 | −€172.02 | €0 | −€4.37 | **−€176.39** |
-| **TOTAL** | **12** | | **188** | **€583.55** | **−€194.60** | **−€52.44** | **€336.51** |
+| NBIS (short #1) | Full close | Closed | 5 | −€172.02 | €0 | −€4.37 | **−€176.39** |
+| NBIS (short #2) | Full close | Closed | 3 | +€68.32 | −€14.35 | −€4.37 | **+€49.60** |
+| **TOTAL** | **16** | | **476** | **€557.64** | **−€208.95** | **−€69.92** | **€278.77** |
 
 ---
 
@@ -138,13 +145,13 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Metric | Value |
 | --- | --- |
-| Total gross P&L (€) | €583.55 |
-| Total CGT paid (€) | €194.60 |
-| Total commissions (€) | €52.44 |
-| **Net realised gains (€)** | **€336.51** |
-| Transactions | 12 |
-| Positions fully closed | 4 (MGNS, AVGO, DKNG, NBIS short) |
-| Positions partially trimmed | 4 (IQV, KLR, APH, WOSG) |
+| Total gross P&L (€) | €557.64 |
+| Total CGT paid (€) | €208.95 |
+| Total commissions (€) | €69.92 |
+| **Net realised gains (€)** | **€278.77** |
+| Transactions | 16 |
+| Positions fully closed | 8 (MGNS, AVGO, DKNG, NBIS short #1, WOSG, DNLM, CPB, NBIS short #2) |
+| Positions partially trimmed | 3 (IQV, KLR, APH) |
 
 ---
 
@@ -152,9 +159,9 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Currency | Amount | Movement Log |
 | --- | --- | --- |
-| EUR | **€503.61** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) + €286 KLR trim (08-07) − €900 LULU buy (08-10) − €953 ZOE buy (08-10) − €727 PLTR put (08-11) + €415 IQV trim (08-14) + €584 APH trim (08-14) + €554 WOSG trim (08-14) − €613 REL buy (08-14) − €707 SFM buy (08-21) |
+| EUR | **€2,808.51** | €3,000 start + €517 IQV trim (07-09) + €561 KLR trim (07-11) − €961 SAP buy (07-14) − €1,157 CPB buy (07-14) − €1,147 GSK buy (07-16) + €657 KLR trim (07-23) + €936 MGNS exit (07-27) − €1,198 EDEN buy (07-23) + €423 IQV trim (07-28) + €1,299 AVGO exit (07-29) + €6,000 deposit (07-31) − €851 ACN buy (07-31) − €50 GSK add (07-31) − €1,100 ADBE buy (07-31) − €930 DKNG buy (07-31) − €1,239 PRX buy (08-03) − €1,071 WKL buy (08-05) + €842 DKNG exit (08-06) − €974 FLUT buy (08-06) − €992 ORCL put (08-06) + €286 KLR trim (08-07) − €176 NBIS short #1 close, realized loss (08-12) − €900 LULU buy (08-10) − €953 ZOE buy (08-10) − €727 PLTR put (08-11) + €415 IQV trim (08-14) + €584 APH trim (08-14) + €554 WOSG trim (08-14) − €613 REL buy (08-14) − €707 SFM buy (08-21) − €447 LULU add (09-08) − €64 REL add (09-08) + €1,049 WOSG exit (09-08) + €809 DNLM exit (09-08) + €1,085 CPB exit (09-08) + €50 NBIS short #2 close, realized gain (09-08) |
 
-> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually). **Corrected 2026-09-04: shorts are traded on margin and do not draw down cash** — the four margin-posted/returned entries for NBIS/ORCL shorts (previously in this log) were removed as an accounting error, which resolves the negative-balance flag from the earlier backfill. Margin requirement is tracked separately in [[#Short Positions|Short Positions]] as a broker requirement, not a cash movement.
+> Cash amounts in movement log represent proceeds from sales (net of commission; CGT accrued but not deducted from proceeds — settled annually). **Corrected 2026-09-04: shorts are traded on margin and do not draw down cash while open** — the margin-posted/returned entries for NBIS/ORCL shorts were removed as an accounting error (margin is broker collateral, not spendable cash), which resolved the negative-balance flag from the earlier backfill. Margin requirement is tracked separately in [[#Short Positions|Short Positions]] as a broker requirement, not a cash movement. **Correction 2026-09-08:** the 2026-09-04 fix over-corrected by also dropping the *realized* net P&L when a short is actually closed — that P&L is real settled cash, same as any equity trim/exit, and should never have been excluded. Added the missing NBIS short #1 close (−€176.39, 2026-08-12) and NBIS short #2 close (+€49.60, 2026-09-08) as cash entries; balance corrected from €2,935.30 to **€2,808.51**. Going forward: short opens and margin movements get no cash entry; short closes (buybacks) get a cash entry for their net realized P&L, exactly like a trim/exit.
 
 ---
 
@@ -179,13 +186,13 @@ Realised P&L grouped by position (trims + full exits combined).
 |---|---|---|
 | APH | 🟠 AI data centre connector (indirect) | Monitor; normal size; patience override active |
 | IQV | 🟢 Healthcare — positive alignment | No Burry conflict; size can be normal or large if thesis intact |
-| KLR, DNLM, WOSG, GSK, CPB, EDEN | 🟢 European value — no signal | No conflict; Grantham also prefers non-US value |
+| KLR, GSK, EDEN | 🟢 European value — no signal | No conflict; Grantham also prefers non-US value |
 | SAP, ACN | 🟡 Enterprise software — mild indirect | Enterprise-contracted revenue; less circular-financing exposed than hyperscalers |
 | ADBE | 🟡 US large-cap tech — mild indirect | Caught in QQQ puts thesis; AI features (Firefly) add narrative risk; creative software moat partially offsets |
 | FLUT | 🟢 Burry-aligned long | Flutter Entertainment — Burry long at $100.72 (Jul 24 2026); entered at $92.10 (better price); anti-prediction-markets / sports betting thesis; direct Scion alignment |
 | PRX | 🟢 Non-US value / SOTP — no signal | Prosus: international, non-AI, NAV-discount thesis; aligns with Grantham non-US preference and MOI SOTP framework |
 | WKL | 🟢 Intangible moat / non-US — no signal | Wolters Kluwer: recurring professional information revenue; no AI infrastructure exposure; Grantham-aligned non-US quality |
-| NBIS (short) | 🟢 Burry/model-aligned short | Nebius Group neocloud short — directly implements model framework "Avoid/underweight Nebius" call; Burry SOXX/AI-infrastructure bear thesis extends to GPU cloud neoclouds; customer-concentration risk if Meta compute overbuild unfolds. Original Aug 6 short closed at a loss 2026-08-12; re-shorted 2026-08-14 |
+| NBIS (closed) | 🟢 Burry/model-aligned short (no longer open) | Nebius Group neocloud short thesis — model framework "Avoid/underweight Nebius" call; both shorts now closed (2026-08-12 at a loss, 2026-08-14→2026-09-08 at a gain); no open NBIS position remains |
 | ORCL (put + short) | 🟡 Partially Burry-aligned option/short | Long put $120 strike Dec 2026, plus a 3-share equity short (initiated 2026-08-14) — same bearish overlay on Oracle AI/OCI narrative; OCI revenue +93% YoY (current data contradicts thesis); profitable only if AI capex unwinds materially; put break-even $108.62 |
 | PLTR (put) | 🟡 Partially Burry-aligned option | Long put $125 strike, Mar 2027; bearish overlay on Palantir's AI/data-analytics valuation; break-even $116.76; initiated 2026-08-11 |
 | LULU, SFM | 🟢 Consumer / no signal | No Burry/AI-infrastructure conflict; ordinary consumer names |
