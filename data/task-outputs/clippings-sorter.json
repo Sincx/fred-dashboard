@@ -1,18 +1,18 @@
 {
-    "taskId":  "clippings-sorter",
-    "label":  "Clippings Sorter",
-    "schedule":  "Daily 11:18 PM",
-    "icon":  "📎",
-    "runs":  [
-                 {
-                     "runAt":  "2026-09-07T23:30:49.5636973+02:00",
-                     "summary":  "4 clippings processed (1 empty stub deleted)",
-                     "content":  "5 files found in Clippings: 1 empty (0-byte) stub deleted, 4 processed. 3 general macro/AI-capex pieces (Stephen Clapham 'The $4.4 Trillion Question', Vlad Djukanovic 'The AI Capital Cycle', unattributed 'The Bond Market Isn't Listening to Bessent') + 1 Michael Burry Trading Post (Sep 4, 2026). All 4 moved to raw/finance/, tags updated, 4 wiki summary pages created in wiki/finance/investor-letters/. Updated finance/michael-burry/trading-posts.md, index.md, and person-michael-burry.md with the new Trading Post entry. Flagged an unreconciled discrepancy: the new post claims Burry doesn't yet own Alibaba, conflicting with the existing Jun 12, 2026 BABA long — filed as-is with discrepancy notes, no ticker changes made. Parsed Burry stock mentions (LULU/JD/BABA, all already tracked — no new pipeline tickers). Added reverse links across 14 cross-referenced pages. Updated main index.md with 4 new rows."
-                 },
-                 {
-                     "runAt":  "2026-09-05T23:19:56.8343499+02:00",
-                     "summary":  "No new clippings",
-                     "content":  "Clippings folder empty."
-                 }
-             ]
+    "taskId": "clippings-sorter",
+    "label": "Clippings Sorter",
+    "schedule": "Daily 11:18 PM",
+    "icon": "📎",
+    "runs": [
+        {
+            "runAt": "2026-09-08T23:19:46.7303376+02:00",
+            "summary": "No new clippings",
+            "content": "Clippings folder empty."
+        },
+        {
+            "runAt": "2026-09-07T23:30:49.5636973+02:00",
+            "summary": "4 clippings processed (1 empty stub deleted)",
+            "content": "5 files found in Clippings: 1 empty (0-byte) stub deleted, 4 processed. 3 general macro/AI-capex pieces (Stephen Clapham 'The $4.4 Trillion Question', Vlad Djukanovic 'The AI Capital Cycle', unattributed 'The Bond Market Isn't Listening to Bessent') + 1 Michael Burry Trading Post (Sep 4, 2026). All 4 moved to raw/finance/, tags updated, 4 wiki summary pages created in wiki/finance/investor-letters/. Updated finance/michael-burry/trading-posts.md, index.md, and person-michael-burry.md with the new Trading Post entry. Flagged an unreconciled discrepancy: the new post claims Burry doesn't yet own Alibaba, conflicting with the existing Jun 12, 2026 BABA long — filed as-is with discrepancy notes, no ticker changes made. Parsed Burry stock mentions (LULU/JD/BABA, all already tracked — no new pipeline tickers). Added reverse links across 14 cross-referenced pages. Updated main index.md with 4 new rows."
+        }
+    ]
 }
