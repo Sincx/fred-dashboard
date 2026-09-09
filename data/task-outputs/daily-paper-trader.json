@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-09T20:15:00+02:00",
+      "summary": "SAP (A)",
+      "picks": {
+        "p1": {
+          "ticker": "SAP",
+          "strategy": "A — Value",
+          "entry": 209.14,
+          "stop": 177.77,
+          "t1": 261.43,
+          "t2": 313.71
+        }
+      },
+      "content": "SAP SE picked up at the previous close ($209.14) — a ~31% discount to Morningstar's $302 wide-moat fair value, with cloud backlog +27% YoY and full-year cloud guidance reaffirmed despite a trimmed operating-profit guide and a Buy→Neutral downgrade (PT raised to €201). BR was exited discretionarily (−8.18%, −$82) to keep the book at 35 open positions after SAP's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions amid a second consecutive oil-driven risk-off session (Brent >$100/bbl on Iran-conflict escalation). RELX is now the weakest continuing position at −6.55%, no Burry conflict. Portfolio net P&L: +$1,835 (+3.16% on $58,000)."
+    },
+    {
       "runAt": "2026-09-08T23:52:24+02:00",
       "summary": "LMT (E)",
       "picks": {
@@ -18,12 +33,6 @@
         }
       },
       "content": "Lockheed Martin picked up at the previous close ($536.15) — entered on a same-day UBS upgrade to Buy (PT $674 from $581, missile-segment revenue +150% 2025-2030) tied directly to fresh Iran/Saudi Arabia strikes pushing oil toward 3-month highs and a broad risk-off tape (Dow −600pts). TRV was exited discretionarily (−7.95%, −$79) to keep the book at 35 open positions after LMT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AMGN fell −9.0% intraday on a Novartis Lp(a) trial-failure read-through (sector-wide biotech selling) but stayed net positive and was held. BR is now the weakest continuing position at −7.90%, no Burry conflict. Portfolio net P&L: +$2,055 (+3.60% on $57,000)."
-    },
-    {
-      "runAt": "2026-09-07T23:44:48+02:00",
-      "summary": "No trade — Labor Day",
-      "picks": {},
-      "content": "US markets (NYSE/NASDAQ) were closed for Labor Day, so no new trade was entered. All 35 open positions were repriced off Friday Sept 4's close: no stop-losses, T1/T2 triggers, or signal exits fired, and no discretionary action was warranted — the healthiest cross-section of the book in recent runs, with zero positions at or below the −10% watch threshold. AVGO (Burry Sector Warning) remains the weakest continuing position at −7.21%, improved from −7.41%. Portfolio net P&L: +$2,577 (+4.60% on $56,000). Strategy selection and the weekly performance review resume Tuesday Sept 8."
     }
   ]
 }
