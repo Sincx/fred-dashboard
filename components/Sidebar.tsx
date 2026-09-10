@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calendar, BarChart2, TrendingUp, BookOpen } from "lucide-react";
+import { Calendar, BarChart2, TrendingUp, BookOpen, LineChart } from "lucide-react";
 
 const nav = [
   { href: "/routines",  label: "Daily Routines",  icon: Calendar },
   { href: "/portfolios",label: "Portfolios",       icon: BarChart2 },
+  { href: "/watchlist", label: "Watchlist & Screener", icon: LineChart },
   { href: "/analyst",   label: "Analyst",          icon: TrendingUp },
   { href: "/logger",    label: "Logger",           icon: BookOpen },
 ];
