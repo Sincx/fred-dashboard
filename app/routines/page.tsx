@@ -18,7 +18,6 @@ interface TaskRun {
   content: string;
   picks?: {
     p1?: PickDetail;
-    p2?: PickDetail;
   };
 }
 
@@ -149,9 +148,8 @@ function PaperTraderCard({ task }: { task: TaskOutput }) {
         </p>
       ) : latest.picks ? (
         <div className="grid grid-cols-2 gap-3">
-          {latest.picks.p1 && <PickCard label="P1 — Strategy Pick" pick={latest.picks.p1} />}
-          {latest.picks.p2 && <PickCard label="P2 — Vol Spike" pick={latest.picks.p2} />}
-          {!latest.picks.p1 && !latest.picks.p2 && (
+          {latest.picks.p1 && <PickCard label="Strategy Pick" pick={latest.picks.p1} />}
+          {!latest.picks.p1 && (
             <p className="text-xs col-span-2" style={{ color: "var(--text-muted)" }}>
               {latest.summary}
             </p>
