@@ -35,7 +35,23 @@ interface ScreenerRow {
   div_yield: number | null;
 }
 
-type Tab = "watchlist" | "screener";
+interface ConvergenceRow {
+  ticker: string;
+  exchange: string;
+  sector: string | null;
+  index_membership: string;
+  mf_rank: number;
+  earnings_yield: number;
+  roic: number;
+  close: number | null;
+  pct_1d: number | null;
+  rsi14: number | null;
+  macd_signal: string | null;
+  technical_rating: string | null;
+  currency: string | null;
+}
+
+type Tab = "watchlist" | "screener" | "convergence";
 
 function ratingBadge(rating: string | null) {
   if (!rating) return <span style={{ color: "var(--text-muted)" }}>—</span>;
@@ -85,6 +101,8 @@ export default function WatchlistPage() {
   const [uSortDir, setUSortDir] = useState<"asc" | "desc">("asc");
   const [sSortField, setSSortField] = useState<keyof ScreenerRow>("mf_rank");
   const [sSortDir, setSSortDir] = useState<"asc" | "desc">("asc");
+  const [cSortField, setCSortField] = useState<keyof ConvergenceRow>("mf_rank");
+  const [cSortDir, setCSortDir] = useState<"asc" | "desc">("asc");
 
   useEffect(() => {
     Promise.all([
@@ -146,6 +164,39 @@ export default function WatchlistPage() {
     return sortRows(rows, sSortField, sSortDir);
   }, [screener, search, indexFilter, passOnly, sSortField, sSortDir]);
 
+  // Convergence: Magic Formula passes AND technical rating is "Buy" — the
+  // intersection of the value screen and the momentum/trend read, joined on
+  // (ticker, exchange) since the same ticker can appear under more than one
+  // exchange row (e.g. dual-listed names).
+  const convergenceRows: ConvergenceRow[] = useMemo(() => {
+    const uByKey = new Map(universe.map((r) => [`${r.ticker}-${r.exchange}`, r]));
+    const rows: ConvergenceRow[] = [];
+    for (const s of screener) {
+      if (s.passes_thresholds !== 1) continue;
+      const u = uByKey.get(`${s.ticker}-${s.exchange}`);
+      if (!u || u.technical_rating !== "Buy") continue;
+      rows.push({
+        ticker: s.ticker, exchange: s.exchange, sector: s.sector, index_membership: s.index_membership,
+        mf_rank: s.mf_rank, earnings_yield: s.earnings_yield, roic: s.roic,
+        close: u.close, pct_1d: u.pct_1d, rsi14: u.rsi14, macd_signal: u.macd_signal,
+        technical_rating: u.technical_rating, currency: u.currency,
+      });
+    }
+    return rows;
+  }, [screener, universe]);
+
+  const filteredConvergence = useMemo(() => {
+    let rows = convergenceRows;
+    if (search.trim()) {
+      const q = search.trim().toUpperCase();
+      rows = rows.filter((r) => r.ticker.includes(q) || (r.sector ?? "").toUpperCase().includes(q));
+    }
+    if (indexFilter !== "ALL") {
+      rows = rows.filter((r) => r.index_membership.split(",").includes(indexFilter));
+    }
+    return sortRows(rows, cSortField, cSortDir);
+  }, [convergenceRows, search, indexFilter, cSortField, cSortDir]);
+
   function handleUSort(field: keyof UniverseRow) {
     if (field === uSortField) setUSortDir(uSortDir === "asc" ? "desc" : "asc");
     else { setUSortField(field); setUSortDir("asc"); }
@@ -153,6 +204,10 @@ export default function WatchlistPage() {
   function handleSSort(field: keyof ScreenerRow) {
     if (field === sSortField) setSSortDir(sSortDir === "asc" ? "desc" : "asc");
     else { setSSortField(field); setSSortDir(field === "mf_rank" ? "asc" : "desc"); }
+  }
+  function handleCSort(field: keyof ConvergenceRow) {
+    if (field === cSortField) setCSortDir(cSortDir === "asc" ? "desc" : "asc");
+    else { setCSortField(field); setCSortDir(field === "mf_rank" ? "asc" : "desc"); }
   }
 
   return (
@@ -186,6 +241,17 @@ export default function WatchlistPage() {
           onClick={() => setTab("screener")}
         >
           Magic Formula Screener ({screener.length})
+        </button>
+        <button
+          className="px-3 py-1.5 rounded-lg text-sm font-medium"
+          style={{
+            backgroundColor: tab === "convergence" ? "rgba(99,102,241,0.15)" : "transparent",
+            color: tab === "convergence" ? "var(--accent)" : "var(--text-secondary)",
+            border: "1px solid var(--border)",
+          }}
+          onClick={() => setTab("convergence")}
+        >
+          Buy + Magic Formula ({convergenceRows.length})
         </button>
       </div>
 
@@ -258,7 +324,7 @@ export default function WatchlistPage() {
             <p className="text-sm text-center py-8" style={{ color: "var(--text-muted)" }}>No matching tickers.</p>
           )}
         </div>
-      ) : (
+      ) : tab === "screener" ? (
         <div className="card overflow-x-auto p-0">
           <table className="w-full text-sm">
             <thead style={{ borderBottom: "1px solid var(--border)" }}>
@@ -294,6 +360,48 @@ export default function WatchlistPage() {
           </table>
           {filteredScreener.length === 0 && (
             <p className="text-sm text-center py-8" style={{ color: "var(--text-muted)" }}>No matching tickers.</p>
+          )}
+        </div>
+      ) : (
+        <div className="card overflow-x-auto p-0">
+          <table className="w-full text-sm">
+            <thead style={{ borderBottom: "1px solid var(--border)" }}>
+              <tr>
+                <SortHeader label="MF Rank" field="mf_rank" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Ticker" field="ticker" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Index" field="index_membership" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Sector" field="sector" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="EY %" field="earnings_yield" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="ROIC %" field="roic" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Price" field="close" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="1D %" field="pct_1d" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="RSI14" field="rsi14" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Rating" field="technical_rating" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+              </tr>
+            </thead>
+            <tbody>
+              {filteredConvergence.map((r) => (
+                <tr key={`${r.ticker}-${r.exchange}`} style={{ borderBottom: "1px solid var(--border)" }}>
+                  <td className="px-3 py-2 font-mono" style={{ color: "var(--text-primary)" }}>#{r.mf_rank}</td>
+                  <td className="px-3 py-2 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                  <td className="px-3 py-2 text-xs" style={{ color: "var(--text-muted)" }}>{r.index_membership}</td>
+                  <td className="px-3 py-2 text-xs" style={{ color: "var(--text-secondary)" }}>{r.sector || "—"}</td>
+                  <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.earnings_yield.toFixed(2)}%</td>
+                  <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.roic.toFixed(2)}%</td>
+                  <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>
+                    {r.close != null ? `${r.close.toFixed(2)} ${r.currency ?? ""}` : "—"}
+                  </td>
+                  <td className="px-3 py-2">{pctCell(r.pct_1d)}</td>
+                  <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.rsi14?.toFixed(1) ?? "—"}</td>
+                  <td className="px-3 py-2">{ratingBadge(r.technical_rating)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {filteredConvergence.length === 0 && (
+            <p className="text-sm text-center py-8" style={{ color: "var(--text-muted)" }}>
+              No tickers currently pass the Magic Formula screen AND carry a technical Buy rating.
+            </p>
           )}
         </div>
       )}
