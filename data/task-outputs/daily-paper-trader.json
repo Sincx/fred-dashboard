@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-10T23:52:46+02:00",
+      "summary": "TMO (B)",
+      "picks": {
+        "p1": {
+          "ticker": "TMO",
+          "strategy": "B — Momentum",
+          "entry": 603.18,
+          "stop": 512.70,
+          "t1": 753.98,
+          "t2": 904.77
+        }
+      },
+      "content": "Thermo Fisher Scientific picked up at today's close ($603.18) — a life-sciences/diagnostics leader up 33.4% over 3 months with a fresh CLSA Outperform initiation ($748 PT, ~24% upside), chosen as a defensive Burry-aligned name with zero AI-capex/semiconductor exposure. RELX was exited discretionarily (−7.72%, −$77) to keep the book at 35 open positions after TMO's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions amid a fourth consecutive oil/yield-driven risk-off session (Dow −0.6%, S&P −0.58%, Nasdaq −0.65%). DHI is now the weakest continuing position at −7.15%, no Burry conflict. Portfolio net P&L: +$1,692 (+2.87% on $59,000)."
+    },
+    {
       "runAt": "2026-09-09T20:15:00+02:00",
       "summary": "SAP (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "SAP SE picked up at the previous close ($209.14) — a ~31% discount to Morningstar's $302 wide-moat fair value, with cloud backlog +27% YoY and full-year cloud guidance reaffirmed despite a trimmed operating-profit guide and a Buy→Neutral downgrade (PT raised to €201). BR was exited discretionarily (−8.18%, −$82) to keep the book at 35 open positions after SAP's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions amid a second consecutive oil-driven risk-off session (Brent >$100/bbl on Iran-conflict escalation). RELX is now the weakest continuing position at −6.55%, no Burry conflict. Portfolio net P&L: +$1,835 (+3.16% on $58,000)."
-    },
-    {
-      "runAt": "2026-09-08T23:52:24+02:00",
-      "summary": "LMT (E)",
-      "picks": {
-        "p1": {
-          "ticker": "LMT",
-          "strategy": "E — Sector Rotation",
-          "entry": 536.15,
-          "stop": 455.73,
-          "t1": 670.19,
-          "t2": 804.23
-        }
-      },
-      "content": "Lockheed Martin picked up at the previous close ($536.15) — entered on a same-day UBS upgrade to Buy (PT $674 from $581, missile-segment revenue +150% 2025-2030) tied directly to fresh Iran/Saudi Arabia strikes pushing oil toward 3-month highs and a broad risk-off tape (Dow −600pts). TRV was exited discretionarily (−7.95%, −$79) to keep the book at 35 open positions after LMT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AMGN fell −9.0% intraday on a Novartis Lp(a) trial-failure read-through (sector-wide biotech selling) but stayed net positive and was held. BR is now the weakest continuing position at −7.90%, no Burry conflict. Portfolio net P&L: +$2,055 (+3.60% on $57,000)."
     }
   ]
 }

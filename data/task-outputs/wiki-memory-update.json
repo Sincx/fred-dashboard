@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-10T23:45:00+02:00",
+      "summary": "8 log.md entries reviewed, 2 new wiki pages, a ~29-page index.md audit, 3 Open Threads resolved, 2 new ones added",
+      "content": [
+        "Reviewed log.md since the 2026-09-09 memory-update: 8 new entries dated 09-10 — portfolio-management-briefing (15 positions, GSK/PRX/SFM Exit day 3 and LULU Exit ~day 7 all patience-overridden, no trades, AR/BRK.B/QCOM screened but unexecuted), email-to-clipping (0 saved), wiki-thinker (Thursday deep-dive Books+Podcasts — new Price of Football recommendation vs. Sports Betting's markets.md FFP-breach gap), podcast-recommender (4 recs: Big Technology Podcast, The Chopping Block, The Price of Football, The Double Pivot), a researcher Mode D run (new page model-hyperscaler-debt-capex-rate-exposure-2026-09-10.md — Oracle/CoreWeave most rate-exposed, Amazon flagged as the hyperscaler to watch), an ingest run (new podcast page for a Chris Koerner episode, resolving yesterday's Open Thread), and two 'fix' passes on index.md itself",
+        "The two fix passes were the big item: an index.md audit found and added ~29 wiki pages that existed on disk but had never been catalogued — the entire Michael Burry section, finance/trading-portfolio (the live real-money portfolio), all 5 finance/models/ pages, 6 AI & Tech pages, 3 Finance Morningstar pages, cooking/chef-david-chang, and 2 podcast pages — plus a separate fix adding the long-flagged missing Dwarkesh compute-prices podcast row",
+        "Domain Content Status — Meta: logged the index.md audit (with its unfixed pre-hyphenation link-integrity note) and today's Sports Betting/FFP thinker highlight; bumped run count to 52",
+        "Domain Content Status — Finance: appended the 09-10 briefing summary and the new hyperscaler debt-exposure research page",
+        "Domain Content Status — Podcasts: appended the 09-10 recommender batch and the two newly-created/newly-catalogued podcast pages",
+        "Open Threads resolved (3): the 12-missing-wiki-pages Finance/AI-Tech thread (superseded by the ~29-page audit), the 2026-08-27 'Dwarkesh podcast page missing from index.md' thread, and the 2026-09-09 Chris Koerner/Kevin Kelly thread (podcast page now created and cross-linked)",
+        "Open Threads added (2): Sports Betting/Finance FFP-breach signal gap (Price of Football recommendation vs. markets.md), and index.md's own pre-hyphenation link-integrity issue flagged but not fixed during today's audit",
+        "Bumped 'Last updated' date to 2026-09-10",
+        "Appended one memory-update log line to log.md for 2026-09-10"
+      ]
+    },
+    {
       "runAt": "2026-09-09T21:53:00+02:00",
       "summary": "2 log.md entries reviewed (paper-trading, wiki-thinker), 1 new Open Thread added, no threads resolved",
       "content": [
@@ -16,20 +31,6 @@
         "No Open Threads resolved; no naming/convention changes",
         "Bumped 'Last updated' date to 2026-09-09",
         "Appended one memory-update log line to log.md for 2026-09-09"
-      ]
-    },
-    {
-      "runAt": "2026-09-08T20:00:00+02:00",
-      "summary": "2 log.md entries reviewed (portfolio-management-briefing, wiki-thinker), 1 new Open Thread added, live trading position-count reconciliation gap updated with a sharp 22→15 drop, no threads resolved",
-      "content": [
-        "Reviewed log.md since the 2026-09-07 memory-update: 2 new entries dated 09-08 — portfolio-management-briefing (live trading position count dropped sharply from 22 to 15: APH, IQV, KLR, SAP, GSK, EDEN, ACN, ADBE, FLUT, PRX, WKL, LULU, SFM, ZOE, REL; SFM newly Exit-signalled; GSK/PRX/LULU/SFM mechanical Exit signals all patience-overridden and held; no trades executed; CI flagged as top new-entry candidate) and wiki-thinker (Tuesday deep-dive on AI & Tech + Technology, 0 new ideas/1 new connection — GitHub Copilot's June 2026 token-billing backlash is a live instance of the agentic-coding token-cost wall Palo Alto CEO Arora's piece treats as forward-looking, five weeks later)",
-        "Domain Content Status — Meta: added today's wiki-thinker highlight (GitHub Copilot vs. Arora token-pricing piece, never cross-linked); bumped run count to 50",
-        "Domain Content Status — Finance: appended the 09-08 briefing summary to the end of the Finance row, flagging the position count as the third significant unexplained swing in 5 days (16→22→15)",
-        "Open Threads: extended the existing live trading portfolio reconciliation-gap thread with the 09-08 data point (22→15 in one day, possibly a reporting-format change since the new log line only itemises longs, not confirmed either way); added 1 new thread (GitHub Copilot token-billing backlash vs. Arora's forward-looking token-cost-wall piece, cross-link next step)",
-        "Confirmed via index.md grep for '2026-09-08' that no new wiki pages were created today — only the two synthesis/analytics runs above have fired so far (clippings-sorter, daily-paper-trader, and other evening tasks had not yet run at the time of this update)",
-        "No Open Threads resolved; no naming/convention changes",
-        "Bumped 'Last updated' date to 2026-09-08",
-        "Appended one memory-update log line to log.md for 2026-09-08"
       ]
     }
   ]
