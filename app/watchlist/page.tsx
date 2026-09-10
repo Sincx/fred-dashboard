@@ -109,7 +109,7 @@ export default function WatchlistPage() {
     return ["ALL", ...Array.from(set).sort()];
   }, [universe]);
 
-  function sortRows<T extends Record<string, unknown>>(rows: T[], field: keyof T, dir: "asc" | "desc") {
+  function sortRows<T>(rows: T[], field: keyof T, dir: "asc" | "desc") {
     return [...rows].sort((a, b) => {
       const av = a[field], bv = b[field];
       if (av === null || av === undefined) return 1;
