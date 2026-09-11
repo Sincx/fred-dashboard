@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-11T23:54:00+02:00",
+      "summary": "log.md reviewed for 09-10/09-11 (note: entries landed out of file-order again), 2 paper-trades and 1 morningstar clippings batch folded in, 0 threads resolved, position-count reconciliation gap noted as stabilizing",
+      "content": [
+        "Reviewed log.md since the 2026-09-10 memory-update. Confirmed the known ordering quirk again — the 09-10 TMO trade and 09-11 review sat at the TOP of the file while the 09-11 DECK trade landed appended at the very END, 1300+ lines later — so this run grepped the whole file rather than trusting a top-of-file read",
+        "New entries folded in: paper-trading P1 09-10 (TMO entered, Strategy B Momentum — Thermo Fisher, +33.4% 3mo momentum, fresh CLSA $748 PT; RELX discretionary exit) and 09-11 (DECK entered, Strategy A Value — Deckers Outdoor, Magic Formula rank #3; O discretionary exit) — book held at 35 positions both days",
+        "portfolio-management-briefing 09-10 and 09-11 (both 15 positions): GSK/PRX/SFM/LULU Exit signals held under patience override both days, no trades; noted position count has now held steady at 15 across 4 consecutive briefings (09-08 through 09-11) — softens but doesn't resolve the 22→15 reconciliation-gap Open Thread",
+        "Clippings-sorter 09-11 (5 Morningstar files): morningstar-watchlist.md gained 10 new rows (ASML, SNPS, CRH, MGA, RMD, WMG, AMCR, BF.B, HRL, KMB) — folded into the Finance domain row",
+        "Domain Content Status — Cooking: added the 09-11 recipe-recommender run (Nasi Goreng, Fuku-Style Nashville Hot Chicken, Wild Mushrooms on Toast) — same 3 chefs as last batch, nothing new",
+        "Domain Content Status — Meta: added today's wiki-thinker highlight (quiet Friday, 0 new ideas/connections); trimmed the oldest individually-listed highlight (09-01 book-breath/Nestor) back into the 'older entries' rollup to keep the row bounded",
+        "No new Open Threads added, none resolved; no naming/convention changes found",
+        "Bumped 'Last updated' date to 2026-09-11",
+        "Appended one memory-update log line to log.md for 2026-09-11"
+      ]
+    },
+    {
       "runAt": "2026-09-10T23:45:00+02:00",
       "summary": "8 log.md entries reviewed, 2 new wiki pages, a ~29-page index.md audit, 3 Open Threads resolved, 2 new ones added",
       "content": [
@@ -17,20 +32,6 @@
         "Open Threads added (2): Sports Betting/Finance FFP-breach signal gap (Price of Football recommendation vs. markets.md), and index.md's own pre-hyphenation link-integrity issue flagged but not fixed during today's audit",
         "Bumped 'Last updated' date to 2026-09-10",
         "Appended one memory-update log line to log.md for 2026-09-10"
-      ]
-    },
-    {
-      "runAt": "2026-09-09T21:53:00+02:00",
-      "summary": "2 log.md entries reviewed (paper-trading, wiki-thinker), 1 new Open Thread added, no threads resolved",
-      "content": [
-        "Reviewed log.md since the 2026-09-08 memory-update: 2 new entries dated 09-09 — paper-trading P1 (SAP entered, Strategy A Value, ~31% discount to Morningstar's $302 wide-moat FV; BR discretionary exit −8.18%/−$82 to hold the book at 35 open positions) and wiki-thinker (Wednesday deep-dive on Health + Learning, 1 new idea/0 new connections — a Diary of a CEO entrepreneurship episode on Chris Koerner has sat tagged 'ingested' in raw/learning since April with no wiki page, and its 'best time to start' answer echoes Kevin Kelly's You Are Not Late thesis almost exactly)",
-        "Domain Content Status — Meta: added today's wiki-thinker highlight (Chris Koerner podcast vs. Kevin Kelly's You Are Not Late); bumped run count to 51; trimmed the oldest individually-listed highlight (08-31 CIBR/Burry) back into the 'older entries' rollup to keep the row from growing unbounded",
-        "Domain Content Status — Finance: appended the 09-09 paper-trading P1 summary (SAP in, BR out, 35 positions held) to the end of the Finance row",
-        "Open Threads: added 1 new thread (Chris Koerner Diary of a CEO episode vs. Kevin Kelly's You Are Not Late thesis, unlinked — next step is creating the podcast page and cross-linking)",
-        "Confirmed via index.md grep for '2026-09-09' that no new wiki pages were created today — only the two runs above had fired at the time of this update",
-        "No Open Threads resolved; no naming/convention changes",
-        "Bumped 'Last updated' date to 2026-09-09",
-        "Appended one memory-update log line to log.md for 2026-09-09"
       ]
     }
   ]
