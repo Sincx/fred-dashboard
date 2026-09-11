@@ -5,14 +5,14 @@
     "icon": "📎",
     "runs": [
         {
+            "runAt": "2026-09-11T23:27:33.7503638+02:00",
+            "summary": "5 clippings processed",
+            "content": "5 files found in Clippings, all Morningstar pieces: '11 New 4-Star Stocks This Week' (Sep-08), '2 Tech Stocks to Avoid in Case Stocks Sell Off' (Sep-06), '4 Undervalued Stocks That Just Raised Dividends' (Sep-08), 'A Better Way to Predict Long-Term Stock Returns' [Component CAPE research] (Sep-09), 'The 7 Best Dividend Aristocrats to Buy Now' (Sep-10). All 5 moved to raw/finance/, tags updated, 5 wiki summary pages created in wiki/finance/morningstar/. Parsed stock recommendations from 4 of 5 (the CAPE piece has none): 10 new tickers added to the watchlist (ASML, SNPS, CRH, MGA, RMD, WMG, AMCR, BF.B, HRL, KMB), Broadridge's fair value updated in place ($255→$250), Autodesk/Intuit/PepsiCo/Clorox/Medtronic left unchanged (already tracked, no material FV change). The 'Stocks to Avoid' piece (Sandisk, Ciena) was flagged overvalued/sell, not undervalued, so it doesn't fit the watchlist's schema — 0 rows added, noted explicitly. Updated morningstar-watchlist.md (10 new rows, 1 updated in place, 15 status notes, sources 27→32) and the market-watchlist-tracker pipeline config.py (10 new Morningstar-US tickers, 4 index-display overrides, Burry group start_row shifted 167→177 to stay contiguous). Added reverse links across 14 cross-referenced pages. Updated main index.md with 5 new rows plus a refreshed (stale) watchlist stock-count summary."
+        },
+        {
             "runAt": "2026-09-08T23:19:46.7303376+02:00",
             "summary": "No new clippings",
             "content": "Clippings folder empty."
-        },
-        {
-            "runAt": "2026-09-07T23:30:49.5636973+02:00",
-            "summary": "4 clippings processed (1 empty stub deleted)",
-            "content": "5 files found in Clippings: 1 empty (0-byte) stub deleted, 4 processed. 3 general macro/AI-capex pieces (Stephen Clapham 'The $4.4 Trillion Question', Vlad Djukanovic 'The AI Capital Cycle', unattributed 'The Bond Market Isn't Listening to Bessent') + 1 Michael Burry Trading Post (Sep 4, 2026). All 4 moved to raw/finance/, tags updated, 4 wiki summary pages created in wiki/finance/investor-letters/. Updated finance/michael-burry/trading-posts.md, index.md, and person-michael-burry.md with the new Trading Post entry. Flagged an unreconciled discrepancy: the new post claims Burry doesn't yet own Alibaba, conflicting with the existing Jun 12, 2026 BABA long — filed as-is with discrepancy notes, no ticker changes made. Parsed Burry stock mentions (LULU/JD/BABA, all already tracked — no new pipeline tickers). Added reverse links across 14 cross-referenced pages. Updated main index.md with 4 new rows."
         }
     ]
 }
