@@ -5,14 +5,14 @@
   "icon": "🍽",
   "runs": [
     {
+      "runAt": "2026-09-11T09:07:01+02:00",
+      "summary": "3 new recipes: Nasi Goreng, Fuku-Style Nashville Hot Fried Chicken Sandwich, Wild Mushrooms on Toast",
+      "content": "1. Nasi Goreng (Indonesian Fried Rice) — inspired by Anthony Bourdain. A 25-minute weeknight fix built on cold rice, kecap manis, and shrimp paste — the Indonesian dish he championed on A Cook's Tour and Parts Unknown.\n2. Fuku-Style Nashville Hot Fried Chicken Sandwich — inspired by David Chang. A medium-technique project built on Chang's Fuku fast-casual format — buttermilk brine, double dredge, hot oil finish, gochujang mayo.\n3. Wild Mushrooms on Toast with Thyme and Cream — inspired by Nigel Slater. The wild card: the first wild mushrooms of early autumn, treated with almost nothing but butter, garlic, and cream."
+    },
+    {
       "runAt": "2026-09-04T09:00:00+01:00",
       "summary": "3 new recipes: One-Pan Turkey Sausage & Kale Skillet, Momofuku Pork Belly Bao Buns, Blackberry and Apple Crumble",
       "content": "1. One-Pan Turkey Sausage, White Bean and Kale Skillet — inspired by Lucinda Scala Quinn. A 30-minute one-pan weeknight fix built around kale as the first cooler September mornings arrive.\n2. Momofuku-Style Pork Belly Bao Buns — inspired by David Chang. A weekend technique project — the iconic Momofuku dish itself, a slow braise plus steamed bao, hadn't made it into the collection yet.\n3. Blackberry and Apple Crumble — inspired by Nigel Slater. The wild card: the definitive turn-of-season pudding, built around hedgerow blackberries and the first Bramley apples."
-    },
-    {
-      "runAt": "2026-08-28T09:00:00+01:00",
-      "summary": "Skipped — week of 2026-08-31 already covered by the 2026-08-27 run",
-      "content": "No new recipes generated this run. The previous run (2026-08-27) already produced 3 suggestions for the week of 2026-08-31 (Kimchi Fried Rice with Crispy Fried Egg, Confit Duck Legs with Puy Lentils, Slow-Roasted Tomatoes with Anchovy, Garlic and Thyme) — one day of schedule drift meant both runs targeted the same upcoming Monday. Generating a second set would have duplicated that week's entry in recipe-suggestions.md. Next scheduled run should target the week of 2026-09-07."
     }
   ]
 }
