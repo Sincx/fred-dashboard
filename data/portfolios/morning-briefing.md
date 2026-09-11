@@ -1,104 +1,89 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-09-10
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-09-11
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
-  Positions:        15 open long equity (+ 1 short, 2 options)
-  Total Value:      ~€18,335 (estimated, net of all positions + cash)
-  Available Cap:    €2,808.51 (cash)
-  Best Performer:   IQV +56.9%
-  Worst Performer:  LULU -18.0%
-  Largest Position: EDEN (6.9% of portfolio)
+  Positions:        15 open (long equity) + 1 short + 2 options
+  Total Value:      ~€18,494 (estimated: €14,505 long equity + €1,182 options mtm − €1 short unrealized + €2,809 cash)
+  Available Cap:    €2,808.51 (cash on hand; €3,000 base allocation largely deployed)
+  Best Performer:   IQV +59.63%
+  Worst Performer:  LULU -16.22%
+  Largest Position: EDEN (8.69% of long equity)
 
 POSITION SIGNALS
   ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────┬─────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst          │ MF# │
   ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────┼─────┤
-  │ APH      │ +11.9%     │ 48.9    │ ↓     │ 👀 Watch │ —                  │ 22  │
-  │ IQV      │ +56.9%     │ 57.1    │ ↑     │ 👀 Watch │ Free-ride pending  │ 28  │
-  │ KLR      │ +22.3%     │ 43.2    │ ↓     │ 👀 Watch │ Already free-rid.  │ 8   │
-  │ SAP      │ +30.1%     │ 49.7    │ ↑     │ 👀 Watch │ —                  │ 20  │
-  │ GSK      │ -8.5%      │ 32.2    │ ↓     │ 🔴 Exit  │ Exit day 3; 10-28 │ 4   │
-  │ EDEN     │ +6.8%      │ 45.0    │ ↑     │ 👀 Watch │ —                  │ —   │
-  │ ACN      │ +8.9%      │ 49.0    │ ↑     │ 👀 Watch │ —                  │ 5   │
-  │ ADBE     │ -0.4%      │ 40.2    │ ↓     │ 👀 Watch │ Earnings TODAY    │ 3   │
-  │ FLUT     │ +7.1%      │ 47.6    │ ↓     │ 👀 Watch │ Reassess dl TODAY │ —   │
-  │ PRX      │ -14.3%     │ 32.9    │ ↓     │ 🔴 Exit  │ Exit day 3        │ 24  │
-  │ WKL      │ -6.9%      │ 44.3    │ ↑     │ 👀 Watch │ —                  │ 9   │
-  │ LULU     │ -18.0%     │ 31.0    │ ↓     │ 🔴 Exit  │ Exit ~day 7; no SL│ 6   │
-  │ SFM      │ -9.9%      │ 34.4    │ ↓     │ 🔴 Exit  │ Exit day 3; 10-28 │ 18  │
-  │ ZOE      │ -0.7%      │ 42.0    │ ↓     │ 👀 Watch │ ZTS-proxy price   │ —   │
-  │ REL      │ -3.8%      │ 41.8    │ ↓     │ 👀 Watch │ —                  │ 11  │
+  │ APH      │ +16.96%    │ 57.4    │ ↑     │ 👀 Watch │ —                 │ 22  │
+  │ IQV      │ +59.63%    │ 60.7    │ ↑     │ 👀 Watch │ Free-ride ready   │ 28  │
+  │ KLR      │ +23.74%    │ 47.8    │ ↓     │ 👀 Watch │ Already free-rid. │ 8   │
+  │ SAP      │ +29.67%    │ 49.0    │ ↑     │ 👀 Watch │ —                 │ 20  │
+  │ GSK      │ -8.72%     │ 31.6    │ ↓     │ 🔴 Exit  │ Earnings 10-28    │ 4   │
+  │ EDEN     │ +5.54%     │ 42.5    │ ↑     │ 👀 Watch │ —                 │ —   │
+  │ ACN      │ +10.10%    │ 51.2    │ ↑     │ 👀 Watch │ —                 │ 5   │
+  │ ADBE     │ +0.95%     │ 42.5    │ ↓     │ 👀 Watch │ Earnings passed   │ 3   │
+  │ FLUT     │ +9.19%     │ 50.6    │ ↓     │ 👀 Watch │ Earnings 11-12    │ —   │
+  │ PRX      │ -13.48%    │ 35.8    │ ↓     │ 🔴 Exit  │ —                 │ 24  │
+  │ WKL      │ -6.81%     │ 44.5    │ ↑     │ 👀 Watch │ —                 │ 9   │
+  │ LULU     │ -16.22%    │ 33.9    │ ↓     │ 🔴 Exit  │ No stop-loss      │ 6   │
+  │ SFM      │ -9.23%     │ 35.8    │ ↓     │ 🔴 Exit  │ Earnings 10-28    │ 18  │
+  │ ZOE      │ -0.49%     │ 41.3*   │ ↓     │ 👀 Watch │ ZTS-proxy price   │ —   │
+  │ REL      │ -3.83%     │ 42.2*   │ ↓     │ 👀 Watch │ *stale (09-10)    │ 11  │
   └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────┴─────┘
-  ORCL short (3sh @ $149.89): unrealized -€7.9 as ORCL trades $152.94 (down from $161.63) — thesis still under pressure, but today's -5.4% move helped both the short and the put.
-  Options: ORCL $120P Dec-26 mkt ~€461 (paid €992) | PLTR $125P Mar-27 mkt ~€706 (paid €727) — both moved up as ORCL fell and PLTR's put gained value; no action.
+
+  ORCL (short, 3sh @ $149.89): now $150.15 (+0.17% vs entry) — unrealized ≈ -€0.67, near breakeven, sharp improvement from -€7.88 yesterday.
+  ORCL put ($120 strike, Dec-2026): BS-estimated mtm ≈ €499 (yfinance options chain unavailable — Black-Scholes estimate, IV backed out from yesterday's yfinance mark).
+  PLTR put ($125 strike, Mar-2027): BS-estimated mtm ≈ €683 (same estimation method; PLTR rose to $167.23, reducing put value from €706).
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest position EDEN at 6.9% of portfolio; no single position exceeds 10%, well diversified
-  Sector spread:   Tech/AI 23.0% (SAP+ACN+ADBE 17.7% + APH connectors 5.3% indirect) | Healthcare 17.1% (IQV+GSK+ZOE) | UK Consumer 0% (WOSG/DNLM closed) | UK Industrials 1.9% (KLR)
-                   Other: European/Fintech (EDEN) 6.9% | Sports Betting (FLUT) 5.6% | Intl/SOTP (PRX) 5.8% | Info Services (WKL+REL) 8.9% | Consumer Disc. (LULU) 5.9% | Grocery (SFM) 3.4%
-  Currency split:  USD 40.9% | EUR 44.8% | GBp 14.3% (of long equity value, €14,367)
+  Concentration:   OK — largest position EDEN at 8.69% of long equity, well under the 25% threshold.
+  Sector spread:   Tech/Enterprise Software (SAP+ACN+ADBE) 22.5% | Healthcare/CRO (IQV+GSK) 15.2% (+ZOE animal health 6.5% = 21.7% incl. adjacent) | European/Fintech (EDEN) 8.7% | International/SOTP (PRX) 7.4% | Professional Info Services (WKL+REL) 11.3% | US Consumer (LULU) 7.6% | Sports Betting (FLUT) 7.2% | AI Infra-indirect (APH) 7.0% | UK Industrials (KLR) 2.4% | Grocery/Staples (SFM) 4.3%
+  Comment:         Reasonably diversified; no sector breaches 25%. Tech/Enterprise Software (22.5%) and combined Healthcare-adjacent exposure (~21.7%) are the two largest thematic blocks — adding CI (Healthcare) below would push that block toward ~28-30%, worth watching.
+  Currency split:  USD 41.4% | EUR 44.4% | GBp 14.2%
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  No trims executed — the same 4 positions carry mechanical Exit signals for a 2nd-3rd consecutive session; patience-override continues (Structural Risk Notes: max trim 50%, reassess within 10 trading days). All four remain underwater, so no CGT would apply — the case for holding is thesis-based, not tax-driven:
-
-  GSK: RSI 32.2, below 50d SMA, MACD bearish — Exit day 3 (from 09-08 trigger). No catalyst break; next earnings 2026-10-28. Unrealized loss deepened to -8.5% (was -7.0%). HOLD, reassess by ~2026-09-22.
-  PRX: RSI 32.9, below 50d SMA, MACD bearish — Exit day 3. SOTP thesis (Tencent stake) intact. Loss deepened to -14.3% (was -13.2%). HOLD, reassess by ~2026-09-22.
-  SFM: RSI 34.4, below 50d SMA, MACD bearish — Exit day 3. No catalyst; next earnings 2026-10-28. Loss deepened to -9.9% (was -8.8%). HOLD, reassess by ~2026-09-22.
-  LULU: RSI 31.0, below 50d SMA, MACD bearish — Exit continuing, ~7 trading days since 09-03 earnings miss. Loss deepened sharply to -18.0% (was -15.6%). Still no stop-loss — now the single largest unrealized loss and top portfolio risk (see below); patience-override maintained on Burry-thesis grounds but the deterioration is accelerating.
+  GSK: 🔴 Exit signal, day 4 (RSI 31.6, below SMA50 1905.33p, MACD bearish). Loss deepened slightly to -8.72%. No thesis-breaking catalyst (next earnings 2026-10-28). Patience-override continues — hold, reassess by 2026-09-22.
+  PRX: 🔴 Exit signal, day 4 (RSI 35.8, below SMA50 €38.61, MACD bearish). Loss improved to -13.48% (was -14.26%). SOTP thesis intact. Patience-override continues — hold, reassess by 2026-09-22.
+  LULU: 🔴 Exit signal, ~day 8 from 09-03 earnings miss (RSI 33.9, below SMA50 $117.13, MACD bearish). Loss improved to -16.22% (was -17.99%) but this remains the top portfolio risk — no stop-loss in place. Patience-override continues (Burry's largest position, adding under $100) — hold, reassess by 2026-09-22.
+  SFM: 🔴 Exit signal, day 4 (RSI 35.8, below SMA50 $80.59, MACD bearish). Loss improved to -9.23% (was -9.93%). No catalyst until 2026-10-28 earnings. Patience-override continues — hold, reassess by 2026-09-22.
+  No trims executed today — all four mechanical Exit signals remain under the patience-override policy with intact fundamental theses.
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No adds triggered — no position meets Add criteria (RSI 35–50 + price above SMA50 + MACD bullish) today. APH is closest (RSI 48.9, MACD bullish) but price sits fractionally below SMA50 ($80.25 vs $80.31) — watch for a reclaim.
+  No adds today / Capital held in reserve — no existing position meets the Add criteria (RSI 35-50 + above SMA50 + MACD bullish). APH is closest (MACD bullish, price above SMA50) but RSI has run to 57.4, above the Add band.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  AR (Antero Resources): Enter at $39.17 — Score 5/5 on watchlist screen (Undervalued, P/E 11.3x, bullish MACD, RSI 62.1 healthy), MF#58. Energy sector, no existing portfolio overlap.
-  Stop: $37.66 (entry − 1.5×ATR14) | Size: €1,500
+  CI: Enter at $280.91 — Cigna, Score 5/5 (Undervalued, RSI 51.8, MACD Bullish), MF#22, passes 3/4 Magic Formula checks (EV/EBIT 9.0x✓, Fwd P/E 8.9x✓, ROE 16.8%✓, ROIC 13.4%✗).
+  Stop: $272.21 (1.5×ATR14 5.80) | Size: €1,500
 
-  BRK.B (Berkshire Hathaway): Enter at $507.00 — Score 4/5 (Fair value, bullish MACD, RSI 52.7 healthy), MF#9 — best Magic Formula rank of the 4/5 tier, passes EV/EBIT + ROIC checks. Financials, no existing trading-book exposure (already held separately in the core pension portfolio).
-  Stop: $499.08 | Size: €1,000
+  DVN: Enter at $50.02 — Devon Energy, Score 5/5 (Undervalued, MACD Bullish) but RSI 66 is at the edge of extended; sizing reduced per RSI>65 rule. MF#66, only 1/4 Formula checks pass (Fwd P/E 9.2x✓).
+  Stop: $48.28 (1.5×ATR14 1.16) | Size: €750 (starter — RSI extended)
 
-  QCOM (Qualcomm): Enter at $176.88 — Score 4/5 (Fair value, bullish MACD, RSI 62.3 healthy), MF#32, passes ROIC (25.6%) + ROE (33.8%) checks. Technology sector.
-  Stop: $167.48 | Size: €750–1,000 — caution: adds to the existing Tech/Enterprise cluster (SAP/ACN/ADBE + APH already ~23%); size down to €750 starter if executed to avoid pushing tech-adjacent exposure toward the 25% concentration threshold.
+  TRV: Enter at $367.56 — Travelers Cos, Score 4/5 (Undervalued, RSI 51.6, MACD Bearish — only missing signal), MF#7 (excellent rank), passes 4/4 Magic Formula checks (EV/EBIT 7.9x✓, Fwd P/E 12.3x✓, ROIC 20.8%✓, ROE 26.5%✓) — strongest quality screen of the three candidates despite bearish MACD.
+  Stop: $358.59 (1.5×ATR14 5.98) | Size: €1,000
 
-  Available cash (€2,808.51) covers AR plus one of BRK.B/QCOM, not all three simultaneously.
-
-INVESTMENT OPPORTUNITIES
-  5/5 · AR (NYSE, Energy) — Undervalued, P/E 11.3x, EPS Gr +130% | MF#58
-  Entry: $39.17 | Stop: $37.66 | Size: €1,500 | RSI: 62.1 | MACD: Bullish
-  Conviction: Undervalued (P/E 11.3x); bullish MACD; RSI healthy at 62; +5.5% past month.
-  Portfolio fit: no existing Energy exposure; diversifies away from Tech/Healthcare concentration; USD.
-
-  4/5 · BRK.B (S&P 500, Financials) — Fair value, P/E 12.6x, EPS Gr +36.3% | MF#9
-  Entry: $507.00 | Stop: $499.08 | Size: €1,000 | RSI: 52.7 | MACD: Bullish
-  Conviction: Fair value (P/E 12.6x); bullish MACD; RSI healthy at 53; best Magic Formula rank of any 4/5 candidate — passes EV/EBIT (7.3x) and ROIC (19.3%) screens.
-  Portfolio fit: no existing trading-book Financials exposure; quality/value anchor; already held in the core pension book (cross-book note, not a conflict); USD.
-
-  4/5 · QCOM (NASDAQ 100, Technology) — Fair value, P/E 19.6x, EPS Gr -17.1% | MF#32
-  Entry: $176.88 | Stop: $167.48 | Size: €750 (starter, see caution) | RSI: 62.3 | MACD: Bullish
-  Conviction: Fair value (P/E 19.6x); bullish MACD; RSI healthy at 62; +9.4% past month; passes ROIC (25.6%) and ROE (33.8%) Magic Formula screens.
-  Portfolio fit: adds to existing Tech/Enterprise cluster (17.7% + APH 5.3% indirect ≈ 23% combined) — approaching thematic concentration; sized down to starter if executed.
+  Portfolio fit: All three are new sectors/tickers (Healthcare-adjacent for CI, Energy for DVN, Financials for TRV) — good diversification away from the current Tech/Enterprise-Software concentration (22.5%). Available cash (€2,808.51) covers CI+TRV (€2,500) comfortably; DVN would require the reserve to run low — consider CI+TRV first and revisit DVN once RSI cools below 60.
 
 FREE RIDE OPPORTUNITIES
-  IQV: Sell 2 of 5 shares at $257.30 → ~$514 (~€438 net of $5 commission) recovers the full remaining cost basis ($378.76 of the original 12-share lot).
-  Free position: 3 shares at zero effective cost | Current value: ~€665
-  Status: Monitor — RSI 57.1 is below the 65 execute threshold; hold thesis, execute at next RSI extension.
+  IQV: Sell 2 of 5 shares at $261.77 → ~$518.54 (≈€447) net proceeds covers the remaining cost basis ($378.76 of the original 12-share lot).
+  Free position: 3 shares at zero effective cost | Current value: ~€677
+  Status: Monitor — RSI 60.7 still below the 65 execute threshold established in prior sessions; execute once RSI clears 65.
 
-  KLR: ✅ Already free-ridden — gross trim proceeds to date (£1,326.40) exceed the original cost basis (£1,209.00). All 10 remaining shares held at zero effective cost.
-  Current value: ~€344
+  KLR: ✅ Already free-ridden — cumulative trim proceeds (£1,326.40 across 3 trims) exceed the original £1,209.00 cost basis. All 10 remaining shares held at zero effective cost, currently worth ~€349.
+  Status: ✅ Already free-ridden — no action needed.
+
+  SAP checked and excluded: P&L +29.67% clears the 25% threshold but only 1 share would be "free" after covering cost basis (6 of 7 shares needed) — does not meet the free_shares≥2 rule.
 
 PORTFOLIO RISKS TO WATCH
-  - LULU has no stop-loss, is now down -18.0% (worst position and deepening fast — was -15.6% yesterday), and remains on a mechanical Exit signal ~7 trading days after the 09-03 earnings miss. Patience-override continues on Burry-thesis grounds, but the accelerating drawdown makes this the top structural risk in the book.
-  - GSK, PRX, and SFM are simultaneously on Exit signal for a 3rd consecutive day, and all three losses deepened overnight rather than stabilizing — a cluster of unconfirmed reversals; reassess by ~2026-09-22 if no technical improvement.
-  - ADBE reports earnings today (2026-09-10, after close) with no pre-earnings de-risking — position is roughly flat (-0.4%) going in, down from +2.0% yesterday.
-  - FLUT's reassessment deadline is today (2026-09-10) — Burry-alignment thesis should be explicitly revisited even though the position remains modestly profitable (+7.1%).
-  - ORCL short + long put form a single correlated bearish bet on the same AI/OCI thesis rather than a diversified hedge; today's -5.4% ORCL move to $152.94 improved both legs materially, but a reversal would hit both simultaneously.
+  - LULU remains uncovered by any stop-loss and is the largest single-position loss (-16.22%) — Burry's own thesis argues for averaging down further, which conflicts with basic risk control at the portfolio level.
+  - GSK/PRX/SFM have now carried mechanical Exit signals for 4 consecutive sessions; the 2026-09-22 patience-override reassessment deadline is approaching and should be enforced if theses haven't stabilized by then.
+  - Healthcare-adjacent exposure (IQV+GSK+ZOE ≈ 21.7% of long equity) would grow further if the CI idea is executed — track combined sector weight, not just single-position concentration.
+  - ZOE and REL prices came from manual fallback (ZTS proxy / AV daily lag) again today — the pipeline's LSE/EU routing gap for these two tickers is unresolved and REL's RSI/MACD reflect Alpha Vantage's 2026-09-10 close (one day stale) since the free-tier feed hadn't rolled to 09-11 at fetch time.
+  - Options mark-to-market (ORCL put, PLTR put) used a Black-Scholes estimate today because the yfinance MCP connector was unavailable — treat those two figures (€499 / €683) as approximate until a live options chain is available.
 
 NEXT ACTIONS
-  1. Revisit LULU's no-stop-loss policy explicitly — either define a hard stop or document the Burry-thesis override with a firm re-review date; the position is now the single largest loss in the book and the trend is accelerating.
-  2. Review FLUT's reassessment deadline (today, 2026-09-10) — confirm Burry-alignment thesis still holds or set a new checkpoint.
-  3. Monitor ADBE's after-close earnings print (2026-09-10) — reassess position sizing tomorrow based on the reaction.
-  4. Consider AR entry (€1,500, 5/5 score, MF#58) using available cash — highest-conviction new idea from today's screen; BRK.B (€1,000, MF#9) is the next-best if capital allows.
-  5. GSK/PRX/SFM — no action required yet; reassess by ~2026-09-22 if Exit signal persists without improvement.
+  1. Consider entering CI (€1,500, stop $272.21) and TRV (€1,000, stop $358.59) — both pass portfolio-fit and TA-timing checks; DVN entry can wait for RSI to cool from 66.
+  2. Watch IQV RSI for a move above 65 to execute the 2-share free-ride trim (~€447 proceeds).
+  3. Reassess GSK/PRX/LULU/SFM patience-override cohort no later than 2026-09-22 — LULU is the priority given no stop-loss and the largest drawdown.
 ════════════════════════════════════════════════════════
