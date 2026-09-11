@@ -6,6 +6,7 @@ export interface UniverseRow {
   exchange: string;
   sector: string | null;
   index_membership: string;
+  asset_class: string;
   close: number | null;
   pct_1d: number | null;
   ma20: number | null;
@@ -35,7 +36,7 @@ export async function GET() {
                ROW_NUMBER() OVER (PARTITION BY ticker, exchange ORDER BY date DESC) AS rn
         FROM prices
       )
-      SELECT u.ticker, u.exchange, u.sector, u.index_membership, u.notes,
+      SELECT u.ticker, u.exchange, u.sector, u.index_membership, u.asset_class, u.notes,
              r.close, r.ma20, r.ma50, r.ma200, r.rsi14,
              r.macd_signal, r.technical_rating, r.currency, r.date,
              ROUND((r.close - prev.close) / NULLIF(prev.close, 0) * 100, 2) AS pct_1d,
@@ -53,6 +54,7 @@ export async function GET() {
       exchange: r.exchange as string,
       sector: r.sector as string | null,
       index_membership: r.index_membership as string,
+      asset_class: r.asset_class as string,
       close: r.close as number | null,
       pct_1d: r.pct_1d as number | null,
       ma20: r.ma20 as number | null,

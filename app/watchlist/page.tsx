@@ -9,6 +9,7 @@ interface UniverseRow {
   exchange: string;
   sector: string | null;
   index_membership: string;
+  asset_class: string;
   close: number | null;
   pct_1d: number | null;
   ma20: number | null;
@@ -61,6 +62,14 @@ interface ConvergenceRow {
 }
 
 type Tab = "watchlist" | "screener" | "convergence";
+
+// Sub-$1 prices (common for micro-cap crypto, e.g. $EV at ~$0.00026) round
+// to "0.00" under a flat 2-decimal format, which reads as no data rather
+// than a real price. 3 significant figures keeps it meaningful either way.
+function fmtPrice(v: number): string {
+  if (v === 0) return "0";
+  return Math.abs(v) >= 1 ? v.toFixed(2) : v.toPrecision(3);
+}
 
 function ratingBadge(rating: string | null) {
   if (!rating) return <span style={{ color: "var(--text-muted)" }}>—</span>;
@@ -165,6 +174,11 @@ export default function WatchlistPage() {
   const [search, setSearch] = useState("");
   const [indexFilter, setIndexFilter] = useState("ALL");
   const [passOnly, setPassOnly] = useState(false);
+  // Crypto never appears in the Screener/Convergence tabs by design (no
+  // fundamentals data — same mechanism that already excludes Financials/
+  // Utilities/REITs from the Magic Formula), so this only affects the Full
+  // Watchlist tab. Defaults to equities per the Phase 2 spec.
+  const [assetClass, setAssetClass] = useState<"equity" | "crypto">("equity");
 
   const [uSortField, setUSortField] = useState<keyof UniverseRow>("ticker");
   const [uSortDir, setUSortDir] = useState<"asc" | "desc">("asc");
@@ -190,11 +204,21 @@ export default function WatchlistPage() {
       });
   }, []);
 
+  const universeByAssetClass = useMemo(
+    () => universe.filter((r) => r.asset_class === assetClass),
+    [universe, assetClass]
+  );
+
   const indexOptions = useMemo(() => {
     const set = new Set<string>();
-    universe.forEach((r) => r.index_membership.split(",").forEach((i) => set.add(i)));
+    universeByAssetClass.forEach((r) => r.index_membership.split(",").forEach((i) => set.add(i)));
     return ["ALL", ...Array.from(set).sort()];
-  }, [universe]);
+  }, [universeByAssetClass]);
+
+  function handleAssetClassChange(ac: "equity" | "crypto") {
+    setAssetClass(ac);
+    setIndexFilter("ALL"); // avoid a stale equity-index selection showing 0 crypto rows or vice versa
+  }
 
   function sortRows<T>(rows: T[], field: keyof T, dir: "asc" | "desc") {
     return [...rows].sort((a, b) => {
@@ -209,7 +233,7 @@ export default function WatchlistPage() {
   }
 
   const filteredUniverse = useMemo(() => {
-    let rows = universe;
+    let rows = universeByAssetClass;
     if (search.trim()) {
       const q = search.trim().toUpperCase();
       rows = rows.filter((r) => r.ticker.includes(q) || (r.sector ?? "").toUpperCase().includes(q));
@@ -218,7 +242,7 @@ export default function WatchlistPage() {
       rows = rows.filter((r) => r.index_membership.split(",").includes(indexFilter));
     }
     return sortRows(rows, uSortField, uSortDir);
-  }, [universe, search, indexFilter, uSortField, uSortDir]);
+  }, [universeByAssetClass, search, indexFilter, uSortField, uSortDir]);
 
   const filteredScreener = useMemo(() => {
     let rows = screener;
@@ -301,7 +325,7 @@ export default function WatchlistPage() {
           }}
           onClick={() => setTab("watchlist")}
         >
-          Full Watchlist ({universe.length})
+          Full Watchlist ({universeByAssetClass.length})
         </button>
         <button
           className="px-3 py-1.5 rounded-lg text-sm font-medium"
@@ -352,6 +376,20 @@ export default function WatchlistPage() {
             Passing thresholds only
           </label>
         )}
+        {tab === "watchlist" && (
+          <div className="flex gap-1 p-0.5 rounded-lg" style={{ backgroundColor: "var(--bg-tertiary)", border: "1px solid var(--border)" }}>
+            {(["equity", "crypto"] as const).map((ac) => (
+              <button key={ac} onClick={() => handleAssetClassChange(ac)}
+                className="px-2.5 py-1 rounded-md text-xs font-medium capitalize"
+                style={{
+                  backgroundColor: assetClass === ac ? "var(--accent)" : "transparent",
+                  color: assetClass === ac ? "white" : "var(--text-secondary)",
+                }}>
+                {ac === "equity" ? "Equities" : "Crypto"}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {loading ? (
@@ -384,7 +422,7 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-muted)" }}>{r.index_membership}</td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-secondary)" }}>{r.sector || "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>
-                    {r.close != null ? `${r.close.toFixed(2)} ${r.currency ?? ""}` : "—"}
+                    {r.close != null ? `${fmtPrice(r.close)} ${r.currency ?? ""}` : "—"}
                   </td>
                   <td className="px-3 py-2">{pctCell(r.pct_1d)}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.rsi14?.toFixed(1) ?? "—"}</td>
@@ -474,7 +512,7 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.earnings_yield.toFixed(2)}%</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.roic.toFixed(2)}%</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>
-                    {r.close != null ? `${r.close.toFixed(2)} ${r.currency ?? ""}` : "—"}
+                    {r.close != null ? `${fmtPrice(r.close)} ${r.currency ?? ""}` : "—"}
                   </td>
                   <td className="px-3 py-2">{pctCell(r.pct_1d)}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.rsi14?.toFixed(1) ?? "—"}</td>
