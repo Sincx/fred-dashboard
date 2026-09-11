@@ -16,6 +16,10 @@ export interface UniverseRow {
   technical_rating: string | null;
   currency: string | null;
   date: string | null;
+  notes: string | null;
+  signal_source: string | null;
+  signal_detail: string | null;
+  signal_flagged_date: string | null;
 }
 
 export async function GET() {
@@ -31,13 +35,16 @@ export async function GET() {
                ROW_NUMBER() OVER (PARTITION BY ticker, exchange ORDER BY date DESC) AS rn
         FROM prices
       )
-      SELECT u.ticker, u.exchange, u.sector, u.index_membership,
+      SELECT u.ticker, u.exchange, u.sector, u.index_membership, u.notes,
              r.close, r.ma20, r.ma50, r.ma200, r.rsi14,
              r.macd_signal, r.technical_rating, r.currency, r.date,
-             ROUND((r.close - prev.close) / NULLIF(prev.close, 0) * 100, 2) AS pct_1d
+             ROUND((r.close - prev.close) / NULLIF(prev.close, 0) * 100, 2) AS pct_1d,
+             sig.source AS signal_source, sig.detail AS signal_detail,
+             sig.flagged_date AS signal_flagged_date
       FROM universe u
       LEFT JOIN ranked r ON r.ticker = u.ticker AND r.exchange = u.exchange AND r.rn = 1
       LEFT JOIN ranked prev ON prev.ticker = u.ticker AND prev.exchange = u.exchange AND prev.rn = 2
+      LEFT JOIN v_latest_signal sig ON sig.ticker = u.ticker AND sig.exchange = u.exchange
       WHERE u.active = 1
       ORDER BY u.ticker ASC;
     `);
@@ -56,6 +63,10 @@ export async function GET() {
       technical_rating: r.technical_rating as string | null,
       currency: r.currency as string | null,
       date: r.date as string | null,
+      notes: r.notes as string | null,
+      signal_source: r.signal_source as string | null,
+      signal_detail: r.signal_detail as string | null,
+      signal_flagged_date: r.signal_flagged_date as string | null,
     }));
     return NextResponse.json(rows);
   } catch (err) {

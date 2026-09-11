@@ -5,8 +5,8 @@ let client: Client | null = null;
 /**
  * Shared Turso connection — the same database the market-watchlist-tracker
  * Python pipeline writes to (universe, prices, fundamentals, screen_results,
- * signals live already; strategies/portfolios/trades/task_registry are
- * schema-only until later phases backfill them).
+ * signals, strategies, portfolios, trades all live; task_registry is still
+ * schema-only).
  *
  * @libsql/client is HTTP-based (no persistent TCP connection), which is what
  * makes it work from Vercel serverless functions — see spec §3/§13.

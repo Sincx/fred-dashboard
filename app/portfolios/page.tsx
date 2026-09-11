@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { Loader2, TrendingUp, TrendingDown, AlertTriangle, CheckCircle2, Clock } from "lucide-react";
+import { SignalBadge } from "@/components/SignalBadge";
 
 interface Portfolios {
-  p1: string;
-  equity: string;
-  trading: string;
+  p1: PortfolioPayload;
+  equity: PortfolioPayload;
+  trading: PortfolioPayload;
+  equityCurve: EquityCurvePoint[];
   briefing: string;
-  performance?: string;
 }
 
 type Tab = "p1" | "equity" | "trading" | "briefing";
@@ -21,22 +22,50 @@ const TABS: { id: Tab; label: string }[] = [
 ];
 
 // ── Shared helpers ──────────────────────────────────────────────────────────
+// Phase 2 (P2.0a): P1 / Equity / Trading tabs now render from typed Turso
+// query results (see app/api/portfolios/route.ts) instead of regex-parsing
+// markdown. Morning Briefing is untouched — it's LLM-written prose, not row
+// data (see "── Morning Briefing parser & components" below).
 
-function parsePositionsTable(md: string): { headers: string[]; rows: string[][] } | null {
-  const lines = md.split("\n");
-  const tableStart = lines.findIndex((l) => l.trim().startsWith("|") && l.includes("Ticker"));
-  if (tableStart === -1) return null;
-  const block: string[] = [];
-  for (let i = tableStart; i < lines.length; i++) {
-    const t = lines[i].trim();
-    if (!t.startsWith("|")) break;
-    if (!t.match(/^\|[-: |]+\|$/)) block.push(lines[i]);
-  }
-  if (block.length < 2) return null;
-  const parse = (line: string) =>
-    line.split("|").map((c) => c.trim()).filter((_, i, a) => i > 0 && i < a.length - 1);
-  return { headers: parse(block[0]), rows: block.slice(1).map(parse) };
+interface TradeRow {
+  trade_id: string;
+  ticker: string;
+  exchange: string;
+  strategy_id: string | null;
+  direction: string;
+  instrument_type: string;
+  entry_date: string | null;
+  entry_price: number | null;
+  shares: number | null;
+  currency: string | null;
+  stop_loss: number | null;
+  target1: number | null;
+  target2: number | null;
+  exit_date: string | null;
+  exit_price: number | null;
+  status: string;
+  option_type: string | null;
+  strike: number | null;
+  close: number | null;
 }
+
+interface PortfolioStats {
+  open_positions: number;
+  closed_positions: number;
+  open_value: number | null;
+  net_pnl: number | null;
+  win_rate: number | null;
+}
+
+interface PortfolioPayload {
+  portfolio_id: string;
+  name: string;
+  open: TradeRow[];
+  closed: TradeRow[];
+  stats: PortfolioStats;
+}
+
+interface EquityCurvePoint { date: string; ticker: string; cumulative: number }
 
 function PnlBadge({ val }: { val: string }) {
   const clean = val.replace(/\*\*/g, "").trim();
@@ -46,419 +75,146 @@ function PnlBadge({ val }: { val: string }) {
   return <span className={cls}>{clean}</span>;
 }
 
-function isPnlHeader(h: string) {
-  return /p&l|change|pnl/i.test(h);
+function fmtMoney(v: number | null): string {
+  if (v == null) return "—";
+  const sign = v < 0 ? "−" : "+";
+  return `${sign}$${Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
 }
 
-function PortfolioTable({ md }: { md: string }) {
-  const table = parsePositionsTable(md);
-  if (!table) return (
-    <pre className="text-xs whitespace-pre-wrap" style={{ color: "var(--text-secondary)" }}>
-      {md.slice(0, 2000)}
-    </pre>
-  );
+function fmtPct(v: number | null): string {
+  if (v == null) return "—";
+  return `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
+}
+
+// Directional P&L% — a short position profits when price falls, same
+// convention as v_strategy_performance / v_portfolio_performance in schema.sql.
+function pnlPct(entry: number | null, current: number | null, direction: string): number | null {
+  if (entry == null || current == null || entry === 0) return null;
+  const sign = direction === "short" ? -1 : 1;
+  return sign * ((current - entry) / entry) * 100;
+}
+
+function daysBetween(dateStr: string | null): number | null {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return null;
+  return Math.floor((Date.now() - d.getTime()) / 86400000);
+}
+
+// GBX (pence) prices are ~100x their GBP value — same correction the API
+// route's aggregate stats and v_portfolio_performance (schema.sql) apply.
+function fxScale(currency: string | null): number {
+  return currency === "GBX" ? 0.01 : 1.0;
+}
+
+function P1Stats({ stats }: { stats: PortfolioStats }) {
+  const items: { label: string; value: string; colored: boolean }[] = [
+    { label: "Net P&L", value: fmtMoney(stats.net_pnl), colored: true },
+    { label: "Open Positions Value", value: fmtMoney(stats.open_value), colored: false },
+    { label: "Open Positions", value: String(stats.open_positions), colored: false },
+    { label: "Win Rate", value: stats.win_rate != null ? `${stats.win_rate.toFixed(1)}%` : "—", colored: false },
+  ];
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-xs border-collapse">
-        <thead>
-          <tr style={{ borderBottom: "1px solid var(--border)" }}>
-            {table.headers.map((h) => (
-              <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {table.rows.map((row, i) => (
-            <tr key={i} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
-              {row.map((cell, j) => (
-                <td key={j} className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
-                  {isPnlHeader(table.headers[j] ?? "") ? <PnlBadge val={cell} /> : cell}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function extractSection(md: string, heading: string): string {
-  const lines = md.split("\n");
-  const start = lines.findIndex((l) => l.toLowerCase().includes(heading.toLowerCase()) && l.startsWith("#"));
-  if (start === -1) return md;
-  const end = lines.findIndex((l, i) => i > start && l.match(/^#{1,2} /));
-  return lines.slice(start, end === -1 ? undefined : end).join("\n");
-}
-
-function TradingStats({ md }: { md: string }) {
-  const pnlMatch = md.match(/\|\s*\*\*Net P&L\*\*\s*\|\s*\*\*([^*]+)\*\*/i);
-  const totalMatch = md.match(/Total portfolio value[^|]+\|([^|]+)\|/i);
-  const tradesMatch = md.match(/Total trades[^:]*:\s*(\d+)/i);
-  if (!pnlMatch && !totalMatch && !tradesMatch) return null;
-  return (
-    <div className="grid grid-cols-3 gap-3 mb-4">
-      {pnlMatch && (
-        <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-          <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Net P&L</p>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+      {items.map(({ label, value, colored }) => (
+        <div key={label} className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+          <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>{label}</p>
           <p className="font-semibold text-sm" style={{
-            color: pnlMatch[1].includes("−") || pnlMatch[1].includes("-") ? "var(--accent-red)" : "var(--accent-green)"
-          }}>{pnlMatch[1].trim()}</p>
+            color: colored ? (value.startsWith("−") ? "var(--accent-red)" : "var(--accent-green)") : "var(--text-primary)",
+          }}>{value}</p>
         </div>
-      )}
-      {totalMatch && (
-        <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-          <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Portfolio Value</p>
-          <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{totalMatch[1].trim()}</p>
-        </div>
-      )}
-      {tradesMatch && (
-        <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-          <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Total Trades</p>
-          <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{tradesMatch[1]}</p>
-        </div>
-      )}
+      ))}
     </div>
   );
 }
 
-function EquityStats({ md }: { md: string }) {
-  const table = parsePositionsTable(md);
-  if (!table) return null;
-  const changeIdx = table.headers.findIndex((h) => /change/i.test(h));
-  const tickerIdx = table.headers.findIndex((h) => /ticker/i.test(h));
-  if (changeIdx === -1) return null;
-  const parseVal = (v: string) => {
-    const m = v.replace("−", "-").match(/([-+]?\d+\.?\d*)/);
-    return m ? parseFloat(m[1]) : null;
-  };
-  const changes = table.rows
-    .map((r, i) => ({ val: parseVal(r[changeIdx] ?? ""), ticker: r[tickerIdx] ?? String(i) }))
-    .filter((x): x is { val: number; ticker: string } => x.val !== null);
-  if (!changes.length) return null;
-  const avg = changes.reduce((s, x) => s + x.val, 0) / changes.length;
-  const best = changes.reduce((a, b) => b.val > a.val ? b : a);
-  const worst = changes.reduce((a, b) => b.val < a.val ? b : a);
-  const pos = changes.filter((x) => x.val >= 0).length;
-  return (
-    <div className="grid grid-cols-4 gap-3 mb-4">
-      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Positions</p>
-        <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
-          {changes.length} &nbsp;<span style={{ color: "var(--text-muted)", fontWeight: 400 }}>({pos} up)</span>
-        </p>
-      </div>
-      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Avg Change</p>
-        <p className="font-semibold text-sm" style={{ color: avg >= 0 ? "var(--accent-green)" : "var(--accent-red)" }}>
-          {avg >= 0 ? "+" : ""}{avg.toFixed(1)}%
-        </p>
-      </div>
-      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Best · {best.ticker}</p>
-        <p className="font-semibold text-sm" style={{ color: "var(--accent-green)" }}>+{best.val.toFixed(1)}%</p>
-      </div>
-      <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-        <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Worst · {worst.ticker}</p>
-        <p className="font-semibold text-sm" style={{ color: "var(--accent-red)" }}>{worst.val.toFixed(1)}%</p>
-      </div>
-    </div>
-  );
-}
-
-function extractSectionOrNull(md: string, heading: string): string | null {
-  const lines = md.split("\n");
-  const start = lines.findIndex((l) => l.toLowerCase().includes(heading.toLowerCase()) && l.startsWith("#"));
-  if (start === -1) return null;
-  const end = lines.findIndex((l, i) => i > start && l.match(/^#{1,2} /));
-  return lines.slice(start, end === -1 ? undefined : end).join("\n");
-}
-
-function parseSectionTable(md: string, sectionName: string) {
-  const section = extractSectionOrNull(md, sectionName);
-  if (!section) return null;
-  return parsePositionsTable(section);
-}
-
-function parseTradingYTD(md: string) {
-  const section = extractSectionOrNull(md, "YTD Summary");
-  if (!section) return null;
-  const get = (label: string) => {
-    const m = section.match(new RegExp(label + "[^|]*\\|\\s*([^|\\n]+)", "i"));
-    return m ? m[1].replace(/\*\*/g, "").trim() : "";
-  };
-  return { net: get("Net realised gains"), gross: get("Total gross P&L"), transactions: get("Transactions") };
-}
-
-function parseTradingCash(md: string): string {
-  const m = md.match(/\|\s*EUR\s*\|\s*\*\*([^*]+)\*\*/);
-  return m ? m[1].trim() : "";
-}
-
-// ── Equity Portfolio — custom view with TA recommendations + MF ─────────────
-
-function parseEquityMF(md: string): Record<string, string> {
-  const mfSection = extractSection(md, "Magic Formula");
-  const table = parsePositionsTable(mfSection);
-  if (!table) return {};
-  const tickerIdx = table.headers.findIndex((h) => /ticker/i.test(h));
-  const rankIdx = table.headers.findIndex((h) => /mf rank/i.test(h));
-  if (tickerIdx === -1 || rankIdx === -1) return {};
-  const map: Record<string, string> = {};
-  for (const row of table.rows) {
-    const ticker = row[tickerIdx]?.trim();
-    const rank = row[rankIdx]?.trim();
-    if (ticker && rank && ticker !== "—") map[ticker] = rank;
-  }
-  return map;
-}
-
-function parseEquityTA(md: string): Record<string, string> {
-  const taSection = extractSection(md, "Technical Analysis");
-  const table = parsePositionsTable(taSection);
-  if (!table) return {};
-  const tickerIdx = table.headers.findIndex((h) => /ticker/i.test(h));
-  const verdictIdx = table.headers.findIndex((h) => /verdict/i.test(h));
-  if (tickerIdx === -1 || verdictIdx === -1) return {};
-  const map: Record<string, string> = {};
-  for (const row of table.rows) {
-    const ticker = row[tickerIdx]?.trim();
-    const verdict = row[verdictIdx]?.trim();
-    if (ticker && verdict) map[ticker] = verdict;
-  }
-  return map;
-}
-
-function taVerdictToSignal(verdict: string): string {
-  const v = verdict.toLowerCase();
-  if (v.includes("bullish") && !v.includes("neutral")) return "Hold";
-  if (v.includes("neutral")) return "Watch";
-  if (v.includes("bearish")) return "Watch";
-  return "Watch";
-}
-
-function EquityPortfolioView({ md }: { md: string }) {
-  const holdingsSection = extractSection(md, "Equity Holdings");
-  const table = parsePositionsTable(holdingsSection);
-  const taMap = parseEquityTA(md);
-  const mfMap = parseEquityMF(md);
-
-  if (!table) return (
-    <pre className="text-xs whitespace-pre-wrap" style={{ color: "var(--text-secondary)" }}>
-      {md.slice(0, 2000)}
-    </pre>
-  );
-
-  const tickerIdx = table.headers.findIndex((h) => /ticker/i.test(h));
-
-  return (
-    <div className="space-y-5">
-      <EquityStats md={md} />
-      <div className="overflow-x-auto">
-        <table className="w-full text-xs border-collapse">
-          <thead>
-            <tr style={{ borderBottom: "1px solid var(--border)" }}>
-              {table.headers.map((h) => (
-                <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
-              ))}
-              <th className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>Signal</th>
-              <th className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>MF#</th>
-            </tr>
-          </thead>
-          <tbody>
-            {table.rows.map((row, i) => {
-              const ticker = tickerIdx >= 0 ? row[tickerIdx]?.trim() ?? "" : "";
-              const verdict = taMap[ticker] ?? "";
-              const signal = verdict ? taVerdictToSignal(verdict) : "";
-              const mfRank = mfMap[ticker] ?? "";
-              return (
-                <tr key={i} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
-                  {row.map((cell, j) => (
-                    <td key={j} className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
-                      {isPnlHeader(table.headers[j] ?? "") ? <PnlBadge val={cell} /> : cell}
-                    </td>
-                  ))}
-                  <td className="py-2 px-3">
-                    {signal ? <SignalBadge signal={signal} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
-                  </td>
-                  <td className="py-2 px-3 font-mono" style={{ color: mfRank && mfRank !== "—" ? "var(--text-primary)" : "var(--text-muted)" }}>{mfRank || "—"}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-
-// ── Trading Portfolio — long equity, shorts, options, closed ────────────────
-
-function SectionTable({
-  table,
-  type = "long",
-}: {
-  table: { headers: string[]; rows: string[][] };
-  type?: "long" | "short" | "options" | "closed";
-}) {
-  const signalIdx  = table.headers.findIndex((h) => /^signal$/i.test(h.trim()));
-  const typeColIdx = table.headers.findIndex((h) => /^type$/i.test(h.trim()));
-
+// Known simplification (flagged in the Phase 2 plan, not silently dropped):
+// no company display name exists in Turso (universe/trades have ticker only),
+// and no per-tranche T1/T2 "Realised $" — one entry + one exit per trade row.
+function OpenPositionsTable({ rows }: { rows: TradeRow[] }) {
+  if (!rows.length) return <p className="text-xs" style={{ color: "var(--text-muted)" }}>No open positions.</p>;
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-xs border-collapse">
         <thead>
           <tr style={{ borderBottom: "1px solid var(--border)" }}>
-            {table.headers.map((h) => (
+            {["Ticker", "Exchange", "Entry Date", "Entry", "Curr Price", "P&L%", "Value", "Days", "T1", "T2"].map((h) => (
               <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {table.rows.map((row, i) => (
-            <tr key={i} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
-              {row.map((cell, j) => {
-                const h   = table.headers[j] ?? "";
-                const raw = cell.replace(/\*\*/g, "").trim();
-                if (j === signalIdx) {
-                  const text = raw.replace(/[^\w\s]/g, "").trim();
-                  return (
-                    <td key={j} className="py-2 px-3">
-                      {text ? <SignalBadge signal={text} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
-                    </td>
-                  );
-                }
-                if (isPnlHeader(h) || /net.*€/i.test(h) || /gross.*€/i.test(h)) {
-                  return <td key={j} className="py-2 px-3"><PnlBadge val={raw} /></td>;
-                }
-                if (j === typeColIdx && typeColIdx !== -1) {
-                  const isPut = /put/i.test(raw);
-                  return (
-                    <td key={j} className="py-2 px-3">
-                      <span className="px-2 py-0.5 rounded text-xs font-semibold"
-                        style={{ backgroundColor: isPut ? "rgba(139,92,246,0.15)" : "rgba(16,185,129,0.15)", color: isPut ? "#a78bfa" : "var(--accent-green)" }}>
-                        {raw}
-                      </span>
-                    </td>
-                  );
-                }
-                if (/^notes$/i.test(h.trim())) {
-                  const truncated = raw.length > 90 ? raw.slice(0, 90) + "…" : raw;
-                  return <td key={j} className="py-2 px-3" style={{ color: "var(--text-muted)", maxWidth: 220 }}>{truncated}</td>;
-                }
-                return <td key={j} className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{raw}</td>;
-              })}
-            </tr>
-          ))}
+          {rows.map((r) => {
+            const pct = pnlPct(r.entry_price, r.close, r.direction);
+            // Options: shares is a 100-per-contract notional placeholder, not
+            // real quantity — shares × underlying price isn't the position's
+            // value, so it's left "—" rather than shown wrong.
+            const value = r.instrument_type === "equity" && r.shares != null && r.close != null
+              ? (r.direction === "short" ? -1 : 1) * r.shares * r.close * fxScale(r.currency) : null;
+            const days = daysBetween(r.entry_date);
+            return (
+              <tr key={r.trade_id} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
+                <td className="py-2 px-3 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.exchange}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.entry_date ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.entry_price != null ? r.entry_price.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.close != null ? r.close.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3">{pct != null ? <PnlBadge val={fmtPct(pct)} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{value != null ? fmtMoney(value).replace("+", "") : "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{days ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target1 ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target2 ?? "—"}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   );
 }
 
-function TradingPortfolioView({ md }: { md: string }) {
-  const ytd         = parseTradingYTD(md);
-  const cash        = parseTradingCash(md);
-  const openTable   = parseSectionTable(md, "Open Positions");
-  const shortTable  = parseSectionTable(md, "Short Positions");
-  const optsTable   = parseSectionTable(md, "Options Positions");
-  const closedTable = parseSectionTable(md, "Closed Positions");
-
+function ClosedPositionsTable({ rows }: { rows: TradeRow[] }) {
+  if (!rows.length) return <p className="text-xs" style={{ color: "var(--text-muted)" }}>No closed positions yet.</p>;
   return (
-    <div className="space-y-6">
-      {/* Stats bar */}
-      <div className="grid grid-cols-3 gap-3">
-        {cash && (
-          <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Cash</p>
-            <p className="font-semibold text-sm" style={{ color: "var(--accent-green)" }}>{cash}</p>
-          </div>
-        )}
-        {ytd?.net && (
-          <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>YTD Net</p>
-            <p className="font-semibold text-sm" style={{
-              color: ytd.net.includes("−") || ytd.net.includes("-") ? "var(--accent-red)" : "var(--accent-green)"
-            }}>{ytd.net}</p>
-          </div>
-        )}
-        {ytd?.transactions && (
-          <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Transactions</p>
-            <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{ytd.transactions}</p>
-          </div>
-        )}
-      </div>
-
-      {/* Long equity positions */}
-      {openTable && (
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-green)", opacity: 0.85 }}>
-            Long Equity · {openTable.rows.length} positions
-          </p>
-          <SectionTable table={openTable} type="long" />
-        </div>
-      )}
-
-      {/* Short equity positions */}
-      {shortTable && shortTable.rows.length > 0 && (
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-red)", opacity: 0.85 }}>
-            Short Equity · {shortTable.rows.length} position{shortTable.rows.length !== 1 ? "s" : ""}
-          </p>
-          <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(239,68,68,0.3)", backgroundColor: "rgba(239,68,68,0.03)" }}>
-            <SectionTable table={shortTable} type="short" />
-          </div>
-        </div>
-      )}
-
-      {/* Options positions */}
-      {optsTable && optsTable.rows.length > 0 && (
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "#a78bfa", opacity: 0.9 }}>
-            Options · {optsTable.rows.length} position{optsTable.rows.length !== 1 ? "s" : ""}
-          </p>
-          <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(139,92,246,0.3)", backgroundColor: "rgba(139,92,246,0.03)" }}>
-            <SectionTable table={optsTable} type="options" />
-          </div>
-        </div>
-      )}
-
-      {/* Closed positions */}
-      {closedTable && closedTable.rows.length > 0 && (
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)", opacity: 0.85 }}>
-            Closed Positions · {closedTable.rows.length} exits
-          </p>
-          <SectionTable table={closedTable} type="closed" />
-        </div>
-      )}
+    <div className="overflow-x-auto">
+      <table className="w-full text-xs border-collapse">
+        <thead>
+          <tr style={{ borderBottom: "1px solid var(--border)" }}>
+            {["Ticker", "Exchange", "Entry Date", "Exit Date", "Entry", "Exit", "P&L%", "P&L $", "Result"].map((h) => (
+              <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => {
+            const pct = pnlPct(r.entry_price, r.exit_price, r.direction);
+            const dollar = r.shares != null && r.entry_price != null && r.exit_price != null
+              ? (r.direction === "short" ? -1 : 1) * r.shares * (r.exit_price - r.entry_price) * fxScale(r.currency) : null;
+            const isWin = dollar != null && dollar > 0;
+            const isLoss = dollar != null && dollar < 0;
+            return (
+              <tr key={r.trade_id} className="border-b" style={{
+                borderColor: "var(--border)",
+                backgroundColor: isWin ? "rgba(16,185,129,0.04)" : isLoss ? "rgba(239,68,68,0.04)" : "transparent",
+              }}>
+                <td className="py-2 px-3 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.exchange}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.entry_date ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.exit_date ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.entry_price != null ? r.entry_price.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.exit_price != null ? r.exit_price.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3">{pct != null ? <PnlBadge val={fmtPct(pct)} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}</td>
+                <td className="py-2 px-3">{dollar != null ? <PnlBadge val={fmtMoney(dollar)} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}</td>
+                <td className="py-2 px-3" style={{ color: isWin ? "var(--accent-green)" : isLoss ? "var(--accent-red)" : "var(--text-muted)" }}>
+                  {isWin ? "Win" : isLoss ? "Loss" : "—"}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
-}
-
-// ── Paper Trading — equity curve + closed positions ─────────────────────────
-
-function parseEquityCurve(md: string): { date: string; ticker: string; cumulative: number }[] {
-  const lines = md.split("\n");
-  const sectionIdx = lines.findIndex((l) => /equity curve/i.test(l) && l.startsWith("#"));
-  if (sectionIdx === -1) return [];
-  const tableIdx = lines.findIndex(
-    (l, i) => i > sectionIdx && l.trim().startsWith("|") && /date/i.test(l) && /cumulative/i.test(l)
-  );
-  if (tableIdx === -1) return [];
-  const points: { date: string; ticker: string; cumulative: number }[] = [];
-  for (let i = tableIdx + 2; i < lines.length; i++) {
-    const l = lines[i].trim();
-    if (!l.startsWith("|")) break;
-    if (/^\|[-: |]+\|$/.test(l)) continue;
-    const cells = l.split("|").map((c) => c.trim()).filter((_, idx, a) => idx > 0 && idx < a.length - 1);
-    if (cells.length < 4) continue;
-    const raw = (cells[3] ?? "0").replace("−", "-").replace(/[$,\s]/g, "");
-    const cum = parseFloat(raw);
-    if (!isNaN(cum)) points.push({ date: cells[0] ?? "", ticker: cells[1] ?? "", cumulative: cum });
-  }
-  return points;
 }
 
 function EquityCurveChart({ points }: { points: { cumulative: number }[] }) {
@@ -496,120 +252,12 @@ function EquityCurveChart({ points }: { points: { cumulative: number }[] }) {
   );
 }
 
-function ClosedPositionsTable({ md }: { md: string }) {
-  const table = parsePositionsTable(md);
-  if (!table) return (
-    <p className="text-xs" style={{ color: "var(--text-muted)" }}>No closed positions yet.</p>
-  );
-  const resultIdx = table.headers.findIndex((h) => /result/i.test(h));
-  const pnlDollarIdx = table.headers.findIndex((h) => /total p&l \$/i.test(h));
-  return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-xs border-collapse">
-        <thead>
-          <tr style={{ borderBottom: "1px solid var(--border)" }}>
-            {table.headers.map((h) => (
-              <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {table.rows.map((row, i) => {
-            const result = row[resultIdx] ?? "";
-            const dollarPnl = row[pnlDollarIdx] ?? "";
-            const isWin = dollarPnl.startsWith("+") || (!dollarPnl.startsWith("−") && !dollarPnl.startsWith("-") && parseFloat(dollarPnl.replace(/[^0-9.]/g, "")) > 0);
-            const isLoss = result.includes("🔴") || dollarPnl.startsWith("−") || dollarPnl.startsWith("-");
-            return (
-              <tr key={i} className="border-b" style={{
-                borderColor: "var(--border)",
-                backgroundColor: isWin ? "rgba(16,185,129,0.04)" : isLoss ? "rgba(239,68,68,0.04)" : "transparent",
-              }}>
-                {row.map((cell, j) => (
-                  <td key={j} className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
-                    {isPnlHeader(table.headers[j] ?? "") ? <PnlBadge val={cell} /> : cell}
-                  </td>
-                ))}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function P1Stats({ md }: { md: string }) {
-  const pnlMatch = md.match(/\|\s*\*\*Net P&L\*\*\s*\|\s*\*\*([^*]+)\*\*/i);
-  const totalMatch = md.match(/\*\*Total portfolio value\*\*\s*\|\s*\*?\*?([^*|\n]+)/i);
-  const openValueMatch = md.match(/\*\*Remaining open value\*\*\s*\|\s*([^|\n]+)/i);
-  const realisedOpenMatch = md.match(/\*\*Realised \(T1\/T2 partial exits on open positions\)\*\*\s*\|\s*([^(|\n]+)/i);
-  const realisedClosedMatch = md.match(/\*\*Realised \(closed positions proceeds\)\*\*\s*\|\s*([^(|\n]+)/i);
-  const tradesMatch = md.match(/Total trades[^:]*:\s*(\d+)/i);
-  const winRateMatch = md.match(/Win rate[^:]*:\s*([^\s|,]+)/i);
-  const items = [
-    pnlMatch  && { label: "Net P&L",          value: pnlMatch[1].trim(),   colored: true  },
-    totalMatch && { label: "Portfolio Value",  value: totalMatch[1].trim(), colored: false },
-    tradesMatch && { label: "Total Trades",   value: tradesMatch[1],       colored: false },
-    winRateMatch && { label: "Win Rate",      value: winRateMatch[1].trim(),colored: false },
-  ].filter(Boolean) as { label: string; value: string; colored: boolean }[];
-  if (!items.length) return null;
-
-  const openValue = openValueMatch?.[1]?.trim();
-  const realisedOpen = realisedOpenMatch?.[1]?.trim();
-  const realisedClosed = realisedClosedMatch?.[1]?.trim();
-  const hasBreakdown = openValue || realisedOpen || realisedClosed;
-
-  return (
-    <div className="space-y-3 mb-5">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {items.map(({ label, value, colored }) => (
-          <div key={label} className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-            <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>{label}</p>
-            <p className="font-semibold text-sm" style={{
-              color: colored
-                ? (value.includes("−") || value.startsWith("-") ? "var(--accent-red)" : "var(--accent-green)")
-                : "var(--text-primary)",
-            }}>{value}</p>
-          </div>
-        ))}
-      </div>
-      {hasBreakdown && (
-        <div className="grid grid-cols-3 gap-3">
-          {openValue && (
-            <div className="rounded-lg p-2.5" style={{ backgroundColor: "var(--bg-tertiary)", borderLeft: "3px solid var(--accent)" }}>
-              <p className="text-xs mb-0.5" style={{ color: "var(--text-muted)" }}>Open Positions Value</p>
-              <p className="font-semibold text-xs" style={{ color: "var(--text-primary)" }}>{openValue}</p>
-            </div>
-          )}
-          {realisedOpen && (
-            <div className="rounded-lg p-2.5" style={{ backgroundColor: "var(--bg-tertiary)", borderLeft: "3px solid var(--accent-green)" }}>
-              <p className="text-xs mb-0.5" style={{ color: "var(--text-muted)" }}>Realised (T1/T2 partials)</p>
-              <p className="font-semibold text-xs" style={{ color: "var(--text-primary)" }}>{realisedOpen}</p>
-            </div>
-          )}
-          {realisedClosed && (
-            <div className="rounded-lg p-2.5" style={{ backgroundColor: "var(--bg-tertiary)", borderLeft: "3px solid var(--text-muted)" }}>
-              <p className="text-xs mb-0.5" style={{ color: "var(--text-muted)" }}>Cash from Closed Positions</p>
-              <p className="font-semibold text-xs" style={{ color: "var(--text-primary)" }}>{realisedClosed}</p>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function PaperTradingView({ portfolioMd, performanceMd }: { portfolioMd: string; performanceMd?: string }) {
-  const openSection   = extractSection(portfolioMd, "Open Positions");
-  const closedSection = extractSection(portfolioMd, "Closed Positions");
-  const equityPoints  = performanceMd ? parseEquityCurve(performanceMd) : [];
+function PaperTradingView({ portfolio, equityPoints }: { portfolio: PortfolioPayload; equityPoints: EquityCurvePoint[] }) {
   const last = equityPoints[equityPoints.length - 1];
-
   return (
     <div className="space-y-5">
-      <P1Stats md={portfolioMd} />
+      <P1Stats stats={portfolio.stats} />
 
-      {/* Equity curve */}
       {equityPoints.length > 1 && (
         <div className="card">
           <div className="flex items-center justify-between mb-2">
@@ -634,16 +282,77 @@ function PaperTradingView({ portfolioMd, performanceMd }: { portfolioMd: string;
         </div>
       )}
 
-      {/* Open positions */}
       <div className="card">
         <h3 className="text-sm font-semibold mb-3" style={{ color: "var(--text-secondary)" }}>Open Positions</h3>
-        <PortfolioTable md={openSection} />
+        <OpenPositionsTable rows={portfolio.open} />
       </div>
 
-      {/* Closed positions */}
       <div className="card">
         <h3 className="text-sm font-semibold mb-3" style={{ color: "var(--text-secondary)" }}>Closed Positions</h3>
-        <ClosedPositionsTable md={closedSection} />
+        <ClosedPositionsTable rows={portfolio.closed} />
+      </div>
+    </div>
+  );
+}
+
+// Equity/Pension: shares is NULL for all 19 holdings (Phase 7b — the source
+// data had entry price but no quantities), so cost basis / $ P&L stay "—"
+// via OpenPositionsTable's own null-handling; only Entry vs Curr Price and
+// %-change render, which is a strict improvement over the old markdown view.
+function EquityPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
+  return (
+    <div className="space-y-5">
+      <P1Stats stats={portfolio.stats} />
+      <OpenPositionsTable rows={portfolio.open} />
+    </div>
+  );
+}
+
+// Trading Portfolio: cash_ledger was never populated for this portfolio
+// (Phase 7c — a live-task concern, not a backfill one), so cash/YTD are
+// deliberately omitted here rather than shown as a fabricated $0.
+function TradingPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
+  const longs = portfolio.open.filter((r) => r.direction === "long" && r.instrument_type === "equity");
+  const shorts = portfolio.open.filter((r) => r.direction === "short" && r.instrument_type === "equity");
+  const options = portfolio.open.filter((r) => r.instrument_type === "option");
+  return (
+    <div className="space-y-6">
+      <P1Stats stats={portfolio.stats} />
+
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-green)", opacity: 0.85 }}>
+          Long Equity · {longs.length} positions
+        </p>
+        <OpenPositionsTable rows={longs} />
+      </div>
+
+      {shorts.length > 0 && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-red)", opacity: 0.85 }}>
+            Short Equity · {shorts.length} position{shorts.length !== 1 ? "s" : ""}
+          </p>
+          <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(239,68,68,0.3)", backgroundColor: "rgba(239,68,68,0.03)" }}>
+            <OpenPositionsTable rows={shorts} />
+          </div>
+        </div>
+      )}
+
+      {options.length > 0 && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "#a78bfa", opacity: 0.9 }}>
+            Options · {options.length} position{options.length !== 1 ? "s" : ""}
+          </p>
+          <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(139,92,246,0.3)", backgroundColor: "rgba(139,92,246,0.03)" }}>
+            <OpenPositionsTable rows={options} />
+          </div>
+        </div>
+      )}
+
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)", opacity: 0.85 }}>
+          Closed Positions · {portfolio.closed.length} exits
+        </p>
+        <ClosedPositionsTable rows={portfolio.closed} />
       </div>
     </div>
   );
@@ -834,26 +543,6 @@ function parseBriefing(md: string): BriefingData {
   }
 
   return { raw: md, isPlaceholder, date, snapshot: snap, signals, shape, sells, adds, newPositions, noTrades, freeRides, risks, actions };
-}
-
-const SIGNAL_STYLES: Record<string, { bg: string; color: string; label: string }> = {
-  exit:  { bg: "rgba(239,68,68,0.15)",  color: "var(--accent-red)",   label: "Exit"  },
-  trim:  { bg: "rgba(249,115,22,0.15)", color: "#f97316",              label: "Trim"  },
-  add:   { bg: "rgba(16,185,129,0.15)", color: "var(--accent-green)",  label: "Add"   },
-  hold:  { bg: "rgba(100,116,139,0.12)",color: "var(--text-muted)",    label: "Hold"  },
-  watch: { bg: "rgba(96,165,250,0.15)", color: "#60a5fa",              label: "Watch" },
-};
-
-function SignalBadge({ signal }: { signal: string }) {
-  const key = signal.toLowerCase().replace(/\s+/g, "");
-  const style = Object.entries(SIGNAL_STYLES).find(([k]) => key.includes(k))?.[1]
-    ?? { bg: "rgba(100,116,139,0.12)", color: "var(--text-muted)", label: signal };
-  return (
-    <span className="px-2 py-0.5 rounded text-xs font-semibold"
-      style={{ backgroundColor: style.bg, color: style.color }}>
-      {style.label || signal}
-    </span>
-  );
 }
 
 function TradeCard({ idea, type }: { idea: TradeIdea; type: "sell" | "add" | "new" }) {
@@ -1174,14 +863,14 @@ export default function PortfoliosPage() {
           {tab === "briefing" ? (
             <MorningBriefing md={data.briefing ?? ""} />
           ) : tab === "p1" ? (
-            <PaperTradingView portfolioMd={data.p1} performanceMd={data.performance} />
+            <PaperTradingView portfolio={data.p1} equityPoints={data.equityCurve} />
           ) : tab === "equity" ? (
             <div className="card">
-              <EquityPortfolioView md={data.equity} />
+              <EquityPortfolioView portfolio={data.equity} />
             </div>
           ) : (
             <div className="card">
-              <TradingPortfolioView md={data.trading} />
+              <TradingPortfolioView portfolio={data.trading} />
             </div>
           )}
         </>

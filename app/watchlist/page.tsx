@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Loader2, ArrowUpDown, Search } from "lucide-react";
+import { SourceSignalBadge } from "@/components/SignalBadge";
 
 interface UniverseRow {
   ticker: string;
@@ -18,6 +19,10 @@ interface UniverseRow {
   technical_rating: string | null;
   currency: string | null;
   date: string | null;
+  notes: string | null;
+  signal_source: string | null;
+  signal_detail: string | null;
+  signal_flagged_date: string | null;
 }
 
 interface ScreenerRow {
@@ -33,6 +38,10 @@ interface ScreenerRow {
   passes_thresholds: number;
   pe: number | null;
   div_yield: number | null;
+  notes: string | null;
+  signal_source: string | null;
+  signal_detail: string | null;
+  signal_flagged_date: string | null;
 }
 
 interface ConvergenceRow {
@@ -84,6 +93,66 @@ function SortHeader<T>({
         {active && <span className="text-[10px]">{sortDir === "asc" ? "↑" : "↓"}</span>}
       </span>
     </th>
+  );
+}
+
+function NotesCell({
+  ticker, exchange, value, onSaved,
+}: {
+  ticker: string; exchange: string; value: string | null; onSaved: (notes: string) => void;
+}) {
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState(value ?? "");
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => { setDraft(value ?? ""); }, [value]);
+
+  async function save() {
+    setEditing(false);
+    if (draft === (value ?? "")) return;
+    setSaving(true);
+    try {
+      const res = await fetch(`/api/finance/universe/${encodeURIComponent(ticker)}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ exchange, notes: draft }),
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      onSaved(draft);
+    } catch {
+      setDraft(value ?? "");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  if (editing) {
+    return (
+      <input
+        autoFocus
+        className="px-1.5 py-0.5 rounded text-xs w-40"
+        style={{ backgroundColor: "var(--bg-tertiary)", border: "1px solid var(--accent)", color: "var(--text-primary)" }}
+        value={draft}
+        disabled={saving}
+        onChange={(e) => setDraft(e.target.value)}
+        onBlur={save}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") e.currentTarget.blur();
+          if (e.key === "Escape") { setDraft(value ?? ""); setEditing(false); }
+        }}
+      />
+    );
+  }
+  return (
+    <span
+      className="text-xs cursor-text"
+      style={{ color: value ? "var(--text-secondary)" : "var(--text-muted)", opacity: saving ? 0.5 : 1 }}
+      onClick={() => setEditing(true)}
+      title="Click to edit"
+    >
+      {value || "add note…"}
+    </span>
   );
 }
 
@@ -205,6 +274,9 @@ export default function WatchlistPage() {
     if (field === sSortField) setSSortDir(sSortDir === "asc" ? "desc" : "asc");
     else { setSSortField(field); setSSortDir(field === "mf_rank" ? "asc" : "desc"); }
   }
+  function updateNotes(ticker: string, exchange: string, notes: string) {
+    setUniverse((prev) => prev.map((r) => (r.ticker === ticker && r.exchange === exchange ? { ...r, notes } : r)));
+  }
   function handleCSort(field: keyof ConvergenceRow) {
     if (field === cSortField) setCSortDir(cSortDir === "asc" ? "desc" : "asc");
     else { setCSortField(field); setCSortDir(field === "mf_rank" ? "asc" : "desc"); }
@@ -301,6 +373,8 @@ export default function WatchlistPage() {
                 <SortHeader label="RSI14" field="rsi14" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
                 <SortHeader label="MACD" field="macd_signal" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
                 <SortHeader label="Rating" field="technical_rating" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
+                <SortHeader label="Signal" field="signal_source" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
+                <th className="text-left px-3 py-2 text-xs font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -316,6 +390,13 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.rsi14?.toFixed(1) ?? "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.macd_signal ?? "—"}</td>
                   <td className="px-3 py-2">{ratingBadge(r.technical_rating)}</td>
+                  <td className="px-3 py-2">
+                    {r.signal_source ? <SourceSignalBadge source={r.signal_source} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
+                  </td>
+                  <td className="px-3 py-2">
+                    <NotesCell ticker={r.ticker} exchange={r.exchange} value={r.notes}
+                      onSaved={(notes) => updateNotes(r.ticker, r.exchange, notes)} />
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -338,6 +419,7 @@ export default function WatchlistPage() {
                 <SortHeader label="P/E" field="pe" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Div %" field="div_yield" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Passes" field="passes_thresholds" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <SortHeader label="Signal" field="signal_source" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
               </tr>
             </thead>
             <tbody>
@@ -353,6 +435,9 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.div_yield?.toFixed(2) ?? "—"}</td>
                   <td className="px-3 py-2">
                     {r.passes_thresholds ? <span className="badge-green">Pass</span> : <span style={{ color: "var(--text-muted)" }}>—</span>}
+                  </td>
+                  <td className="px-3 py-2">
+                    {r.signal_source ? <SourceSignalBadge source={r.signal_source} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
                   </td>
                 </tr>
               ))}
