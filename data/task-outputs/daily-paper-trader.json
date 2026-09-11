@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-11T23:51:03+02:00",
+      "summary": "DECK (A)",
+      "picks": {
+        "p1": {
+          "ticker": "DECK",
+          "strategy": "A — Value",
+          "entry": 81.27,
+          "stop": 69.08,
+          "t1": 101.59,
+          "t2": 121.91
+        }
+      },
+      "content": "Deckers Outdoor picked up at today's close ($81.27) — trading 13.9x earnings, ~36% below its 52-week high and analyst targets ($117-120) despite a Q4 FY2026 beat-and-raise (HOKA +15.9%, UGG +8.2%, FY27 guidance raised), Magic Formula rank #3 on today's value screen. Realty Income was exited discretionarily (−6.84%, −$68) to keep the book at 35 open positions after DECK's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; HPQ popped +8.4% today to +41.84%, now just $2.04 from its T2 target. AVGO is now the weakest continuing position at −6.15% (Burry Sector Warning, semis), still clear of the −10% signal line. Portfolio net P&L: +$1,841 (+3.07% on $60,000)."
+    },
+    {
       "runAt": "2026-09-10T23:52:46+02:00",
       "summary": "TMO (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Thermo Fisher Scientific picked up at today's close ($603.18) — a life-sciences/diagnostics leader up 33.4% over 3 months with a fresh CLSA Outperform initiation ($748 PT, ~24% upside), chosen as a defensive Burry-aligned name with zero AI-capex/semiconductor exposure. RELX was exited discretionarily (−7.72%, −$77) to keep the book at 35 open positions after TMO's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions amid a fourth consecutive oil/yield-driven risk-off session (Dow −0.6%, S&P −0.58%, Nasdaq −0.65%). DHI is now the weakest continuing position at −7.15%, no Burry conflict. Portfolio net P&L: +$1,692 (+2.87% on $59,000)."
-    },
-    {
-      "runAt": "2026-09-09T20:15:00+02:00",
-      "summary": "SAP (A)",
-      "picks": {
-        "p1": {
-          "ticker": "SAP",
-          "strategy": "A — Value",
-          "entry": 209.14,
-          "stop": 177.77,
-          "t1": 261.43,
-          "t2": 313.71
-        }
-      },
-      "content": "SAP SE picked up at the previous close ($209.14) — a ~31% discount to Morningstar's $302 wide-moat fair value, with cloud backlog +27% YoY and full-year cloud guidance reaffirmed despite a trimmed operating-profit guide and a Buy→Neutral downgrade (PT raised to €201). BR was exited discretionarily (−8.18%, −$82) to keep the book at 35 open positions after SAP's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions amid a second consecutive oil-driven risk-off session (Brent >$100/bbl on Iran-conflict escalation). RELX is now the weakest continuing position at −6.55%, no Burry conflict. Portfolio net P&L: +$1,835 (+3.16% on $58,000)."
     }
   ]
 }
