@@ -8,16 +8,18 @@ interface Portfolios {
   p1: PortfolioPayload;
   equity: PortfolioPayload;
   trading: PortfolioPayload;
+  burry: PortfolioPayload;
   equityCurve: EquityCurvePoint[];
   briefing: string;
 }
 
-type Tab = "p1" | "equity" | "trading" | "briefing";
+type Tab = "p1" | "equity" | "trading" | "burry" | "briefing";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "p1", label: "Paper Trading" },
   { id: "equity", label: "Equity Portfolio" },
   { id: "trading", label: "Trading Portfolio" },
+  { id: "burry", label: "Michael Burry (Shadow)" },
   { id: "briefing", label: "Morning Briefing" },
 ];
 
@@ -47,6 +49,7 @@ interface TradeRow {
   option_type: string | null;
   strike: number | null;
   close: number | null;
+  realized_pnl_partial: number | null;
 }
 
 interface PortfolioStats {
@@ -138,7 +141,7 @@ function OpenPositionsTable({ rows }: { rows: TradeRow[] }) {
       <table className="w-full text-xs border-collapse">
         <thead>
           <tr style={{ borderBottom: "1px solid var(--border)" }}>
-            {["Ticker", "Exchange", "Entry Date", "Entry", "Curr Price", "P&L%", "Value", "Days", "T1", "T2"].map((h) => (
+            {["Ticker", "Exchange", "Entry Date", "Entry", "Curr Price", "P&L%", "Value", "Days", "T1", "T2", "Realised $"].map((h) => (
               <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
             ))}
           </tr>
@@ -164,6 +167,9 @@ function OpenPositionsTable({ rows }: { rows: TradeRow[] }) {
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{days ?? "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target1 ?? "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target2 ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
+                  {r.realized_pnl_partial != null ? fmtMoney(r.realized_pnl_partial * fxScale(r.currency)).replace("+", "") : "—"}
+                </td>
               </tr>
             );
           })}
@@ -867,6 +873,10 @@ export default function PortfoliosPage() {
           ) : tab === "equity" ? (
             <div className="card">
               <EquityPortfolioView portfolio={data.equity} />
+            </div>
+          ) : tab === "burry" ? (
+            <div className="card">
+              <TradingPortfolioView portfolio={data.burry} />
             </div>
           ) : (
             <div className="card">

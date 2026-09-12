@@ -31,6 +31,7 @@ interface TradeRow {
   option_type: string | null;
   strike: number | null;
   close: number | null;
+  realized_pnl_partial: number | null;
 }
 
 interface PortfolioPayload {
@@ -60,7 +61,8 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
     sql: `${LATEST_PRICE_CTE}
       SELECT t.trade_id, t.ticker, t.exchange, t.strategy_id, t.direction, t.instrument_type,
              t.entry_date, t.entry_price, t.shares, t.currency, t.stop_loss, t.target1, t.target2,
-             t.exit_date, t.exit_price, t.status, t.option_type, t.strike, p.close AS close
+             t.exit_date, t.exit_price, t.status, t.option_type, t.strike, p.close AS close,
+             t.realized_pnl_partial
       FROM trades t
       LEFT JOIN ranked p ON p.ticker = t.ticker AND p.exchange = t.exchange AND p.rn = 1
       WHERE t.portfolio_id = ?
@@ -88,6 +90,7 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
     option_type: r.option_type as string | null,
     strike: r.strike as number | null,
     close: r.close as number | null,
+    realized_pnl_partial: r.realized_pnl_partial as number | null,
   }));
 
   const open = rows.filter((r) => r.status === "open");
@@ -124,6 +127,22 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
       hasUnrealized = true;
     }
   }
+  // Realized-but-not-otherwise-counted: a T1/T2 partial exit banks real $
+  // that only ever lives in this column — `shares` gets reduced to the
+  // remainder so it's never part of unrealizedPnl (open) or realizedPnl
+  // (closed, since that's computed off the same reduced shares vs entry).
+  // Runs over BOTH open and closed rows: a position with a prior partial
+  // exit that later fully closes still needs this counted, or the same
+  // bug (found 2026-09-12: $5,872 across 7 P1 positions was invisible,
+  // enough to flip the portfolio's displayed Net P&L from negative to
+  // positive) just recurs the moment it closes.
+  let realizedPartialPnl = 0, hasRealizedPartial = false;
+  for (const r of rows) {
+    if (r.realized_pnl_partial != null) {
+      realizedPartialPnl += r.realized_pnl_partial * fxScale(r.currency);
+      hasRealizedPartial = true;
+    }
+  }
   const wins = closed.filter((r) => {
     if (r.entry_price == null || r.exit_price == null) return false;
     return r.direction === "short" ? r.exit_price < r.entry_price : r.exit_price > r.entry_price;
@@ -138,7 +157,8 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
       open_positions: open.length,
       closed_positions: closed.length,
       open_value: hasOpenValue ? openValue : null,
-      net_pnl: hasRealized || hasUnrealized ? realizedPnl + unrealizedPnl : null,
+      net_pnl: hasRealized || hasUnrealized || hasRealizedPartial
+        ? realizedPnl + unrealizedPnl + realizedPartialPnl : null,
       win_rate: closed.length ? (wins / closed.length) * 100 : null,
     },
   };
@@ -165,10 +185,11 @@ async function fetchEquityCurve(client: Client, portfolioId: string) {
 export async function GET() {
   try {
     const client = getTursoClient();
-    const [p1, equity, trading, equityCurve] = await Promise.all([
+    const [p1, equity, trading, burry, equityCurve] = await Promise.all([
       fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)"),
       fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio"),
       fetchPortfolio(client, "trading-portfolio", "Trading Portfolio"),
+      fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)"),
       fetchEquityCurve(client, "paper-trading-p1"),
     ]);
 
@@ -179,7 +200,7 @@ export async function GET() {
       briefing = "Error reading morning-briefing.md";
     }
 
-    return NextResponse.json({ p1, equity, trading, equityCurve, briefing });
+    return NextResponse.json({ p1, equity, trading, burry, equityCurve, briefing });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
