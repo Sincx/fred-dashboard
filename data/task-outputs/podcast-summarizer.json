@@ -5,12 +5,19 @@
   "icon": "🎙",
   "runs": [
     {
-      "runAt": "2026-09-05T10:02:41+02:00",
-      "summary": "No new podcasts to summarise",
-      "content": "Nothing to summarise this run."
+      "runAt": "2026-09-12T08:04:43.000Z",
+      "summary": "6 podcast pages created",
+      "content": [
+        "CyberHack: The Conti Files (BBC) — Episodes 1-3",
+        "Odd Lots — What's Behind the Big Surge in US Government Bond Yields",
+        "Dividend Talk — EP 305: Should Cyclical Stocks Be in Your Dividend Portfolio",
+        "Diary of a CEO — Ed Zitron episode",
+        "Prof G Markets — Bonds are warning of a global inflation crisis",
+        "Behind the Balance Sheet — Mr Common Sense: Rich Pzena"
+      ]
     },
     {
-      "runAt": "2026-08-29T10:03:03+02:00",
+      "runAt": "2026-09-05T10:02:41+02:00",
       "summary": "No new podcasts to summarise",
       "content": "Nothing to summarise this run."
     }
