@@ -5,14 +5,14 @@
     "icon": "📎",
     "runs": [
         {
+            "runAt": "2026-09-12T23:23:51.7955654+02:00",
+            "summary": "1 clipping processed",
+            "content": "1 file found in Clippings: Oracle Q1 FY2027 earnings press release (2026-09-11, investor.oracle.com). Not Morningstar/Burry, so step 7 stock-recommendation parsing was skipped. Moved to raw/finance/oracle-q1-fy2027-earnings.md with tags updated (oracle, orcl, earnings, cloud-infrastructure, ai-capex, ingested). Created wiki summary page wiki/finance/source-oracle-q1-fy2027-earnings.md covering the headline numbers: total revenue +30% to $19.3B, cloud infrastructure (IaaS) +121% to $7.4B, RPO hits a record $664B on $30B+ of new AI cloud bookings, free cash flow turned negative $5B on capex acceleration, $20B ATM equity raise completed. Added reverse links on finance/models/model-oracle-cashflow-debt-rpo-2026-08-07 (this print directly updates that model's RPO and FCF inputs), finance/technical-analysis-orcl-2026-08-06 (existing ORCL short position context), and ai-tech/data-hyperscaler-ai-revenue-2026-06-27. Updated main index.md with 1 new row in the Finance Sources table."
+        },
+        {
             "runAt": "2026-09-11T23:27:33.7503638+02:00",
             "summary": "5 clippings processed",
             "content": "5 files found in Clippings, all Morningstar pieces: '11 New 4-Star Stocks This Week' (Sep-08), '2 Tech Stocks to Avoid in Case Stocks Sell Off' (Sep-06), '4 Undervalued Stocks That Just Raised Dividends' (Sep-08), 'A Better Way to Predict Long-Term Stock Returns' [Component CAPE research] (Sep-09), 'The 7 Best Dividend Aristocrats to Buy Now' (Sep-10). All 5 moved to raw/finance/, tags updated, 5 wiki summary pages created in wiki/finance/morningstar/. Parsed stock recommendations from 4 of 5 (the CAPE piece has none): 10 new tickers added to the watchlist (ASML, SNPS, CRH, MGA, RMD, WMG, AMCR, BF.B, HRL, KMB), Broadridge's fair value updated in place ($255→$250), Autodesk/Intuit/PepsiCo/Clorox/Medtronic left unchanged (already tracked, no material FV change). The 'Stocks to Avoid' piece (Sandisk, Ciena) was flagged overvalued/sell, not undervalued, so it doesn't fit the watchlist's schema — 0 rows added, noted explicitly. Updated morningstar-watchlist.md (10 new rows, 1 updated in place, 15 status notes, sources 27→32) and the market-watchlist-tracker pipeline config.py (10 new Morningstar-US tickers, 4 index-display overrides, Burry group start_row shifted 167→177 to stay contiguous). Added reverse links across 14 cross-referenced pages. Updated main index.md with 5 new rows plus a refreshed (stale) watchlist stock-count summary."
-        },
-        {
-            "runAt": "2026-09-08T23:19:46.7303376+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
         }
     ]
 }
