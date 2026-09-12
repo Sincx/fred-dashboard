@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-12T21:53:00+02:00",
+      "summary": "17 log.md entries reviewed (09-11/09-12), new wiki-company-scanner scheduled task discovered and documented, 6 new podcast pages folded in, 2 new Open Threads added",
+      "content": [
+        "Reviewed log.md since the 2026-09-11 memory-update — 17 new entries across 09-11/09-12, again split between the top and the very end of the file (the wiki-company-scanner and portfolio-refresh entries landed appended at line 1375-1377)",
+        "Biggest item: a brand-new scheduled task, `wiki-company-scanner`, ran for the first time today — part of a Turso-backed 'Fred Finance System Phase 2' automated ticker-discovery pipeline not previously documented in this memory file. It scans wiki pages for investable-company mentions, resolves name→ticker against SEC's list, auto-adds confident matches to a Turso `universe` table, and writes ambiguous/private/non-US candidates to a new page, wiki/finance/pending-watchlist-additions.md, for manual review. First run: 71 pages scanned, 3 tickers auto-added (ASTS, QNT, OWL), 15 sent to pending review (mostly private AI-infra names plus Taiwan-listed GlobalWafers)",
+        "Added wiki-company-scanner as a new row in the Scheduled Maintenance table, and a new Open Thread flagging that its pending-review page isn't yet linked from wiki/index.md and has 15 items awaiting Fred's confirm-or-dismiss",
+        "Folded in 6 new podcast pages created today (podcast-summarizer catch-up): CyberHack Conti Files, Odd Lots bond yields, Dividend Talk EP305, Diary of a CEO Ed Zitron, Prof G Markets bonds, Behind the Balance Sheet Rich Pzena — all already wired into wiki/index.md, so no index.md gap this time",
+        "Domain Content Status — Meta: added today's wiki-thinker highlight (Saturday full sweep — bond-yield podcasts vs. Finance's Dalio/Bessent pieces, and Pzena's dot-com drawdown-recovery vs. Burry's '2000 playbook' framing, both uncross-linked); bumped run count to 54; trimmed the 2026-09-02 highlight back into the 'older entries' rollup to keep the row bounded",
+        "Minor items folded in: Oracle Q1 FY2027 earnings clipping/ingest, and a routine crypto portfolio-refresh (5 prices, LUCKY -4.54%)",
+        "No Open Threads resolved this run; no naming/convention changes found",
+        "Bumped 'Last updated' date to 2026-09-12",
+        "Appended one memory-update log line to log.md for 2026-09-12"
+      ]
+    },
+    {
       "runAt": "2026-09-11T23:54:00+02:00",
       "summary": "log.md reviewed for 09-10/09-11 (note: entries landed out of file-order again), 2 paper-trades and 1 morningstar clippings batch folded in, 0 threads resolved, position-count reconciliation gap noted as stabilizing",
       "content": [
@@ -17,21 +32,6 @@
         "No new Open Threads added, none resolved; no naming/convention changes found",
         "Bumped 'Last updated' date to 2026-09-11",
         "Appended one memory-update log line to log.md for 2026-09-11"
-      ]
-    },
-    {
-      "runAt": "2026-09-10T23:45:00+02:00",
-      "summary": "8 log.md entries reviewed, 2 new wiki pages, a ~29-page index.md audit, 3 Open Threads resolved, 2 new ones added",
-      "content": [
-        "Reviewed log.md since the 2026-09-09 memory-update: 8 new entries dated 09-10 — portfolio-management-briefing (15 positions, GSK/PRX/SFM Exit day 3 and LULU Exit ~day 7 all patience-overridden, no trades, AR/BRK.B/QCOM screened but unexecuted), email-to-clipping (0 saved), wiki-thinker (Thursday deep-dive Books+Podcasts — new Price of Football recommendation vs. Sports Betting's markets.md FFP-breach gap), podcast-recommender (4 recs: Big Technology Podcast, The Chopping Block, The Price of Football, The Double Pivot), a researcher Mode D run (new page model-hyperscaler-debt-capex-rate-exposure-2026-09-10.md — Oracle/CoreWeave most rate-exposed, Amazon flagged as the hyperscaler to watch), an ingest run (new podcast page for a Chris Koerner episode, resolving yesterday's Open Thread), and two 'fix' passes on index.md itself",
-        "The two fix passes were the big item: an index.md audit found and added ~29 wiki pages that existed on disk but had never been catalogued — the entire Michael Burry section, finance/trading-portfolio (the live real-money portfolio), all 5 finance/models/ pages, 6 AI & Tech pages, 3 Finance Morningstar pages, cooking/chef-david-chang, and 2 podcast pages — plus a separate fix adding the long-flagged missing Dwarkesh compute-prices podcast row",
-        "Domain Content Status — Meta: logged the index.md audit (with its unfixed pre-hyphenation link-integrity note) and today's Sports Betting/FFP thinker highlight; bumped run count to 52",
-        "Domain Content Status — Finance: appended the 09-10 briefing summary and the new hyperscaler debt-exposure research page",
-        "Domain Content Status — Podcasts: appended the 09-10 recommender batch and the two newly-created/newly-catalogued podcast pages",
-        "Open Threads resolved (3): the 12-missing-wiki-pages Finance/AI-Tech thread (superseded by the ~29-page audit), the 2026-08-27 'Dwarkesh podcast page missing from index.md' thread, and the 2026-09-09 Chris Koerner/Kevin Kelly thread (podcast page now created and cross-linked)",
-        "Open Threads added (2): Sports Betting/Finance FFP-breach signal gap (Price of Football recommendation vs. markets.md), and index.md's own pre-hyphenation link-integrity issue flagged but not fixed during today's audit",
-        "Bumped 'Last updated' date to 2026-09-10",
-        "Appended one memory-update log line to log.md for 2026-09-10"
       ]
     }
   ]
