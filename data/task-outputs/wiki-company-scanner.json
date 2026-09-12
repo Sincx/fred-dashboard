@@ -1,0 +1,13 @@
+{
+  "taskId": "wiki-company-scanner",
+  "label": "Wiki Company Scanner",
+  "schedule": "Weekly Wednesday 9:05 AM",
+  "icon": "🔎",
+  "runs": [
+    {
+      "runAt": "2026-09-12T14:30:00+02:00",
+      "summary": "3 auto-added, 15 pending review",
+      "content": "First run (manual, 7-day fallback window since no prior marker existed). Scanned 71 wiki pages across all domains. Auto-added AST SpaceMobile (ASTS), Quantinuum (QNT), and Blue Owl Capital (OWL) via exact SEC name matches. 6 candidates (Equinix, Digital Realty, Apollo Global Management, KKR, SanDisk, Ciena) were already tracked. 15 went to pending review in wiki/finance/pending-watchlist-additions.md — mostly private AI-infrastructure/neo-cloud companies (OpenAI, Anthropic, xAI, Mistral AI, DeepSeek, Cohere, Crusoe, Lambda Labs, Together AI, RunPod, Baseten, ElevenLabs, Ineffable, Payward/Kraken) plus GlobalWafers, a real Taiwan-listed ticker the resolver correctly couldn't reach since SEC's list is US-only."
+    }
+  ]
+}
