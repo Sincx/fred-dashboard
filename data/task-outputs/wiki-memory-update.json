@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-13T21:53:00+02:00",
+      "summary": "log.md reviewed for 09-12/09-13, mf-update top-3 change and a brand-new 'Strategy Feedback' review type folded in, 2 new Open Threads added from today's thinker connections",
+      "content": [
+        "Reviewed log.md since the 2026-09-12 memory-update — entries again split between the top and the very end of the file (today's thinker/mf-update sat at the top; the 09-12 clippings-sorter/wiki-company-scanner/memory-update/Strategy Feedback entries sat near the end)",
+        "mf-update (09-13): Magic Formula re-ranked across 28 stocks — GSK newly displaced ADBE from the #3 spot (top 3 now MGNS/DNLM/GSK, unchanged #1/#2 since 08-30) — folded into the Finance domain row",
+        "New item: a 'Finance/Strategy Feedback' review appeared in log.md for the first time (09-13) — 6 paper-trading strategies judged, Strategies C and D below portfolio average; highlight was that Burry-flagged names (MU, QCOM, ASML, CAT) drove the worst B/C/D losses, exactly what a 2026-09-10 Burry-aware entry-avoidance rule was meant to prevent. Documented in the Finance row as a first appearance — not yet added to Scheduled Maintenance since it's unclear if it's a recurring task or a one-off manual pass",
+        "Oracle Q1 FY2027 earnings clipping (09-12, clippings-sorter) folded into the Finance row — already wired into wiki/index.md by the sorter itself, no gap to fix",
+        "Domain Content Status — Meta: added today's wiki-thinker highlight (Sunday deep-dive on Games, longest-stale domain, no new ideas there; 2 new connections instead — Ed Zitron's AI-bubble podcast vs. Finance's own Burry-sourced hyperscaler debt model, and Dividend Talk's cyclical-stocks episode vs. Finance's undervalued-dividend screen missing an AGCO/Lithia Motors safety test)",
+        "Added 2 new Open Threads for those uncross-linked connections (Ed Zitron/hyperscaler-debt-model; Dividend Talk/dividend-undervalued screen)",
+        "No Open Threads resolved this run (pending-watchlist-additions.md link-from-index.md gap checked — still open); no naming/convention changes found",
+        "Bumped 'Last updated' date to 2026-09-13",
+        "Appended one memory-update log line to log.md for 2026-09-13"
+      ]
+    },
+    {
       "runAt": "2026-09-12T21:53:00+02:00",
       "summary": "17 log.md entries reviewed (09-11/09-12), new wiki-company-scanner scheduled task discovered and documented, 6 new podcast pages folded in, 2 new Open Threads added",
       "content": [
@@ -17,21 +32,6 @@
         "No Open Threads resolved this run; no naming/convention changes found",
         "Bumped 'Last updated' date to 2026-09-12",
         "Appended one memory-update log line to log.md for 2026-09-12"
-      ]
-    },
-    {
-      "runAt": "2026-09-11T23:54:00+02:00",
-      "summary": "log.md reviewed for 09-10/09-11 (note: entries landed out of file-order again), 2 paper-trades and 1 morningstar clippings batch folded in, 0 threads resolved, position-count reconciliation gap noted as stabilizing",
-      "content": [
-        "Reviewed log.md since the 2026-09-10 memory-update. Confirmed the known ordering quirk again — the 09-10 TMO trade and 09-11 review sat at the TOP of the file while the 09-11 DECK trade landed appended at the very END, 1300+ lines later — so this run grepped the whole file rather than trusting a top-of-file read",
-        "New entries folded in: paper-trading P1 09-10 (TMO entered, Strategy B Momentum — Thermo Fisher, +33.4% 3mo momentum, fresh CLSA $748 PT; RELX discretionary exit) and 09-11 (DECK entered, Strategy A Value — Deckers Outdoor, Magic Formula rank #3; O discretionary exit) — book held at 35 positions both days",
-        "portfolio-management-briefing 09-10 and 09-11 (both 15 positions): GSK/PRX/SFM/LULU Exit signals held under patience override both days, no trades; noted position count has now held steady at 15 across 4 consecutive briefings (09-08 through 09-11) — softens but doesn't resolve the 22→15 reconciliation-gap Open Thread",
-        "Clippings-sorter 09-11 (5 Morningstar files): morningstar-watchlist.md gained 10 new rows (ASML, SNPS, CRH, MGA, RMD, WMG, AMCR, BF.B, HRL, KMB) — folded into the Finance domain row",
-        "Domain Content Status — Cooking: added the 09-11 recipe-recommender run (Nasi Goreng, Fuku-Style Nashville Hot Chicken, Wild Mushrooms on Toast) — same 3 chefs as last batch, nothing new",
-        "Domain Content Status — Meta: added today's wiki-thinker highlight (quiet Friday, 0 new ideas/connections); trimmed the oldest individually-listed highlight (09-01 book-breath/Nestor) back into the 'older entries' rollup to keep the row bounded",
-        "No new Open Threads added, none resolved; no naming/convention changes found",
-        "Bumped 'Last updated' date to 2026-09-11",
-        "Appended one memory-update log line to log.md for 2026-09-11"
       ]
     }
   ]
