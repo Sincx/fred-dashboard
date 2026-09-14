@@ -5,6 +5,21 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-14T23:54:19+02:00",
+      "summary": "6 log.md entries reviewed for 09-14 (2 trackers, a 7-file clippings-sorter batch, the trading briefing, and a paper-trade), 2 Open Threads resolved/updated, 1 new one added",
+      "content": [
+        "Reviewed log.md since the 2026-09-13 memory-update — 6 new dated entries, again split between the top of the file (sector-performance-tracker, wiki-thinker) and the end (growth-value-tracker, clippings-sorter, portfolio-management-briefing, paper trade)",
+        "sector-performance-tracker (09-14) and growth-value-tracker (09-14) folded into the Finance domain row — SPY P/E 25.77x with a broad Q3 momentum deceleration; IWD overtook IWN for the top 2026 YTD spot for the first time after a small-cap-heavy pullback",
+        "Clippings-sorter (09-14, 7 files) folded in: 2 new Burry Trading Posts (Sep 9 — sold NVDA/PLTR puts, named FNMA alongside FMCC as the 'Toxic Twins'; Sep 11 — closed FLUT, added to LULU/ZTS, floats a LULU take-private read), a 4-part Citrini 'Global Macro Trading for Idiots' series, and a skeptical Kakashii annotation of the existing Dwarkesh/Jensen Huang source page — spot-checked all 7 against root index.md, confirmed already wired in by the sorter itself",
+        "portfolio-management-briefing (09-14, 15 positions) and a Paper Trading P1 trade (HUM entered, AVGO exited) folded into the Finance row",
+        "Open Thread resolved (partially): concept-global-macro.md is no longer a near-empty stub (Citrini series + Key Figures added) — but its own header still calls for further James Aitken-sourced content, so the thread was updated rather than closed outright",
+        "Caught my own mistake mid-edit: today's AVGO exit is in Paper Trading P1, not the live trading portfolio — corrected the Finance-row wording so it doesn't falsely claim the separate, still-open live-portfolio AVGO bear-case thread is resolved",
+        "Added 1 new Open Thread from today's wiki-thinker run: the actively-used carry-trade-debt-monitor tool (underlies two Finance models) is missing from AI & Tech's own project catalog",
+        "Domain Content Status — Meta: bumped run count to 56, added today's wiki-thinker highlight",
+        "Bumped 'Last updated' date to 2026-09-14; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-13T21:53:00+02:00",
       "summary": "log.md reviewed for 09-12/09-13, mf-update top-3 change and a brand-new 'Strategy Feedback' review type folded in, 2 new Open Threads added from today's thinker connections",
       "content": [
@@ -17,21 +32,6 @@
         "No Open Threads resolved this run (pending-watchlist-additions.md link-from-index.md gap checked — still open); no naming/convention changes found",
         "Bumped 'Last updated' date to 2026-09-13",
         "Appended one memory-update log line to log.md for 2026-09-13"
-      ]
-    },
-    {
-      "runAt": "2026-09-12T21:53:00+02:00",
-      "summary": "17 log.md entries reviewed (09-11/09-12), new wiki-company-scanner scheduled task discovered and documented, 6 new podcast pages folded in, 2 new Open Threads added",
-      "content": [
-        "Reviewed log.md since the 2026-09-11 memory-update — 17 new entries across 09-11/09-12, again split between the top and the very end of the file (the wiki-company-scanner and portfolio-refresh entries landed appended at line 1375-1377)",
-        "Biggest item: a brand-new scheduled task, `wiki-company-scanner`, ran for the first time today — part of a Turso-backed 'Fred Finance System Phase 2' automated ticker-discovery pipeline not previously documented in this memory file. It scans wiki pages for investable-company mentions, resolves name→ticker against SEC's list, auto-adds confident matches to a Turso `universe` table, and writes ambiguous/private/non-US candidates to a new page, wiki/finance/pending-watchlist-additions.md, for manual review. First run: 71 pages scanned, 3 tickers auto-added (ASTS, QNT, OWL), 15 sent to pending review (mostly private AI-infra names plus Taiwan-listed GlobalWafers)",
-        "Added wiki-company-scanner as a new row in the Scheduled Maintenance table, and a new Open Thread flagging that its pending-review page isn't yet linked from wiki/index.md and has 15 items awaiting Fred's confirm-or-dismiss",
-        "Folded in 6 new podcast pages created today (podcast-summarizer catch-up): CyberHack Conti Files, Odd Lots bond yields, Dividend Talk EP305, Diary of a CEO Ed Zitron, Prof G Markets bonds, Behind the Balance Sheet Rich Pzena — all already wired into wiki/index.md, so no index.md gap this time",
-        "Domain Content Status — Meta: added today's wiki-thinker highlight (Saturday full sweep — bond-yield podcasts vs. Finance's Dalio/Bessent pieces, and Pzena's dot-com drawdown-recovery vs. Burry's '2000 playbook' framing, both uncross-linked); bumped run count to 54; trimmed the 2026-09-02 highlight back into the 'older entries' rollup to keep the row bounded",
-        "Minor items folded in: Oracle Q1 FY2027 earnings clipping/ingest, and a routine crypto portfolio-refresh (5 prices, LUCKY -4.54%)",
-        "No Open Threads resolved this run; no naming/convention changes found",
-        "Bumped 'Last updated' date to 2026-09-12",
-        "Appended one memory-update log line to log.md for 2026-09-12"
       ]
     }
   ]
