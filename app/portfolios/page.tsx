@@ -132,16 +132,24 @@ function P1Stats({ stats }: { stats: PortfolioStats }) {
 }
 
 // Known simplification (flagged in the Phase 2 plan, not silently dropped):
-// no company display name exists in Turso (universe/trades have ticker only),
-// and no per-tranche T1/T2 "Realised $" — one entry + one exit per trade row.
-function OpenPositionsTable({ rows }: { rows: TradeRow[] }) {
+// no company display name exists in Turso (universe/trades have ticker only).
+// `showTranches`: T1/T2/Realised $ are a Paper Trading (P1)-specific concept
+// (its mechanical tiered take-profit system) — Trading Portfolio uses a
+// different "Free Ride" approach with no T1/T2 targets at all, and its trims
+// are already separate closed trade rows (no hidden realized-but-open $ the
+// way P1 had). Showing three permanently-empty columns there read as broken,
+// not just inapplicable — found 2026-09-14 (Mike's report). Default true so
+// PaperTradingView (the only caller that hasn't been updated) keeps them.
+function OpenPositionsTable({ rows, showTranches = true }: { rows: TradeRow[]; showTranches?: boolean }) {
   if (!rows.length) return <p className="text-xs" style={{ color: "var(--text-muted)" }}>No open positions.</p>;
+  const headers = ["Ticker", "Exchange", "Shares", "Entry Date", "Entry", "Curr Price", "P&L%", "P&L $", "Value", "Days"];
+  if (showTranches) headers.push("T1", "T2", "Realised $");
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-xs border-collapse">
         <thead>
           <tr style={{ borderBottom: "1px solid var(--border)" }}>
-            {["Ticker", "Exchange", "Entry Date", "Entry", "Curr Price", "P&L%", "Value", "Days", "T1", "T2", "Realised $"].map((h) => (
+            {headers.map((h) => (
               <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
             ))}
           </tr>
@@ -149,6 +157,15 @@ function OpenPositionsTable({ rows }: { rows: TradeRow[] }) {
         <tbody>
           {rows.map((r) => {
             const pct = pnlPct(r.entry_price, r.close, r.direction);
+            // Unrealized P&L in $ — direction-aware (a short gains when price
+            // falls), the actual number the old "Value" column was mistaken
+            // for. Found 2026-09-14: ORCL short, 3 shares, entry $149.89 vs
+            // close $150.28 was showing "Value" = -$450.84 (shares × close,
+            // the position's full notional) when the real unrealized loss is
+            // just -$1.17 (shares × the $0.39 adverse move) — those are two
+            // different numbers and only one of them is P&L.
+            const pnlDollar = r.shares != null && r.entry_price != null && r.close != null
+              ? (r.direction === "short" ? -1 : 1) * r.shares * (r.close - r.entry_price) * fxScale(r.currency) : null;
             // Options: shares is a 100-per-contract notional placeholder, not
             // real quantity — shares × underlying price isn't the position's
             // value, so it's left "—" rather than shown wrong.
@@ -159,17 +176,23 @@ function OpenPositionsTable({ rows }: { rows: TradeRow[] }) {
               <tr key={r.trade_id} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
                 <td className="py-2 px-3 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.exchange}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.shares != null ? r.shares.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.entry_date ?? "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.entry_price != null ? r.entry_price.toFixed(2) : "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.close != null ? r.close.toFixed(2) : "—"}</td>
                 <td className="py-2 px-3">{pct != null ? <PnlBadge val={fmtPct(pct)} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}</td>
+                <td className="py-2 px-3">{pnlDollar != null ? <PnlBadge val={fmtMoney(pnlDollar)} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{value != null ? fmtMoney(value).replace("+", "") : "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{days ?? "—"}</td>
-                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target1 ?? "—"}</td>
-                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target2 ?? "—"}</td>
-                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
-                  {r.realized_pnl_partial != null ? fmtMoney(r.realized_pnl_partial * fxScale(r.currency)).replace("+", "") : "—"}
-                </td>
+                {showTranches && (
+                  <>
+                    <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target1 ?? "—"}</td>
+                    <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.target2 ?? "—"}</td>
+                    <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>
+                      {r.realized_pnl_partial != null ? fmtMoney(r.realized_pnl_partial * fxScale(r.currency)).replace("+", "") : "—"}
+                    </td>
+                  </>
+                )}
               </tr>
             );
           })}
@@ -309,7 +332,7 @@ function EquityPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
   return (
     <div className="space-y-5">
       <P1Stats stats={portfolio.stats} />
-      <OpenPositionsTable rows={portfolio.open} />
+      <OpenPositionsTable rows={portfolio.open} showTranches={false} />
     </div>
   );
 }
@@ -329,7 +352,7 @@ function TradingPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
         <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-green)", opacity: 0.85 }}>
           Long Equity · {longs.length} positions
         </p>
-        <OpenPositionsTable rows={longs} />
+        <OpenPositionsTable rows={longs} showTranches={false} />
       </div>
 
       {shorts.length > 0 && (
@@ -338,7 +361,7 @@ function TradingPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
             Short Equity · {shorts.length} position{shorts.length !== 1 ? "s" : ""}
           </p>
           <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(239,68,68,0.3)", backgroundColor: "rgba(239,68,68,0.03)" }}>
-            <OpenPositionsTable rows={shorts} />
+            <OpenPositionsTable rows={shorts} showTranches={false} />
           </div>
         </div>
       )}
@@ -349,7 +372,7 @@ function TradingPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
             Options · {options.length} position{options.length !== 1 ? "s" : ""}
           </p>
           <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(139,92,246,0.3)", backgroundColor: "rgba(139,92,246,0.03)" }}>
-            <OpenPositionsTable rows={options} />
+            <OpenPositionsTable rows={options} showTranches={false} />
           </div>
         </div>
       )}
