@@ -30,8 +30,20 @@ interface TradeRow {
   status: string;
   option_type: string | null;
   strike: number | null;
+  expiry_date: string | null;
+  premium: number | null;
+  contracts: number | null;
+  premium_flow: string | null;
   close: number | null;
   realized_pnl_partial: number | null;
+  // Daily Black-Scholes mark from option_marks (options_pricing.py, added
+  // 2026-09-14) — null for equity rows, and null for an option row that
+  // hasn't been priced yet (e.g. a brand-new position before the next
+  // refresh-technicals run), not fabricated as zero.
+  option_mkt_value: number | null;
+  option_unrealized_pnl: number | null;
+  option_premium_estimate: number | null;
+  option_mark_date: string | null;
 }
 
 interface PortfolioPayload {
@@ -58,13 +70,22 @@ const LATEST_PRICE_CTE = `
 
 async function fetchPortfolio(client: Client, portfolioId: string, name: string): Promise<PortfolioPayload> {
   const rs = await client.execute({
-    sql: `${LATEST_PRICE_CTE}
+    sql: `${LATEST_PRICE_CTE},
+      latest_mark AS (
+        SELECT trade_id, mkt_value, unrealized_pnl, premium_estimate, date,
+               ROW_NUMBER() OVER (PARTITION BY trade_id ORDER BY date DESC) AS rn
+        FROM option_marks
+      )
       SELECT t.trade_id, t.ticker, t.exchange, t.strategy_id, t.direction, t.instrument_type,
              t.entry_date, t.entry_price, t.shares, t.currency, t.stop_loss, t.target1, t.target2,
-             t.exit_date, t.exit_price, t.status, t.option_type, t.strike, p.close AS close,
-             t.realized_pnl_partial
+             t.exit_date, t.exit_price, t.status, t.option_type, t.strike, t.expiry_date,
+             t.premium, t.contracts, t.premium_flow, p.close AS close,
+             t.realized_pnl_partial,
+             m.mkt_value AS option_mkt_value, m.unrealized_pnl AS option_unrealized_pnl,
+             m.premium_estimate AS option_premium_estimate, m.date AS option_mark_date
       FROM trades t
       LEFT JOIN ranked p ON p.ticker = t.ticker AND p.exchange = t.exchange AND p.rn = 1
+      LEFT JOIN latest_mark m ON m.trade_id = t.trade_id AND m.rn = 1
       WHERE t.portfolio_id = ?
       ORDER BY t.entry_date DESC`,
     args: [portfolioId],
@@ -89,8 +110,16 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
     status: r.status as string,
     option_type: r.option_type as string | null,
     strike: r.strike as number | null,
+    expiry_date: r.expiry_date as string | null,
+    premium: r.premium as number | null,
+    contracts: r.contracts as number | null,
+    premium_flow: r.premium_flow as string | null,
     close: r.close as number | null,
     realized_pnl_partial: r.realized_pnl_partial as number | null,
+    option_mkt_value: r.option_mkt_value as number | null,
+    option_unrealized_pnl: r.option_unrealized_pnl as number | null,
+    option_premium_estimate: r.option_premium_estimate as number | null,
+    option_mark_date: r.option_mark_date as string | null,
   }));
 
   const open = rows.filter((r) => r.status === "open");
@@ -102,14 +131,19 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
   // limitation (multi-currency portfolios still sum as if currencies were equal).
   const fxScale = (currency: string | null) => (currency === "GBX" ? 0.01 : 1.0);
 
-  // Options excluded: shares (100/contract) × the underlying's price is its
-  // full notional, not what the option position is worth — and entry_price
-  // is NULL for options here anyway (Phase 7c: not recorded in the source).
-  // Showing "—" is honest; a computed number here would be actively wrong.
+  // Options: shares (100/contract) × the underlying's price is its full
+  // notional, not what the option position is worth, so equity-style Value/
+  // P&L math is skipped for them — but option_mkt_value/option_unrealized_pnl
+  // (Black-Scholes marks from options_pricing.py, added 2026-09-14) ARE real
+  // computed numbers now, so they're counted here instead of being silently
+  // omitted from the portfolio-level totals.
   let openValue = 0, hasOpenValue = false;
   for (const r of open) {
     if (r.instrument_type === "equity" && r.shares != null && r.close != null) {
       openValue += (r.direction === "short" ? -1 : 1) * r.shares * r.close * fxScale(r.currency);
+      hasOpenValue = true;
+    } else if (r.instrument_type === "option" && r.option_mkt_value != null) {
+      openValue += r.option_mkt_value * fxScale(r.currency);
       hasOpenValue = true;
     }
   }
@@ -122,8 +156,11 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
   }
   let unrealizedPnl = 0, hasUnrealized = false;
   for (const r of open) {
-    if (r.shares != null && r.entry_price != null && r.close != null) {
+    if (r.instrument_type === "equity" && r.shares != null && r.entry_price != null && r.close != null) {
       unrealizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (r.close - r.entry_price) * fxScale(r.currency);
+      hasUnrealized = true;
+    } else if (r.instrument_type === "option" && r.option_unrealized_pnl != null) {
+      unrealizedPnl += r.option_unrealized_pnl * fxScale(r.currency);
       hasUnrealized = true;
     }
   }

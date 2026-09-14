@@ -48,8 +48,16 @@ interface TradeRow {
   status: string;
   option_type: string | null;
   strike: number | null;
+  expiry_date: string | null;
+  premium: number | null;
+  contracts: number | null;
+  premium_flow: string | null;
   close: number | null;
   realized_pnl_partial: number | null;
+  option_mkt_value: number | null;
+  option_unrealized_pnl: number | null;
+  option_premium_estimate: number | null;
+  option_mark_date: string | null;
 }
 
 interface PortfolioStats {
@@ -169,8 +177,14 @@ function OpenPositionsTable({ rows, showTranches = true }: { rows: TradeRow[]; s
             // Options: shares is a 100-per-contract notional placeholder, not
             // real quantity — shares × underlying price isn't the position's
             // value, so it's left "—" rather than shown wrong.
-            const value = r.instrument_type === "equity" && r.shares != null && r.close != null
-              ? (r.direction === "short" ? -1 : 1) * r.shares * r.close * fxScale(r.currency) : null;
+            // Shorts: traded on margin, so there's no real dollar "value" held
+            // (the earlier shares × close notional, e.g. ORCL's -$450.84, was
+            // still misleading even after adding the separate P&L $ column —
+            // Mike's call 2026-09-14: just show the same P&L here too, don't
+            // show a notional at all for a margin position).
+            const value = r.instrument_type !== "equity" ? null
+              : r.direction === "short" ? pnlDollar
+              : r.shares != null && r.close != null ? r.shares * r.close * fxScale(r.currency) : null;
             const days = daysBetween(r.entry_date);
             return (
               <tr key={r.trade_id} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
@@ -193,6 +207,61 @@ function OpenPositionsTable({ rows, showTranches = true }: { rows: TradeRow[]; s
                     </td>
                   </>
                 )}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function daysUntil(dateStr: string | null): number | null {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return null;
+  return Math.ceil((d.getTime() - Date.now()) / 86400000);
+}
+
+// Options get their own table rather than reusing OpenPositionsTable — the
+// two instrument types don't share a natural column set (strike/expiry/
+// premium vs entry price/shares-as-real-quantity). Mkt Value/P&L $ come from
+// options_pricing.py's daily Black-Scholes mark (option_marks table, added
+// 2026-09-14) — a historical-volatility proxy for IV, not a live options
+// quote (see that script's docstring). `mark_date` shown alongside so a
+// stale/unpriced mark (e.g. before the day's refresh-technicals run) is
+// visible rather than presented as fresh.
+function OptionsTable({ rows }: { rows: TradeRow[] }) {
+  if (!rows.length) return <p className="text-xs" style={{ color: "var(--text-muted)" }}>No open option positions.</p>;
+  const headers = ["Ticker", "Type", "Strike", "Expiry", "DTE", "Contracts", "Premium Paid", "Curr Premium (est.)", "Mkt Value", "P&L $", "Marked"];
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-xs border-collapse">
+        <thead>
+          <tr style={{ borderBottom: "1px solid var(--border)" }}>
+            {headers.map((h) => (
+              <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => {
+            const dte = daysUntil(r.expiry_date);
+            const pnl = r.option_unrealized_pnl != null ? r.option_unrealized_pnl * fxScale(r.currency) : null;
+            const mktValue = r.option_mkt_value != null ? r.option_mkt_value * fxScale(r.currency) : null;
+            return (
+              <tr key={r.trade_id} className="border-b transition-colors hover:opacity-80" style={{ borderColor: "var(--border)" }}>
+                <td className="py-2 px-3 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.option_type ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.strike != null ? r.strike.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.expiry_date ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{dte ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.contracts ?? "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.premium != null ? r.premium.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.option_premium_estimate != null ? r.option_premium_estimate.toFixed(2) : "—"}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{mktValue != null ? fmtMoney(mktValue).replace("+", "") : "—"}</td>
+                <td className="py-2 px-3">{pnl != null ? <PnlBadge val={fmtMoney(pnl)} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-muted)" }}>{r.option_mark_date ?? "not yet priced"}</td>
               </tr>
             );
           })}
@@ -372,7 +441,7 @@ function TradingPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
             Options · {options.length} position{options.length !== 1 ? "s" : ""}
           </p>
           <div className="rounded-lg overflow-hidden" style={{ border: "1px solid rgba(139,92,246,0.3)", backgroundColor: "rgba(139,92,246,0.03)" }}>
-            <OpenPositionsTable rows={options} showTranches={false} />
+            <OptionsTable rows={options} />
           </div>
         </div>
       )}
@@ -868,7 +937,7 @@ export default function PortfoliosPage() {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>Portfolios</h1>
-      <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>Live positions from wiki markdown files</p>
+      <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>Live positions from Turso</p>
 
       <div className="flex gap-1 mb-5 p-1 rounded-lg w-fit" style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)" }}>
         {TABS.map(({ id, label }) => (
