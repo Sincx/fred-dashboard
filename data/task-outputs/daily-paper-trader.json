@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-14T23:46:28+02:00",
+      "summary": "HUM (B)",
+      "picks": {
+        "p1": {
+          "ticker": "HUM",
+          "strategy": "B — Momentum",
+          "entry": 415.54,
+          "stop": 353.21,
+          "t1": 519.43,
+          "t2": 623.31
+        }
+      },
+      "content": "Humana picked up at today's entry ($415.54) — up +33.71% over 3 months (not extended), FY2026 adjusted EPS guidance reaffirmed at ≥$9.00, BofA price target raised to $510, Zacks Rank #1; managed care/healthcare directly aligns with Burry's defensive preference. AVGO was exited discretionarily (−6.15%, −$62) to keep the book at 35 open positions after HUM's entry — no mechanical stop-losses or signal exits on the other 34 continuing positions, all repriced identically to Friday's close since Monday's own session hadn't settled at run time. DHI is now the weakest continuing position at −5.56%, no Burry conflict. Portfolio net P&L: +$1,841 (+3.02% on $61,000)."
+    },
+    {
       "runAt": "2026-09-11T23:51:03+02:00",
       "summary": "DECK (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Deckers Outdoor picked up at today's close ($81.27) — trading 13.9x earnings, ~36% below its 52-week high and analyst targets ($117-120) despite a Q4 FY2026 beat-and-raise (HOKA +15.9%, UGG +8.2%, FY27 guidance raised), Magic Formula rank #3 on today's value screen. Realty Income was exited discretionarily (−6.84%, −$68) to keep the book at 35 open positions after DECK's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; HPQ popped +8.4% today to +41.84%, now just $2.04 from its T2 target. AVGO is now the weakest continuing position at −6.15% (Burry Sector Warning, semis), still clear of the −10% signal line. Portfolio net P&L: +$1,841 (+3.07% on $60,000)."
-    },
-    {
-      "runAt": "2026-09-10T23:52:46+02:00",
-      "summary": "TMO (B)",
-      "picks": {
-        "p1": {
-          "ticker": "TMO",
-          "strategy": "B — Momentum",
-          "entry": 603.18,
-          "stop": 512.70,
-          "t1": 753.98,
-          "t2": 904.77
-        }
-      },
-      "content": "Thermo Fisher Scientific picked up at today's close ($603.18) — a life-sciences/diagnostics leader up 33.4% over 3 months with a fresh CLSA Outperform initiation ($748 PT, ~24% upside), chosen as a defensive Burry-aligned name with zero AI-capex/semiconductor exposure. RELX was exited discretionarily (−7.72%, −$77) to keep the book at 35 open positions after TMO's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions amid a fourth consecutive oil/yield-driven risk-off session (Dow −0.6%, S&P −0.58%, Nasdaq −0.65%). DHI is now the weakest continuing position at −7.15%, no Burry conflict. Portfolio net P&L: +$1,692 (+2.87% on $59,000)."
     }
   ]
 }
