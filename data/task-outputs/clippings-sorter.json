@@ -5,14 +5,14 @@
     "icon": "📎",
     "runs": [
         {
+            "runAt": "2026-09-18T10:39:46.5481845+02:00",
+            "summary": "No new clippings",
+            "content": "Clippings folder empty."
+        },
+        {
             "runAt": "2026-09-14T23:30:12.3841916+02:00",
             "summary": "7 clippings processed",
             "content": "7 files found in Clippings, all .md, none needed Pandoc conversion. (1-2) Two Michael Burry Trading Posts (Sep 9 + Sep 11, 2026): Sep 9 sold Dec 2026 NVDA/PLTR puts outright (time-decay management, not rolled) and trimmed every single long and short in the portfolio; first explicit naming of FNMA alongside FMCC as the 'Toxic Twins'. Sep 11 closed Flutter (FLUT) entirely and rotated the proceeds into more LULU under $100 plus more ZTS in the $72s; speculates LULU 'may not be public for very much longer' (take-private read, no inside information claimed). Filed to raw/finance/ + wiki/finance/investor-letters/, with full updates to the Michael Burry section hub (trading-posts.md log + Running Position Tracker, index.md Current Positions/Trading Post Log). Step 7 stock-rec parsing: updated morningstar-watchlist.md (FLUT marked Closed, LULU/ZTS entries updated, new FNMA row) and pipeline config.py (added FNMA to the Burry group, OTC display index) — all other named tickers (FLUT/LULU/ZTS/NVDA/PLTR/ORCL/NBIS/MU/CAT/CRWV/JD/MOH/MELI/TPW/SFM/BIRK/ADBE/HCA/FISV/BBW/VEEV/PYPL) were already tracked, only price/status notes updated. (3-6) Citrini's 4-part 'Global Macro Trading for Idiots' educational series (yield curve trading, FX/carry, STIR/repo/swaps, plus the series overview post) — not a Morningstar/Burry clipping, so step 7 was skipped. Filed to raw/finance/ + wiki/finance/investor-letters/, and used to substantially expand finance/concepts/concept-global-macro.md, which had been a near-empty stub since June. (7) A Kakashii (Substack) skeptical line-by-line annotation of the April 2026 Dwarkesh x Jensen Huang podcast interview, disputing Nvidia's moat/TPU/China-chip-parity/GPU-shortage claims and drawing a parallel to Michael Burry's circular AI-financing thesis. Filed to raw/ai-tech/ + wiki/ai-tech/, cross-linked in both directions with the existing neutral episode-notes page (ai-tech/source-dwarkesh-jensen-huang-2026.md) already in the wiki. Root index.md updated with 6 new Investor Letters rows and 1 new AI & Tech row; all downstream reverse links added per step 8."
-        },
-        {
-            "runAt": "2026-09-13T23:18:00.0000000+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
         }
     ]
 }
