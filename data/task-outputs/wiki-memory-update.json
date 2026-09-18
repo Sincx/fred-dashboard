@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-18T10:44:10+02:00",
+      "summary": "log.md reviewed for 09-15 (no entries 09-16 through 09-18), 1 new Open Thread added, Finance Domain Content Status row trimmed from ~25KB to a current-state summary",
+      "content": [
+        "Reviewed log.md since the 2026-09-14 memory-update — only 2 new dated entries, both 2026-09-15 (a wiki-thinker connection and a book-recommender run); nothing logged 09-16 through 09-18",
+        "book-recommender (09-15, 4 recommendations added to books/suggestions.md) is routine and already covered by the Scheduled Maintenance table — no domain-row change needed",
+        "Added 1 new Open Thread from the 09-15 wiki-thinker run: Kakashii's skeptical Jensen Huang annotation (ingested same day by clippings-sorter) is uncross-linked in both directions — its GPU-oversupply claim contradicts AI & Tech's own HBM/CoWoS supply-constrained narrative, and its circular-financing parallel to Burry never got a reverse link from finance/michael-burry/index.md",
+        "Spot-checked wiki/index.md against memory for new pages not yet reflected — found none; all recent Morningstar/Burry/podcast pages already indexed",
+        "Cleanup: the Finance row in Domain Content Status had grown to ~25KB (single longest line in the file) from months of appended daily trade/ingest detail that duplicated log.md almost verbatim — trimmed it to a concise current-state summary (position counts, open reconciliation gap, Magic Formula top 3, options sub-area, wiki-company-scanner) per the file's own 'continuity index, not a log' rule; full trade-by-trade history remains in log.md, untouched",
+        "No Open Threads resolved this run (checked the pending-watchlist-additions.md link-from-index.md gap — still open); no naming/convention changes found",
+        "Bumped 'Last updated' date to 2026-09-18; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-14T23:54:19+02:00",
       "summary": "6 log.md entries reviewed for 09-14 (2 trackers, a 7-file clippings-sorter batch, the trading briefing, and a paper-trade), 2 Open Threads resolved/updated, 1 new one added",
       "content": [
@@ -17,21 +30,6 @@
         "Added 1 new Open Thread from today's wiki-thinker run: the actively-used carry-trade-debt-monitor tool (underlies two Finance models) is missing from AI & Tech's own project catalog",
         "Domain Content Status — Meta: bumped run count to 56, added today's wiki-thinker highlight",
         "Bumped 'Last updated' date to 2026-09-14; appended one memory-update log line to log.md"
-      ]
-    },
-    {
-      "runAt": "2026-09-13T21:53:00+02:00",
-      "summary": "log.md reviewed for 09-12/09-13, mf-update top-3 change and a brand-new 'Strategy Feedback' review type folded in, 2 new Open Threads added from today's thinker connections",
-      "content": [
-        "Reviewed log.md since the 2026-09-12 memory-update — entries again split between the top and the very end of the file (today's thinker/mf-update sat at the top; the 09-12 clippings-sorter/wiki-company-scanner/memory-update/Strategy Feedback entries sat near the end)",
-        "mf-update (09-13): Magic Formula re-ranked across 28 stocks — GSK newly displaced ADBE from the #3 spot (top 3 now MGNS/DNLM/GSK, unchanged #1/#2 since 08-30) — folded into the Finance domain row",
-        "New item: a 'Finance/Strategy Feedback' review appeared in log.md for the first time (09-13) — 6 paper-trading strategies judged, Strategies C and D below portfolio average; highlight was that Burry-flagged names (MU, QCOM, ASML, CAT) drove the worst B/C/D losses, exactly what a 2026-09-10 Burry-aware entry-avoidance rule was meant to prevent. Documented in the Finance row as a first appearance — not yet added to Scheduled Maintenance since it's unclear if it's a recurring task or a one-off manual pass",
-        "Oracle Q1 FY2027 earnings clipping (09-12, clippings-sorter) folded into the Finance row — already wired into wiki/index.md by the sorter itself, no gap to fix",
-        "Domain Content Status — Meta: added today's wiki-thinker highlight (Sunday deep-dive on Games, longest-stale domain, no new ideas there; 2 new connections instead — Ed Zitron's AI-bubble podcast vs. Finance's own Burry-sourced hyperscaler debt model, and Dividend Talk's cyclical-stocks episode vs. Finance's undervalued-dividend screen missing an AGCO/Lithia Motors safety test)",
-        "Added 2 new Open Threads for those uncross-linked connections (Ed Zitron/hyperscaler-debt-model; Dividend Talk/dividend-undervalued screen)",
-        "No Open Threads resolved this run (pending-watchlist-additions.md link-from-index.md gap checked — still open); no naming/convention changes found",
-        "Bumped 'Last updated' date to 2026-09-13",
-        "Appended one memory-update log line to log.md for 2026-09-13"
       ]
     }
   ]
