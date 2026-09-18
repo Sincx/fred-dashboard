@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-18T10:55:20+02:00",
+      "summary": "MO (A)",
+      "picks": {
+        "p1": {
+          "ticker": "MO",
+          "strategy": "A — Value",
+          "entry": 70.04,
+          "stop": 59.53,
+          "t1": 87.55,
+          "t2": 105.06
+        }
+      },
+      "content": "Altria picked up at today's previous close ($70.04) — Magic Formula screen (P/E 14.3, earnings yield 11.43%, ROIC 46.1%), ~6.3% dividend yield just raised 4.7% YoY, Trefis fair value lifted to $52.11 with sell-side targets to $72, and a reduced regulatory overhang after Altria's FDA lawsuit and an ITC patent-probe win. Note: no run 2026-09-15/16/17 (all four local self-hosted MCP servers failed to connect on this task's session). LAD was exited discretionarily (−14.40%, −$144) to keep the book at 35 open positions after MO's entry — it closed just $2.27 (0.7%) above its own hard stop after a sharp Sept 17 drop with no reversing catalyst found. No mechanical stop-losses or signal exits on the other 34 continuing positions; AMAT is now the weakest continuing position at −8.90% (Burry Sector Warning, semis), closing in on but not past the −10% signal line. Portfolio net P&L: +$1,720 (+2.77% on $62,000)."
+    },
+    {
       "runAt": "2026-09-14T23:46:28+02:00",
       "summary": "HUM (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Humana picked up at today's entry ($415.54) — up +33.71% over 3 months (not extended), FY2026 adjusted EPS guidance reaffirmed at ≥$9.00, BofA price target raised to $510, Zacks Rank #1; managed care/healthcare directly aligns with Burry's defensive preference. AVGO was exited discretionarily (−6.15%, −$62) to keep the book at 35 open positions after HUM's entry — no mechanical stop-losses or signal exits on the other 34 continuing positions, all repriced identically to Friday's close since Monday's own session hadn't settled at run time. DHI is now the weakest continuing position at −5.56%, no Burry conflict. Portfolio net P&L: +$1,841 (+3.02% on $61,000)."
-    },
-    {
-      "runAt": "2026-09-11T23:51:03+02:00",
-      "summary": "DECK (A)",
-      "picks": {
-        "p1": {
-          "ticker": "DECK",
-          "strategy": "A — Value",
-          "entry": 81.27,
-          "stop": 69.08,
-          "t1": 101.59,
-          "t2": 121.91
-        }
-      },
-      "content": "Deckers Outdoor picked up at today's close ($81.27) — trading 13.9x earnings, ~36% below its 52-week high and analyst targets ($117-120) despite a Q4 FY2026 beat-and-raise (HOKA +15.9%, UGG +8.2%, FY27 guidance raised), Magic Formula rank #3 on today's value screen. Realty Income was exited discretionarily (−6.84%, −$68) to keep the book at 35 open positions after DECK's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; HPQ popped +8.4% today to +41.84%, now just $2.04 from its T2 target. AVGO is now the weakest continuing position at −6.15% (Burry Sector Warning, semis), still clear of the −10% signal line. Portfolio net P&L: +$1,841 (+3.07% on $60,000)."
     }
   ]
 }
