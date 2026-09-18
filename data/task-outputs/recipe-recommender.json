@@ -5,14 +5,14 @@
   "icon": "🍽",
   "runs": [
     {
+      "runAt": "2026-09-18T10:48:03+02:00",
+      "summary": "3 new recipes: Lemon-Caper Chicken Piccata, Khinkali, Honey-Roasted Quince",
+      "content": "1. Lemon-Caper Chicken Piccata with Green Beans — inspired by Lucinda Scala Quinn. A 30-minute weeknight fix built around mastering one useful pan-sauce technique (deglaze, reduce, mount with butter).\n2. Khinkali (Georgian Soup Dumplings) — inspired by Anthony Bourdain. A medium-technique weekend project — Georgia's broth-filled dumplings, discovered on Parts Unknown, in the same spirit as the Filipino adobo and Sichuan dan dan already in the collection.\n3. Honey-Roasted Quince with Cardamom, Bay and Cream — inspired by Nigel Slater. The wild card: the first proper quince of early autumn, given nothing but time in a slow oven."
+    },
+    {
       "runAt": "2026-09-11T09:07:01+02:00",
       "summary": "3 new recipes: Nasi Goreng, Fuku-Style Nashville Hot Fried Chicken Sandwich, Wild Mushrooms on Toast",
       "content": "1. Nasi Goreng (Indonesian Fried Rice) — inspired by Anthony Bourdain. A 25-minute weeknight fix built on cold rice, kecap manis, and shrimp paste — the Indonesian dish he championed on A Cook's Tour and Parts Unknown.\n2. Fuku-Style Nashville Hot Fried Chicken Sandwich — inspired by David Chang. A medium-technique project built on Chang's Fuku fast-casual format — buttermilk brine, double dredge, hot oil finish, gochujang mayo.\n3. Wild Mushrooms on Toast with Thyme and Cream — inspired by Nigel Slater. The wild card: the first wild mushrooms of early autumn, treated with almost nothing but butter, garlic, and cream."
-    },
-    {
-      "runAt": "2026-09-04T09:00:00+01:00",
-      "summary": "3 new recipes: One-Pan Turkey Sausage & Kale Skillet, Momofuku Pork Belly Bao Buns, Blackberry and Apple Crumble",
-      "content": "1. One-Pan Turkey Sausage, White Bean and Kale Skillet — inspired by Lucinda Scala Quinn. A 30-minute one-pan weeknight fix built around kale as the first cooler September mornings arrive.\n2. Momofuku-Style Pork Belly Bao Buns — inspired by David Chang. A weekend technique project — the iconic Momofuku dish itself, a slow braise plus steamed bao, hadn't made it into the collection yet.\n3. Blackberry and Apple Crumble — inspired by Nigel Slater. The wild card: the definitive turn-of-season pudding, built around hedgerow blackberries and the first Bramley apples."
     }
   ]
 }
