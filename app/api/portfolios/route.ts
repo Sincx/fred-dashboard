@@ -68,7 +68,57 @@ const LATEST_PRICE_CTE = `
   )
 `;
 
-async function fetchPortfolio(client: Client, portfolioId: string, name: string): Promise<PortfolioPayload> {
+// Recommended Trades spec (2026-09-19) §1a — a trade's P&L needs converting
+// to EUR at ITS OWN entry/exit date's rate, not today's: Trading Portfolio
+// positions span months and FX moves meaningfully over that window. Sorted
+// ascending per currency so rateOnOrBefore() can binary-search; built once
+// per request and shared across all four portfolios (fx_rates is small,
+// ~600 rows, no per-portfolio cost to re-fetch it).
+type FxTable = Map<string, Array<{ date: string; rate: number }>>;
+
+async function loadFxTable(client: Client): Promise<FxTable> {
+  const rs = await client.execute("SELECT date, currency, usd_rate FROM fx_rates ORDER BY date ASC;");
+  const table: FxTable = new Map();
+  for (const r of rs.rows) {
+    const ccy = r.currency as string;
+    if (!table.has(ccy)) table.set(ccy, []);
+    table.get(ccy)!.push({ date: r.date as string, rate: r.usd_rate as number });
+  }
+  return table;
+}
+
+// Latest known rate on or before `date` (falls back to the earliest known
+// rate if `date` predates all history, rather than failing a position whose
+// entry predates fx_rates' own backfill window).
+function rateOnOrBefore(fx: FxTable, currency: string, date: string): number | null {
+  const series = fx.get(currency);
+  if (!series || series.length === 0) return null;
+  let best: number | null = null;
+  for (const point of series) {
+    if (point.date <= date) best = point.rate;
+    else break;
+  }
+  return best ?? series[0].rate;
+}
+
+const TODAY_ISO = new Date().toISOString().slice(0, 10);
+
+// Converts a native-currency amount to EUR using the rate as of `date`.
+// GBX (pence) is pre-scaled to its GBP value before the GBP cross-rate
+// lookup. NULL currency is treated as USD, matching the schema's own
+// documented convention for USD-equivalent-sized portfolios (paper-trading).
+function toEUR(amount: number, currency: string | null, date: string | null, fx: FxTable): number {
+  const native = currency === "GBX" ? amount * 0.01 : amount;
+  const baseCcy = currency === "GBX" ? "GBP" : currency ?? "USD";
+  const d = date ?? TODAY_ISO;
+  if (baseCcy === "EUR") return native;
+  const usdRate = rateOnOrBefore(fx, baseCcy, d);
+  const eurRate = rateOnOrBefore(fx, "EUR", d);
+  if (usdRate == null || eurRate == null) return native; // no rate available — better than silently dropping the position
+  return (native * usdRate) / eurRate;
+}
+
+async function fetchPortfolio(client: Client, portfolioId: string, name: string, fx: FxTable): Promise<PortfolioPayload> {
   const rs = await client.execute({
     sql: `${LATEST_PRICE_CTE},
       latest_mark AS (
@@ -125,42 +175,46 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
   const open = rows.filter((r) => r.status === "open");
   const closed = rows.filter((r) => r.status === "closed");
 
-  // GBX (pence) prices are ~100x their GBP value — same correction already
-  // applied in v_portfolio_performance (schema.sql). Does not attempt full
-  // GBP/EUR/USD normalization, matching that view's own documented, accepted
-  // limitation (multi-currency portfolios still sum as if currencies were equal).
-  const fxScale = (currency: string | null) => (currency === "GBX" ? 0.01 : 1.0);
-
   // Options: shares (100/contract) × the underlying's price is its full
   // notional, not what the option position is worth, so equity-style Value/
   // P&L math is skipped for them — but option_mkt_value/option_unrealized_pnl
   // (Black-Scholes marks from options_pricing.py, added 2026-09-14) ARE real
   // computed numbers now, so they're counted here instead of being silently
-  // omitted from the portfolio-level totals.
+  // omitted from the portfolio-level totals. Converted at today's rate (the
+  // mark itself is always as-of today, per options_pricing.py's own design).
   let openValue = 0, hasOpenValue = false;
   for (const r of open) {
     if (r.instrument_type === "equity" && r.shares != null && r.close != null) {
-      openValue += (r.direction === "short" ? -1 : 1) * r.shares * r.close * fxScale(r.currency);
+      openValue += (r.direction === "short" ? -1 : 1) * r.shares * toEUR(r.close, r.currency, TODAY_ISO, fx);
       hasOpenValue = true;
     } else if (r.instrument_type === "option" && r.option_mkt_value != null) {
-      openValue += r.option_mkt_value * fxScale(r.currency);
+      openValue += toEUR(r.option_mkt_value, r.currency, TODAY_ISO, fx);
       hasOpenValue = true;
     }
   }
+  // Each leg converted at ITS OWN date's rate (§1a) — an entry and exit
+  // months apart can see meaningfully different FX, so converting the raw
+  // native-currency difference at one rate (the old approach) understates
+  // or overstates realized P&L by however much the currency moved between
+  // the two dates.
   let realizedPnl = 0, hasRealized = false;
   for (const r of closed) {
     if (r.shares != null && r.entry_price != null && r.exit_price != null) {
-      realizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (r.exit_price - r.entry_price) * fxScale(r.currency);
+      const entryEur = toEUR(r.entry_price, r.currency, r.entry_date, fx);
+      const exitEur = toEUR(r.exit_price, r.currency, r.exit_date, fx);
+      realizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (exitEur - entryEur);
       hasRealized = true;
     }
   }
   let unrealizedPnl = 0, hasUnrealized = false;
   for (const r of open) {
     if (r.instrument_type === "equity" && r.shares != null && r.entry_price != null && r.close != null) {
-      unrealizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (r.close - r.entry_price) * fxScale(r.currency);
+      const entryEur = toEUR(r.entry_price, r.currency, r.entry_date, fx);
+      const closeEur = toEUR(r.close, r.currency, TODAY_ISO, fx);
+      unrealizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (closeEur - entryEur);
       hasUnrealized = true;
     } else if (r.instrument_type === "option" && r.option_unrealized_pnl != null) {
-      unrealizedPnl += r.option_unrealized_pnl * fxScale(r.currency);
+      unrealizedPnl += toEUR(r.option_unrealized_pnl, r.currency, TODAY_ISO, fx);
       hasUnrealized = true;
     }
   }
@@ -172,11 +226,15 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string)
   // exit that later fully closes still needs this counted, or the same
   // bug (found 2026-09-12: $5,872 across 7 P1 positions was invisible,
   // enough to flip the portfolio's displayed Net P&L from negative to
-  // positive) just recurs the moment it closes.
+  // positive) just recurs the moment it closes. No single date is attached
+  // to this running-total field (it accumulates across possibly multiple
+  // tranche sales) — converted at exit_date if closed, else entry_date, as
+  // the best available anchor; an approximation, not exact per-tranche FX.
   let realizedPartialPnl = 0, hasRealizedPartial = false;
   for (const r of rows) {
     if (r.realized_pnl_partial != null) {
-      realizedPartialPnl += r.realized_pnl_partial * fxScale(r.currency);
+      const anchorDate = r.exit_date ?? r.entry_date ?? TODAY_ISO;
+      realizedPartialPnl += toEUR(r.realized_pnl_partial, r.currency, anchorDate, fx);
       hasRealizedPartial = true;
     }
   }
@@ -222,11 +280,12 @@ async function fetchEquityCurve(client: Client, portfolioId: string) {
 export async function GET() {
   try {
     const client = getTursoClient();
+    const fx = await loadFxTable(client);
     const [p1, equity, trading, burry, equityCurve] = await Promise.all([
-      fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)"),
-      fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio"),
-      fetchPortfolio(client, "trading-portfolio", "Trading Portfolio"),
-      fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)"),
+      fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)", fx),
+      fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio", fx),
+      fetchPortfolio(client, "trading-portfolio", "Trading Portfolio", fx),
+      fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)", fx),
       fetchEquityCurve(client, "paper-trading-p1"),
     ]);
 
