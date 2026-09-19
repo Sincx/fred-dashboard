@@ -14,18 +14,20 @@ interface Portfolios {
   equity: PortfolioPayload;
   trading: PortfolioPayload;
   burry: PortfolioPayload;
+  recommended: PortfolioPayload;
   equityCurve: EquityCurvePoint[];
   briefing: string;
   spyBenchmark: SpyBenchmark | null;
 }
 
-type Tab = "p1" | "equity" | "trading" | "burry" | "briefing";
+type Tab = "p1" | "equity" | "trading" | "burry" | "recommended" | "briefing";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "p1", label: "Paper Trading" },
   { id: "equity", label: "Equity Portfolio" },
   { id: "trading", label: "Trading Portfolio" },
   { id: "burry", label: "Michael Burry (Shadow)" },
+  { id: "recommended", label: "Recommended Trades" },
   { id: "briefing", label: "Morning Briefing" },
 ];
 
@@ -581,11 +583,16 @@ function PendingIdeasPanel() {
 // trading_portfolio_sync.py going forward — no longer the "never
 // populated" gap this comment used to describe.
 function TradingPortfolioView({
-  portfolio, spyBenchmark, currencySymbol = "$",
+  portfolio, spyBenchmark, currencySymbol = "$", compareVsTradingNetPnl,
 }: {
   portfolio: PortfolioPayload;
   spyBenchmark: SpyBenchmark | null;
   currencySymbol?: string;
+  // Recommended Trades spec (2026-09-19) §3.4 — "would the recommendation
+  // have improved the portfolio" as a one-glance delta, not two numbers
+  // Mike has to subtract himself. Only passed on the Recommended Trades
+  // tab; undefined everywhere else.
+  compareVsTradingNetPnl?: number | null;
 }) {
   const longs = portfolio.open.filter((r) => r.direction === "long" && r.instrument_type === "equity");
   const shorts = portfolio.open.filter((r) => r.direction === "short" && r.instrument_type === "equity");
@@ -597,6 +604,9 @@ function TradingPortfolioView({
         colored: true,
       }]
     : [];
+  const delta = compareVsTradingNetPnl != null && portfolio.stats.net_pnl != null
+    ? portfolio.stats.net_pnl - compareVsTradingNetPnl
+    : null;
   return (
     <div className="space-y-6">
       <P1Stats stats={portfolio.stats} currencySymbol={currencySymbol} extraTiles={spyTile} />
@@ -605,6 +615,18 @@ function TradingPortfolioView({
           Net P&L is all-time since each position's own entry; the S&P 500 figure is since a fixed reference date — a
           quick eyeball comparison, not a like-for-like time-weighted return.
         </p>
+      )}
+      {delta != null && (
+        <div className="rounded-lg p-3 -mt-2" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+          <p className="text-sm" style={{ color: "var(--text-primary)" }}>
+            vs. actual Trading Portfolio: <PnlBadge val={fmtMoney(delta, currencySymbol)} />
+          </p>
+          <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+            Positive means blindly following every recommendation would have beaten Mike's own discretionary trading
+            (patience-overrides, position sizing, and all) — this book diverges from the real one by design the
+            moment it takes an Exit signal the real book held through.
+          </p>
+        </div>
       )}
 
       {spyBenchmark && <PendingIdeasPanel />}
@@ -1161,6 +1183,15 @@ export default function PortfoliosPage() {
           ) : tab === "burry" ? (
             <div className="card">
               <TradingPortfolioView portfolio={data.burry} spyBenchmark={null} />
+            </div>
+          ) : tab === "recommended" ? (
+            <div className="card">
+              <TradingPortfolioView
+                portfolio={data.recommended}
+                spyBenchmark={null}
+                currencySymbol="€"
+                compareVsTradingNetPnl={data.trading.stats.net_pnl}
+              />
             </div>
           ) : (
             <div className="card">

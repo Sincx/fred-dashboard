@@ -313,11 +313,15 @@ export async function GET() {
   try {
     const client = getTursoClient();
     const fx = await loadFxTable(client);
-    const [p1, equity, trading, burry, equityCurve, spyBenchmark] = await Promise.all([
+    const [p1, equity, trading, burry, recommended, equityCurve, spyBenchmark] = await Promise.all([
       fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)", fx, "USD"),
       fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio", fx, "GBP"),
       fetchPortfolio(client, "trading-portfolio", "Trading Portfolio", fx, "EUR"),
       fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)", fx, "USD"),
+      // Recommended Trades spec (2026-09-19) §3.4 — mechanical shadow of the
+      // briefing's own recommendations, EUR like the real Trading Portfolio
+      // it mirrors so their net_pnl figures are directly comparable.
+      fetchPortfolio(client, "recommended-trades", "Recommended Trades", fx, "EUR"),
       fetchEquityCurve(client, "paper-trading-p1"),
       fetchSpyBenchmark(client),
     ]);
@@ -329,7 +333,7 @@ export async function GET() {
       briefing = "Error reading morning-briefing.md";
     }
 
-    return NextResponse.json({ p1, equity, trading, burry, equityCurve, briefing, spyBenchmark });
+    return NextResponse.json({ p1, equity, trading, burry, recommended, equityCurve, briefing, spyBenchmark });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
