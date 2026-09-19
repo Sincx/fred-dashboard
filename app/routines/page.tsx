@@ -1,7 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock, ChevronDown, ChevronRight, Loader2 } from "lucide-react";
+import { Clock, ChevronDown, ChevronRight, Loader2, AlertTriangle, CheckCircle2 } from "lucide-react";
+
+interface TaskStatusRow {
+  task_id: string;
+  description: string | null;
+  last_run_at: string | null;
+  last_run_status: string | null;
+  hours_since: number | null;
+  stale: boolean;
+}
 
 interface PickDetail {
   ticker: string;
@@ -213,6 +222,56 @@ function TaskCard({ task }: { task: TaskOutput }) {
   );
 }
 
+function PipelineHealthPanel({ rows }: { rows: TaskStatusRow[] }) {
+  if (!rows.length) return null;
+  const staleRows = rows.filter((r) => r.stale);
+  return (
+    <div
+      className="card mb-4"
+      style={{
+        borderColor: staleRows.length ? "var(--accent-red)" : "var(--border)",
+        borderWidth: staleRows.length ? "1px" : undefined,
+      }}
+    >
+      <div className="flex items-center gap-2 mb-2">
+        {staleRows.length ? (
+          <AlertTriangle size={15} style={{ color: "var(--accent-red)" }} />
+        ) : (
+          <CheckCircle2 size={15} style={{ color: "var(--accent-green)" }} />
+        )}
+        <span className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
+          Pipeline Health
+        </span>
+        <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+          Turso task_registry &middot; equity/crypto price data pipeline
+        </span>
+      </div>
+      <div className="grid gap-1.5">
+        {rows.map((r) => {
+          const isError = r.last_run_status?.startsWith("error");
+          const color = r.stale ? "var(--accent-red)" : "var(--accent-green)";
+          return (
+            <div key={r.task_id} className="flex items-center gap-2 text-xs">
+              <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+              <span className="font-medium" style={{ color: "var(--text-primary)" }}>{r.task_id}</span>
+              <span style={{ color: "var(--text-muted)" }}>
+                {r.hours_since !== null ? `${r.hours_since}h ago` : "never run"}
+              </span>
+              <span
+                className="truncate"
+                style={{ color: isError ? "var(--accent-red)" : "var(--text-secondary)" }}
+                title={r.last_run_status ?? undefined}
+              >
+                {r.last_run_status ?? "—"}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 const TASK_ORDER = [
   "daily-paper-trader",
   "sector-performance-tracker",
@@ -230,6 +289,7 @@ const TASK_ORDER = [
 
 export default function RoutinesPage() {
   const [outputs, setOutputs] = useState<TaskOutput[]>([]);
+  const [taskStatus, setTaskStatus] = useState<TaskStatusRow[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -240,6 +300,10 @@ export default function RoutinesPage() {
         setLoading(false);
       })
       .catch(() => setLoading(false));
+    fetch("/api/finance/task-status")
+      .then((r) => r.json())
+      .then((data) => setTaskStatus(Array.isArray(data) ? data : []))
+      .catch(() => {});
   }, []);
 
   const sorted = [...outputs].sort((a, b) => {
@@ -266,6 +330,7 @@ export default function RoutinesPage() {
         </div>
       ) : (
         <>
+          <PipelineHealthPanel rows={taskStatus} />
           {paperTrader && <PaperTraderCard task={paperTrader} />}
           <div className="grid gap-3">
             {others.map((task) => (
