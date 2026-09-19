@@ -419,6 +419,158 @@ function EquityPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
   );
 }
 
+// Phase 3 spec (2026-09-19) §3.1 — Pending Trade Ideas. Fetches its own
+// data (rather than riding the parent's /api/portfolios payload) so an
+// approve/reject/snooze action can refresh just this panel without
+// re-fetching all four portfolios. Only rendered on the real Trading
+// Portfolio tab (see TradingPortfolioView) — Burry Shadow has no
+// approval queue, it's fully mechanical already.
+interface PendingIdea {
+  signal_id: string;
+  ticker: string;
+  exchange: string;
+  flagged_date: string;
+  status: string;
+  status_updated_at: string | null;
+  entry: number | null;
+  stop: number | null;
+  size: number | null;
+  conviction: string | null;
+  thesis: string | null;
+}
+
+function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: () => void }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [showApprove, setShowApprove] = useState(false);
+  const [entryPrice, setEntryPrice] = useState(String(idea.entry ?? ""));
+  const [stopLoss, setStopLoss] = useState(String(idea.stop ?? ""));
+  const [sizeEur, setSizeEur] = useState(String(idea.size ?? ""));
+
+  async function act(action: "approve" | "reject" | "snooze", extra: Record<string, unknown> = {}) {
+    setBusy(true);
+    setError(null);
+    try {
+      const r = await fetch(`/api/finance/pending-ideas/${idea.signal_id}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action, ...extra }),
+      });
+      const body = await r.json();
+      if (!r.ok) {
+        setError(body.error ?? "Action failed");
+        setBusy(false);
+        return;
+      }
+      onActed();
+    } catch (e) {
+      setError(String(e));
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="rounded-lg p-3" style={{ backgroundColor: "var(--bg-tertiary)", border: "1px solid var(--border)" }}>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
+            {idea.ticker} <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>· {idea.exchange} · {idea.flagged_date}</span>
+          </p>
+          {idea.conviction && <p className="text-xs mt-0.5" style={{ color: "var(--text-secondary)" }}>{idea.conviction}</p>}
+          {idea.thesis && <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{idea.thesis}</p>}
+          <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>
+            Entry {idea.entry ?? "—"} · Stop {idea.stop ?? "—"} · Size €{idea.size ?? "—"}
+          </p>
+        </div>
+        <div className="flex gap-1.5 flex-shrink-0">
+          <button
+            disabled={busy}
+            onClick={() => setShowApprove((v) => !v)}
+            className="px-2.5 py-1 rounded text-xs font-medium"
+            style={{ backgroundColor: "rgba(74,222,128,0.15)", color: "var(--accent-green)" }}
+          >
+            Approve
+          </button>
+          <button
+            disabled={busy}
+            onClick={() => act("reject")}
+            className="px-2.5 py-1 rounded text-xs font-medium"
+            style={{ backgroundColor: "rgba(239,68,68,0.15)", color: "var(--accent-red)" }}
+          >
+            Reject
+          </button>
+          <button
+            disabled={busy}
+            onClick={() => act("snooze", { days: 7 })}
+            className="px-2.5 py-1 rounded text-xs font-medium"
+            style={{ backgroundColor: "var(--bg-secondary)", color: "var(--text-secondary)" }}
+          >
+            Snooze 7d
+          </button>
+        </div>
+      </div>
+
+      {showApprove && (
+        <div className="mt-3 pt-3 flex items-end gap-2 flex-wrap" style={{ borderTop: "1px solid var(--border)" }}>
+          <label className="text-xs">
+            <span style={{ color: "var(--text-muted)" }}>Entry price</span>
+            <input value={entryPrice} onChange={(e) => setEntryPrice(e.target.value)}
+              className="block mt-0.5 w-24 px-2 py-1 rounded text-xs" style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", color: "var(--text-primary)" }} />
+          </label>
+          <label className="text-xs">
+            <span style={{ color: "var(--text-muted)" }}>Stop loss</span>
+            <input value={stopLoss} onChange={(e) => setStopLoss(e.target.value)}
+              className="block mt-0.5 w-24 px-2 py-1 rounded text-xs" style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", color: "var(--text-primary)" }} />
+          </label>
+          <label className="text-xs">
+            <span style={{ color: "var(--text-muted)" }}>Size (€)</span>
+            <input value={sizeEur} onChange={(e) => setSizeEur(e.target.value)}
+              className="block mt-0.5 w-24 px-2 py-1 rounded text-xs" style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", color: "var(--text-primary)" }} />
+          </label>
+          <button
+            disabled={busy}
+            onClick={() => act("approve", { entryPrice: Number(entryPrice), stopLoss: stopLoss ? Number(stopLoss) : null, sizeEur: Number(sizeEur) })}
+            className="px-3 py-1.5 rounded text-xs font-semibold"
+            style={{ backgroundColor: "var(--accent-green)", color: "#052e16" }}
+          >
+            Confirm & open trade
+          </button>
+        </div>
+      )}
+      {error && <p className="text-xs mt-2" style={{ color: "var(--accent-red)" }}>{error}</p>}
+    </div>
+  );
+}
+
+function PendingIdeasPanel() {
+  const [ideas, setIdeas] = useState<PendingIdea[] | null>(null);
+
+  function load() {
+    fetch("/api/finance/pending-ideas")
+      .then((r) => r.json())
+      .then((data) => setIdeas(Array.isArray(data) ? data : []))
+      .catch(() => setIdeas([]));
+  }
+  useEffect(load, []);
+
+  if (ideas === null) return null;
+  const active = ideas.filter((i) => i.status === "new");
+  if (active.length === 0) return null; // nothing pending — don't clutter the tab with an empty panel
+
+  return (
+    <div className="mb-2">
+      <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent)", opacity: 0.9 }}>
+        Pending Trade Ideas · {active.length}
+      </p>
+      <div className="space-y-2">
+        {active.map((idea) => (
+          <PendingIdeaCard key={idea.signal_id} idea={idea} onActed={load} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // Shared by Trading Portfolio (base_currency EUR) and Burry Shadow (USD) —
 // currencySymbol/spyBenchmark are passed per call site rather than assumed,
 // since Trading's figures are FX-normalized to EUR (Recommended Trades
@@ -454,6 +606,8 @@ function TradingPortfolioView({
           quick eyeball comparison, not a like-for-like time-weighted return.
         </p>
       )}
+
+      {spyBenchmark && <PendingIdeasPanel />}
 
       <div>
         <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-green)", opacity: 0.85 }}>
