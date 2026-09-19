@@ -5,6 +5,13 @@
   "icon": "🎙",
   "runs": [
     {
+      "runAt": "2026-09-19T10:04:25+02:00",
+      "summary": "1 podcast page created",
+      "content": [
+        "Dividend Talk — The Art of the Turnaround and What We Learned Along the Way"
+      ]
+    },
+    {
       "runAt": "2026-09-12T08:04:43.000Z",
       "summary": "6 podcast pages created",
       "content": [
@@ -15,11 +22,6 @@
         "Prof G Markets — Bonds are warning of a global inflation crisis",
         "Behind the Balance Sheet — Mr Common Sense: Rich Pzena"
       ]
-    },
-    {
-      "runAt": "2026-09-05T10:02:41+02:00",
-      "summary": "No new podcasts to summarise",
-      "content": "Nothing to summarise this run."
     }
   ]
 }
