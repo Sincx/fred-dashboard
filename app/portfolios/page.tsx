@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import { Loader2, TrendingUp, TrendingDown, AlertTriangle, CheckCircle2, Clock } from "lucide-react";
 import { SignalBadge } from "@/components/SignalBadge";
 
+interface SpyBenchmark {
+  sinceDate: string;
+  pctChange: number;
+}
+
 interface Portfolios {
   p1: PortfolioPayload;
   equity: PortfolioPayload;
@@ -11,6 +16,7 @@ interface Portfolios {
   burry: PortfolioPayload;
   equityCurve: EquityCurvePoint[];
   briefing: string;
+  spyBenchmark: SpyBenchmark | null;
 }
 
 type Tab = "p1" | "equity" | "trading" | "burry" | "briefing";
@@ -86,10 +92,10 @@ function PnlBadge({ val }: { val: string }) {
   return <span className={cls}>{clean}</span>;
 }
 
-function fmtMoney(v: number | null): string {
+function fmtMoney(v: number | null, symbol: string = "$"): string {
   if (v == null) return "—";
   const sign = v < 0 ? "−" : "+";
-  return `${sign}$${Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+  return `${sign}${symbol}${Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
 }
 
 function fmtPct(v: number | null): string {
@@ -118,12 +124,19 @@ function fxScale(currency: string | null): number {
   return currency === "GBX" ? 0.01 : 1.0;
 }
 
-function P1Stats({ stats }: { stats: PortfolioStats }) {
+function P1Stats({
+  stats, currencySymbol = "$", extraTiles = [],
+}: {
+  stats: PortfolioStats;
+  currencySymbol?: string;
+  extraTiles?: { label: string; value: string; colored: boolean }[];
+}) {
   const items: { label: string; value: string; colored: boolean }[] = [
-    { label: "Net P&L", value: fmtMoney(stats.net_pnl), colored: true },
-    { label: "Open Positions Value", value: fmtMoney(stats.open_value), colored: false },
+    { label: "Net P&L", value: fmtMoney(stats.net_pnl, currencySymbol), colored: true },
+    { label: "Open Positions Value", value: fmtMoney(stats.open_value, currencySymbol), colored: false },
     { label: "Open Positions", value: String(stats.open_positions), colored: false },
     { label: "Win Rate", value: stats.win_rate != null ? `${stats.win_rate.toFixed(1)}%` : "—", colored: false },
+    ...extraTiles,
   ];
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
@@ -406,16 +419,41 @@ function EquityPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
   );
 }
 
-// Trading Portfolio: cash_ledger was never populated for this portfolio
-// (Phase 7c — a live-task concern, not a backfill one), so cash/YTD are
-// deliberately omitted here rather than shown as a fabricated $0.
-function TradingPortfolioView({ portfolio }: { portfolio: PortfolioPayload }) {
+// Shared by Trading Portfolio (base_currency EUR) and Burry Shadow (USD) —
+// currencySymbol/spyBenchmark are passed per call site rather than assumed,
+// since Trading's figures are FX-normalized to EUR (Recommended Trades
+// spec, 2026-09-19 §1a) while Burry's stay USD, and the S&P 500 comparison
+// tile only makes sense for the real Trading book (Burry passes null).
+// cash_ledger was backfilled from the wiki's own Movement Log the same day
+// (see trading_cash_backfill.py) and is kept current by
+// trading_portfolio_sync.py going forward — no longer the "never
+// populated" gap this comment used to describe.
+function TradingPortfolioView({
+  portfolio, spyBenchmark, currencySymbol = "$",
+}: {
+  portfolio: PortfolioPayload;
+  spyBenchmark: SpyBenchmark | null;
+  currencySymbol?: string;
+}) {
   const longs = portfolio.open.filter((r) => r.direction === "long" && r.instrument_type === "equity");
   const shorts = portfolio.open.filter((r) => r.direction === "short" && r.instrument_type === "equity");
   const options = portfolio.open.filter((r) => r.instrument_type === "option");
+  const spyTile = spyBenchmark
+    ? [{
+        label: `S&P 500 since ${spyBenchmark.sinceDate}`,
+        value: fmtPct(spyBenchmark.pctChange),
+        colored: true,
+      }]
+    : [];
   return (
     <div className="space-y-6">
-      <P1Stats stats={portfolio.stats} />
+      <P1Stats stats={portfolio.stats} currencySymbol={currencySymbol} extraTiles={spyTile} />
+      {spyBenchmark && (
+        <p className="text-xs -mt-4" style={{ color: "var(--text-muted)" }}>
+          Net P&L is all-time since each position's own entry; the S&P 500 figure is since a fixed reference date — a
+          quick eyeball comparison, not a like-for-like time-weighted return.
+        </p>
+      )}
 
       <div>
         <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent-green)", opacity: 0.85 }}>
@@ -968,11 +1006,11 @@ export default function PortfoliosPage() {
             </div>
           ) : tab === "burry" ? (
             <div className="card">
-              <TradingPortfolioView portfolio={data.burry} />
+              <TradingPortfolioView portfolio={data.burry} spyBenchmark={null} />
             </div>
           ) : (
             <div className="card">
-              <TradingPortfolioView portfolio={data.trading} />
+              <TradingPortfolioView portfolio={data.trading} spyBenchmark={data.spyBenchmark} currencySymbol="€" />
             </div>
           )}
         </>

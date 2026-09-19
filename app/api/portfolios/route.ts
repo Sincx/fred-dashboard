@@ -103,22 +103,28 @@ function rateOnOrBefore(fx: FxTable, currency: string, date: string): number | n
 
 const TODAY_ISO = new Date().toISOString().slice(0, 10);
 
-// Converts a native-currency amount to EUR using the rate as of `date`.
-// GBX (pence) is pre-scaled to its GBP value before the GBP cross-rate
-// lookup. NULL currency is treated as USD, matching the schema's own
-// documented convention for USD-equivalent-sized portfolios (paper-trading).
-function toEUR(amount: number, currency: string | null, date: string | null, fx: FxTable): number {
+// Converts a native-currency trade amount into the PORTFOLIO'S OWN base
+// currency (not always EUR — paper-trading-p1/burry-shadow are base_currency
+// 'USD', equity-pension is 'GBP', only trading-portfolio is 'EUR', and the
+// dashboard still labels P1/Burry's stat tiles with "$"; converting those to
+// EUR here while the UI kept the $ sign would silently mislabel the figure,
+// a real bug caught before this shipped — same fix, applied per-portfolio's
+// own currency instead of hardcoding EUR for everyone). GBX (pence) is
+// pre-scaled to its GBP value before the GBP cross-rate lookup. NULL trade
+// currency is treated as USD, matching the schema's own documented
+// convention for USD-equivalent-sized portfolios.
+function toBaseCurrency(amount: number, currency: string | null, date: string | null, fx: FxTable, baseCurrency: string): number {
   const native = currency === "GBX" ? amount * 0.01 : amount;
-  const baseCcy = currency === "GBX" ? "GBP" : currency ?? "USD";
+  const tradeCcy = currency === "GBX" ? "GBP" : currency ?? "USD";
   const d = date ?? TODAY_ISO;
-  if (baseCcy === "EUR") return native;
-  const usdRate = rateOnOrBefore(fx, baseCcy, d);
-  const eurRate = rateOnOrBefore(fx, "EUR", d);
-  if (usdRate == null || eurRate == null) return native; // no rate available — better than silently dropping the position
-  return (native * usdRate) / eurRate;
+  if (tradeCcy === baseCurrency) return native;
+  const tradeRate = rateOnOrBefore(fx, tradeCcy, d);
+  const baseRate = rateOnOrBefore(fx, baseCurrency, d);
+  if (tradeRate == null || baseRate == null) return native; // no rate available — better than silently dropping the position
+  return (native * tradeRate) / baseRate;
 }
 
-async function fetchPortfolio(client: Client, portfolioId: string, name: string, fx: FxTable): Promise<PortfolioPayload> {
+async function fetchPortfolio(client: Client, portfolioId: string, name: string, fx: FxTable, baseCurrency: string): Promise<PortfolioPayload> {
   const rs = await client.execute({
     sql: `${LATEST_PRICE_CTE},
       latest_mark AS (
@@ -185,10 +191,10 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string,
   let openValue = 0, hasOpenValue = false;
   for (const r of open) {
     if (r.instrument_type === "equity" && r.shares != null && r.close != null) {
-      openValue += (r.direction === "short" ? -1 : 1) * r.shares * toEUR(r.close, r.currency, TODAY_ISO, fx);
+      openValue += (r.direction === "short" ? -1 : 1) * r.shares * toBaseCurrency(r.close, r.currency, TODAY_ISO, fx, baseCurrency);
       hasOpenValue = true;
     } else if (r.instrument_type === "option" && r.option_mkt_value != null) {
-      openValue += toEUR(r.option_mkt_value, r.currency, TODAY_ISO, fx);
+      openValue += toBaseCurrency(r.option_mkt_value, r.currency, TODAY_ISO, fx, baseCurrency);
       hasOpenValue = true;
     }
   }
@@ -200,8 +206,8 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string,
   let realizedPnl = 0, hasRealized = false;
   for (const r of closed) {
     if (r.shares != null && r.entry_price != null && r.exit_price != null) {
-      const entryEur = toEUR(r.entry_price, r.currency, r.entry_date, fx);
-      const exitEur = toEUR(r.exit_price, r.currency, r.exit_date, fx);
+      const entryEur = toBaseCurrency(r.entry_price, r.currency, r.entry_date, fx, baseCurrency);
+      const exitEur = toBaseCurrency(r.exit_price, r.currency, r.exit_date, fx, baseCurrency);
       realizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (exitEur - entryEur);
       hasRealized = true;
     }
@@ -209,12 +215,12 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string,
   let unrealizedPnl = 0, hasUnrealized = false;
   for (const r of open) {
     if (r.instrument_type === "equity" && r.shares != null && r.entry_price != null && r.close != null) {
-      const entryEur = toEUR(r.entry_price, r.currency, r.entry_date, fx);
-      const closeEur = toEUR(r.close, r.currency, TODAY_ISO, fx);
+      const entryEur = toBaseCurrency(r.entry_price, r.currency, r.entry_date, fx, baseCurrency);
+      const closeEur = toBaseCurrency(r.close, r.currency, TODAY_ISO, fx, baseCurrency);
       unrealizedPnl += (r.direction === "short" ? -1 : 1) * r.shares * (closeEur - entryEur);
       hasUnrealized = true;
     } else if (r.instrument_type === "option" && r.option_unrealized_pnl != null) {
-      unrealizedPnl += toEUR(r.option_unrealized_pnl, r.currency, TODAY_ISO, fx);
+      unrealizedPnl += toBaseCurrency(r.option_unrealized_pnl, r.currency, TODAY_ISO, fx, baseCurrency);
       hasUnrealized = true;
     }
   }
@@ -234,7 +240,7 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string,
   for (const r of rows) {
     if (r.realized_pnl_partial != null) {
       const anchorDate = r.exit_date ?? r.entry_date ?? TODAY_ISO;
-      realizedPartialPnl += toEUR(r.realized_pnl_partial, r.currency, anchorDate, fx);
+      realizedPartialPnl += toBaseCurrency(r.realized_pnl_partial, r.currency, anchorDate, fx, baseCurrency);
       hasRealizedPartial = true;
     }
   }
@@ -259,6 +265,32 @@ async function fetchPortfolio(client: Client, portfolioId: string, name: string,
   };
 }
 
+const SPY_SINCE_DATE = "2026-04-01";
+
+// Recommended Trades spec (2026-09-19) §2 — a quick eyeball comparison for
+// the Trading tab, not a time-weighted return: Trading Portfolio's own
+// positions were opened on many different dates, not all on SPY_SINCE_DATE,
+// so this and Net P&L aren't measuring quite the same window. Flagged in
+// the UI's own label rather than silently presented as more rigorous than
+// it is (spec's own explicit caveat).
+async function fetchSpyBenchmark(client: Client): Promise<{ sinceDate: string; pctChange: number } | null> {
+  const rs = await client.execute({
+    sql: `SELECT date, close FROM prices WHERE ticker = 'SPY' AND exchange = 'US'
+          AND date >= ? ORDER BY date ASC LIMIT 1`,
+    args: [SPY_SINCE_DATE],
+  });
+  if (!rs.rows.length) return null;
+  const startClose = rs.rows[0].close as number;
+
+  const latest = await client.execute(
+    "SELECT close FROM prices WHERE ticker = 'SPY' AND exchange = 'US' ORDER BY date DESC LIMIT 1"
+  );
+  if (!latest.rows.length) return null;
+  const latestClose = latest.rows[0].close as number;
+
+  return { sinceDate: SPY_SINCE_DATE, pctChange: ((latestClose - startClose) / startClose) * 100 };
+}
+
 async function fetchEquityCurve(client: Client, portfolioId: string) {
   const rs = await client.execute({
     sql: `SELECT exit_date, ticker,
@@ -281,12 +313,13 @@ export async function GET() {
   try {
     const client = getTursoClient();
     const fx = await loadFxTable(client);
-    const [p1, equity, trading, burry, equityCurve] = await Promise.all([
-      fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)", fx),
-      fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio", fx),
-      fetchPortfolio(client, "trading-portfolio", "Trading Portfolio", fx),
-      fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)", fx),
+    const [p1, equity, trading, burry, equityCurve, spyBenchmark] = await Promise.all([
+      fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)", fx, "USD"),
+      fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio", fx, "GBP"),
+      fetchPortfolio(client, "trading-portfolio", "Trading Portfolio", fx, "EUR"),
+      fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)", fx, "USD"),
       fetchEquityCurve(client, "paper-trading-p1"),
+      fetchSpyBenchmark(client),
     ]);
 
     let briefing = "";
@@ -296,7 +329,7 @@ export async function GET() {
       briefing = "Error reading morning-briefing.md";
     }
 
-    return NextResponse.json({ p1, equity, trading, burry, equityCurve, briefing });
+    return NextResponse.json({ p1, equity, trading, burry, equityCurve, briefing, spyBenchmark });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
