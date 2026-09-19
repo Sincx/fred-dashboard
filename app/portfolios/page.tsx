@@ -441,7 +441,7 @@ interface PendingIdea {
   thesis: string | null;
 }
 
-function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: () => void }) {
+function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: (warning?: string | null) => void }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showApprove, setShowApprove] = useState(false);
@@ -464,7 +464,11 @@ function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: () => 
         setBusy(false);
         return;
       }
-      onActed();
+      // Sector-concentration warning (Phase 3 §3.1 open risk #1) — soft,
+      // doesn't block Approve, but the card is about to unmount (this idea
+      // is no longer 'new'), so it's passed up to the panel to show as a
+      // banner rather than lost the moment this component disappears.
+      onActed(action === "approve" ? (body.warning as string | null | undefined) : undefined);
     } catch (e) {
       setError(String(e));
       setBusy(false);
@@ -546,29 +550,44 @@ function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: () => 
 
 function PendingIdeasPanel() {
   const [ideas, setIdeas] = useState<PendingIdea[] | null>(null);
+  const [warning, setWarning] = useState<string | null>(null);
 
-  function load() {
+  function load(newWarning?: string | null) {
+    if (newWarning !== undefined) setWarning(newWarning);
     fetch("/api/finance/pending-ideas")
       .then((r) => r.json())
       .then((data) => setIdeas(Array.isArray(data) ? data : []))
       .catch(() => setIdeas([]));
   }
-  useEffect(load, []);
+  useEffect(() => load(), []);
 
   if (ideas === null) return null;
   const active = ideas.filter((i) => i.status === "new");
-  if (active.length === 0) return null; // nothing pending — don't clutter the tab with an empty panel
+  // Sector-concentration warning (soft, doesn't block Approve) can arrive
+  // even when the just-approved idea was the last one, so this can't be
+  // gated behind active.length > 0 the way the rest of the panel is.
+  if (active.length === 0 && !warning) return null;
 
   return (
     <div className="mb-2">
-      <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent)", opacity: 0.9 }}>
-        Pending Trade Ideas · {active.length}
-      </p>
-      <div className="space-y-2">
-        {active.map((idea) => (
-          <PendingIdeaCard key={idea.signal_id} idea={idea} onActed={load} />
-        ))}
-      </div>
+      {warning && (
+        <div className="rounded-lg p-3 mb-2 flex items-start justify-between gap-2" style={{ backgroundColor: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.3)" }}>
+          <p className="text-xs" style={{ color: "#f59e0b" }}>⚠ {warning}</p>
+          <button onClick={() => setWarning(null)} className="text-xs flex-shrink-0" style={{ color: "var(--text-muted)" }}>Dismiss</button>
+        </div>
+      )}
+      {active.length > 0 && (
+        <>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--accent)", opacity: 0.9 }}>
+            Pending Trade Ideas · {active.length}
+          </p>
+          <div className="space-y-2">
+            {active.map((idea) => (
+              <PendingIdeaCard key={idea.signal_id} idea={idea} onActed={load} />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

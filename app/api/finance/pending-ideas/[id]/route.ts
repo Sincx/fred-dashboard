@@ -40,6 +40,74 @@ async function eurToNative(client: Client, amountEur: number, nativeCurrency: st
   return nativeCurrency === "GBX" ? nativeAmount * 100 : nativeAmount;
 }
 
+// The other direction — native currency amount to EUR, for valuing
+// existing Trading Portfolio positions when checking sector concentration.
+async function nativeToEur(client: Client, amountNative: number, nativeCurrency: string, date: string): Promise<number> {
+  const scaled = nativeCurrency === "GBX" ? amountNative * 0.01 : amountNative;
+  const sourceCcy = nativeCurrency === "GBX" ? "GBP" : nativeCurrency;
+  if (sourceCcy === "EUR") return scaled;
+  const sourceRate = await rateOnDate(client, sourceCcy, date);
+  const eurRate = await rateOnDate(client, "EUR", date);
+  if (sourceRate == null || eurRate == null) return scaled;
+  return (scaled * sourceRate) / eurRate;
+}
+
+// Phase 3 spec (2026-09-19) §3.1 open risk #1 — the briefing's own Step 4
+// already enforces "skip if the same sector is already >25% of portfolio
+// weight" manually; Approve needs the same check so it can't be bypassed
+// by going through the queue instead of the briefing's own candidate
+// filtering. Soft — returns a warning string rather than throwing, since
+// sector data can be missing/ambiguous (the same universe.sector vs.
+// fundamentals.sector split documented elsewhere in this pipeline) and a
+// false positive here would be worse than a false negative: blocking a
+// good trade over a data gap is worse than occasionally missing a real
+// concentration case Mike can still catch by eye from the position list.
+async function checkSectorConcentration(client: Client, ticker: string, exchange: string, sizeEur: number, today: string): Promise<string | null> {
+  const sectorRs = await client.execute({
+    sql: `SELECT sector FROM fundamentals WHERE ticker = ? AND exchange = ?
+          AND as_of_date = (SELECT MAX(as_of_date) FROM fundamentals f2 WHERE f2.ticker = ? AND f2.exchange = ?)`,
+    args: [ticker, exchange, ticker, exchange],
+  });
+  const candidateSector = sectorRs.rows[0]?.sector as string | undefined;
+  if (!candidateSector) return null; // no sector data — can't check, don't block on it
+
+  const openRs = await client.execute({
+    sql: `SELECT t.ticker, t.exchange, t.shares, t.currency, p.close
+          FROM trades t
+          LEFT JOIN (
+            SELECT ticker, exchange, close, ROW_NUMBER() OVER (PARTITION BY ticker, exchange ORDER BY date DESC) rn
+            FROM prices
+          ) p ON p.ticker = t.ticker AND p.exchange = t.exchange AND p.rn = 1
+          WHERE t.portfolio_id = 'trading-portfolio' AND t.status = 'open'
+            AND t.instrument_type = 'equity' AND t.direction = 'long'`,
+  });
+
+  let totalEur = 0;
+  let sectorEur = 0;
+  for (const r of openRs.rows) {
+    const shares = r.shares as number | null;
+    const close = r.close as number | null;
+    if (shares == null || close == null) continue;
+    const eur = await nativeToEur(client, shares * close, (r.currency as string | null) ?? "USD", today);
+    totalEur += eur;
+
+    const rowSectorRs = await client.execute({
+      sql: `SELECT sector FROM fundamentals WHERE ticker = ? AND exchange = ?
+            AND as_of_date = (SELECT MAX(as_of_date) FROM fundamentals f2 WHERE f2.ticker = ? AND f2.exchange = ?)`,
+      args: [r.ticker, r.exchange, r.ticker, r.exchange],
+    });
+    if ((rowSectorRs.rows[0]?.sector as string | undefined) === candidateSector) sectorEur += eur;
+  }
+
+  const newTotal = totalEur + sizeEur;
+  const newSectorTotal = sectorEur + sizeEur;
+  const pct = newTotal > 0 ? (newSectorTotal / newTotal) * 100 : 0;
+  if (pct > 25) {
+    return `Approving this would put ${candidateSector} at ${pct.toFixed(1)}% of the portfolio (>25% cap) — €${sectorEur.toFixed(0)} existing + €${sizeEur.toFixed(0)} this idea, out of €${newTotal.toFixed(0)} total.`;
+  }
+  return null;
+}
+
 interface SignalRow {
   signal_id: string;
   ticker: string;
@@ -75,11 +143,25 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     const today = now.slice(0, 10);
 
     if (action === "reject") {
-      await client.execute({
-        sql: `UPDATE signals SET status = 'rejected', status_updated_at = ? WHERE signal_id = ?`,
-        args: [now, id],
+      // Snapshot today's signal_count as the "conviction at the moment
+      // Mike said no" baseline — trading_portfolio_candidates.py's
+      // reject-suppression only re-excludes this ticker while a future
+      // day's signal_count doesn't exceed what's stored here, implementing
+      // the spec's "unless conviction rises" escape hatch (Phase 3 §3.1
+      // point 2) that a flat time-based suppression alone can't.
+      const sigRs = await client.execute({
+        sql: `SELECT signal_count FROM v_investment_opportunities WHERE ticker = ? AND exchange = ?`,
+        args: [signal.ticker, signal.exchange],
       });
-      return NextResponse.json({ status: "rejected" });
+      const rejectedSignalCount = (sigRs.rows[0]?.signal_count as number | undefined) ?? 1;
+      const detail = signal.detail ? JSON.parse(signal.detail) : {};
+      detail.rejected_signal_count = rejectedSignalCount;
+
+      await client.execute({
+        sql: `UPDATE signals SET status = 'rejected', status_updated_at = ?, detail = ? WHERE signal_id = ?`,
+        args: [now, JSON.stringify(detail), id],
+      });
+      return NextResponse.json({ status: "rejected", rejected_signal_count: rejectedSignalCount });
     }
 
     if (action === "snooze") {
@@ -153,7 +235,14 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         args: [now, id],
       });
 
-      return NextResponse.json({ status: "approved", trade_id: tradeId, shares, currency });
+      // Sector check runs AFTER the trade is written, not before — it's a
+      // soft warning (unlike the hard cash block above), so it shouldn't
+      // gate the approval itself; Mike sees it after the fact and can
+      // manually trim/exit something else if he agrees the concentration
+      // is a real problem, same as he already can from the position list.
+      const sectorWarning = await checkSectorConcentration(client, signal.ticker, signal.exchange, sizeEur, today);
+
+      return NextResponse.json({ status: "approved", trade_id: tradeId, shares, currency, warning: sectorWarning });
     }
 
     return NextResponse.json({ error: `Unknown action '${action}' — expected approve/reject/snooze` }, { status: 400 });
