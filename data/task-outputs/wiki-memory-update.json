@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-19T23:53:23+02:00",
+      "summary": "Memory index updated — 0 new pages needing top-level rows, 1 new Open Thread, no threads resolved",
+      "content": [
+        "Reviewed log.md since the 2026-09-18 memory-update — 3 new dated entries, all 2026-09-19: a Crypto portfolio-refresh (5 prices updated, 1 unavailable, biggest mover LINK +8.41%), a wiki-thinker Saturday full sweep (0 new ideas/1 new connection), and a new podcast page ingest",
+        "Updated the Meta domain row's run count (56→58) and added the 09-19 wiki-thinker highlight: Dividend Talk's new turnaround-vs-value-trap retrospective names the exact judgment call Burry's live, unresolved Build-A-Bear thesis is caught in the middle of — a quiet week otherwise",
+        "Updated the Crypto domain row with the 09-19 portfolio-refresh result (5/6 prices updated, LINK +8.41%)",
+        "Added the new podcast-dividend-talk-art-of-the-turnaround.md page to the Podcasts domain row — confirmed already indexed in wiki/index.md, no missing-page fix needed",
+        "Added 1 new Open Thread: the Dividend Talk turnaround episode vs. Burry's unresolved Build-A-Bear (BBW) thesis, uncross-linked",
+        "Spot-checked wiki/index.md for unindexed new pages — found none; no naming/convention changes found; no Open Threads resolved this run",
+        "Bumped 'Last updated' date to 2026-09-19; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-18T23:58:00+02:00",
       "summary": "Second run today — caught 4 items the earlier 09-18 run missed (a same-day wiki-thinker entry, a 09-15 book batch, and 2 more 09-18 task runs), added 4 new Open Threads",
       "content": [
@@ -16,19 +29,6 @@
         "Added 4 new Open Threads: 2 for today's wiki-thinker book connections (Sorkin/1929-bubble-pages, Sekirin/Fire-Point-Ukraine), 1 for the 09-15/16/17 scheduler+MCP disruption itself (worth confirming nothing else silently missed the window), and verified no threads were fully resolved this run",
         "Did not attempt the large Finance-row cleanup a prior run's summary claimed to have done — on inspection the row is still ~8KB of appended daily detail, so that trim either didn't actually land or was reverted; flagging for a future dedicated pass rather than risking a rushed edit tonight",
         "Appended one memory-update log line to log.md (header date unchanged — already 2026-09-18 from the earlier run)"
-      ]
-    },
-    {
-      "runAt": "2026-09-18T10:44:10+02:00",
-      "summary": "log.md reviewed for 09-15 (no entries 09-16 through 09-18), 1 new Open Thread added, Finance Domain Content Status row trimmed from ~25KB to a current-state summary",
-      "content": [
-        "Reviewed log.md since the 2026-09-14 memory-update — only 2 new dated entries, both 2026-09-15 (a wiki-thinker connection and a book-recommender run); nothing logged 09-16 through 09-18",
-        "book-recommender (09-15, 4 recommendations added to books/suggestions.md) is routine and already covered by the Scheduled Maintenance table — no domain-row change needed",
-        "Added 1 new Open Thread from the 09-15 wiki-thinker run: Kakashii's skeptical Jensen Huang annotation (ingested same day by clippings-sorter) is uncross-linked in both directions — its GPU-oversupply claim contradicts AI & Tech's own HBM/CoWoS supply-constrained narrative, and its circular-financing parallel to Burry never got a reverse link from finance/michael-burry/index.md",
-        "Spot-checked wiki/index.md against memory for new pages not yet reflected — found none; all recent Morningstar/Burry/podcast pages already indexed",
-        "Cleanup: the Finance row in Domain Content Status had grown to ~25KB (single longest line in the file) from months of appended daily trade/ingest detail that duplicated log.md almost verbatim — trimmed it to a concise current-state summary (position counts, open reconciliation gap, Magic Formula top 3, options sub-area, wiki-company-scanner) per the file's own 'continuity index, not a log' rule; full trade-by-trade history remains in log.md, untouched",
-        "No Open Threads resolved this run (checked the pending-watchlist-additions.md link-from-index.md gap — still open); no naming/convention changes found",
-        "Bumped 'Last updated' date to 2026-09-18; appended one memory-update log line to log.md"
       ]
     }
   ]
