@@ -67,6 +67,123 @@ function InvestorBadges({ names }: { names: string | null }) {
   );
 }
 
+interface TickerResearchDetail {
+  ticker: string;
+  exchange: string;
+  sector: string | null;
+  index_membership: string;
+  notes: string | null;
+  signals: { source: string; detail: string | null; flagged_date: string; source_ref: string | null }[];
+  investors: { investor_id: string; name: string; direction: string; disclosed_date: string;
+    entry_price_hint: number | null; status: string }[];
+}
+
+// Master spec Phase 15's research popover — read-only, DB-only (no live
+// LLM/WebSearch call from here, per Mike's own scope call 2026-09-20).
+// Shows EVERY signal ever recorded for this ticker, not just the single
+// most recent one the table's own Signal column shows, so an older
+// llm-research thesis doesn't look like it never existed just because a
+// newer magic-formula-pass signal landed on top of it.
+function TickerResearchPopover({ ticker, exchange, onClose }: { ticker: string; exchange: string; onClose: () => void }) {
+  const [data, setData] = useState<TickerResearchDetail | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/finance/universe/${encodeURIComponent(ticker)}?exchange=${encodeURIComponent(exchange)}`)
+      .then((r) => r.json())
+      .then((d) => { if (!cancelled) { if (d.error) setError(d.error); else setData(d); } })
+      .catch((e) => { if (!cancelled) setError(String(e)); });
+    return () => { cancelled = true; };
+  }, [ticker, exchange]);
+
+  function parseDetail(raw: string | null): Record<string, unknown> | null {
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch { return null; }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+      onClick={onClose}>
+      <div className="rounded-lg p-5 max-w-lg w-full max-h-[80vh] overflow-y-auto"
+        style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)" }}
+        onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-lg font-semibold" style={{ color: "var(--text-primary)" }}>
+            {ticker} <span className="text-xs font-normal" style={{ color: "var(--text-muted)" }}>({exchange})</span>
+          </h3>
+          <button onClick={onClose} className="text-sm" style={{ color: "var(--text-muted)" }}>✕</button>
+        </div>
+        {error && <p className="text-sm" style={{ color: "var(--accent-red)" }}>{error}</p>}
+        {!data && !error && <p className="text-sm" style={{ color: "var(--text-muted)" }}>Loading…</p>}
+        {data && (
+          <div className="space-y-4">
+            <div className="text-xs" style={{ color: "var(--text-muted)" }}>
+              {data.sector || "—"} · {data.index_membership}
+            </div>
+            {data.notes && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--text-muted)" }}>Notes</p>
+                <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{data.notes}</p>
+              </div>
+            )}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)" }}>
+                Signals ({data.signals.length})
+              </p>
+              {data.signals.length === 0 ? (
+                <p className="text-sm" style={{ color: "var(--text-muted)" }}>No signals recorded for this ticker.</p>
+              ) : (
+                <div className="space-y-2">
+                  {data.signals.map((s, i) => {
+                    const detail = parseDetail(s.detail);
+                    return (
+                      <div key={i} className="rounded p-2 text-sm" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+                        <div className="flex items-center justify-between mb-1">
+                          <SourceSignalBadge source={s.source} />
+                          <span className="text-xs" style={{ color: "var(--text-muted)" }}>{s.flagged_date}</span>
+                        </div>
+                        {detail && (
+                          <pre className="text-xs whitespace-pre-wrap break-words" style={{ color: "var(--text-secondary)" }}>
+                            {Object.entries(detail).map(([k, v]) => `${k}: ${v}\n`).join("")}
+                          </pre>
+                        )}
+                        {s.source_ref && <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{s.source_ref}</p>}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)" }}>
+                Investor holdings ({data.investors.length})
+              </p>
+              {data.investors.length === 0 ? (
+                <p className="text-sm" style={{ color: "var(--text-muted)" }}>No tracked investor holds this ticker.</p>
+              ) : (
+                <div className="space-y-1">
+                  {data.investors.map((inv, i) => (
+                    <div key={i} className="text-sm flex items-center justify-between">
+                      <span style={{ color: "var(--text-secondary)" }}>
+                        🟣 {inv.name} — {inv.direction} since {inv.disclosed_date}
+                        {inv.entry_price_hint != null ? ` @ ${inv.entry_price_hint}` : ""}
+                      </span>
+                      <span className="text-xs" style={{ color: inv.status === "open" ? "var(--accent-green)" : "var(--text-muted)" }}>
+                        {inv.status}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 interface ConvergenceRow {
   ticker: string;
   exchange: string;
@@ -201,6 +318,7 @@ export default function WatchlistPage() {
   // Utilities/REITs from the Magic Formula), so this only affects the Full
   // Watchlist tab. Defaults to equities per the Phase 2 spec.
   const [assetClass, setAssetClass] = useState<"equity" | "crypto">("equity");
+  const [researchTarget, setResearchTarget] = useState<{ ticker: string; exchange: string } | null>(null);
 
   const [uSortField, setUSortField] = useState<keyof UniverseRow>("ticker");
   const [uSortDir, setUSortDir] = useState<"asc" | "desc">("asc");
@@ -441,7 +559,13 @@ export default function WatchlistPage() {
             <tbody>
               {filteredUniverse.map((r) => (
                 <tr key={`${r.ticker}-${r.exchange}`} style={{ borderBottom: "1px solid var(--border)" }}>
-                  <td className="px-3 py-2 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                  <td className="px-3 py-2 font-medium">
+                    <button onClick={() => setResearchTarget({ ticker: r.ticker, exchange: r.exchange })}
+                      className="hover:underline" style={{ color: "var(--text-primary)" }}
+                      title="View research and signals">
+                      {r.ticker}
+                    </button>
+                  </td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-muted)" }}>{r.index_membership}</td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-secondary)" }}>{r.sector || "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>
@@ -489,7 +613,13 @@ export default function WatchlistPage() {
               {filteredScreener.map((r) => (
                 <tr key={`${r.ticker}-${r.exchange}`} style={{ borderBottom: "1px solid var(--border)" }}>
                   <td className="px-3 py-2 font-mono" style={{ color: "var(--text-primary)" }}>#{r.mf_rank}</td>
-                  <td className="px-3 py-2 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                  <td className="px-3 py-2 font-medium">
+                    <button onClick={() => setResearchTarget({ ticker: r.ticker, exchange: r.exchange })}
+                      className="hover:underline" style={{ color: "var(--text-primary)" }}
+                      title="View research and signals">
+                      {r.ticker}
+                    </button>
+                  </td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-muted)" }}>{r.index_membership}</td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-secondary)" }}>{r.sector || "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.earnings_yield.toFixed(2)}%</td>
@@ -532,7 +662,13 @@ export default function WatchlistPage() {
               {filteredConvergence.map((r) => (
                 <tr key={`${r.ticker}-${r.exchange}`} style={{ borderBottom: "1px solid var(--border)" }}>
                   <td className="px-3 py-2 font-mono" style={{ color: "var(--text-primary)" }}>#{r.mf_rank}</td>
-                  <td className="px-3 py-2 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
+                  <td className="px-3 py-2 font-medium">
+                    <button onClick={() => setResearchTarget({ ticker: r.ticker, exchange: r.exchange })}
+                      className="hover:underline" style={{ color: "var(--text-primary)" }}
+                      title="View research and signals">
+                      {r.ticker}
+                    </button>
+                  </td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-muted)" }}>{r.index_membership}</td>
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-secondary)" }}>{r.sector || "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.earnings_yield.toFixed(2)}%</td>
@@ -553,6 +689,13 @@ export default function WatchlistPage() {
             </p>
           )}
         </div>
+      )}
+      {researchTarget && (
+        <TickerResearchPopover
+          ticker={researchTarget.ticker}
+          exchange={researchTarget.exchange}
+          onClose={() => setResearchTarget(null)}
+        />
       )}
     </div>
   );
