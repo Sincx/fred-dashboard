@@ -21,6 +21,7 @@ export interface UniverseRow {
   signal_source: string | null;
   signal_detail: string | null;
   signal_flagged_date: string | null;
+  investor_names: string | null;
 }
 
 export async function GET() {
@@ -41,11 +42,13 @@ export async function GET() {
              r.macd_signal, r.technical_rating, r.currency, r.date,
              ROUND((r.close - prev.close) / NULLIF(prev.close, 0) * 100, 2) AS pct_1d,
              sig.source AS signal_source, sig.detail AS signal_detail,
-             sig.flagged_date AS signal_flagged_date
+             sig.flagged_date AS signal_flagged_date,
+             vip.investor_names AS investor_names
       FROM universe u
       LEFT JOIN ranked r ON r.ticker = u.ticker AND r.exchange = u.exchange AND r.rn = 1
       LEFT JOIN ranked prev ON prev.ticker = u.ticker AND prev.exchange = u.exchange AND prev.rn = 2
       LEFT JOIN v_latest_signal sig ON sig.ticker = u.ticker AND sig.exchange = u.exchange
+      LEFT JOIN v_ticker_investor_positions vip ON vip.ticker = u.ticker AND vip.exchange = u.exchange
       WHERE u.active = 1
       ORDER BY u.ticker ASC;
     `);
@@ -69,6 +72,7 @@ export async function GET() {
       signal_source: r.signal_source as string | null,
       signal_detail: r.signal_detail as string | null,
       signal_flagged_date: r.signal_flagged_date as string | null,
+      investor_names: r.investor_names as string | null,
     }));
     return NextResponse.json(rows);
   } catch (err) {

@@ -24,6 +24,7 @@ interface UniverseRow {
   signal_source: string | null;
   signal_detail: string | null;
   signal_flagged_date: string | null;
+  investor_names: string | null;
 }
 
 interface ScreenerRow {
@@ -43,6 +44,27 @@ interface ScreenerRow {
   signal_source: string | null;
   signal_detail: string | null;
   signal_flagged_date: string | null;
+  investor_names: string | null;
+}
+
+// Master spec Phase 15 — small pill(s) for "which tracked investor(s) hold
+// this ticker right now", from v_ticker_investor_positions (comma-joined
+// investor_names). Separate from SourceSignalBadge/signal_source: that
+// column shows only the single MOST RECENT signal per ticker, so an
+// investor holding can get silently crowded out by a newer
+// magic-formula-pass/llm-research signal on the same ticker.
+function InvestorBadges({ names }: { names: string | null }) {
+  if (!names) return <span style={{ color: "var(--text-muted)" }}>—</span>;
+  return (
+    <span className="flex flex-wrap gap-1">
+      {names.split(",").map((name) => (
+        <span key={name} className="px-2 py-0.5 rounded text-xs font-semibold whitespace-nowrap"
+          style={{ backgroundColor: "rgba(167,139,250,0.15)", color: "#a78bfa" }}>
+          🟣 {name}
+        </span>
+      ))}
+    </span>
+  );
 }
 
 interface ConvergenceRow {
@@ -412,6 +434,7 @@ export default function WatchlistPage() {
                 <SortHeader label="MACD" field="macd_signal" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
                 <SortHeader label="Rating" field="technical_rating" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
                 <SortHeader label="Signal" field="signal_source" sortField={uSortField} sortDir={uSortDir} onSort={handleUSort} />
+                <th className="text-left px-3 py-2 text-xs font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>Investors</th>
                 <th className="text-left px-3 py-2 text-xs font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>Notes</th>
               </tr>
             </thead>
@@ -431,6 +454,7 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2">
                     {r.signal_source ? <SourceSignalBadge source={r.signal_source} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
                   </td>
+                  <td className="px-3 py-2"><InvestorBadges names={r.investor_names} /></td>
                   <td className="px-3 py-2">
                     <NotesCell ticker={r.ticker} exchange={r.exchange} value={r.notes}
                       onSaved={(notes) => updateNotes(r.ticker, r.exchange, notes)} />
@@ -458,6 +482,7 @@ export default function WatchlistPage() {
                 <SortHeader label="Div %" field="div_yield" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Passes" field="passes_thresholds" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Signal" field="signal_source" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <th className="text-left px-3 py-2 text-xs font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>Investors</th>
               </tr>
             </thead>
             <tbody>
@@ -477,6 +502,7 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2">
                     {r.signal_source ? <SourceSignalBadge source={r.signal_source} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
                   </td>
+                  <td className="px-3 py-2"><InvestorBadges names={r.investor_names} /></td>
                 </tr>
               ))}
             </tbody>
