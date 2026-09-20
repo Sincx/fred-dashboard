@@ -14,19 +14,23 @@ interface Portfolios {
   equity: PortfolioPayload;
   trading: PortfolioPayload;
   burry: PortfolioPayload;
+  buffett: PortfolioPayload;
+  ackman: PortfolioPayload;
   recommended: PortfolioPayload;
   equityCurve: EquityCurvePoint[];
   briefing: string;
   spyBenchmark: SpyBenchmark | null;
 }
 
-type Tab = "p1" | "equity" | "trading" | "burry" | "recommended" | "briefing";
+type Tab = "p1" | "equity" | "trading" | "burry" | "buffett" | "ackman" | "recommended" | "briefing";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "p1", label: "Paper Trading" },
   { id: "equity", label: "Equity Portfolio" },
   { id: "trading", label: "Trading Portfolio" },
   { id: "burry", label: "Michael Burry (Shadow)" },
+  { id: "buffett", label: "Warren Buffett (Shadow)" },
+  { id: "ackman", label: "Bill Ackman (Shadow)" },
   { id: "recommended", label: "Recommended Trades" },
   { id: "briefing", label: "Morning Briefing" },
 ];
@@ -1202,6 +1206,14 @@ export default function PortfoliosPage() {
           ) : tab === "burry" ? (
             <div className="card">
               <TradingPortfolioView portfolio={data.burry} spyBenchmark={null} />
+            </div>
+          ) : tab === "buffett" ? (
+            <div className="card">
+              <TradingPortfolioView portfolio={data.buffett} spyBenchmark={null} />
+            </div>
+          ) : tab === "ackman" ? (
+            <div className="card">
+              <TradingPortfolioView portfolio={data.ackman} spyBenchmark={null} />
             </div>
           ) : tab === "recommended" ? (
             <div className="card">

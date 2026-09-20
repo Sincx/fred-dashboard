@@ -313,11 +313,17 @@ export async function GET() {
   try {
     const client = getTursoClient();
     const fx = await loadFxTable(client);
-    const [p1, equity, trading, burry, recommended, equityCurve, spyBenchmark] = await Promise.all([
+    const [p1, equity, trading, burry, buffett, ackman, recommended, equityCurve, spyBenchmark] = await Promise.all([
       fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)", fx, "USD"),
       fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio", fx, "GBP"),
       fetchPortfolio(client, "trading-portfolio", "Trading Portfolio", fx, "EUR"),
       fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)", fx, "USD"),
+      // Master spec Phase 15 (2026-09-20) — second/third tracked investors,
+      // same 13F -> investor_positions -> shadow_portfolio.py path as Burry
+      // (see investors.py/shadow_portfolio.py), just sourced from Equibles
+      // 13F data instead of wiki prose extraction.
+      fetchPortfolio(client, "buffett-shadow", "Warren Buffett (Shadow)", fx, "USD"),
+      fetchPortfolio(client, "ackman-shadow", "Bill Ackman (Shadow)", fx, "USD"),
       // Recommended Trades spec (2026-09-19) §3.4 — mechanical shadow of the
       // briefing's own recommendations, EUR like the real Trading Portfolio
       // it mirrors so their net_pnl figures are directly comparable.
@@ -333,7 +339,7 @@ export async function GET() {
       briefing = "Error reading morning-briefing.md";
     }
 
-    return NextResponse.json({ p1, equity, trading, burry, recommended, equityCurve, briefing, spyBenchmark });
+    return NextResponse.json({ p1, equity, trading, burry, buffett, ackman, recommended, equityCurve, briefing, spyBenchmark });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
