@@ -5,6 +5,18 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-21T23:45:00+02:00",
+      "summary": "Memory index updated (second run today) — 0 new top-level pages, 3 new Open Threads, no threads resolved",
+      "content": [
+        "Reviewed log.md since the earlier 2026-09-21T00:00 memory-update run — 5 new same-day entries: a wiki-thinker Monday deep-dive (Finance+Crypto, 2 new connections), a clippings-sorter batch (15 clippings, 15 new Finance source pages), sector-performance-tracker + growth-value-tracker weekly runs, and a portfolio-management-briefing (18 positions)",
+        "Updated the Meta domain row with the 09-21 wiki-thinker highlight: a Ceres Power short-interest flag maps to idea-bloom-energy.md's competitor gap, and a Guardian AI-slowdown clipping grounds AI & Tech's abstract token-pricing margin-compression line",
+        "Updated the Finance domain row with: clippings-sorter results (13 Morningstar + 1 Burry + 2 Guardian pages; watchlist gained GOOGL/MDLZ/TSLA/STR), sector-tracker (SPY P/E 25.15x, SMH/XLE/CIBR YTD leaders, 3 valuation-band crossings), growth-value-tracker (value/growth spread compressed 234bps), and the briefing (18 positions, LULU trimmed 46% on patience-override, FLUT new Exit unexecuted on commission cost, check_data_quality.py hung with zero output)",
+        "Added 3 new Open Threads: Ceres Power/idea-bloom-energy cross-link, Guardian AI-slowdown/token-pricing cross-link, and the check_data_quality.py hang (25+ min, 78+ processes, needs investigation before next run)",
+        "Spot-checked wiki/index.md for unindexed new pages — clippings-sorter's own log confirms it already wired all 15 new pages + morningstar-watchlist.md itself, no separate fix needed; no naming/convention changes found; no Open Threads resolved this run",
+        "Bumped run counts (wiki-thinker 58→59); appended a second memory-update log line to log.md for today"
+      ]
+    },
+    {
       "runAt": "2026-09-21T00:00:00+02:00",
       "summary": "Memory index updated — 0 new pages, 1 new Open Thread (Magic Formula pipeline redundancy), no threads resolved",
       "content": [
@@ -15,19 +27,6 @@
         "Added 1 new Open Thread: the Magic Formula pipeline redundancy/misdiagnosis, needs manual identification of the actually-broken pipeline",
         "Spot-checked wiki/index.md for unindexed new pages — found none (no ingest/new-page log entries since 09-19); no naming/convention changes found; no Open Threads resolved this run",
         "Bumped 'Last updated' date to 2026-09-21; appended one memory-update log line to log.md"
-      ]
-    },
-    {
-      "runAt": "2026-09-19T23:53:23+02:00",
-      "summary": "Memory index updated — 0 new pages needing top-level rows, 1 new Open Thread, no threads resolved",
-      "content": [
-        "Reviewed log.md since the 2026-09-18 memory-update — 3 new dated entries, all 2026-09-19: a Crypto portfolio-refresh (5 prices updated, 1 unavailable, biggest mover LINK +8.41%), a wiki-thinker Saturday full sweep (0 new ideas/1 new connection), and a new podcast page ingest",
-        "Updated the Meta domain row's run count (56→58) and added the 09-19 wiki-thinker highlight: Dividend Talk's new turnaround-vs-value-trap retrospective names the exact judgment call Burry's live, unresolved Build-A-Bear thesis is caught in the middle of — a quiet week otherwise",
-        "Updated the Crypto domain row with the 09-19 portfolio-refresh result (5/6 prices updated, LINK +8.41%)",
-        "Added the new podcast-dividend-talk-art-of-the-turnaround.md page to the Podcasts domain row — confirmed already indexed in wiki/index.md, no missing-page fix needed",
-        "Added 1 new Open Thread: the Dividend Talk turnaround episode vs. Burry's unresolved Build-A-Bear (BBW) thesis, uncross-linked",
-        "Spot-checked wiki/index.md for unindexed new pages — found none; no naming/convention changes found; no Open Threads resolved this run",
-        "Bumped 'Last updated' date to 2026-09-19; appended one memory-update log line to log.md"
       ]
     }
   ]
