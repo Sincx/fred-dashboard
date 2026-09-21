@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-21T00:00:00+02:00",
+      "summary": "Memory index updated — 0 new pages, 1 new Open Thread (Magic Formula pipeline redundancy), no threads resolved",
+      "content": [
+        "Reviewed log.md since the 2026-09-19 memory-update — 3 new dated entries, all 2026-09-20: a wiki-thinker Sunday deep-dive on Work (1 new idea, 0 connections), a weekly Finance/Strategy Feedback review (7 strategies judged, Strategy B downgraded from 'above' to 'in-line'), and an mf-update Magic Formula run (top 3 unchanged: MGNS, DNLM, GSK)",
+        "Key finding: the Strategy Feedback review flagged the Magic Formula screen as 'stale' and called it a pipeline issue, but the same-day wiki-thinker run traced this further and found three separate, redundant Magic Formula pipelines exist, with the wrong one actually stalled (the one mf-update runs is current)",
+        "Updated the Finance domain row's Magic Formula note with this finding and flagged that the Finance/Strategy Feedback review task itself (seen weekly, 09-13 and 09-20) is not yet documented in the Scheduled Maintenance table",
+        "Updated the Meta domain row's newest-first highlight list with the 09-20 wiki-thinker entry",
+        "Added 1 new Open Thread: the Magic Formula pipeline redundancy/misdiagnosis, needs manual identification of the actually-broken pipeline",
+        "Spot-checked wiki/index.md for unindexed new pages — found none (no ingest/new-page log entries since 09-19); no naming/convention changes found; no Open Threads resolved this run",
+        "Bumped 'Last updated' date to 2026-09-21; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-19T23:53:23+02:00",
       "summary": "Memory index updated — 0 new pages needing top-level rows, 1 new Open Thread, no threads resolved",
       "content": [
@@ -15,20 +28,6 @@
         "Added 1 new Open Thread: the Dividend Talk turnaround episode vs. Burry's unresolved Build-A-Bear (BBW) thesis, uncross-linked",
         "Spot-checked wiki/index.md for unindexed new pages — found none; no naming/convention changes found; no Open Threads resolved this run",
         "Bumped 'Last updated' date to 2026-09-19; appended one memory-update log line to log.md"
-      ]
-    },
-    {
-      "runAt": "2026-09-18T23:58:00+02:00",
-      "summary": "Second run today — caught 4 items the earlier 09-18 run missed (a same-day wiki-thinker entry, a 09-15 book batch, and 2 more 09-18 task runs), added 4 new Open Threads",
-      "content": [
-        "log.md's own out-of-order append quirk struck again: today's earlier memory-update (10:44am) had already run and bumped the header date, but a wiki-thinker entry landed at the very top of log.md AFTER that update completed — this run's job was to catch what that timing gap missed",
-        "Added the 09-18 wiki-thinker run to the Meta domain row's highlight list: September's book-recommender batch supplies both this cycle's finds — Sorkin's '1929' vs. the wiki's thin single-datapoint 1929-crash comparison in the AI-bubble pages, and Sekirin's 'Rise of the Machines' re-surfacing the still-open Fire-Point-Ukraine/defence-manufacturing gap; also noted a scheduler outage blocked most tasks 09-16/09-17",
-        "Added the 09-15 book-recommender run to the Books domain row with all 4 titles (1929, Money Men, Rise of the Machines, Angel Down) — this had been skipped entirely by the earlier run today",
-        "Updated the Finance domain row: Paper Trading P1's latest trade is now 09-18 (MO entered, LAD exited), with a note that 09-15/16/17 were skipped due to a local MCP server connect-timeout; Live trading portfolio position count updated 15→18 (15 long/1 short/2 options) per the 09-18 briefing, flagging that the briefing's own signals are provisional since refresh-technicals had gone stale since 09-14",
-        "Added the 09-18 recipe-recommender run to the Cooking domain row",
-        "Added 4 new Open Threads: 2 for today's wiki-thinker book connections (Sorkin/1929-bubble-pages, Sekirin/Fire-Point-Ukraine), 1 for the 09-15/16/17 scheduler+MCP disruption itself (worth confirming nothing else silently missed the window), and verified no threads were fully resolved this run",
-        "Did not attempt the large Finance-row cleanup a prior run's summary claimed to have done — on inspection the row is still ~8KB of appended daily detail, so that trim either didn't actually land or was reverted; flagging for a future dedicated pass rather than risking a rushed edit tonight",
-        "Appended one memory-update log line to log.md (header date unchanged — already 2026-09-18 from the earlier run)"
       ]
     }
   ]
