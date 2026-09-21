@@ -5,12 +5,12 @@
     "icon": "📎",
     "runs": [
         {
-            "runAt": "2026-09-19T23:19:42.6086371+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
+            "runAt": "2026-09-21T09:24:17.7256047+02:00",
+            "summary": "15 clippings processed (2 duplicates)",
+            "content": "13 Morningstar + 1 Burry + 2 Guardian pieces ingested to wiki/finance. 2 exact-URL duplicates deleted (already in raw/finance). Watchlist adds: GOOGL ($433 FV), MDLZ (19% disc.), TSLA (19% disc.), STR (quant 4-star); NVDA/AVGO data refreshed. Pipeline config: STR added to Morningstar-EU group. 23 reverse links added across existing pages."
         },
         {
-            "runAt": "2026-09-18T10:39:46.5481845+02:00",
+            "runAt": "2026-09-19T23:19:42.6086371+02:00",
             "summary": "No new clippings",
             "content": "Clippings folder empty."
         }
