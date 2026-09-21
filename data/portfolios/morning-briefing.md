@@ -128,19 +128,23 @@ PORTFOLIO RISKS TO WATCH
   - Tech/Enterprise Software concentration (~26% of portfolio across SAP/ACN/ADBE) is the largest single
     thematic bucket, above the threshold used to flag single-position risk. No further Tech adds recommended
     until this comes down or the rest of the portfolio grows around it.
-  - check_data_quality.py (Step 0 row-level check) did not complete within this run — it was still running
-    after 25+ minutes with dozens of retry subprocesses spawned and zero output, which looks stuck rather
-    than just rate-limited. Row-level data quality for today's run is therefore UNCONFIRMED — treat any single
-    ticker's numbers with slightly more caution than usual until this is investigated. (Pipeline-level health
-    via check_pipeline_health.py did pass cleanly — this is a narrower, row-level gap.)
+  - check_data_quality.py (Step 0 row-level check) finished late — it took ~45 minutes and 78 concurrent
+    retry subprocesses (output was fully buffered so it looked hung; it wasn't). Result: 209 AUTO-RECOVERED,
+    105 STILL FAILING, 103 flagged NEEDS MANUAL REVIEW (3+ consecutive days) — all in the broader ~1,350-ticker
+    universe (mostly obscure EU/Nordic names: HLI, FERR, ATCOa, ERICb, SRENH, etc.). None of today's 15
+    holdings or the 3 new candidates (MO, VK, APA) appear in either failing list — SAP, EDEN, WKL and VK
+    specifically show up as AUTO-RECOVERED, so today's numbers for those four are confirmed good, not just
+    assumed. The 103 NEEDS MANUAL REVIEW tickers are a real, recurring data-source gap worth a dedicated look,
+    but don't affect this portfolio.
   - US market data (7 of 15 long positions, the ORCL short, and both options) is still Friday 2026-09-18's
     close as of this run, since the US market hasn't opened yet — re-check once fresh US prices land.
 
 NEXT ACTIONS
-  1. Investigate why check_data_quality.py hung (78+ python processes, 25+ min, zero output) — likely a
-     retry-storm or a stuck API call in retry_ticker.py; worth a dedicated look outside this briefing's flow.
-  2. Reassess LULU's remaining 7 shares once US market data refreshes today — Exit signal still active.
-  3. Review the 3 new pending trade ideas (MO, VK, APA) in the dashboard's Pending Trade Ideas panel.
-  4. SFM's freshly re-triggered Exit signal — reassess by ~2026-10-05 if it hasn't cleared.
-  5. GSK earnings 2026-10-28, SFM earnings 2026-10-28 — no action yet, just tracking.
+  1. Reassess LULU's remaining 7 shares once US market data refreshes today — Exit signal still active.
+  2. Review the 3 new pending trade ideas (MO, VK, APA) in the dashboard's Pending Trade Ideas panel.
+  3. SFM's freshly re-triggered Exit signal — reassess by ~2026-10-05 if it hasn't cleared.
+  4. GSK earnings 2026-10-28, SFM earnings 2026-10-28 — no action yet, just tracking.
+  5. Separately worth a look: 103 tickers flagged NEEDS MANUAL REVIEW in today's data quality check (3+
+     consecutive-day failures, mostly EU/Nordic names) — likely a fixable source/mapping issue, not
+     portfolio-relevant today but a recurring pipeline gap.
 ════════════════════════════════════════════════════════
