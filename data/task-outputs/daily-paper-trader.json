@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-21T23:55:02+02:00",
+      "summary": "FTNT (B)",
+      "picks": {
+        "p1": {
+          "ticker": "FTNT",
+          "strategy": "B — Momentum",
+          "entry": 169.84,
+          "stop": 144.36,
+          "t1": 212.30,
+          "t2": 254.76
+        }
+      },
+      "content": "Fortinet picked up at today's previous close ($169.84) — Q2 2026 revenue +26% YoY beat, named a Leader in the 2026 Gartner Magic Quadrant for Hybrid Mesh Firewall, riding a broad cybersecurity-sector rally (Zscaler +16%+, FTNT +9% Sept 14) on AI-agent-security demand distinct from Burry's AI-capex short thesis. PEP was exited discretionarily (−8.58%, −$86) to keep the book at 35 open positions after FTNT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AMAT recovered sharply on today's chip-sector rally, from −8.90% to −2.97%, clearing the Burry sector-warning signal-exit concern flagged yesterday. EVTC is now the weakest continuing position at −7.09%, no Burry conflict. Portfolio net P&L: +$1,436 (+2.28% on $63,000)."
+    },
+    {
       "runAt": "2026-09-18T10:55:20+02:00",
       "summary": "MO (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Altria picked up at today's previous close ($70.04) — Magic Formula screen (P/E 14.3, earnings yield 11.43%, ROIC 46.1%), ~6.3% dividend yield just raised 4.7% YoY, Trefis fair value lifted to $52.11 with sell-side targets to $72, and a reduced regulatory overhang after Altria's FDA lawsuit and an ITC patent-probe win. Note: no run 2026-09-15/16/17 (all four local self-hosted MCP servers failed to connect on this task's session). LAD was exited discretionarily (−14.40%, −$144) to keep the book at 35 open positions after MO's entry — it closed just $2.27 (0.7%) above its own hard stop after a sharp Sept 17 drop with no reversing catalyst found. No mechanical stop-losses or signal exits on the other 34 continuing positions; AMAT is now the weakest continuing position at −8.90% (Burry Sector Warning, semis), closing in on but not past the −10% signal line. Portfolio net P&L: +$1,720 (+2.77% on $62,000)."
-    },
-    {
-      "runAt": "2026-09-14T23:46:28+02:00",
-      "summary": "HUM (B)",
-      "picks": {
-        "p1": {
-          "ticker": "HUM",
-          "strategy": "B — Momentum",
-          "entry": 415.54,
-          "stop": 353.21,
-          "t1": 519.43,
-          "t2": 623.31
-        }
-      },
-      "content": "Humana picked up at today's entry ($415.54) — up +33.71% over 3 months (not extended), FY2026 adjusted EPS guidance reaffirmed at ≥$9.00, BofA price target raised to $510, Zacks Rank #1; managed care/healthcare directly aligns with Burry's defensive preference. AVGO was exited discretionarily (−6.15%, −$62) to keep the book at 35 open positions after HUM's entry — no mechanical stop-losses or signal exits on the other 34 continuing positions, all repriced identically to Friday's close since Monday's own session hadn't settled at run time. DHI is now the weakest continuing position at −5.56%, no Burry conflict. Portfolio net P&L: +$1,841 (+3.02% on $61,000)."
     }
   ]
 }
