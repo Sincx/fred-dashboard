@@ -5,6 +5,20 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-22T23:56:41+02:00",
+      "summary": "Memory index updated — 0 new top-level pages, 2 new Open Threads, 1 thread superseded with a confirmed finding, no threads fully resolved",
+      "content": [
+        "Reviewed log.md since the 2026-09-21 memory-update — 5 new dated entries: two 2026-09-22 portfolio-management-briefing runs (morning + a legitimate 23:40 CEST second slot), a Tuesday wiki-thinker deep-dive (AI & Tech + Technology, 1 idea/1 connection), and an IAG paper-trade entry",
+        "Updated the Meta domain row with the 09-22 wiki-thinker highlight: AI & Tech's Uptime Institute page and Michael Burry's SBC-normalisation framework both flag the same 'flattering headline metric without a stricter denominator' problem, uncross-linked",
+        "Updated the Finance domain row: position count jumped 18→22 after a data-integrity catch-up found 4 trades (META, ERO, QXO-PB, a META call) written to Turso on 09-21 but never reflected on the wiki page or that day's briefing (true 09-21 cash was €1,222.86, not €4,704.76 as shown); the evening run found and fixed a real bug where the Options Positions Mkt Value column copied Turso's native-USD figure into the EUR column, overstating net value by ~€172 (corrected to ≈€18,512)",
+        "Added a new Key Decision documenting the Options Mkt Value USD/EUR bug fix, so a future ~€170 net-value discrepancy is checked against this fix first rather than re-investigated from scratch",
+        "Superseded the 09-21 Open Thread about check_data_quality.py hanging with zero output — the retry pass now completes and confirms a real, growing batch-fetch bug: 104→106 EU-exchange tickers failing 7-8 consecutive days (none are current holdings/candidates, but flagged for a dedicated fix)",
+        "Added 1 new Open Thread (AI-Tech/Finance Uptime Institute vs. Burry SBC-normalisation cross-link) and extended the recurring trading-portfolio reconciliation Open Thread with the 09-22 instance — trades landing in Turso without a corresponding wiki/briefing update looks like a repeating failure mode, not one-off drift",
+        "Spot-checked wiki/index.md for unindexed new pages — none created today (only trades and existing-page updates); no naming/convention changes found",
+        "Bumped 'Last updated' date to 2026-09-22; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-21T23:45:00+02:00",
       "summary": "Memory index updated (second run today) — 0 new top-level pages, 3 new Open Threads, no threads resolved",
       "content": [
@@ -14,19 +28,6 @@
         "Added 3 new Open Threads: Ceres Power/idea-bloom-energy cross-link, Guardian AI-slowdown/token-pricing cross-link, and the check_data_quality.py hang (25+ min, 78+ processes, needs investigation before next run)",
         "Spot-checked wiki/index.md for unindexed new pages — clippings-sorter's own log confirms it already wired all 15 new pages + morningstar-watchlist.md itself, no separate fix needed; no naming/convention changes found; no Open Threads resolved this run",
         "Bumped run counts (wiki-thinker 58→59); appended a second memory-update log line to log.md for today"
-      ]
-    },
-    {
-      "runAt": "2026-09-21T00:00:00+02:00",
-      "summary": "Memory index updated — 0 new pages, 1 new Open Thread (Magic Formula pipeline redundancy), no threads resolved",
-      "content": [
-        "Reviewed log.md since the 2026-09-19 memory-update — 3 new dated entries, all 2026-09-20: a wiki-thinker Sunday deep-dive on Work (1 new idea, 0 connections), a weekly Finance/Strategy Feedback review (7 strategies judged, Strategy B downgraded from 'above' to 'in-line'), and an mf-update Magic Formula run (top 3 unchanged: MGNS, DNLM, GSK)",
-        "Key finding: the Strategy Feedback review flagged the Magic Formula screen as 'stale' and called it a pipeline issue, but the same-day wiki-thinker run traced this further and found three separate, redundant Magic Formula pipelines exist, with the wrong one actually stalled (the one mf-update runs is current)",
-        "Updated the Finance domain row's Magic Formula note with this finding and flagged that the Finance/Strategy Feedback review task itself (seen weekly, 09-13 and 09-20) is not yet documented in the Scheduled Maintenance table",
-        "Updated the Meta domain row's newest-first highlight list with the 09-20 wiki-thinker entry",
-        "Added 1 new Open Thread: the Magic Formula pipeline redundancy/misdiagnosis, needs manual identification of the actually-broken pipeline",
-        "Spot-checked wiki/index.md for unindexed new pages — found none (no ingest/new-page log entries since 09-19); no naming/convention changes found; no Open Threads resolved this run",
-        "Bumped 'Last updated' date to 2026-09-21; appended one memory-update log line to log.md"
       ]
     }
   ]
