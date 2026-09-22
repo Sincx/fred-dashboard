@@ -125,13 +125,14 @@ PORTFOLIO RISKS TO WATCH
     worth Mike confirming so future reviews can assess it properly rather than carrying a placeholder.
   - ERO and QXO-PB fall outside the tracked Magic Formula universe — no fundamentals-based signal on
     either until they're added to the pipeline's tracked ticker list.
-  - check_data_quality.py found 804 non-'ok' rows (unusually large) — 696 are a benign, already-
-    resolved "stale by one day" flag (spot-checked: GSK/REL/KLR/EDEN/SAP/WKL/PRX/ZOE/QXO-PB all now
-    show genuine 09-21 closes in the prices table despite the flag), but 106 are real 7-day-consecutive
-    "no bars from yfinance batch" errors on a cluster of EU tickers (none are current holdings or
-    today's candidates). The full auto-retry pass was still running after 18+ minutes and wasn't
-    waited out — worth a dedicated look at why EU yfinance batch fetches are failing for that cluster,
-    and why 696 rows haven't been cleared back to 'ok' despite the underlying data catching up.
+  - check_data_quality.py's full retry pass finished (took ~20 min for 804 rows): 711 auto-recovered
+    (confirmed benign — the same "stale by one day" flag that GSK/REL/KLR/EDEN/SAP/WKL/PRX/ZOE/QXO-PB
+    also carried, now cleared). 108 still failing, 104 of those at 3+ consecutive daily failures — all
+    EU-exchange tickers (BP, DLN, LIN, ROG, ARGX, NGG, MRW, DSM, ASML-adjacent names, ~100 more), all
+    "no bars from yfinance batch", running 6-7 days straight. None are current holdings or today's
+    candidates, but the size and uniformity of this cluster (a large slice of the EU universe, same
+    error, same duration) points to a real batch-fetch bug rather than 104 independent data gaps —
+    worth a dedicated fix, not another daily auto-retry.
 
 NEXT ACTIONS
   1. Confirm the QXO-PB and ERO trade rationale/thesis with Mike so the wiki page's Notes and Burry
