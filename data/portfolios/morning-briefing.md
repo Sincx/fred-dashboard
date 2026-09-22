@@ -1,150 +1,145 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-09-21
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-09-22
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
+⚠ DATA CATCH-UP NOTICE ⚠
+Four trades Mike placed directly into Turso on 2026-09-21 (META long, ERO long, QXO-PB long,
+META $885 call) were never reflected on the wiki page or the 09-21 briefing — discovered and
+backfilled during this review. Cash dropped from the €4,704.76 shown on 09-21 to the true
+€1,222.86 as a result. Not new activity today; see notes below and the wiki page's review note.
+
 PORTFOLIO SNAPSHOT
-  Positions:        18 open (15 long equity, 1 short, 2 options)
-  Total Value:      ~€18,685 (estimated net value; long equity + options mtm + short unrealized P&L + cash)
-  Available Cap:    €4,705 cash (post-LULU trim; €4,196.60 pre-trim + ~€508 net proceeds)
-  Best Performer:   IQV +62.46%
-  Worst Performer:  LULU -16.99% (pre-trim; remaining 7 sh still at this P&L%)
-  Largest Position: SAP (~10.0% of portfolio)
+  Positions:        22 open (18 long equity, 1 short, 3 options)
+  Total Value:      ~€18,605 (estimated net value; long equity + options mtm + short unrealized P&L + cash)
+  Available Cap:    €1,222.86 cash (down from €4,704.76 shown 09-21 — see catch-up notice above)
+  Best Performer:   IQV +64.57%
+  Worst Performer:  SFM -14.35%
+  Largest Position: SAP (~7.0% of portfolio)
 
 POSITION SIGNALS
   ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────┬─────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst          │ MF# │
   ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────┼─────┤
-  │ APH      │ +8.08%     │ 44.1    │ ↓     │ 👀 Watch │ —                 │ 445 │
-  │ IQV      │ +62.46%    │ 61.5    │ ↑     │ 👀 Watch │ ✅ free-ridden    │ 628 │
+  │ APH      │ +12.50%    │ 51.6    │ ↑     │ 👀 Watch │ —                 │ 445 │
+  │ IQV      │ +64.57%    │ 64.3    │ ↑     │ 👀 Watch │ ✅ free-ridden    │ 628 │
   │ KLR      │ +30.13%    │ 62.6    │ ↑     │ Hold     │ ✅ free-ridden    │ 40  │
-  │ SAP      │ +34.98%    │ 55.7    │ ↑     │ 👀 Watch │ —                 │ 310 │
+  │ SAP      │ +35.52%    │ 56.7    │ ↑     │ 👀 Watch │ —                 │ 310 │
   │ GSK      │ -3.07%     │ 52.6    │ ↓     │ 👀 Watch │ Earnings 10-28    │ 31  │
-  │ EDEN     │ +6.52%     │ 45.4    │ ↓     │ 👀 Watch │ —                 │ —   │
-  │ ACN      │ +19.35%    │ 60.1    │ ↑     │ 👀 Watch │ —                 │ —   │
-  │ ADBE     │ -0.37%     │ 42.4    │ ↓     │ 👀 Watch │ —                 │ 26  │
-  │ FLUT     │ -2.76%     │ 34.9    │ ↓     │ 🔴 Exit  │ Earnings 11-12    │ —   │
-  │ PRX      │ -12.15%    │ 43.2    │ ↓     │ 👀 Watch │ rolled off Exit   │ 582 │
-  │ WKL      │ -4.53%     │ 49.4    │ ↑     │ 👀 Watch │ —                 │ 69  │
-  │ LULU     │ -16.99%    │ 36.5    │ ↓     │ 🔴 Exit  │ Trimmed today     │ 18  │
-  │ SFM      │ -11.69%    │ 36.5    │ ↓     │ 🔴 Exit  │ re-triggered      │ 163 │
+  │ EDEN     │ +6.67%     │ 45.7    │ ↑     │ 👀 Watch │ —                 │ —   │
+  │ ACN      │ +14.88%    │ 54.7    │ ↑     │ 👀 Watch │ —                 │ —   │
+  │ ADBE     │ -0.13%     │ 42.8    │ ↓     │ 👀 Watch │ —                 │ 26  │
+  │ FLUT     │ -5.69%     │ 32.1    │ ↓     │ 🔴 Exit  │ Earnings 11-12    │ —   │
+  │ PRX      │ -12.15%    │ 43.2    │ ↓     │ 👀 Watch │ off Exit 09-21    │ 582 │
+  │ WKL      │ -4.61%     │ 49.2    │ ↑     │ 👀 Watch │ —                 │ 69  │
+  │ LULU     │ -14.25%    │ 41.3    │ ↓     │ 👀 Watch │ rolled off Exit   │ 18  │
+  │ SFM      │ -14.35%    │ 33.5    │ ↓     │ 🔴 Exit  │ reassess ~10-05   │ 163 │
   │ ZOE      │ -0.85%     │ 42.6    │ ↓     │ 👀 Watch │ —                 │ —   │
   │ REL      │ -4.41%     │ 43.1    │ ↓     │ 👀 Watch │ —                 │ 184 │
-  │ ORCL(sh) │ +1.52%     │ 49.7    │ ↑     │ 👀 Watch │ —                 │ 622 │
+  │ ORCL(sh) │ +0.89%     │ 50.5    │ ↑     │ 👀 Watch │ —                 │ 622 │
+  │ META     │ -0.62%     │ 77.9 ⚠ │ ↑     │ Hold     │ NEW 09-21, see ⚠ │ 260 │
+  │ ERO      │ -0.32%     │ 50.7    │ ↑     │ 👀 Watch │ NEW 09-21         │ —   │
+  │ QXO-PB   │ +1.88%     │ 46.8    │ ↓     │ 👀 Watch │ NEW 09-21         │ —   │
   └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────┴─────┘
-  Note: MF# now comes from the full ~1,350-ticker universe (v_magic_formula_latest), same ranking Step 6's
-  screener uses — numbers will not match the old per-holding `mf-update` table further down this page (e.g.
-  GSK was #3 there, is #31 here; LULU #5 → #18; ADBE #6 → #26). Expected on this cutover, not an error.
-  Data freshness split: EU/UK names (SAP, GSK, EDEN, ACN, PRX, WKL, ZOE, REL, KLR) carry genuine same-day
-  2026-09-21 prices (those markets are open). US names (APH, IQV, ADBE, FLUT, LULU, SFM) and ORCL short/options
-  still carry Friday 2026-09-18's close — US market hasn't opened yet as of this run.
+  All 18 long positions plus the ORCL short now carry genuine same-day 2026-09-21 closes (US/EU/UK
+  all caught up — no more freshness split, unlike the last several briefings).
+  META RSI 77.9 is extended/overbought but the position is far under the 20% weight threshold that
+  would trigger a mechanical Trim signal — flagged for manual attention, not a system signal.
+  ERO and QXO-PB fall outside the ~1,350-ticker Magic Formula universe (MF# "—") — no fundamentals
+  read on these yet.
 
 PORTFOLIO SHAPE
-  Concentration:   OK (largest is SAP at ~10.0%, well under the 25% warning threshold)
-  Sector spread:   Tech/Enterprise (SAP+ACN+ADBE) ~26.2% | Healthcare/CRO (IQV+GSK) ~14.2% |
-                   European/Fintech (EDEN) ~9.9% | International/SOTP (PRX) ~8.4% |
-                   AI-infra indirect (APH) ~7.3% | UK Industrials (KLR) ~2.8% |
-                   Sports Betting (FLUT) ~0.6% | Other/uncategorized (WKL, LULU, SFM, ZOE, REL) ~33%
-  Currency split:  USD ~35% | GBp ~17% | EUR ~51% (approx, before rounding)
+  Concentration:   OK (largest is SAP at ~7.0%, well under the 25% warning threshold)
+  Sector spread:   Tech/Enterprise (SAP+ACN+ADBE) ~18.1% | Other (WKL/LULU/SFM/ZOE/REL) ~20.5% |
+                   New/uncategorized (META+ERO+QXO-PB) ~17.3% | Healthcare/CRO (IQV+GSK) ~9.9% |
+                   European/Fintech (EDEN) ~6.8% | Intl/SOTP (PRX) ~5.8% | AI-infra indirect (APH) ~5.3% |
+                   UK Industrials (KLR) ~2.0% | Sports Betting (FLUT) ~0.4%
+  Currency split:  USD ~45.5% | EUR ~41.1% | GBp ~13.4% (of long equity value)
 
-  Tech/Enterprise Software at ~26% is now the single largest thematic bucket and sits above the same 25%
-  threshold used to flag single-position concentration — not a mechanical WARNING (no rule covers sector
-  concentration), but worth watching. This is why today's new-position screen (HPQ, Technology, 4/5 score)
-  was passed over in favour of Consumer Staples/Materials/Energy candidates below.
+  The "New/uncategorized" bucket (META, ERO, QXO-PB, ~17.3%) reflects three trades placed directly
+  by Mike on 2026-09-21, outside this task's own candidate screen — sector fit for QXO-PB in
+  particular isn't fully confirmed (see Next Actions). META alone adds real AI-infrastructure /
+  circular-financing exposure (Burry Lens) on top of the existing APH/SAP/ACN/ADBE indirect exposure,
+  and its accompanying $885 call compounds rather than hedges that exposure.
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  LULU: Trim 46% (6 of 13 sh) at $98.06 — EXECUTED today, synced to Turso.
-  Rationale: mechanical Exit signal (RSI 36.5, below SMA50, MACD bearish) has now persisted since ~09-08
-  with no reversal (contrast PRX and GSK, which both rolled off their Exit signals this cycle). The wiki's
-  own patience-override reassess-by date (~2026-09-22) arrives tomorrow, and this remains the "no stop-loss"
-  top portfolio risk flagged every prior review. Trimming to 46% (within the 50% patience-override cap)
-  cuts risk while preserving the Burry-thesis optionality on the remaining 7 shares — Burry's own stated
-  entry trigger ("buy more aggressively under $100") is satisfied at today's $98.06, so the remainder is
-  being kept deliberately, not just left on autopilot.
-  Gross proceeds: 6 × $98.06 = $588.36 | Commission: -$5.00 | Net proceeds: $583.36 (~€508)
-  Gross P&L on trimmed shares: $583.36 − $708.78 (6 sh cost basis @ $118.13) = -$125.42 (a LOSS)
-  CGT: €0 (no tax on realised losses) | Net: -$125.42 (~-€109)
-  Remaining position: 7 sh, cost basis $826.91, still carrying the mechanical Exit signal — reassess again
-  once US market data refreshes.
-
-  FLUT: No action — 🔴 Exit signal active (RSI 34.9, below SMA50, MACD bearish) but NOT executed.
-  Rationale: only 1 share remains ($89.56 notional); a $5 commission is 5.6% of trade value, far above the
-  1% minimum-viable-trade-size threshold. Also user-designated free-to-ride per Mike's prior call, with the
-  Burry-aligned anti-prediction-markets thesis intact. Hold.
-
-  SFM: No action — 🔴 Exit signal newly re-triggered (RSI dipped back to 36.5 from >40 as of 09-18).
-  Rationale: this is day 1 of a fresh trigger (it briefly rolled off Watch just three sessions ago), not a
-  prolonged breakdown like LULU's. Applying a fresh patience-override: hold, reassess by ~2026-10-05 if the
-  signal hasn't cleared by then. No near-term catalyst (next earnings 2026-10-28).
+  No trades executed today.
+  FLUT: mechanical Exit persists (RSI 32.1, below SMA50, MACD bearish) — still not viable to execute;
+  1 share at $86.86, $5 commission = 5.8% of trade value, well above the 1% minimum-viable-trade
+  threshold. Free-to-ride designation stands. Hold.
+  SFM: mechanical Exit persists (re-triggered 2026-09-21) — day 2 of a fresh 10-trading-day patience
+  window. Hold, reassess by ~2026-10-05.
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No Add signals triggered today (RSI 35–50 AND above SMA50 AND MACD bullish — none of the 15 long
-  positions met all three conditions).
+  No Add signals triggered today.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  See INVESTMENT OPPORTUNITIES below — 3 candidates recorded to the Pending Trade Ideas queue for review;
-  none executed today (per the new workflow, this task records ideas, execution is Mike's call).
+  No trades today / Capital held in reserve: available cash (€1,222.86) is now genuinely scarce —
+  below the €1,500 target size for today's top screened candidate (MO). See INVESTMENT OPPORTUNITIES
+  below for all 3 ideas, recorded to the Pending Trade Ideas queue for execution once cash frees up
+  (next free-ride trim, patience-window exit, or fresh deposit).
 
 INVESTMENT OPPORTUNITIES
-  5/5 · MO (SP500, Consumer Staples) — Magic Formula pass, P/E 14.3x, Div yield 6.54% | MF#9
-  Entry: $69.52 (current) | Stop: $67.42 (entry − 1.5×ATR14, ATR≈$1.40) | Size: €1,500 | RSI: 57.9 | MACD: Bullish
-  Conviction: MF#9; Magic Formula pass; corroborated by independent llm-research signal (not just the
-  screener's own pass/fail); bullish MACD; RSI healthy at 58.
-  Portfolio fit: Consumer Staples is currently at 0% weight (CPB exited 09-08) — genuine diversification,
-  no currency or sector conflict.
+  5/5 · MO (SP500, Consumer Staples) — MF pass, P/E 14.3, Earnings Yield 11.43%, ROIC 46.1% | MF#9
+  Entry: $68.53 | Stop: $66.47 | Size: €1,500 | RSI: 52.1 | MACD: Bullish
+  Conviction: MF#9; Magic Formula pass; corroborated by llm-research + a prior briefing-recommendation
+  (repeat candidate, still not executed). RSI healthy at 52, near SMA50 — good entry, not extended.
+  Portfolio fit: Consumer Staples currently 0% held (CPB exited 09-08) — clean diversification. USD,
+  6.5% dividend yield. Would need ~€1,500 of the €1,223 available — doesn't fully fit at target size.
 
-  5/5 · VK (STOXX600, Materials) — Magic Formula pass, P/E 13.8x | MF#42
-  Entry: €19.90 (current) | Stop: ~€18.90 (approx. 5% below entry — ATR14 unavailable; this EU-listed
-  ticker has no bar history via the pipeline's US-centric market data source) | Size: €1,500 | RSI: 62.3 | MACD: Bullish
-  Conviction: MF#42; Magic Formula pass; bullish MACD; RSI 62 (healthy, not yet overbought).
-  Portfolio fit: zero existing Materials exposure; also helps counterweight the ~26% Tech/Enterprise
-  concentration flagged above by adding to a different sector and currency (EUR, already the largest
-  currency bucket at 51% — a mild offsetting consideration, not a blocker).
+  4/5 · VLO (SP500, Energy) — Technical Buy, P/E 16.3, RSI 63.4 | MF#49 (ranked, no pass)
+  Entry: $393.27 | Stop: $370.94 | Size: €1,000 | RSI: 63.4 | MACD: Bullish
+  Conviction: MF#49; Magic Formula ranked (no pass); bullish MACD; RSI 63.4 — healthy but approaching
+  the upper end of the 40-65 entry band.
+  Portfolio fit: zero Energy exposure currently — genuine diversification. USD (currency split already
+  USD-heavy at ~45.5%, worth watching).
 
-  4/5 · APA (SP500, Energy) — Magic Formula pass, P/E 9.5x, Div yield 2.23% | MF#36
-  Entry: $44.87 (current) | Stop: $42.50 (entry − 1.5×ATR14, ATR≈$1.58) | Size: €1,000 | RSI: 57.4 | MACD: Bearish
-  Conviction: MF#36; Magic Formula pass; bearish MACD is the one blemish (hence 4/5, not 5/5, and normal
-  rather than large sizing); cheapest P/E and highest earnings yield (17.5%) of the three candidates.
-  Portfolio fit: zero existing Energy exposure; USD-denominated (currently 35% of portfolio, room to add).
+  4/5 · BBY (SP500, Consumer Discretionary) — Technical Buy, P/E 14.6, div yield 4.36% | MF#48 (ranked, no pass)
+  Entry: $93.22 | Stop: $88.62 | Size: €1,000 | RSI: 61.3 | MACD: Bullish
+  Conviction: MF#48; Magic Formula ranked (no pass); bullish MACD; RSI healthy at 61.
+  Portfolio fit: no Consumer Discretionary exposure currently held (WOSG/DNLM both closed 09-08).
 
-  (HPQ scored 4/5 but was passed over — Technology sector, and Tech/Enterprise is already the largest
-  thematic bucket at ~26%. KLR also screened but is already held.)
+  Note: HPQ and GDDY (both Technology, MF#29/#37, score 4/5) were also on today's screen but passed
+  over in favour of Energy/Consumer Discretionary diversification — Tech/Enterprise is already ~18.1%
+  of the book and META adds further tech-adjacent exposure.
 
 FREE RIDE OPPORTUNITIES
-  IQV: ✅ Already free-ridden — all 3 remaining shares at zero effective cost (cumulative trim proceeds
-  $2,117.62 vs. $1,967.88 original cost basis). Current value: ~€696.
-  KLR: ✅ Already free-ridden — all 10 remaining shares at zero effective cost (cumulative trim proceeds
-  £1,326.40 vs. £1,209.00 original cost basis). Current value: ~€367.
-  Status: Monitor — hold thesis, no action needed on either; both already fully covered.
-  No newly-triggered free ride opportunities today (EDEN has 2 sellable-free shares but P&L is only 6.5%,
-  well under the 25% threshold; SAP/ACN don't clear 2 free shares at current prices).
+  IQV: ✅ Already free-ridden — cumulative trim proceeds ($2,117.62 across 4 trims) exceed the original
+  $1,967.88 cost basis; all 3 remaining shares at zero effective cost. Current value: ~€706.
+  KLR: ✅ Already free-ridden — gross trim proceeds (£1,326.40) exceed the original £1,209.00 cost
+  basis; all 10 remaining shares at zero effective cost. Current value: ~€367.
+  SAP: P&L +35.5% clears the 25% threshold but free_shares = 1 (shares_to_sell = 6 of 7) — below the
+  free_shares ≥ 2 flag criteria. Not a free ride opportunity yet; would need further appreciation.
 
 PORTFOLIO RISKS TO WATCH
-  - LULU remains the top portfolio risk even after today's trim: the remaining 7 shares still carry no
-    stop-loss and an active mechanical Exit signal. Burry's own thesis (buy more under $100) is now
-    satisfied by price, creating a real tension between risk management and conviction — reassess again
-    once fresh US pricing lands.
-  - Tech/Enterprise Software concentration (~26% of portfolio across SAP/ACN/ADBE) is the largest single
-    thematic bucket, above the threshold used to flag single-position risk. No further Tech adds recommended
-    until this comes down or the rest of the portfolio grows around it.
-  - check_data_quality.py (Step 0 row-level check) finished late — it took ~45 minutes and 78 concurrent
-    retry subprocesses (output was fully buffered so it looked hung; it wasn't). Result: 209 AUTO-RECOVERED,
-    105 STILL FAILING, 103 flagged NEEDS MANUAL REVIEW (3+ consecutive days) — all in the broader ~1,350-ticker
-    universe (mostly obscure EU/Nordic names: HLI, FERR, ATCOa, ERICb, SRENH, etc.). None of today's 15
-    holdings or the 3 new candidates (MO, VK, APA) appear in either failing list — SAP, EDEN, WKL and VK
-    specifically show up as AUTO-RECOVERED, so today's numbers for those four are confirmed good, not just
-    assumed. The 103 NEEDS MANUAL REVIEW tickers are a real, recurring data-source gap worth a dedicated look,
-    but don't affect this portfolio.
-  - US market data (7 of 15 long positions, the ORCL short, and both options) is still Friday 2026-09-18's
-    close as of this run, since the US market hasn't opened yet — re-check once fresh US prices land.
+  - Cash is now genuinely scarce (~€1,223), below the size needed for even the top-conviction new
+    candidate (MO, €1,500 target) — new entries will likely have to wait for a free-ride trim, a
+    patience-window exit (FLUT/SFM), or a fresh deposit.
+  - META combines an extended RSI (77.9) with a bullish $885 call on the same name expiring in under
+    3 weeks (currently ~16% OTM) — concentrated, compounding AI-infra exposure with no hedge; a
+    pullback would hit both legs at once, and the call carries real risk of expiring worthless.
+  - FLUT (1 share) remains economically stuck — Exit signal active but too small to trim without
+    commission eating most of the value; SFM's patience window runs to ~2026-10-05.
+  - QXO-PB's investment thesis isn't yet documented on the wiki page (best-effort sector read only) —
+    worth Mike confirming so future reviews can assess it properly rather than carrying a placeholder.
+  - ERO and QXO-PB fall outside the tracked Magic Formula universe — no fundamentals-based signal on
+    either until they're added to the pipeline's tracked ticker list.
+  - check_data_quality.py found 804 non-'ok' rows (unusually large) — 696 are a benign, already-
+    resolved "stale by one day" flag (spot-checked: GSK/REL/KLR/EDEN/SAP/WKL/PRX/ZOE/QXO-PB all now
+    show genuine 09-21 closes in the prices table despite the flag), but 106 are real 7-day-consecutive
+    "no bars from yfinance batch" errors on a cluster of EU tickers (none are current holdings or
+    today's candidates). The full auto-retry pass was still running after 18+ minutes and wasn't
+    waited out — worth a dedicated look at why EU yfinance batch fetches are failing for that cluster,
+    and why 696 rows haven't been cleared back to 'ok' despite the underlying data catching up.
 
 NEXT ACTIONS
-  1. Reassess LULU's remaining 7 shares once US market data refreshes today — Exit signal still active.
-  2. Review the 3 new pending trade ideas (MO, VK, APA) in the dashboard's Pending Trade Ideas panel.
-  3. SFM's freshly re-triggered Exit signal — reassess by ~2026-10-05 if it hasn't cleared.
-  4. GSK earnings 2026-10-28, SFM earnings 2026-10-28 — no action yet, just tracking.
-  5. Separately worth a look: 103 tickers flagged NEEDS MANUAL REVIEW in today's data quality check (3+
-     consecutive-day failures, mostly EU/Nordic names) — likely a fixable source/mapping issue, not
-     portfolio-relevant today but a recurring pipeline gap.
+  1. Confirm the QXO-PB and ERO trade rationale/thesis with Mike so the wiki page's Notes and Burry
+     Lens table reflect his actual reasoning rather than this review's best-effort read.
+  2. Decide on MO/VLO/BBY given ~€1,223 available cash — likely only one fits at target size; MO
+     (5/5, Magic Formula pass, repeat candidate) is the highest-conviction pick if capital allows.
+  3. Monitor SFM's patience-override window (reassess by ~2026-10-05) and FLUT's persistent
+     too-small-to-execute problem.
+  4. Watch META's RSI (77.9, extended) for a pullback, and track the Oct-09 $885 call's expiry
+     (currently 16% OTM, ~3 weeks left) — high risk of expiring worthless without a strong rally.
 ════════════════════════════════════════════════════════
