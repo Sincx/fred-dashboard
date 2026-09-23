@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-23T23:49:09+02:00",
+      "summary": "ABBV (B)",
+      "picks": {
+        "p1": {
+          "ticker": "ABBV",
+          "strategy": "B — Momentum",
+          "entry": 265.21,
+          "stop": 225.43,
+          "t1": 331.51,
+          "t2": 397.82
+        }
+      },
+      "content": "AbbVie picked up at today's previous close ($265.21) — momentum screen (+25.27% 3mo), ECLIPSE Phase 3 migraine trial hit its primary endpoint (Sept 11), RBC reiterated Buy the same day, 30-analyst Buy consensus; defensive-healthcare pick on a broad risk-off day (10Y Treasury yield at its highest since July 2007) where gold miners (NEM −4.18%, FCX −3.33%) fell on the same hawkish-Fed catalyst that ruled out the Materials/Sector-Rotation alternative. NVO was exited discretionarily (−11.56%, −$116) on thesis-deterioration grounds — Novo's Sept 21 Capital Markets Day disappointed on 2030 growth targets and confirmed CagriSema trial setbacks — freeing capacity for ABBV and holding the book at 35 open positions. HUM crossed −10.48% WATCH today, no Burry conflict, held per Step 3D. Portfolio net P&L: +$1,470 (+2.26% on $65,000)."
+    },
+    {
       "runAt": "2026-09-22T20:06:00+02:00",
       "summary": "IAG (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "International Consolidated Airlines Group picked up at today's previous close (430.30 GBX, ~$5.75) — deep value screen (P/E 7.43, earnings yield 19.36%, ROIC 27.47%), benefiting from crude at an 11-day low (its largest cost line), H1 2026 revenue/margin/cash flow all improved. EVTC was exited discretionarily (−6.52%, −$65) to keep the book at 35 open positions after IAG's entry — HUM and OTIS were both passed over despite weaker P&L on fresh positive-thesis grounds. CRWD hit T2 today (+50.33%, $249.35) — second 1/3 sold, final 1/3 runs uncapped; NVO crossed −10.66% WATCH, no Burry conflict, held. Portfolio net P&L: +$1,484 (+2.32% on $64,000)."
-    },
-    {
-      "runAt": "2026-09-21T23:55:02+02:00",
-      "summary": "FTNT (B)",
-      "picks": {
-        "p1": {
-          "ticker": "FTNT",
-          "strategy": "B — Momentum",
-          "entry": 169.84,
-          "stop": 144.36,
-          "t1": 212.3,
-          "t2": 254.76
-        }
-      },
-      "content": "Fortinet picked up at today's previous close ($169.84) — Q2 2026 revenue +26% YoY beat, named a Leader in the 2026 Gartner Magic Quadrant for Hybrid Mesh Firewall, riding a broad cybersecurity-sector rally (Zscaler +16%+, FTNT +9% Sept 14) on AI-agent-security demand distinct from Burry's AI-capex short thesis. PEP was exited discretionarily (−8.58%, −$86) to keep the book at 35 open positions after FTNT's entry — no mechanical stop-losses or signal exits on the other 33 continuing positions; AMAT recovered sharply on today's chip-sector rally, from −8.90% to −2.97%, clearing the Burry sector-warning signal-exit concern flagged yesterday. EVTC is now the weakest continuing position at −7.09%, no Burry conflict. Portfolio net P&L: +$1,436 (+2.28% on $63,000)."
     }
   ]
 }
