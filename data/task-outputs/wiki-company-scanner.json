@@ -5,6 +5,11 @@
   "icon": "🔎",
   "runs": [
     {
+      "runAt": "2026-09-23T09:17:34+02:00",
+      "summary": "15 auto-added, 31 pending review",
+      "content": "Scanned 77 wiki pages changed since the last run (2026-09-12) across all domains. Auto-added 15 tickers via exact SEC matches: Kyndryl (KD), SK hynix (SKHY), Lloyds Banking Group (LYG), InterParfums (IPAR), Snowflake (SNOW), Reckitt Benckiser (RBGLY), Sotera Health (SHC), Sezzle (SEZL), SoFi Technologies (SOFI), PACS Group (PACS), Credit Acceptance (CACC), Rio Tinto (RTNTF), Shell (SHEL), BP (BP), and QXO (QXO) — surfaced mainly by portfolio-overview.md's flagged pension-CSV holdings, the Burry cross-reference watch/investigate list, and several Morningstar European/short-interest source pages. 25 candidates (Oracle, Humana, Broadcom, Altria, and 21 others) were already tracked. 31 went to pending review in wiki/finance/pending-watchlist-additions.md — mostly non-US-listed names the SEC-only resolver can't confidently reach (UK housebuilders/most-shorted names, Eurozone dividend leaders, Samsung, Siemens, Santander, Equinor) plus a few US-adjacent names the resolver missed (Fannie Mae, Icahn Enterprises, Sportradar)."
+    },
+    {
       "runAt": "2026-09-12T14:30:00+02:00",
       "summary": "3 auto-added, 15 pending review",
       "content": "First run (manual, 7-day fallback window since no prior marker existed). Scanned 71 wiki pages across all domains. Auto-added AST SpaceMobile (ASTS), Quantinuum (QNT), and Blue Owl Capital (OWL) via exact SEC name matches. 6 candidates (Equinix, Digital Realty, Apollo Global Management, KKR, SanDisk, Ciena) were already tracked. 15 went to pending review in wiki/finance/pending-watchlist-additions.md — mostly private AI-infrastructure/neo-cloud companies (OpenAI, Anthropic, xAI, Mistral AI, DeepSeek, Cohere, Crusoe, Lambda Labs, Together AI, RunPod, Baseten, ElevenLabs, Ineffable, Payward/Kraken) plus GlobalWafers, a real Taiwan-listed ticker the resolver correctly couldn't reach since SEC's list is US-only."
