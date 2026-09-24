@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-24T21:30:00+02:00",
+      "summary": "Memory index updated — 0 new top-level pages, 3 new Open Threads, 1 existing thread updated with a newer count, no threads fully resolved",
+      "content": [
+        "Reviewed log.md since the 2026-09-23 memory-update — 5 new dated entries: a 09-23 portfolio-management-briefing (23:52 CEST), ABBV/NVO and WISE/CMCSA paper-trading swaps (09-23, 09-24), a Thursday wiki-thinker deep-dive (Books + Podcasts, 0 ideas/1 connection), and a 09-24 podcast-recommender run",
+        "Updated the Meta domain row with the 09-24 wiki-thinker highlight: the new Money Stuff (Matt Levine) podcast pick names the deal-mechanics/fraud journalism beat Finance's short-selling pipeline has never drawn from; bumped wiki-thinker run count 60→61",
+        "Updated the Finance domain row: paper-trading latest-trade pointer moved 09-18→09-24 (WISE entered, CMCSA exited), with the 09-21 FTNT and 09-23 ABBV/NVO swaps filled in; added the 09-23 briefing's total net value (≈€18,525) and a new check_data_quality.py finding — 1,373 non-'ok' rows, 1,266 sharing a 'stale US-holding close' message, distinct from the known EU batch-fetch bug",
+        "Updated the Podcasts domain row with the 09-24 podcast-recommender batch (Darknet Diaries, Money Stuff, High Intensity Health, The Grant Williams Podcast)",
+        "Updated the EU-exchange batch-fetch-bug Open Thread with the 09-23 count (102 tickers at 10/10 consecutive days, down from 106 at 7-8 days) and added 2 new Open Threads: the new US-holding staleness finding, and the Money Stuff/short-selling-pipeline cross-domain gap",
+        "Spot-checked wiki/index.md for unindexed new pages — none created today (only trades, a briefing run, and recommendations, no new wiki pages); no naming/convention changes found; no Open Threads fully resolved this run",
+        "Bumped 'Last updated' date to 2026-09-24; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-23T23:54:48+02:00",
       "summary": "Memory index updated — 0 new top-level pages, 1 new Open Thread, 1 existing thread grown with a second run's data",
       "content": [
@@ -14,20 +27,6 @@
         "Added 1 new Open Thread (Health/Learning empathy-framework vs. AI-adoption-research cross-link)",
         "Spot-checked wiki/index.md for unindexed new pages — none created today (wiki-company-scanner writes to Turso/pending-watchlist-additions.md, not new wiki pages); no naming/convention changes found; no Open Threads fully resolved this run",
         "Bumped wiki-thinker run count 59→60; bumped 'Last updated' date to 2026-09-23; appended one memory-update log line to log.md"
-      ]
-    },
-    {
-      "runAt": "2026-09-22T23:56:41+02:00",
-      "summary": "Memory index updated — 0 new top-level pages, 2 new Open Threads, 1 thread superseded with a confirmed finding, no threads fully resolved",
-      "content": [
-        "Reviewed log.md since the 2026-09-21 memory-update — 5 new dated entries: two 2026-09-22 portfolio-management-briefing runs (morning + a legitimate 23:40 CEST second slot), a Tuesday wiki-thinker deep-dive (AI & Tech + Technology, 1 idea/1 connection), and an IAG paper-trade entry",
-        "Updated the Meta domain row with the 09-22 wiki-thinker highlight: AI & Tech's Uptime Institute page and Michael Burry's SBC-normalisation framework both flag the same 'flattering headline metric without a stricter denominator' problem, uncross-linked",
-        "Updated the Finance domain row: position count jumped 18→22 after a data-integrity catch-up found 4 trades (META, ERO, QXO-PB, a META call) written to Turso on 09-21 but never reflected on the wiki page or that day's briefing (true 09-21 cash was €1,222.86, not €4,704.76 as shown); the evening run found and fixed a real bug where the Options Positions Mkt Value column copied Turso's native-USD figure into the EUR column, overstating net value by ~€172 (corrected to ≈€18,512)",
-        "Added a new Key Decision documenting the Options Mkt Value USD/EUR bug fix, so a future ~€170 net-value discrepancy is checked against this fix first rather than re-investigated from scratch",
-        "Superseded the 09-21 Open Thread about check_data_quality.py hanging with zero output — the retry pass now completes and confirms a real, growing batch-fetch bug: 104→106 EU-exchange tickers failing 7-8 consecutive days (none are current holdings/candidates, but flagged for a dedicated fix)",
-        "Added 1 new Open Thread (AI-Tech/Finance Uptime Institute vs. Burry SBC-normalisation cross-link) and extended the recurring trading-portfolio reconciliation Open Thread with the 09-22 instance — trades landing in Turso without a corresponding wiki/briefing update looks like a repeating failure mode, not one-off drift",
-        "Spot-checked wiki/index.md for unindexed new pages — none created today (only trades and existing-page updates); no naming/convention changes found",
-        "Bumped 'Last updated' date to 2026-09-22; appended one memory-update log line to log.md"
       ]
     }
   ]
