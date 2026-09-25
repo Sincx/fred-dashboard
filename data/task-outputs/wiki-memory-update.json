@@ -5,6 +5,19 @@
   "icon": "🧠",
   "runs": [
     {
+      "runAt": "2026-09-25T21:30:00+02:00",
+      "summary": "Memory index updated — 0 new top-level pages, 2 new Open Threads, 1 existing section grown with a newer briefing, no threads fully resolved",
+      "content": [
+        "Reviewed log.md since the 2026-09-24 memory-update — 4 new dated entries: a 09-25 email-to-clipping FAILURE (Gmail OAuth invalid_grant), a 09-24 portfolio-management-briefing, a 09-25 recipe-recommender run, and a Friday wiki-thinker cross-domain connection (SAP)",
+        "Updated the Meta domain row with the 09-25 wiki-thinker highlight: Fred's real-money SAP trading position and Work's own SAP SuccessFactors/Workday-disruption debate have never been cross-linked; bumped wiki-thinker run count 61→62",
+        "Updated the Finance domain row with the 09-24 portfolio-management-briefing (22 positions — 18 long/1 short/3 options; new Exit signals on ADBE and SFM, recurring FLUT; no trades, cash still short of the €1,500 target) and the 09-24 WISE/CMCSA paper-trading swap",
+        "Updated the Cooking domain row with the 09-25 recipe-recommender run (3 suggestions for week of 2026-09-28, chefs David Chang/Anthony Bourdain/Nigel Slater)",
+        "Added 2 new Open Threads: the SAP/Work SuccessFactors cross-link gap, and the Gmail MCP OAuth failure blocking email-to-clipping (needs manual re-auth in an interactive session before the next scheduled run)",
+        "Spot-checked wiki/index.md for unindexed new pages — none created today (only a briefing, a trade, a failed email-ingest run, and recommendations, no new wiki pages); no naming/convention changes found; no Open Threads fully resolved this run",
+        "Bumped 'Last updated' date to 2026-09-25; appended one memory-update log line to log.md"
+      ]
+    },
+    {
       "runAt": "2026-09-24T21:30:00+02:00",
       "summary": "Memory index updated — 0 new top-level pages, 3 new Open Threads, 1 existing thread updated with a newer count, no threads fully resolved",
       "content": [
@@ -15,18 +28,6 @@
         "Updated the EU-exchange batch-fetch-bug Open Thread with the 09-23 count (102 tickers at 10/10 consecutive days, down from 106 at 7-8 days) and added 2 new Open Threads: the new US-holding staleness finding, and the Money Stuff/short-selling-pipeline cross-domain gap",
         "Spot-checked wiki/index.md for unindexed new pages — none created today (only trades, a briefing run, and recommendations, no new wiki pages); no naming/convention changes found; no Open Threads fully resolved this run",
         "Bumped 'Last updated' date to 2026-09-24; appended one memory-update log line to log.md"
-      ]
-    },
-    {
-      "runAt": "2026-09-23T23:54:48+02:00",
-      "summary": "Memory index updated — 0 new top-level pages, 1 new Open Thread, 1 existing thread grown with a second run's data",
-      "content": [
-        "Reviewed log.md since the 2026-09-22 memory-update — 2 new dated entries: a wiki-company-scanner run and a Wednesday wiki-thinker deep-dive (Health + Learning, 0 ideas/1 connection)",
-        "Updated the Meta domain row with the 09-23 wiki-thinker highlight: Learning's empathy/worldview framework names AI adoption as an intended use case, and AI & Tech's older Economist/Databricks enterprise-adoption research is the first material that could test that claim — uncited both ways",
-        "Updated the wiki-company-scanner Scheduled Maintenance entry and its Open Thread with the second run's results: 77 pages scanned since 09-12, 46 candidates found, 15 auto-added to the Turso universe table (Kyndryl, SK hynix, Lloyds, InterParfums, Snowflake, Reckitt Benckiser, Sotera Health, Sezzle, SoFi, PACS Group, Credit Acceptance, Rio Tinto, Shell, BP, QXO), 31 now pending manual review (up from 15) — mostly non-US-listed names the SEC-only resolver can't reach",
-        "Added 1 new Open Thread (Health/Learning empathy-framework vs. AI-adoption-research cross-link)",
-        "Spot-checked wiki/index.md for unindexed new pages — none created today (wiki-company-scanner writes to Turso/pending-watchlist-additions.md, not new wiki pages); no naming/convention changes found; no Open Threads fully resolved this run",
-        "Bumped wiki-thinker run count 59→60; bumped 'Last updated' date to 2026-09-23; appended one memory-update log line to log.md"
       ]
     }
   ]
