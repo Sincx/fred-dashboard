@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-09-25T23:57:39+02:00",
+      "summary": "DE (B)",
+      "picks": {
+        "p1": {
+          "ticker": "DE",
+          "strategy": "B — Momentum",
+          "entry": 690.46,
+          "stop": 586.89,
+          "t1": 863.08,
+          "t2": 1035.69
+        }
+      },
+      "content": "Deere & Company picked up at today's close ($690.46) — Baird upgraded to Outperform ($800 PT from $640), corn/soy futures +22% YTD (genuine ag-cycle tailwind), Q3 FY26 beat-and-raise (rev $12.61B, EPS $5.10); all-time-high Dow 30 momentum name entered on a broad market rally (S&P +0.51%, Dow +0.93%) despite the 10Y Treasury yield hitting 5.18%, highest since the financial crisis. OTIS was exited discretionarily (−8.42%, −$84) on a genuine thesis break — Otis cut its FY26 operating-profit outlook alongside a Q2 revenue beat and kept grinding to fresh 52-week lows through September — freeing capacity for DE and holding the book at 35 open positions. NOC (−6.84%, no Burry conflict) is now the weakest continuing position. Portfolio net P&L: +$1,622 (+2.42% on $67,000)."
+    },
+    {
       "runAt": "2026-09-24T23:49:52+02:00",
       "summary": "WISE (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Wise plc picked up at today's previous close (845.60 GBX, ~$11.28) — mf-rank-1 Value screen (PE ~24.7x, ROIC 389%, earnings yield 14.4%), down ~22.6% over the past year to near a 52-week low, 19-analyst Buy consensus with 37% upside to a 1,161p target; entered on a second consecutive risk-off session (10Y Treasury yield pushing toward 5.2%, highest since 2004 on the 30Y, on a strong ISM PMI report). CMCSA was exited discretionarily (−6.89%, −$69) to keep the book at 35 open positions after WISE's entry — weakest position in the book, no distinct catalyst break. HUM improved to −9.11%, back off the −10% WATCH line. Portfolio net P&L: +$1,763 (+2.67% on $66,000)."
-    },
-    {
-      "runAt": "2026-09-23T23:49:09+02:00",
-      "summary": "ABBV (B)",
-      "picks": {
-        "p1": {
-          "ticker": "ABBV",
-          "strategy": "B — Momentum",
-          "entry": 265.21,
-          "stop": 225.43,
-          "t1": 331.51,
-          "t2": 397.82
-        }
-      },
-      "content": "AbbVie picked up at today's previous close ($265.21) — momentum screen (+25.27% 3mo), ECLIPSE Phase 3 migraine trial hit its primary endpoint (Sept 11), RBC reiterated Buy the same day, 30-analyst Buy consensus; defensive-healthcare pick on a broad risk-off day (10Y Treasury yield at its highest since July 2007) where gold miners (NEM −4.18%, FCX −3.33%) fell on the same hawkish-Fed catalyst that ruled out the Materials/Sector-Rotation alternative. NVO was exited discretionarily (−11.56%, −$116) on thesis-deterioration grounds — Novo's Sept 21 Capital Markets Day disappointed on 2030 growth targets and confirmed CagriSema trial setbacks — freeing capacity for ABBV and holding the book at 35 open positions. HUM crossed −10.48% WATCH today, no Burry conflict, held per Step 3D. Portfolio net P&L: +$1,470 (+2.26% on $65,000)."
     }
   ]
 }
