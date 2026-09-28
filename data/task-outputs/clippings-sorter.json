@@ -1,18 +1,18 @@
 {
-    "taskId": "clippings-sorter",
-    "label": "Clippings Sorter",
-    "schedule": "Daily 11:18 PM",
-    "icon": "📎",
-    "runs": [
-        {
-            "runAt": "2026-09-24T23:19:14.8363349+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
-        },
-        {
-            "runAt": "2026-09-23T23:19:00.8864831+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
-        }
-    ]
+    "taskId":  "clippings-sorter",
+    "label":  "Clippings Sorter",
+    "schedule":  "Daily 11:18 PM",
+    "icon":  "ðŸ“Ž",
+    "runs":  [
+                 {
+                     "runAt":  "2026-09-28T23:19:13.0609975+02:00",
+                     "summary":  "No new clippings",
+                     "content":  "Clippings folder empty."
+                 },
+                 {
+                     "runAt":  "2026-09-24T23:19:14.8363349+02:00",
+                     "summary":  "No new clippings",
+                     "content":  "Clippings folder empty."
+                 }
+             ]
 }
