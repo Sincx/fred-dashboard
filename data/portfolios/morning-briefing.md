@@ -124,7 +124,10 @@ PORTFOLIO RISKS TO WATCH
     expire worthless, so treat it as a sunk cost.
   - Data freshness: magic-formula-screen is 51h stale, so candidate MF ranks may lag. US prices are
     Friday closes and EU/UK prices are intraday, so re-check before placing any order. 106 non-held tickers are
-    in data_quality 'error'; none of them are holdings or today's candidates, and auto-retries were in progress at write time.
+    in data_quality 'error'; none of them are holdings or today's candidates. The retry pass finished after this was written;
+    the output I captured (last 60 lines only) is all NEEDS MANUAL REVIEW, and none of it recovered. ~57 EU tickers (e.g. ROG, SANO, VESTAS, ARGX, STMPA, UN01)
+    have 14 consecutive technicals failures, all "no bars from yfinance batch". That looks like one systematic EU ticker/suffix
+    mapping bug, not bad luck. Also VAR1 (EU fundamentals/screen, 4-5 failures) and SKYT (US technicals, 10 failures).
   - FX: USD is 46% of the long book, and EUR/USD is at 1.1377.
 
 NEXT ACTIONS
