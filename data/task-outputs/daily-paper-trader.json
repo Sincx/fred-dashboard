@@ -1,38 +1,38 @@
-{
-  "taskId": "daily-paper-trader",
-  "label": "Paper Trader",
-  "schedule": "Weekdays 8:06 PM",
-  "icon": "📈",
-  "runs": [
-    {
-      "runAt": "2026-09-28T23:39:59.7669768+02:00",
-      "summary": "SHEL (E)",
-      "picks": {
-        "p1": {
-          "ticker": "SHEL",
-          "strategy": "E — Sector Rotation",
-          "entry": 3657.0,
-          "stop": 3108.45,
-          "t1": 4571.25,
-          "t2": 5485.5
-        }
-      },
-      "content": "Shell plc (LSE, 3,657p) was bought as the day's energy sector-rotation pick. Renewed US–Iran tensions lifted oil and made energy one of only a few gaining sectors in a −0.8% S&P session with the 10Y yield at 5.24%. Shell closed at a 52-week high yet trades ~9x forward earnings, has a buyback running to 23 Oct, and diversifies the book beyond CVX/COP/OXY. NOC was exited as a capacity trim (−7.70%, −$77) to hold the book at 35 positions. No stop/T1/T2 triggers; RIGL is $0.97 from T1. Portfolio net P&L: +$1,554 (+2.29% on $68,000)."
-    },
-    {
-      "runAt": "2026-09-25T23:57:39+02:00",
-      "summary": "DE (B)",
-      "picks": {
-        "p1": {
-          "ticker": "DE",
-          "strategy": "B — Momentum",
-          "entry": 690.46,
-          "stop": 586.89,
-          "t1": 863.08,
-          "t2": 1035.69
-        }
-      },
-      "content": "Deere & Company picked up at today's close ($690.46) — Baird upgraded to Outperform ($800 PT from $640), corn/soy futures +22% YTD (genuine ag-cycle tailwind), Q3 FY26 beat-and-raise (rev $12.61B, EPS $5.10); all-time-high Dow 30 momentum name entered on a broad market rally (S&P +0.51%, Dow +0.93%) despite the 10Y Treasury yield hitting 5.18%, highest since the financial crisis. OTIS was exited discretionarily (−8.42%, −$84) on a genuine thesis break — Otis cut its FY26 operating-profit outlook alongside a Q2 revenue beat and kept grinding to fresh 52-week lows through September — freeing capacity for DE and holding the book at 35 open positions. NOC (−6.84%, no Burry conflict) is now the weakest continuing position. Portfolio net P&L: +$1,622 (+2.42% on $67,000)."
-    }
-  ]
+﻿{
+    "taskId":  "daily-paper-trader",
+    "label":  "Paper Trader",
+    "schedule":  "Weekdays 8:06 PM",
+    "icon":  "📈",
+    "runs":  [
+                 {
+                     "runAt":  "2026-09-29T23:38:58.5157203+02:00",
+                     "summary":  "INCY (B)",
+                     "picks":  {
+                                   "p1":  {
+                                              "ticker":  "INCY",
+                                              "strategy":  "B — Momentum",
+                                              "entry":  123.2,
+                                              "stop":  104.72,
+                                              "t1":  154,
+                                              "t2":  184.8
+                                          }
+                               },
+                     "content":  "Incyte (NASDAQ, $123.20) was bought as the day\u0027s momentum pick. It sits ~5% below its 52-week high above a rising 200-day average, raised FY26 net-sales guidance to $5.13–5.26B in July, and trades at ~11x EV/EBIT with $4.5B cash, a Burry-aligned healthcare name. OXY was exited as a capacity trim (−7.04%, −$70) to hold the book at 35 positions, which also trims energy concentration. No stop/T1/T2 triggers; RIGL is $1.44 from T1. Portfolio net P\u0026L: +$1,423 (+2.06% on $69,000)."
+                 },
+                 {
+                     "runAt":  "2026-09-28T23:39:59.7669768+02:00",
+                     "summary":  "SHEL (E)",
+                     "picks":  {
+                                   "p1":  {
+                                              "ticker":  "SHEL",
+                                              "strategy":  "E — Sector Rotation",
+                                              "entry":  3657.0,
+                                              "stop":  3108.45,
+                                              "t1":  4571.25,
+                                              "t2":  5485.5
+                                          }
+                               },
+                     "content":  "Shell plc (LSE, 3,657p) was bought as the day\u0027s energy sector-rotation pick. Renewed US–Iran tensions lifted oil and made energy one of only a few gaining sectors in a −0.8% S\u0026P session with the 10Y yield at 5.24%. Shell closed at a 52-week high yet trades ~9x forward earnings, has a buyback running to 23 Oct, and diversifies the book beyond CVX/COP/OXY. NOC was exited as a capacity trim (−7.70%, −$77) to hold the book at 35 positions. No stop/T1/T2 triggers; RIGL is $0.97 from T1. Portfolio net P\u0026L: +$1,554 (+2.29% on $68,000)."
+                 }
+             ]
 }
