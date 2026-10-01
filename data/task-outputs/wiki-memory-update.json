@@ -5,14 +5,14 @@
   "icon": "ðŸ§ ",
   "runs": [
     {
+      "runAt": "2026-10-01T23:53:39.055+02:00",
+      "summary": "Memory index updated - 0 new pages, 2 threads added, 5 threads updated, 2 resolved",
+      "content": "- Last updated -> 2026-10-01\n- Finance: paper trading now shows 10-01 TGT entry (Strategy B Momentum) / HUM trim exit, net P&L +$1,118 (+1.57%)\n- Resolved: trading-portfolio reconciliation gap (IBKR real-statement audit 10-01; 26 positions, net ~EUR19.5k) - follow-up noted: trading_portfolio_wiki_sync.py broken by new Entry Date column\n- Resolved: Delivery Hero spinoff thread (Uber EUR13B takeover) - replaced with new candidates H.B. Fuller / Intertek + Voya vote Nov 24\n- Updated: Bayer (Roundup ruling pending post Sept 14), yfinance MCP still down 10-01, Turso prices stale 4 nights, 10-01 briefing (GSK/EDEN new Exit signals, AMAT short through stop)\n- Added: Messy Jobs authorship check / Circle Round format example (wiki-thinker)"
+    },
+    {
       "runAt": "2026-09-30T23:54:32.2816477+02:00",
       "summary": "Memory index updated - 1 new page, 2 threads added, 2 threads updated, 0 resolved",
       "content": "- Last updated -> 2026-09-30\n- Meta: thinker run count 64 -> 66 (through 09-30)\n- Finance: paper trading now shows 09-30 AUTO entry (LSE, Strategy A Value) / DHI trim exit, net P&L +$1,166 (+1.67%)\n- Books: new books-from-podcasts.md (21 books, maintained by wiki-thinker Step 4b)\n- Open Threads added: podcast-transcript coverage gap for the book list; 09-30 briefing (SFM/FLUT Exit, IAG/MEGP/FOUR candidates, no live trades since 09-21)\n- Open Threads updated: Turso prices stale 3 nights + check_data_quality.py hung; wiki-company-scanner 09-30 run (FOUR/WSE/UI added; Clarkson/Revolut/Sophos pending)\n- Games entries were already updated earlier today (Autobattler ingest + docs move)"
-    },
-    {
-      "runAt": "2026-09-29T23:54:06.298+02:00",
-      "summary": "Memory index updated - 0 new pages, 2 threads added, 1 thread updated, 0 resolved",
-      "content": "- Last updated -> 2026-09-29\n- Finance: paper trading status now shows 09-29 INCY entry (Strategy B) / OXY trim exit, net P&L +$1,423 (+2.06%)\n- Open Threads added: Turso prices not refreshed 2 nights running (09-28/09-29); AI-disruption gap in the Burry risk table for ADBE/SAP/ACN/WKL/REL (ACN most exposed)\n- Open Thread updated: yfinance MCP still down 09-29"
     }
   ]
 }
