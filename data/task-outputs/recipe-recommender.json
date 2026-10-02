@@ -1,18 +1,18 @@
-{
-  "taskId": "recipe-recommender",
-  "label": "Recipe Recommender",
-  "schedule": "Fri 9:04 AM",
-  "icon": "🍽",
-  "runs": [
-    {
-      "runAt": "2026-09-25T09:08:28+02:00",
-      "summary": "3 new recipes: Bulgogi-Style Beef Lettuce Wraps, Moroccan Chicken Tagine, Roasted Pears with Gorgonzola",
-      "content": "1. Bulgogi-Style Beef Lettuce Wraps — inspired by David Chang. A 30-minute weeknight ssäm-format wrap — the same soy-ginger-garlic pantry as the Momofuku pork centrepiece, in a fraction of the time.\n2. Moroccan Chicken Tagine with Preserved Lemon and Olives — inspired by Anthony Bourdain. A medium-technique weekend braise drawing on his North African travels — cinnamon, saffron, and ras el hanout for the first proper cool weekend of autumn.\n3. Roasted Pears with Gorgonzola, Walnuts and Honey — inspired by Nigel Slater. The wild card: the first good pears of the season, warm fruit against sharp blue cheese, barely a recipe at all."
-    },
-    {
-      "runAt": "2026-09-18T10:48:03+02:00",
-      "summary": "3 new recipes: Lemon-Caper Chicken Piccata, Khinkali, Honey-Roasted Quince",
-      "content": "1. Lemon-Caper Chicken Piccata with Green Beans — inspired by Lucinda Scala Quinn. A 30-minute weeknight fix built around mastering one useful pan-sauce technique (deglaze, reduce, mount with butter).\n2. Khinkali (Georgian Soup Dumplings) — inspired by Anthony Bourdain. A medium-technique weekend project — Georgia's broth-filled dumplings, discovered on Parts Unknown, in the same spirit as the Filipino adobo and Sichuan dan dan already in the collection.\n3. Honey-Roasted Quince with Cardamom, Bay and Cream — inspired by Nigel Slater. The wild card: the first proper quince of early autumn, given nothing but time in a slow oven."
-    }
-  ]
+﻿{
+    "taskId":  "recipe-recommender",
+    "label":  "Recipe Recommender",
+    "schedule":  "Fri 9:04 AM",
+    "icon":  "🍽",
+    "runs":  [
+                 {
+                     "runAt":  "2026-10-02T09:07:23.6255543+02:00",
+                     "summary":  "3 new recipes: Pork Chops with Apples and Cider, Pho Bo, Miso-Butter Roast Squash",
+                     "content":  "1. Pork Chops with Apples, Sage and Cider Pan Sauce, inspired by Lucinda Scala Quinn. A 30-minute one-pan weeknight supper: sear, rest, deglaze with the first cider of autumn.\n2. Pho Bo (Hanoi-Style Beef Noodle Soup), inspired by Anthony Bourdain. A weekend project with charred aromatics and a clear, spiced broth from his favourite city.\n3. Miso-Butter Roast Squash with Chilli Crunch and Spring Onion, inspired by David Chang. The wild card: peak-season squash with umami and heat."
+                 },
+                 {
+                     "runAt":  "2026-09-25T09:08:28+02:00",
+                     "summary":  "3 new recipes: Bulgogi-Style Beef Lettuce Wraps, Moroccan Chicken Tagine, Roasted Pears with Gorgonzola",
+                     "content":  "1. Bulgogi-Style Beef Lettuce Wraps — inspired by David Chang. A 30-minute weeknight ssäm-format wrap — the same soy-ginger-garlic pantry as the Momofuku pork centrepiece, in a fraction of the time.\n2. Moroccan Chicken Tagine with Preserved Lemon and Olives — inspired by Anthony Bourdain. A medium-technique weekend braise drawing on his North African travels — cinnamon, saffron, and ras el hanout for the first proper cool weekend of autumn.\n3. Roasted Pears with Gorgonzola, Walnuts and Honey — inspired by Nigel Slater. The wild card: the first good pears of the season, warm fruit against sharp blue cheese, barely a recipe at all."
+                 }
+             ]
 }
