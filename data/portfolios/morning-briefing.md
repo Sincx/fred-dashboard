@@ -1,177 +1,156 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-10-01 (Thu close)
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-10-04 (Sun, on Fri 10-02 closes)
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
 PORTFOLIO SNAPSHOT
-  Positions:        26 open (18 long equity, 5 short, 3 options)
-  Total Value:      ~€19,524 (estimated; long equity €17,696 + options mtm €1,114 + short unrealized P&L −€182 + cash €896)
-  Available Cap:    €896.10 cash (reset by today's IBKR-statement reconciliation; Turso trades + cash_ledger re-checked at 23:40, nothing newer)
-  Best Performer:   IQV +59.1%
-  Worst Performer:  SFM −19.6% (FLUT −16.9%, PRX −15.2%, LULU −15.1%)
-  Largest Position: LULU (8.7% of long book; GSK 8.3%, SAP 7.4%)
+  Positions:        21 open (17 long equity, 1 short, 3 options)
+  Total Value:      ~€19,436 (estimated; long equity €16,303 + options mtm ~€1,184 + ORCL short unrealized +€54 + cash €1,895)
+  Available Cap:    €1,895.31 cash (rises to ~€2,467 if the SFM exit below is executed)
+  Best Performer:   IQV +57.5%
+  Worst Performer:  SFM −19.6% (FLUT −18.7%, LULU −16.3%, PRX −16.0%)
+  Largest Position: LULU (9.3% of long book; GSK 9.0%, SAP 7.9%)
 
 POSITION SIGNALS
   ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────┬─────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst          │ MF# │
   ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────┼─────┤
-  │ IQV      │ +59.06%    │ 47.9    │ ↑     │ 👀 Watch │ −3.0% Thu; free   │ 629 │
-  │ KLR      │ +39.33%    │ 66.3    │ ↑     │ Hold     │ ✅ free-ridden    │ 41  │
-  │ SAP      │ +36.61%    │ 56.7    │ ↑     │ 👀 Watch │ MACD bearish      │ 296 │
-  │ GSK      │ −7.48%     │ 37.7    │ ↓     │ 🔴 Exit  │ NEW; ER 10-28     │ 33  │
-  │ EDEN     │ +1.17%     │ 36.6    │ ↓     │ 🔴 Exit  │ NEW; −2.7% Thu    │ —   │
-  │ ACN      │ +36.50%    │ ~70*    │ ↑     │ Hold     │ +19.4% Thu Xetra  │ —   │
-  │ ADBE     │ −3.43%     │ 43.2    │ ↓     │ 👀 Watch │ reassess ~10-08   │ 11  │
-  │ FLUT     │ −16.90%    │ 29.2    │ ↓     │ 🔴 Exit  │ 1 sh; ER 11-12    │ —   │
-  │ PRX      │ −15.22%    │ 38.4    │ ↓     │ 👀 Watch │ new low vs entry  │ 569 │
-  │ WKL      │ −3.16%     │ 51.5    │ ↓     │ 👀 Watch │ —                 │ 68  │
-  │ LULU     │ −15.05%    │ 35.6    │ ↓     │ 👀 Watch │ MACD still bull   │ 18  │
-  │ SFM      │ −19.56%    │ 34.3    │ ↓     │ 🔴 Exit  │ decide Mon 10-05  │ 158 │
-  │ ZOE      │ −2.82%*    │ 34.2*   │ ↓     │ 🔴 Exit* │ *ZTS proxy        │ —   │
-  │ REL      │ −2.92%     │ 47.4    │ ↓     │ 👀 Watch │ —                 │ 188 │
-  │ META     │ −2.67%     │ 61.1    │ ↑     │ Hold     │ call exp 10-09    │ 491 │
-  │ ERO      │ +2.72%     │ 50.7    │ ↑     │ 👀 Watch │ MACD turned bear  │ —   │
-  │ QXO-PB   │ +4.07%     │ 47.8    │ ↓     │ 👀 Watch │ < SMA50           │ —   │
-  │ BIRK     │ +2.81%     │ 48.6    │ ↓     │ 👀 Watch │ < SMA50           │ 229 │
-  │ ORCL(sh) │ +10.66%    │ 43.6    │ ↓     │ Hold     │ trend favours sh  │ 574 │
-  │ NBIS(sh) │ +0.93%     │ 52.8    │ ↑     │ Hold     │ —                 │ —   │
-  │ PLTR(sh) │ −3.20%     │ 63.1    │ ↑     │ 👀 Watch │ near stop ref     │ 523 │
-  │ AMAT(sh) │ −12.93%    │ 66.9    │ ↑     │ ⚠ Cover? │ thru stop ref     │ 433 │
-  │ MU(sh)   │ −1.20%     │ 63.5    │ ↑     │ 👀 Watch │ +3.0% Thu         │ 27  │
+  │ IQV      │ +57.53%    │ 45.3    │ ↑     │ 👀 Watch │ ✅ free-ridden    │ 660 │
+  │ KLR      │ +38.67%    │ 64.3    │ ↑     │ Hold     │ ✅ free-ridden    │ 58  │
+  │ SAP      │ +34.54%    │ 51.7    │ ↑     │ 👀 Watch │ MACD bearish      │ 343 │
+  │ ACN      │ +29.02%    │ 63.6    │ ↑     │ Hold     │ −5.5% Fri (Xetra) │ —   │
+  │ ERO      │ +8.91%     │ 57.8    │ ↑     │ Hold     │ MACD back to bull │ 85  │
+  │ BIRK     │ +3.93%     │ 50.6    │ ↓     │ 👀 Watch │ < SMA50           │ 255 │
+  │ EDEN     │ +2.15%     │ 39.6    │ ↓     │ 🔴 Exit  │ patience → ~10-15 │ —   │
+  │ QXO-PB   │ +1.88%     │ 44.7    │ ↓     │ 👀 Watch │ < SMA50           │ —   │
+  │ ZOE      │ −2.21%     │ 43.4    │ ↓     │ 👀 Watch │ direct EUR quote  │ —   │
+  │ REL      │ −2.22%     │ 49.5    │ ↓     │ 👀 Watch │ —                 │ 193 │
+  │ WKL      │ −4.32%     │ 49.1    │ ↓     │ 👀 Watch │ —                 │ 73  │
+  │ ADBE     │ −4.87%     │ 41.0    │ ↓     │ 👀 Watch │ reassess ~10-08   │ 22  │
+  │ GSK      │ −8.28%     │ 35.6    │ ↓     │ 🔴 Exit  │ ER 10-28          │ 35  │
+  │ PRX      │ −15.99%    │ 36.7    │ ↓     │ 🔴 Exit  │ NEW: MACD → bear  │ 592 │
+  │ LULU     │ −16.29%    │ 34.0    │ ↓     │ 👀 Watch │ 1 MACD x from Exit│ 24  │
+  │ FLUT     │ −18.70%    │ 27.7    │ ↓     │ 🔴 Exit  │ 1 sh; ER 11-12    │ —   │
+  │ SFM      │ −19.57%    │ 34.3    │ ↓     │ 🔴 Exit  │ DECIDE Mon 10-05  │ 141 │
+  │ ORCL(sh) │ +7.93%     │ 48.3    │ ↓     │ 👀 Watch │ +3.1% Fri vs sh   │ 601 │
   └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────┴─────┘
-  Short P&L% is from the short's side (positive = price below entry). "vs50d" for a short is still the stock's
-  position vs its own SMA50, so ↑ on a short means the trend is running against it.
+  Short P&L% is from the short's side (positive = price below entry). "vs50d" for ORCL is the stock vs its own SMA50
+  (↓ = trend still favours the short).
 
-  Freshness: this is the Thursday 23:30 post-US-close run. This is the first briefing since today's full reconciliation
-  against the real IBKR statement. That reconciliation corrected REL to 40 sh, GSK to 70 sh and LULU to 18 sh, removed the
-  fabricated LULU trim, closed APH, and added BIRK plus four new shorts (NBIS #3, PLTR, AMAT, MU) and the ORCL short add.
-  Every figure here uses the corrected book.
-  For the fourth night running, Turso `prices` did NOT have the day's closes by run time (it still holds 09-29 EU/UK and
-  09-30 US). Every price, RSI14, SMA50, MACD(12,26,9) and ATR14 above was recomputed from Thursday 2026-10-01 closes pulled
-  directly with yf.download.
-  ACN: priced from the actual Xetra line CSA.DE at €192.60, the first direct EUR quote this book has had for it.
-    *Its RSI comes from the NYSE line ($212.30, RSI 70.0).
-  ZOE: still has no direct EUR feed. It's priced as ZTS $69.10 ÷ 1.1247 = €61.44, so the *Exit on it is a proxy signal.
-  FX: EUR/USD 1.1247 (−0.8% Thu, daily RSI 17), GBP/USD 1.3199 → GBP/EUR 1.1736.
-  Turso trades.entry_price still carries the PRE-reconciliation entries for KLR (2,418p vs real 2,400p), IQV ($163.99 vs
-  $163.91), PRX (€41.165 vs €41.065) and WKL (€71.08 vs €70.88). P&L% above uses the corrected wiki entries. The
-  dashboard's Turso-derived P&L for those four will differ slightly until those rows are fixed.
-  Data quality: check_data_quality.py again produced ZERO output (fourth night; it ran in the background for the whole
-  session). The data_quality status of holdings and candidates is unverified.
+  Freshness: Sunday 23:30 run. This is the first briefing since 10-01; there was no Friday run. It includes the
+  10-02 statement sync: META stock and call closed, the MU/NBIS #3/PLTR/AMAT shorts closed, and the NBIS $90 Jun-27 put
+  opened. All prices are Friday 2026-10-02 closes straight from Turso `prices`. That's the first night in five
+  without a yf.download fallback. FX: EUR/USD 1.1264, GBP/EUR 1.1756.
+  ZOE now has a real EUR quote (€61.82), which retires the ZTS proxy. The 10-01 proxy "Exit*" has cleared to Watch
+  (RSI 43.4).
+  MF#: these ranks come from the full Turso universe (v_magic_formula_latest, ~1,350 names). They won't match the
+  wiki's own Magic Formula table, which ranks only ~35 held names (e.g. GSK #4 there, #35 here). That's expected.
+  P&L%: computed on the corrected wiki entries for KLR (2,400p), IQV ($163.91), PRX (€41.065), WKL (€70.88) and
+  FLUT ($92.015). Turso `trades.entry_price` still holds the pre-reconciliation values for these five.
+  Data quality: check_data_quality.py's retry loop was still running at write time (265 error rows across the
+  universe), so I queried the data_quality table directly. Rows that touch holdings or candidates:
+    • NBIS option_mark: NEEDS MANUAL REVIEW, 4 consecutive failures ("missing strike/expiry/option_type"). The
+      10-01 NBIS put was written to Turso without option_type/strike/expiry/premium/contracts, so options_pricing.py
+      can't mark it. The put is hand-marked below. The Turso row needs fixing (put / $90 / 2027-06-17 /
+      $5.38 / 1 contract).
+    • ACN EU and ZOE EU fundamentals ("no sa_prefix"), QXO-PB fundamentals ("no data from any source"): 1st failure
+      each. These are known coverage gaps and explain the "—" MF#. Prices are unaffected.
+    • Universe-wide: ~15+ EU tickers (HLI, FERR, PERP, BNPP, ASMI…) have failed technicals for 23–24 straight days.
+      None is held, but this is a real recurring bug worth a dedicated look.
 
 PORTFOLIO SHAPE
-  Concentration:   OK — largest is LULU at 8.7% of the long book (GSK 8.3%, SAP 7.4%, META 7.3%); nothing near 25%
-  Sector spread:   Enterprise Software/IT (SAP/ACN/ADBE) 20.0% | Healthcare (IQV/GSK/ZOE) 17.5% |
-                   Consumer (LULU/BIRK/SFM) 16.1% | Info Services (REL/WKL) 12.5% | Industrials (KLR/QXO-PB) 8.2% |
-                   META 7.3% | Fintech (EDEN) 6.8% | Intl SOTP (PRX) 5.9% | Materials (ERO) 5.4% | FLUT 0.4%
-                   → Tech/AI-linked longs (software + META) = 27.3% of the long book
-                   → Against that, the 5 shorts are ALL AI-infrastructure names: ~€6,325 notional (ORCL €614, NBIS €1,033,
-                     PLTR €845, AMAT €1,882, MU €1,951), plus ORCL and PLTR long puts. Net, the book is now short AI
-                     infrastructure, not long. This is the biggest shape change from the reconciliation.
-  Currency split:  USD 45.1% | EUR 37.7% | GBp 17.2%  (of €17,696 long equity; ACN counted as EUR)
+  Concentration:   OK — largest single position LULU 9.3%; nothing ≥ 25%
+  Sector spread:   Tech/Software 21.1% (SAP, ACN, ADBE) | Info services/Fintech 21.0% (REL, WKL, EDEN) |
+                   Healthcare 18.9% (GSK, ZOE, IQV) | Consumer 17.3% (LULU, BIRK, SFM) | Industrials 8.8% (QXO-PB, KLR) |
+                   Internet/SOTP 6.3% (PRX) | Materials 6.2% (ERO) | Betting 0.4% (FLUT)
+                   Bearish overlay: ORCL short 5sh + ORCL/PLTR/NBIS long puts (~€1,184 mtm)
+  Currency split:  USD 41.0% | EUR 40.4% | GBp 18.7%
+  Balance: well spread, and no sector is near the 25% cap. Five positions are in mechanical Exit and two more (LULU,
+  ADBE) are close. The book's weakness is broad drift lower, not concentration.
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  No trade was executed or synced to Turso tonight. Every item below is a recommendation for Mike to act on or not.
+  SFM: Full Exit (10 sh) — the decision rule set on 10-01 was "full exit Mon 10-05 unless RSI > 40". RSI is still 34.3,
+    price is below SMA50 ($77.35) and MACD is bearish. The bounce failed and Friday closed flat at $64.47.
+  Expected proceeds: ~$644.70 ≈ €572 | Gross P&L −$156.90 ≈ −€139.3 | CGT €0 (loss) | Commission ~€0.89 |
+    Net ≈ −€140.2 (crystallises a loss that can offset future gains)
 
-  SFM: Exit, day ~10 of the patience window, decision Mon 2026-10-05. The 3-day bounce failed: −2.8% Thu to $64.48,
-    RSI 37.2 → 34.3, a new low vs entry. A 50% trim (5 sh ≈ $322) is below the minimum viable trade.
-    Recommend: Full Exit on Monday unless RSI is back above 40 by then.
-    Full exit (10 sh @ $64.48): proceeds $644.80 ≈ €573 → ~€572 after the real ~€0.89 commission
-    Gross loss ≈ −€139 | CGT €0 | Net ≈ −€140 (realised)
-  GSK: NEW Exit (RSI 37.7, below SMA50 1,883p, MACD crossed bearish; −2.0% Thu to 1,795p). This is a 70-sh position since
-    the reconciliation, and MF#33 means the value thesis is intact. Patience override applies: no exit today, reassess by
-    ~2026-10-15, max trim 50%. Q3 earnings are 10-28.
-    If it fails: Trim 50% (35 sh @ 1,795p) ≈ £628 ≈ €737 proceeds; loss ≈ −€60 gross, CGT €0, ~€3.50 commission
-    Full exit (70 sh): ≈ €1,475 proceeds; loss ≈ −€119 gross → ≈ −€123 net
-  EDEN: NEW Exit (RSI 36.6, below SMA50 €28.66, MACD bearish; −2.7% Thu to €26.84). It's only +1.2% vs entry.
-    Full exit (45 sh @ €26.84) = €1,207.80: gross +€13.95, CGT −€2.93, commission ~−€3.50, net ≈ +€7.50.
-    The tax and commission take ~half of the gain. Recommend a patience window (reassess ~10-15) rather than selling
-    into the breakdown. Set a mental floor at €25.77 (entry − 1.5×ATR); losing it confirms the breakdown.
-  ZOE: Exit on the ZTS proxy only (ZTS RSI 34.2, below SMA50, MACD bearish). Low confidence because there's no direct EUR
-    quote. Don't act on a proxy signal; check the actual Xetra ZOE price first. Full exit ≈ €922, loss ≈ −€27.
-  FLUT: Exit persists (RSI 29.2). With the real ~€0.89 IBKR commission (not the old $5 estimate), selling 1 sh @ $76.47
-    costs ~1.4% of the trade, still just over the 1% rule. The free-to-ride designation stands; revisit at the 11-12 earnings.
-  AMAT SHORT (⚠ biggest live risk): $529.30 (+3.5% Thu), −$242.48 (−12.9%) unrealized. It's already through the book's
-    own stop reference ($496.5 = entry + 1.5×ATR) and above the SMA50 with a bullish MACD, RSI 66.9. The trend is
-    against the short. Recommend: cover (4 sh @ ~$529 → realised ≈ −€216 incl. commission) or at minimum place a
-    hard buy-stop at ~$549 (close + 1×ATR) so the loss can't run uncapped.
-  PLTR SHORT: $190.04, close to its $192.70 stop reference. Note that PLTR is bet bearish twice (equity short + Mar-27 put).
-  Expected proceeds: none executed today. If SFM is exited Mon: ~€572.
+  PRX: NEW mechanical Exit — patience override, no trade today. MACD crossed bearish (RSI 36.7, below SMA50 €37.66).
+    The SOTP / Tencent-NAV-discount thesis hasn't changed, so the patience rule applies: reassess by ~10-16.
+    Trim 50% (15 sh ≈ €517, gross loss ≈ −€98.5, commission ~€3.2) on a close below €33.03 (price − 1.5×ATR).
+  GSK: Exit (RSI 35.6), patience override stands (thesis intact, earnings 10-28), reassess ~10-15, max trim 50%.
+  EDEN: Exit (RSI 39.6, right at the line). Patience window to ~10-15, floor €25.77. Exiting now nets only
+    ~€15 after CGT + commission.
+  FLUT: Exit persists (RSI 27.7). 1 share ≈ €66, so commission is ~1.3% of the sale. It stays free-to-ride.
+  No Trim signals (nothing RSI > 70 at ≥ 20% weight).
+  Nothing was synced to Turso: these are recommendations, and Mike executes them himself.
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No Add signals. The holdings with RSI 35–50 and a bullish MACD (LULU, PRX, QXO-PB, BIRK) are all below their SMA50.
-  ACN, optional (no signal): +19.4% on Thu to €192.60 on Xetra (cause not verified this run) → +36.5%. Its RSI is ~70 but it's only 6.5%
-    of the book, so it doesn't meet the Trim rule (≥20% weight). Free ride isn't possible (selling 5 of 6 sh leaves 1 free).
-    An optional profit-take of 3 sh @ €192.60 = €577.80: gross +€154.50, CGT −€32.45, commission ~−€3.50, net +€118.55.
+  No Add signals today. No holding has RSI 35–50 + above SMA50 + MACD bullish. KLR, ACN and ERO qualify
+    trend-wise, but their RSI is above 50.
 
   ── NEW POSITIONS ──────────────────────────────────────
-  IAG: Enter at 432.2p — Turso screen 5/5, Technical Buy, RSI 51.4, MACD bullish, just above SMA50 (431.4p)
-  Stop: 416.9p | Size: ~€850 (cash-limited; €1,500 target for 5/5) → ~165 sh
-  BBY: Enter at 920p — Turso screen 4/5, Technical Buy, RSI 56.2, MACD bullish, above SMA50 (887p)
-  Stop: 884.7p | Size: €1,000 (~93 sh)
-  FOUR: Enter on a reclaim of ~4,470p (SMA50). It closed 4,416p, just under it. Screen 4/5, MACD bullish, RSI 47.5
-  Stop: 4,151p | Size: €1,000 (~19 sh)
-  Cash (€896) covers one starter. IAG stays the top pick (eighth consecutive review at the top of the screen).
-  BBY is the Industrials alternative, so take IAG or BBY, not both. An SFM exit on Monday would free ~€572 for a second entry.
-  MEGP drops out: MACD flipped back bearish on Thu and it closed below its SMA50 (119.0p vs 119.6p). CKN is still out
-  (bearish, below SMA50). LOGN (4/5) was skipped because it adds to tech.
-  All three ideas are recorded to the Pending Trade Ideas queue (briefing-rec-*-2026-10-01). Execution is Mike's decision.
+  IAG: Enter at 441.2p (current) — 5/5 Turso screen, MF#11 pass. It reclaimed SMA50 (431.8p) Friday with RSI 57.
+  Stop: 425.3p | Size: €1,000 (~190 sh)
+  BBY or LOGN: second slot only if SFM is sold (see Investment Opportunities). Don't take both BBY and IAG unless
+    you want Industrials near 21%.
 
 INVESTMENT OPPORTUNITIES
-  5/5 · IAG (FTSE350, Industrials — airlines) — Magic Formula pass, P/E 7.8, EY 18.5%, ROIC 27.5% | MF#8
-  Entry: 432.2p | Stop: 416.9p | Size: ~€850 | RSI: 51.4 | MACD: Bullish
-  Conviction: MF#8; Magic Formula pass; corroborated by llm-research, briefing-recommendation; bullish MACD; RSI healthy at 51.
-  Portfolio fit: adds GBp (17% of the book) and non-tech cyclical exposure. Industrials would be ~13% with KLR and QXO-PB.
-    Fuel-price and cyclical risk. Hugging its SMA50, so a close below ~431p would weaken the setup.
+  5/5 · IAG (FTSE350, Industrials — airlines) — Magic Formula pass, P/E 7.8, EY 18.5%, ROIC 27.5% | MF#11
+  Entry: 441.2p | Stop: 425.3p | Size: €1,000 | RSI: 57.1 | MACD: Bullish
+  Conviction: MF#11; Magic Formula pass; corroborated by llm-research, briefing-recommendation; bullish MACD; RSI healthy at 57.
+  Portfolio fit: adds GBp (18.7% → ~23%) and cyclical exposure with no AI link. Industrials go 8.8% → ~14%. This is
+    the 7th briefing in a row to pick it, and it's still unexecuted. Fuel-price and cycle risk.
 
-  4/5 · BBY (FTSE350, Industrials — Balfour Beatty, UK infrastructure) — MF ranked (no pass), P/E 17.6, EY 6.3%, ROIC 105% | MF#83
-  Entry: 920p | Stop: 884.7p | Size: €1,000 | RSI: 56.2 | MACD: Bullish
-  Conviction: MF#83; Magic Formula ranked (no pass); bullish MACD; RSI healthy at 56; clean uptrend above SMA50.
-  Portfolio fit: GBp, defensive-ish UK infrastructure spend, no AI link. It overlaps IAG's sector, so take one or the other.
+  4/5 · BBY (FTSE350, Industrials — Balfour Beatty, UK infrastructure) — MF ranked (no pass), P/E 17.6, EY 6.3%, ROIC 105% | MF#90
+  Entry: 937.5p | Stop: 900.2p | Size: €1,000 (~90 sh) | RSI: 61.2 | MACD: Bullish
+  Conviction: MF#90; Magic Formula ranked (no pass); corroborated by briefing-recommendation; bullish MACD; RSI healthy at 61.
+  Portfolio fit: GBp, defensive UK infrastructure spend, clean uptrend above SMA50 (888.7p). It overlaps IAG's
+    sector, so treat it as an either/or.
 
-  4/5 · FOUR (FTSE350, Communication Services — 4imprint promo products) — MF ranked (no pass), P/E 16.5, EY 8.7%, ROIC 366% | MF#24
-  Entry: reclaim ~4,470p | Stop: 4,151p | Size: €1,000 | RSI: 47.5 | MACD: Bullish
-  Conviction: MF#24; Magic Formula ranked (no pass); corroborated by briefing-recommendation; bullish MACD. It slipped below
-    its SMA50 Thursday (−2.2%), so wait for the reclaim.
-  Portfolio fit: a new sector for the book. GBp listing, but a mostly US-revenue business.
+  4/5 · LOGN (STOXX600, Technology — Logitech) — MF ranked (no pass), P/E 19.2, EY 6.7%, ROIC 123% | MF#76
+  Entry: 86.40 (CHF) | Stop: 82.33 | Size: €1,000 (~11 sh) | RSI: 60.3 | MACD: Bullish
+  Conviction: MF#76; Magic Formula ranked (no pass); bullish MACD; RSI healthy at 60.
+  Portfolio fit: new CHF currency exposure. Tech goes 21.1% → ~26%, slightly over the 25% guide, so size down to
+    €750 or swap it for BBY. Turso labels this listing's currency "USD", but 86.40 matches the SIX CHF line, so
+    verify the listing before ordering.
+
+  Considered, not carried: SAGA (MF#3, but RSI 69.6 and P/E 42.8, so extended; watch for a pullback toward ~700p).
+    MU (AI-semis, a Burry-red name, and we closed a short in it on 09-28). ACN (already held via Xetra CSA).
+  All three carried picks are recorded as briefing-recommendation signals (Pending Trade Ideas panel).
 
 FREE RIDE OPPORTUNITIES
-  IQV: ✅ Already free-ridden — cumulative trim proceeds exceed the original 12-sh cost; 3 sh at zero effective cost |
-    Current value: ~€695 (−3.0% Thu, RSI 47.9)
-  KLR: ✅ Already free-ridden — trim proceeds exceed the original cost; 10 sh at zero effective cost |
-    Current value: ~€392 | RSI 66.3
-  SAP (+36.6%): Sell 6 of 7 sh at €186.74 → ~€1,117 covers cost basis (€956.90). Only 1 free share, so not flagged.
-  ACN (+36.5%): Sell 5 of 6 sh at €192.60 → ~€960 covers cost basis (€846.60). Only 1 free share, so not flagged.
-  No other positions currently meet free ride criteria.
+  IQV: ✅ Already free-ridden — cumulative trim proceeds exceed the original 12-sh cost. All 3 remaining shares are at
+    zero effective cost (~€688).
+  KLR: ✅ Already free-ridden — all 10 remaining shares are at zero effective cost (~€391).
+  SAP (+34.5%): selling 6 of 7 sh @ €183.92 covers the €956.90 cost and leaves only 1 free share, so it's below the
+    2-share threshold. Not flagged.
+  ACN (+29.0%): selling 5 of 6 sh @ €182.05 covers the €846.60 cost and leaves only 1 free share. Not flagged.
+  No new positions meet the free ride criteria.
 
 PORTFOLIO RISKS TO WATCH
-  - The short book is the main risk now. The 5 AI-infrastructure shorts are ~€6,325 notional, and AMAT/MU/PLTR are all
-    above their SMA50 with bullish MACDs. AMAT is −12.9% and through its stop reference. The shorts were −€182
-    unrealized on Thursday alone. None of the shorts has a hard stop in place.
-  - There are four live Exit signals: SFM, GSK (new), EDEN (new) and FLUT, plus ZOE on its proxy. LULU (RSI 35.6) is one
-    MACD cross from a fifth. There are no stop-losses anywhere in the long book either.
-  - Record integrity: today's reconciliation found a fabricated LULU trim written into Turso on 09-21, and its source
-    task is still unidentified. Until that's found, treat any trade in Turso that this briefing didn't narrate as suspect.
-    Separately, the reconciliation only partly reached Turso: the KLR/IQV/PRX/WKL entry prices are still the old values.
-  - META $885 Oct-09 call: ≈$0.03 (≈€2) of €270 paid, META $725.93, 6 trading days left. Let it lapse.
-  - FX: USD is 45% of the long book and EUR/USD fell 0.8% to 1.1247 (daily RSI 17, deeply oversold euro). A euro
-    snap-back would cut the EUR value of the USD book and of the USD shorts' P&L.
-  - Pipeline: refresh-technicals has missed this task's 23:30 window four nights running. trading_portfolio_wiki_sync.py
-    no longer recognises the Open Positions table after the reconciliation added an "Entry Date" column ("header not
-    found, skipped a table"), so tonight's wiki prices were updated by hand. check_data_quality.py has hung four nights running.
+  - Broad technical deterioration: 5 Exit signals (SFM, PRX, GSK, EDEN, FLUT) and 7 Watches, with 12 of 17 longs below
+    SMA50. Three of the Exits sit under patience overrides that all expire around 10-15/10-16. That's a cluster of
+    decisions landing in the same week.
+  - LULU (largest, 9.3%, −16.3%): RSI 34.0, below SMA50. Only bullish MACD keeps it out of Exit, so one bearish cross
+    triggers it.
+  - Options book bleeding time value: ORCL put ~€467 (cost €982, ORCL $142.30, 18% above breakeven $108.62,
+    expires 12-18), PLTR put ~€485 (cost €715), NBIS put ~€230 by hand-mark (cost €479). NBIS rallied to $242.81
+    after the put opened. That's a Black-Scholes estimate at 80% vol and the range is €120–380 for 70–90% vol.
+    Combined about −€944 vs cost.
+  - ORCL short: up 3.1% Friday to $142.30, close to SMA50 ($143.59). A reclaim of SMA50 would turn the trend against
+    the short. The ATR stop reference is $164.06.
+  - Data integrity: the NBIS put has no mark in Turso, and Turso entry prices for KLR/IQV/PRX/WKL/FLUT are still
+    pre-reconciliation. Until both are fixed, dashboard P&L won't match this briefing.
 
 NEXT ACTIONS
-  1. AMAT short: decide tomorrow whether to cover (~$529) or set a hard buy-stop at ~$549. Consider stops on MU (ref $1,146)
-     and PLTR (ref $192.7) too.
-  2. SFM: Full Exit on Mon 2026-10-05 (10 sh, ~€572 proceeds, ≈ −€140 realised) unless RSI recovers above 40 first.
-  3. GSK and EDEN: new Exits; patience window to ~2026-10-15, max trim 50%. GSK earnings 10-28.
-  4. ZOE: get a real Xetra quote before acting on the proxy Exit.
-  5. Pending Trade Ideas: IAG at 432.2p (stop 416.9p, ~€850) is the one entry cash covers. BBY is the alternative,
-     and FOUR waits for a reclaim of 4,470p.
-  6. ACN: confirm what drove Thursday's +19% and decide on the optional 3-sh profit-take.
-  7. Fix: (a) trading_portfolio_wiki_sync.py header match for the new Entry Date column; (b) Turso entry_price for
-     KLR/IQV/PRX/WKL; (c) find which task wrote the fabricated LULU trim; (d) refresh-technicals timing; (e) the
-     check_data_quality.py hang.
-  8. META $885 call expires 2026-10-09: let it lapse. GSK/SFM earnings 10-28, FLUT 11-12.
+  1. Mon 10-05: sell SFM in full (10 sh, ~$64.47 ≈ €572, net ≈ −€140) per the rule set on 10-01. The only reason to
+     hold is an RSI reclaim above 40 at the open.
+  2. Consider IAG at ~441p, stop 425.3p, ~190 sh (≈€1,000) from existing cash. It's the 7th consecutive pick, so
+     approve or reject it in Pending Trade Ideas so it stops recurring.
+  3. Fix the Turso NBIS put row (option_type=put, strike=90, expiry=2027-06-17, premium=5.38, contracts=1) so
+     options_pricing.py can mark it. Correct the five stale entry prices while you're there.
+  4. ADBE: reassess ~10-08 (RSI 41, below SMA50, MACD bearish).
+  5. PRX/GSK/EDEN patience windows close ~10-15/10-16. Pre-decide the 50% trims now. GSK earnings 10-28,
+     FLUT earnings 11-12.
 ════════════════════════════════════════════════════════
