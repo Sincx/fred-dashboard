@@ -5,14 +5,14 @@
   "icon": "ðŸ§ ",
   "runs": [
     {
+      "runAt": "2026-10-04T23:54:25.638+02:00",
+      "summary": "Memory index updated - 4 new pages, 3 threads added, 1 thread updated, 0 resolved",
+      "content": "- Last updated -> 2026-10-04\n- Podcasts: 4 new pages (10-03) - Where Is Austin Tice? Eps 1-2, DOAC x Prof. Jiang, DOAC x Rick Rubin, What Now? x Jimmy Carr\n- Meta: thinker run count 66 -> 70; highlights for 10-02/03/04 added\n- Finance: MF top 3 now MGNS/DNLM/MU; 10-04 strategy-feedback + briefing (21 positions, net ~EUR19,436, PRX new Exit) noted\n- Crypto: 10-03 refresh noted; Cooking: 10-02 recipe run noted\n- Updated: live-portfolio briefing thread 10-01 -> 10-04 (AMAT short gone, NBIS put row missing strike/expiry)\n- Added: strategy-feedback proposals (significance test, thesis-intact test) + forward-return scoring idea; Jiang Fragmentation scenario for AI constraint model; Jimmy Carr x Lightfin humour link"
+    },
+    {
       "runAt": "2026-10-01T23:53:39.055+02:00",
       "summary": "Memory index updated - 0 new pages, 2 threads added, 5 threads updated, 2 resolved",
       "content": "- Last updated -> 2026-10-01\n- Finance: paper trading now shows 10-01 TGT entry (Strategy B Momentum) / HUM trim exit, net P&L +$1,118 (+1.57%)\n- Resolved: trading-portfolio reconciliation gap (IBKR real-statement audit 10-01; 26 positions, net ~EUR19.5k) - follow-up noted: trading_portfolio_wiki_sync.py broken by new Entry Date column\n- Resolved: Delivery Hero spinoff thread (Uber EUR13B takeover) - replaced with new candidates H.B. Fuller / Intertek + Voya vote Nov 24\n- Updated: Bayer (Roundup ruling pending post Sept 14), yfinance MCP still down 10-01, Turso prices stale 4 nights, 10-01 briefing (GSK/EDEN new Exit signals, AMAT short through stop)\n- Added: Messy Jobs authorship check / Circle Round format example (wiki-thinker)"
-    },
-    {
-      "runAt": "2026-09-30T23:54:32.2816477+02:00",
-      "summary": "Memory index updated - 1 new page, 2 threads added, 2 threads updated, 0 resolved",
-      "content": "- Last updated -> 2026-09-30\n- Meta: thinker run count 64 -> 66 (through 09-30)\n- Finance: paper trading now shows 09-30 AUTO entry (LSE, Strategy A Value) / DHI trim exit, net P&L +$1,166 (+1.67%)\n- Books: new books-from-podcasts.md (21 books, maintained by wiki-thinker Step 4b)\n- Open Threads added: podcast-transcript coverage gap for the book list; 09-30 briefing (SFM/FLUT Exit, IAG/MEGP/FOUR candidates, no live trades since 09-21)\n- Open Threads updated: Turso prices stale 3 nights + check_data_quality.py hung; wiki-company-scanner 09-30 run (FOUR/WSE/UI added; Clarkson/Revolut/Sophos pending)\n- Games entries were already updated earlier today (Autobattler ingest + docs move)"
     }
   ]
 }
