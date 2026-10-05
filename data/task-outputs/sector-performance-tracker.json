@@ -5,14 +5,14 @@
   "icon": "🏭",
   "runs": [
     {
+      "runAt": "2026-10-05T09:13:52.1410088+02:00",
+      "summary": "Data through Oct 2 (Q3 final, Q4 2-day partial). Top 3: SMH +75.1%, CIBR +46.9%, XLE +43.3%. SPY P/E: 25.15x (P/E source has not updated for 3 weeks)",
+      "content": "Top 5 YTD 2026: SMH +75.1% (P/E 36.95x, Expensive), CIBR +46.9% (36.76x, Expensive), XLE +43.3% (16.95x, Fair), XLK +39.3% (34.41x, Elevated), XBI +26.8% (P/E N/A).\n\nBottom 5 YTD 2026: XLY -7.3% (25.80x, Elevated), XLC -5.4% (17.15x, Fair), XLU -4.7% (19.63x, Fair), GLD -4.1% (P/E N/A), ITA -3.0% (32.74x, Elevated).\n\nNotable shifts: Q3 is now final. SPY rose +2.4% in Q3, but 17 of the 25 sectors fell. Three momentum downgrades: GDX Improving→Fading (YTD +8.3%→+2.4%), XLC Improving→Fading, and XLF Continuing→Fading. XLF and KIE turned YTD negative, so 8 sectors are now negative YTD. CIBR finished Q3 +14.7% (Accelerating), and SMH opened Q4 +3.6%. SPY is +13.7% YTD, and 6 of 25 sectors beat it. No P/E band crossings reported: P/Es have been identical for a third straight week, and a live check showed stockanalysis.com is still serving the same values. XLK is likely already above 35x on a live basis."
+    },
+    {
       "runAt": "2026-09-28T12:01:09+02:00",
       "summary": "Data through Sep 25 (Q3 partial). Top 3: SMH +68.4%, CIBR +41.7%, XLE +41.5%. SPY P/E: 25.15x (unchanged — P/E source not refreshed)",
       "content": "Top 5 YTD 2026: SMH +68.4% (P/E 36.95x, Expensive), CIBR +41.7% (36.76x, Expensive), XLE +41.5% (16.95x, Fair), XLK +36.8% (34.41x, Elevated), XBI +27.3% (P/E N/A).\n\nBottom 5 YTD 2026: XLY -6.8% (25.80x, Elevated), XLU -5.5% (19.63x, Fair), XLC -3.2% (17.15x, Fair), XRT -2.6% (14.14x, Cheap), GLD -0.7% (P/E N/A).\n\nNotable shifts: tech rebound week — SMH recovered +9.3pts YTD as its Q3 drawdown narrowed (-12.6%→-7.5%), XLK's Q3 turned positive (Consolidating→Continuing), and CIBR edged past XLE for #2 YTD. XLE eased for a second week (Q3 +21.1%→+17.5%, Accelerating→Continuing). Gold (GLD) flipped YTD negative (+1.2%→-0.7%, Improving→Fading); XLV moved Improving→Continuing; KIE's Q3 turned negative (YTD +0.4%); XLU deepened its reversal to -5.5%. SPY +14.0% YTD — only 6 of 25 sectors beat it. No P/E band crossings, but every P/E was identical to the prior run (stockanalysis.com didn't refresh), so valuation bands are carried forward."
-    },
-    {
-      "runAt": "2026-09-21T09:00:00+02:00",
-      "summary": "Data through Sep 18 (Q3 partial). Top 3: SMH +59.1%, XLE +45.8%, CIBR +40.1%. SPY P/E: 25.15x (down from 25.77x)",
-      "content": "Top 5 YTD 2026: SMH +59.1% (P/E 36.95x, Expensive), XLE +45.8% (16.95x, Fair), CIBR +40.1% (36.76x, Expensive), XLK +32.0% (34.41x, Elevated), XBI +28.7% (P/E N/A).\n\nBottom 5 YTD 2026: XLY -6.7% (25.80x, Elevated), XLC -5.3% (17.15x, Fair), XRT -3.4% (14.14x, Cheap), XLU -2.4% (19.63x, Fair), ITA -0.1% (32.74x, Elevated).\n\nNotable shifts: the tracker's busiest run for valuation band crossings since the redesign — three this week: Technology (XLK) Expensive→Elevated (37.03x→34.41x), Retail (XRT) Fair→Cheap (15.08x→14.14x), and Health Care (XLV) Fair→Elevated (24.95x→25.02x, right on the boundary). Two sectors flipped YTD negative: Aerospace & Defense (ITA, +2.2%→-0.1%) and Utilities (XLU, +0.6%→-2.4%), joining the 'Reversing' group alongside XLY, XLC, and XRT. Cybersecurity (CIBR) was the standout improver — Q3 pace more than doubled (+5.1%→+11.2%), pushing YTD to +40.1%. Energy (XLE) and Semiconductors (SMH) remain the tracker's top two 2026 performers, though both eased slightly this week."
     }
   ]
 }
