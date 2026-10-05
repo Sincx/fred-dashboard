@@ -297,7 +297,7 @@ function ClosedPositionsTable({ rows }: { rows: TradeRow[] }) {
       <table className="w-full text-xs border-collapse">
         <thead>
           <tr style={{ borderBottom: "1px solid var(--border)" }}>
-            {["Ticker", "Exchange", "Entry Date", "Exit Date", "Entry", "Exit", "P&L%", "P&L $", "Result"].map((h) => (
+            {["Ticker", "Exchange", "Shares", "Entry Date", "Exit Date", "Entry", "Exit", "P&L%", "P&L $", "Result"].map((h) => (
               <th key={h} className="text-left py-2 px-3 font-medium" style={{ color: "var(--text-muted)" }}>{h}</th>
             ))}
           </tr>
@@ -316,6 +316,7 @@ function ClosedPositionsTable({ rows }: { rows: TradeRow[] }) {
               }}>
                 <td className="py-2 px-3 font-medium" style={{ color: "var(--text-primary)" }}>{r.ticker}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.exchange}</td>
+                <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.shares != null ? r.shares : "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.entry_date ?? "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-secondary)" }}>{r.exit_date ?? "—"}</td>
                 <td className="py-2 px-3" style={{ color: "var(--text-primary)" }}>{r.entry_price != null ? r.entry_price.toFixed(2) : "—"}</td>
@@ -452,6 +453,8 @@ function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: (warni
   const [entryPrice, setEntryPrice] = useState(String(idea.entry ?? ""));
   const [stopLoss, setStopLoss] = useState(String(idea.stop ?? ""));
   const [sizeEur, setSizeEur] = useState(String(idea.size ?? ""));
+  const [showReject, setShowReject] = useState(false);
+  const [rejectReason, setRejectReason] = useState("");
 
   async function act(action: "approve" | "reject" | "snooze", extra: Record<string, unknown> = {}) {
     setBusy(true);
@@ -503,7 +506,7 @@ function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: (warni
           </button>
           <button
             disabled={busy}
-            onClick={() => act("reject")}
+            onClick={() => setShowReject((v) => !v)}
             className="px-2.5 py-1 rounded text-xs font-medium"
             style={{ backgroundColor: "rgba(239,68,68,0.15)", color: "var(--accent-red)" }}
           >
@@ -544,6 +547,24 @@ function PendingIdeaCard({ idea, onActed }: { idea: PendingIdea; onActed: (warni
             style={{ backgroundColor: "var(--accent-green)", color: "#052e16" }}
           >
             Confirm & open trade
+          </button>
+        </div>
+      )}
+      {showReject && (
+        <div className="mt-3 pt-3 flex items-end gap-2 flex-wrap" style={{ borderTop: "1px solid var(--border)" }}>
+          <label className="text-xs flex-1 min-w-[200px]">
+            <span style={{ color: "var(--text-muted)" }}>Reason (optional — helps improve future recommendations)</span>
+            <input value={rejectReason} onChange={(e) => setRejectReason(e.target.value)}
+              placeholder="e.g. already have enough Tech exposure"
+              className="block mt-0.5 w-full px-2 py-1 rounded text-xs" style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", color: "var(--text-primary)" }} />
+          </label>
+          <button
+            disabled={busy}
+            onClick={() => act("reject", { reason: rejectReason })}
+            className="px-3 py-1.5 rounded text-xs font-semibold"
+            style={{ backgroundColor: "var(--accent-red)", color: "#450a0a" }}
+          >
+            Confirm reject
           </button>
         </div>
       )}

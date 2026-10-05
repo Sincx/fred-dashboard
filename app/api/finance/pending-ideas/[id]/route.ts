@@ -156,12 +156,20 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       const rejectedSignalCount = (sigRs.rows[0]?.signal_count as number | undefined) ?? 1;
       const detail = signal.detail ? JSON.parse(signal.detail) : {};
       detail.rejected_signal_count = rejectedSignalCount;
+      // Added 2026-10-05, Mike's own request — an optional free-text reason
+      // ("why I said no"), stored alongside the idea so a future briefing
+      // run (or Mike himself) can read WHY past ideas were passed on, not
+      // just that they were. Not read by anything yet — purely a captured
+      // record until a later piece of work (e.g. feeding recent reject
+      // reasons into Step 6's own candidate-selection prompt) consumes it.
+      const reason = typeof body?.reason === "string" ? body.reason.trim() : "";
+      if (reason) detail.reject_reason = reason;
 
       await client.execute({
         sql: `UPDATE signals SET status = 'rejected', status_updated_at = ?, detail = ? WHERE signal_id = ?`,
         args: [now, JSON.stringify(detail), id],
       });
-      return NextResponse.json({ status: "rejected", rejected_signal_count: rejectedSignalCount });
+      return NextResponse.json({ status: "rejected", rejected_signal_count: rejectedSignalCount, reason: reason || null });
     }
 
     if (action === "snooze") {
