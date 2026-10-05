@@ -5,14 +5,14 @@
   "icon": "ðŸ§ ",
   "runs": [
     {
+      "runAt": "2026-10-05T23:54:38.750+02:00",
+      "summary": "Memory index updated - 0 new pages, 2 threads added, 1 thread updated, 0 resolved",
+      "content": "- Last updated -> 2026-10-05\n- Meta: thinker run count 70 -> 71; 10-05 highlight added (MU Magic Formula cyclical-guard question, Eva MCP dogfood idea)\n- Finance: paper trading latest trade now 10-05 (CCL entered, Strategy D; ICE trim exit; net P&L +$1,156/+1.61%)\n- Added: sector-tracker P/E source stale thread (3rd identical run, stockanalysis.com serving frozen values)\n- Added: Crypto thread - use Eva MCP to answer company-everything-inc 'what does Eva do?'\n- Updated: Micron idea-page thread with MU's #3 Magic Formula rank / peak-cycle ROIC caveat"
+    },
+    {
       "runAt": "2026-10-04T23:54:25.638+02:00",
       "summary": "Memory index updated - 4 new pages, 3 threads added, 1 thread updated, 0 resolved",
       "content": "- Last updated -> 2026-10-04\n- Podcasts: 4 new pages (10-03) - Where Is Austin Tice? Eps 1-2, DOAC x Prof. Jiang, DOAC x Rick Rubin, What Now? x Jimmy Carr\n- Meta: thinker run count 66 -> 70; highlights for 10-02/03/04 added\n- Finance: MF top 3 now MGNS/DNLM/MU; 10-04 strategy-feedback + briefing (21 positions, net ~EUR19,436, PRX new Exit) noted\n- Crypto: 10-03 refresh noted; Cooking: 10-02 recipe run noted\n- Updated: live-portfolio briefing thread 10-01 -> 10-04 (AMAT short gone, NBIS put row missing strike/expiry)\n- Added: strategy-feedback proposals (significance test, thesis-intact test) + forward-return scoring idea; Jiang Fragmentation scenario for AI constraint model; Jimmy Carr x Lightfin humour link"
-    },
-    {
-      "runAt": "2026-10-01T23:53:39.055+02:00",
-      "summary": "Memory index updated - 0 new pages, 2 threads added, 5 threads updated, 2 resolved",
-      "content": "- Last updated -> 2026-10-01\n- Finance: paper trading now shows 10-01 TGT entry (Strategy B Momentum) / HUM trim exit, net P&L +$1,118 (+1.57%)\n- Resolved: trading-portfolio reconciliation gap (IBKR real-statement audit 10-01; 26 positions, net ~EUR19.5k) - follow-up noted: trading_portfolio_wiki_sync.py broken by new Entry Date column\n- Resolved: Delivery Hero spinoff thread (Uber EUR13B takeover) - replaced with new candidates H.B. Fuller / Intertek + Voya vote Nov 24\n- Updated: Bayer (Roundup ruling pending post Sept 14), yfinance MCP still down 10-01, Turso prices stale 4 nights, 10-01 briefing (GSK/EDEN new Exit signals, AMAT short through stop)\n- Added: Messy Jobs authorship check / Circle Round format example (wiki-thinker)"
     }
   ]
 }
