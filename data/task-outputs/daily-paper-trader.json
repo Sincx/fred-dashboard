@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-05T12:33:41.964081+02:00",
+      "summary": "CCL (D)",
+      "picks": {
+        "p1": {
+          "ticker": "CCL",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 25.76,
+          "stop": 21.9,
+          "t1": 32.2,
+          "t2": 38.64
+        }
+      },
+      "content": "Carnival (NYSE, $25.76) was bought as the day's earnings-catalyst pick. Its 09-29 Q3 beat (EPS $1.43 vs $1.35) raised FY26 EPS guidance to $2.24 on record yields and deposits, yet the stock trades ~11.5x that guidance and 24% below its 52-week high, and it adds travel/leisure exposure to a healthcare- and energy-heavy book. ICE was exited as a capacity trim (−6.57%, −$66; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $3.17 from T1 and HPQ is $5.40 from T2. Portfolio net P&L: +$1,156 (+1.61% on $72,000)."
+    },
+    {
       "runAt": "2026-10-01T23:38:31.3430681+02:00",
       "summary": "TGT (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Target (NYSE, $156.70) was bought as the day's momentum pick. It holds a +24% 3-month uptrend near its 52-week high at only ~16x earnings, and the Fiddelke turnaround is showing up in traffic-led comps (Q2 +3.8% vs a 2.4% estimate, FY sales guide raised to ~5%). It also diversifies the book away from healthcare. HUM was exited as a capacity trim (−8.63%, −$86); it was the weakest position and its momentum thesis had broken. No stop/T1/T2 triggers; HPQ is $5.37 from T2 and RIGL is $3.36 from T1. Portfolio net P&L: +$1,118 (+1.57% on $71,000)."
-    },
-    {
-      "runAt": "2026-09-30T23:39:24.9876392+02:00",
-      "summary": "AUTO (A)",
-      "picks": {
-        "p1": {
-          "ticker": "AUTO",
-          "strategy": "A — Value",
-          "entry": 452.8,
-          "stop": 384.88,
-          "t1": 566.0,
-          "t2": 679.2
-        }
-      },
-      "content": "Auto Trader Group (LSE, 452.80p) was bought as the day's value pick. It trades ~14x earnings with ~49% ROIC and sits 6% above its 52-week low after a ~45% de-rating on AI-disruption and Deal Builder fears. Management is buying back shares heavily, and the 562p consensus target sits at T1. DHI was exited as a capacity trim (−6.41%, −$64); it was chosen over the weaker HUM as the stalest thesis. No stop/T1/T2 triggers; RIGL is $2.18 from T1. Portfolio net P&L: +$1,166 (+1.67% on $70,000)."
     }
   ]
 }
