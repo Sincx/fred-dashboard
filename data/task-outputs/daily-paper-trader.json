@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-06T23:39:38.690003+02:00",
+      "summary": "UHS (A)",
+      "picks": {
+        "p1": {
+          "ticker": "UHS",
+          "strategy": "A — Value",
+          "entry": 177.08,
+          "stop": 150.52,
+          "t1": 221.35,
+          "t2": 265.62
+        }
+      },
+      "content": "Universal Health Services (NYSE, $177.08) was bought as the day's value pick. It trades at ~7x earnings with positive FCF, 27% below its 52-week high; it's a Burry-aligned peer of his HCA long, and Q3 results land on 10-26. INCY was exited as a capacity trim (−8.50%, −$85); it was the weakest position and its momentum premise had failed. No stop/T1/T2 triggers; CVX is $9.93 from T1 and HPQ is $5.79 from T2. Portfolio net P&L: +$1,413 (+1.94% on $73,000)."
+    },
+    {
       "runAt": "2026-10-05T12:33:41.964081+02:00",
       "summary": "CCL (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Carnival (NYSE, $25.76) was bought as the day's earnings-catalyst pick. Its 09-29 Q3 beat (EPS $1.43 vs $1.35) raised FY26 EPS guidance to $2.24 on record yields and deposits, yet the stock trades ~11.5x that guidance and 24% below its 52-week high, and it adds travel/leisure exposure to a healthcare- and energy-heavy book. ICE was exited as a capacity trim (−6.57%, −$66; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $3.17 from T1 and HPQ is $5.40 from T2. Portfolio net P&L: +$1,156 (+1.61% on $72,000)."
-    },
-    {
-      "runAt": "2026-10-01T23:38:31.3430681+02:00",
-      "summary": "TGT (B)",
-      "picks": {
-        "p1": {
-          "ticker": "TGT",
-          "strategy": "B — Momentum",
-          "entry": 156.7,
-          "stop": 133.2,
-          "t1": 195.88,
-          "t2": 235.05
-        }
-      },
-      "content": "Target (NYSE, $156.70) was bought as the day's momentum pick. It holds a +24% 3-month uptrend near its 52-week high at only ~16x earnings, and the Fiddelke turnaround is showing up in traffic-led comps (Q2 +3.8% vs a 2.4% estimate, FY sales guide raised to ~5%). It also diversifies the book away from healthcare. HUM was exited as a capacity trim (−8.63%, −$86); it was the weakest position and its momentum thesis had broken. No stop/T1/T2 triggers; HPQ is $5.37 from T2 and RIGL is $3.36 from T1. Portfolio net P&L: +$1,118 (+1.57% on $71,000)."
     }
   ]
 }
