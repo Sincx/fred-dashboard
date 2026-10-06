@@ -1,18 +1,18 @@
-{
-  "taskId": "wiki-memory-update",
-  "label": "Wiki Memory Update",
-  "schedule": "Daily 9:53 PM",
-  "icon": "ðŸ§ ",
-  "runs": [
-    {
-      "runAt": "2026-10-05T23:54:38.750+02:00",
-      "summary": "Memory index updated - 0 new pages, 2 threads added, 1 thread updated, 0 resolved",
-      "content": "- Last updated -> 2026-10-05\n- Meta: thinker run count 70 -> 71; 10-05 highlight added (MU Magic Formula cyclical-guard question, Eva MCP dogfood idea)\n- Finance: paper trading latest trade now 10-05 (CCL entered, Strategy D; ICE trim exit; net P&L +$1,156/+1.61%)\n- Added: sector-tracker P/E source stale thread (3rd identical run, stockanalysis.com serving frozen values)\n- Added: Crypto thread - use Eva MCP to answer company-everything-inc 'what does Eva do?'\n- Updated: Micron idea-page thread with MU's #3 Magic Formula rank / peak-cycle ROIC caveat"
-    },
-    {
-      "runAt": "2026-10-04T23:54:25.638+02:00",
-      "summary": "Memory index updated - 4 new pages, 3 threads added, 1 thread updated, 0 resolved",
-      "content": "- Last updated -> 2026-10-04\n- Podcasts: 4 new pages (10-03) - Where Is Austin Tice? Eps 1-2, DOAC x Prof. Jiang, DOAC x Rick Rubin, What Now? x Jimmy Carr\n- Meta: thinker run count 66 -> 70; highlights for 10-02/03/04 added\n- Finance: MF top 3 now MGNS/DNLM/MU; 10-04 strategy-feedback + briefing (21 positions, net ~EUR19,436, PRX new Exit) noted\n- Crypto: 10-03 refresh noted; Cooking: 10-02 recipe run noted\n- Updated: live-portfolio briefing thread 10-01 -> 10-04 (AMAT short gone, NBIS put row missing strike/expiry)\n- Added: strategy-feedback proposals (significance test, thesis-intact test) + forward-return scoring idea; Jiang Fragmentation scenario for AI constraint model; Jimmy Carr x Lightfin humour link"
-    }
-  ]
+﻿{
+    "taskId":  "wiki-memory-update",
+    "label":  "Wiki Memory Update",
+    "schedule":  "Daily 9:53 PM",
+    "icon":  "Ã°Å¸Â§Â ",
+    "runs":  [
+                 {
+                     "runAt":  "2026-10-06T23:53:40.7900305+02:00",
+                     "summary":  "Memory index updated — 0 new pages, 2 new threads, 0 resolved",
+                     "content":  "- Last updated bumped to 2026-10-06\n- Meta: wiki-thinker run count 71 -\u003e 72 (through 10-06)\n- Finance paper trading: latest trade now 10-06 (UHS Strategy A Value @ $177.08 entered; INCY capacity-trim exit -8.50%)\n- New open thread: ORCL short needs three dated pass/fail tests (thinker idea) + CXMT/Burry MU oversupply connection\n- New open thread: briefing flags LULU -\u003e Exit, SFM exit overdue, UK/EU prices stuck at 10-02"
+                 },
+                 {
+                     "runAt":  "2026-10-05T23:54:38.750+02:00",
+                     "summary":  "Memory index updated - 0 new pages, 2 threads added, 1 thread updated, 0 resolved",
+                     "content":  "- Last updated -\u003e 2026-10-05\n- Meta: thinker run count 70 -\u003e 71; 10-05 highlight added (MU Magic Formula cyclical-guard question, Eva MCP dogfood idea)\n- Finance: paper trading latest trade now 10-05 (CCL entered, Strategy D; ICE trim exit; net P\u0026L +$1,156/+1.61%)\n- Added: sector-tracker P/E source stale thread (3rd identical run, stockanalysis.com serving frozen values)\n- Added: Crypto thread - use Eva MCP to answer company-everything-inc \u0027what does Eva do?\u0027\n- Updated: Micron idea-page thread with MU\u0027s #3 Magic Formula rank / peak-cycle ROIC caveat"
+                 }
+             ]
 }
