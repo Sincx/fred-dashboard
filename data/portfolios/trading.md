@@ -59,15 +59,17 @@ Only the **ORCL short (5sh) remains open** from the five shorts opened 2026-09-2
 
 ## Portfolio Net Value
 
-**Total Net Value: ≈ €19,449** (revised 2026-10-07 18:30 CEST; US on Tue 10-06 closes, EU on Wed 10-07 closes, KLR/REL 10-05, GSK 10-06)
+**Total Net Value: ≈ €19,446** (2026-10-07 23:40 CEST run; US on Tue 10-06 closes, EU on Wed 10-07 closes, KLR/REL 10-05, GSK 10-06; EUR/USD 1.1201, GBP/EUR 1.1796)
 
 | Component | Value (€) | Basis |
 | --- | --- | --- |
-| Long equity (market price) | €16,449 | Sum of Mkt Value across all 17 open long positions (Turso `prices` after the data-quality retry recovered UK/EU bars; QXO-PB at Tue's verified $38.575, not Turso's unverified 10-07 $35.30), EUR/USD 1.1198, GBP/EUR 1.1800 |
+| Long equity (market price) | €16,446 | Sum of Mkt Value across all 17 open long positions (Turso `prices` after the data-quality retry recovered UK/EU bars; QXO-PB at Tue's verified $38.575, not Turso's unverified 10-07 $35.30), EUR/USD 1.1198, GBP/EUR 1.1800 |
 | Options (market price) | ≈€1,061 | ORCL put ≈€395 + PLTR put ≈€438 (options_pricing.py Black-Scholes, 10-07 mark) + NBIS put ≈€228 (hand Black-Scholes at 80% vol, ~$2.55/sh) |
 | Shorts (market − entry, unrealized P&L) | ≈+€44 | ORCL only (5 sh, $154.552 → $144.77) |
 | Cash | €1,895 | Unchanged since 10-02 sync — no new trades/cash entries in Turso (checked 10-06/10-07). **Short-sale proceeds at open still excluded** — see [[#Cash Position\|Cash Position]] |
-| **Total Net Value** | **€19,449** | |
+| **Total Net Value** | **€19,446** | |
+
+> **2026-10-07 23:40 run (−€3 vs the 18:30 revision):** FX only (EUR/USD 1.1198 → 1.1201). Turso prices are unchanged since the revision, and there are no new trades or cash entries.
 
 > **2026-10-07 revision (−€12 vs 10-05's €19,461):** the 10-06 23:39 run first showed €19,406 on Friday UK/EU prices; refreshed data lifted the European book (SAP, WKL, EDEN, ZOE, PRX up) while options lost ~€117 more and the ORCL short gave back ~€10. No trades.
 
@@ -103,6 +105,7 @@ Only the **ORCL short (5sh) remains open** from the five shorts opened 2026-09-2
 
 > Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR. APH closed out entirely 2026-09-22, META closed out entirely 2026-09-28 — see [[#Closed Positions|Closed Positions]].
 > Prices last fetched: **2026-10-07** (revised 18:30 CEST after check_data_quality.py auto-recovered the missing UK/EU bars: US on Tue 10-06 closes, EU on Wed 10-07 closes, KLR/REL 10-05, GSK 10-06; QXO-PB at Tue's verified $38.575 close — Turso's 10-07 $35.30 is an unverified mid-session print. Notes-column RSI text below may still cite 10-05; the Signal column is current; `trading_portfolio_wiki_sync.py` still doesn't match this table's header since the Entry Date column was added — updated by hand. Some SMA50 figures in Notes are carried from 10-01).
+> **23:40 CEST run (2026-10-07):** prices unchanged from the 18:30 revision. Wednesday's US closes aren't in Turso until the 07:17 refresh, and massive still serves Tuesday. QXO-PB's $35.30 10-07 row is still unverified (Turso has no 10-06 row for it). KLR/REL still on 10-05.
 > **Active alerts (2026-10-07, revised):** LULU — Exit (since 10-05), patience override, trim 9 sh on close < $88.54, reassess ~10-20. **EDEN and PRX Exits cleared** on refreshed data (now Watch). **SFM** — mechanical signal eased to Watch (MACD turned bullish) but RSI 36.5 still < 40, so the 10-01 exit rule still says sell (alt: hard stop $61.55). **QXO-PB** — provisional Exit on an unverified −8.5% 10-07 intraday print; check news. ORCL short — price reclaimed SMA50 (trend flipping against the short). ADBE — reassess 10-08. PRX — new Exit 10-02, patience to ~10-16. GSK/EDEN — Exit since 10-01, patience window to ~10-15. ZOE — proxy Exit cleared (direct quote, Watch). NBIS put — Turso row missing option_type/strike/expiry, cannot be auto-marked. FLUT — Exit, 1 share uneconomic to sell, free-to-ride stands. ADBE — Watch, reassess ~10-08. **AMAT short — closed 09-29, the "through its stop reference" alert from 10-01 is now moot.** REL, GSK, LULU share counts corrected 10-01 — re-check any standing orders/alerts sized against the old (wrong) counts.
 
 ---
