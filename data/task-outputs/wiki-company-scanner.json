@@ -5,14 +5,14 @@
   "icon": "🔎",
   "runs": [
     {
+      "runAt": "2026-10-07T09:11:59.4770719+02:00",
+      "summary": "1 auto-added, 5 pending review",
+      "content": "Scanned 39 wiki pages changed since 2026-09-30 (mostly Finance trading, paper-trading and spinoff pages, the cross-domain themes file, and new podcast pages). Auto-added Voya Financial (VOYA), which is facing a TOMS Capital no-confidence vote on Nov 24. Target, Carnival and Universal Health Services were already tracked. H.B. Fuller (the SEC name didn't match), Intertek, Bayer, Auto Trader and the pre-IPO CXMT went to pending review."
+    },
+    {
       "runAt": "2026-09-30T09:12:59+02:00",
       "summary": "3 auto-added, 3 pending review",
       "content": "Scanned 46 wiki pages changed since 2026-09-23 (mostly Finance trade/portfolio pages, new podcast summaries, and the new Terrain Autobattler game docs). Auto-added Shift4 Payments (FOUR, a 4/5 trading-portfolio candidate), Wise (WSE, the new WISE.L paper trade's US-listed line) and Ubiquiti (UI, from a Darknet Diaries podcast recommendation); Incyte and Unity Software were already tracked. Clarkson (LSE: CKN), Revolut and Sophos (both private) went to pending review."
-    },
-    {
-      "runAt": "2026-09-23T09:17:34+02:00",
-      "summary": "15 auto-added, 31 pending review",
-      "content": "Scanned 77 wiki pages changed since the last run (2026-09-12) across all domains. Auto-added 15 tickers via exact SEC matches: Kyndryl (KD), SK hynix (SKHY), Lloyds Banking Group (LYG), InterParfums (IPAR), Snowflake (SNOW), Reckitt Benckiser (RBGLY), Sotera Health (SHC), Sezzle (SEZL), SoFi Technologies (SOFI), PACS Group (PACS), Credit Acceptance (CACC), Rio Tinto (RTNTF), Shell (SHEL), BP (BP), and QXO (QXO) — surfaced mainly by portfolio-overview.md's flagged pension-CSV holdings, the Burry cross-reference watch/investigate list, and several Morningstar European/short-interest source pages. 25 candidates (Oracle, Humana, Broadcom, Altria, and 21 others) were already tracked. 31 went to pending review in wiki/finance/pending-watchlist-additions.md — mostly non-US-listed names the SEC-only resolver can't confidently reach (UK housebuilders/most-shorted names, Eurozone dividend leaders, Samsung, Siemens, Santander, Equinor) plus a few US-adjacent names the resolver missed (Fannie Mae, Icahn Enterprises, Sportradar)."
     }
   ]
 }
