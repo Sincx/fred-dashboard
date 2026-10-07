@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-07T23:42:44.3741978+02:00",
+      "summary": "MTD (B)",
+      "picks": {
+        "p1": {
+          "ticker": "MTD",
+          "strategy": "B — Momentum",
+          "entry": 1533.48,
+          "stop": 1303.46,
+          "t1": 1916.85,
+          "t2": 2300.22
+        }
+      },
+      "content": "Mettler-Toledo (NYSE, $1,533.48) was bought as the day's momentum pick. It is up ~35% over 3 months and near its 52-week high after a Q2 beat and a raised FY26 EPS guide, and Barclays lifted its target to $1,700 on 10-07; it is healthcare / lab-instruments momentum outside the AI-capex names the B scan also surfaced. RTX was exited as a capacity trim (−7.50%, −$75; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $2.34 from T1 and HPQ is $5.28 from T2. Portfolio net P&L: +$1,298 (+1.75% on $74,000)."
+    },
+    {
       "runAt": "2026-10-06T23:39:38.690003+02:00",
       "summary": "UHS (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Universal Health Services (NYSE, $177.08) was bought as the day's value pick. It trades at ~7x earnings with positive FCF, 27% below its 52-week high; it's a Burry-aligned peer of his HCA long, and Q3 results land on 10-26. INCY was exited as a capacity trim (−8.50%, −$85); it was the weakest position and its momentum premise had failed. No stop/T1/T2 triggers; CVX is $9.93 from T1 and HPQ is $5.79 from T2. Portfolio net P&L: +$1,413 (+1.94% on $73,000)."
-    },
-    {
-      "runAt": "2026-10-05T12:33:41.964081+02:00",
-      "summary": "CCL (D)",
-      "picks": {
-        "p1": {
-          "ticker": "CCL",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 25.76,
-          "stop": 21.9,
-          "t1": 32.2,
-          "t2": 38.64
-        }
-      },
-      "content": "Carnival (NYSE, $25.76) was bought as the day's earnings-catalyst pick. Its 09-29 Q3 beat (EPS $1.43 vs $1.35) raised FY26 EPS guidance to $2.24 on record yields and deposits, yet the stock trades ~11.5x that guidance and 24% below its 52-week high, and it adds travel/leisure exposure to a healthcare- and energy-heavy book. ICE was exited as a capacity trim (−6.57%, −$66; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $3.17 from T1 and HPQ is $5.40 from T2. Portfolio net P&L: +$1,156 (+1.61% on $72,000)."
     }
   ]
 }
