@@ -1,4 +1,8 @@
 {
+  "taskId": "wiki-thinker",
+  "label": "Wiki Thinker",
+  "schedule": "Daily 12:25 PM",
+  "icon": "🧠",
   "runs": [
     {
       "runAt": "2026-10-08T12:28:16.8431025+02:00",

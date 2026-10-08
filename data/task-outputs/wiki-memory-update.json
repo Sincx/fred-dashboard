@@ -1,4 +1,8 @@
 {
+  "taskId": "wiki-memory-update",
+  "label": "Wiki Memory Update",
+  "schedule": "Daily 11:53 PM",
+  "icon": "🗂️",
   "runs": [
     {
       "runAt": "2026-10-07T21:53:56.885Z",
