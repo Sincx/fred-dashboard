@@ -5,14 +5,14 @@
   "icon": "🗂️",
   "runs": [
     {
+      "runAt": "2026-10-09T21:54:03.429Z",
+      "summary": "Memory index updated — 0 new pages, 1 new open thread, 0 resolved",
+      "content": "- Last updated → 2026-10-09\n- Finance row: latest paper trade 10-09 (CRM entered, Strategy B; HPQ thesis-break exit +22.2%, first winning close since July)\n- Cooking row: added recipe-recommender run 2026-10-09 (Slater, Chang, Bourdain)\n- Meta row: wiki-thinker count 74 → 75; added 10-09 highlight (Cooking↔Health omega-3 gap)\n- Open Threads: added Cooking/Health oily-fish/B-vitamin thread; none resolved"
+    },
+    {
       "runAt": "2026-10-08T21:54:31.152Z",
       "summary": "Memory index updated — 0 new pages, 2 new threads, 1 thread updated",
       "content": "- Last updated → 2026-10-08\n- Meta row: wiki-thinker run count 73→74; added 10-08 highlight (Strategy A holding rule vs Magic Formula; Lightfin KDP/AI-image copyright idea)\n- Finance row: paper trading latest trade 10-08 (FRES entered, Strategy A; DE trimmed −5.49%)\n- Podcasts row: podcast-recommender 10-08 batch (Excess Returns, Interconnects, The Proof, Creative Penn)\n- Briefing thread replaced by 10-08 (QXO-PB/ADBE/LULU/FLUT Exit, GSK cleared to Watch, SFM exit still unexecuted)\n- New open threads: Strategy A early trims/cuts vs ~1-year hold; Lightfin self-publish vs KDP AI disclosure/copyright"
-    },
-    {
-      "runAt": "2026-10-07T21:53:56.885Z",
-      "summary": "Memory index updated — 0 new pages, 2 threads updated, 1 resolved (UK/EU price gap), 1 new thread",
-      "content": "- Last updated → 2026-10-07\n- Meta row: wiki-thinker run count 72→73; added 10-07 (GSK/shingles connection, Exit-age idea) and 10-06 highlights\n- Finance row: paper trading latest trade 10-07 (MTD entered, RTX trimmed, net P&L +$1,298/+1.75%)\n- Open threads: 10-06 briefing thread replaced by 10-07 (LULU/GSK/FLUT Exit, QXO-PB provisional Exit, SFM exit still unexecuted); UK/EU price gap marked resolved\n- New open thread: GSK Exit vs shingles/dementia evidence + briefing Exit-age field\n- Company-scanner thread: 4th run (10-07) — VOYA auto-added, 5 to pending\n- Spinoff thread: H.B. Fuller/Intertek now in pending-watchlist-additions; VOYA in universe"
     }
   ]
 }
