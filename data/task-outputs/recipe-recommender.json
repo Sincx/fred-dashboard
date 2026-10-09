@@ -1,18 +1,18 @@
-{
+﻿{
     "taskId":  "recipe-recommender",
     "label":  "Recipe Recommender",
     "schedule":  "Fri 9:04 AM",
     "icon":  "🍽",
     "runs":  [
                  {
+                     "runAt":  "2026-10-09T09:08:04.1842343+02:00",
+                     "summary":  "3 new recipes: Roast Sausages with Grapes, Galbi-jjim, Moules au Cidre",
+                     "content":  "1. Roast Sausages with Red Grapes, Red Onion and Mustard Mash, inspired by Nigel Slater. A 40-minute one-tray weeknight supper where October grapes roast into a jammy, sharp pan sauce.\n2. Galbi-jjim (Korean Braised Short Ribs with Daikon and Chestnuts), inspired by David Chang. A weekend braise in soy, pear and garlic that reduces to a sticky glaze, with seasonal chestnuts.\n3. Moules au Cidre with Crusty Bread, inspired by Anthony Bourdain. The wild card: a 20-minute Normandy-style brasserie classic with mussels at their October best."
+                 },
+                 {
                      "runAt":  "2026-10-02T09:07:23.6255543+02:00",
                      "summary":  "3 new recipes: Pork Chops with Apples and Cider, Pho Bo, Miso-Butter Roast Squash",
                      "content":  "1. Pork Chops with Apples, Sage and Cider Pan Sauce, inspired by Lucinda Scala Quinn. A 30-minute one-pan weeknight supper: sear, rest, deglaze with the first cider of autumn.\n2. Pho Bo (Hanoi-Style Beef Noodle Soup), inspired by Anthony Bourdain. A weekend project with charred aromatics and a clear, spiced broth from his favourite city.\n3. Miso-Butter Roast Squash with Chilli Crunch and Spring Onion, inspired by David Chang. The wild card: peak-season squash with umami and heat."
-                 },
-                 {
-                     "runAt":  "2026-09-25T09:08:28+02:00",
-                     "summary":  "3 new recipes: Bulgogi-Style Beef Lettuce Wraps, Moroccan Chicken Tagine, Roasted Pears with Gorgonzola",
-                     "content":  "1. Bulgogi-Style Beef Lettuce Wraps — inspired by David Chang. A 30-minute weeknight ssäm-format wrap — the same soy-ginger-garlic pantry as the Momofuku pork centrepiece, in a fraction of the time.\n2. Moroccan Chicken Tagine with Preserved Lemon and Olives — inspired by Anthony Bourdain. A medium-technique weekend braise drawing on his North African travels — cinnamon, saffron, and ras el hanout for the first proper cool weekend of autumn.\n3. Roasted Pears with Gorgonzola, Walnuts and Honey — inspired by Nigel Slater. The wild card: the first good pears of the season, warm fruit against sharp blue cheese, barely a recipe at all."
                  }
              ]
 }
