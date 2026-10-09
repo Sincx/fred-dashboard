@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-09T23:41:23.9145695+02:00",
+      "summary": "CRM (B)",
+      "picks": {
+        "p1": {
+          "ticker": "CRM",
+          "strategy": "B — Momentum",
+          "entry": 229.13,
+          "stop": 194.76,
+          "t1": 286.41,
+          "t2": 343.7
+        }
+      },
+      "content": "Salesforce (NYSE, $229.13) was bought as the day's momentum pick. It is up ~34% over 3 months, pulled back ~5% to its rising 50-day average, with Agentforce ARR above $1.5B and fresh analyst upgrades as tech rebounded. HPQ was exited on a thesis break (IDC Q3 PC shipments −31% YoY, FY27 guidance withheld) at +20.75%; blended with its T1 it closes at +$222 (+22.2%), the first winning close since July. No stop/T1/T2 triggers; RIGL is $1.25 from T1 and CVX is $5.53 from T1. Portfolio net P&L: +$1,914 (+2.52% on $76,000)."
+    },
+    {
       "runAt": "2026-10-08T23:39:27.2787503+02:00",
       "summary": "FRES (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Fresnillo (LSE, FTSE 100, 2,689.00p ≈ $35.58) was bought as the day's value pick. It is a silver/gold miner at ~11.7x earnings with ~66% ROIC, ~40% below its January peak despite H1 revenue +75%, and was chosen as a precious-metals hedge on a day when an Iran-driven oil spike hit tech. DE was exited as a capacity trim (−5.49%, −$55; weakest position, momentum premise failed). No stop/T1/T2 triggers; RIGL is $1.61 from T1 and CVX is $5.96 from T1. Portfolio net P&L: +$1,583 (+2.11% on $75,000)."
-    },
-    {
-      "runAt": "2026-10-07T23:42:44.3741978+02:00",
-      "summary": "MTD (B)",
-      "picks": {
-        "p1": {
-          "ticker": "MTD",
-          "strategy": "B — Momentum",
-          "entry": 1533.48,
-          "stop": 1303.46,
-          "t1": 1916.85,
-          "t2": 2300.22
-        }
-      },
-      "content": "Mettler-Toledo (NYSE, $1,533.48) was bought as the day's momentum pick. It is up ~35% over 3 months and near its 52-week high after a Q2 beat and a raised FY26 EPS guide, and Barclays lifted its target to $1,700 on 10-07; it is healthcare / lab-instruments momentum outside the AI-capex names the B scan also surfaced. RTX was exited as a capacity trim (−7.50%, −$75; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $2.34 from T1 and HPQ is $5.28 from T2. Portfolio net P&L: +$1,298 (+1.75% on $74,000)."
     }
   ]
 }
