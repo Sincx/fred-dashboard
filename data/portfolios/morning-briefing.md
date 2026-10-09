@@ -47,9 +47,13 @@ POSITION SIGNALS
     a mid-session print that has since been corrected. QXO common fell 6.6% to $11.31 on about twice its normal
     volume. The massive news feed has nothing new (the latest item is from June), so the cause is unknown.
   Pipeline health: OK, all tracked tasks healthy.
-  Data quality: tonight's check_data_quality.py retry pass was still running when this was written (it took ~17h on
-    10-06/07). The known open items, all NEEDS MANUAL REVIEW and none of them affecting prices:
-    • NBIS option_mark: Turso row missing strike/expiry/type. Hand-marked below.
+  Data quality (check_data_quality.py finished after the briefing was first pushed): 686 AUTO-RECOVERED. This
+    includes the technicals for every held UK/EU name (KLR, REL, GSK, SAP, EDEN, WKL, PRX, ZOE) and for IAG/TMV, so
+    the missing KLR/REL 10-07 UK bars may now be in Turso. The prices above weren't re-run. 260 rows are STILL
+    FAILING and 252 are NEEDS MANUAL REVIEW, mostly UK/EU tickers where "all sources failed". That likely points to
+    a ticker-format issue in the universe, not missing prices. The only rows relevant to this portfolio are the
+    known four, which affect MF# and the NBIS put mark, not prices:
+    • NBIS option_mark: 16 consecutive failures. The Turso row is missing strike/expiry/type, so it's hand-marked below.
     • ACN EU and ZOE EU fundamentals: "no sa_prefix".
     • QXO-PB fundamentals: "no data from any source".
 
