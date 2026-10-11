@@ -43,10 +43,12 @@ POSITION SIGNALS
   Since the 10-08 run: no new trades or cash entries in Turso. The latest trade is still the 10-01 NBIS put and the
     latest cash entry is still 10-01. Cash is unchanged at €1,895.31.
   Pipeline health: OK, all tracked tasks healthy.
-  Data quality: check_data_quality.py was still working through its retries when this briefing was written (it
-    took ~17h on 10-06/07), so its results aren't in here. The known items that affect this portfolio are the NBIS
-    option_mark (the Turso row is missing strike/expiry/type, so it's hand-marked below), ACN EU and ZOE EU
-    fundamentals ("no sa_prefix", so no MF#), and QXO-PB fundamentals. None of these affect prices.
+  Data quality (check_data_quality.py finished after the first push): 1 AUTO-RECOVERED, 255 STILL FAILING (mostly
+    UK/EU fundamentals). Only the four known items affect this portfolio, and none of them affect prices:
+    • NBIS option_mark: 23 consecutive failures, NEEDS MANUAL REVIEW. The Turso row is missing strike/expiry/type,
+      so the put is hand-marked below.
+    • ACN EU and ZOE EU fundamentals: 6 consecutive failures, "no sa_prefix", so neither has an MF#.
+    • QXO-PB fundamentals: 6 consecutive failures, "no data from any source".
 
 PORTFOLIO SHAPE
   Concentration:   OK. The largest single position is LULU at 9.1%; nothing is ≥ 25%.
