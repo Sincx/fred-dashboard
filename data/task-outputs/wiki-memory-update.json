@@ -5,14 +5,14 @@
   "icon": "🗂️",
   "runs": [
     {
+      "runAt": "2026-10-11T21:53:33.658+00:00",
+      "summary": "Memory index updated — 0 new pages, 2 new open threads, 0 resolved",
+      "content": "- Last updated → 2026-10-11\n- Meta: wiki-thinker run count 76→77; added 10-11 Crypto deep-dive highlight (GENIUS Act stablecoin-yield ban ↔ SmarDex USDN)\n- Magic Formula: added 10-11 top 3 (MGNS, MU, DNLM; 34 ranked)\n- New open thread: strategy-feedback 10-11 cyclical-sector guard proposal for Strategy A (FRES); capital-cap cutting Strategy B after 7-13 days\n- New open thread: check $TEST is still sellable (no price ~6 weeks)"
+    },
+    {
       "runAt": "2026-10-10T21:54:22.952Z",
       "summary": "Memory index updated — 3 new pages, 2 new open threads, 0 resolved",
       "content": "- Last updated → 2026-10-10\n- Podcasts row: 10-10 podcast-summarizer added Dividend Talk ep 309 (Q3 portfolio review) and Where Is Austin Tice? eps 3-4\n- Finance row: new investor-letter source page source-clapham-china-ai-next-crisis-2026-09-20 (via email-to-clipping)\n- Crypto row: portfolio refresh 10-10 (5 updated, TST unavailable, LINK −7.10%)\n- Meta row: wiki-thinker count 75 → 76\n- New open threads: refresh EDEN thesis before Q3 report (Heavy Moat/Dividend Talk); Lightfin finale could use the Austin Tice retrace-the-route device"
-    },
-    {
-      "runAt": "2026-10-09T21:54:03.429Z",
-      "summary": "Memory index updated — 0 new pages, 1 new open thread, 0 resolved",
-      "content": "- Last updated → 2026-10-09\n- Finance row: latest paper trade 10-09 (CRM entered, Strategy B; HPQ thesis-break exit +22.2%, first winning close since July)\n- Cooking row: added recipe-recommender run 2026-10-09 (Slater, Chang, Bourdain)\n- Meta row: wiki-thinker count 74 → 75; added 10-09 highlight (Cooking↔Health omega-3 gap)\n- Open Threads: added Cooking/Health oily-fish/B-vitamin thread; none resolved"
     }
   ]
 }
