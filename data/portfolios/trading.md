@@ -87,23 +87,23 @@ Only the **ORCL short (5sh) remains open** from the five shorts opened 2026-09-2
 
 | Company | Ticker | Exchange | Currency | Shares | Entry | Entry Date | Cost Basis | Last Price | Mkt Value | P&L% | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Keller Group | KLR | LSE | GBp | 10 | 2,400p | 2026-05-26 | £240.00 | 3,258.00p | £325.80 | +35.75% | ✅ Hold | Trimmed 8 sh @ 3,098p on 2026-08-07. Entry corrected to the real fill (2,400p, was shown as 2,418p). RSI 64.3 (10-02), above SMA50 (3,092p), MACD bullish; **✅ already free-ridden** — cumulative trim proceeds exceed original cost basis, all 10 shares at zero effective cost |
-| IQVIA Holdings | IQV | NYSE | USD | 3 | $163.91 | 2026-05-26 | $491.73 | $258.11 | $774.33 | +57.47% | 👀 Watch | Trimmed progressively (3+2+2+2 sh across 4 trims); entry corrected to real fill $163.91 (was $163.99). **✅ already free-ridden** — cumulative trim proceeds exceed the original 12-share cost basis, all 3 remaining shares at zero effective cost. RSI 53.9 (10-05), above SMA50 ($254.96), MACD bearish |
-| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | 2026-07-14 | €956.90 | €187.88 | €1,315.16 | +37.44% | 👀 Watch | RSI 51.7 (10-02), above SMA50 (€178.97), MACD bearish |
-| GSK | GSK | LSE | GBp | 70 | 1,940.07p | 2026-07-16 | £1,358.05 | 1,790.50p | £1,253.35 | -7.71% | 👀 Watch | **Corrected 2026-10-01: real position is 70 shares, not 52** — a second buy (20 sh @ 1,941.5p) on 2026-07-31 was never applied to the share count, only a token −€50 cash entry existed against a real −€459.86 cost. RSI 35.6 (10-02), below SMA50 (1,883p), MACD crossed bearish — mechanical Exit 10-01, **cleared to Watch 10-08** (RSI 40.6, 1,790.5p); patience override (MF#35), reassess by ~10-15; earnings 10-28 |
-| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | 2026-07-27 | €1,193.85 | €27.75 | €1,248.75 | +4.60% | 👀 Watch | RSI 39.6 (10-02), below SMA50 (€28.66), MACD bearish — **new mechanical Exit 10-01**; only +1.2%, exiting nets ≈€7.50 after CGT+commission — patience window to ~10-15, floor €25.77 |
-| Accenture | ACN | Xetra | EUR | 6 | €141.10 | 2026-07-31 | €846.60 | €175.55 | €1,053.30 | +24.42% | ✅ Hold | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA). **Price from direct Xetra quote** (€175.35 on 10-05, −3.7% from €182.05 on 10-02). RSI 58.3 (10-05), above SMA50 (€157.76), MACD bullish; 6.5% weight so no Trim rule; free ride leaves only 1 share |
-| Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | 2026-07-31 | $1,249.25 | $232.77 | $1,163.85 | -6.84% | 🔴 Exit | Creative & document software; AI integration (Firefly). RSI 38.0 (10-07), below SMA50 ($258.44), MACD bearish — **mechanical Exit 10-08**, closed through the $238 stop ref on its reassessment date; trim 3 of 5 sh recommended (patience cap 50%, MF#22), stop $220.97 on the remainder — not executed |
-| Flutter Entertainment | FLUT | NASDAQ | USD | 1 | $92.02 | 2026-08-06 | $92.02 | $75.85 | $75.85 | -17.57% | 🔴 Exit | Burry long at $100.72 (Jul 24 2026); anti-prediction-markets thesis. Trimmed 11 sh @ $99.17 on 2026-09-14, remaining 1 share designated free-to-ride. Mechanical Exit persists (RSI 29.8 on 10-05, below SMA50 $95.24, MACD bearish) — not executed; real ~€0.89 commission is still ~1.3% of a 1-share sale. Next earnings 2026-11-12 |
-| Prosus | PRX | Euronext AMS | EUR | 30 | €41.065 | 2026-08-03 | €1,231.95 | €35.165 | €1,054.95 | -14.37% | 👀 Watch | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP thesis. Entry corrected to real fill €41.065 (was €41.165). RSI 36.7 (10-02), below SMA50 (€37.66), MACD crossed bearish — **new mechanical Exit 10-02**; patience override (SOTP thesis intact), reassess by ~10-16, trim 50% on a close below €33.03 |
-| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €70.88 | 2026-08-05 | €1,063.20 | €71.22 | €1,068.30 | +0.48% | ✅ Hold | Entry corrected to real fill €70.88 (was €71.08). RSI 49.1 (10-02), below SMA50 (€69.08), MACD bearish |
-| Lululemon Athletica | LULU | NASDAQ | USD | 18 | $112.84 | 2026-08-10 | $2,031.17 | $91.88 | $1,653.84 | -18.57% | 🔴 Exit | Athletic apparel. **Corrected 2026-10-01: real position is 18 shares at blended entry $112.84** — three real buys (8 sh @ $127.59 on 08-10, 5 sh @ $98.97 on 09-04 [previously unlogged], 5 sh @ $103.13 on 09-08), no trim ever executed (the "6 sh @ $98.06 trim" on 09-21 was fabricated, see reconciliation note above — removed). RSI 32.5 (10-05), below SMA50 ($111.51), MACD crossed bearish — **new mechanical Exit 10-05**; patience override (MF#24, thesis intact), reassess by ~10-20, trim 50% (9 sh) on a close below $87.97 |
-| Sprouts Farmers Market | SFM | NASDAQ | USD | 10 | $80.16 | 2026-08-21 | $801.60 | $65.26 | $652.60 | -18.59% | 👀 Watch | Specialty grocery. RSI 35.7 (10-05), below SMA50 ($77.15), MACD bearish — 10-05 deadline passed without reclaiming RSI 40; **full exit recommended, not yet executed** (no sale in Turso as of 10-06) |
-| Zoetis Inc | ZOE | Xetra | EUR | 15 | €63.22 | 2026-08-10 | €948.30 | €63.74 | €956.10 | +0.82% | 👀 Watch | Animal health pharma; EUR listing. **Direct EUR quote now in Turso** (€61.82, 10-02) — ZTS proxy retired. RSI 43.4 (10-02), below SMA50 (€64.44), MACD bearish — the 10-01 proxy Exit has cleared to Watch |
-| RELX plc | REL | LSE | GBp | 40 | 2,585.50p | 2026-08-14 | £1,034.20 | 2,571.00p | £1,028.40 | -0.56% | 👀 Watch | **Corrected 2026-10-01: real position is 40 shares, not 22** — the 09-08 add was 20 shares, not the "2 shares" previously recorded (a real fill-vs-report mismatch). RSI 49.5 (10-02), below SMA50 (2,581p), MACD bearish |
-| Ero Copper Corp | ERO | NYSE | USD | 30 | $34.805 | 2026-09-21 | $1,044.15 | $36.78 | $1,103.40 | +5.67% | ✅ Hold | Brazil-focused copper miner; commodity/materials, non-US exposure. RSI 59.3 (10-05), above SMA50 ($34.62), MACD bullish |
-| QXO Inc, Series B Preferred | QXO-PB | NYSE | USD | 30 | $38.30 | 2026-09-21 | $1,149.00 | $36.250 | $1,087.50 | -5.35% | 🔴 Exit | Preferred shares of QXO Inc (Brad Jacobs); depositary share "1/20th interest" structure — Close $36.25 (10-07, −6.0%, confirmed on massive; QXO common −6.6% on ~2× volume, no news found). RSI 35.7, below SMA50 ($40.99), MACD bearish — **confirmed Exit 10-08**; full exit recommended (alt: stop $35.10) — not executed |
-| Birkenstock Holding | BIRK | NYSE | USD | 25 | $32.07 | 2026-09-22 | $801.75 | $33.17 | $829.25 | +3.43% | 👀 Watch | **New position, discovered during this reconciliation** — bought 2026-09-22, never previously recorded. RSI 53.0 (10-05), below SMA50 ($35.11), MACD bullish |
+| Keller Group | KLR | LSE | GBp | 10 | 2,400p | 2026-05-26 | £240.00 | 3,176.00p | £317.60 | +31.35% | ✅ Hold | Trimmed 8 sh @ 3,098p on 2026-08-07. Entry corrected to the real fill (2,400p, was shown as 2,418p). RSI 64.3 (10-02), above SMA50 (3,092p), MACD bullish; **✅ already free-ridden** — cumulative trim proceeds exceed original cost basis, all 10 shares at zero effective cost |
+| IQVIA Holdings | IQV | NYSE | USD | 3 | $163.91 | 2026-05-26 | $491.73 | $259.88 | $779.64 | +58.47% | 👀 Watch | Trimmed progressively (3+2+2+2 sh across 4 trims); entry corrected to real fill $163.91 (was $163.99). **✅ already free-ridden** — cumulative trim proceeds exceed the original 12-share cost basis, all 3 remaining shares at zero effective cost. RSI 53.9 (10-05), above SMA50 ($254.96), MACD bearish |
+| SAP SE | SAP | XETRA | EUR | 7 | €136.70 | 2026-07-14 | €956.90 | €191.10 | €1,337.70 | +39.80% | 👀 Watch | RSI 51.7 (10-02), above SMA50 (€178.97), MACD bearish |
+| GSK | GSK | LSE | GBp | 70 | 1,940.07p | 2026-07-16 | £1,358.05 | 1,735.50p | £1,214.85 | -10.54% | 👀 Watch | **Corrected 2026-10-01: real position is 70 shares, not 52** — a second buy (20 sh @ 1,941.5p) on 2026-07-31 was never applied to the share count, only a token −€50 cash entry existed against a real −€459.86 cost. RSI 35.6 (10-02), below SMA50 (1,883p), MACD crossed bearish — mechanical Exit 10-01, **cleared to Watch 10-08** (RSI 40.6, 1,790.5p); patience override (MF#35), reassess by ~10-15; earnings 10-28 |
+| Edenred SA | EDEN | Euronext | EUR | 45 | €26.53 | 2026-07-27 | €1,193.85 | €28.28 | €1,272.60 | +6.60% | 👀 Watch | RSI 39.6 (10-02), below SMA50 (€28.66), MACD bearish — **new mechanical Exit 10-01**; only +1.2%, exiting nets ≈€7.50 after CGT+commission — patience window to ~10-15, floor €25.77 |
+| Accenture | ACN | Xetra | EUR | 6 | €141.10 | 2026-07-31 | €846.60 | €185.60 | €1,113.60 | +31.54% | ✅ Hold | Global IT services & consulting. Correct listing is Xetra/Frankfurt ticker **CSA** (ISIN IE00B4BNMY34, WKN A0YAQA). **Price from direct Xetra quote** (€175.35 on 10-05, −3.7% from €182.05 on 10-02). RSI 58.3 (10-05), above SMA50 (€157.76), MACD bullish; 6.5% weight so no Trim rule; free ride leaves only 1 share |
+| Adobe | ADBE | NASDAQ | USD | 5 | $249.85 | 2026-07-31 | $1,249.25 | $242.27 | $1,211.35 | -3.03% | 🔴 Exit | Creative & document software; AI integration (Firefly). RSI 38.0 (10-07), below SMA50 ($258.44), MACD bearish — **mechanical Exit 10-08**, closed through the $238 stop ref on its reassessment date; trim 3 of 5 sh recommended (patience cap 50%, MF#22), stop $220.97 on the remainder — not executed |
+| Flutter Entertainment | FLUT | NASDAQ | USD | 1 | $92.02 | 2026-08-06 | $92.02 | $79.78 | $79.78 | -13.38% | 🔴 Exit | Burry long at $100.72 (Jul 24 2026); anti-prediction-markets thesis. Trimmed 11 sh @ $99.17 on 2026-09-14, remaining 1 share designated free-to-ride. Mechanical Exit persists (RSI 29.8 on 10-05, below SMA50 $95.24, MACD bearish) — not executed; real ~€0.89 commission is still ~1.3% of a 1-share sale. Next earnings 2026-11-12 |
+| Prosus | PRX | Euronext AMS | EUR | 30 | €41.065 | 2026-08-03 | €1,231.95 | €35.960 | €1,078.80 | -12.64% | 👀 Watch | Dutch internet holding; Tencent stake + growth portfolio at persistent NAV discount; SOTP thesis. Entry corrected to real fill €41.065 (was €41.165). RSI 36.7 (10-02), below SMA50 (€37.66), MACD crossed bearish — **new mechanical Exit 10-02**; patience override (SOTP thesis intact), reassess by ~10-16, trim 50% on a close below €33.03 |
+| Wolters Kluwer | WKL | Euronext AMS | EUR | 15 | €70.88 | 2026-08-05 | €1,063.20 | €73.96 | €1,109.40 | +4.05% | ✅ Hold | Entry corrected to real fill €70.88 (was €71.08). RSI 49.1 (10-02), below SMA50 (€69.08), MACD bearish |
+| Lululemon Athletica | LULU | NASDAQ | USD | 18 | $112.84 | 2026-08-10 | $2,031.17 | $94.50 | $1,701.00 | -16.26% | 🔴 Exit | Athletic apparel. **Corrected 2026-10-01: real position is 18 shares at blended entry $112.84** — three real buys (8 sh @ $127.59 on 08-10, 5 sh @ $98.97 on 09-04 [previously unlogged], 5 sh @ $103.13 on 09-08), no trim ever executed (the "6 sh @ $98.06 trim" on 09-21 was fabricated, see reconciliation note above — removed). RSI 32.5 (10-05), below SMA50 ($111.51), MACD crossed bearish — **new mechanical Exit 10-05**; patience override (MF#24, thesis intact), reassess by ~10-20, trim 50% (9 sh) on a close below $87.97 |
+| Sprouts Farmers Market | SFM | NASDAQ | USD | 10 | $80.16 | 2026-08-21 | $801.60 | $65.14 | $651.40 | -18.74% | 👀 Watch | Specialty grocery. RSI 35.7 (10-05), below SMA50 ($77.15), MACD bearish — 10-05 deadline passed without reclaiming RSI 40; **full exit recommended, not yet executed** (no sale in Turso as of 10-06) |
+| Zoetis Inc | ZOE | Xetra | EUR | 15 | €63.22 | 2026-08-10 | €948.30 | €66.42 | €996.30 | +5.06% | 👀 Watch | Animal health pharma; EUR listing. **Direct EUR quote now in Turso** (€61.82, 10-02) — ZTS proxy retired. RSI 43.4 (10-02), below SMA50 (€64.44), MACD bearish — the 10-01 proxy Exit has cleared to Watch |
+| RELX plc | REL | LSE | GBp | 40 | 2,585.50p | 2026-08-14 | £1,034.20 | 2,595.00p | £1,038.00 | +0.37% | 👀 Watch | **Corrected 2026-10-01: real position is 40 shares, not 22** — the 09-08 add was 20 shares, not the "2 shares" previously recorded (a real fill-vs-report mismatch). RSI 49.5 (10-02), below SMA50 (2,581p), MACD bearish |
+| Ero Copper Corp | ERO | NYSE | USD | 30 | $34.805 | 2026-09-21 | $1,044.15 | $37.61 | $1,128.30 | +8.04% | ✅ Hold | Brazil-focused copper miner; commodity/materials, non-US exposure. RSI 59.3 (10-05), above SMA50 ($34.62), MACD bullish |
+| QXO Inc, Series B Preferred | QXO-PB | NYSE | USD | 30 | $38.30 | 2026-09-21 | $1,149.00 | $36.100 | $1,083.00 | -5.74% | 🔴 Exit | Preferred shares of QXO Inc (Brad Jacobs); depositary share "1/20th interest" structure — Close $36.25 (10-07, −6.0%, confirmed on massive; QXO common −6.6% on ~2× volume, no news found). RSI 35.7, below SMA50 ($40.99), MACD bearish — **confirmed Exit 10-08**; full exit recommended (alt: stop $35.10) — not executed |
+| Birkenstock Holding | BIRK | NYSE | USD | 25 | $32.07 | 2026-09-22 | $801.75 | $33.65 | $841.25 | +4.93% | 👀 Watch | **New position, discovered during this reconciliation** — bought 2026-09-22, never previously recorded. RSI 53.0 (10-05), below SMA50 ($35.11), MACD bullish |
 
 > Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR. APH closed out entirely 2026-09-22, META closed out entirely 2026-09-28 — see [[#Closed Positions|Closed Positions]].
 > Prices last fetched: **2026-10-07** (revised 18:30 CEST after check_data_quality.py auto-recovered the missing UK/EU bars: US on Tue 10-06 closes, EU on Wed 10-07 closes, KLR/REL 10-05, GSK 10-06; QXO-PB at Tue's verified $38.575 close — Turso's 10-07 $35.30 is an unverified mid-session print. Notes-column RSI text below may still cite 10-05; the Signal column is current; `trading_portfolio_wiki_sync.py` still doesn't match this table's header since the Entry Date column was added — updated by hand. Some SMA50 figures in Notes are carried from 10-01).
@@ -120,7 +120,7 @@ Active short equity positions (profit if price falls below entry; loss if price 
 
 | Company | Ticker | Exchange | Currency | Shares Short | Entry | Entry Date | Short Value | Current Price | Unrealized P&L | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Oracle | ORCL | NYSE | USD | 5 | $154.552 | 2026-08-14 (+2 sh 2026-09-09) | $772.76 | $143.56 (10-07) | +$54.96 (+7.11%) | 👀 Watch | Opened 3 sh @ $149.89 (08-14); +2 more sh @ $161.545 on 2026-09-09 — real short is 5 shares. Bearish on Oracle AI/OCI narrative; complements the long put below. RSI 49.7 (10-07), back below SMA50 ($145.11); MACD bullish. ATR stop ref ~$163.1 |
+| Oracle | ORCL | NYSE | USD | 5 | $154.552 | 2026-08-14 (+2 sh 2026-09-09) | $772.76 | $141.40 | +$65.76 (+8.51%) | 👀 Watch | Opened 3 sh @ $149.89 (08-14); +2 more sh @ $161.545 on 2026-09-09 — real short is 5 shares. Bearish on Oracle AI/OCI narrative; complements the long put below. RSI 49.7 (10-07), back below SMA50 ($145.11); MACD bullish. ATR stop ref ~$163.1 |
 
 > **NBIS #3, PLTR, AMAT, and MU shorts all closed within days of opening — see [[#Closed Positions|Closed Positions]]** (NBIS/PLTR/MU closed 09-28, AMAT closed 09-29). Only ORCL remains open from this batch.
 >
@@ -325,41 +325,40 @@ Realised P&L grouped by position (trims + full exits combined).
 
 | Ticker | MF Rank | ROIC | Earnings Yield | Last Updated |
 |---|---|---|---|---|
-| MGNS | 1 | 43.56% | 15.1% | 2026-10-04 |
-| DNLM | 2 | 32.5% | 11.63% | 2026-10-04 |
-| MU | 3 | 93.42% | 8.67% | 2026-10-04 |
-| GSK | 4 | 26.38% | 11.26% | 2026-10-04 |
-| ACN | 5 | 26.79% | 9.83% | 2026-10-04 |
-| LULU | 6 | 23.7% | 16.45% | 2026-10-04 |
-| ADBE | 7 | 36.79% | 7.76% | 2026-10-04 |
-| GAW | 8 | 98.6% | 4.95% | 2026-10-04 |
-| KLR | 9 | 22.91% | 9.57% | 2026-10-04 |
-| WKL | 10 | 24.79% | 8.14% | 2026-10-04 |
-| ERO | 11 | 18.48% | 8.5% | 2026-10-04 |
-| REL | 12 | 23.58% | 5.93% | 2026-10-04 |
-| ASML | 13 | 65.98% | 2.02% | 2026-10-04 |
-| SFM | 14 | 15.15% | 8.49% | 2026-10-04 |
-| WOSG | 15 | 11.93% | 8.71% | 2026-10-04 |
-| TER | 16 | 38.24% | 1.97% | 2026-10-04 |
-| BIRK | 17 | 10.38% | 8.82% | 2026-10-04 |
-| AMAT | 18 | 35.64% | 2.26% | 2026-10-04 |
-| AVGO | 19 | 30.68% | 2.51% | 2026-10-04 |
-| SAP | 20 | 18.2% | 5.29% | 2026-10-04 |
-| CPB | 21 | 8.33% | 9.35% | 2026-10-04 |
-| GOOGL | 22 | 15.15% | 5.9% | 2026-10-04 |
-| PEP | 23 | 13.22% | 6.1% | 2026-10-04 |
-| MSFT | 24 | 20.56% | 3.48% | 2026-10-04 |
-| APH | 25 | 20.18% | 3.58% | 2026-10-04 |
-| PLTR | 26 | 25.6% | 0.67% | 2026-10-04 |
-| IBM | 27 | 13.96% | 4.78% | 2026-10-04 |
-| META | 28 | 17.08% | 3.68% | 2026-10-04 |
-| WDAY | 29 | 18.35% | 2.7% | 2026-10-04 |
-| PRX | 30 | 0.59% | 8.35% | 2026-10-04 |
-| ORCL | 31 | 11.34% | 4.37% | 2026-10-04 |
-| AMZN | 32 | 8.48% | 5.0% | 2026-10-04 |
-| IQV | 33 | 9.8% | 4.18% | 2026-10-04 |
-| NOW | 34 | 10.28% | 1.3% | 2026-10-04 |
-| MRVL | 35 | 6.94% | 0.66% | 2026-10-04 |
+| MGNS | 1 | 43.56% | 15.72% | 2026-10-11 |
+| MU | 2 | 93.42% | 9.06% | 2026-10-11 |
+| DNLM | 3 | 32.5% | 11.4% | 2026-10-11 |
+| GSK | 4 | 26.38% | 11.41% | 2026-10-11 |
+| LULU | 5 | 23.7% | 16.45% | 2026-10-11 |
+| ACN | 6 | 26.79% | 9.36% | 2026-10-11 |
+| GAW | 7 | 98.6% | 5.2% | 2026-10-11 |
+| ADBE | 8 | 36.79% | 7.61% | 2026-10-11 |
+| KLR | 9 | 22.91% | 9.75% | 2026-10-11 |
+| WKL | 10 | 24.79% | 7.51% | 2026-10-11 |
+| ERO | 11 | 18.48% | 8.56% | 2026-10-11 |
+| ASML | 12 | 65.98% | 2.09% | 2026-10-11 |
+| TER | 13 | 38.24% | 2.19% | 2026-10-11 |
+| SFM | 14 | 15.15% | 8.42% | 2026-10-11 |
+| WOSG | 15 | 11.93% | 8.62% | 2026-10-11 |
+| AMAT | 16 | 35.64% | 2.4% | 2026-10-11 |
+| AVGO | 17 | 30.68% | 2.47% | 2026-10-11 |
+| BIRK | 18 | 10.38% | 8.75% | 2026-10-11 |
+| CPB | 19 | 8.33% | 9.44% | 2026-10-11 |
+| GOOGL | 20 | 15.15% | 5.78% | 2026-10-11 |
+| SAP | 21 | 18.2% | 5.1% | 2026-10-11 |
+| PEP | 22 | 13.88% | 6.36% | 2026-10-11 |
+| MSFT | 23 | 20.56% | 3.36% | 2026-10-11 |
+| APH | 24 | 20.18% | 3.57% | 2026-10-11 |
+| IBM | 25 | 13.96% | 4.71% | 2026-10-11 |
+| META | 26 | 17.08% | 3.73% | 2026-10-11 |
+| WDAY | 27 | 18.35% | 2.69% | 2026-10-11 |
+| PLTR | 28 | 25.6% | 0.6% | 2026-10-11 |
+| PRX | 29 | 0.59% | 8.01% | 2026-10-11 |
+| ORCL | 30 | 11.34% | 4.39% | 2026-10-11 |
+| AMZN | 31 | 8.48% | 4.79% | 2026-10-11 |
+| IQV | 32 | 9.8% | 4.16% | 2026-10-11 |
+| NOW | 33 | 10.28% | 1.24% | 2026-10-11 |
+| MRVL | 34 | 6.94% | 0.65% | 2026-10-11 |
 ---
 
 ## See Also
