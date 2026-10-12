@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-12T23:40:29.7927470+02:00",
+      "summary": "BBW (F)",
+      "picks": {
+        "p1": {
+          "ticker": "BBW",
+          "strategy": "F — Small Cap Value",
+          "entry": 25.58,
+          "stop": 21.74,
+          "t1": 31.98,
+          "t2": 38.37
+        }
+      },
+      "content": "Build-A-Bear at ~6x earnings and a ~3.6% yield near its 52-week low, a direct Burry long whose new CEO is reversing the pre-made plush push. LMT was exited as a capacity trim (−4.53%, −$45; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $1.52 and CVX $2.51 from T1. Portfolio net P&L: +$2,067 (+2.68% on $77,000)."
+    },
+    {
       "runAt": "2026-10-09T23:41:23.9145695+02:00",
       "summary": "CRM (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Salesforce (NYSE, $229.13) was bought as the day's momentum pick. It is up ~34% over 3 months, pulled back ~5% to its rising 50-day average, with Agentforce ARR above $1.5B and fresh analyst upgrades as tech rebounded. HPQ was exited on a thesis break (IDC Q3 PC shipments −31% YoY, FY27 guidance withheld) at +20.75%; blended with its T1 it closes at +$222 (+22.2%), the first winning close since July. No stop/T1/T2 triggers; RIGL is $1.25 from T1 and CVX is $5.53 from T1. Portfolio net P&L: +$1,914 (+2.52% on $76,000)."
-    },
-    {
-      "runAt": "2026-10-08T23:39:27.2787503+02:00",
-      "summary": "FRES (A)",
-      "picks": {
-        "p1": {
-          "ticker": "FRES",
-          "strategy": "A — Value",
-          "entry": 2689.0,
-          "stop": 2285.65,
-          "t1": 3361.25,
-          "t2": 4033.5
-        }
-      },
-      "content": "Fresnillo (LSE, FTSE 100, 2,689.00p ≈ $35.58) was bought as the day's value pick. It is a silver/gold miner at ~11.7x earnings with ~66% ROIC, ~40% below its January peak despite H1 revenue +75%, and was chosen as a precious-metals hedge on a day when an Iran-driven oil spike hit tech. DE was exited as a capacity trim (−5.49%, −$55; weakest position, momentum premise failed). No stop/T1/T2 triggers; RIGL is $1.61 from T1 and CVX is $5.96 from T1. Portfolio net P&L: +$1,583 (+2.11% on $75,000)."
     }
   ]
 }
