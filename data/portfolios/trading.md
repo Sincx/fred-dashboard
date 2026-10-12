@@ -3,7 +3,7 @@ title: Trading Portfolio
 domain: finance
 type: live
 tags: [portfolio, trading, positions]
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Trading Portfolio
@@ -59,15 +59,17 @@ Only the **ORCL short (5sh) remains open** from the five shorts opened 2026-09-2
 
 ## Portfolio Net Value
 
-**Total Net Value: ≈ €19,689** (2026-10-11 run; all positions on Fri 10-09 closes; EUR/USD 1.1194, GBP/EUR 1.1817)
+**Total Net Value: ≈ €19,708** (2026-10-12 run; all positions still on Fri 10-09 closes; EUR/USD 1.1159, GBP/EUR 1.1837)
 
 | Component | Value (€) | Basis |
 | --- | --- | --- |
-| Long equity (market price) | €16,703 | Sum of Mkt Value across all 17 open long positions (Turso `prices`, 10-09 closes) |
-| Options (market price) | ≈€1,031 | ORCL put ≈€442 + PLTR put ≈€300 (options_pricing.py Black-Scholes, 10-11 mark) + NBIS put ≈€289 (hand Black-Scholes at 80% vol, ~$3.23/sh on NBIS $221.07) |
+| Long equity (market price) | €16,729 | Sum of Mkt Value across all 17 open long positions (Turso `prices`, 10-09 closes) |
+| Options (market price) | ≈€1,024 | ORCL put ≈€437 + PLTR put ≈€298 (options_pricing.py Black-Scholes, 10-12 mark) + NBIS put ≈€289 (hand Black-Scholes at 80% vol, ~$3.23/sh on NBIS $221.07) |
 | Shorts (market − entry, unrealized P&L) | ≈+€59 | ORCL only (5 sh, $154.552 → $141.40) |
-| Cash | €1,895 | Unchanged since 10-02 sync — no new trades/cash entries in Turso (checked 10-11). **Short-sale proceeds at open still excluded** — see [[#Cash Position\|Cash Position]] |
-| **Total Net Value** | **€19,689** | |
+| Cash | €1,895 | Unchanged since 10-02 sync — no new trades/cash entries in Turso (checked 10-12). **Short-sale proceeds at open still excluded** — see [[#Cash Position\|Cash Position]] |
+| **Total Net Value** | **€19,708** | |
+
+> **2026-10-12 run (+€19 vs 10-11's €19,689):** FX only plus options decay. Prices are still Friday 10-09 closes (Monday's session lands at Tuesday's 07:17 refresh). The stronger dollar (EUR/USD 1.1194 → 1.1159) added ~€26 to long equity; options lost ~€7. No trades.
 
 > **2026-10-11 run (+€367 vs 10-08's €19,322):** Thursday and Friday's closes are in. Long equity rose €389: ADBE, LULU, REL, ZOE, WKL, SAP and ACN gained, while GSK and QXO-PB fell further. The ORCL short added ~€10 and options lost ~€32 (PLTR rallied to $209). No trades.
 
@@ -110,6 +112,7 @@ Only the **ORCL short (5sh) remains open** from the five shorts opened 2026-09-2
 > Prices in native currency. LSE positions in pence (GBp); cost basis and Mkt Value in GBP. EUR positions (SAP, EDEN, ACN, PRX, WKL, ZOE) in EUR. APH closed out entirely 2026-09-22, META closed out entirely 2026-09-28 — see [[#Closed Positions|Closed Positions]].
 > Prices last fetched: **2026-10-07** (revised 18:30 CEST after check_data_quality.py auto-recovered the missing UK/EU bars: US on Tue 10-06 closes, EU on Wed 10-07 closes, KLR/REL 10-05, GSK 10-06; QXO-PB at Tue's verified $38.575 close — Turso's 10-07 $35.30 is an unverified mid-session print. Notes-column RSI text below may still cite 10-05; the Signal column is current; `trading_portfolio_wiki_sync.py` still doesn't match this table's header since the Entry Date column was added — updated by hand. Some SMA50 figures in Notes are carried from 10-01).
 > **23:40 CEST run (2026-10-07):** prices unchanged from the 18:30 revision. Wednesday's US closes aren't in Turso until the 07:17 refresh, and massive still serves Tuesday. QXO-PB's $35.30 10-07 row is still unverified (Turso has no 10-06 row for it). KLR/REL still on 10-05.
+> **2026-10-12 run:** Prices last fetched: **2026-10-12**. Turso still holds Friday 10-09 closes for every position (Monday's session arrives at Tuesday's 07:17 refresh), so `trading_portfolio_wiki_sync.py` reported no changes and all Signal/Notes text stands as of 10-11. No new trades or cash entries in Turso. Active alerts unchanged from 10-11 below; GSK/EDEN reassess 10-15, PRX 10-16.
 > **2026-10-11 run:** Prices last fetched: **2026-10-11**. Every position (US, EU, UK) is on Friday 10-09 closes. Last Price, Mkt Value and P&L% were written by `trading_portfolio_wiki_sync.py` (it matches this table's header again); Signal and Notes were updated by hand. No new trades or cash entries in Turso since 10-01.
 > **Active alerts (2026-10-11):** **QXO-PB** — Exit persists ($35.38, RSI 33.1); full exit recommended (alt: stop $35.10). **SFM** — exit rule still stands (RSI 37.5 < 40; alt: stop $61.55). **GSK** — back to Exit (1,750p, RSI 36.6); trim 35 sh on a close below 1,687p, reassess 10-15. **ADBE, LULU, FLUT** — Exits cleared to Watch (MACD turned bullish). **SAP** — new free-ride flag (sell 5, keep 2 free), monitor. WKL RSI 70.0 (no Trim at 6.7% weight). None executed.
 > **2026-10-08 run:** Prices last fetched: **2026-10-08**. US and EU are on Wed 10-07 closes, GSK 10-07, KLR/REL 10-06 (the UK REL 10-07 bar is missing; the EU-listed row shows 2,614p). Last Price, Mkt Value and P&L% were updated by hand, because `trading_portfolio_wiki_sync.py` still skips this table on the header mismatch. **QXO-PB is resolved:** Wednesday's close of $36.25 (−6.0%) is confirmed on massive, and Turso's corrected row replaces the earlier $35.30 print. QXO common fell 6.6% on ~2× volume with no news found. **ADBE** turned into a mechanical Exit on its 10-08 reassessment date, closing through the stop ref. **GSK's** Exit cleared to Watch (RSI 40.6).
@@ -136,11 +139,11 @@ Active short equity positions (profit if price falls below entry; loss if price 
 
 | Underlying | Ticker | Type | Strike | Expiry | Contracts | Shares | Premium Paid | Entry Date | Total Cost (€) | Current Price | Mkt Value (€) | Signal | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.31/sh | 2026-08-06 | €982 | ~$4.95/sh (est.) | ~€442 (est.) | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; break-even $108.62. ORCL $141.40 (10-09), ~30% above breakeven, still OTM. Black-Scholes re-mark from options_pricing.py (10-11). Total Cost corrected to the real €982 (was shown as €992/€993) |
-| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | 2026-08-11 | €715 | ~$3.36/sh (est.) | ~€300 (est.) | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; break-even $116.76. PLTR $209.05 (10-09), 79% above breakeven, deep OTM, long-dated. Total Cost corrected to the real €715 (was €719/€727) |
+| Oracle | ORCL | Long Put | $120 | 2026-12-18 | 1 | 100 | $11.31/sh | 2026-08-06 | €982 | ~$4.88/sh (est.) | ~€437 (est.) | ✅ Hold | Right to sell ORCL at $120 by Dec 2026; break-even $108.62. ORCL $141.40 (10-09), ~30% above breakeven, still OTM. Black-Scholes re-mark from options_pricing.py (10-12). Total Cost corrected to the real €982 (was shown as €992/€993) |
+| Palantir | PLTR | Long Put | $125 | 2027-03-19 | 1 | 100 | $8.24/sh | 2026-08-11 | €715 | ~$3.32/sh (est.) | ~€298 (est.) | ✅ Hold | Right to sell PLTR at $125 by Mar 2027; break-even $116.76. PLTR $209.05 (10-09), 79% above breakeven, deep OTM, long-dated. Total Cost corrected to the real €715 (was €719/€727) |
 | Nebius Group | NBIS | Long Put | $90 | 2027-06-17 | 1 | 100 | $5.38/sh | 2026-10-01 | €479 | ~$3.23/sh (est.) | ~€289 (est.) | ✅ Hold | **New position, 2026-10-01.** Right to sell NBIS at $90 by Jun 2027; break-even $84.62. NBIS $221.07 (10-09), ~161% above breakeven, deep OTM. Hand Black-Scholes mark at 80% vol, 10-11 (range ~€161–450 for 70–90% vol). **Turso row is missing option_type/strike/expiry/premium/contracts**, so options_pricing.py can't mark it (data_quality: 10 consecutive failures as of 10-06; row also has direction='short' though it's a long put) |
 
-> Long puts profitable if the underlying closes below break-even at expiry. Maximum loss = premium paid (ORCL €982, PLTR €715, NBIS €479). META's $885 Oct call closed 2026-09-24 (sold @ $3.09, bought @ $3.08 — realized +€0.20) — see [[#Closed Positions|Closed Positions]]. Combined mark-to-market of open options ≈€1,031 (Black-Scholes estimates on 2026-10-09 closes, re-marked 10-11; ORCL/PLTR from options_pricing.py, NBIS hand-marked) vs €2,176 total cost.
+> Long puts profitable if the underlying closes below break-even at expiry. Maximum loss = premium paid (ORCL €982, PLTR €715, NBIS €479). META's $885 Oct call closed 2026-09-24 (sold @ $3.09, bought @ $3.08 — realized +€0.20) — see [[#Closed Positions|Closed Positions]]. Combined mark-to-market of open options ≈€1,024 (Black-Scholes estimates on 2026-10-09 closes, re-marked 10-12; ORCL/PLTR from options_pricing.py, NBIS hand-marked) vs €2,176 total cost.
 
 ---
 
