@@ -5,14 +5,14 @@
     "icon":  "🗂️",
     "runs":  [
                  {
+                     "runAt":  "2026-10-13T23:53:58.8530075+02:00",
+                     "summary":  "Memory index updated — 0 new pages, 1 new open thread, 2 threads refreshed, 0 resolved",
+                     "content":  "- Last updated → 2026-10-13\n- Meta: wiki-thinker run count 78→79\n- Briefing thread replaced with 10-13 state (QXO-PB/GSK Exit; SFM exit rule unexecuted; net ≈€19,818; UK/EU 10-12 bars missing from Turso)\n- New open thread: wiki-thinker 10-13 — KLR is a data-centre/AI-capex long (9% DC revenue); add reference-row pre-flight check to briefing\n- yfinance MCP thread: still CONNECTION_CLOSED 10-13"
+                 },
+                 {
                      "runAt":  "2026-10-12T23:54:02.5107930+02:00",
                      "summary":  "Memory index updated — 0 new pages, 1 new open thread, 3 threads refreshed, 0 resolved",
                      "content":  "- Last updated → 2026-10-12\n- Meta: wiki-thinker run count 77→78\n- Briefing thread replaced with 10-12 state (QXO-PB/GSK Exit; ADBE/LULU/FLUT eased to Watch; SAP free-ride flag; net ≈€19,708; candidates MONY/EOG/MO)\n- New open thread: wiki-thinker 10-12 — test MONY for AI-disruption exposure; EOG partly offsets ORCL/PLTR/NBIS hedge\n- Sector P/E stale thread: now 4th straight frozen run (SPY 25.15x)\n- BBW thread: paper-trader opened BBW 10-12 (Strategy F, $25.58)\n- yfinance MCP thread: still CONNECTION_CLOSED 10-12"
-                 },
-                 {
-                     "runAt":  "2026-10-11T21:53:33.658+00:00",
-                     "summary":  "Memory index updated — 0 new pages, 2 new open threads, 0 resolved",
-                     "content":  "- Last updated → 2026-10-11\n- Meta: wiki-thinker run count 76→77; added 10-11 Crypto deep-dive highlight (GENIUS Act stablecoin-yield ban ↔ SmarDex USDN)\n- Magic Formula: added 10-11 top 3 (MGNS, MU, DNLM; 34 ranked)\n- New open thread: strategy-feedback 10-11 cyclical-sector guard proposal for Strategy A (FRES); capital-cap cutting Strategy B after 7-13 days\n- New open thread: check $TEST is still sellable (no price ~6 weeks)"
                  }
              ]
 }
