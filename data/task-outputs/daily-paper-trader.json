@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-13T23:41:20.831220+02:00",
+      "summary": "UNH (D)",
+      "picks": {
+        "p1": {
+          "ticker": "UNH",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 377.76,
+          "stop": 321.1,
+          "t1": 472.2,
+          "t2": 566.64
+        }
+      },
+      "content": "UnitedHealth was bought after its third FY26 guidance raise (adj EPS at least $20.50) on a Q3 beat and an improving medical cost ratio (88.4%); the +5% gap faded to a flat close, so the entry is at the pre-print price. CVX hit T1 at $217.73 (+25.12%, 1/3 sold for ~$417). IAG was exited as a capacity trim (−4.00%, −$40; weakest position, no thesis break). Portfolio net P&L: +$2,041 (+2.62% on $78,000)."
+    },
+    {
       "runAt": "2026-10-12T23:40:29.7927470+02:00",
       "summary": "BBW (F)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Build-A-Bear at ~6x earnings and a ~3.6% yield near its 52-week low, a direct Burry long whose new CEO is reversing the pre-made plush push. LMT was exited as a capacity trim (−4.53%, −$45; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $1.52 and CVX $2.51 from T1. Portfolio net P&L: +$2,067 (+2.68% on $77,000)."
-    },
-    {
-      "runAt": "2026-10-09T23:41:23.9145695+02:00",
-      "summary": "CRM (B)",
-      "picks": {
-        "p1": {
-          "ticker": "CRM",
-          "strategy": "B — Momentum",
-          "entry": 229.13,
-          "stop": 194.76,
-          "t1": 286.41,
-          "t2": 343.7
-        }
-      },
-      "content": "Salesforce (NYSE, $229.13) was bought as the day's momentum pick. It is up ~34% over 3 months, pulled back ~5% to its rising 50-day average, with Agentforce ARR above $1.5B and fresh analyst upgrades as tech rebounded. HPQ was exited on a thesis break (IDC Q3 PC shipments −31% YoY, FY27 guidance withheld) at +20.75%; blended with its T1 it closes at +$222 (+22.2%), the first winning close since July. No stop/T1/T2 triggers; RIGL is $1.25 from T1 and CVX is $5.53 from T1. Portfolio net P&L: +$1,914 (+2.52% on $76,000)."
     }
   ]
 }
