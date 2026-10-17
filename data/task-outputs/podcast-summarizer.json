@@ -5,21 +5,18 @@
   "icon": "🎙",
   "runs": [
     {
+      "runAt": "2026-10-17T15:53:14.7290487+02:00",
+      "summary": "No new podcasts to summarise",
+      "content": [
+        "Nothing to summarise this run."
+      ]
+    },
+    {
       "runAt": "2026-10-10T10:09:32+02:00",
       "summary": "2 podcast pages created",
       "content": [
         "Dividend Talk — Episode 309: Q3 2026 Dividend Portfolio Review",
         "Where Is Austin Tice? — Episodes 3-4"
-      ]
-    },
-    {
-      "runAt": "2026-10-03T10:10:48+02:00",
-      "summary": "4 podcast pages created",
-      "content": [
-        "Where Is Austin Tice? — Episodes 1-2",
-        "Diary of a CEO — Professor Jiang: Three Predictions on the Collapse of the World Order",
-        "Diary of a CEO — Rick Rubin episode",
-        "What Now? with Trevor Noah — Jimmy Carr episode"
       ]
     }
   ]
