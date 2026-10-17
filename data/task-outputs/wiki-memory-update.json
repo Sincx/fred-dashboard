@@ -5,14 +5,14 @@
     "icon":  "🗂️",
     "runs":  [
                  {
+                     "runAt":  "2026-10-17T23:54:54.0317960+02:00",
+                     "summary":  "Memory index updated — 0 new pages, 1 new open thread, 3 threads refreshed, 0 resolved",
+                     "content":  "- Scheduler gap thread updated: catch-up runs fired 10-17 (crypto, recommenders, thinker, briefing, scanner); paper-trader/clippings/email still not seen; briefing flagged pipeline jobs stale ~105h\n- Briefing thread replaced with 10-17 state (GSK/QXO-PB Exits cleared; KLR near-Exit; net ≈€20,959)\n- New open thread: wiki-thinker 10-17 GLP-1 exposure across NVO/PEP/AMGN/UNH never netted\n- Company-scanner thread: 5th run (BIDU/GME/SFTBF added, 10 pending)\n- Domain rows refreshed: Meta 80 runs, Crypto refresh 10-17, Cooking/Books/Podcasts recommender runs, Finance paper trades 10-12 BBW + 10-13 UNH"
+                 },
+                 {
                      "runAt":  "2026-10-17T15:53:09.4153355+02:00",
                      "summary":  "Memory index updated — 0 new pages, 1 new open thread (scheduler gap 10-14→10-17), 0 resolved",
                      "content":  "- Last updated → 2026-10-17\n- No log.md entries or wiki file changes since the 10-13 memory-update (4 quiet days)\n- New open thread: scheduler gap — paper-trader, briefing, wiki-thinker, clippings, portfolio-refresh show no runs 10-14→10-17; GSK 10-15 reassessment passed unbriefed"
-                 },
-                 {
-                     "runAt":  "2026-10-13T23:53:58.8530075+02:00",
-                     "summary":  "Memory index updated — 0 new pages, 1 new open thread, 2 threads refreshed, 0 resolved",
-                     "content":  "- Last updated → 2026-10-13\n- Meta: wiki-thinker run count 78→79\n- Briefing thread replaced with 10-13 state (QXO-PB/GSK Exit; SFM exit rule unexecuted; net ≈€19,818; UK/EU 10-12 bars missing from Turso)\n- New open thread: wiki-thinker 10-13 — KLR is a data-centre/AI-capex long (9% DC revenue); add reference-row pre-flight check to briefing\n- yfinance MCP thread: still CONNECTION_CLOSED 10-13"
                  }
              ]
 }
