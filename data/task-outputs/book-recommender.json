@@ -1,18 +1,18 @@
 {
-  "taskId": "book-recommender",
-  "label": "Book Recommender",
-  "schedule": "15th of month",
-  "icon": "📖",
-  "runs": [
-    {
-      "runAt": "2026-09-15T10:05:24+02:00",
-      "summary": "4 recommendations for Sep 2026",
-      "content": "1929: Inside the Greatest Crash in Wall Street History — Andrew Ross Sorkin (Non-fiction)\nWhy Fred: Narrative financial history of the 1929 crash built from never-before-seen Fed board minutes and private letters — same Lewis-style \"you-are-there\" journalism as The Big Short/Flash Boys, and lands squarely on his live AI-capex-bubble tracking (Djukanovic, Klement, Grantham).\n\nMoney Men: A Hot Startup, A Billion Dollar Fraud, A Fight for the Truth — Dan McCrum (Non-fiction)\nWhy Fred: FT journalist's 7-year investigation into the €20bn Wirecard fraud, told from the inside of the newsroom that broke it — same fraud-detective energy as Red Notice and his Hindenburg/Muddy Waters short-research pages.\n\nRise of the Machines: Drone Warfare in the Russia-Ukraine War — Illya Sekirin (Non-fiction)\nWhy Fred: Insider account of how unmanned systems came to dominate the battlefield — direct match for his Fire Point Ukraine drone-manufacturing wiki entry and Rheinmetall defence thesis.\n\nAngel Down — Daniel Kraus (Literary Fiction / Horror)\nWhy Fred: Outside territory — 2026 Pulitzer Prize winner — a squad of WWI soldiers find a fallen angel on the battlefield, told in a single unbroken sentence; a formally daring, genre-blurring novel with none of his usual finance/spy hooks."
-    },
-    {
-      "runAt": "2026-08-27T21:52:58+02:00",
-      "summary": "4 recommendations for Aug 2026",
-      "content": "The Secret Hours — Mick Herron (Spy Thriller)\nWhy Fred: Standalone companion to the Slough House series Fred just finished (Bad Actors, Jul 2026) — reviewers call it \"his best,\" excavating the post-Cold War espionage world the whole Slow Horses series builds on.\n\nChokepoints: American Power in the Age of Economic Warfare — Edward Fishman (Non-fiction)\nWhy Fred: Ex-State/Treasury official on how sanctions, chip export controls, and dollar dominance became the primary weapon of 21st-century geopolitics — direct extension of his TSMC/NVIDIA export-control research in AI & Tech.\n\nThe Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success — William N. Thorndike Jr. (Non-fiction)\nWhy Fred: Capital-allocation classic profiling Buffett and seven other outsider CEOs — natural next step after Greenblatt's Magic Formula and Spier's Education of a Value Investor, and a direct match for his Berkshire-principles and spinoff idea pages.\n\nKin — Tayari Jones (Literary Fiction)\nWhy Fred: Outside territory — Oprah's Book Club pick and NYT \"novel everyone will be talking about in 2026\" — two motherless girls in 1950s Louisiana through adulthood; pure character-driven literary fiction with none of his usual finance/spy/geopolitics hooks."
-    }
-  ]
+    "taskId":  "book-recommender",
+    "label":  "Book Recommender",
+    "schedule":  "15th of month",
+    "icon":  "📖",
+    "runs":  [
+                 {
+                     "runAt":  "2026-10-17T15:56:25.5773836+02:00",
+                     "summary":  "4 recommendations for Oct 2026",
+                     "content":  "The Most Dangerous Trade: How Short Sellers Uncover Fraud, Keep Markets Honest, and Make and Lose Billions — Richard Teitelbaum (Non-fiction)\nWhy Fred: Profiles a dozen-plus famous short sellers (Chanos, Einhorn, Ackman and others): how they find targets, fund the position and survive the squeeze. It\u0027s the practitioner side of his short-research pages and his live ORCL short.\n\nOff the Scales: The Inside Story of Ozempic and the Race to Cure Obesity — Aimee Donnellan (Non-fiction)\nWhy Fred: 2026 FT Business Book of the Year shortlist. Traces GLP-1 from early lab work to Novo Nordisk\u0027s rise and its fight with Lilly. It covers both his health/longevity interest and his Novo Nordisk research page.\n\nThe Infinity Machine: Demis Hassabis, DeepMind and the Quest for Superintelligence — Sebastian Mallaby (Non-fiction)\nWhy Fred: 2026 FT shortlist from a past winner (More Money Than God), based on 30+ hours with Hassabis. It\u0027s the human story behind his AI \u0026 Tech foundation-model pages.\n\nJohn of John — Douglas Stuart (Literary Fiction)\nWhy Fred: Outside territory. A 2026 Booker shortlist novel from the Shuggie Bain winner. A young art graduate comes home to his strict Free Presbyterian father\u0027s croft on Harris; a quiet father-son family drama."
+                 },
+                 {
+                     "runAt":  "2026-09-15T10:05:24+02:00",
+                     "summary":  "4 recommendations for Sep 2026",
+                     "content":  "1929: Inside the Greatest Crash in Wall Street History — Andrew Ross Sorkin (Non-fiction)\nWhy Fred: Narrative financial history of the 1929 crash built from never-before-seen Fed board minutes and private letters — same Lewis-style \"you-are-there\" journalism as The Big Short/Flash Boys, and lands squarely on his live AI-capex-bubble tracking (Djukanovic, Klement, Grantham).\n\nMoney Men: A Hot Startup, A Billion Dollar Fraud, A Fight for the Truth — Dan McCrum (Non-fiction)\nWhy Fred: FT journalist\u0027s 7-year investigation into the €20bn Wirecard fraud, told from the inside of the newsroom that broke it — same fraud-detective energy as Red Notice and his Hindenburg/Muddy Waters short-research pages.\n\nRise of the Machines: Drone Warfare in the Russia-Ukraine War — Illya Sekirin (Non-fiction)\nWhy Fred: Insider account of how unmanned systems came to dominate the battlefield — direct match for his Fire Point Ukraine drone-manufacturing wiki entry and Rheinmetall defence thesis.\n\nAngel Down — Daniel Kraus (Literary Fiction / Horror)\nWhy Fred: Outside territory — 2026 Pulitzer Prize winner — a squad of WWI soldiers find a fallen angel on the battlefield, told in a single unbroken sentence; a formally daring, genre-blurring novel with none of his usual finance/spy hooks."
+                 }
+             ]
 }
