@@ -1,18 +1,18 @@
-﻿{
-    "taskId":  "wiki-memory-update",
-    "label":  "Wiki Memory Update",
-    "schedule":  "Daily 11:53 PM",
-    "icon":  "🗂️",
-    "runs":  [
-                 {
-                     "runAt":  "2026-10-17T23:54:54.0317960+02:00",
-                     "summary":  "Memory index updated — 0 new pages, 1 new open thread, 3 threads refreshed, 0 resolved",
-                     "content":  "- Scheduler gap thread updated: catch-up runs fired 10-17 (crypto, recommenders, thinker, briefing, scanner); paper-trader/clippings/email still not seen; briefing flagged pipeline jobs stale ~105h\n- Briefing thread replaced with 10-17 state (GSK/QXO-PB Exits cleared; KLR near-Exit; net ≈€20,959)\n- New open thread: wiki-thinker 10-17 GLP-1 exposure across NVO/PEP/AMGN/UNH never netted\n- Company-scanner thread: 5th run (BIDU/GME/SFTBF added, 10 pending)\n- Domain rows refreshed: Meta 80 runs, Crypto refresh 10-17, Cooking/Books/Podcasts recommender runs, Finance paper trades 10-12 BBW + 10-13 UNH"
-                 },
-                 {
-                     "runAt":  "2026-10-17T15:53:09.4153355+02:00",
-                     "summary":  "Memory index updated — 0 new pages, 1 new open thread (scheduler gap 10-14→10-17), 0 resolved",
-                     "content":  "- Last updated → 2026-10-17\n- No log.md entries or wiki file changes since the 10-13 memory-update (4 quiet days)\n- New open thread: scheduler gap — paper-trader, briefing, wiki-thinker, clippings, portfolio-refresh show no runs 10-14→10-17; GSK 10-15 reassessment passed unbriefed"
-                 }
-             ]
+{
+    "taskId": "wiki-memory-update",
+    "label": "Wiki Memory Update",
+    "schedule": "Daily 11:53 PM",
+    "icon": "🗂️",
+    "runs": [
+        {
+            "runAt": "2026-10-18T23:54:18.2657628+02:00",
+            "summary": "Memory index updated — 0 new pages, 2 new open threads, 4 threads refreshed, 0 resolved",
+            "content": "- Last updated → 2026-10-18; Meta row now 81 wiki-thinker runs\n- Scheduler gap thread: 10-18 runs normal, briefing pipeline health OK (WARNING cleared); paper-trader/clippings/email/Mon trackers still to confirm\n- Briefing thread replaced with 10-18 state (21 positions, net ≈€21,071, new pending idea CF; MEGP/MONY carried)\n- KLR thread: 10-18 strategy-feedback raised pending proposal to reclassify KLR as indirect AI-capex in Lens 3\n- yfinance infra thread: still CONNECTION_CLOSED 10-18; crypto-market-data CONNECT_TIMEOUT\n- New open thread: strategy-feedback 10-18, MF pass set 34→29 from EU dedup (universe.py fix confirmed)\n- New open thread: wiki-thinker 10-18 Lightfin idea, give the Pod a listening voice (de Botton sycophantic-AI point)"
+        },
+        {
+            "runAt": "2026-10-17T23:54:54.0317960+02:00",
+            "summary": "Memory index updated — 0 new pages, 1 new open thread, 3 threads refreshed, 0 resolved",
+            "content": "- Scheduler gap thread updated: catch-up runs fired 10-17 (crypto, recommenders, thinker, briefing, scanner); paper-trader/clippings/email still not seen; briefing flagged pipeline jobs stale ~105h\n- Briefing thread replaced with 10-17 state (GSK/QXO-PB Exits cleared; KLR near-Exit; net ≈€20,959)\n- New open thread: wiki-thinker 10-17 GLP-1 exposure across NVO/PEP/AMGN/UNH never netted\n- Company-scanner thread: 5th run (BIDU/GME/SFTBF added, 10 pending)\n- Domain rows refreshed: Meta 80 runs, Crypto refresh 10-17, Cooking/Books/Podcasts recommender runs, Finance paper trades 10-12 BBW + 10-13 UNH"
+        }
+    ]
 }
