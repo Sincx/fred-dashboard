@@ -6,10 +6,12 @@ Portfolio management exercise — not financial advice. Confirm independently be
 Pipeline health: OK. All tracked tasks are healthy again; refresh-technicals, options-mark-to-market, crypto-prices
 and magic-formula-screen have all caught up since the 10-17 warning. Turso `prices` now holds the Fri 10-16 closes,
 so this run uses Turso directly, with no one-off fetch. ZOE now has a real 10-16 EUR quote (€70.28).
-Data quality: check_data_quality.py was started this run but was still retrying at write time (it took ~17h on
-10-06/07). The last completed pass (10-17) had 570 auto-recovered, 259 still failing and 253 needing manual review;
-most were EU-universe technicals. Known failures relevant here: ACN, ZOE, EDEN and FLUT have no MF#, QXO-PB has no
-fundamentals, and the NBIS put row is missing its strike and expiry.
+Data quality (check_data_quality.py, completed after the first write): 4 auto-recovered, 278 still failing and 253
+needing manual review (3+ consecutive failures). Nearly all are EU-universe technicals and fundamentals, which points
+to a systemic EU source or ticker-mapping problem. Failures relevant to holdings, all repeated for known reasons:
+ACN and ZOE fundamentals have no sa_prefix (9 consecutive failures, hence no MF#), QXO-PB fundamentals have no data
+from any source (9), and the NBIS option_mark row is missing its strike and underlying (33). EDEN and FLUT also have no
+MF# (they're null in the ranking), but neither has a failing data_quality row.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
