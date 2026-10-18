@@ -7,7 +7,13 @@ Figures below may be based on stale data — verify before acting on any recomme
 (Mitigation this run: Turso `prices` still holds 10-09 to 10-13 closes, so every holding was re-priced from a direct
  yfinance pull of Friday 10-16 closes (US cross-checked against massive), and RSI/MACD/SMA50/ATR were recomputed from
  those bars. The only exception is ZOE, which has no Yahoo EUR feed: its price stays on 10-09 and its TA uses the ZTS proxy.
- check_data_quality.py was still running when this was written (a known slow step), so its results are not included.)
+ check_data_quality.py (finished after the first write): 570 AUTO-RECOVERED, 259 STILL FAILING, 253 NEEDS MANUAL REVIEW
+ (3+ consecutive failures). Most of the failures are EU-universe technicals ("all sources failed"), which looks systemic:
+ a broken EU source or ticker mapping, not bad luck on individual tickers.
+ Relevant to this briefing, and all failing repeatedly for known reasons:
+   - ACN and ZOE fundamentals: no sa_prefix, so they have no MF#.
+   - QXO-PB fundamentals: no data from any source.
+   - NBIS option_mark: the Turso row is missing strike and underlying.)
 ════════════════════════════════════════════════════════
   PORTFOLIO MANAGEMENT BRIEFING — 2026-10-17
 ════════════════════════════════════════════════════════
