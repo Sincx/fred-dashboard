@@ -5,14 +5,14 @@
     "icon": "🗂️",
     "runs": [
         {
+            "runAt": "2026-10-19T23:53:56.4571051+02:00",
+            "summary": "Memory index updated — 4 new source pages noted, 3 new open threads, 1 resolved, 3 threads refreshed",
+            "content": "- Last updated → 2026-10-19; Meta row now 82 wiki-thinker runs (added 10-19 CF Industries cyclical-trap highlight)\n- Finance row: Burry batch (4 new investor-letters source pages, Burry pipeline rows 178-209 with MET/DECK/QXO/ERO) and paper trade 10-19 (MCK entry, COP T1, AMAT exit)\n- Resolved: sector-tracker P/E freeze (values moved again; only the XLV 25.0→32.8x jump left to confirm)\n- Scheduler gap thread: paper-trader, clippings-sorter and Mon trackers back 10-19; only email-to-clipping unconfirmed\n- Briefing thread replaced with 10-19 state (net ≈€21,033, still 10-16 prices, MEGP/CF/MONY pending); yfinance MCP still down 10-19\n- New threads: Turso writes blocked for 10-19 paper trades (commands in log.md); BURRY_POSITIONS MU/NBIS/NVDA/CRWV direction review; CF Industries EPS/Hormuz check before approval"
+        },
+        {
             "runAt": "2026-10-18T23:54:18.2657628+02:00",
             "summary": "Memory index updated — 0 new pages, 2 new open threads, 4 threads refreshed, 0 resolved",
             "content": "- Last updated → 2026-10-18; Meta row now 81 wiki-thinker runs\n- Scheduler gap thread: 10-18 runs normal, briefing pipeline health OK (WARNING cleared); paper-trader/clippings/email/Mon trackers still to confirm\n- Briefing thread replaced with 10-18 state (21 positions, net ≈€21,071, new pending idea CF; MEGP/MONY carried)\n- KLR thread: 10-18 strategy-feedback raised pending proposal to reclassify KLR as indirect AI-capex in Lens 3\n- yfinance infra thread: still CONNECTION_CLOSED 10-18; crypto-market-data CONNECT_TIMEOUT\n- New open thread: strategy-feedback 10-18, MF pass set 34→29 from EU dedup (universe.py fix confirmed)\n- New open thread: wiki-thinker 10-18 Lightfin idea, give the Pod a listening voice (de Botton sycophantic-AI point)"
-        },
-        {
-            "runAt": "2026-10-17T23:54:54.0317960+02:00",
-            "summary": "Memory index updated — 0 new pages, 1 new open thread, 3 threads refreshed, 0 resolved",
-            "content": "- Scheduler gap thread updated: catch-up runs fired 10-17 (crypto, recommenders, thinker, briefing, scanner); paper-trader/clippings/email still not seen; briefing flagged pipeline jobs stale ~105h\n- Briefing thread replaced with 10-17 state (GSK/QXO-PB Exits cleared; KLR near-Exit; net ≈€20,959)\n- New open thread: wiki-thinker 10-17 GLP-1 exposure across NVO/PEP/AMGN/UNH never netted\n- Company-scanner thread: 5th run (BIDU/GME/SFTBF added, 10 pending)\n- Domain rows refreshed: Meta 80 runs, Crypto refresh 10-17, Cooking/Books/Podcasts recommender runs, Finance paper trades 10-12 BBW + 10-13 UNH"
         }
     ]
 }
