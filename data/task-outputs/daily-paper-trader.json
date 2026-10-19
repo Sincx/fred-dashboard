@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-19T23:40:05.6238927+02:00",
+      "summary": "MCK (B)",
+      "picks": {
+        "p1": {
+          "ticker": "MCK",
+          "strategy": "B — Momentum",
+          "entry": 1010.43,
+          "stop": 858.87,
+          "t1": 1263.04,
+          "t2": 1515.65
+        }
+      },
+      "content": "McKesson was bought at a new 52-week high (+21.9% over 3 months) on a fiscal Q1 beat, FY27 EPS guidance of $44.20–45.00 and a CVS distribution deal in principle; it is defensive healthcare momentum outside Burry's NDX/SMH shorts. COP hit T1 at $145.24 (+26.25%, 1/3 sold for ~$421). AMAT's final third was exited at $413.11 for a blended +25.49% (+$255), after Burry's SMH puts and a missed 10-16 sector-warning breach. Turso writes are pending (blocked this run). Portfolio net P&L: +$2,147 (+2.72% on $79,000)."
+    },
+    {
       "runAt": "2026-10-13T23:41:20.831220+02:00",
       "summary": "UNH (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "UnitedHealth was bought after its third FY26 guidance raise (adj EPS at least $20.50) on a Q3 beat and an improving medical cost ratio (88.4%); the +5% gap faded to a flat close, so the entry is at the pre-print price. CVX hit T1 at $217.73 (+25.12%, 1/3 sold for ~$417). IAG was exited as a capacity trim (−4.00%, −$40; weakest position, no thesis break). Portfolio net P&L: +$2,041 (+2.62% on $78,000)."
-    },
-    {
-      "runAt": "2026-10-12T23:40:29.7927470+02:00",
-      "summary": "BBW (F)",
-      "picks": {
-        "p1": {
-          "ticker": "BBW",
-          "strategy": "F — Small Cap Value",
-          "entry": 25.58,
-          "stop": 21.74,
-          "t1": 31.98,
-          "t2": 38.37
-        }
-      },
-      "content": "Build-A-Bear at ~6x earnings and a ~3.6% yield near its 52-week low, a direct Burry long whose new CEO is reversing the pre-made plush push. LMT was exited as a capacity trim (−4.53%, −$45; weakest position, no thesis break). No stop/T1/T2 triggers; RIGL is $1.52 and CVX $2.51 from T1. Portfolio net P&L: +$2,067 (+2.68% on $77,000)."
     }
   ]
 }
