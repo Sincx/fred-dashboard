@@ -8,10 +8,12 @@ closes for every position, because Monday's session only lands at tomorrow's 07:
 normal timing gap, not a failure. massive's /prev endpoint also still serves Friday's bar (LULU $97.10), so no fresher
 price was available. The only inputs that changed since the 10-18 run are FX and options time decay.
 Turso check: no new trades or cash_ledger entries for trading-portfolio since 10-01.
-Data quality: check_data_quality.py was started in the background and hadn't finished when this was written. Its
-retry loop has run for hours before. The 10-18 run's known failures still apply to holdings: ACN and ZOE have no
-sa_prefix (hence no MF#), QXO-PB has no fundamentals source, and the NBIS option_mark row is missing its strike and
-expiry.
+Data quality (check_data_quality.py, finished after the first write): 2 auto-recovered and 234 still failing. Most
+failures are again EU/UK-universe technicals and fundamentals. None of the failures touch today's candidates (MEGP,
+CF, MONY). The failures relevant to holdings are all known, repeated ones:
+  - ACN and ZOE fundamentals: no sa_prefix, 10 consecutive failures (hence no MF#).
+  - QXO-PB fundamentals: no data from any source, 10 consecutive failures.
+  - NBIS option_mark: missing strike, expiry and option type, 36 consecutive failures. This needs a manual Turso fix.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
