@@ -24,7 +24,7 @@ interface UniverseRow {
   signal_source: string | null;
   signal_detail: string | null;
   signal_flagged_date: string | null;
-  investor_names: string | null;
+  investor_labels: string | null;
 }
 
 interface ScreenerRow {
@@ -44,25 +44,32 @@ interface ScreenerRow {
   signal_source: string | null;
   signal_detail: string | null;
   signal_flagged_date: string | null;
-  investor_names: string | null;
+  investor_labels: string | null;
 }
 
-// Master spec Phase 15 — small pill(s) for "which tracked investor(s) hold
-// this ticker right now", from v_ticker_investor_positions (comma-joined
-// investor_names). Separate from SourceSignalBadge/signal_source: that
-// column shows only the single MOST RECENT signal per ticker, so an
-// investor holding can get silently crowded out by a newer
-// magic-formula-pass/llm-research signal on the same ticker.
-function InvestorBadges({ names }: { names: string | null }) {
-  if (!names) return <span style={{ color: "var(--text-muted)" }}>—</span>;
+// Master spec Phase 15 — one pill per tracked investor holding this ticker, from
+// v_ticker_investor_labels: ';'-separated entries like "Buffett (L)",
+// "Burry (S)" or "Ackman (L, trimmed)" — L/S is long/short, "trimmed" means the
+// investor cut the position by >25% in their latest filing. Separate from
+// SourceSignalBadge/signal_source: that column shows only the single MOST
+// RECENT signal per ticker, so an investor holding can get crowded out by a
+// newer magic-formula-pass/llm-research signal on the same ticker.
+function InvestorBadges({ labels }: { labels: string | null }) {
+  if (!labels) return <span style={{ color: "var(--text-muted)" }}>—</span>;
   return (
     <span className="flex flex-wrap gap-1">
-      {names.split(",").map((name) => (
-        <span key={name} className="px-2 py-0.5 rounded text-xs font-semibold whitespace-nowrap"
-          style={{ backgroundColor: "rgba(167,139,250,0.15)", color: "#a78bfa" }}>
-          🟣 {name}
-        </span>
-      ))}
+      {labels.split(";").map((label) => {
+        const isShort = /\(S[,)]/.test(label);
+        return (
+          <span key={label} className="px-2 py-0.5 rounded text-xs font-semibold whitespace-nowrap"
+            style={{
+              backgroundColor: isShort ? "rgba(239,68,68,0.12)" : "rgba(167,139,250,0.15)",
+              color: isShort ? "var(--accent-red)" : "#a78bfa",
+            }}>
+            🟣 {label}
+          </span>
+        );
+      })}
     </span>
   );
 }
@@ -578,7 +585,7 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2">
                     {r.signal_source ? <SourceSignalBadge source={r.signal_source} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
                   </td>
-                  <td className="px-3 py-2"><InvestorBadges names={r.investor_names} /></td>
+                  <td className="px-3 py-2"><InvestorBadges labels={r.investor_labels} /></td>
                   <td className="px-3 py-2">
                     <NotesCell ticker={r.ticker} exchange={r.exchange} value={r.notes}
                       onSaved={(notes) => updateNotes(r.ticker, r.exchange, notes)} />
@@ -632,7 +639,7 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2">
                     {r.signal_source ? <SourceSignalBadge source={r.signal_source} /> : <span style={{ color: "var(--text-muted)" }}>—</span>}
                   </td>
-                  <td className="px-3 py-2"><InvestorBadges names={r.investor_names} /></td>
+                  <td className="px-3 py-2"><InvestorBadges labels={r.investor_labels} /></td>
                 </tr>
               ))}
             </tbody>

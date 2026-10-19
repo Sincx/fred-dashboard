@@ -18,7 +18,7 @@ export interface ScreenerRow {
   signal_source: string | null;
   signal_detail: string | null;
   signal_flagged_date: string | null;
-  investor_names: string | null;
+  investor_labels: string | null;
 }
 
 export async function GET() {
@@ -30,11 +30,11 @@ export async function GET() {
              v.pe, v.div_yield, u.notes,
              sig.source AS signal_source, sig.detail AS signal_detail,
              sig.flagged_date AS signal_flagged_date,
-             vip.investor_names AS investor_names
+             vip.investor_labels AS investor_labels
       FROM v_magic_formula_latest v
       LEFT JOIN universe u ON u.ticker = v.ticker AND u.exchange = v.exchange
       LEFT JOIN v_latest_signal sig ON sig.ticker = v.ticker AND sig.exchange = v.exchange
-      LEFT JOIN v_ticker_investor_positions vip ON vip.ticker = v.ticker AND vip.exchange = v.exchange
+      LEFT JOIN v_ticker_investor_labels vip ON vip.ticker = v.ticker AND vip.exchange = v.exchange
       ORDER BY v.mf_rank ASC;
     `);
     const rows: ScreenerRow[] = rs.rows.map((r) => ({
@@ -54,7 +54,7 @@ export async function GET() {
       signal_source: r.signal_source as string | null,
       signal_detail: r.signal_detail as string | null,
       signal_flagged_date: r.signal_flagged_date as string | null,
-      investor_names: r.investor_names as string | null,
+      investor_labels: r.investor_labels as string | null,
     }));
     return NextResponse.json(rows);
   } catch (err) {

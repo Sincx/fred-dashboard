@@ -313,17 +313,33 @@ export async function GET() {
   try {
     const client = getTursoClient();
     const fx = await loadFxTable(client);
-    const [p1, equity, trading, burry, buffett, ackman, recommended, equityCurve, spyBenchmark] = await Promise.all([
+    // Master spec Phase 15 — one tab per ACTIVE tracked investor that has a
+    // shadow portfolio (Burry via wiki prose; Buffett/Ackman/... via 13F ->
+    // investor_positions -> shadow_portfolio.py). Driven by the tables rather
+    // than a hard-coded list, so tracking a new investor needs no code change
+    // here or in the page. Ordered by when the shadow was created, so the tab
+    // order is stable as investors are added.
+    const shadowRs = await client.execute(
+      `SELECT p.portfolio_id, p.name, p.base_currency, ti.investor_id
+       FROM portfolios p
+       JOIN tracked_investors ti ON ti.investor_id = p.mirrors_investor_id
+       WHERE p.kind = 'shadow' AND p.active = 1 AND ti.active = 1
+       ORDER BY p.created_date, p.portfolio_id`
+    );
+    const shadowsPromise = Promise.all(
+      shadowRs.rows.map(async (r) => ({
+        investor_id: r.investor_id as string,
+        portfolio: await fetchPortfolio(
+          client, r.portfolio_id as string, r.name as string, fx, (r.base_currency as string | null) ?? "USD"
+        ),
+      }))
+    );
+
+    const [p1, equity, trading, shadows, recommended, equityCurve, spyBenchmark] = await Promise.all([
       fetchPortfolio(client, "paper-trading-p1", "Paper Trading Portfolio (P1)", fx, "USD"),
       fetchPortfolio(client, "equity-pension", "Equity / Pension Portfolio", fx, "GBP"),
       fetchPortfolio(client, "trading-portfolio", "Trading Portfolio", fx, "EUR"),
-      fetchPortfolio(client, "burry-shadow", "Michael Burry (Shadow)", fx, "USD"),
-      // Master spec Phase 15 (2026-09-20) — second/third tracked investors,
-      // same 13F -> investor_positions -> shadow_portfolio.py path as Burry
-      // (see investors.py/shadow_portfolio.py), just sourced from Equibles
-      // 13F data instead of wiki prose extraction.
-      fetchPortfolio(client, "buffett-shadow", "Warren Buffett (Shadow)", fx, "USD"),
-      fetchPortfolio(client, "ackman-shadow", "Bill Ackman (Shadow)", fx, "USD"),
+      shadowsPromise,
       // Recommended Trades spec (2026-09-19) §3.4 — mechanical shadow of the
       // briefing's own recommendations, EUR like the real Trading Portfolio
       // it mirrors so their net_pnl figures are directly comparable.
@@ -339,7 +355,7 @@ export async function GET() {
       briefing = "Error reading morning-briefing.md";
     }
 
-    return NextResponse.json({ p1, equity, trading, burry, buffett, ackman, recommended, equityCurve, briefing, spyBenchmark });
+    return NextResponse.json({ p1, equity, trading, shadows, recommended, equityCurve, briefing, spyBenchmark });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }

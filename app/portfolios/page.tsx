@@ -13,24 +13,25 @@ interface Portfolios {
   p1: PortfolioPayload;
   equity: PortfolioPayload;
   trading: PortfolioPayload;
-  burry: PortfolioPayload;
-  buffett: PortfolioPayload;
-  ackman: PortfolioPayload;
+  shadows: { investor_id: string; portfolio: PortfolioPayload }[];
   recommended: PortfolioPayload;
   equityCurve: EquityCurvePoint[];
   briefing: string;
   spyBenchmark: SpyBenchmark | null;
 }
 
-type Tab = "p1" | "equity" | "trading" | "burry" | "buffett" | "ackman" | "recommended" | "briefing";
+// Static tabs plus one "shadow:<investor_id>" tab per active tracked investor
+// (see app/api/portfolios/route.ts) — so the tab bar is built at render time
+// from the data, not a fixed list of investor names.
+type Tab = string;
 
-const TABS: { id: Tab; label: string }[] = [
+const SHADOW_PREFIX = "shadow:";
+const TABS_BEFORE_SHADOWS: { id: Tab; label: string }[] = [
   { id: "p1", label: "Paper Trading" },
   { id: "equity", label: "Equity Portfolio" },
   { id: "trading", label: "Trading Portfolio" },
-  { id: "burry", label: "Michael Burry (Shadow)" },
-  { id: "buffett", label: "Warren Buffett (Shadow)" },
-  { id: "ackman", label: "Bill Ackman (Shadow)" },
+];
+const TABS_AFTER_SHADOWS: { id: Tab; label: string }[] = [
   { id: "recommended", label: "Recommended Trades" },
   { id: "briefing", label: "Morning Briefing" },
 ];
@@ -1198,7 +1199,11 @@ export default function PortfoliosPage() {
       <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>Live positions from Turso</p>
 
       <div className="flex gap-1 mb-5 p-1 rounded-lg w-fit" style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)" }}>
-        {TABS.map(({ id, label }) => (
+        {[
+          ...TABS_BEFORE_SHADOWS,
+          ...(data?.shadows ?? []).map((sh) => ({ id: SHADOW_PREFIX + sh.investor_id, label: sh.portfolio.name })),
+          ...TABS_AFTER_SHADOWS,
+        ].map(({ id, label }) => (
           <button key={id} onClick={() => setTab(id)}
             className="px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-150"
             style={{
@@ -1224,17 +1229,12 @@ export default function PortfoliosPage() {
             <div className="card">
               <EquityPortfolioView portfolio={data.equity} />
             </div>
-          ) : tab === "burry" ? (
+          ) : tab.startsWith(SHADOW_PREFIX) ? (
             <div className="card">
-              <TradingPortfolioView portfolio={data.burry} spyBenchmark={null} />
-            </div>
-          ) : tab === "buffett" ? (
-            <div className="card">
-              <TradingPortfolioView portfolio={data.buffett} spyBenchmark={null} />
-            </div>
-          ) : tab === "ackman" ? (
-            <div className="card">
-              <TradingPortfolioView portfolio={data.ackman} spyBenchmark={null} />
+              {(() => {
+                const sh = data.shadows.find((x) => SHADOW_PREFIX + x.investor_id === tab);
+                return sh ? <TradingPortfolioView portfolio={sh.portfolio} spyBenchmark={null} /> : null;
+              })()}
             </div>
           ) : tab === "recommended" ? (
             <div className="card">
