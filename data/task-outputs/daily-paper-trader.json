@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-20T23:40:49.2451757+02:00",
+      "summary": "ZTS (A)",
+      "picks": {
+        "p1": {
+          "ticker": "ZTS",
+          "strategy": "A — Value",
+          "entry": 80.04,
+          "stop": 68.03,
+          "t1": 100.05,
+          "t2": 120.06
+        }
+      },
+      "content": "Zoetis was bought at ~13x trailing earnings (vs a ~30x history) after a 45% fall; it is basing above its 52-week low with ~$2B FCF and a 2.7% yield, and is a direct Burry long (Q3 report 11-05). GEV was exited as a capacity trim at $890.33 (−8.18%, −$82; weakest position). No stop/T1/T2 triggers. Turso CLI writes worked and cleared most of the 10-19 backlog; 3 raw-SQL fixes (COP T1, MCK/AMAT dates) are still blocked. Portfolio net P&L: +$2,543 (+3.18% on $80,000)."
+    },
+    {
       "runAt": "2026-10-19T23:40:05.6238927+02:00",
       "summary": "MCK (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "McKesson was bought at a new 52-week high (+21.9% over 3 months) on a fiscal Q1 beat, FY27 EPS guidance of $44.20–45.00 and a CVS distribution deal in principle; it is defensive healthcare momentum outside Burry's NDX/SMH shorts. COP hit T1 at $145.24 (+26.25%, 1/3 sold for ~$421). AMAT's final third was exited at $413.11 for a blended +25.49% (+$255), after Burry's SMH puts and a missed 10-16 sector-warning breach. Turso writes are pending (blocked this run). Portfolio net P&L: +$2,147 (+2.72% on $79,000)."
-    },
-    {
-      "runAt": "2026-10-13T23:41:20.831220+02:00",
-      "summary": "UNH (D)",
-      "picks": {
-        "p1": {
-          "ticker": "UNH",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 377.76,
-          "stop": 321.1,
-          "t1": 472.2,
-          "t2": 566.64
-        }
-      },
-      "content": "UnitedHealth was bought after its third FY26 guidance raise (adj EPS at least $20.50) on a Q3 beat and an improving medical cost ratio (88.4%); the +5% gap faded to a flat close, so the entry is at the pre-print price. CVX hit T1 at $217.73 (+25.12%, 1/3 sold for ~$417). IAG was exited as a capacity trim (−4.00%, −$40; weakest position, no thesis break). Portfolio net P&L: +$2,041 (+2.62% on $78,000)."
     }
   ]
 }
