@@ -1,148 +1,162 @@
 ════════════════════════════════════════════════════════
-  PORTFOLIO MANAGEMENT BRIEFING — 2026-10-19
+  PORTFOLIO MANAGEMENT BRIEFING — 2026-10-20
 ════════════════════════════════════════════════════════
 Portfolio management exercise — not financial advice. Confirm independently before trading.
 
-Pipeline health: OK, all tracked tasks healthy. This is Monday night's 23:30 slot. Turso still holds the Fri 10-16
-closes for every position, because Monday's session only lands at tomorrow's 07:17 refresh-technicals run. That's the
-normal timing gap, not a failure. massive's /prev endpoint also still serves Friday's bar (LULU $97.10), so no fresher
-price was available. The only inputs that changed since the 10-18 run are FX and options time decay.
+Pipeline health: OK, all tracked tasks healthy. This is Tuesday night's 23:30 slot.
+Price source: Turso only has Mon 10-19 closes for US names and ACN. For UK holdings (KLR, GSK, REL) and most EU
+holdings (SAP, EDEN, PRX, WKL, ZOE), plus QXO-PB, Turso is still on Fri 10-16 closes: their 10-19 bars didn't land
+at this morning's 07:17 refresh. So every figure below uses a direct yfinance pull of **Tue 10-20 closes**, with
+RSI(14), SMA50 and MACD recomputed from that data. ACN uses the Xetra CSA.DE listing and ZOE uses ZOE.DE. The wiki
+price cells (synced from Turso) will lag this briefing until the UK/EU bars land.
 Turso check: no new trades or cash_ledger entries for trading-portfolio since 10-01.
-Data quality (check_data_quality.py, finished after the first write): 2 auto-recovered and 234 still failing. Most
-failures are again EU/UK-universe technicals and fundamentals. None of the failures touch today's candidates (MEGP,
-CF, MONY). The failures relevant to holdings are all known, repeated ones:
-  - ACN and ZOE fundamentals: no sa_prefix, 10 consecutive failures (hence no MF#).
-  - QXO-PB fundamentals: no data from any source, 10 consecutive failures.
-  - NBIS option_mark: missing strike, expiry and option type, 36 consecutive failures. This needs a manual Turso fix.
+Data quality: check_data_quality.py was started in the background and hadn't printed anything when this was written,
+which is the known slow-start pattern. Known failures that affect holdings: ACN and ZOE fundamentals have no
+sa_prefix (hence no MF#), QXO-PB has no fundamentals, and the NBIS option_mark row is missing strike, expiry and
+type, so it needs a manual Turso fix.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
-  Total Value:      ~€21,033 (estimated: long equity €17,248 + options ~€1,773 + ORCL short unrealized +€117 + cash €1,895)
-                    −€38 vs 10-18's €21,071. Of that, ~−€22 comes from the stronger euro (EUR/USD 1.1192 → 1.1215,
-                    GBP/EUR 1.1892 → 1.1862) and ~−€16 from options theta (ORCL put $8.18 → $8.09, PLTR put $5.14 → $5.10).
-                    No price change and no trades.
+  Total Value:      ~€20,939 (estimated: long equity €17,385 + options ~€1,554 + ORCL short unrealized +€104 + cash €1,895)
+                    −€94 vs 10-19's €21,033. Long equity gained €137 on two sessions of moves (ACN +5.6%, KLR +6.1%,
+                    ADBE +4.7%, LULU +2.9%; ERO −4.4%, EDEN −2.8%). Options lost ~€219 as ORCL, PLTR and NBIS
+                    bounced and theta kept working. The ORCL short gave back ~€13.
   Available Cap:    €1,895.31 cash
-  Best Performer:   IQV +62.8%
-  Worst Performer:  SFM −18.7% (FLUT −17.9%, LULU −14.0%, PRX −12.6%)
-  Largest Position: LULU (9.0% of long book; GSK 9.0%, SAP 8.1%, REL 8.0%)
-  FX:               EUR/USD 1.1215 | GBP/EUR 1.1862 | All prices are Fri 10-16 closes
+  Best Performer:   IQV +63.3%
+  Worst Performer:  SFM −19.3% (FLUT −14.3%, PRX −13.4%, LULU −11.4%)
+  Largest Position: LULU (9.2% of long book; GSK 9.0%, SAP 8.1%, REL 8.0%)
+  FX:               EUR/USD 1.1240 | GBP/EUR 1.1904 | Prices are Tue 10-20 closes
 
 POSITION SIGNALS
   ┌──────────┬────────────┬─────────┬───────┬──────────┬───────────────────┬─────┐
   │ Ticker   │ P&L%       │ RSI(14) │ vs50d │ Signal   │ Catalyst          │ MF# │
   ├──────────┼────────────┼─────────┼───────┼──────────┼───────────────────┼─────┤
-  │ IQV      │ +62.8%     │ 54.8    │ ↑     │ Watch    │ Q3 late Oct (tbc) │ 602 │
-  │ SAP      │ +45.7%     │ 66.0    │ ↑     │ Hold     │ Q3 ~10-21 (tbc)   │ 310 │
-  │ ACN      │ +43.7%     │ 71.9    │ ↑     │ Hold     │ overbought        │ —   │
-  │ KLR      │ +26.6%     │ 40.1    │ ↓     │ Watch    │ near-Exit; free   │ 53  │
-  │ WKL      │ +14.7%     │ 77.7    │ ↑     │ Hold     │ overbought        │ 69  │
-  │ EDEN     │ +13.3%     │ 64.3    │ ↑     │ Hold     │ Q3 rev ~10-21 tbc │ —   │
-  │ REL      │ +12.7%     │ 78.2    │ ↑     │ Hold     │ overbought        │ 174 │
-  │ ZOE      │ +11.2%     │ 73.1    │ ↑     │ Hold     │ overbought        │ —   │
-  │ BIRK     │ +5.6%      │ 51.1    │ ↓     │ Watch    │ —                 │ 232 │
-  │ ADBE     │ −1.9%      │ 50.1    │ ↓     │ Watch    │ —                 │ 18  │
-  │ ERO      │ −1.9%      │ 42.9    │ ↓     │ Watch    │ MACD bearish      │ 80  │
-  │ GSK      │ −4.0%      │ 56.0    │ ↑     │ Hold     │ Earnings 10-28    │ 31  │
-  │ QXO-PB   │ −6.9%      │ 41.2    │ ↓     │ Watch    │ MACD bearish      │ —   │
-  │ PRX      │ −12.6%     │ 49.9    │ ↓     │ Watch    │ reassess (ext.)   │ 539 │
-  │ LULU     │ −14.0%     │ 46.0    │ ↓     │ Watch    │ reassess 10-20    │ 23  │
-  │ FLUT     │ −17.9%     │ 37.0    │ ↓     │ Watch    │ Earnings 11-12    │ —   │
-  │ SFM      │ −18.7%     │ 41.7    │ ↓     │ Watch    │ Q3 late Oct (tbc) │ 128 │
-  │ ORCL (S) │ +17.0%     │ 40.0    │ ↓     │ Hold     │ short working     │ 543 │
+  │ IQV      │ +63.3%     │ 55.6    │ ↑     │ Watch    │ Q3 late Oct (tbc) │ 602 │
+  │ ACN      │ +51.7%     │ 76.1    │ ↑     │ Hold     │ overbought; FR ✓  │ —   │
+  │ SAP      │ +47.4%     │ 68.3    │ ↑     │ Hold     │ Q3 ~10-21 (tbc)   │ 310 │
+  │ KLR      │ +34.4%     │ 55.1    │ ↑     │ Watch    │ rebound; free     │ 53  │
+  │ WKL      │ +17.8%     │ 78.7    │ ↑     │ Hold     │ overbought        │ 69  │
+  │ REL      │ +13.3%     │ 77.7    │ ↑     │ Hold     │ overbought        │ 174 │
+  │ ZOE      │ +12.4%     │ 74.9    │ ↑     │ Hold     │ overbought        │ —   │
+  │ EDEN     │ +10.1%     │ 55.6    │ ↑     │ Hold     │ Q3 rev ~10-21 tbc │ —   │
+  │ ADBE     │ +2.8%      │ 58.2    │ ↑     │ Hold     │ SMA50 reclaimed   │ 18  │
+  │ BIRK     │ +2.2%      │ 46.0    │ ↓     │ Watch    │ —                 │ 232 │
+  │ GSK      │ −3.7%      │ 56.6    │ ↑     │ Hold     │ Earnings 10-28    │ 31  │
+  │ ERO      │ −5.5%      │ 39.1    │ ↓     │ EXIT     │ new mech. Exit    │ 80  │
+  │ QXO-PB   │ −8.6%      │ 40.2    │ ↓     │ Watch    │ 0.2 from Exit     │ —   │
+  │ LULU     │ −11.4%     │ 52.0    │ ↓     │ Watch    │ reassessed 10-20  │ 23  │
+  │ PRX      │ −13.4%     │ 47.5    │ ↓     │ Watch    │ —                 │ 539 │
+  │ FLUT     │ −14.3%     │ 44.3    │ ↓     │ Watch    │ Earnings 11-12    │ —   │
+  │ SFM      │ −19.3%     │ 41.1    │ ↓     │ Watch    │ Q3 late Oct (tbc) │ 128 │
+  │ ORCL (S) │ +15.2%     │ 42.6    │ ↓     │ Hold     │ short working     │ 543 │
   └──────────┴────────────┴─────────┴───────┴──────────┴───────────────────┴─────┘
   P&L% uses Turso entry prices. KLR/WKL entries in Turso (2,418p / €71.08) differ slightly from the reconciled
   real fills (2,400p / €70.88), so the reconciled P&L is ~+1pt higher for KLR and +0.3pt higher for WKL.
-  MF# is unchanged vs 10-18 (full-universe ranks, ~1,350 tickers).
-  ORCL (S): the script's mechanical "Exit" (RSI 40.0, below SMA50, MACD bearish) is a long-side rule. For a short,
-  that setup is favourable, so it stays Hold.
-  Signal changes vs 10-18: none, since there's no new session in Turso.
+  MF# is unchanged vs 10-19 (full-universe ranks, ~1,350 tickers).
+  ORCL (S) P&L is the short's gain on entry ($154.552 → $131.14).
+  Signal changes vs 10-19:
+  - ERO: Watch → **Exit** ($32.90, −4.4% on the day, RSI 39.1, below SMA50 $36.09, MACD bearish).
+  - ADBE: Watch → Hold (back above SMA50 at $256.73).
+  - EDEN, GSK and IQV are unchanged. KLR is out of near-Exit territory (RSI 40.1 → 55.1, back above SMA50).
 
 PORTFOLIO SHAPE
-  Concentration:   OK — no position ≥25% (largest LULU 9.0%)
-  Sector spread:   Tech/Software (SAP, ACN, ADBE) 21.5% | Healthcare (GSK, ZOE, IQV) 19.2% | Consumer (LULU, BIRK, SFM) 16.8% |
-                   Info services (REL, WKL) 15.1% | Fintech EDEN 7.8% | Industrials (QXO-PB, KLR) 7.6% | Internet/SOTP PRX 6.3% |
-                   Materials ERO 5.3% | iGaming FLUT 0.4%
-                   The book is balanced, with no sector above 25%. There's still no energy or staples exposure. The
-                   bearish overlays (ORCL short plus ORCL, PLTR and NBIS puts) are the only AI-infrastructure exposure.
-  Currency split:  EUR 42.4% | USD 38.5% | GBp 19.1% (long book)
+  Concentration:   OK — no position ≥25% (largest LULU 9.2%)
+  Sector spread:   Tech/Software (SAP, ACN, ADBE) 22.1% | Healthcare (GSK, ZOE, IQV) 19.2% | Consumer (LULU, BIRK, SFM) 16.7% |
+                   Info services (REL, WKL) 15.2% | Industrials (QXO-PB, KLR) 7.6% | Fintech EDEN 7.6% | Internet/SOTP PRX 6.2% |
+                   Materials ERO 5.1% | iGaming FLUT 0.4%
+                   The book is balanced, with no sector above 25%. Tech/Software is creeping up on ACN's run. There's
+                   still no energy or staples exposure. The bearish overlays (ORCL short plus ORCL, PLTR and NBIS puts)
+                   are the only AI-infrastructure exposure.
+  Currency split:  EUR 42.6% | USD 38.2% | GBp 19.2% (long book)
 
 TODAY'S TRADE IDEAS
   ── SELLS / TRIMS ──────────────────────────────────────
-  No exit signals triggered today. No position is ≥20% weight, so the Trim rule can't fire.
+  ERO: Full Exit (mechanical Exit, first day) — $32.90 close broke down −4.4%. All three Exit conditions are met:
+    RSI 39.1, price 8.8% below SMA50 $36.09, MACD bearish. The copper thesis isn't broken by one day, but the trend is.
+  Expected proceeds: ~$987 (≈€878). Realized loss ≈ −€51 plus ~€4.45 commission, so no CGT.
+    Alternative if you want to give the thesis a few more days: a hard stop at $31.50 (≈1.5×ATR below Tuesday's
+    close) and a reassessment by ~10-27.
+  No Trim signals. No position is ≥20% weight, so the Trim rule can't fire.
   Discretionary watch (not a signal):
-  - REL (RSI 78.2), WKL (77.7), ZOE (73.1) and ACN (71.9) are all still overbought together.
-  - ACN: a 2-share trim at €202.70 grosses ~€123 of gain, leaving ~€94 after CGT (€26) and commission (~€3), and
-    returns ~€405 cash. Optional, not recommended.
-  - SFM: −18.7%, below SMA50 ($73.77), RSI 41.7. Keep the hard stop at $60.85. A full exit (≈€581 proceeds,
-    realized loss ≈−€134, no CGT) remains Mike's call.
-  - LULU: the patience window ends 10-20. Monday's close isn't in Turso yet. The standing rule is to trim 50%
-    (9 sh) on a close below $88.54; at Friday's $97.10 it's 9.7% above that trigger.
+  - ACN (RSI 76.1, +51.7%) now qualifies as a free ride. See FREE RIDE below; that's the preferred way to take profit.
+  - WKL 78.7, REL 77.7, ZOE 74.9 and ACN 76.1 are all overbought together, about 29% of the long book.
+  - SFM: −19.3%, below SMA50 ($72.93), RSI 41.1. Keep the hard stop at $60.85. A full exit (≈€576 proceeds,
+    realized loss ≈ −€137, no CGT) remains Mike's call.
+  - LULU reassessment (due 10-20): closed $99.94 (RSI 52.0, MACD bullish), 12.9% above the $88.54 trim trigger and
+    recovering toward SMA50 ($105.57). No trim is warranted. Extend the patience window to ~11-03 and keep the
+    trim-9-shares-below-$88.54 rule.
 
   ── ADDS TO EXISTING ───────────────────────────────────
-  No Add signals. PRX (RSI 49.9, MACD bullish) fails only because it's below SMA50 (€36.71). An add would trigger
-  on a close above ~€36.75.
+  No Add signals. PRX (RSI 47.5, MACD bullish) still fails only because it's below SMA50 (€36.47). An add would
+  trigger on a close above ~€36.50. BIRK (RSI 46.0, MACD bullish) is in the same position below SMA50 ($33.86).
 
   ── NEW POSITIONS ──────────────────────────────────────
-  MEGP: Enter at 121.4p (Fri close; holding above SMA50 119.9p) — Turso screen 5/5, MF#13, RSI 56 | Stop: 113.3p | Size: €1,000
-  CF:   Enter on a close above $123.50 (SMA50 reclaim; last $120.85) — Turso screen 5/5, MF#22, RSI 53 | Stop: $115.25 | Size: €1,000
-  MONY: limit 195p (last 201.8p, RSI 67) — Turso screen 5/5, MF#14 | Stop: 184.2p | Size: €750
-  Combined €2,750 is more than the €1,895 cash, so at most two can fill unless something is sold first.
-  MEGP + MONY (~€1,750) fits. All three are already active Pending Trade Ideas, so no new cards were created.
+  MEGP: Enter at ~119.4p (Tue close, sitting on SMA50 119.9p) — Turso screen 5/5, MF#13, RSI 52 | Stop: 111.3p | Size: €1,000
+  NEM:  Enter at ~$116.81 (Tue close, near MA20 $117.40) — Turso screen 5/5, MF#21, RSI 48 | Stop: $111.88 | Size: €1,000
+  MONY: limit 195p (last 200.6p, RSI 65) — Turso screen 5/5, MF#14 | Stop: 184.2p | Size: €750
+  The cash is €1,895 before ERO's proceeds. Taking the ERO exit (+≈€874 net) would fund two full entries. Without it,
+  MEGP + MONY (~€1,750) fits. MEGP and MONY were already active Pending Trade Ideas, so no duplicate cards were
+  created. NEM is a new card. CF dropped out: it fell to $118.51 on 10-19 and is now rated Hold, not Buy.
 
 INVESTMENT OPPORTUNITIES
   5/5 · MEGP (FTSE350, Industrials — Me Group International) — Magic Formula pass, P/E 8.4, EY 16.8%, ROIC 27.8% | MF#13
-  Entry: 121.4p (10-16 close) | Stop: 113.3p (1.5×ATR 5.4p) | Size: €1,000 | RSI: 56.2 | MACD: Bullish
-  Conviction: MF#13; Magic Formula pass; corroborated by briefing-recommendation; bullish MACD; RSI healthy at 56.
-  Portfolio fit: GBp exposure in an Industrials sleeve that's only 7.6% of the book, with no AI or software link.
-    It's the cleanest entry on the screen, just above SMA50 and SMA200.
+  Entry: 119.4p (10-20 close) | Stop: 111.3p (1.5×ATR 5.4p) | Size: €1,000 | RSI: 52.4 | MACD: Bullish
+  Conviction: MF#13; Magic Formula pass; corroborated by briefing-recommendation; bullish MACD; RSI healthy at 56 (Turso, 10-16).
+  Portfolio fit: GBp exposure in a 7.6% Industrials sleeve, with no AI or software link. It's testing SMA50 from above,
+    so a close below ~117p would weaken the setup.
 
-  5/5 · CF (S&P 500, Materials — CF Industries) — Magic Formula pass, P/E 8.6, EY 16.1%, ROIC 24.5%, yield 2.1% | MF#22
-  Entry: close above $123.50 (last $120.85, SMA50 $123.31) | Stop: $115.25 | Size: €1,000 | RSI: 52.5 | MACD: Bullish
-  Conviction: MF#22; Magic Formula pass; corroborated by briefing-recommendation; bullish MACD; RSI healthy at 53.
-  Portfolio fit: a cyclical nitrogen producer, uncorrelated with the AI and consumer names. Materials would go from
-    5.3% to ~11% alongside ERO. Wait for the SMA50 reclaim.
+  5/5 · NEM (S&P 500, Materials — Newmont) — Magic Formula pass, P/E 14.6, EY 12.2%, ROIC 27.9%, yield 0.9% | MF#21
+  Entry: ~$116.81 (10-20 close); a close above SMA50 $121.85 would confirm | Stop: $111.88 (1.5×ATR 3.29) | Size: €1,000 | RSI: 47.9 | MACD: Bullish
+  Conviction: MF#21; Magic Formula pass; bullish MACD; RSI healthy at 50.
+  Portfolio fit: a gold major that's uncorrelated with the AI, consumer and quality names. It hedges the same risk-off
+    case as the put overlay. Materials would go to ~11% if ERO is kept, or stay ~6% if ERO is exited (effectively a swap
+    from copper to gold).
 
   5/5 · MONY (FTSE350, Communication Services — MONY Group) — Magic Formula pass, P/E 11.3, EY 12.5%, ROIC 33.6% | MF#14
-  Entry: pullback to ~195p, near SMA50 193.5p (last 201.8p) | Stop: 184.2p | Size: €750 starter | RSI: 67.0 | MACD: Bullish
+  Entry: pullback to ~195p, near SMA50 193.4p (last 200.6p) | Stop: 184.2p | Size: €750 starter | RSI: 65.0 | MACD: Bullish
   Conviction: MF#14; Magic Formula pass; corroborated by briefing-recommendation; bullish MACD.
-  Portfolio fit: a new sector for the book, with GBp exposure. It's a starter size because RSI is above 65.
+  Portfolio fit: a new sector for the book, with GBp exposure. It's a starter size because RSI is at 65.
 
-  Also considered: APA (5/5, RSI 69.7, energy; EOG is already pending), TMV (5/5, but Tech/Software is already 21.5%),
-    TRN (5/5, UK consumer, adds to a 16.8% consumer sleeve), MO (4/5, RSI 77.6), AUTO (4/5, RSI 73.8), EOG (4/5,
-    RSI 71.3), SAGA (4/5, no MF pass). MO and EOG remain active Pending Trade Ideas at their earlier limits
-    ($72.00 / $152.50).
+  Also considered: MO (5/5, MF#12, corroborated by llm-research, but RSI 70.3 is extended; it stays an active Pending
+    idea at the $72.00 limit and would add the missing Staples exposure), TMV (5/5, but Tech/Software is already 22.1%),
+    TRN (5/5, UK consumer, adds to a 16.7% consumer sleeve), AUTO (4/5, RSI 73.8), APA/EOG (4/5, RSI 70–71, energy,
+    EOG already pending at $152.50), SAGA/EXPE/RMV (4/5, no MF pass).
 
 FREE RIDE OPPORTUNITIES
-  SAP: Sell 5 of 7 shares at €199.22 → ~€996 gross proceeds covers the cost basis (€956.90)
-  Free position: 2 shares at zero effective cost | Current value: ~€398
-  After CGT (€65.65 on €312.60 gain) and commission (~€3.25), net cash is ~€927, ~€30 short of full cost recovery.
-  Status: Monitor. RSI 66.0 is approaching overbought, and Q3 lands ~10-21 (tbc). Consider executing into
-    strength if RSI pushes above 70.
+  ACN: Sell 4 of 6 shares at €214.10 → ~€856 gross proceeds covers the cost basis (€846.60)
+  Free position: 2 shares at zero effective cost | Current value: ~€428
+  After CGT (€61.32 on €292.00 gain) and commission (~€4.45), net cash is ~€790, ~€56 short of full cost recovery.
+  Status: **Consider executing now.** This is newly eligible (+51.7%, 2 free shares). RSI 76.1 is overbought, and
+    there's no Trim signal only because weight is 7.4%. That meets the "RSI above 65 and approaching overbought" bar.
 
-  IQV: ✅ Already free-ridden. All 3 remaining shares are held at zero effective cost (current value ~€714).
-  KLR: ✅ Already free-ridden. All 10 remaining shares are held at zero effective cost (current value ~€363).
-  ACN: +43.7% but doesn't qualify. Covering €846.60 at €202.70 needs 5 of 6 shares, leaving only 1 free share.
+  SAP: Sell 5 of 7 shares at €201.55 → ~€1,008 gross proceeds covers the cost basis (€956.90)
+  Free position: 2 shares at zero effective cost | Current value: ~€403
+  After CGT (€68.09 on €324.25 gain) and commission (~€4.45), net cash is ~€935, ~€22 short of full cost recovery.
+  Status: Monitor, leaning execute. RSI 68.3 is approaching overbought, and Q3 lands ~10-21 (tbc). Selling before the
+    print locks in cost recovery; holding through it keeps the upside on all 7 shares.
+
+  IQV: ✅ Already free-ridden. All 3 remaining shares are held at zero effective cost (current value ~€715).
+  KLR: ✅ Already free-ridden. All 10 remaining shares are held at zero effective cost (current value ~€387).
 
 PORTFOLIO RISKS TO WATCH
-  - Overbought cluster: REL 78.2, WKL 77.7, ZOE 73.1, ACN 71.9 and SAP 66.0 make up ~36% of the long book. A
+  - Overbought cluster: WKL 78.7, REL 77.7, ACN 76.1 and ZOE 74.9 (plus SAP 68.3) make up ~37% of the long book. A
     rotation out of quality and defensives would hit several at once.
-  - Losers still below SMA50: SFM, FLUT, LULU, PRX, ERO, QXO-PB and BIRK (~34% of the long book).
-  - KLR sits at RSI 40.08, 0.08 above a mechanical Exit. It's free-ridden, so only profit is at risk.
-  - The bearish overlay (~€1,890: puts ~€1,773 + ORCL short +€117) is exposed to an AI-infra bounce, and it's
-    losing ~€16 a day to theta. The NBIS put (~€597) is still a hand estimate at 80% vol, because its Turso row
-    lacks strike and expiry.
-  - Catalyst-heavy fortnight: SAP and EDEN ~10-21, IQV and SFM late Oct, GSK 10-28.
-  - Every figure above is a Friday close. Monday's moves will only show in tomorrow night's briefing.
+  - Losers still below SMA50: SFM, FLUT, LULU, PRX, ERO, QXO-PB and BIRK (~34% of the long book). ERO has now tipped
+    into Exit, and QXO-PB is 0.2 RSI points away from following it.
+  - The bearish overlay (~€1,658: puts ~€1,554 + ORCL short +€104) lost ~€230 in two sessions as AI-infra names
+    bounced (ORCL $131.14, PLTR $192.60, NBIS $171.45). The ORCL put has 59 days left and is decaying fastest. The NBIS
+    put (~€534) is still a hand estimate at 80% vol, because its Turso row lacks strike and expiry.
+  - Catalyst-heavy fortnight: SAP and EDEN ~10-21, IQV and SFM late Oct, GSK 10-28, FLUT 11-12.
+  - Data: Turso is missing 10-19 UK/EU bars. If the 10-21 07:17 refresh doesn't backfill them, check_data_quality.py
+    should flag them.
 
 NEXT ACTIONS
-  1. LULU reassessment is due 10-20. Check Monday's and Tuesday's closes against the $88.54 trim trigger, and
-     decide whether to extend the patience window or cut 9 sh.
-  2. Optional entries, max two given €1,895 cash: MEGP at ~121p (stop 113.3p, €1,000), MONY limit 195p (stop
-     184.2p, €750), CF on a close above $123.50 (stop $115.25, €1,000). Approve or reject in the Pending Trade
-     Ideas panel.
-  3. SAP Q3 ~10-21 (tbc): consider the 5-share free-ride sale into strength if RSI pushes above 70.
-  4. KLR: a Monday close with RSI below 40 flips it to a mechanical Exit. It's free-ridden, so selling all 10 sh
-     (~€363) is a profit-taking call.
-  5. GSK earnings 10-28. Keep the stop near 1,766p.
-  6. Fill in the NBIS put's strike, expiry and type in Turso so options_pricing.py can mark it.
+  1. ERO: decide between a full exit (~€878 proceeds, −€51 realized) and a hard stop at $31.50 with a reassessment ~10-27.
+  2. ACN: consider the 4-share free-ride sale (~€856 gross, ~€790 net) while RSI is 76. It leaves 2 free shares.
+  3. SAP Q3 ~10-21 (tbc): decide before the print whether to take the 5-share free ride.
+  4. Optional entries: MEGP at ~119p (stop 111.3p, €1,000), NEM at ~$117 (stop $111.88, €1,000), MONY limit 195p
+     (stop 184.2p, €750). Approve or reject in the Pending Trade Ideas panel. Funding two depends on the ERO decision.
+  5. LULU: patience window extended to ~11-03. Trim 9 shares only on a close below $88.54.
+  6. GSK earnings 10-28. Keep the stop near 1,766p.
+  7. Fill in the NBIS put's strike, expiry and type in Turso so options_pricing.py can mark it.
 ════════════════════════════════════════════════════════
