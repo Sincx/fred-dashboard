@@ -1,18 +1,18 @@
 {
-    "taskId": "clippings-sorter",
-    "label": "Clippings Sorter",
-    "schedule": "Daily 11:18 PM",
-    "icon": "ðŸ“Ž",
-    "runs": [
-        {
-            "runAt": "2026-10-19T23:23:52.921882+02:00",
-            "summary": "3 clippings processed, 1 duplicate (all Burry)",
-            "content": "- Trading Post Sep 28, 2026 → duplicate of raw/finance (deleted from Clippings); un-ingested raw copy now has wiki page finance/investor-letters/source-burry-trading-post-2026-09-28\n- Trading Post Oct 5, 2026 → finance; wiki: finance/investor-letters/source-burry-trading-post-2026-10-05\n- Fannie/Freddie, HK stocks & Consolidating a Big Short (Oct 11) → finance; wiki: finance/investor-letters/source-burry-trading-post-2026-10-11\n- Foundations: Performance in the Next Bear Market & the Caldera (Oct 17) → finance; wiki: finance/investor-letters/source-burry-foundations-bear-market-caldera-2026-10-17\n- Burry watchlist: new DECK, QXO, ERO, BYD, Haidilao/Haier longs; MET + SMH/NDX puts; FNMA/FMCC common → junior preferreds\n- Pipeline config: MET, DECK, QXO, ERO added to Burry group"
-        },
-        {
-            "runAt": "2026-10-18T23:19:40.3710929+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
-        }
-    ]
+    "taskId":  "clippings-sorter",
+    "label":  "Clippings Sorter",
+    "schedule":  "Daily 11:18 PM",
+    "icon":  "ðŸ“Ž",
+    "runs":  [
+                 {
+                     "runAt":  "2026-10-20T23:19:06.0230543+02:00",
+                     "summary":  "No new clippings",
+                     "content":  "Clippings folder empty."
+                 },
+                 {
+                     "runAt":  "2026-10-19T23:23:52.921882+02:00",
+                     "summary":  "3 clippings processed, 1 duplicate (all Burry)",
+                     "content":  "- Trading Post Sep 28, 2026 → duplicate of raw/finance (deleted from Clippings); un-ingested raw copy now has wiki page finance/investor-letters/source-burry-trading-post-2026-09-28\n- Trading Post Oct 5, 2026 → finance; wiki: finance/investor-letters/source-burry-trading-post-2026-10-05\n- Fannie/Freddie, HK stocks \u0026 Consolidating a Big Short (Oct 11) → finance; wiki: finance/investor-letters/source-burry-trading-post-2026-10-11\n- Foundations: Performance in the Next Bear Market \u0026 the Caldera (Oct 17) → finance; wiki: finance/investor-letters/source-burry-foundations-bear-market-caldera-2026-10-17\n- Burry watchlist: new DECK, QXO, ERO, BYD, Haidilao/Haier longs; MET + SMH/NDX puts; FNMA/FMCC common → junior preferreds\n- Pipeline config: MET, DECK, QXO, ERO added to Burry group"
+                 }
+             ]
 }
