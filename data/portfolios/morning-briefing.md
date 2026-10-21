@@ -10,10 +10,14 @@ at this morning's 07:17 refresh. So every figure below uses a direct yfinance pu
 RSI(14), SMA50 and MACD recomputed from that data. ACN uses the Xetra CSA.DE listing and ZOE uses ZOE.DE. The wiki
 price cells (synced from Turso) will lag this briefing until the UK/EU bars land.
 Turso check: no new trades or cash_ledger entries for trading-portfolio since 10-01.
-Data quality: check_data_quality.py was started in the background and hadn't printed anything when this was written,
-which is the known slow-start pattern. Known failures that affect holdings: ACN and ZOE fundamentals have no
-sa_prefix (hence no MF#), QXO-PB has no fundamentals, and the NBIS option_mark row is missing strike, expiry and
-type, so it needs a manual Turso fix.
+Data quality (check_data_quality.py, finished after the first write): 607 auto-recovered and 230 still failing.
+The missing UK/EU technicals for holdings and candidates were recovered automatically via yfinance: GSK, REL, KLR,
+SAP, EDEN, WKL, PRX, ZOE, QXO-PB, MEGP, MONY and NEM. So Turso should now match the 10-20 figures used here.
+The failures relevant to holdings are all known, repeated ones:
+  - ACN and ZOE fundamentals: no sa_prefix, 11 consecutive failures (hence no MF#).
+  - QXO-PB fundamentals: no data from any source, 11 consecutive failures.
+  - NBIS option_mark: missing strike, expiry and option type, 39 consecutive failures. This needs a manual Turso fix.
+No other STILL FAILING ticker is a holding or one of today's candidates.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
