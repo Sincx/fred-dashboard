@@ -5,14 +5,14 @@
   "icon": "🔎",
   "runs": [
     {
+      "runAt": "2026-10-21T09:12:38.6975555+02:00",
+      "summary": "2 auto-added (1 is a false match), 5 pending review",
+      "content": "Scanned 36 wiki pages changed since 2026-10-17, mainly the 10-19 Burry Trading Post ingest, the MCK/ZTS paper trades and cross-domain themes. Auto-added BYD (BYDDF, OTC); MFI was also auto-added by a fuzzy SEC match on ME Group International, but that is the wrong company (MEGP is already tracked as UK) and needs deactivating. 15 others incl. MET, DECK, QXO, ERO, ARES and CF were already tracked; Haidilao, Haier, Meituan, Temple & Webster and Freddie Mac went to pending review."
+    },
+    {
       "runAt": "2026-10-17T16:12:17.3043178+02:00",
       "summary": "3 auto-added, 10 pending review",
       "content": "Scanned 36 wiki pages changed since 2026-10-07 (the 10-14 run was missed): Clapham/Guardian/Citrini sources, Dividend Talk ep 309, the China AI cloud data page, new paper trades and cross-domain themes. Auto-added Baidu (BIDU), GameStop (GME) and SoftBank Group (SFTBF, OTC line) via SEC matches; 10 others incl. Berkshire, Alibaba, AST SpaceMobile and EOG were already tracked. Edenred, Partners Group, Air Liquide, Seraphim Space, Cambricon, SMIC, Tencent, Mettler-Toledo (SEC name miss), Fresnillo and Fairfax went to pending review."
-    },
-    {
-      "runAt": "2026-10-07T09:11:59.4770719+02:00",
-      "summary": "1 auto-added, 5 pending review",
-      "content": "Scanned 39 wiki pages changed since 2026-09-30 (mostly Finance trading, paper-trading and spinoff pages, the cross-domain themes file, and new podcast pages). Auto-added Voya Financial (VOYA), which is facing a TOMS Capital no-confidence vote on Nov 24. Target, Carnival and Universal Health Services were already tracked. H.B. Fuller (the SEC name didn't match), Intertek, Bayer, Auto Trader and the pre-IPO CXMT went to pending review."
     }
   ]
 }
