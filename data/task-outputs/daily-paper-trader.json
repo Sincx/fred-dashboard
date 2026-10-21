@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-21T23:39:13.223212+02:00",
+      "summary": "ELV (D)",
+      "picks": {
+        "p1": {
+          "ticker": "ELV",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 434.13,
+          "stop": 369.01,
+          "t1": 542.66,
+          "t2": 651.2
+        }
+      },
+      "content": "Elevance was bought on its Q3 beat-and-raise (adj. EPS $6.99 vs ~$4.70, FY26 guide ≥$29, ≥12% 2027 growth) at ~15x forward after a 1.4% dip on the print; managed care aligns with Burry's longs. BBW was exited as a capacity trim at $23.36 (−8.68%, −$87; weakest position, below its 52-week low). No stop/T1/T2 triggers. Turso CLI writes worked; 3 raw-SQL fixes (COP T1, MCK/AMAT dates) are still blocked. Portfolio net P&L: +$2,541 (+3.14% on $81,000)."
+    },
+    {
       "runAt": "2026-10-20T23:40:49.2451757+02:00",
       "summary": "ZTS (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Zoetis was bought at ~13x trailing earnings (vs a ~30x history) after a 45% fall; it is basing above its 52-week low with ~$2B FCF and a 2.7% yield, and is a direct Burry long (Q3 report 11-05). GEV was exited as a capacity trim at $890.33 (−8.18%, −$82; weakest position). No stop/T1/T2 triggers. Turso CLI writes worked and cleared most of the 10-19 backlog; 3 raw-SQL fixes (COP T1, MCK/AMAT dates) are still blocked. Portfolio net P&L: +$2,543 (+3.18% on $80,000)."
-    },
-    {
-      "runAt": "2026-10-19T23:40:05.6238927+02:00",
-      "summary": "MCK (B)",
-      "picks": {
-        "p1": {
-          "ticker": "MCK",
-          "strategy": "B — Momentum",
-          "entry": 1010.43,
-          "stop": 858.87,
-          "t1": 1263.04,
-          "t2": 1515.65
-        }
-      },
-      "content": "McKesson was bought at a new 52-week high (+21.9% over 3 months) on a fiscal Q1 beat, FY27 EPS guidance of $44.20–45.00 and a CVS distribution deal in principle; it is defensive healthcare momentum outside Burry's NDX/SMH shorts. COP hit T1 at $145.24 (+26.25%, 1/3 sold for ~$421). AMAT's final third was exited at $413.11 for a blended +25.49% (+$255), after Burry's SMH puts and a missed 10-16 sector-warning breach. Turso writes are pending (blocked this run). Portfolio net P&L: +$2,147 (+2.72% on $79,000)."
     }
   ]
 }
