@@ -5,14 +5,14 @@
     "icon":  "🗂️",
     "runs":  [
                  {
+                     "runAt":  "2026-10-21T23:54:15.5576767+02:00",
+                     "summary":  "Memory index updated - 0 new pages, 1 new open thread, 4 threads refreshed",
+                     "content":  "- Last updated -\u003e 2026-10-21; Meta row now 84 wiki-thinker runs\n- Briefing thread replaced with 10-21 state: net ~EUR 20,782 on direct 10-21 closes; ERO + QXO-PB (new) exits await Fred; SAP/ACN free rides; EDEN to Watch (-9.5%); new pending ideas AUTO, TRN\n- Paper-trader thread refreshed: ELV opened (Strategy D), BBW capacity-trimmed; raw-SQL fixes blocked 3rd day; MCK date bug confirmed (select-strategy misread B); capital-check printed nothing\n- New thread: wiki-company-scanner false-positive MFI auto-add (fix SQL noted); BYD added; 5 names to pending-watchlist-additions\n- GAW thread corrected (core-hobby sales, not licensing); BBW thread notes 10-21 paper exit"
+                 },
+                 {
                      "runAt":  "2026-10-20T23:53:58.4632052+02:00",
                      "summary":  "Memory index updated - 0 new pages, 1 new open thread, 2 threads refreshed",
                      "content":  "- Last updated -\u003e 2026-10-20; Meta row now 83 wiki-thinker runs\n- Briefing thread replaced with 10-20 state: net ~EUR 20,939 on 10-20 yfinance closes (Turso UK/EU prices stuck on 10-16); ERO Exit (new), ADBE Watch-\u003eHold, ACN free ride newly eligible, LULU patience to ~11-03; candidates MEGP/NEM/MONY\n- Paper-trader thread refreshed: CLI writes now work (AMAT/MCK/GEV/ZTS landed); 3 raw-SQL fixes still blocked (COP T1 shares, MCK date, AMAT exit_date)\n- New thread: clip Burry\u0027s unclipped \u0027AI Cloud Oligopoly, Stages of Grief\u0027 piece; PRX/Tencent AI test for the patience override"
-                 },
-                 {
-                     "runAt":  "2026-10-19T23:53:56.4571051+02:00",
-                     "summary":  "Memory index updated — 4 new source pages noted, 3 new open threads, 1 resolved, 3 threads refreshed",
-                     "content":  "- Last updated → 2026-10-19; Meta row now 82 wiki-thinker runs (added 10-19 CF Industries cyclical-trap highlight)\n- Finance row: Burry batch (4 new investor-letters source pages, Burry pipeline rows 178-209 with MET/DECK/QXO/ERO) and paper trade 10-19 (MCK entry, COP T1, AMAT exit)\n- Resolved: sector-tracker P/E freeze (values moved again; only the XLV 25.0→32.8x jump left to confirm)\n- Scheduler gap thread: paper-trader, clippings-sorter and Mon trackers back 10-19; only email-to-clipping unconfirmed\n- Briefing thread replaced with 10-19 state (net ≈€21,033, still 10-16 prices, MEGP/CF/MONY pending); yfinance MCP still down 10-19\n- New threads: Turso writes blocked for 10-19 paper trades (commands in log.md); BURRY_POSITIONS MU/NBIS/NVDA/CRWV direction review; CF Industries EPS/Hormuz check before approval"
                  }
              ]
 }
