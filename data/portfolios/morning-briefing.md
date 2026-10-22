@@ -11,7 +11,8 @@ fetch failed, so GBp rows came back with no EUR value. Every figure below theref
 **Wed 10-21 closes** for all holdings, with RSI(14), SMA50, MACD and ATR recomputed. ACN uses Xetra CSA.DE and ZOE
 uses ZOE.DE. The wiki price cells (synced from Turso) will lag this briefing by a day.
 Data quality: check_data_quality.py was started in the background at the start of this run and hadn't finished
-when the briefing was written (it took ~17h on 10-06/07). Known repeat failures from yesterday still apply:
+when the briefing was written. It finished afterwards: 299 auto-recovered and 234 still failing. The UK technicals
+for GSK, REL, KLR, MONY and AUTO were recovered via yfinance. The failures that matter for holdings are known repeats:
   - ZOE and QXO-PB fundamentals are missing (11+ consecutive failures), so they have no MF#.
   - NBIS option_mark is missing strike, expiry and option type (39+ consecutive failures). This needs a manual Turso fix.
 
