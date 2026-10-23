@@ -1,18 +1,18 @@
-{
-    "taskId": "wiki-memory-update",
-    "label": "Wiki Memory Update",
-    "schedule": "Daily 11:53 PM",
-    "icon": "🗂️",
-    "runs": [
-        {
-            "runAt": "2026-10-22T23:54:21.575+02:00",
-            "summary": "Memory index updated - 0 new pages, 2 new open threads, 4 threads refreshed",
-            "content": "- Last updated -> 2026-10-22; Meta row now 85 wiki-thinker runs\n- Podcasts row: 10-22 recommender batch (In Good Company/Tangen, ChinaTalk, The Lazarus Heist)\n- Briefing thread replaced with 10-22 state: ~EUR 21,473 (+691); ERO + EDEN full exits and PRX trim await Fred; SAP free ride; QXO-PB exit cleared; new pending idea MO\n- Paper-trader thread refreshed: PG opened (Strategy E), FRES capacity-trimmed; raw-SQL fixes blocked 4th day; capital-check working again; MRNA ESMO 10-24 watch\n- yfinance MCP outage thread: still down 10-22\n- New threads: ingest Tangen x SAP CEO interview before SAP trim; Crypto hack/exploit coverage gap (Lazarus Heist)"
-        },
-        {
-            "runAt": "2026-10-21T23:54:15.5576767+02:00",
-            "summary": "Memory index updated - 0 new pages, 1 new open thread, 4 threads refreshed",
-            "content": "- Last updated -> 2026-10-21; Meta row now 84 wiki-thinker runs\n- Briefing thread replaced with 10-21 state: net ~EUR 20,782 on direct 10-21 closes; ERO + QXO-PB (new) exits await Fred; SAP/ACN free rides; EDEN to Watch (-9.5%); new pending ideas AUTO, TRN\n- Paper-trader thread refreshed: ELV opened (Strategy D), BBW capacity-trimmed; raw-SQL fixes blocked 3rd day; MCK date bug confirmed (select-strategy misread B); capital-check printed nothing\n- New thread: wiki-company-scanner false-positive MFI auto-add (fix SQL noted); BYD added; 5 names to pending-watchlist-additions\n- GAW thread corrected (core-hobby sales, not licensing); BBW thread notes 10-21 paper exit"
-        }
-    ]
+﻿{
+    "taskId":  "wiki-memory-update",
+    "label":  "Wiki Memory Update",
+    "schedule":  "Daily 11:53 PM",
+    "icon":  "ðŸ—‚ï¸",
+    "runs":  [
+                 {
+                     "runAt":  "2026-10-23T23:54:13.8636187+02:00",
+                     "summary":  "Memory index updated — 0 new pages, 2 new open threads, 0 resolved",
+                     "content":  "- Last updated -\u003e 2026-10-23\n- Meta row: wiki-thinker run count 85 -\u003e 86 (through 10-23)\n- Cooking row: added recipe-recommender run 2026-10-23 (week of 10-26; David Chang, Nigel Slater, Anthony Bourdain)\n- Open Threads: added Finance FLUT \u0027Burry-aligned long\u0027 mislabel (Burry exited 09-11)\n- Open Threads: added Games/Sports Betting D-035 home-advantage method connection\n- No new wiki pages (only new file: paper-trading trade 2026-10-23-JNJ); no threads resolved"
+                 },
+                 {
+                     "runAt":  "2026-10-22T23:54:21.575+02:00",
+                     "summary":  "Memory index updated - 0 new pages, 2 new open threads, 4 threads refreshed",
+                     "content":  "- Last updated -\u003e 2026-10-22; Meta row now 85 wiki-thinker runs\n- Podcasts row: 10-22 recommender batch (In Good Company/Tangen, ChinaTalk, The Lazarus Heist)\n- Briefing thread replaced with 10-22 state: ~EUR 21,473 (+691); ERO + EDEN full exits and PRX trim await Fred; SAP free ride; QXO-PB exit cleared; new pending idea MO\n- Paper-trader thread refreshed: PG opened (Strategy E), FRES capacity-trimmed; raw-SQL fixes blocked 4th day; capital-check working again; MRNA ESMO 10-24 watch\n- yfinance MCP outage thread: still down 10-22\n- New threads: ingest Tangen x SAP CEO interview before SAP trim; Crypto hack/exploit coverage gap (Lazarus Heist)"
+                 }
+             ]
 }
