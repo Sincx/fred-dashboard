@@ -3,7 +3,7 @@ title: Paper Trading — Performance Analytics
 domain: finance
 type: live
 tags: [paper-trading, performance, analytics, simulation]
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 
@@ -20,9 +20,9 @@ updated: 2026-10-22
 | A — Value | 20 | 1 | 12 | 7.7% | +$172 | −$84.59 | −$843.04 |
 | B — Momentum | 18 | 1 | 8 | 11.1% | +$0.40 | −$99.12 | −$792.56 |
 | C — Volume Spike | 7 | 1 | 3 | 25% | +$72 | −$101.45 | −$232 |
-| D — Earnings Catalyst | 11 | 1 | 6 | 14.3% | +$222 | −$89.67 | −$316.02 |
+| D — Earnings Catalyst | 12 | 1 | 6 | 14.3% | +$222 | −$89.67 | −$316.02 |
 | E — Sector Rotation | 16 | 2 | 8 | 20.0% | +$218.46 | −$79.42 | −$198.36 |
-| F — Small Cap Value | 7 | 0 | 2 | 0% | — | −$75.90 | −$151.79 |
+| F — Small Cap Value | 7 | 0 | 3 | 0% | — | −$65.15 | −$195.45 |
 | G — Small Cap High Growth | 3 | 0 | 2 | 0% | — | −$190 | −$380 |
 | **Total** | **82** | **6** | **41** | **12.8%** | **+$150.55** | **−$93.11** | **−$2,914.17** |
 
@@ -34,8 +34,8 @@ updated: 2026-10-22
 
 | Exchange | Trades | Win Rate | Net P&L |
 |---|---|---|---|
-| NYSE (incl. NYSE American) | 46 | 16.0% (25 closed) | −$1,214 |
-| NASDAQ | 20 | 6.7% (15 closed) | −$1,349 |
+| NYSE (incl. NYSE American) | 47 | 16.0% (25 closed) | −$1,214 |
+| NASDAQ | 20 | 6.25% (16 closed) | −$1,393 |
 | XETRA (DAX) | 1 | 100% (1 closed) | +$182 |
 | LSE | 5 | 0% (2 closed) | −$124 |
 | Euronext Paris | 0 | — | $0 |
@@ -55,7 +55,7 @@ updated: 2026-10-22
 | July 2026 | 19 | 4 | 9 | −$656 | −$656 |
 | August 2026 | 9 | 0 | 3 | −$354 | −$354 |
 | September 2026 | 18 | 0 | 18 | −$1,503.09 | −$1,503.09 |
-| October 2026 | 12 | 2 | 10 | −$228.17 | −$228.17 |
+| October 2026 | 13 | 2 | 11 | −$271.83 | −$271.83 |
 
 ---
 
@@ -129,30 +129,33 @@ updated: 2026-10-22
 | 2026-10-20 | GEV 🔵 Discretionary exit @ $890.33 (capacity trim, >35 rule; weakest position, AI-power momentum thesis now inside Burry's AI-capex skepticism, no company-specific break) | −$82 | −$440 |
 | 2026-10-21 | BBW 🔵 Discretionary exit @ $23.36 (capacity trim, >35 rule; weakest position, closed below its $24.22 52-week low, no company news found) | −$87 | −$527 |
 | 2026-10-22 | FRES 🔵 Discretionary exit @ 2,462.00p (capacity trim, >35 rule; weakest position, −6.5% on the day in a silver/gold sell-off, no company news found) | −$84 | −$611 |
+| 2026-10-23 | ISTR 🔵 Discretionary exit @ $28.04 (capacity trim, >35 rule; weakest position after a −3.9% day, value re-rating never came in 91 days, no company news found) | −$44 | −$655 |
 
 *No realised cash event on 2026-08-06, 2026-08-08/09 (weekend), or 2026-08-11 through 2026-08-26 (17-day scheduling gap — no run; the Aug 19 Moderna trial-success spike was not realisable via T2 until this run resumed Aug 27). No realised cash event 2026-08-29/30 (weekend). No realised cash event 2026-09-05/06 (weekend) or 2026-09-07 (Labor Day). No realised cash event 2026-09-15/16/17 (3-day scheduling gap — all four local MCP servers failed to connect on this task's session, see the Strategy Breakdown footnote above). No realised cash event 2026-09-19/20 (weekend). No run on 2026-10-02 (Friday) and no realised cash event 10-03/04 (weekend). No runs on 2026-10-14/15/16 (3-day scheduling gap — task did not fire; no trades back-filled; AMAT's 10-16 signal-line breach was actioned on 10-19) and no realised cash event 10-17/18 (weekend).*
 
 ---
 
-## Open Book Snapshot (unrealised, updated 2026-10-22)
+## Open Book Snapshot (unrealised, updated 2026-10-23)
 
-*For reference only; not included in realised P&L tracking. Prices are 2026-10-22 closes (the run was after the US close) via the `yfinance` Python library (the yfinance MCP failed to connect).*
+*For reference only; not included in realised P&L tracking. Prices are 2026-10-23 closes (the run was after the US close) via the `yfinance` Python library (the yfinance MCP failed to connect).*
 
 | Ticker | Entry | Curr | P&L% | Open P&L $ | Notes |
 |---|---|---|---|---|---|
-| MRNA | $59.75 | $202.63 | +239.13% | +$797 | 🟠 T1+T2 hit; −17.6% on 10-22 after leaked melanoma-vaccine data (sell-the-news), held |
-| TNET | $45.40 | $74.62 | +64.36% | +$215 | T1+T2 hit; final 1/3 running uncapped |
-| CRWD | $165.87* | $237.94 | +43.45% | +$145 | T1+T2 hit; NDX-put overlap, WATCH |
-| CVX | $174.01 | $226.68 | +30.27% | +$202 | 🟡 T1 hit 2026-10-13; $34.34 from T2 |
-| COP | $115.04 | $145.63 | +26.59% | +$177 | 🟡 T1 hit 2026-10-19; $26.93 from T2 |
-| CMCL | $17.33 | $21.86 | +26.14% | +$87 | T1+T2 hit; −4.1% with gold on 10-22 |
-| RIGL | $40.26 | $48.86 | +21.36% | +$214 | $1.47 from T1 ($50.33) |
-| AUTO | 452.80p | 542.40p | +19.79% | +$198 | 23.6p from T1 (566.00p) |
-| RDW | $8.47 | $8.14 | −3.90% | −$13 | T1+T2 hit; weakest by P&L% (remainder tranche) |
-| WISE | 845.60p | 825.40p | −2.39% | −$24 | Weakest full-tranche position |
-| PG | $165.59 | $165.59 | 0.00% | $0 | New 2026-10-22 (E — Sector Rotation, consumer staples) |
-| **Open book total** | | | | **+$3,709** | |
+| MRNA | $59.75 | $200.10 | +234.90% | +$783 | 🟠 T1+T2 hit; full ESMO melanoma readout Sat 10-24, held |
+| TNET | $45.40 | $75.78 | +66.92% | +$223 | T1+T2 hit; final 1/3 running uncapped |
+| CRWD | $165.87* | $257.57 | +55.28% | +$184 | T1+T2 hit; +8.2% on 10-23; NDX-put overlap, WATCH |
+| CVX | $174.01 | $233.21 | +34.02% | +$227 | 🟡 T1 hit 2026-10-13; $27.81 from T2 |
+| COP | $115.04 | $150.80 | +31.08% | +$207 | 🟡 T1 hit 2026-10-19; $21.76 from T2 |
+| CMCL | $17.33 | $21.26 | +22.68% | +$76 | T1+T2 hit |
+| AUTO | 452.80p | 542.20p | +19.74% | +$197 | 23.8p from T1 (566.00p) |
+| RIGL | $40.26 | $48.13 | +19.55% | +$195 | $2.20 from T1 ($50.33) |
+| PG | $165.59 | $161.02 | −2.76% | −$28 | Weakest by P&L% (2 days old) |
+| WISE | 845.60p | 824.40p | −2.51% | −$25 | |
+| TGT | $156.70 | $152.76 | −2.51% | −$25 | |
+| JNJ | $263.81 | $263.81 | 0.00% | $0 | New 2026-10-23 (D — Earnings Catalyst, pharma/medtech) |
+| **Open book total** | | | | **+$3,489** | |
 
+*2026-10-23: No stop/T1/T2 triggers. ISTR (−4.37%, −$43.66) was exited via a Step 3F capacity trim when JNJ's entry would have made 36 open. It was the weakest position after a −3.9% day on 1.6x volume; no company news was found. JNJ entered under Strategy D (Q3 beat and FY26 guidance raise, 10-13). AT&T was rejected as a falling knife (−8.0% on 10-23 after −6.4% on its report day). The three Turso fixes pending since 10-19 (COP T1, MCK date, AMAT exit date) went through and were verified. Open book +$3,489; net P&L +$2,371 (+2.86%).*
 *2026-10-22: No stop/T1/T2 triggers. FRES (−8.44%, −$84.42) was exited via a Step 3F capacity trim when PG's entry would have made 36 open. It was the weakest position after a 6.5% one-day fall as silver fell 4.9% and gold 2.7%; no company news was found. PG added (Strategy E, Sector Rotation): staples led a defensive rotation out of AI and semis (XLP +3.3%, XLK −3.3%, SOX −5.6%), and P&G's FY27 Q1 showed +4% organic growth led by volume, with guidance maintained. MRNA fell 17.6% after its melanoma-vaccine data leaked ahead of ESMO; it was held. Open cost basis $31,000 = €27,624.11 @ 1.12221, €2,375.89 headroom. Net P&L +$2,635 (+3.21%).*
 *2026-10-21: No stop/T1/T2 triggers. BBW (−8.68%, −$86.79) was exited via a Step 3F capacity trim when ELV's entry would have made 36 open. It was the weakest position, and it closed below the $24.22 52-week low its value entry leaned on; no company news was found. ELV added (Strategy D, Earnings Catalyst): Elevance's Q3 adjusted EPS of $6.99 beat ~$4.70, with FY26 guidance raised to ≥$29 and ≥12% 2027 growth. It trades at ~15x forward and fell 1.4% on the print. A (ZTS) was excluded by hand as the prior day's strategy, because Turso still misreads B as yesterday (MCK date fix pending). Open cost basis $31,000 = €27,589.89 @ 1.12360, €2,410.11 headroom. Net P&L +$2,541 (+3.14%).*
 *2026-10-20: No stop/T1/T2 triggers. GEV (−8.18%, −$81.82) was exited via a Step 3F capacity trim when ZTS's entry would have made 36 open. It was the weakest position, and its AI-data-centre power thesis now sits inside Burry's AI-capex skepticism; no company-specific break. ZTS added (Strategy A, Value): Zoetis at ~13x trailing earnings after a 45% fall, a direct Burry long; Q3 report 11-05. B (MCK) excluded as the prior day's strategy; Turso reported D because the MCK record had not yet been written. Open cost basis $31,000 = €27,577.59 @ 1.12410, €2,422.41 headroom.*

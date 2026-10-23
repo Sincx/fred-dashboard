@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-23T23:41:47.7753496+02:00",
+      "summary": "JNJ (D)",
+      "picks": {
+        "p1": {
+          "ticker": "JNJ",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 263.81,
+          "stop": 224.24,
+          "t1": 329.76,
+          "t2": 395.72
+        }
+      },
+      "content": "Johnson & Johnson was bought on its Q3 beat-and-raise (adj. EPS $2.59 vs $2.53, FY26 guidance raised on Tremfya +68% and Darzalex +15%) while flat over 3 months at ~23x forward; ISTR was exited as a capacity trim at $28.04 (−4.37%, −$44), and portfolio net P&L is +$2,371 (+2.86% on $83,000)."
+    },
+    {
       "runAt": "2026-10-22T23:41:05.6672612+02:00",
       "summary": "PG (E)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Consumer staples led a defensive rotation out of AI and semiconductors on 10-22, and P&G's FY27 Q1 delivered volume-led +4% organic growth across all categories with guidance maintained, at ~22x forward earnings."
-    },
-    {
-      "runAt": "2026-10-21T23:39:13.223212+02:00",
-      "summary": "ELV (D)",
-      "picks": {
-        "p1": {
-          "ticker": "ELV",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 434.13,
-          "stop": 369.01,
-          "t1": 542.66,
-          "t2": 651.2
-        }
-      },
-      "content": "Elevance was bought on its Q3 beat-and-raise (adj. EPS $6.99 vs ~$4.70, FY26 guide ≥$29, ≥12% 2027 growth) at ~15x forward after a 1.4% dip on the print; managed care aligns with Burry's longs. BBW was exited as a capacity trim at $23.36 (−8.68%, −$87; weakest position, below its 52-week low). No stop/T1/T2 triggers. Turso CLI writes worked; 3 raw-SQL fixes (COP T1, MCK/AMAT dates) are still blocked. Portfolio net P&L: +$2,541 (+3.14% on $81,000)."
     }
   ]
 }
