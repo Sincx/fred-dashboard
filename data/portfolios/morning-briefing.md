@@ -10,10 +10,13 @@ Price source: Turso still holds prior-session closes (10-21 for most rows; KLR/R
 GBPUSD fetch worked this time, so all rows have EUR values. Every figure below uses a direct yfinance pull of
 **Thu 10-22 closes** for all holdings, with RSI(14), SMA50, MACD and ATR recomputed. ACN uses Xetra CSA.DE and ZOE
 uses ZOE.DE. The wiki price cells (synced from Turso) lag this briefing by a session.
-Data quality: check_data_quality.py was started in the background at the start of this run and had produced no
-output by the time this briefing was written (the usual pattern). Known gaps for holdings carry over from 10-21:
-  - ZOE, EDEN, FLUT and QXO-PB have no MF# (no fundamentals in the tracked universe).
-  - NBIS put: the Turso row still lacks strike, expiry and option type, so it's marked by hand below.
+Data quality: check_data_quality.py finished after the briefing was first written: 595 auto-recovered and 233 still
+failing (230 need manual review). For holdings, the UK/EU technicals (GSK, REL, KLR, SAP, EDEN, WKL, PRX, ZOE) and
+QXO-PB were recovered via yfinance, as were candidates MONY, TRN and AUTO. The still-failing holdings are known repeats:
+  - ACN and ZOE (EU) fundamentals fail with "no sa_prefix" (13 consecutive failures), and QXO-PB fundamentals have no
+    data from any source (13). ACN's MF# above comes from the NYSE listing.
+  - NBIS option_mark is missing its underlying price, yahoo_ticker and strike (44 consecutive failures), so the NBIS
+    put is still marked by hand below. This needs a manual Turso fix.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
