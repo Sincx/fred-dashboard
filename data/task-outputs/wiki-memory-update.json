@@ -5,14 +5,14 @@
     "icon":  "ðŸ—‚ï¸",
     "runs":  [
                  {
+                     "runAt":  "2026-10-24T23:54:38.9134120+02:00",
+                     "summary":  "Memory index updated — 7 new pages, 2 new open threads, 1 thread resolved",
+                     "content":  "- Last updated -\u003e 2026-10-24\n- Meta row: wiki-thinker run count 86 -\u003e 87 (through 10-24)\n- Podcasts row: added 7 podcast-summarizer pages from 10-24 (Carlisle, Roepers, Sanchez, Claude loops, Dividend Talk ep310, Odd Lots France, Austin Tice 5-9)\n- Crypto row: added portfolio refresh 10-24 (5 updated, $TEST unavailable, LINK -3.62%)\n- Open Threads: paper-trader thread refreshed to 10-23 (raw-SQL block resolved, JNJ entry, ISTR exit, 35 open)\n- Open Threads: added scheduled-task prompts lack version control (wiki-thinker)\n- Open Threads: added Carlisle Magic Formula/EV-EBIT re-rank test for Strategy A (wiki-thinker)"
+                 },
+                 {
                      "runAt":  "2026-10-23T23:54:13.8636187+02:00",
                      "summary":  "Memory index updated — 0 new pages, 2 new open threads, 0 resolved",
                      "content":  "- Last updated -\u003e 2026-10-23\n- Meta row: wiki-thinker run count 85 -\u003e 86 (through 10-23)\n- Cooking row: added recipe-recommender run 2026-10-23 (week of 10-26; David Chang, Nigel Slater, Anthony Bourdain)\n- Open Threads: added Finance FLUT \u0027Burry-aligned long\u0027 mislabel (Burry exited 09-11)\n- Open Threads: added Games/Sports Betting D-035 home-advantage method connection\n- No new wiki pages (only new file: paper-trading trade 2026-10-23-JNJ); no threads resolved"
-                 },
-                 {
-                     "runAt":  "2026-10-22T23:54:21.575+02:00",
-                     "summary":  "Memory index updated - 0 new pages, 2 new open threads, 4 threads refreshed",
-                     "content":  "- Last updated -\u003e 2026-10-22; Meta row now 85 wiki-thinker runs\n- Podcasts row: 10-22 recommender batch (In Good Company/Tangen, ChinaTalk, The Lazarus Heist)\n- Briefing thread replaced with 10-22 state: ~EUR 21,473 (+691); ERO + EDEN full exits and PRX trim await Fred; SAP free ride; QXO-PB exit cleared; new pending idea MO\n- Paper-trader thread refreshed: PG opened (Strategy E), FRES capacity-trimmed; raw-SQL fixes blocked 4th day; capital-check working again; MRNA ESMO 10-24 watch\n- yfinance MCP outage thread: still down 10-22\n- New threads: ingest Tangen x SAP CEO interview before SAP trim; Crypto hack/exploit coverage gap (Lazarus Heist)"
                  }
              ]
 }
