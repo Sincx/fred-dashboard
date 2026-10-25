@@ -5,12 +5,12 @@
     "icon": "ðŸ“Ž",
     "runs": [
         {
-            "runAt": "2026-10-24T23:19:43+02:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
+            "runAt": "2026-10-25T23:28:42.5260288+01:00",
+            "summary": "9 clippings processed (3 duplicates removed)",
+            "content": "12 clippings found: 9 processed, 3 duplicates deleted (Burry AP SBC Recurrence, Big Short Squeeze, SW50 Part II, all already ingested).\n- finance: source-burry-foundations-my-1999-2025-11-24 (Burry 1999 memoir; VSN Fund +68.1%, short AMZN before the top)\n- finance: source-burry-foundations-tragic-algebra-sbc-2025-12-01 (original SBC piece; NVDA owners' earnings ~50% of Wall Street's)\n- finance: source-morningstar-best-ai-stocks-2026-10-20 (12 AI picks; NVDA FV $310, ANET $230, AVGO 49% discount, MSFT cut to 4 stars)\n- finance: source-morningstar-hedge-ai-trade-2026-10-21 (5 ways to hedge AI concentration)\n- finance: source-morningstar-coreweave-debt-neocloud-ipo-2026-10-22 (CRWV bonds ~16% yield after the Elice IPO flop)\n- finance: source-morningstar-bmy-dividend-stock-2026-10-22 (BMY FV $70, 4 stars, wide moat, 4.1% yield)\n- finance: source-morningstar-lhx-lnt-undervalued-growth-2026-10-23 (L3Harris 27% and Alliant Energy 11% discount)\n- finance: source-morningstar-bloom-energy-q3-earnings-2026-10-23 (2 stars, FV under review; not added)\n- finance: source-morningstar-swedroe-valuation-spreads-2026-10-23 (US value spread at the 80th percentile)\nWatchlist: 8 new (MRVL, TCEHY, BABA, ORCL, ADBE, BMY, LHX, LNT), 7 updated. Pipeline config: MRVL/TCEHY/LHX/LNT added to Morningstar-US; Burry start_row 178 to 182. Conflict: Morningstar 4-star ORCL vs Fred's live ORCL short."
         },
         {
-            "runAt": "2026-10-23T23:19:43.9798760+02:00",
+            "runAt": "2026-10-24T23:19:43+02:00",
             "summary": "No new clippings",
             "content": "Clippings folder empty."
         }
