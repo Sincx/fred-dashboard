@@ -5,14 +5,14 @@
     "icon":  "ðŸ—‚ï¸",
     "runs":  [
                  {
+                     "runAt":  "2026-10-25T23:54:21.8343938+01:00",
+                     "summary":  "Memory index updated — 9 new pages, 3 new open threads, 0 resolved",
+                     "content":  "- Last updated -\u003e 2026-10-25\n- Meta row: wiki-thinker run count 87 -\u003e 88 (through 10-25)\n- Finance row: added 10-25 clippings batch (7 Morningstar + 2 Burry Foundations source pages), watchlist +8 rows, pipeline Burry group now rows 182-213\n- Open Threads: briefing thread refreshed to 10-25 (ERO/EDEN/PRX exits awaiting Fred, ~EUR21,161, technicals stale 41h)\n- Open Threads: added ORCL Morningstar 4-star vs ORCL short conflict + TCEHY OTC pricing check (clippings-sorter)\n- Open Threads: added EDEN Q3 release explains the -9.5% drop, test \"priced in\" thesis (wiki-thinker)\n- Open Threads: added Cooking has no cooked/feedback log (wiki-thinker)\n- Open Threads: cyclical-guard thread updated with 10-25 strategy-feedback (FRES -8.4%, recommended-trades 0/8, new proposal)\n- No threads resolved"
+                 },
+                 {
                      "runAt":  "2026-10-24T23:54:38.9134120+02:00",
                      "summary":  "Memory index updated — 7 new pages, 2 new open threads, 1 thread resolved",
                      "content":  "- Last updated -\u003e 2026-10-24\n- Meta row: wiki-thinker run count 86 -\u003e 87 (through 10-24)\n- Podcasts row: added 7 podcast-summarizer pages from 10-24 (Carlisle, Roepers, Sanchez, Claude loops, Dividend Talk ep310, Odd Lots France, Austin Tice 5-9)\n- Crypto row: added portfolio refresh 10-24 (5 updated, $TEST unavailable, LINK -3.62%)\n- Open Threads: paper-trader thread refreshed to 10-23 (raw-SQL block resolved, JNJ entry, ISTR exit, 35 open)\n- Open Threads: added scheduled-task prompts lack version control (wiki-thinker)\n- Open Threads: added Carlisle Magic Formula/EV-EBIT re-rank test for Strategy A (wiki-thinker)"
-                 },
-                 {
-                     "runAt":  "2026-10-23T23:54:13.8636187+02:00",
-                     "summary":  "Memory index updated — 0 new pages, 2 new open threads, 0 resolved",
-                     "content":  "- Last updated -\u003e 2026-10-23\n- Meta row: wiki-thinker run count 85 -\u003e 86 (through 10-23)\n- Cooking row: added recipe-recommender run 2026-10-23 (week of 10-26; David Chang, Nigel Slater, Anthony Bourdain)\n- Open Threads: added Finance FLUT \u0027Burry-aligned long\u0027 mislabel (Burry exited 09-11)\n- Open Threads: added Games/Sports Betting D-035 home-advantage method connection\n- No new wiki pages (only new file: paper-trading trade 2026-10-23-JNJ); no threads resolved"
                  }
              ]
 }
