@@ -5,14 +5,14 @@
     "icon": "📊",
     "runs": [
         {
+            "runAt": "2026-10-26T09:05:21.6965422+01:00",
+            "summary": "Data through Oct 23 (all 7 ETFs). YTD leaders: IWD +23.7%, IWN +18.8%. Growth/value spread: -2234 bps (value leads), widened 238 bps from -1996 bps - new 2026 high.",
+            "content": "YTD 2026 (through Oct 23, compounded Q1 x Q2 x Q3 x Q4-partial from yfinance via etf_returns.py): IWD +23.7%, IWN +18.8%, QQQ +15.1%, IVE +13.6%, IWM +12.8%, SPY +12.3%, IWF +1.4%. Growth vs value spread: IWD +23.7% vs IWF +1.4% -> value leads by 2234 bps, up from 1996 bps -- new 2026 high, above Aug 26 (2060); ~890 bps of widening in two weeks. Notable: broad rotation -- growth slid further (IWF -1.5pp, QQQ -0.8pp) while value rose (IWD +0.8pp, IVE +1.3pp) and small caps rebounded (IWN +2.4pp largest mover, IWM +2.2pp). SPY Q4 partial turned negative (-0.4%). IWD holds YTD lead by 4.9pp. QQQ-IWF gap widened to 1370 bps from 1300."
+        },
+        {
             "runAt": "2026-10-19T09:05:44.8997060+02:00",
             "summary": "Data through Oct 16 (all 7 ETFs). YTD leaders: IWD +22.9%, IWN +16.4%. Growth/value spread: -1996 bps (value leads), widened 653 bps from -1343 bps on Oct 9 - largest one-week move of the series.",
             "content": "YTD 2026 (through Oct 16, compounded Q1 x Q2 x Q3 x Q4-partial from yfinance via etf_returns.py): IWD +22.9%, IWN +16.4%, QQQ +15.9%, SPY +12.8%, IVE +12.3%, IWM +10.6%, IWF +2.9%. Growth vs value spread: IWD +22.9% vs IWF +2.9% -> value leads by 1996 bps, up from 1343 bps -- record +653 bps weekly widening; third-widest reading of 2026 (behind Aug 26 2060, Jul 31 2038). Notable: sharp growth selloff -- QQQ largest mover (Q4 partial +1.6% -> -4.1%, YTD -6.8pp), IWF -5.5pp; IWD/IVE kept rising (Q4 +3.2% each). SPY's Q4 gains erased. Small caps down again (IWM -3.5pp, IWN -1.2pp). IWD retakes YTD lead; QQQ drops to 3rd. QQQ-IWF gap narrowed to 1300 bps from 1431."
-        },
-        {
-            "runAt": "2026-10-12T09:05:01.9588435+02:00",
-            "summary": "Data through Oct 9 (all 7 ETFs). YTD leaders: QQQ +22.7%, IWD +21.8%. Growth/value spread: -1343 bps (value leads), widened 128 bps from -1215 bps on Oct 2 - first widening in four weeks.",
-            "content": "YTD 2026 (through Oct 9, compounded Q1 x Q2 x Q3 x Q4-partial from yfinance via etf_returns.py): QQQ +22.7%, IWD +21.8%, IWN +17.6%, SPY +15.1%, IWM +14.1%, IVE +11.2%, IWF +8.4%. Growth vs value spread: IWD +21.8% vs IWF +8.4% -> value leads by 1343 bps, up from 1215 bps -- ends the three-week compression streak (Sep 18-Oct 2). Notable: large-cap value rebound -- IWD largest weekly mover (YTD +2.0pp, Q4 partial +2.3%), IVE +1.7pp. Growth up modestly (IWF +0.7pp, QQQ +0.3pp). Small caps the only decliners (IWM -1.1pp, IWN -0.8pp). QQQ lead over IWD shrank to 0.9pp from 2.6pp. QQQ-IWF gap eased to 1431 bps from 1477."
         }
     ]
 }
