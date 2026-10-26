@@ -13,9 +13,14 @@ Health warning impact: this is a weekend, so the stale flags mostly mean refresh
 morning. Turso already holds Fri 10-23 closes for US/EU, but UK rows (KLR, GSK, REL) are still on Thu 10-22.
 Every figure below uses a direct yfinance pull of **Fri 10-23 closes** for all holdings, with RSI(14), SMA50, MACD
 and ATR recomputed (ACN via Xetra CSA.DE, ZOE via ZOE.DE). Options are re-marked by hand (Black-Scholes, r 4%).
-Data quality: check_data_quality.py was started in the background and had printed nothing by the time this was
-written (the same zero-output behaviour as previous runs). The known repeats from 10-22 still apply: ACN/ZOE EU
-fundamentals ("no sa_prefix"), QXO-PB fundamentals (no source), and the NBIS option row missing strike/expiry/type.
+Data quality (check_data_quality.py finished after the first write): 601 rows auto-recovered and 258 still failing.
+For holdings, the UK/EU technicals (GSK, REL, KLR, SAP, EDEN, WKL, PRX, ZOE) and candidate AUTO were recovered via
+yfinance. These holdings are still failing:
+  - Known repeats, now 14 consecutive failures each: ACN and ZOE EU fundamentals ("no sa_prefix") and QXO-PB
+    fundamentals (no data from any source).
+  - The NBIS option_mark row is missing strike, expiry and type (49 consecutive failures). It needs a manual Turso fix.
+  - New: "filings" rows for BIRK, ERO, SAP and RELX (plus other foreign ADRs such as NVO) fail. This looks like the new
+    Phase 17 SEC filings step not handling foreign filers. It doesn't affect any figure in this briefing.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
