@@ -10,9 +10,13 @@ Prices: Turso has Mon 10-26 rows only for EU names, and some of those are intrad
 US and UK rows are still Fri 10-23, because refresh-technicals runs at 07:17. Every figure below uses a direct yfinance pull
 of **Mon 10-26 closes** for all holdings, with RSI(14), SMA50, MACD and ATR recomputed (ACN via Xetra CSA.DE, ZOE via
 ZOE.DE). Options are re-marked by hand (Black-Scholes, r 4%).
-Data quality: check_data_quality.py was started this run but hadn't produced output when this was written. Last known
-state (10-25): ACN and ZOE EU fundamentals, QXO-PB fundamentals and the NBIS option_mark row still fail. Foreign-filer
-"filings" rows (BIRK, ERO, SAP, RELX) also fail. None of these changes a figure here.
+Data quality (check_data_quality.py finished after the first write): ~255 rows still failing, ~231 of them at 3+
+consecutive failures (mostly non-held UK technicals such as IGGI, INDV, INP, MRW and NGG). For holdings, every
+technicals row is fine. These holdings are still failing, all known repeats:
+  - ACN and ZOE EU fundamentals ("no sa_prefix") and QXO-PB fundamentals (no data from any source).
+  - The NBIS option_mark row (missing strike/underlying). It needs a manual Turso fix.
+  - Foreign-filer "filings" rows for BIRK, ERO, SAP and RELX (the Phase 17 SEC step doesn't handle foreign filers).
+None of these changes a figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
