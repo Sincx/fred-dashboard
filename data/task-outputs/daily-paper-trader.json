@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-26T23:39:51.747476+01:00",
+      "summary": "LDOS (A)",
+      "picks": {
+        "p1": {
+          "ticker": "LDOS",
+          "strategy": "A — Value",
+          "entry": 139.86,
+          "stop": 118.88,
+          "t1": 174.83,
+          "t2": 209.79
+        }
+      },
+      "content": "Leidos trades at ~11.3x the midpoint of twice-raised FY26 adjusted EPS guidance and 32% below its 52-week high, a cheap defense/government-IT services name with no AI-capex or Burry-short overlap; TGT was trimmed (−5.21%) to hold the book at 35."
+    },
+    {
       "runAt": "2026-10-23T23:41:47.7753496+02:00",
       "summary": "JNJ (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Johnson & Johnson was bought on its Q3 beat-and-raise (adj. EPS $2.59 vs $2.53, FY26 guidance raised on Tremfya +68% and Darzalex +15%) while flat over 3 months at ~23x forward; ISTR was exited as a capacity trim at $28.04 (−4.37%, −$44), and portfolio net P&L is +$2,371 (+2.86% on $83,000)."
-    },
-    {
-      "runAt": "2026-10-22T23:41:05.6672612+02:00",
-      "summary": "PG (E)",
-      "picks": {
-        "p1": {
-          "ticker": "PG",
-          "strategy": "E — Sector Rotation",
-          "entry": 165.59,
-          "stop": 140.75,
-          "t1": 206.99,
-          "t2": 248.39
-        }
-      },
-      "content": "Consumer staples led a defensive rotation out of AI and semiconductors on 10-22, and P&G's FY27 Q1 delivered volume-led +4% organic growth across all categories with guidance maintained, at ~22x forward earnings."
     }
   ]
 }
