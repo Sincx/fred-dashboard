@@ -5,14 +5,14 @@
     "icon": "🏭",
     "runs": [
         {
+            "runAt": "2026-10-26T09:11:14.173030+01:00",
+            "summary": "Data through Oct 23 (Q4 17-day partial). Top 3: XLE +58.1%, CIBR +48.9%, SMH +46.4%. SPY P/E: 24.46x",
+            "content": "Top 5 YTD 2026: XLE +58.1% (P/E 18.48x, Fair), CIBR +48.9% (36.55x, Expensive), SMH +46.4% (29.01x, Elevated), XLK +27.7% (31.88x, Elevated), XBI +22.8% (22.23x*, Fair, profitable holdings only).\n\nBottom 5 YTD 2026: XLC -9.6% (15.54x, Fair), GLD -7.5% (P/E N/A), JETS -7.0% (13.10x, Cheap), XME -6.8% (16.02x, Fair), GDX -6.5% (12.65x, Cheap).\n\nNotable shifts: Tech split. CIBR rebounded ~7% (Q4 -4.1% -> +2.9%), crossed back into Expensive (36.55x) and moved Consolidating -> Continuing, overtaking SMH for #2. SMH kept sliding (Q4 -13.4%). Gold sold off: GDX -8.6% on the week (now -6.5% YTD) and GLD -4.0%; both Fading -> Reversing. XLC Fading -> Reversing and is now the weakest sector. XLV's 33.47x confirms last week's re-rating. ICLN P/E rose 16.33x -> 19.74x on a falling price (recheck). Defensives keep leading Q4 (XLP +9.5%, XLU +7.9%, KIE +7.6%). SPY is +12.3% YTD (Q4 -0.4%); 10 of 25 sectors beat it (KRE new). 8 sectors negative YTD (GDX joined)."
+        },
+        {
             "runAt": "2026-10-19T09:12:22.460980+02:00",
             "summary": "Data through Oct 16 (Q4 12-day partial). Top 3: XLE +55.7%, SMH +49.9%, CIBR +38.7%. SPY P/E: 24.79x (P/E feed live again)",
             "content": "Top 5 YTD 2026: XLE +55.7% (P/E 19.44x, Fair), SMH +49.9% (30.57x, Elevated), CIBR +38.7% (34.43x, Elevated), XLK +27.9% (32.09x, Elevated), AMLP +18.6% (14.74x, Cheap).\n\nBottom 5 YTD 2026: JETS -7.9% (14.05x, Cheap), XLC -5.4% (16.18x, Fair), XLY -5.2% (26.54x, Elevated), GLD -3.6% (P/E N/A), XME -2.4% / ITA -2.4% (17.22x Fair / 32.52x Elevated).\n\nNotable shifts: Tech sell-off week: SMH -10.5%, CIBR -10.2%, XLK -7.8%. XLE overtook SMH as the #1 sector YTD. The P/E feed un-froze after 4 weeks (same script), giving these band crossings: SMH and CIBR Expensive -> Elevated (the Expensive band is now empty), XLP Fair -> Elevated, GDX Fair -> Cheap, XRT Cheap -> Fair. XBI now reports 20.99x (profitable holdings only). XLV jumped from 25.0x to 32.8x; this needs a second print to confirm. Momentum changes: XLE -> Accelerating; SMH and XBI -> Fading; CIBR and XLK -> Consolidating; XLU and XRT Reversing -> Fading (back to positive YTD); ICLN and XME Fading -> Reversing (now negative YTD). Defensives are rotating up in Q4 (XLP +8.7%, XLU +7.0%, KIE +7.0%). SPY is +12.8% YTD (Q4 +0.1%), and 9 of 25 sectors beat it."
-        },
-        {
-            "runAt": "2026-10-12T09:11:59.1724966+02:00",
-            "summary": "Data through Oct 9 (Q4 7-day partial). Top 3: SMH +67.5%, CIBR +54.4%, XLE +48.4%. SPY P/E: 25.15x (P/E source frozen for 4 weeks)",
-            "content": "Top 5 YTD 2026: SMH +67.5% (P/E 36.95x, Expensive), CIBR +54.4% (36.76x, Expensive), XLE +48.4% (16.95x, Fair), XLK +38.6% (34.41x, Elevated), XBI +26.2% (P/E N/A).\n\nBottom 5 YTD 2026: XLC -5.4% (17.15x, Fair), XLY -4.9% (25.80x, Elevated), ITA -3.5% (32.74x, Elevated), GLD -3.0% (P/E N/A), JETS -2.2% (10.37x, Cheap).\n\nNotable shifts: Rotation within tech. SMH fell ~4.4% on the week (Q4 partial +3.6% -> -0.9%), while CIBR gained ~5% (Q4 +6.7%), cutting the gap between them from 28 to 13pp. One momentum change: JETS Fading -> Reversing (YTD now negative). XLF and KIE are back to positive YTD, so 7 sectors are negative YTD (down from 8). Defensives bounced (XLU +5.0%, XLP +3.5% in Q4); XLU and XLY stay Reversing until a full quarter confirms. SPY is +15.1% YTD, and 6 of 25 sectors beat it. No P/E band crossings: all P/Es identical for a 4th straight week, so replacing the P/E source is overdue."
         }
     ]
 }
