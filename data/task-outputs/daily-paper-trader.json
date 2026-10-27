@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-27T23:41:48.900562+01:00",
+      "summary": "ALLE (B)",
+      "picks": {
+        "p1": {
+          "ticker": "ALLE",
+          "strategy": "B — Momentum",
+          "entry": 180.55,
+          "stop": 153.47,
+          "t1": 225.69,
+          "t2": 270.83
+        }
+      },
+      "content": "Allegion beat Q3 (organic +7.2%, adj EPS +13%) and raised FY26 guidance; it is in a clean uptrend near its 52-week high at ~17.8x forward earnings, with no Burry overlap (RIGL hit T1 today; MCK trimmed for capacity)."
+    },
+    {
       "runAt": "2026-10-26T23:39:51.747476+01:00",
       "summary": "LDOS (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Leidos trades at ~11.3x the midpoint of twice-raised FY26 adjusted EPS guidance and 32% below its 52-week high, a cheap defense/government-IT services name with no AI-capex or Burry-short overlap; TGT was trimmed (−5.21%) to hold the book at 35."
-    },
-    {
-      "runAt": "2026-10-23T23:41:47.7753496+02:00",
-      "summary": "JNJ (D)",
-      "picks": {
-        "p1": {
-          "ticker": "JNJ",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 263.81,
-          "stop": 224.24,
-          "t1": 329.76,
-          "t2": 395.72
-        }
-      },
-      "content": "Johnson & Johnson was bought on its Q3 beat-and-raise (adj. EPS $2.59 vs $2.53, FY26 guidance raised on Tremfya +68% and Darzalex +15%) while flat over 3 months at ~23x forward; ISTR was exited as a capacity trim at $28.04 (−4.37%, −$44), and portfolio net P&L is +$2,371 (+2.86% on $83,000)."
     }
   ]
 }
