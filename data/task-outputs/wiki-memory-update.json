@@ -5,14 +5,14 @@
     "icon":  "ðŸ—‚ï¸",
     "runs":  [
                  {
+                     "runAt":  "2026-10-27T23:54:14.1299560+01:00",
+                     "summary":  "Memory index updated - 0 new pages, 1 new open thread, 0 resolved (2 threads superseded)",
+                     "content":  "- Last updated -\u003e 2026-10-27\n- Meta row: wiki-thinker run count 89 -\u003e 90 (through 10-27)\n- Open Threads: briefing thread refreshed to 10-27 (~EUR20,769; EDEN/PRX exits awaiting Fred, ERO back to Watch, SAP free ride execute, new MONY card)\n- Open Threads: paper-trader thread superseded 10-23 -\u003e 10-27 - raw-SQL block is back, RIGL T1 UPDATE pending (SQL recorded); ALLE entry, MCK trim, UHS on watch\n- Open Threads: added wiki-thinker LDOS/ACN vs PLTR-put integrator relative-value connection\n- No new wiki pages (only paper-trading trade pages/portfolio updated)"
+                 },
+                 {
                      "runAt":  "2026-10-26T23:54:22.8253139+01:00",
                      "summary":  "Memory index updated - 0 new pages, 1 new open thread, 1 thread resolved (XLV P/E check)",
                      "content":  "- Last updated -\u003e 2026-10-26\n- Meta row: wiki-thinker run count 88 -\u003e 89 (through 10-26)\n- Open Threads: briefing thread refreshed to 10-26 (EDEN below EUR25.77 floor, ERO day 5, PRX day 3, ~EUR21,176; technicals staleness no longer flagged) + paper book 35 open after LDOS entry / TGT trim\n- Open Threads: sector P/E thread superseded - XLV re-rating confirmed (resolved); new ICLN P/E-vs-price recheck; CIBR now Expensive\n- Open Threads: added EFV/EFG intl value pair idea + bitcoin-miner/neocloud credit connection (wiki-thinker)\n- No new wiki pages (only tracker/paper-trading pages updated, LDOS trade page added)"
-                 },
-                 {
-                     "runAt":  "2026-10-25T23:54:21.8343938+01:00",
-                     "summary":  "Memory index updated — 9 new pages, 3 new open threads, 0 resolved",
-                     "content":  "- Last updated -\u003e 2026-10-25\n- Meta row: wiki-thinker run count 87 -\u003e 88 (through 10-25)\n- Finance row: added 10-25 clippings batch (7 Morningstar + 2 Burry Foundations source pages), watchlist +8 rows, pipeline Burry group now rows 182-213\n- Open Threads: briefing thread refreshed to 10-25 (ERO/EDEN/PRX exits awaiting Fred, ~EUR21,161, technicals stale 41h)\n- Open Threads: added ORCL Morningstar 4-star vs ORCL short conflict + TCEHY OTC pricing check (clippings-sorter)\n- Open Threads: added EDEN Q3 release explains the -9.5% drop, test \"priced in\" thesis (wiki-thinker)\n- Open Threads: added Cooking has no cooked/feedback log (wiki-thinker)\n- Open Threads: cyclical-guard thread updated with 10-25 strategy-feedback (FRES -8.4%, recommended-trades 0/8, new proposal)\n- No threads resolved"
                  }
              ]
 }
