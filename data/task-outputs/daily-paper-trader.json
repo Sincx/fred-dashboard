@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-28T23:41:25.282102+01:00",
+      "summary": "SPGI (D)",
+      "picks": {
+        "p1": {
+          "ticker": "SPGI",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 449.33,
+          "stop": 381.93,
+          "t1": 561.66,
+          "t2": 674.0
+        }
+      },
+      "content": "S&P Global beat Q3 and raised FY26 adj EPS, revenue and margin guidance, yet was flat on the print and sits 12.5% below its 52-week high, with >$7B of buybacks and a Capital IQ strategic review as added catalysts (ELV trimmed −4.54% for capacity)."
+    },
+    {
       "runAt": "2026-10-27T23:41:48.900562+01:00",
       "summary": "ALLE (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Allegion beat Q3 (organic +7.2%, adj EPS +13%) and raised FY26 guidance; it is in a clean uptrend near its 52-week high at ~17.8x forward earnings, with no Burry overlap (RIGL hit T1 today; MCK trimmed for capacity)."
-    },
-    {
-      "runAt": "2026-10-26T23:39:51.747476+01:00",
-      "summary": "LDOS (A)",
-      "picks": {
-        "p1": {
-          "ticker": "LDOS",
-          "strategy": "A — Value",
-          "entry": 139.86,
-          "stop": 118.88,
-          "t1": 174.83,
-          "t2": 209.79
-        }
-      },
-      "content": "Leidos trades at ~11.3x the midpoint of twice-raised FY26 adjusted EPS guidance and 32% below its 52-week high, a cheap defense/government-IT services name with no AI-capex or Burry-short overlap; TGT was trimmed (−5.21%) to hold the book at 35."
     }
   ]
 }
