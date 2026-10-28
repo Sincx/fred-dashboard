@@ -45,6 +45,68 @@ interface ScreenerRow {
   signal_detail: string | null;
   signal_flagged_date: string | null;
   investor_labels: string | null;
+  dcf_fair_value: number | null;
+  dcf_discount_pct: number | null;
+  dcf_confidence: string | null;
+  dcf_sbc_fair_value: number | null;
+  dcf_sbc_discount_pct: number | null;
+  dcf_sbc_confidence: string | null;
+  sbc_delta_e: number | null;
+  book_value_per_share: number | null;
+  tangible_book_value_per_share: number | null;
+}
+
+// ScreenerRow plus the dashboard-only valuation ranks (see rankScreener).
+interface RankedScreenerRow extends ScreenerRow {
+  value_discount_pct: number | null;   // SBC-adjusted DCF discount, else plain DCF; null = no usable valuation
+  value_basis: "sbc" | "dcf" | null;
+  value_confidence: string | null;
+  value_rank: number | null;           // 1 = most undervalued among rows with a usable valuation
+  combined_rank: number;               // 1 = best blend of Magic Formula and value rank
+  combined_has_value: boolean;         // false = no usable valuation (scored as median value)
+}
+
+// Valuations feed the ranking only when the model was confident enough: a
+// 'low' confidence DCF is usually a data problem (see valuation.py), and letting
+// it rank would put the noisiest numbers at the top of the list.
+const RANKABLE_CONFIDENCE = new Set(["high", "medium"]);
+
+// Dashboard-only blend. The Magic Formula rank is untouched (the pipeline's
+// recommendations still use it); this adds a second view: each row's Magic
+// Formula percentile and its value percentile are averaged, so a stock that is
+// cheap on earnings AND below its (SBC-adjusted) fair value rises, and one that
+// looks cheap on the screen but expensive on cash flows falls. Rows with no
+// usable valuation are scored as median value (0.5), so being uncovered is
+// neither rewarded nor penalised: using their Magic Formula percentile alone
+// would put every uncovered name above any covered name with a middling value.
+function rankScreener(rows: ScreenerRow[]): RankedScreenerRow[] {
+  const base = rows.map((r) => {
+    const sbcOk = r.dcf_sbc_discount_pct != null && RANKABLE_CONFIDENCE.has(r.dcf_sbc_confidence ?? "");
+    // The SBC-adjusted figure is the stricter one; fall back to the plain DCF only when it is absent
+    // (no usable SBC history) — never when it exists but is low-confidence.
+    const dcfOk = r.dcf_sbc_discount_pct == null && r.dcf_discount_pct != null
+      && RANKABLE_CONFIDENCE.has(r.dcf_confidence ?? "");
+    return {
+      ...r,
+      value_discount_pct: sbcOk ? r.dcf_sbc_discount_pct : dcfOk ? r.dcf_discount_pct : null,
+      value_basis: (sbcOk ? "sbc" : dcfOk ? "dcf" : null) as "sbc" | "dcf" | null,
+      value_confidence: sbcOk ? r.dcf_sbc_confidence : dcfOk ? r.dcf_confidence : null,
+    };
+  });
+  const valued = base.filter((r) => r.value_discount_pct != null)
+    .sort((a, b) => (b.value_discount_pct as number) - (a.value_discount_pct as number));
+  const vRank = new Map(valued.map((r, i) => [`${r.ticker}-${r.exchange}`, i + 1]));
+  const nMf = Math.max(rows.length, 1), nV = Math.max(valued.length, 1);
+  const withBlend = base.map((r) => {
+    const vr = vRank.get(`${r.ticker}-${r.exchange}`) ?? null;
+    const mfPct = r.mf_rank / nMf;
+    return { r, vr, score: (mfPct + (vr != null ? vr / nV : 0.5)) / 2 };
+  });
+  const cRank = new Map([...withBlend].sort((a, b) => a.score - b.score)
+    .map((o, i) => [`${o.r.ticker}-${o.r.exchange}`, i + 1]));
+  return withBlend.map(({ r, vr }) => ({
+    ...r, value_rank: vr, combined_rank: cRank.get(`${r.ticker}-${r.exchange}`) as number, combined_has_value: vr != null,
+  }));
 }
 
 // Master spec Phase 15 — one pill per tracked investor holding this ticker, from
@@ -83,7 +145,15 @@ interface TickerResearchDetail {
   signals: { source: string; detail: string | null; flagged_date: string; source_ref: string | null }[];
   investors: { investor_id: string; name: string; direction: string; disclosed_date: string;
     entry_price_hint: number | null; status: string }[];
+  valuations: { method: string; fair_value: number; discount_pct: number | null; current_price: number | null;
+    confidence: string | null; discount_rate: number | null; run_date: string; stage1_growth: number | null;
+    pooled_delta_e: number | null; gaap_overstatement: number | null; rho: number | null; notes: string[] | null }[];
 }
+
+const METHOD_LABEL: Record<string, string> = {
+  dcf_fair_value: "DCF", dcf_sbc_adjusted: "DCF, SBC-adjusted (Burry)", book_value: "Book value",
+  tangible_book_value: "Tangible book", burry_iv15: "Burry IV15",
+};
 
 // Master spec Phase 15's research popover — read-only, DB-only (no live
 // LLM/WebSearch call from here, per Mike's own scope call 2026-09-20).
@@ -134,6 +204,51 @@ function TickerResearchPopover({ ticker, exchange, onClose }: { ticker: string; 
                 <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{data.notes}</p>
               </div>
             )}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)" }}>
+                Valuation ({data.valuations?.length ?? 0})
+              </p>
+              {!data.valuations || data.valuations.length === 0 ? (
+                <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+                  No valuation yet (SEC filings not loaded, or a bank/REIT/utility/foreign filer where cash-flow models do not apply).
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  {data.valuations.map((v) => (
+                    <div key={v.method} className="rounded p-2 text-sm" style={{ backgroundColor: "var(--bg-tertiary)" }}>
+                      <div className="flex items-center justify-between">
+                        <span style={{ color: "var(--text-primary)" }}>{METHOD_LABEL[v.method] ?? v.method}</span>
+                        <span style={{ color: "var(--text-primary)" }}>
+                          {fmtPrice(v.fair_value)}{" "}
+                          {v.method.endsWith("book_value") ? (
+                            // a "discount" to book is not an undervaluation signal; show the multiple instead
+                            v.current_price != null && v.fair_value > 0 && (
+                              <span style={{ color: "var(--text-muted)" }}>({(v.current_price / v.fair_value).toFixed(1)}× price/book)</span>
+                            )
+                          ) : v.discount_pct != null && (
+                            <span style={{ color: v.discount_pct > 0 ? "var(--accent-green)" : "var(--accent-red)" }}>
+                              ({v.discount_pct > 0 ? "+" : ""}{v.discount_pct.toFixed(0)}% vs price)
+                            </span>
+                          )}
+                        </span>
+                      </div>
+                      <div className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+                        {v.confidence ? `${v.confidence} confidence` : ""}
+                        {v.discount_rate != null ? ` · ${(v.discount_rate * 100).toFixed(0)}% discount rate` : ""}
+                        {v.stage1_growth != null ? ` · ${(v.stage1_growth * 100).toFixed(1)}% growth` : ""}
+                        {v.pooled_delta_e != null ? ` · ΔE ${(v.pooled_delta_e * 100).toFixed(0)}%` : ""}
+                        {v.rho != null ? ` · SBC cost ${(v.rho * 100).toFixed(0)}% of FCF` : ""}
+                      </div>
+                      {v.notes && v.notes.length > 0 && (
+                        <ul className="text-xs mt-1 list-disc pl-4" style={{ color: "var(--text-muted)" }}>
+                          {v.notes.map((n, i) => <li key={i}>{n}</li>)}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-muted)" }}>
                 Signals ({data.signals.length})
@@ -205,6 +320,8 @@ interface ConvergenceRow {
   macd_signal: string | null;
   technical_rating: string | null;
   currency: string | null;
+  value_discount_pct: number | null;
+  combined_rank: number;
 }
 
 type Tab = "watchlist" | "screener" | "convergence";
@@ -227,6 +344,18 @@ function pctCell(v: number | null) {
   if (v === null || v === undefined) return <span style={{ color: "var(--text-muted)" }}>—</span>;
   const color = v > 0 ? "var(--accent-green)" : v < 0 ? "var(--accent-red)" : "var(--text-secondary)";
   return <span style={{ color }}>{v > 0 ? "+" : ""}{v.toFixed(2)}%</span>;
+}
+
+// A fair-value discount: positive = trading below fair value. Fair value and basis go in the tooltip.
+function discountCell(pct: number | null, conf: string | null, fairValue: number | null, label: string) {
+  if (pct === null || pct === undefined) return <span style={{ color: "var(--text-muted)" }}>—</span>;
+  const low = conf === "low";
+  const color = low ? "var(--text-muted)" : pct > 0 ? "var(--accent-green)" : "var(--accent-red)";
+  return (
+    <span style={{ color }} title={`${label}${fairValue != null ? `: fair value ${fmtPrice(fairValue)}` : ""}${conf ? ` (${conf} confidence${low ? ", not used in ranking" : ""})` : ""}`}>
+      {pct > 0 ? "+" : ""}{pct.toFixed(0)}%{low ? "*" : ""}
+    </span>
+  );
 }
 
 function SortHeader<T>({
@@ -320,6 +449,7 @@ export default function WatchlistPage() {
   const [search, setSearch] = useState("");
   const [indexFilter, setIndexFilter] = useState("ALL");
   const [passOnly, setPassOnly] = useState(false);
+  const [undervaluedOnly, setUndervaluedOnly] = useState(false);
   // Crypto never appears in the Screener/Convergence tabs by design (no
   // fundamentals data — same mechanism that already excludes Financials/
   // Utilities/REITs from the Magic Formula), so this only affects the Full
@@ -329,7 +459,7 @@ export default function WatchlistPage() {
 
   const [uSortField, setUSortField] = useState<keyof UniverseRow>("ticker");
   const [uSortDir, setUSortDir] = useState<"asc" | "desc">("asc");
-  const [sSortField, setSSortField] = useState<keyof ScreenerRow>("mf_rank");
+  const [sSortField, setSSortField] = useState<keyof RankedScreenerRow>("mf_rank");
   const [sSortDir, setSSortDir] = useState<"asc" | "desc">("asc");
   const [cSortField, setCSortField] = useState<keyof ConvergenceRow>("mf_rank");
   const [cSortDir, setCSortDir] = useState<"asc" | "desc">("asc");
@@ -391,8 +521,10 @@ export default function WatchlistPage() {
     return sortRows(rows, uSortField, uSortDir);
   }, [universeByAssetClass, search, indexFilter, uSortField, uSortDir]);
 
+  const rankedScreener = useMemo(() => rankScreener(screener), [screener]);
+
   const filteredScreener = useMemo(() => {
-    let rows = screener;
+    let rows = rankedScreener;
     if (search.trim()) {
       const q = search.trim().toUpperCase();
       rows = rows.filter((r) => r.ticker.includes(q) || (r.sector ?? "").toUpperCase().includes(q));
@@ -401,8 +533,9 @@ export default function WatchlistPage() {
       rows = rows.filter((r) => r.index_membership.split(",").includes(indexFilter));
     }
     if (passOnly) rows = rows.filter((r) => r.passes_thresholds === 1);
+    if (undervaluedOnly) rows = rows.filter((r) => (r.value_discount_pct ?? -1) > 0);
     return sortRows(rows, sSortField, sSortDir);
-  }, [screener, search, indexFilter, passOnly, sSortField, sSortDir]);
+  }, [rankedScreener, search, indexFilter, passOnly, undervaluedOnly, sSortField, sSortDir]);
 
   // Convergence: Magic Formula passes AND technical rating is "Buy" — the
   // intersection of the value screen and the momentum/trend read, joined on
@@ -411,7 +544,7 @@ export default function WatchlistPage() {
   const convergenceRows: ConvergenceRow[] = useMemo(() => {
     const uByKey = new Map(universe.map((r) => [`${r.ticker}-${r.exchange}`, r]));
     const rows: ConvergenceRow[] = [];
-    for (const s of screener) {
+    for (const s of rankedScreener) {
       if (s.passes_thresholds !== 1) continue;
       const u = uByKey.get(`${s.ticker}-${s.exchange}`);
       if (!u || u.technical_rating !== "Buy") continue;
@@ -420,10 +553,11 @@ export default function WatchlistPage() {
         mf_rank: s.mf_rank, earnings_yield: s.earnings_yield, roic: s.roic,
         close: u.close, pct_1d: u.pct_1d, rsi14: u.rsi14, macd_signal: u.macd_signal,
         technical_rating: u.technical_rating, currency: u.currency,
+        value_discount_pct: s.value_discount_pct, combined_rank: s.combined_rank,
       });
     }
     return rows;
-  }, [screener, universe]);
+  }, [rankedScreener, universe]);
 
   const filteredConvergence = useMemo(() => {
     let rows = convergenceRows;
@@ -441,9 +575,9 @@ export default function WatchlistPage() {
     if (field === uSortField) setUSortDir(uSortDir === "asc" ? "desc" : "asc");
     else { setUSortField(field); setUSortDir("asc"); }
   }
-  function handleSSort(field: keyof ScreenerRow) {
+  function handleSSort(field: keyof RankedScreenerRow) {
     if (field === sSortField) setSSortDir(sSortDir === "asc" ? "desc" : "asc");
-    else { setSSortField(field); setSSortDir(field === "mf_rank" ? "asc" : "desc"); }
+    else { setSSortField(field); setSSortDir(field === "mf_rank" || field === "value_rank" || field === "combined_rank" ? "asc" : "desc"); }
   }
   function updateNotes(ticker: string, exchange: string, notes: string) {
     setUniverse((prev) => prev.map((r) => (r.ticker === ticker && r.exchange === exchange ? { ...r, notes } : r)));
@@ -521,6 +655,13 @@ export default function WatchlistPage() {
           <label className="flex items-center gap-1.5 text-sm" style={{ color: "var(--text-secondary)" }}>
             <input type="checkbox" checked={passOnly} onChange={(e) => setPassOnly(e.target.checked)} />
             Passing thresholds only
+          </label>
+        )}
+        {tab === "screener" && (
+          <label className="flex items-center gap-1.5 text-sm" style={{ color: "var(--text-secondary)" }}
+            title="Fair value above price on the SBC-adjusted DCF (plain DCF where no SBC-adjusted figure exists); low-confidence valuations excluded">
+            <input type="checkbox" checked={undervaluedOnly} onChange={(e) => setUndervaluedOnly(e.target.checked)} />
+            Below fair value only
           </label>
         )}
         {tab === "watchlist" && (
@@ -611,6 +752,11 @@ export default function WatchlistPage() {
                 <SortHeader label="ROIC %" field="roic" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="P/E" field="pe" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Div %" field="div_yield" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <SortHeader label="DCF disc." field="dcf_discount_pct" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <SortHeader label="SBC-adj disc." field="dcf_sbc_discount_pct" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <SortHeader label="ΔE" field="sbc_delta_e" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <SortHeader label="Value #" field="value_rank" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
+                <SortHeader label="Combined #" field="combined_rank" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Passes" field="passes_thresholds" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <SortHeader label="Signal" field="signal_source" sortField={sSortField} sortDir={sSortDir} onSort={handleSSort} />
                 <th className="text-left px-3 py-2 text-xs font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>Investors</th>
@@ -633,6 +779,17 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.roic.toFixed(2)}%</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.pe?.toFixed(2) ?? "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}>{r.div_yield?.toFixed(2) ?? "—"}</td>
+                  <td className="px-3 py-2">{discountCell(r.dcf_discount_pct, r.dcf_confidence, r.dcf_fair_value, "DCF")}</td>
+                  <td className="px-3 py-2">{discountCell(r.dcf_sbc_discount_pct, r.dcf_sbc_confidence, r.dcf_sbc_fair_value, "SBC-adjusted DCF")}</td>
+                  <td className="px-3 py-2" style={{ color: "var(--text-secondary)" }}
+                    title="Burry's ΔE: share of GAAP earnings that really belongs to owners after the true cost of stock-based compensation (10-year pool)">
+                    {r.sbc_delta_e != null ? `${(r.sbc_delta_e * 100).toFixed(0)}%` : "—"}
+                  </td>
+                  <td className="px-3 py-2 font-mono" style={{ color: "var(--text-secondary)" }}>{r.value_rank != null ? `#${r.value_rank}` : "—"}</td>
+                  <td className="px-3 py-2 font-mono" style={{ color: "var(--text-primary)" }}
+                    title={r.combined_has_value ? "Average of Magic Formula and value percentiles" : "No usable valuation: scored as median value"}>
+                    #{r.combined_rank}{!r.combined_has_value && <span style={{ color: "var(--text-muted)" }}>·</span>}
+                  </td>
                   <td className="px-3 py-2">
                     {r.passes_thresholds ? <span className="badge-green">Pass</span> : <span style={{ color: "var(--text-muted)" }}>—</span>}
                   </td>
@@ -659,6 +816,8 @@ export default function WatchlistPage() {
                 <SortHeader label="Sector" field="sector" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
                 <SortHeader label="EY %" field="earnings_yield" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
                 <SortHeader label="ROIC %" field="roic" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Value disc." field="value_discount_pct" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
+                <SortHeader label="Combined #" field="combined_rank" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
                 <SortHeader label="Price" field="close" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
                 <SortHeader label="1D %" field="pct_1d" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
                 <SortHeader label="RSI14" field="rsi14" sortField={cSortField} sortDir={cSortDir} onSort={handleCSort} />
@@ -680,6 +839,8 @@ export default function WatchlistPage() {
                   <td className="px-3 py-2 text-xs" style={{ color: "var(--text-secondary)" }}>{r.sector || "—"}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.earnings_yield.toFixed(2)}%</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>{r.roic.toFixed(2)}%</td>
+                  <td className="px-3 py-2">{discountCell(r.value_discount_pct, null, null, "Fair-value discount")}</td>
+                  <td className="px-3 py-2 font-mono" style={{ color: "var(--text-primary)" }}>#{r.combined_rank}</td>
                   <td className="px-3 py-2" style={{ color: "var(--text-primary)" }}>
                     {r.close != null ? `${fmtPrice(r.close)} ${r.currency ?? ""}` : "—"}
                   </td>

@@ -19,7 +19,7 @@ export async function GET(
     }
     const client = getTursoClient();
 
-    const [universeRs, signalsRs, investorsRs] = await Promise.all([
+    const [universeRs, signalsRs, investorsRs, valuationsRs] = await Promise.all([
       client.execute({
         sql: "SELECT ticker, exchange, sector, index_membership, notes FROM universe WHERE ticker = ? AND exchange = ?",
         args: [ticker, exchange],
@@ -32,6 +32,11 @@ export async function GET(
         sql: `SELECT p.investor_id, t.name, p.direction, p.disclosed_date, p.entry_price_hint, p.status
               FROM investor_positions p JOIN tracked_investors t ON t.investor_id = p.investor_id
               WHERE p.ticker = ? AND p.exchange = ? ORDER BY p.disclosed_date DESC`,
+        args: [ticker, exchange],
+      }),
+      client.execute({
+        sql: `SELECT method, fair_value, discount_pct, current_price, confidence, discount_rate, run_date, inputs_json
+              FROM v_valuations_latest WHERE ticker = ? AND exchange = ?`,
         args: [ticker, exchange],
       }),
     ]);
@@ -50,6 +55,19 @@ export async function GET(
       signals: signalsRs.rows.map((r) => ({
         source: r.source, detail: r.detail, flagged_date: r.flagged_date, source_ref: r.source_ref,
       })),
+      valuations: valuationsRs.rows.map((r) => {
+        // inputs_json is the full audit trail; the popover only needs a few headline inputs
+        let inputs: Record<string, unknown> = {};
+        try { inputs = JSON.parse(String(r.inputs_json ?? "{}")); } catch { /* keep empty */ }
+        const pick = (k: string) => (inputs[k] ?? null);
+        return {
+          method: r.method, fair_value: r.fair_value, discount_pct: r.discount_pct, current_price: r.current_price,
+          confidence: r.confidence, discount_rate: r.discount_rate, run_date: r.run_date,
+          stage1_growth: pick("stage1_growth"), pooled_delta_e: pick("pooled_delta_e"),
+          gaap_overstatement: pick("gaap_overstatement"), rho: pick("rho"),
+          notes: pick("confidence_notes"),
+        };
+      }),
       investors: investorsRs.rows.map((r) => ({
         investor_id: r.investor_id, name: r.name, direction: r.direction,
         disclosed_date: r.disclosed_date, entry_price_hint: r.entry_price_hint, status: r.status,
