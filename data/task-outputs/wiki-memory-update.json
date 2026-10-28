@@ -5,14 +5,14 @@
     "icon":  "ðŸ—‚ï¸",
     "runs":  [
                  {
+                     "runAt":  "2026-10-28T23:54:59.3641788+01:00",
+                     "summary":  "Memory index updated - 0 new pages, 2 new open threads, 0 resolved (2 threads superseded)",
+                     "content":  "- Last updated -\u003e 2026-10-28\n- Meta row: wiki-thinker run count 90 -\u003e 91 (through 10-28)\n- Podcasts row: noted 10-28 rewrites of Austin Tice eps 5-9 (host Josh Baker), BTBS Tobias Carlisle (retitled \"The Price Disciple\"), Dividend Talk EP 310\n- Open Threads: briefing thread refreshed to 10-28 (~EUR20,218; EDEN exit day 5, PRX back to Watch, GSK/ORCL short to Watch, SAP free ride execute, ACN requalifies)\n- Open Threads: paper-trader thread superseded 10-27 -\u003e 10-28 - RIGL T1 raw-SQL fix blocked a 2nd day (SQL kept); SPGI entry, ELV trim\n- Open Threads: added wiki-thinker portfolio-level sizing connection (Kelly pages vs ~35 concurrent positions) and 10-28 company-scanner pending names (IIPR auto-added; Nebius, MMC, NOC, Schneider, Tomra, Elice pending)\n- No new wiki pages"
+                 },
+                 {
                      "runAt":  "2026-10-27T23:54:14.1299560+01:00",
                      "summary":  "Memory index updated - 0 new pages, 1 new open thread, 0 resolved (2 threads superseded)",
                      "content":  "- Last updated -\u003e 2026-10-27\n- Meta row: wiki-thinker run count 89 -\u003e 90 (through 10-27)\n- Open Threads: briefing thread refreshed to 10-27 (~EUR20,769; EDEN/PRX exits awaiting Fred, ERO back to Watch, SAP free ride execute, new MONY card)\n- Open Threads: paper-trader thread superseded 10-23 -\u003e 10-27 - raw-SQL block is back, RIGL T1 UPDATE pending (SQL recorded); ALLE entry, MCK trim, UHS on watch\n- Open Threads: added wiki-thinker LDOS/ACN vs PLTR-put integrator relative-value connection\n- No new wiki pages (only paper-trading trade pages/portfolio updated)"
-                 },
-                 {
-                     "runAt":  "2026-10-26T23:54:22.8253139+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 1 new open thread, 1 thread resolved (XLV P/E check)",
-                     "content":  "- Last updated -\u003e 2026-10-26\n- Meta row: wiki-thinker run count 88 -\u003e 89 (through 10-26)\n- Open Threads: briefing thread refreshed to 10-26 (EDEN below EUR25.77 floor, ERO day 5, PRX day 3, ~EUR21,176; technicals staleness no longer flagged) + paper book 35 open after LDOS entry / TGT trim\n- Open Threads: sector P/E thread superseded - XLV re-rating confirmed (resolved); new ICLN P/E-vs-price recheck; CIBR now Expensive\n- Open Threads: added EFV/EFG intl value pair idea + bitcoin-miner/neocloud credit connection (wiki-thinker)\n- No new wiki pages (only tracker/paper-trading pages updated, LDOS trade page added)"
                  }
              ]
 }
