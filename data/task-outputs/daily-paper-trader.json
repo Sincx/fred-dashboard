@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-10-30T23:41:29.704112+01:00",
+      "summary": "PII (D)",
+      "picks": {
+        "p1": {
+          "ticker": "PII",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 59.41,
+          "stop": 50.5,
+          "t1": 74.26,
+          "t2": 89.12
+        }
+      },
+      "content": "Polaris beat Q3 with real operating leverage (sales +11%, operational EPS $0.95 vs $0.41) and raised FY26 guidance for a third time, yet trades at ~17x the new EPS guide with a ~14% FCF yield (WISE trimmed −4.52% for capacity)."
+    },
+    {
       "runAt": "2026-10-29T23:40:14.170698+01:00",
       "summary": "NDAQ (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Nasdaq, Inc. closed at a 52-week high after a strong Q3 (revenue +13%, non-GAAP EPS +18%, Index +39%) with a lowered opex guide and steady buybacks; FTNT was stopped out at $139.10 (−18.10%) the same day."
-    },
-    {
-      "runAt": "2026-10-28T23:41:25.282102+01:00",
-      "summary": "SPGI (D)",
-      "picks": {
-        "p1": {
-          "ticker": "SPGI",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 449.33,
-          "stop": 381.93,
-          "t1": 561.66,
-          "t2": 674.0
-        }
-      },
-      "content": "S&P Global beat Q3 and raised FY26 adj EPS, revenue and margin guidance, yet was flat on the print and sits 12.5% below its 52-week high, with >$7B of buybacks and a Capital IQ strategic review as added catalysts (ELV trimmed −4.54% for capacity)."
     }
   ]
 }
