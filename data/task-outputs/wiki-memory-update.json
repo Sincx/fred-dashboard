@@ -1,18 +1,18 @@
-﻿{
-    "taskId":  "wiki-memory-update",
-    "label":  "Wiki Memory Update",
-    "schedule":  "Daily 11:53 PM",
-    "icon":  "ðŸ—‚ï¸",
-    "runs":  [
-                 {
-                     "runAt":  "2026-10-29T23:54:26.5670978+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 2 new open threads, 0 resolved (2 threads superseded)",
-                     "content":  "- Last updated -\u003e 2026-10-29\n- Meta row: wiki-thinker run count 91 -\u003e 92 (through 10-29)\n- Podcasts row: podcast-recommender 10-29 batch (The Missing Cryptoqueen, Rational Reminder, The Children\u0027s Book Podcast, The Value Perspective)\n- Open Threads: briefing thread refreshed to 10-29 (~EUR20,327; new exits SFM and ERO, EDEN day 6; SAP free ride recommended)\n- Open Threads: paper-trader thread superseded 10-28 -\u003e 10-29 - RIGL T1 raw-SQL fix blocked a 3rd day (flagged needs Fred); NDAQ entry, FTNT stop-out\n- Open Threads: added 2 wiki-thinker ideas (13F-only investor tracking blind to UK/EU holdings; Books has no reads logged since 08-03)\n- No new wiki pages"
-                 },
-                 {
-                     "runAt":  "2026-10-28T23:54:59.3641788+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 2 new open threads, 0 resolved (2 threads superseded)",
-                     "content":  "- Last updated -\u003e 2026-10-28\n- Meta row: wiki-thinker run count 90 -\u003e 91 (through 10-28)\n- Podcasts row: noted 10-28 rewrites of Austin Tice eps 5-9 (host Josh Baker), BTBS Tobias Carlisle (retitled \"The Price Disciple\"), Dividend Talk EP 310\n- Open Threads: briefing thread refreshed to 10-28 (~EUR20,218; EDEN exit day 5, PRX back to Watch, GSK/ORCL short to Watch, SAP free ride execute, ACN requalifies)\n- Open Threads: paper-trader thread superseded 10-27 -\u003e 10-28 - RIGL T1 raw-SQL fix blocked a 2nd day (SQL kept); SPGI entry, ELV trim\n- Open Threads: added wiki-thinker portfolio-level sizing connection (Kelly pages vs ~35 concurrent positions) and 10-28 company-scanner pending names (IIPR auto-added; Nebius, MMC, NOC, Schneider, Tomra, Elice pending)\n- No new wiki pages"
-                 }
-             ]
+{
+    "taskId": "wiki-memory-update",
+    "label": "Wiki Memory Update",
+    "schedule": "Daily 11:53 PM",
+    "icon": "ðŸ—‚ï¸",
+    "runs": [
+        {
+            "runAt": "2026-10-30T23:53:57.094+01:00",
+            "summary": "Memory index updated - 0 new pages, 1 new open thread, 0 resolved (1 thread superseded)",
+            "content": "- Last updated -> 2026-10-30\n- Meta row: wiki-thinker run count 92 -> 93 (through 10-30)\n- Cooking row: latest recipe-recommender run now 10-30 (week of 11-02: shrimp & cheddar grits, ale-braised beef shin, cochinita pibil)\n- Open Threads: added wiki-thinker idea - all 7 paper stop-outs filled worse than the -15% stop (mean ~-17.6%), no slippage modelled; flag positions reporting within 5 days (MCK 11-04)\n- Open Threads: paper-trader thread superseded 10-29 -> 10-30 - RIGL T1 raw-SQL fix blocked a 4th day (needs Fred); PII entry, WISE trim; headroom EUR2,535.65, net +$2,452\n- No new wiki pages"
+        },
+        {
+            "runAt": "2026-10-29T23:54:26.5670978+01:00",
+            "summary": "Memory index updated - 0 new pages, 2 new open threads, 0 resolved (2 threads superseded)",
+            "content": "- Last updated -> 2026-10-29\n- Meta row: wiki-thinker run count 91 -> 92 (through 10-29)\n- Podcasts row: podcast-recommender 10-29 batch (The Missing Cryptoqueen, Rational Reminder, The Children's Book Podcast, The Value Perspective)\n- Open Threads: briefing thread refreshed to 10-29 (~EUR20,327; new exits SFM and ERO, EDEN day 6; SAP free ride recommended)\n- Open Threads: paper-trader thread superseded 10-28 -> 10-29 - RIGL T1 raw-SQL fix blocked a 3rd day (flagged needs Fred); NDAQ entry, FTNT stop-out\n- Open Threads: added 2 wiki-thinker ideas (13F-only investor tracking blind to UK/EU holdings; Books has no reads logged since 08-03)\n- No new wiki pages"
+        }
+    ]
 }
