@@ -10,9 +10,11 @@ Pipeline health: OK, all tracked tasks are healthy.
 Prices: Turso still holds 10-28 closes (KLR/REL 10-27), because refresh-technicals runs at 07:17. Every figure below
 uses a direct yfinance pull of **Thu 10-29 closes** for all holdings, with RSI(14), SMA50, MACD and ATR(14) recomputed
 (ACN via Xetra CSA.DE, ZOE via ZOE.DE). Options are re-marked by hand (Black-Scholes, r 4%).
-Data quality: check_data_quality.py was started in the background and had printed nothing by the time this was
-written. That has happened on several earlier nights, so its results aren't reflected here. Known repeat failures for
-holdings (ACN/ZOE EU fundamentals, QXO-PB fundamentals, NBIS option_mark with no strike) don't change any figure below.
+Data quality (check_data_quality.py finished after the first write): 592 rows auto-recovered, including technicals for
+GSK, REL, KLR, SAP, EDEN, WKL, PRX, ZOE, QXO-PB, AUTO and MONY. 234 are still failing. Holdings still failing are the
+known repeats (ACN and ZOE EU fundamentals "no sa_prefix", QXO-PB fundamentals, and the NBIS option_mark row, now at 60
+straight days with no strike), plus filings rows for BIRK, ERO and SAP. The NEEDS MANUAL REVIEW list is still mostly
+UK/EU technicals that have failed 20+ days in a row (IGGI, INDV, INP, MRW, NGG…). None of these changes a figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
