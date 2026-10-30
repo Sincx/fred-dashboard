@@ -5,14 +5,14 @@
     "icon":  "🍽",
     "runs":  [
                  {
+                     "runAt":  "2026-10-30T09:08:27.3231666+01:00",
+                     "summary":  "3 new recipes: Shrimp and Cheddar Grits, Beef Shin with Ale, Cochinita Pibil",
+                     "content":  "1. Mad Hungry Shrimp and Cheddar Grits with Smoky Bacon, inspired by Lucinda Scala Quinn. A 30-minute Southern skillet supper of paprika prawns over creamy cheddar grits.\n2. Braised Beef Shin with Ale, Mushrooms and Thyme, with Parsnip Mash, inspired by Nigel Slater. A slow low-oven November braise with hard-browned shin and sweet early-winter parsnips.\n3. Cochinita Pibil with Pickled Red Onions, inspired by Anthony Bourdain. The wild card: Yucatán achiote-and-citrus slow-roast pork in banana leaves, served in warm tortillas."
+                 },
+                 {
                      "runAt":  "2026-10-23T09:08:12.5543149+02:00",
                      "summary":  "3 new recipes: Spicy Pork Rice Cakes, Pot-Roast Pheasant with Cider, Penang Chicken Laksa",
                      "content":  "1. Spicy Pork and Rice Cake Stir-Fry with Chilli Crunch, inspired by David Chang. A 30-minute gochujang and chilli-crunch weeknight stir-fry riffing on the Momofuku Ssam Bar rice cakes.\n2. Pot-Roast Pheasant with Cider, Bacon and Celeriac, inspired by Nigel Slater. A 90-minute one-pot autumn game dish, cooked breast-down first so the lean bird stays moist.\n3. Penang-Style Chicken Laksa Lemak, inspired by Anthony Bourdain. The wild card: a rich coconut-curry noodle soup from the Malaysian hawker stalls he loved, built on a fried spice paste."
-                 },
-                 {
-                     "runAt":  "2026-10-17T15:56:02.6846693+02:00",
-                     "summary":  "3 new recipes: Skillet Beef and Black Bean Chilli, Tonkatsu Curry, Smoked Haddock with Leeks",
-                     "content":  "1. Skillet Beef and Black Bean Chilli with Quick Cornbread, inspired by Lucinda Scala Quinn. A 50-minute one-pot weeknight chilli with buttermilk cornbread for darkening October evenings.\n2. Tonkatsu with Japanese Curry, Rice and Shredded Cabbage, inspired by Anthony Bourdain. Panko-crusted pork with a from-scratch roux curry, a nod to the Tokyo katsu counters he loved.\n3. Smoked Haddock Baked with Leeks, Cream and Mustard, inspired by Nigel Slater. The wild card: a quiet 35-minute one-dish autumn fish supper built on sweet seasonal leeks."
                  }
              ]
 }
