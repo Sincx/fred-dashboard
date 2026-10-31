@@ -1,9 +1,16 @@
-{
+﻿{
     "taskId":  "podcast-summarizer",
     "label":  "Podcast Summarizer",
     "schedule":  "Sat 10:02 AM",
     "icon":  "🎙",
     "runs":  [
+                 {
+                     "runAt":  "2026-10-31T10:09:20.4693366+01:00",
+                     "summary":  "1 podcast page created",
+                     "content":  [
+                                     "Off Duty (The Guardian) — Episodes 1-8"
+                                 ]
+                 },
                  {
                      "runAt":  "2026-10-24T10:11:50.3237526+02:00",
                      "summary":  "7 podcast pages created",
@@ -15,13 +22,6 @@
                                      "Dividend Talk — Episode 310",
                                      "Odd Lots — French Political Crisis",
                                      "Where Is Austin Tice? — Episodes 5-9"
-                                 ]
-                 },
-                 {
-                     "runAt":  "2026-10-17T15:53:14.7290487+02:00",
-                     "summary":  "No new podcasts to summarise",
-                     "content":  [
-                                     "Nothing to summarise this run."
                                  ]
                  }
              ]
