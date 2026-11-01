@@ -170,8 +170,8 @@ PORTFOLIO RISKS TO WATCH
   - No stop orders are in place on any position. FLUT reports 11-12, and LULU's patience review is ~11-03 (it's 21% above
     the $88.54 trim trigger).
   - Below SMA50: ADBE, QXO-PB, FLUT and PRX, plus the three Exits (~32% of the long book, down from ~45%).
-  - Data: the NBIS put is still marked by hand (its Turso row has no strike, expiry or type), and check_data_quality.py
-    had no result in time for this briefing.
+  - Data: the NBIS put is still marked by hand (its Turso row has no strike, expiry or type). Its option_mark row is
+    now at 67 straight days of failures.
 
 NEXT ACTIONS
   1. EDEN: execute the Full Exit (~€1,083, ≈ −€111). Day 7 of Exit and 6.6% below the €25.77 floor.
