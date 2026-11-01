@@ -11,8 +11,10 @@ Prices: Turso holds **Fri 10-30 closes** for every holding (refreshed Sat/Sun), 
 yfinance pull. massive spot-checks confirm ACN (US $258.24, +4.5%), NBIS ($154.14, −10.4%) and QXO common ($11.04, −3.0%).
 Options: ORCL and PLTR are marked by options_pricing.py on 10-30 closes. NBIS is a hand Black-Scholes estimate (80% vol,
 r 4%, 228 days), because its Turso row still has no strike.
-Data quality: check_data_quality.py is still running in the background and had no result when this was written. The
-known repeats (ACN/ZOE EU fundamentals, QXO-PB fundamentals, the NBIS option_mark row) don't change any figure here.
+Data quality (check_data_quality.py finished after the first write): REL fundamentals auto-recovered. 223 rows are
+still failing. The holdings among them are the known repeats: ACN/ZOE EU fundamentals ("no sa_prefix", 20 days), QXO-PB
+fundamentals (20 days) and the NBIS option_mark row (67 days, no strike). There are also filings rows for BIRK, ERO and
+SAP, and a PRX valuation row. None of these changes a figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
