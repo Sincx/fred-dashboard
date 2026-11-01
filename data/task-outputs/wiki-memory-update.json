@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-01T23:54:07.4245349+01:00",
+            "summary": "Memory index updated - 0 new pages, 1 thread closed out (Intertek), 2 new spinoff candidates noted",
+            "content": "- Last updated -> 2026-11-01\n- Finance row: added 11-01 summary (spinoff-monitor 2 new/4 changes; MF top 3 MGNS, MU, DNLM; strategy-feedback 7 judged, FTNT first stop-out since 09-01; briefing ~EUR 20,947, new pending idea BBW)\n- Meta row: added 11-01 wiki-thinker connection (SPGI Capital IQ review splits along Workday moat line)\n- Open Threads: spinoff thread updated - Intertek resolved via EQT GBP 60/share take-private, FUL rejected Ancora raised bid, new candidates Cooper Companies and SPGI Capital IQ (not yet ingested)\n- Open Threads: cyclical-guard thread extended - amendment to widen beyond Materials; recommended-trades double-counts repeat ideas (IAG x4)\n- Open Threads: stop-slippage idea now a pending strategy-feedback proposal, not adopted"
+        },
+        {
             "runAt": "2026-10-31T23:54:07.4689589+01:00",
             "summary": "Memory index updated - 1 new page, 1 new open thread, 0 resolved",
             "content": "- Last updated -> 2026-10-31\n- Meta row: wiki-thinker run count 93 -> 94 (through 10-31)\n- Crypto row: portfolio refresh now 10-31 (5 prices updated, $TEST unavailable; biggest mover ETH -4.78%)\n- Podcasts row: new page podcast-off-duty-the-guardian-episodes-1-8 (Off Duty, eps 1-8)\n- Open Threads: added - Off Duty page has no row in index.md yet\n- Open Threads: Lightfin finale thread extended with 10-31 wiki-thinker connection (swap Veta's comb vision for physical proof + outside party forcing a public reversal)"
-        },
-        {
-            "runAt": "2026-10-30T23:53:57.094+01:00",
-            "summary": "Memory index updated - 0 new pages, 1 new open thread, 0 resolved (1 thread superseded)",
-            "content": "- Last updated -> 2026-10-30\n- Meta row: wiki-thinker run count 92 -> 93 (through 10-30)\n- Cooking row: latest recipe-recommender run now 10-30 (week of 11-02: shrimp & cheddar grits, ale-braised beef shin, cochinita pibil)\n- Open Threads: added wiki-thinker idea - all 7 paper stop-outs filled worse than the -15% stop (mean ~-17.6%), no slippage modelled; flag positions reporting within 5 days (MCK 11-04)\n- Open Threads: paper-trader thread superseded 10-29 -> 10-30 - RIGL T1 raw-SQL fix blocked a 4th day (needs Fred); PII entry, WISE trim; headroom EUR2,535.65, net +$2,452\n- No new wiki pages"
         }
     ]
 }
