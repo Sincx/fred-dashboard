@@ -5,6 +5,48 @@
   "icon": "🔍",
   "runs": [
     {
+      "runAt": "2026-11-01T10:10:00.569914+01:00",
+      "summary": "2 new candidates found (Cooper Companies, S&P Global), 4 status changes (Intertek: separation review → resolved via EQT take-private)",
+      "content": {
+        "newCandidates": [
+          {
+            "company": "Cooper Companies",
+            "ticker": "COO",
+            "priority": "high",
+            "score": "~5/7",
+            "note": "Two activists: Browning West wants CooperSurgical spun/sold; board reviewed a CooperSurgical sale and voted unanimously to keep it. Jana (~1.8%) went public Sep 18 2026 demanding a new CEO and chair plus a sale/merger of CooperVision (Bausch + Lomb CEO open to a combination). Management resisting; SOTP unquantified."
+          },
+          {
+            "company": "S&P Global",
+            "ticker": "SPGI",
+            "priority": "watch",
+            "score": "~2/7",
+            "note": "Oct 27 2026 with Q3 results: board-initiated strategic review of Capital IQ and associated data businesses, including a potential separation; keeps RatingsDirect/RatingsXpress/Enterprise Solutions. No timeframe given. Follows the Mobility spinoff in Jul 2026."
+          }
+        ],
+        "statusChanges": [
+          {
+            "company": "Intertek (ITRK.L)",
+            "change": "RESOLVED VIA TAKEOVER — agreed a recommended EQT (Isotope Bidco) take-private on Jun 18 2026 at £60/share + 107.7p dividend; ~98.7% shareholder approval; completion Q4 2026/Q1 2027. Missed by the Oct run. Removed from active watch."
+          },
+          {
+            "company": "H.B. Fuller (FUL)",
+            "change": "Board rejected Ancora's raised $1.2-1.4B BAS bid on Oct 19 2026; Ancora says it will escalate if no progress by year-end."
+          },
+          {
+            "company": "Valmet (VALMT.HE)",
+            "change": "Q3 interim (Oct 28): strategic review on plan, no decision yet; Q4 2026 work starting to make both segments ready to operate independently (~EUR10M cost). Update by FY2026 results."
+          },
+          {
+            "company": "Baker Hughes (BKR)",
+            "change": "Q3 results Oct 27: Chart Industries acquisition completed, Surface Pressure Control disposed; OFSE EBITDA $659M (-2% YoY). Still no OFSE spinoff announcement."
+          }
+        ],
+        "noChange": "BAYN (Roundup ruling pending), VOYA (no-confidence vote Nov 24), SOLV (Q3 results Nov 5), TRIP (TheFork close pending), BP (India CCI pending)",
+        "recommendation": "No pre-announcement → announced escalation this month, so no mandatory /market-analyst run. Optional: /market-analyst COO (new ~5/7 activist breakup name) and /market-analyst SPGI (Capital IQ separation review)."
+      }
+    },
+    {
       "runAt": "2026-10-01T10:10:20.8092542+02:00",
       "summary": "2 new candidates found (H.B. Fuller, Intertek), 4 status changes (Delivery Hero: pre-announcement → resolved via €13B Uber takeover)",
       "content": {
@@ -43,44 +85,6 @@
           }
         ],
         "recommendation": "No pre-announcement → announced escalation this month, so no mandatory /market-analyst run. Optional: /market-analyst DHER to check the merger-arb spread against €41.50."
-      }
-    },
-    {
-      "runAt": "2026-09-01T10:11:16+02:00",
-      "summary": "0 new candidates found, 7 status changes (Solventum announced HIS separation; WEX board rejected spinoff)",
-      "content": {
-        "newCandidates": [],
-        "statusChanges": [
-          {
-            "company": "Solventum (SOLV)",
-            "change": "ANNOUNCED — Aug 5 2026: formally announced intent to separate its Health Information Systems business ($1.4B revenue, 30+ countries, 75%+ of US hospitals), evaluating spin-off/sale/merger structures, targeting close within 12-18 months (advised by Morgan Stanley, Goldman Sachs, Cleary Gottlieb). Directly answers Trian's April open letter. Dental remains bundled with MedSurg for now — that part of Trian's demand is still unresolved. Checklist now 7/7 on the HIS piece."
-          },
-          {
-            "company": "WEX",
-            "change": "THESIS DROPPED — After the May cooperation agreement seated 3 Impactive directors and split Chair/CEO, WEX's board formally rejected the Benefits spin-off proposal (and a related mega-grant ask) after its strategic review, citing lower standalone growth, customer-concentration risk, and reduced access to low-cost capital. Removed from active watch — no near-term catalyst."
-          },
-          {
-            "company": "Bayer AG (BAYN.DE / BAYRY)",
-            "change": "Missouri final-approval hearing for the $7.25B Roundup class settlement, originally Aug 19, postponed twice — first to Sept 10 by joint motion, then formally rescheduled by the court to Sept 14 2026 to process opt-out revocation requests. Still no formal separation announcement from Anderson."
-          },
-          {
-            "company": "Tripadvisor (TRIP)",
-            "change": "TheFork sale advanced from put-option (June 15) to a signed Equity Purchase Agreement with American Express Travel, Aug 2 2026, $700M cash subject to adjustments. Not yet closed. Starboard's broader push for a full company sale/board majority still unresolved."
-          },
-          {
-            "company": "Voya Financial (VOYA)",
-            "change": "ESCALATING FURTHER — TOMS Capital (TCIM) filed DFAN14A proxy materials in early Aug 2026, moving from private pressure to a public push including a call for a shareholder vote of no confidence. Combined economic exposure across TOMS/TCIM funds now ~5.7M shares (~4.5%+). Informal takeover interest (incl. Principal Financial) still circling but no talks confirmed."
-          },
-          {
-            "company": "BP",
-            "change": "Castrol/Stonepeak sale (~$10B EV) cleared EU (unconditional) and China SAMR antitrust; Australia (ACCC) and India (CCI) reviews still pending. Deal remains on track for a year-end 2026 close."
-          },
-          {
-            "company": "Delivery Hero (DHER)",
-            "change": "Aspex built its stake to ~15% (from ~9.2%), including a further 5% purchase from Prosus for €335M in May, reportedly under EU pressure on Prosus to reduce its holding. CEO search targeting a decision by end of 2026 (hard cutoff Mar 31 2027)."
-          }
-        ],
-        "recommendation": "Run /market-analyst SOLV (Solventum) — Trian's HIS separation demand was answered within 4 months of the open letter; worth modeling the surviving MedSurg+Dental entity and the HIS separation structures once terms firm up."
       }
     }
   ]
