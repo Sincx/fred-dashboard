@@ -1,21 +1,21 @@
-{
+﻿{
     "taskId":  "book-summarizer",
     "label":  "Book Summarizer",
     "schedule":  "1st of month",
     "icon":  "📚",
     "runs":  [
                  {
-                     "runAt":  "2026-10-01T10:05:35.3482508+02:00",
+                     "runAt":  "2026-11-01T10:05:03.6458935+01:00",
                      "summary":  "No new books to summarise",
                      "content":  [
                                      "Nothing to summarise this run."
                                  ]
                  },
                  {
-                     "runAt":  "2026-09-01T10:07:51.7510945+02:00",
-                     "summary":  "1 book page created: Breath",
+                     "runAt":  "2026-10-01T10:05:35.3482508+02:00",
+                     "summary":  "No new books to summarise",
                      "content":  [
-                                     "Breath — James Nestor. Journalist\u0027s global investigation into breathing science: nasal vs. mouth breathing, ancient techniques (pranayama, Buteyko) validated by modern research, and how ~90% of people breathe badly in ways that quietly drive chronic ailments."
+                                     "Nothing to summarise this run."
                                  ]
                  }
              ]
