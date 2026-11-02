@@ -13,9 +13,11 @@ recomputed. The one exception is ZOE, which has no Yahoo data, so it's carried a
 ACN uses its Xetra listing (CSA.DE). FX: EUR/USD 1.1192, GBP/EUR 1.1976.
 Options: all three are marked with Black-Scholes on Monday closes (r 4%). ORCL uses 61.7% vol and PLTR 64.3%, the vols
 options_pricing.py used last. NBIS is a hand estimate at 80% vol, because its Turso row still has no strike.
-Data quality: check_data_quality.py is running in the background and hadn't printed anything by the time this was
-written (the usual pattern). Last run's known repeats are ACN/ZOE EU fundamentals, QXO-PB fundamentals and the NBIS
-option_mark row. None of them changes a figure here.
+Data quality (check_data_quality.py finished after the first write): KHC and SCHP technicals auto-recovered. 222 rows
+are still failing, and 49 need manual review (3+ days in a row). The holdings among them are the known repeats:
+ACN/ZOE EU fundamentals ("no sa_prefix"), QXO-PB fundamentals and the NBIS option_mark row (no strike). New in manual
+review are UK technicals for SN-, TW- and UU-, which look like a ticker-suffix mapping bug and aren't holdings. None of
+these changes a figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
