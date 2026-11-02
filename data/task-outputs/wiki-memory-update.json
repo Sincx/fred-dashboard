@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-02T23:55:00.7433860+01:00",
+            "summary": "Memory index updated - 0 new pages, 1 thread resolved (RIGL raw-SQL block), 1 new thread (BBW), 1 new key decision",
+            "content": "- Last updated -> 2026-11-02\n- Meta row: wiki-thinker run count 94 -> 96 (through 11-02)\n- Key Decisions: paper-trade partial exits go through paper_trader.py partial-exit CLI (raw-SQL blocked; RIGL fix applied, Step 1A removed)\n- Open Threads: removed resolved RIGL raw-SQL block thread (10-30 daily-paper-trader)\n- Open Threads: briefing thread refreshed to 11-02 (~EUR 21,659; SFM/ERO/EDEN exits awaiting Fred; ORCL put ITM, consider closing; ACN/SAP free rides)\n- Open Threads: sector-tracker thread refreshed to 11-02 (ICLN P/E 20.12x rising on falling price again; XLC to Cheap; growth-value spread -2462 bps)\n- Open Threads: new BBW thread from 11-02 wiki-thinker (check post-08-29 Burry BBW posts and Q2 10-Q before approving)"
+        },
+        {
             "runAt": "2026-11-01T23:54:07.4245349+01:00",
             "summary": "Memory index updated - 0 new pages, 1 thread closed out (Intertek), 2 new spinoff candidates noted",
             "content": "- Last updated -> 2026-11-01\n- Finance row: added 11-01 summary (spinoff-monitor 2 new/4 changes; MF top 3 MGNS, MU, DNLM; strategy-feedback 7 judged, FTNT first stop-out since 09-01; briefing ~EUR 20,947, new pending idea BBW)\n- Meta row: added 11-01 wiki-thinker connection (SPGI Capital IQ review splits along Workday moat line)\n- Open Threads: spinoff thread updated - Intertek resolved via EQT GBP 60/share take-private, FUL rejected Ancora raised bid, new candidates Cooper Companies and SPGI Capital IQ (not yet ingested)\n- Open Threads: cyclical-guard thread extended - amendment to widen beyond Materials; recommended-trades double-counts repeat ideas (IAG x4)\n- Open Threads: stop-slippage idea now a pending strategy-feedback proposal, not adopted"
-        },
-        {
-            "runAt": "2026-10-31T23:54:07.4689589+01:00",
-            "summary": "Memory index updated - 1 new page, 1 new open thread, 0 resolved",
-            "content": "- Last updated -> 2026-10-31\n- Meta row: wiki-thinker run count 93 -> 94 (through 10-31)\n- Crypto row: portfolio refresh now 10-31 (5 prices updated, $TEST unavailable; biggest mover ETH -4.78%)\n- Podcasts row: new page podcast-off-duty-the-guardian-episodes-1-8 (Off Duty, eps 1-8)\n- Open Threads: added - Off Duty page has no row in index.md yet\n- Open Threads: Lightfin finale thread extended with 10-31 wiki-thinker connection (swap Veta's comb vision for physical proof + outside party forcing a public reversal)"
         }
     ]
 }
