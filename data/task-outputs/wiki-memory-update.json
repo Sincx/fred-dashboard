@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-03T23:54:39.6228798+01:00",
+            "summary": "Memory index updated - 11 new pages (8 Finance, 3 AI & Tech), 1 thread resolved (BBW 08-27 awaiting-Burry-update), 1 new thread (ORCL put)",
+            "content": "- Last updated -> 2026-11-03\n- Meta row: wiki-thinker run count 96 -> 97 (through 11-03)\n- Finance row: 11-03 clippings batch (3 Burry + 5 Bloomberg investor-letters source pages; no watchlist/config changes)\n- AI & Tech row: 3 new Bloomberg source pages (Jassy/Amazon, AI components, AI productivity bet)\n- Open Threads: briefing thread refreshed to 11-03 (~EUR 21,159; SFM/EDEN exits awaiting Fred; ERO to Watch; new pending ideas APA, BAMNB)\n- Open Threads: new ORCL put thread from 11-03 wiki-thinker (write exit rule before closing on ITM cue)\n- Open Threads: BBW 11-02 thread marked partly answered by Burry BBW Part II; removed resolved 08-27 BBW awaiting-update thread"
+        },
+        {
             "runAt": "2026-11-02T23:55:00.7433860+01:00",
             "summary": "Memory index updated - 0 new pages, 1 thread resolved (RIGL raw-SQL block), 1 new thread (BBW), 1 new key decision",
             "content": "- Last updated -> 2026-11-02\n- Meta row: wiki-thinker run count 94 -> 96 (through 11-02)\n- Key Decisions: paper-trade partial exits go through paper_trader.py partial-exit CLI (raw-SQL blocked; RIGL fix applied, Step 1A removed)\n- Open Threads: removed resolved RIGL raw-SQL block thread (10-30 daily-paper-trader)\n- Open Threads: briefing thread refreshed to 11-02 (~EUR 21,659; SFM/ERO/EDEN exits awaiting Fred; ORCL put ITM, consider closing; ACN/SAP free rides)\n- Open Threads: sector-tracker thread refreshed to 11-02 (ICLN P/E 20.12x rising on falling price again; XLC to Cheap; growth-value spread -2462 bps)\n- Open Threads: new BBW thread from 11-02 wiki-thinker (check post-08-29 Burry BBW posts and Q2 10-Q before approving)"
-        },
-        {
-            "runAt": "2026-11-01T23:54:07.4245349+01:00",
-            "summary": "Memory index updated - 0 new pages, 1 thread closed out (Intertek), 2 new spinoff candidates noted",
-            "content": "- Last updated -> 2026-11-01\n- Finance row: added 11-01 summary (spinoff-monitor 2 new/4 changes; MF top 3 MGNS, MU, DNLM; strategy-feedback 7 judged, FTNT first stop-out since 09-01; briefing ~EUR 20,947, new pending idea BBW)\n- Meta row: added 11-01 wiki-thinker connection (SPGI Capital IQ review splits along Workday moat line)\n- Open Threads: spinoff thread updated - Intertek resolved via EQT GBP 60/share take-private, FUL rejected Ancora raised bid, new candidates Cooper Companies and SPGI Capital IQ (not yet ingested)\n- Open Threads: cyclical-guard thread extended - amendment to widen beyond Materials; recommended-trades double-counts repeat ideas (IAG x4)\n- Open Threads: stop-slippage idea now a pending strategy-feedback proposal, not adopted"
         }
     ]
 }
