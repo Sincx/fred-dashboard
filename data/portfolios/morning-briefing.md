@@ -13,9 +13,11 @@ exception is ZOE, which has no Yahoo data, so it's carried at the 10-30 Turso qu
 listing (CSA.DE). FX: EUR/USD 1.1192, GBP/EUR 1.1981.
 Options: all three are marked with Black-Scholes on Tuesday closes (r 4%). ORCL uses 61.7% vol and PLTR 64.3%, the vols
 options_pricing.py used last. NBIS is a hand estimate at 80% vol, because its Turso row still has no strike.
-Data quality: check_data_quality.py was started in the background and had produced no output by the time this was
-written (the same pattern as previous nights). Known repeats affecting holdings: ACN/ZOE EU fundamentals, QXO-PB
-fundamentals and the NBIS option_mark row (no strike). None of them changes a figure here.
+Data quality (check_data_quality.py finished after the first write): 790 rows auto-recovered, including the UK/EU
+technicals for GSK, REL, KLR, SAP, EDEN, WKL, PRX, ZOE, QXO-PB, MONY and BAMNB (Turso's lagging rows backfilled via
+yfinance). 111 rows need manual review (3+ days in a row). The holdings still failing are the known repeats: ACN/ZOE EU
+fundamentals ("no sa_prefix", ACN now 22 days), QXO-PB fundamentals, the NBIS option_mark row (no strike), BIRK/ERO/SAP
+filings and PRX valuation. None of these changes a figure here, because the briefing already used a live pull.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
