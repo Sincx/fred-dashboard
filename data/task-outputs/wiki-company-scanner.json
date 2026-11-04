@@ -1,18 +1,18 @@
 {
-  "taskId": "wiki-company-scanner",
-  "label": "Wiki Company Scanner",
-  "schedule": "Weekly Wednesday 9:05 AM",
-  "icon": "🔎",
-  "runs": [
-    {
-      "runAt": "2026-10-28T09:15:31.0064517+01:00",
-      "summary": "1 auto-added, 6 pending review",
-      "content": "Scanned 66 wiki pages changed since 2026-10-21: the 10-25 Morningstar/Burry clippings batch (best AI stocks, CoreWeave debt, BMY, LHX/LNT, AI hedges, Bloom Q3), new paper trades (ELV, PG, JNJ, LDOS, ALLE) and 7 podcast pages. Auto-added Innovative Industrial Properties (IIPR, exact SEC match, from Dividend Talk EP 310); 20 others incl. BMY, LHX, LNT, MRVL, ANET, CRWV, BE, GEV, HONA, PTC, SBUX, CMG and BKNG were already tracked. Elice Group, Nebius, Marsh McLennan and Northrop (SEC name misses), Schneider Electric and Tomra went to pending review."
-    },
-    {
-      "runAt": "2026-10-21T09:12:38.6975555+02:00",
-      "summary": "2 auto-added (1 is a false match), 5 pending review",
-      "content": "Scanned 36 wiki pages changed since 2026-10-17, mainly the 10-19 Burry Trading Post ingest, the MCK/ZTS paper trades and cross-domain themes. Auto-added BYD (BYDDF, OTC); MFI was also auto-added by a fuzzy SEC match on ME Group International, but that is the wrong company (MEGP is already tracked as UK) and needs deactivating. 15 others incl. MET, DECK, QXO, ERO, ARES and CF were already tracked; Haidilao, Haier, Meituan, Temple & Webster and Freddie Mac went to pending review."
-    }
-  ]
+    "taskId":  "wiki-company-scanner",
+    "label":  "Wiki Company Scanner",
+    "schedule":  "Weekly Wednesday 9:05 AM",
+    "icon":  "🔎",
+    "runs":  [
+                 {
+                     "runAt":  "2026-11-04T09:14:08.7717520+01:00",
+                     "summary":  "3 auto-added, 6 pending review",
+                     "content":  "Scanned 66 wiki pages changed since 2026-10-28; most were reverse-link touches, the new content was the 11-03 clippings batch (Burry Trading Post/BBW Part II/Anthropic S-1, Bloomberg AMD, Palantir, Where to Invest, AI components) plus the SPGI/NDAQ/PII/ULVR/UPS trades and the spinoff update. Auto-added Toast (TOST), Minebea Mitsumi (MINBY ADR) and Unilever (UL ADR, ULVR already traded on LSE); 21 others incl. GPN, FIS, PYPL, APO, BX, COO and AVGO were already tracked. LVMH, Fujikura, Furukawa Electric, Murata, plus Corning and Valero (SEC name misses) went to pending review."
+                 },
+                 {
+                     "runAt":  "2026-10-28T09:15:31.0064517+01:00",
+                     "summary":  "1 auto-added, 6 pending review",
+                     "content":  "Scanned 66 wiki pages changed since 2026-10-21: the 10-25 Morningstar/Burry clippings batch (best AI stocks, CoreWeave debt, BMY, LHX/LNT, AI hedges, Bloom Q3), new paper trades (ELV, PG, JNJ, LDOS, ALLE) and 7 podcast pages. Auto-added Innovative Industrial Properties (IIPR, exact SEC match, from Dividend Talk EP 310); 20 others incl. BMY, LHX, LNT, MRVL, ANET, CRWV, BE, GEV, HONA, PTC, SBUX, CMG and BKNG were already tracked. Elice Group, Nebius, Marsh McLennan and Northrop (SEC name misses), Schneider Electric and Tomra went to pending review."
+                 }
+             ]
 }
