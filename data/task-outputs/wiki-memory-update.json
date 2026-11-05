@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-05T23:54:20.672+01:00",
+            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 thread superseded (briefing 11-05), 1 new thread (Doctor's Kitchen/Aujla)",
+            "content": "- Last updated -> 2026-11-05\n- Meta row: wiki-thinker run count 98 -> 99 (through 11-05)\n- Finance row: 11-05 summary (paper trade PFE Strategy D, NDAQ capacity trim; briefing ~EUR 22,900; new pending ideas NEM/STR/BAMNB)\n- Podcasts row: podcast-recommender 11-05 (Cheeky Pint, The Doctor's Kitchen, Masters in Business)\n- Open Threads: briefing thread replaced with 11-05 (SFM/ERO/EDEN exits awaiting Fred; consider closing NBIS put)\n- Open Threads: new 11-05 wiki-thinker Cooking/Health thread (Tommy Wood episode; add Aujla as fifth chef)"
+        },
+        {
             "runAt": "2026-11-04T23:53:47.531+01:00",
             "summary": "Memory index updated - 0 new pages, 1 thread partly resolved (ORCL put close withdrawn), 2 new threads",
             "content": "- Last updated -> 2026-11-04\n- Meta row: wiki-thinker run count 97 -> 98 (through 11-04)\n- Finance row: 11-04 summary (company scanner TOST/MINBY/UL auto-added, 6 pending; paper trade LOW, AUTO T1, LDOS trim; briefing ~EUR 22,055)\n- Open Threads: briefing thread refreshed to 11-04 (SFM/EDEN/ERO exits awaiting Fred; KLR Add; ACN/SAP free rides; new pending idea STR)\n- Open Threads: 11-03 ORCL put thread marked partly resolved (briefing withdrew close; exit rule still unwritten)\n- Open Threads: new 11-04 wiki-thinker AI-gains connection (S-1 check for ORCL/NBIS/PLTR puts); new 11-04 company-scanner pending-review thread"
-        },
-        {
-            "runAt": "2026-11-03T23:54:39.6228798+01:00",
-            "summary": "Memory index updated - 11 new pages (8 Finance, 3 AI & Tech), 1 thread resolved (BBW 08-27 awaiting-Burry-update), 1 new thread (ORCL put)",
-            "content": "- Last updated -> 2026-11-03\n- Meta row: wiki-thinker run count 96 -> 97 (through 11-03)\n- Finance row: 11-03 clippings batch (3 Burry + 5 Bloomberg investor-letters source pages; no watchlist/config changes)\n- AI & Tech row: 3 new Bloomberg source pages (Jassy/Amazon, AI components, AI productivity bet)\n- Open Threads: briefing thread refreshed to 11-03 (~EUR 21,159; SFM/EDEN exits awaiting Fred; ERO to Watch; new pending ideas APA, BAMNB)\n- Open Threads: new ORCL put thread from 11-03 wiki-thinker (write exit rule before closing on ITM cue)\n- Open Threads: BBW 11-02 thread marked partly answered by Burry BBW Part II; removed resolved 08-27 BBW awaiting-update thread"
         }
     ]
 }
