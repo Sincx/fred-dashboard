@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-05T23:40:56.9679057+01:00",
+      "summary": "PFE (D)",
+      "picks": {
+        "p1": {
+          "ticker": "PFE",
+          "strategy": "D — Earnings Catalyst",
+          "entry": 29.88,
+          "stop": 25.4,
+          "t1": 37.35,
+          "t2": 44.82
+        }
+      },
+      "content": "Pfizer beat Q3 and raised FY26 revenue and EPS guidance yet trades at ~10x forward with a 5.6% yield, a defensive Burry-aligned entry on an AI-capex rout (S&P −4.4%, VIX 28); NDAQ was trimmed for capacity at +1.16% and no stops or targets triggered."
+    },
+    {
       "runAt": "2026-11-04T23:39:39.7540582+01:00",
       "summary": "LOW (E)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Lowe's (17.7x forward P/E, ~20% below its 52-week high) reclaimed its 200-day average as the Democratic midterm sweep cut oil 8.4% and made consumer discretionary the leading sector; AUTO hit T1 at 570.80p and LDOS was trimmed for capacity at −2.99%."
-    },
-    {
-      "runAt": "2026-11-03T23:39:43.3430580+01:00",
-      "summary": "UPS (D)",
-      "picks": {
-        "p1": {
-          "ticker": "UPS",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 109.17,
-          "stop": 92.79,
-          "t1": 136.46,
-          "t2": 163.76
-        }
-      },
-      "content": "UPS beat Q3 on pricing power (US revenue per piece +6.1% despite volume −3%) and raised FY26 revenue and operating-profit guidance, yet trades only ~2.9% above its pre-report price; CRM was trimmed for capacity at −3.02% (NDX-put overlap, failed momentum)."
     }
   ]
 }
