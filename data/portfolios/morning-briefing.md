@@ -13,10 +13,10 @@ This run uses **Wed 11-04 closes from a direct yfinance pull** for every holding
 ACN uses its Xetra listing (CSA.DE). FX: EUR/USD 1.1238, GBP/EUR 1.1988.
 Options: all three are marked with Black-Scholes on Wednesday closes (r 4%). ORCL uses 63.4% vol and PLTR 64.1%, the
 vols options_pricing.py used today. NBIS is a hand estimate at 80% vol, because its Turso row still has no strike.
-Data quality: check_data_quality.py was still running its retries when this was written (it took hours on recent
-nights). Tuesday's run listed the same known repeat failures for holdings: ACN/ZOE EU fundamentals, QXO-PB
-fundamentals, the NBIS option_mark row, BIRK/ERO/SAP filings and PRX valuation. None of them changes a figure here,
-because this briefing uses a live pull.
+Data quality (check_data_quality.py finished after the first write): the holdings still failing are the known repeats:
+ACN/ZOE EU fundamentals ("no sa_prefix"), QXO-PB fundamentals ("no data from any source") and the NBIS option_mark row
+(no strike). Other rows needing manual review (3+ days in a row) are non-holdings such as UU-, VWS and ZEAL. None of
+these changes a figure here, because this briefing uses a live pull.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
