@@ -5,14 +5,14 @@
     "icon":  "🍽",
     "runs":  [
                  {
+                     "runAt":  "2026-11-06T09:07:53.7569283+01:00",
+                     "summary":  "3 new recipes: Kimchi Jjigae, Chicken Leek and Tarragon Pie, Pork Sisig",
+                     "content":  "1. Kimchi Jjigae (Kimchi, Pork and Tofu Stew), inspired by David Chang. A 35-minute fiery, sour Korean one-pot built on extra-fermented kimchi fried in pork fat.\n2. Chicken, Leek and Tarragon Pie, inspired by Nigel Slater. A poached-chicken, leek and cream pie under an all-butter puff lid, using leeks at their November best.\n3. Pork Sisig with Calamansi and Chilli, inspired by Anthony Bourdain. The wild card: Pampanga-style simmered, grilled and chopped pork belly served sizzling with an egg and cold beer."
+                 },
+                 {
                      "runAt":  "2026-10-30T09:08:27.3231666+01:00",
                      "summary":  "3 new recipes: Shrimp and Cheddar Grits, Beef Shin with Ale, Cochinita Pibil",
                      "content":  "1. Mad Hungry Shrimp and Cheddar Grits with Smoky Bacon, inspired by Lucinda Scala Quinn. A 30-minute Southern skillet supper of paprika prawns over creamy cheddar grits.\n2. Braised Beef Shin with Ale, Mushrooms and Thyme, with Parsnip Mash, inspired by Nigel Slater. A slow low-oven November braise with hard-browned shin and sweet early-winter parsnips.\n3. Cochinita Pibil with Pickled Red Onions, inspired by Anthony Bourdain. The wild card: Yucatán achiote-and-citrus slow-roast pork in banana leaves, served in warm tortillas."
-                 },
-                 {
-                     "runAt":  "2026-10-23T09:08:12.5543149+02:00",
-                     "summary":  "3 new recipes: Spicy Pork Rice Cakes, Pot-Roast Pheasant with Cider, Penang Chicken Laksa",
-                     "content":  "1. Spicy Pork and Rice Cake Stir-Fry with Chilli Crunch, inspired by David Chang. A 30-minute gochujang and chilli-crunch weeknight stir-fry riffing on the Momofuku Ssam Bar rice cakes.\n2. Pot-Roast Pheasant with Cider, Bacon and Celeriac, inspired by Nigel Slater. A 90-minute one-pot autumn game dish, cooked breast-down first so the lean bird stays moist.\n3. Penang-Style Chicken Laksa Lemak, inspired by Anthony Bourdain. The wild card: a rich coconut-curry noodle soup from the Malaysian hawker stalls he loved, built on a fried spice paste."
                  }
              ]
 }
