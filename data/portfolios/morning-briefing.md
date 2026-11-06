@@ -13,9 +13,10 @@ The big moves (KLR −5.5%, ERO −8.9%, QXO-PB −5.9%, GSK flat) were checked 
 prints. ZOE uses ZOE.DE and ACN uses CSA.DE. FX: EUR/USD 1.1223, GBP/EUR 1.1983.
 Options: all three are marked with Black-Scholes on Thursday closes (r 4%). ORCL uses 63.4% vol and PLTR 64.2%, the vols
 options_pricing.py used today. NBIS is a hand estimate at 80% vol, because its Turso row still has no strike.
-Data quality: check_data_quality.py was started at the top of this run and is still retrying rows (it has taken hours on
-recent nights). Its results will be added if it finishes; nothing in this briefing depends on it, since prices come from
-a live pull.
+Data quality (check_data_quality.py finished after the first write): 784 rows auto-recovered. The holdings still failing
+are the known repeats: ACN/ZOE EU fundamentals ("no sa_prefix"), QXO-PB fundamentals ("no data from any source") and the
+NBIS option_mark row (no strike). 112 rows, all non-holdings, need manual review (3+ days in a row). None of these
+changes a figure here, because this briefing uses a live pull.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
