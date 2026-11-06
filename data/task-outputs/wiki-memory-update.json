@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-06T23:53:58.149+01:00",
+            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (Autobattler interest rule for Financial Literacy Game)",
+            "content": "- Last updated -> 2026-11-06\n- Meta row: wiki-thinker run count 99 -> 100 (through 11-06)\n- Finance row: 11-06 summary (paper trade BDX Strategy B, ICFI capacity trim, RIGL held after Q3 miss; 35 open)\n- Cooking row: recipe-recommender 11-06 run (week of 11-09; Chang, Slater, Bourdain; zero fish again)\n- Open Threads: new 11-06 wiki-thinker Games/Lightfin thread (capped interest rule as Financial Literacy Game mechanic; full-match harness)"
+        },
+        {
             "runAt": "2026-11-05T23:54:20.672+01:00",
             "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 thread superseded (briefing 11-05), 1 new thread (Doctor's Kitchen/Aujla)",
             "content": "- Last updated -> 2026-11-05\n- Meta row: wiki-thinker run count 98 -> 99 (through 11-05)\n- Finance row: 11-05 summary (paper trade PFE Strategy D, NDAQ capacity trim; briefing ~EUR 22,900; new pending ideas NEM/STR/BAMNB)\n- Podcasts row: podcast-recommender 11-05 (Cheeky Pint, The Doctor's Kitchen, Masters in Business)\n- Open Threads: briefing thread replaced with 11-05 (SFM/ERO/EDEN exits awaiting Fred; consider closing NBIS put)\n- Open Threads: new 11-05 wiki-thinker Cooking/Health thread (Tommy Wood episode; add Aujla as fifth chef)"
-        },
-        {
-            "runAt": "2026-11-04T23:53:47.531+01:00",
-            "summary": "Memory index updated - 0 new pages, 1 thread partly resolved (ORCL put close withdrawn), 2 new threads",
-            "content": "- Last updated -> 2026-11-04\n- Meta row: wiki-thinker run count 97 -> 98 (through 11-04)\n- Finance row: 11-04 summary (company scanner TOST/MINBY/UL auto-added, 6 pending; paper trade LOW, AUTO T1, LDOS trim; briefing ~EUR 22,055)\n- Open Threads: briefing thread refreshed to 11-04 (SFM/EDEN/ERO exits awaiting Fred; KLR Add; ACN/SAP free rides; new pending idea STR)\n- Open Threads: 11-03 ORCL put thread marked partly resolved (briefing withdrew close; exit rule still unwritten)\n- Open Threads: new 11-04 wiki-thinker AI-gains connection (S-1 check for ORCL/NBIS/PLTR puts); new 11-04 company-scanner pending-review thread"
         }
     ]
 }
