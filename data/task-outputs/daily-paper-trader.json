@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-06T23:40:04.991860+01:00",
+      "summary": "BDX (B)",
+      "picks": {
+        "p1": {
+          "ticker": "BDX",
+          "strategy": "B — Momentum",
+          "entry": 211.88,
+          "stop": 180.1,
+          "t1": 264.85,
+          "t2": 317.82
+        }
+      },
+      "content": "Becton Dickinson is +36% in 3 months and held near its 6-month high through the AI-capex rout after an FQ4 beat (adj EPS +27%) and an FY27 adj EPS guide of $13.10–13.30 (~16x), a defensive non-tech medtech momentum entry; ICFI was exited as the capacity trim."
+    },
+    {
       "runAt": "2026-11-05T23:40:56.9679057+01:00",
       "summary": "PFE (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Pfizer beat Q3 and raised FY26 revenue and EPS guidance yet trades at ~10x forward with a 5.6% yield, a defensive Burry-aligned entry on an AI-capex rout (S&P −4.4%, VIX 28); NDAQ was trimmed for capacity at +1.16% and no stops or targets triggered."
-    },
-    {
-      "runAt": "2026-11-04T23:39:39.7540582+01:00",
-      "summary": "LOW (E)",
-      "picks": {
-        "p1": {
-          "ticker": "LOW",
-          "strategy": "E — Sector Rotation",
-          "entry": 229.38,
-          "stop": 194.97,
-          "t1": 286.73,
-          "t2": 344.07
-        }
-      },
-      "content": "Lowe's (17.7x forward P/E, ~20% below its 52-week high) reclaimed its 200-day average as the Democratic midterm sweep cut oil 8.4% and made consumer discretionary the leading sector; AUTO hit T1 at 570.80p and LDOS was trimmed for capacity at −2.99%."
     }
   ]
 }
