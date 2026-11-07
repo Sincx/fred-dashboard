@@ -5,23 +5,21 @@
     "icon":  "🎙",
     "runs":  [
                  {
+                     "runAt":  "2026-11-07T10:12:03.8223392+01:00",
+                     "summary":  "5 podcast pages created",
+                     "content":  [
+                                     "The Guardian Long Read — Fixer, Financier, Spymaster: Sheikh Tahnoon",
+                                     "Diary of a CEO — Phone Addiction Scientist: Dr Sahar Yousef",
+                                     "Dividend Talk — Episode 311: Q3 Earnings Season",
+                                     "Capital Allocators — AI Tools for the Investment Firm (Ben Harrison)",
+                                     "Wisecrack — Season 1, Episodes 1-3"
+                                 ]
+                 },
+                 {
                      "runAt":  "2026-10-31T10:09:20.4693366+01:00",
                      "summary":  "1 podcast page created",
                      "content":  [
                                      "Off Duty (The Guardian) — Episodes 1-8"
-                                 ]
-                 },
-                 {
-                     "runAt":  "2026-10-24T10:11:50.3237526+02:00",
-                     "summary":  "7 podcast pages created",
-                     "content":  [
-                                     "Behind the Balance Sheet — The Value Disciple: Tobias Carlisle",
-                                     "The Weekly Show with Jon Stewart — A More United Nations: Pedro Sánchez",
-                                     "Behind the Balance Sheet — The Gentleman Activist: Alex Roepers",
-                                     "The Growth Podcast — How to Build Effective Loops in Claude",
-                                     "Dividend Talk — Episode 310",
-                                     "Odd Lots — French Political Crisis",
-                                     "Where Is Austin Tice? — Episodes 5-9"
                                  ]
                  }
              ]
