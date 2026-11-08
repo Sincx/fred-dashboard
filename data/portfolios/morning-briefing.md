@@ -12,9 +12,10 @@ yfinance pull the 11-05 briefing used, so this run takes prices and TA straight 
 FX: EUR/USD 1.1143 | GBP/EUR 1.1985.
 Options: ORCL and PLTR use options_pricing.py's Black-Scholes marks (Fri closes; 64.0% and 66.2% vol). NBIS is a hand
 estimate at 80% vol, because its Turso row still has no strike, expiry or type.
-Data quality: check_data_quality.py was still running its retries when this was written (it can take hours). Thursday's
-known failures are the holdings ACN/ZOE EU fundamentals, QXO-PB fundamentals and the NBIS option_mark row. None of these
-affects a price or TA figure here.
+Data quality (check_data_quality.py finished after the first write): the holdings still failing are the known repeats,
+ACN/ZOE EU fundamentals ("no sa_prefix"), QXO-PB fundamentals ("no data from any source") and the NBIS option_mark row
+(no strike). Also failing: SEC filings rows for BIRK, ERO and SAP, and PRX's valuation row. None of these changes a price
+or TA figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
