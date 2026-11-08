@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-08T23:54:18.777+01:00",
+            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (net-P&L scoring proposal for strategy performance)",
+            "content": "- Last updated -> 2026-11-08\n- Meta row: wiki-thinker run count 101 -> 102 (through 11-08)\n- Open Threads: added 11-08 strategy-feedback proposal (score closed paper trades on net P&L incl. banked T1/T2 partials; v_strategy_performance miscounts RDW/AMAT/IBM as losses)\n- No new wiki pages since 11-07 (only cross-domain-themes, portfolio and model pages updated by scheduled runs)"
+        },
+        {
             "runAt": "2026-11-07T23:54:20.556+01:00",
             "summary": "Memory index updated - 5 new pages, 1 thread resolved (Off Duty index row), 1 new thread (MGX/Iberdrola connections)",
             "content": "- Last updated -> 2026-11-07\n- Podcasts row: podcast-summarizer 11-07, 5 new pages (Guardian Long Read Tahnoon, Diary of a CEO Sahar Yousef, Dividend Talk ep 311, Capital Allocators Ben Harrison, Wisecrack S1 eps 1-3); Off Duty note updated to \"now in index.md\"\n- Meta row: wiki-thinker run count 100 -> 101 (through 11-07), 11-07 highlight added\n- Crypto row: portfolio refresh 11-07 (5 updated, $TEST unavailable, $LUCKY +14.30%)\n- Open Threads: removed resolved Off Duty missing-index-row thread; added 11-07 wiki-thinker thread (MGX political exposure across xAI/WLFI; Iberdrola as networks play)"
-        },
-        {
-            "runAt": "2026-11-06T23:53:58.149+01:00",
-            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (Autobattler interest rule for Financial Literacy Game)",
-            "content": "- Last updated -> 2026-11-06\n- Meta row: wiki-thinker run count 99 -> 100 (through 11-06)\n- Finance row: 11-06 summary (paper trade BDX Strategy B, ICFI capacity trim, RIGL held after Q3 miss; 35 open)\n- Cooking row: recipe-recommender 11-06 run (week of 11-09; Chang, Slater, Bourdain; zero fish again)\n- Open Threads: new 11-06 wiki-thinker Games/Lightfin thread (capped interest rule as Financial Literacy Game mechanic; full-match harness)"
         }
     ]
 }
