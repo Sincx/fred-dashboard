@@ -1,18 +1,18 @@
 {
-    "taskId": "wiki-memory-update",
-    "label": "Wiki Memory Update",
-    "schedule": "Daily 11:53 PM",
-    "icon": "ðŸ—‚ï¸",
-    "runs": [
-        {
-            "runAt": "2026-11-08T23:54:18.777+01:00",
-            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (net-P&L scoring proposal for strategy performance)",
-            "content": "- Last updated -> 2026-11-08\n- Meta row: wiki-thinker run count 101 -> 102 (through 11-08)\n- Open Threads: added 11-08 strategy-feedback proposal (score closed paper trades on net P&L incl. banked T1/T2 partials; v_strategy_performance miscounts RDW/AMAT/IBM as losses)\n- No new wiki pages since 11-07 (only cross-domain-themes, portfolio and model pages updated by scheduled runs)"
-        },
-        {
-            "runAt": "2026-11-07T23:54:20.556+01:00",
-            "summary": "Memory index updated - 5 new pages, 1 thread resolved (Off Duty index row), 1 new thread (MGX/Iberdrola connections)",
-            "content": "- Last updated -> 2026-11-07\n- Podcasts row: podcast-summarizer 11-07, 5 new pages (Guardian Long Read Tahnoon, Diary of a CEO Sahar Yousef, Dividend Talk ep 311, Capital Allocators Ben Harrison, Wisecrack S1 eps 1-3); Off Duty note updated to \"now in index.md\"\n- Meta row: wiki-thinker run count 100 -> 101 (through 11-07), 11-07 highlight added\n- Crypto row: portfolio refresh 11-07 (5 updated, $TEST unavailable, $LUCKY +14.30%)\n- Open Threads: removed resolved Off Duty missing-index-row thread; added 11-07 wiki-thinker thread (MGX political exposure across xAI/WLFI; Iberdrola as networks play)"
-        }
-    ]
+    "taskId":  "wiki-memory-update",
+    "label":  "Wiki Memory Update",
+    "schedule":  "Daily 11:53 PM",
+    "icon":  "ðŸ—‚ï¸",
+    "runs":  [
+                 {
+                     "runAt":  "2026-11-09T23:53:58.4975013+01:00",
+                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (hidden AI beta / midterm connection), 2 threads superseded",
+                     "content":  "- Last updated -\u003e 2026-11-09\n- Meta row: wiki-thinker run count 102 -\u003e 103 (through 11-09)\n- Open Threads: sector-tracker thread superseded by 11-09 (XLP P/E anomaly, no Expensive sectors, XLE Cheap, G-V spread -2901 bps)\n- Open Threads: briefing thread superseded by 11-09 (exits SFM/EDEN, ERO on stop, ORCL put \u003e$120, NBIS put, ACN free ride lapsed)\n- Open Threads: added 11-09 wiki-thinker idea (regress longs on SMH for hidden AI beta) + Democrats midterm vs BTC catalyst connection\n- No new wiki pages beyond routine ITX paper trade (2026-11-09-ITX.md)"
+                 },
+                 {
+                     "runAt":  "2026-11-08T23:54:18.777+01:00",
+                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (net-P\u0026L scoring proposal for strategy performance)",
+                     "content":  "- Last updated -\u003e 2026-11-08\n- Meta row: wiki-thinker run count 101 -\u003e 102 (through 11-08)\n- Open Threads: added 11-08 strategy-feedback proposal (score closed paper trades on net P\u0026L incl. banked T1/T2 partials; v_strategy_performance miscounts RDW/AMAT/IBM as losses)\n- No new wiki pages since 11-07 (only cross-domain-themes, portfolio and model pages updated by scheduled runs)"
+                 }
+             ]
 }
