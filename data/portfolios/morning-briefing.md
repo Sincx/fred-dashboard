@@ -14,9 +14,11 @@ ACN has no Monday EU print in that pull, so it's priced from the US listing ($25
 FX: EUR/USD 1.1224 | GBP/EUR 1.1975.
 Options: Black-Scholes marks on Monday closes at the same vols as options_pricing.py (ORCL 64.0%, PLTR 66.2%). NBIS is
 still a hand estimate at 80% vol, because its Turso row still has no strike, expiry or type.
-Data quality: check_data_quality.py was started this run but hadn't finished when this was written. Sunday's run showed
-only the known repeats (ACN/ZOE EU fundamentals, QXO-PB fundamentals, the NBIS option_mark row, SEC filings rows for
-BIRK/ERO/SAP, PRX valuation). None of those changes a price or TA figure here.
+Data quality (check_data_quality.py finished after the first write): 113 rows still failing, 0 auto-recovered, and 112
+of them at 3+ consecutive failures (needs manual review, mostly universe tickers). For holdings, only the known repeats
+remain: ACN/ZOE EU fundamentals ("no sa_prefix"), QXO-PB fundamentals ("no data from any source") and the NBIS
+option_mark row (no strike). Sunday's BIRK/ERO/SAP SEC-filings rows and PRX's valuation row are no longer listed. None
+of these changes a price or TA figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
