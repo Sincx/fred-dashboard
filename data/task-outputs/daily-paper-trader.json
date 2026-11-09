@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-09T23:40:20.5513385+01:00",
+      "summary": "ITX (E)",
+      "picks": {
+        "p1": {
+          "ticker": "ITX.MC",
+          "strategy": "E — Sector Rotation",
+          "entry": 59.66,
+          "stop": 50.71,
+          "t1": 74.58,
+          "t2": 89.49
+        }
+      },
+      "content": "Inditex sits near its first-ever €60 close on H1 FY26 sales +9.2% at constant currency, as consumer discretionary leads the quarter and led today's risk-on rebound; the book's first BME name adds non-US, non-healthcare diversification, and PFE was trimmed for capacity at −2.18%."
+    },
+    {
       "runAt": "2026-11-06T23:40:04.991860+01:00",
       "summary": "BDX (B)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Becton Dickinson is +36% in 3 months and held near its 6-month high through the AI-capex rout after an FQ4 beat (adj EPS +27%) and an FY27 adj EPS guide of $13.10–13.30 (~16x), a defensive non-tech medtech momentum entry; ICFI was exited as the capacity trim."
-    },
-    {
-      "runAt": "2026-11-05T23:40:56.9679057+01:00",
-      "summary": "PFE (D)",
-      "picks": {
-        "p1": {
-          "ticker": "PFE",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 29.88,
-          "stop": 25.4,
-          "t1": 37.35,
-          "t2": 44.82
-        }
-      },
-      "content": "Pfizer beat Q3 and raised FY26 revenue and EPS guidance yet trades at ~10x forward with a 5.6% yield, a defensive Burry-aligned entry on an AI-capex rout (S&P −4.4%, VIX 28); NDAQ was trimmed for capacity at +1.16% and no stops or targets triggered."
     }
   ]
 }
