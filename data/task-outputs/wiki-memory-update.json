@@ -1,18 +1,18 @@
-{
+﻿{
     "taskId":  "wiki-memory-update",
     "label":  "Wiki Memory Update",
     "schedule":  "Daily 11:53 PM",
     "icon":  "ðŸ—‚ï¸",
     "runs":  [
                  {
+                     "runAt":  "2026-11-10T23:54:29.8343252+01:00",
+                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (NBIS put decision), briefing thread superseded",
+                     "content":  "- Last updated -\u003e 2026-11-10\n- Meta row: wiki-thinker run count 103 -\u003e 104 (through 11-10); 11-10 highlight added (NBIS put vs Burry\u0027s rejected form, Finland DC missing from power model)\n- Finance row: paper-trader timeline extended with 11-09 (ITX entry, PFE trim) and 11-10 (GPN entry, SHEL trim; 35 open, net P\u0026L +2.81%)\n- Open Threads: briefing thread superseded by 11-10 (~EUR 22,228; EDEN/KLR Exit -\u003e Watch, IQV -\u003e Hold; ORCL put ITM; exits now SFM + ERO)\n- Open Threads: added 11-10 wiki-thinker thread (decide on NBIS put; add Nebius Finland DC to regional power model)\n- No new wiki pages beyond routine GPN paper trade (2026-11-10-GPN.md)"
+                 },
+                 {
                      "runAt":  "2026-11-09T23:53:58.4975013+01:00",
                      "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (hidden AI beta / midterm connection), 2 threads superseded",
                      "content":  "- Last updated -\u003e 2026-11-09\n- Meta row: wiki-thinker run count 102 -\u003e 103 (through 11-09)\n- Open Threads: sector-tracker thread superseded by 11-09 (XLP P/E anomaly, no Expensive sectors, XLE Cheap, G-V spread -2901 bps)\n- Open Threads: briefing thread superseded by 11-09 (exits SFM/EDEN, ERO on stop, ORCL put \u003e$120, NBIS put, ACN free ride lapsed)\n- Open Threads: added 11-09 wiki-thinker idea (regress longs on SMH for hidden AI beta) + Democrats midterm vs BTC catalyst connection\n- No new wiki pages beyond routine ITX paper trade (2026-11-09-ITX.md)"
-                 },
-                 {
-                     "runAt":  "2026-11-08T23:54:18.777+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (net-P\u0026L scoring proposal for strategy performance)",
-                     "content":  "- Last updated -\u003e 2026-11-08\n- Meta row: wiki-thinker run count 101 -\u003e 102 (through 11-08)\n- Open Threads: added 11-08 strategy-feedback proposal (score closed paper trades on net P\u0026L incl. banked T1/T2 partials; v_strategy_performance miscounts RDW/AMAT/IBM as losses)\n- No new wiki pages since 11-07 (only cross-domain-themes, portfolio and model pages updated by scheduled runs)"
                  }
              ]
 }
