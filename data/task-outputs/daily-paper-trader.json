@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-10T23:39:57.0892310+01:00",
+      "summary": "GPN (B)",
+      "picks": {
+        "p1": {
+          "ticker": "GPN",
+          "strategy": "B — Momentum",
+          "entry": 101.59,
+          "stop": 86.35,
+          "t1": 126.99,
+          "t2": 152.39
+        }
+      },
+      "content": "Global Payments closed at a new 52-week high on reports that CD&R and GTCR are exploring a ~$40bn take-private and a Q3 Worldpay-synergy raise, a payments momentum entry with a bid floor that diversifies the healthcare-heavy book; SHEL was trimmed for capacity at −0.89%."
+    },
+    {
       "runAt": "2026-11-09T23:40:20.5513385+01:00",
       "summary": "ITX (E)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Inditex sits near its first-ever €60 close on H1 FY26 sales +9.2% at constant currency, as consumer discretionary leads the quarter and led today's risk-on rebound; the book's first BME name adds non-US, non-healthcare diversification, and PFE was trimmed for capacity at −2.18%."
-    },
-    {
-      "runAt": "2026-11-06T23:40:04.991860+01:00",
-      "summary": "BDX (B)",
-      "picks": {
-        "p1": {
-          "ticker": "BDX",
-          "strategy": "B — Momentum",
-          "entry": 211.88,
-          "stop": 180.1,
-          "t1": 264.85,
-          "t2": 317.82
-        }
-      },
-      "content": "Becton Dickinson is +36% in 3 months and held near its 6-month high through the AI-capex rout after an FQ4 beat (adj EPS +27%) and an FY27 adj EPS guide of $13.10–13.30 (~16x), a defensive non-tech medtech momentum entry; ICFI was exited as the capacity trim."
     }
   ]
 }
