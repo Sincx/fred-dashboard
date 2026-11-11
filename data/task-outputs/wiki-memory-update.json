@@ -1,18 +1,18 @@
 ﻿{
-    "taskId":  "wiki-memory-update",
-    "label":  "Wiki Memory Update",
-    "schedule":  "Daily 11:53 PM",
-    "icon":  "ðŸ—‚ï¸",
-    "runs":  [
-                 {
-                     "runAt":  "2026-11-10T23:54:29.8343252+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (NBIS put decision), briefing thread superseded",
-                     "content":  "- Last updated -\u003e 2026-11-10\n- Meta row: wiki-thinker run count 103 -\u003e 104 (through 11-10); 11-10 highlight added (NBIS put vs Burry\u0027s rejected form, Finland DC missing from power model)\n- Finance row: paper-trader timeline extended with 11-09 (ITX entry, PFE trim) and 11-10 (GPN entry, SHEL trim; 35 open, net P\u0026L +2.81%)\n- Open Threads: briefing thread superseded by 11-10 (~EUR 22,228; EDEN/KLR Exit -\u003e Watch, IQV -\u003e Hold; ORCL put ITM; exits now SFM + ERO)\n- Open Threads: added 11-10 wiki-thinker thread (decide on NBIS put; add Nebius Finland DC to regional power model)\n- No new wiki pages beyond routine GPN paper trade (2026-11-10-GPN.md)"
-                 },
-                 {
-                     "runAt":  "2026-11-09T23:53:58.4975013+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (hidden AI beta / midterm connection), 2 threads superseded",
-                     "content":  "- Last updated -\u003e 2026-11-09\n- Meta row: wiki-thinker run count 102 -\u003e 103 (through 11-09)\n- Open Threads: sector-tracker thread superseded by 11-09 (XLP P/E anomaly, no Expensive sectors, XLE Cheap, G-V spread -2901 bps)\n- Open Threads: briefing thread superseded by 11-09 (exits SFM/EDEN, ERO on stop, ORCL put \u003e$120, NBIS put, ACN free ride lapsed)\n- Open Threads: added 11-09 wiki-thinker idea (regress longs on SMH for hidden AI beta) + Democrats midterm vs BTC catalyst connection\n- No new wiki pages beyond routine ITX paper trade (2026-11-09-ITX.md)"
-                 }
-             ]
+    "taskId": "wiki-memory-update",
+    "label": "Wiki Memory Update",
+    "schedule": "Daily 11:53 PM",
+    "icon": "ðŸ—‚ï¸",
+    "runs": [
+        {
+            "runAt": "2026-11-11T23:55:05.6430000+01:00",
+            "summary": "Memory index updated - 1 new page, 0 threads resolved, 2 new threads (grayscale test / reroll mechanic; company scanner + resolver encoding bug), briefing thread superseded",
+            "content": "- Last updated -> 2026-11-11\n- Podcasts row: new page podcast-death-sex-and-money-real-life-willy-wonka-tony-hawk (new show; built from 99% Invisible Ep 688 transcript)\n- Meta row: wiki-thinker run count 104 -> 105 (through 11-11); 11-11 highlight added (grayscale test vs Screen Time log; autobattler reroll as slot-machine mechanic)\n- Finance row: paper-trader timeline extended with 11-11 (FTV entry, ULVR trim; 35 open; candidates.py D parse failure noted)\n- Open Threads: briefing thread superseded by 11-11 (~EUR 21,502, -726; FLUT -> Hold; EDEN exit recommended again; ORCL put close rule fired; exits now SFM + ERO + EDEN)\n- Open Threads: added 11-11 wiki-thinker thread (grayscale test as first my-protocol biomarker; save-vs-reroll for the kids money game)\n- Open Threads: added 11-11 wiki-company-scanner thread (ADC, INTA auto-added; 2 to pending review; resolve_ticker.py needs encoding=\"utf-8\")\n- No naming-convention or key-decision changes; no threads resolved"
+        },
+        {
+            "runAt": "2026-11-10T23:54:29.8343252+01:00",
+            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (NBIS put decision), briefing thread superseded",
+            "content": "- Last updated -> 2026-11-10\n- Meta row: wiki-thinker run count 103 -> 104 (through 11-10); 11-10 highlight added (NBIS put vs Burry's rejected form, Finland DC missing from power model)\n- Finance row: paper-trader timeline extended with 11-09 (ITX entry, PFE trim) and 11-10 (GPN entry, SHEL trim; 35 open, net P&L +2.81%)\n- Open Threads: briefing thread superseded by 11-10 (~EUR 22,228; EDEN/KLR Exit -> Watch, IQV -> Hold; ORCL put ITM; exits now SFM + ERO)\n- Open Threads: added 11-10 wiki-thinker thread (decide on NBIS put; add Nebius Finland DC to regional power model)\n- No new wiki pages beyond routine GPN paper trade (2026-11-10-GPN.md)"
+        }
+    ]
 }
