@@ -14,8 +14,11 @@ recomputed from those bars.
 FX: EUR/USD 1.1093 | GBP/EUR 1.1967.
 Options: Black-Scholes marks on Wednesday closes at the same vols as options_pricing.py (ORCL 63.9%, PLTR 66.6%). NBIS
 is still a hand estimate at 80% vol, because its Turso row still has no strike, expiry or type.
-Data quality: check_data_quality.py was started at the top of the run but had printed nothing by the time this was
-written, as on previous nights, so it's left running. No holding's price or TA figure here depends on it.
+Data quality: check_data_quality.py finished after the briefing was first written (this paragraph was added then).
+For holdings, the failing rows are the known repeats, all still failing after the automatic retry: ACN and ZOE EU
+fundamentals and QXO-PB fundamentals (27 consecutive failures each, need manual review), the NBIS option_mark row
+(87 failures, missing strike/expiry/type), plus filings rows for BIRK, ERO and SAP (US) and PRX's EU valuation row.
+The rest are universe tickers. None of these changes a price or TA figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
