@@ -5,14 +5,14 @@
     "icon":  "🔎",
     "runs":  [
                  {
+                     "runAt":  "2026-11-11T12:45:22.6070044+01:00",
+                     "summary":  "2 auto-added, 2 pending review",
+                     "content":  "Scanned 30 wiki pages changed since 2026-11-04: the 11-07 podcast batch (Dividend Talk Q3 earnings, Capital Allocators/Intapp, Guardian Tahnoon profile), the BDX/ITX/GPN/PFE paper trades and portfolio pages. Auto-added Agree Realty (ADC) and Intapp (INTA), both exact SEC matches; 15 others incl. TXN, MDT, GPN, BDX, LOW, Iberdrola, Deutsche Boerse, L\u0027Oreal, Inditex and Games Workshop were already tracked (the UK/EU ones checked directly in Turso). Mensch und Maschine (Xetra) and International Holding Company (ADX) went to pending review."
+                 },
+                 {
                      "runAt":  "2026-11-04T09:14:08.7717520+01:00",
                      "summary":  "3 auto-added, 6 pending review",
                      "content":  "Scanned 66 wiki pages changed since 2026-10-28; most were reverse-link touches, the new content was the 11-03 clippings batch (Burry Trading Post/BBW Part II/Anthropic S-1, Bloomberg AMD, Palantir, Where to Invest, AI components) plus the SPGI/NDAQ/PII/ULVR/UPS trades and the spinoff update. Auto-added Toast (TOST), Minebea Mitsumi (MINBY ADR) and Unilever (UL ADR, ULVR already traded on LSE); 21 others incl. GPN, FIS, PYPL, APO, BX, COO and AVGO were already tracked. LVMH, Fujikura, Furukawa Electric, Murata, plus Corning and Valero (SEC name misses) went to pending review."
-                 },
-                 {
-                     "runAt":  "2026-10-28T09:15:31.0064517+01:00",
-                     "summary":  "1 auto-added, 6 pending review",
-                     "content":  "Scanned 66 wiki pages changed since 2026-10-21: the 10-25 Morningstar/Burry clippings batch (best AI stocks, CoreWeave debt, BMY, LHX/LNT, AI hedges, Bloom Q3), new paper trades (ELV, PG, JNJ, LDOS, ALLE) and 7 podcast pages. Auto-added Innovative Industrial Properties (IIPR, exact SEC match, from Dividend Talk EP 310); 20 others incl. BMY, LHX, LNT, MRVL, ANET, CRWV, BE, GEV, HONA, PTC, SBUX, CMG and BKNG were already tracked. Elice Group, Nebius, Marsh McLennan and Northrop (SEC name misses), Schneider Electric and Tomra went to pending review."
                  }
              ]
 }
