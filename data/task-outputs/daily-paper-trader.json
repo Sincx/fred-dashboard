@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-12T23:41:48.955162+01:00",
+      "summary": "VLO (A)",
+      "picks": {
+        "p1": {
+          "ticker": "VLO",
+          "strategy": "A — Value",
+          "entry": 374.95,
+          "stop": 318.71,
+          "t1": 468.69,
+          "t2": 562.43
+        }
+      },
+      "content": "Valero trades at ~7x forward earnings after a 19% pullback from its high and returns about half of its operating cash flow, entered on a day when energy was the only sector to rise; GPN was exited at −13.19% after its take-private talks reportedly collapsed."
+    },
+    {
       "runAt": "2026-11-11T23:41:47.5019550+01:00",
       "summary": "FTV (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Fortive's Q3 beat (core growth +7.2%, adjusted EPS $0.77 vs ~$0.70) came with a raised FY26 EPS guide and ~$300M of buybacks, and the stock is drifting up to a 52-week high, +10.2% from its pre-report close; ULVR was trimmed for capacity at +0.31%."
-    },
-    {
-      "runAt": "2026-11-10T23:39:57.0892310+01:00",
-      "summary": "GPN (B)",
-      "picks": {
-        "p1": {
-          "ticker": "GPN",
-          "strategy": "B — Momentum",
-          "entry": 101.59,
-          "stop": 86.35,
-          "t1": 126.99,
-          "t2": 152.39
-        }
-      },
-      "content": "Global Payments closed at a new 52-week high on reports that CD&R and GTCR are exploring a ~$40bn take-private and a Q3 Worldpay-synergy raise, a payments momentum entry with a bid floor that diversifies the healthcare-heavy book; SHEL was trimmed for capacity at −0.89%."
     }
   ]
 }
