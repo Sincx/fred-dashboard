@@ -5,14 +5,14 @@
     "icon":  "🍽",
     "runs":  [
                  {
+                     "runAt":  "2026-11-13T09:07:34.0000000+01:00",
+                     "summary":  "3 new recipes: Mapo Tofu, French Onion Soup Gratinée, Baked Vacherin Mont d'Or",
+                     "content":  "1. Mapo Tofu with Pork and Sichuan Peppercorn, inspired by David Chang. A 30-minute numbing-hot weeknight bowl of soft tofu and crisp pork in chilli bean sauce over rice.\n2. Soupe à l'Oignon Gratinée (Les Halles French Onion Soup), inspired by Anthony Bourdain. The technique dish: a kilo of onions caramelised to mahogany, dark stock, and a blistered Gruyère lid.\n3. Baked Vacherin Mont d'Or with New Potatoes, Cornichons and Ham, inspired by Nigel Slater. The wild card: a seasonal winter cheese baked molten in its box with garlic, thyme and white wine."
+                 },
+                 {
                      "runAt":  "2026-11-06T09:07:53.7569283+01:00",
                      "summary":  "3 new recipes: Kimchi Jjigae, Chicken Leek and Tarragon Pie, Pork Sisig",
                      "content":  "1. Kimchi Jjigae (Kimchi, Pork and Tofu Stew), inspired by David Chang. A 35-minute fiery, sour Korean one-pot built on extra-fermented kimchi fried in pork fat.\n2. Chicken, Leek and Tarragon Pie, inspired by Nigel Slater. A poached-chicken, leek and cream pie under an all-butter puff lid, using leeks at their November best.\n3. Pork Sisig with Calamansi and Chilli, inspired by Anthony Bourdain. The wild card: Pampanga-style simmered, grilled and chopped pork belly served sizzling with an egg and cold beer."
-                 },
-                 {
-                     "runAt":  "2026-10-30T09:08:27.3231666+01:00",
-                     "summary":  "3 new recipes: Shrimp and Cheddar Grits, Beef Shin with Ale, Cochinita Pibil",
-                     "content":  "1. Mad Hungry Shrimp and Cheddar Grits with Smoky Bacon, inspired by Lucinda Scala Quinn. A 30-minute Southern skillet supper of paprika prawns over creamy cheddar grits.\n2. Braised Beef Shin with Ale, Mushrooms and Thyme, with Parsnip Mash, inspired by Nigel Slater. A slow low-oven November braise with hard-browned shin and sweet early-winter parsnips.\n3. Cochinita Pibil with Pickled Red Onions, inspired by Anthony Bourdain. The wild card: Yucatán achiote-and-citrus slow-roast pork in banana leaves, served in warm tortillas."
                  }
              ]
 }
