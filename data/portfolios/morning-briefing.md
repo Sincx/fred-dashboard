@@ -14,9 +14,12 @@ recomputed from those bars.
 FX: EUR/USD 1.1057 | GBP/EUR 1.1970.
 Options: Black-Scholes marks on Thursday closes at options_pricing.py's current vols (ORCL 65.2%, PLTR 66.6%). NBIS
 is still a hand estimate at 80% vol, because its Turso row still has no strike, expiry or type.
-Data quality: check_data_quality.py was still running at write time (it retries each failing row). Nothing from it
-is reflected here. Wednesday's known failing rows (ACN/ZOE/QXO-PB fundamentals, the NBIS option mark, some filings
-rows) don't affect any price or TA figure below.
+Data quality: check_data_quality.py finished after the briefing was first written (this paragraph was updated then).
+762 rows recovered automatically, including technicals rows for holdings GSK, REL, KLR, EDEN, SAP, WKL, PRX, ZOE and
+QXO-PB and candidates IAG and MONY. 228 rows are still failing after the retry. For holdings these are the known
+repeats: ACN and ZOE EU fundamentals and QXO-PB fundamentals (28 consecutive failures each, need manual review), the
+NBIS option_mark row (89 failures, missing strike/expiry/type), plus filings rows for BIRK, ERO and SAP (US) and
+PRX's EU valuation row. The rest are universe tickers. None of these changes a price or TA figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
@@ -195,7 +198,7 @@ PORTFOLIO RISKS TO WATCH
     their SMA50 after today's falls. LULU is $0.65 above its ATR stop ref.
   - No stop orders are in place on any position.
   - Data: the NBIS put is still marked by hand. Tonight's prices are from yfinance, not Turso, so Friday's Turso rows
-    may differ slightly. check_data_quality.py hadn't reported by write time. The causes of today's moves in NBIS,
+    may differ slightly. The causes of today's moves in NBIS,
     QXO-PB and FLUT weren't checked. KLR's 2,858p intraday low is unverified.
 
 NEXT ACTIONS
