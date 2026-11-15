@@ -1,18 +1,18 @@
 {
-    "taskId":  "wiki-memory-update",
-    "label":  "Wiki Memory Update",
-    "schedule":  "Daily 11:53 PM",
-    "icon":  "ðŸ—‚ï¸",
-    "runs":  [
-                 {
-                     "runAt":  "2026-11-15T15:26:13.6308043+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 2 new threads (11-13 to 11-15 scheduler gap; Unity/Intapp cross-links)",
-                     "content":  "- Last updated -\u003e 2026-11-15 (previous update 11-12; no memory-update ran 11-13 or 11-14)\n- Meta row: wiki-thinker run count 106 -\u003e 107 (through 11-13); 11-13 highlight added (Burry\u0027s Unity \u0027Castle\u0027 rating vs Fred\u0027s own Unity build; Intapp as first non-HR case for Work\u0027s Workday debate)\n- Cooking row: recipe-recommender 11-13 run added (week of 11-16: mapo tofu, French onion soup, baked Vacherin Mont d\u0027Or; zero fish again)\n- Crypto row: portfolio refresh 11-15 added (5 prices updated, TEST still unavailable; BTC -15.43%, ETH -21.01%, LINK -17.75% since 11-07; Alpha Vantage MCP down)\n- Open Threads: added scheduler-gap thread (nothing logged from 11-13 12:27 to the 11-15 crypto refresh; 11-13 paper trader, briefing and memory-update plus all 11-14 runs missing; this run fired at 15:25, not 23:53)\n- Open Threads: added 11-13 wiki-thinker thread (link Unity game notes into Finance; add Intapp to the Workday debate)\n- No new wiki pages; no naming-convention or key-decision changes; no threads resolved"
-                 },
-                 {
-                     "runAt":  "2026-11-12T23:54:58.8600000+01:00",
-                     "summary":  "Memory index updated - 0 new pages, 0 threads resolved, 1 new thread (live Lightfin Case 0 / stablecoin holders), briefing thread superseded",
-                     "content":  "- Last updated -\u003e 2026-11-12\n- Meta row: wiki-thinker run count 105 -\u003e 106 (through 11-12); 11-12 highlight added (N.D. Austin one-off method as a fourth Lightfin track; Scam Inc vs the Bessent stablecoin-demand page)\n- Finance row: paper-trader timeline extended with 11-12 (VLO entry, Strategy A; GPN discretionary exit at -13.19% after take-private talks reportedly dropped; 35 open)\n- Podcasts row: podcast-recommender 11-12 batch added (Scam Inc, Complex Systems, Planet MicroCap Podcast, The MAD Podcast)\n- Open Threads: briefing thread superseded by 11-12 (~EUR 21,788, +286; FLUT and ORCL short -\u003e Watch; exits still SFM + ERO + EDEN, ORCL put close; NBIS put profit-take flagged; new pending idea CF)\n- Open Threads: added 11-12 wiki-thinker thread (live one-off Case 0 for Lightfin; who holds the stablecoins on the Bessent page)\n- No new wiki pages beyond the routine VLO paper trade (2026-11-12-VLO.md); no naming-convention or key-decision changes; no threads resolved"
-                 }
-             ]
+    "taskId": "wiki-memory-update",
+    "label": "Wiki Memory Update",
+    "schedule": "Daily 11:53 PM",
+    "icon": "ðŸ—‚ï¸",
+    "runs": [
+        {
+            "runAt": "2026-11-15T23:54:29.6212173+01:00",
+            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 2 new threads (strategy-feedback proposals; MSTR BTC beta), briefing thread superseded",
+            "content": "- Second update today (first ran at 15:26); Last updated stays 2026-11-15\n- Meta row: wiki-thinker run count 107 -> 108 (through 11-15; none 11-14)\n- Books row: book-recommender 11-15 batch added (1873, We Shall Outlast Them, Morbid, Taiwan Travelogue)\n- Finance row: mf-update 11-15 added (35 stocks ranked; top 3 MU, MGNS, DNLM)\n- Open Threads: scheduler-gap thread updated - the 11-15 evening runs (book-recommender, wiki-thinker, mf-update, strategy-feedback, briefing) all logged; 11-13/11-14 runs never backfilled; left open until Monday 11-16 runs appear\n- Open Threads: briefing thread superseded by 11-15 (~EUR 22,159, +371; IQV and LULU -> Watch; exits still SFM + ERO + EDEN, ORCL put close; NBIS put ~244% of cost; WKL free ride lean execute)\n- Open Threads: added 11-15 strategy-feedback thread (re-entry cooldown; Lens 3 heat map rebuild with measured AI beta; capital-cap amendment; trader forced to close one position a day)\n- Open Threads: added 11-15 wiki-thinker thread (measure MSTR BTC beta; short-AI and long-crypto books lose together)\n- No new wiki pages; no naming-convention or key-decision changes; no threads resolved"
+        },
+        {
+            "runAt": "2026-11-15T15:26:13.6308043+01:00",
+            "summary": "Memory index updated - 0 new pages, 0 threads resolved, 2 new threads (11-13 to 11-15 scheduler gap; Unity/Intapp cross-links)",
+            "content": "- Last updated -> 2026-11-15 (previous update 11-12; no memory-update ran 11-13 or 11-14)\n- Meta row: wiki-thinker run count 106 -> 107 (through 11-13); 11-13 highlight added (Burry's Unity 'Castle' rating vs Fred's own Unity build; Intapp as first non-HR case for Work's Workday debate)\n- Cooking row: recipe-recommender 11-13 run added (week of 11-16: mapo tofu, French onion soup, baked Vacherin Mont d'Or; zero fish again)\n- Crypto row: portfolio refresh 11-15 added (5 prices updated, TEST still unavailable; BTC -15.43%, ETH -21.01%, LINK -17.75% since 11-07; Alpha Vantage MCP down)\n- Open Threads: added scheduler-gap thread (nothing logged from 11-13 12:27 to the 11-15 crypto refresh; 11-13 paper trader, briefing and memory-update plus all 11-14 runs missing; this run fired at 15:25, not 23:53)\n- Open Threads: added 11-13 wiki-thinker thread (link Unity game notes into Finance; add Intapp to the Workday debate)\n- No new wiki pages; no naming-convention or key-decision changes; no threads resolved"
+        }
+    ]
 }
