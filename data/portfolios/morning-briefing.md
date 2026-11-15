@@ -14,9 +14,12 @@ values moved for source reasons as well as price (QXO-PB's SMA50 is $36.99 here 
 FX: EUR/USD 1.1028 | GBP/EUR 1.1985.
 Options: ORCL and PLTR puts are options_pricing.py's Black-Scholes marks (ORCL 65.2% vol, PLTR 66.5% vol, marked
 11-15). NBIS is still a hand estimate at 80% vol, because its Turso row still has no strike, expiry or type.
-Data quality: check_data_quality.py was still running its retries when this was written, so its results aren't
-included. The known repeats from Thursday (ACN, ZOE and QXO-PB fundamentals; the NBIS option_mark row) are assumed
-unchanged. None of them affects a price or TA figure here.
+Data quality: check_data_quality.py finished after the briefing was first written (this paragraph was updated then).
+1 row recovered automatically (SEPL, a universe ticker). 224 rows are still failing after the retry, 112 of them at
+3+ consecutive failures. For holdings these are the known repeats: ACN and ZOE EU fundamentals and QXO-PB
+fundamentals (29 consecutive failures each, need manual review), the NBIS option_mark row (92 failures, missing
+strike/expiry/type), plus filings rows for BIRK, ERO and SAP (US) and PRX's EU valuation row. The rest are universe
+tickers. None of these changes a price or TA figure here, and candidates CF, MONY and IAG are clean.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
@@ -197,7 +200,8 @@ PORTFOLIO RISKS TO WATCH
     are each within 1% of their SMA50.
   - No stop orders are in place on any position.
   - Data: the NBIS put is still marked by hand. The causes of the NBIS move (−25% in two sessions) and FLUT's
-    post-earnings fall weren't checked. Data-quality results for this run weren't available at write time.
+    post-earnings fall weren't checked. ACN, ZOE and QXO-PB fundamentals have failed 29 days running and need a
+    manual look.
 
 NEXT ACTIONS
   1. NBIS put: decide whether to bank ≈ €541 net (~€1,169 at the estimated mark, 244% of cost) or hold (214 days left). Check the real bid.
