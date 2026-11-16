@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-16T23:42:13.443503+01:00",
+      "summary": "DUK (E)",
+      "picks": {
+        "p1": {
+          "ticker": "DUK",
+          "strategy": "E — Sector Rotation",
+          "entry": 130.59,
+          "stop": 111.0,
+          "t1": 163.24,
+          "t2": 195.89
+        }
+      },
+      "content": "Duke Energy rose 1.1% as utilities and staples were the only sectors up on a 1.9% AI-led S&P fall; Q3 EPS grew 10% with the 2026 guide narrowed to the top end, at ~18x forward earnings and a 3.4% yield, and it is the book's first utility; LOW was trimmed for capacity at −1.94% ahead of its 11-18 report."
+    },
+    {
       "runAt": "2026-11-12T23:41:48.955162+01:00",
       "summary": "VLO (A)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "Valero trades at ~7x forward earnings after a 19% pullback from its high and returns about half of its operating cash flow, entered on a day when energy was the only sector to rise; GPN was exited at −13.19% after its take-private talks reportedly collapsed."
-    },
-    {
-      "runAt": "2026-11-11T23:41:47.5019550+01:00",
-      "summary": "FTV (D)",
-      "picks": {
-        "p1": {
-          "ticker": "FTV",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 67.89,
-          "stop": 57.71,
-          "t1": 84.86,
-          "t2": 101.84
-        }
-      },
-      "content": "Fortive's Q3 beat (core growth +7.2%, adjusted EPS $0.77 vs ~$0.70) came with a raised FY26 EPS guide and ~$300M of buybacks, and the stock is drifting up to a 52-week high, +10.2% from its pre-report close; ULVR was trimmed for capacity at +0.31%."
     }
   ]
 }
