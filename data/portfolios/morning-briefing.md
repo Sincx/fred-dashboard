@@ -14,9 +14,13 @@ pipeline's own indicator code. A few values differ from Sunday's Turso figures f
 FX: EUR/USD 1.0999 | GBP/EUR 1.1992.
 Options: all three puts are Black-Scholes estimates on Monday's closes (ORCL 65.2% vol, PLTR 66.5% vol, from
 options_pricing.py; NBIS a hand estimate at 80% vol, because its Turso row still has no strike, expiry or type).
-Data quality: check_data_quality.py was still running when this was written, so its result isn't included. The known
-repeats from Sunday (ACN, ZOE and QXO-PB fundamentals; the NBIS option_mark row) are assumed unchanged. None of them
-feeds a price or TA figure here.
+Data quality: check_data_quality.py finished after the briefing was first written (this paragraph was updated then).
+2 rows recovered automatically (STR and KBCA technicals; STR is one of today's candidates and its Monday figures here
+come from yfinance anyway). 224 rows are still failing after the retry, 112 of them at 3+ consecutive failures. For
+holdings these are the known repeats: ACN and ZOE EU fundamentals and QXO-PB fundamentals (30 consecutive failures
+each, need manual review), the NBIS option_mark row (94 failures, missing strike/expiry/type), plus filings rows for
+BIRK, ERO and SAP (US) and PRX's EU valuation row. The rest are universe tickers. None of these changes a price or TA
+figure here, and candidates IAG and MONY are clean.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
