@@ -1,26 +1,33 @@
-﻿{
-    "taskId":  "podcast-summarizer",
-    "label":  "Podcast Summarizer",
-    "schedule":  "Sat 10:02 AM",
-    "icon":  "🎙",
-    "runs":  [
-                 {
-                     "runAt":  "2026-11-07T10:12:03.8223392+01:00",
-                     "summary":  "5 podcast pages created",
-                     "content":  [
-                                     "The Guardian Long Read — Fixer, Financier, Spymaster: Sheikh Tahnoon",
-                                     "Diary of a CEO — Phone Addiction Scientist: Dr Sahar Yousef",
-                                     "Dividend Talk — Episode 311: Q3 Earnings Season",
-                                     "Capital Allocators — AI Tools for the Investment Firm (Ben Harrison)",
-                                     "Wisecrack — Season 1, Episodes 1-3"
-                                 ]
-                 },
-                 {
-                     "runAt":  "2026-10-31T10:09:20.4693366+01:00",
-                     "summary":  "1 podcast page created",
-                     "content":  [
-                                     "Off Duty (The Guardian) — Episodes 1-8"
-                                 ]
-                 }
-             ]
+{
+    "taskId": "podcast-summarizer",
+    "label": "Podcast Summarizer",
+    "schedule": "Sat 10:02 AM",
+    "icon": "🎙",
+    "runs": [
+        {
+            "runAt": "2026-11-24T16:10:03.072987+01:00",
+            "summary": "8 podcast pages created",
+            "content": [
+                "Kill List — Beverly Hills",
+                "Diary of a CEO — Russian Sex Spy: John Kiriakou & Aliia Roza",
+                "Designer Notes — Jake Solomon, Parts 1-2",
+                "Designer Notes — Sid Meier, Parts 1-4",
+                "Kill List — Season 1, Episodes 4-6",
+                "Kill List — Episodes 1-3",
+                "Wisecrack — Season 1, Episodes 4-6",
+                "Aftermath: Hunt for the Anthrax Killer — Episodes 1-8"
+            ]
+        },
+        {
+            "runAt": "2026-11-07T10:12:03.8223392+01:00",
+            "summary": "5 podcast pages created",
+            "content": [
+                "The Guardian Long Read — Fixer, Financier, Spymaster: Sheikh Tahnoon",
+                "Diary of a CEO — Phone Addiction Scientist: Dr Sahar Yousef",
+                "Dividend Talk — Episode 311: Q3 Earnings Season",
+                "Capital Allocators — AI Tools for the Investment Firm (Ben Harrison)",
+                "Wisecrack — Season 1, Episodes 1-3"
+            ]
+        }
+    ]
 }
