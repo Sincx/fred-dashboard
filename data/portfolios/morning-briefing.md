@@ -23,7 +23,10 @@ Market: the S&P 500 fell seven sessions running into correction (SPY −8.6% fro
 Monday after Nvidia reinstated Jensen Huang as CEO (Nvidia up more than 31%; QQQ +7.0%). Today ~16:00 SPY is −0.5%.
 Options: Black-Scholes on Monday's closes (ORCL 63.1% vol, PLTR 66.0%, from options_pricing.py; NBIS a hand estimate
 at 80% vol, because its Turso row still has no strike, expiry or type).
-Data quality: check_data_quality.py was still running when this was written, so its result is not included.
+Data quality (added after the run finished at ~16:30): nothing auto-recovered. 228 rows still fail after the retry, 112 of
+them at 3+ consecutive failures (NEEDS MANUAL REVIEW). For holdings: ACN and ZOE EU fundamentals and QXO-PB fundamentals
+(31 in a row each), the NBIS option_mark row (97, missing strike/expiry/type), plus BIRK, ERO and SAP (US) filings and PRX's
+EU valuation. None affects a price or TA figure here; candidates IAG and STR are clean.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
