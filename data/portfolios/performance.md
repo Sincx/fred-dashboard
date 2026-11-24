@@ -156,46 +156,48 @@ updated: 2026-11-24
 
 ## Open Book Snapshot (unrealised, updated 2026-11-24)
 
-*For reference only; not included in realised P&L tracking. Prices are 2026-11-23 closes via the `yfinance` Python library.*
+*For reference only; not included in realised P&L tracking. Prices are 2026-11-24 closes via the `yfinance` Python library.*
 
 | Ticker | Entry | Curr | P&L% | Open P&L $ | Notes |
 |---|---|---|---|---|---|
-| MRNA | $59.75 | $212.08 | +254.95% | +$850 | T1+T2 hit |
-| TNET | $45.40 | $62.97 | +38.70% | +$129 | T1+T2 hit |
-| CRWD | $165.87* | $208.97 | +25.98% | +$87 | T1+T2 hit; NDX-put overlap, WATCH |
-| AUTO | 452.80p | 540.60p | +19.39% | +$129 | T1 hit |
-| CVX | $174.01 | $206.17 | +18.48% | +$123 | T1 hit |
-| AMGN | $390.02 | $449.04 | +15.13% | +$151 |  |
-| COP | $115.04 | $132.19 | +14.91% | +$99 | T1 hit |
-| TMO | $603.18 | $688.08 | +14.08% | +$141 |  |
-| PII | $59.41 | $67.38 | +13.42% | +$134 |  |
-| VRTX | $477.08 | $538.54 | +12.88% | +$129 |  |
-| MTD | $1,533.48 | $1,725.52 | +12.52% | +$125 |  |
-| MDT | $92.04 | $100.72 | +9.43% | +$94 |  |
-| ABBV | $265.21 | $288.45 | +8.76% | +$88 |  |
-| CCL | $25.76 | $27.91 | +8.35% | +$83 |  |
-| V | $378.40 | $409.40 | +8.19% | +$82 |  |
-| SHW | $327.27 | $349.47 | +6.78% | +$68 |  |
-| MO | $70.04 | $73.80 | +5.37% | +$54 |  |
-| ALLE | $180.55 | $189.26 | +4.82% | +$48 |  |
-| RIGL | $40.26 | $41.98 | +4.27% | +$28 | T1 hit |
-| UHS | $177.08 | $183.33 | +3.53% | +$35 |  |
-| PG | $165.59 | $169.60 | +2.42% | +$24 |  |
-| JNJ | $263.81 | $270.05 | +2.37% | +$24 |  |
-| JPM | $310.89 | $316.66 | +1.86% | +$19 |  |
-| BDX | $211.88 | $215.44 | +1.68% | +$17 |  |
-| SPGI | $449.33 | $451.96 | +0.59% | +$6 |  |
-| DECK | $81.27 | $81.54 | +0.33% | +$3 |  |
-| TJX | $139.25 | $139.25 | +0.00% | +$0 | New 2026-11-24 (D — Earnings Catalyst) |
-| CMCL | $17.33 | $17.31 | −0.12% | −$0 | T1+T2 hit |
-| ZTS | $80.04 | $79.94 | −0.12% | −$1 |  |
-| UPS | $109.17 | $108.51 | −0.60% | −$6 |  |
-| DUK | $130.59 | $129.47 | −0.86% | −$9 |  |
-| ITX | €59.66 | €58.68 | −1.64% | −$16 |  |
-| SAP | $209.14 | $203.40 | −2.74% | −$27 |  |
-| FTV | $67.89 | $65.73 | −3.18% | −$32 |  |
-| UNH | $377.76 | $336.08 | −11.03% | −$110 | WATCH; CMS Medicare Advantage audit proposal |
-| **Open book total** | | | | **+$2,569** | |
+| MRNA | $59.75 | $227.38 | +280.55% | +$935 | T1+T2 hit |
+| TNET | $45.40 | $65.00 | +43.17% | +$144 | T1+T2 hit |
+| CRWD | $165.87* | $210.86 | +27.12% | +$90 | T1+T2 hit; NDX-put overlap, WATCH |
+| AUTO | 452.80p | 550.40p | +21.55% | +$144 | T1 hit |
+| AMGN | $390.02 | $473.93 | +21.51% | +$215 |  |
+| CVX | $174.01 | $208.73 | +19.95% | +$133 | T1 hit |
+| VRTX | $477.08 | $563.92 | +18.20% | +$182 |  |
+| COP | $115.04 | $134.64 | +17.04% | +$114 | T1 hit |
+| TMO | $603.18 | $695.62 | +15.33% | +$153 |  |
+| PII | $59.41 | $67.69 | +13.94% | +$139 |  |
+| ABBV | $265.21 | $300.28 | +13.22% | +$132 |  |
+| MTD | $1,533.48 | $1,704.00 | +11.12% | +$111 |  |
+| RIGL | $40.26 | $44.73 | +11.10% | +$74 | T1 hit |
+| CCL | $25.76 | $28.40 | +10.25% | +$102 |  |
+| V | $378.40 | $416.78 | +10.14% | +$101 |  |
+| SHW | $327.27 | $352.56 | +7.73% | +$77 |  |
+| MO | $70.04 | $74.82 | +6.82% | +$68 |  |
+| ALLE | $180.55 | $189.96 | +5.21% | +$52 |  |
+| JNJ | $263.81 | $276.46 | +4.80% | +$48 |  |
+| MDT | $92.04 | $96.13 | +4.44% | +$44 |  |
+| PG | $165.59 | $172.47 | +4.15% | +$42 |  |
+| BDX | $211.88 | $220.00 | +3.83% | +$38 |  |
+| DECK | $81.27 | $84.29 | +3.72% | +$37 |  |
+| UHS | $177.08 | $183.20 | +3.46% | +$35 |  |
+| TJX | $139.25 | $143.86 | +3.31% | +$33 | New 2026-11-24 (D — Earnings Catalyst) |
+| JPM | $310.89 | $317.10 | +2.00% | +$20 |  |
+| ZTS | $80.04 | $81.47 | +1.79% | +$18 |  |
+| UPS | $109.17 | $110.83 | +1.52% | +$15 |  |
+| SPGI | $449.33 | $455.17 | +1.30% | +$13 |  |
+| DUK | $130.59 | $130.96 | +0.28% | +$3 |  |
+| SAP | $209.14 | $208.75 | −0.19% | −$2 |  |
+| ITX | €59.66 | €58.30 | −2.28% | −$23 |  |
+| FTV | $67.89 | $65.77 | −3.12% | −$31 |  |
+| CMCL | $17.33 | $16.70 | −3.64% | −$12 | T1+T2 hit |
+| UNH | $377.76 | $341.88 | −9.50% | −$95 | WATCH; CMS Medicare Advantage audit proposal |
+| **Open book total** | | | | **+$3,152** | |
+
+*2026-11-24 (second run, 11-24 closes): no triggers, exits or new trade (TJX was already entered today). Open book +$3,152, Net P&L +$1,414 (+1.43%). MDT fell 4.6% on a Q2 FY27 revenue miss with FY27 guidance kept; held.*
 
 *2026-11-24: First run since 11-16; no stop/T1/T2 crossed on any close from 11-17 to 11-23. VLO (−12.15%, −$121.48) was exited via a Step 3F capacity trim when TJX's entry would have made 36 open: weakest position, with falling diesel cracks realising its named key risk. UNH (−11.03%) was held on WATCH after the CMS Medicare Advantage audit proposal. TJX entered under Strategy D (Q3 plan beat, FY27 comp guide raised to 4%). Net P&L +$831 (+0.84%), from +$2,232 on 11-16.*
 
