@@ -11,9 +11,9 @@ FX: EUR/USD 1.0970 | GBP/EUR 1.1953.
 Market: SPY −0.5%, QQQ −2.0%, Nvidia −5.9% to $155.38 after Monday's rebound. No dated report explaining the day was found.
 Options: Black-Scholes on Tuesday's closes (ORCL 63.0% vol, PLTR 65.7%; NBIS a hand estimate at 80% vol because its Turso
 row still has no strike, expiry or type).
-Pipeline health: OK on all tracked tasks. Row-level data quality: the retry loop was still running when this was written.
-Known from the 16:30 run: ACN, ZOE and QXO-PB fundamentals and the NBIS option mark fail daily (NEEDS MANUAL REVIEW), and
-BIRK, ERO and SAP (US) filings and PRX's EU valuation also failed. None affects a price or TA figure here.
+Pipeline health: OK on all tracked tasks. Row-level data quality (added after the retry finished): nothing auto-recovered.
+227 rows still fail, 112 of them at 3+ consecutive failures (NEEDS MANUAL REVIEW): for holdings, ACN, ZOE and QXO-PB
+fundamentals (32 in a row) and the NBIS option mark (98). BIRK, ERO and SAP (US) filings and PRX's EU valuation also failed. None affects a price or TA figure here.
 
 PORTFOLIO SNAPSHOT
   Positions:        21 open (17 long equity, 1 short, 3 options)
