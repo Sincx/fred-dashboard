@@ -5,6 +5,21 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-25T23:39:50.6149113+01:00",
+      "summary": "BATS (E)",
+      "picks": {
+        "p1": {
+          "ticker": "BATS.L",
+          "strategy": "E — Sector Rotation",
+          "entry": 4556.0,
+          "stop": 3872.6,
+          "t1": 5695.0,
+          "t2": 6834.0
+        }
+      },
+      "content": "Staples lead the quarter and BAT trades at ~11.8x forward earnings with a ~5.6% yield and a running £1.3bn buyback, 8% below its 52-week high (prices in GBX; ITX trimmed for capacity)."
+    },
+    {
       "runAt": "2026-11-24T16:11:15.424483+01:00",
       "summary": "TJX (D)",
       "picks": {
@@ -18,21 +33,6 @@
         }
       },
       "content": "TJX beat its Q3 plan with 4% comps and adjusted EPS of $1.34, raised its FY27 comp guide to 4%, and trades 17% below its 52-week high as an off-price trade-down beneficiary; VLO was trimmed for capacity at −12.15%."
-    },
-    {
-      "runAt": "2026-11-16T23:42:13.443503+01:00",
-      "summary": "DUK (E)",
-      "picks": {
-        "p1": {
-          "ticker": "DUK",
-          "strategy": "E — Sector Rotation",
-          "entry": 130.59,
-          "stop": 111.0,
-          "t1": 163.24,
-          "t2": 195.89
-        }
-      },
-      "content": "Duke Energy rose 1.1% as utilities and staples were the only sectors up on a 1.9% AI-led S&P fall; Q3 EPS grew 10% with the 2026 guide narrowed to the top end, at ~18x forward earnings and a 3.4% yield, and it is the book's first utility; LOW was trimmed for capacity at −1.94% ahead of its 11-18 report."
     }
   ]
 }
