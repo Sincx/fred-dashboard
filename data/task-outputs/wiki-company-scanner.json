@@ -1,18 +1,18 @@
 {
-    "taskId": "wiki-company-scanner",
-    "label": "Wiki Company Scanner",
-    "schedule": "Weekly Wednesday 9:05 AM",
-    "icon": "🔎",
-    "runs": [
-        {
-            "runAt": "2026-11-24T16:05:32.997825+01:00",
-            "summary": "1 auto-added, 0 pending review",
-            "content": "Scanned 21 wiki pages changed since 2026-11-11 (no run on 11-18): the FTV/VLO/DUK paper trades, podcast and book suggestions, cross-domain themes and the portfolio/market pages. Auto-added Cerebras Systems (CBRS, exact SEC match, MAD Podcast pick). 18 others incl. FTV, DUK, PSX, APA, U, VST and INTA were already tracked; the resolver missed Valero, Vestas, Newmont and Trainline on name format, but Turso already tracks all four, so nothing went to pending review."
-        },
-        {
-            "runAt": "2026-11-11T12:45:22.6070044+01:00",
-            "summary": "2 auto-added, 2 pending review",
-            "content": "Scanned 30 wiki pages changed since 2026-11-04: the 11-07 podcast batch (Dividend Talk Q3 earnings, Capital Allocators/Intapp, Guardian Tahnoon profile), the BDX/ITX/GPN/PFE paper trades and portfolio pages. Auto-added Agree Realty (ADC) and Intapp (INTA), both exact SEC matches; 15 others incl. TXN, MDT, GPN, BDX, LOW, Iberdrola, Deutsche Boerse, L'Oreal, Inditex and Games Workshop were already tracked (the UK/EU ones checked directly in Turso). Mensch und Maschine (Xetra) and International Holding Company (ADX) went to pending review."
-        }
-    ]
+  "taskId": "wiki-company-scanner",
+  "label": "Wiki Company Scanner",
+  "schedule": "Weekly Wednesday 9:05 AM",
+  "icon": "🔎",
+  "runs": [
+    {
+      "runAt": "2026-11-25T09:12:03.368361+01:00",
+      "summary": "5 auto-added, 0 pending review",
+      "content": "Scanned 55 wiki pages changed since 2026-11-24, mainly the late 11-24 Morningstar and Burry batch and the TJX paper trade (long living pages checked by their new dated entries). Auto-added CNH Industrial (CNH), Energy Transfer (ET), AptarGroup (ATR), Thor Industries (THO) and Dick's Sporting Goods (DKS), all exact SEC matches. The other 38 were already tracked; the resolver missed 9 of those on name format (CLX, APH, OKE, DVN, AOS, TJX, FER, HRL, AGCO), but Turso already has them, so nothing went to pending review."
+    },
+    {
+      "runAt": "2026-11-24T16:05:32.997825+01:00",
+      "summary": "1 auto-added, 0 pending review",
+      "content": "Scanned 21 wiki pages changed since 2026-11-11 (no run on 11-18): the FTV/VLO/DUK paper trades, podcast and book suggestions, cross-domain themes and the portfolio/market pages. Auto-added Cerebras Systems (CBRS, exact SEC match, MAD Podcast pick). 18 others incl. FTV, DUK, PSX, APA, U, VST and INTA were already tracked; the resolver missed Valero, Vestas, Newmont and Trainline on name format, but Turso already tracks all four, so nothing went to pending review."
+    }
+  ]
 }
