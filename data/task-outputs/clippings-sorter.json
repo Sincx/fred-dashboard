@@ -5,14 +5,14 @@
     "icon": "ðŸ“Ž",
     "runs": [
         {
+            "runAt": "2026-11-25T23:19:31.081210+01:00",
+            "summary": "No new clippings",
+            "content": "Clippings folder empty."
+        },
+        {
             "runAt": "2026-11-24T23:24:43.321847+01:00",
             "summary": "8 clippings processed",
             "content": "- 3 More Stocks to Buy After Earnings.md → finance → wiki/finance/morningstar/source-morningstar-3-stocks-after-earnings-2026-11-24.md\n- 7 Undervalued Stocks That Just Raised Dividends.md → finance → wiki/finance/morningstar/source-morningstar-dividend-raises-2026-11-06.md\n- The 10 Best Dividend Stocks.md → finance → wiki/finance/morningstar/source-morningstar-best-dividend-2026-11-18.md\n- How NVIDIA’s Changed Asian Revenue Reporting….md → finance → wiki/finance/investor-letters/source-burry-nvidia-singapore-revenue-2026-11-15.md\n- Say It Ain’t So - NVIDIA on Fire….md → finance → wiki/finance/investor-letters/source-burry-nvidia-on-fire-2026-11-13.md\n- Trading Post November 19, 2026.md → finance → wiki/finance/investor-letters/source-burry-trading-post-2026-11-19.md\n- Trading Post November 20, 2026 … 1.md → finance → wiki/finance/investor-letters/source-burry-trading-post-2026-11-20.md\n- Trading Post November 20, 2026 ….md → finance → wiki/finance/investor-letters/source-burry-short-thoughts-hong-kong-2026-11-20.md\n\nWatchlist: 15 stocks added, 8 updated; 13 Burry rows updated. Pipeline config: 14 tickers added (Morningstar-US rows 182-195), Burry rows moved to 196-227; the sheet itself was not checked.\nFound, not fixed: sheets.py reads only to row 172, so rows 173-227 are not read back downstream."
-        },
-        {
-            "runAt": "2026-11-24T15:55:26.0223721+01:00",
-            "summary": "No new clippings",
-            "content": "Clippings folder empty."
         }
     ]
 }
