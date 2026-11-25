@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-25T23:54:27.4089266+01:00",
+            "summary": "Memory index updated - 1 new page (BATS paper trade), 2 new threads, 2 refreshed",
+            "content": "- Last updated -> 2026-11-25\n- Finance row: new paper-trading/trades/2026-11-25-BATS page (Strategy E)\n- Meta row: wiki-thinker at 111 runs\n- Open Threads added: BATS entry / ITX trim (select-strategy A screen repeated held names; BATS stored in pence); thinker idea that option marks ignore implied vol (NBIS put last trade $29.85 vs $21.00 mark)\n- Open Threads refreshed: 11-24 briefing replaced by 11-25 (~EUR 23,225; ORCL put decision, GIS starter, PRX fell on results day); company scanner now lists 11-25 adds (CNH, ET, ATR, THO, DKS)\n- No threads resolved; no naming-convention or key-decision changes"
+        },
+        {
             "runAt": "2026-11-24T23:54:54.719722+01:00",
             "summary": "Memory index updated - 18 new pages (8 podcasts, 8 finance sources, 1 game design, 1 paper trade), 3 new threads, 1 resolved, 1 superseded",
             "content": "- Second run of 11-24, covering the changes since the 16:02 snapshot; date unchanged (2026-11-24)\n- Podcasts: 8 new summary pages replace the \"listening list without pages\" note\n- Finance: 8 clippings source pages (3 Morningstar, 5 Burry), Burry pipeline rows now 196-227, mf-update, trackers through 11-23, TJX entered / VLO trimmed (net P&L +$1,414)\n- Games: new game-design-principles page; Meta: wiki-thinker at 110 runs\n- Open Threads added: ORCL/NBIS puts and pending strategy proposals; Sheet row-172 read limit and rows 182-227 check; company scanner (CBRS, SEC User-Agent)\n- Open Threads superseded: 11-16 briefing replaced by 11-24 23:40 (~EUR 22,702)\n- Open Threads narrowed: outage (catch-up started on all affected tasks; five tasks still without a model, four of them due 12-01), AI rebalancing trigger, 10-14 scheduler gap (only email-to-clipping unconfirmed)\n- Open Threads removed: 11-09 sector P/E (tracker note says P/E changes now broadly match prices, including ICLN)\n- No naming-convention or key-decision changes"
-        },
-        {
-            "runAt": "2026-11-24T16:04:25.7035908+01:00",
-            "summary": "Memory index updated - 0 new pages, 2 new threads (11-17 to 11-23 task outage, EV fall), 0 resolved",
-            "content": "- Last updated -> 2026-11-24 (no memory run 11-17 to 11-23)\n- Open Threads: added scheduled-task outage thread. Runs failed with \"Fable 5.2 requires usage credits\"; eleven enabled tasks still have no model set; podcast-summarizer, mf-update, etf-returns-refresh and sheets-turso-diff have not caught up\n- Open Threads: added EV ~37% 24h fall, cause not investigated\n- Crypto row: portfolio refresh 11-24 (EV -37.53%, LUCKY -12.14%, BTC -6.15%, ETH -4.68%, LINK +0.09% since 11-15)\n- Cooking row: recipe-recommender 11-24 (week of 11-30)\n- Podcasts row: 4 listening-list additions without summary pages; podcast-recommender 11-24\n- Meta row: wiki-thinker outage noted\n- Snapshot taken about 16:02 while catch-up runs (briefing, wiki-thinker and others) were still going; their results are not included\n- No threads removed; no naming-convention or key-decision changes"
         }
     ]
 }
