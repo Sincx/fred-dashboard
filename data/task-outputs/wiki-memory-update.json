@@ -5,14 +5,14 @@
     "icon": "ðŸ—‚ï¸",
     "runs": [
         {
+            "runAt": "2026-11-26T23:54:45.7933845+01:00",
+            "summary": "Memory index updated - 2 new pages (Running the Game eps 2 and 70), 1 new key decision, 1 new thread, 1 resolved",
+            "content": "- Last updated -> 2026-11-26\n- Podcasts row: 2 new Matt Colville Running the Game pages (first YouTube entries) + 11-26 podcast-recommender picks\n- Games row: game-design-principles gained the Colville encounter-design section (sources 80 to 82)\n- Meta row: wiki-thinker at 112 runs\n- Key Decisions: YouTube videos are ingested as podcast entries (podcast-{show}-episode-{n}-{slug}.md, transcripts not stored)\n- Tool Workarounds/YouTube: caption capture via the built-in browser (XHR hook + caption toggle) is now the working method; Obsidian Clipper is the fallback\n- Open Threads added: Colville rules for the Lightfin live-case plan (wiki-thinker 11-26)\n- Open Threads refreshed: 11-25 briefing replaced by 11-26 (~EUR 23,399; SAP Exit->Watch, GSK Hold, WSE/GIS optional starters); paper trading notes 11-26 Thanksgiving price-only run\n- Open Threads resolved: 'yt-dlp not installed, can't pull YouTube transcripts' (browser caption method works)"
+        },
+        {
             "runAt": "2026-11-25T23:54:27.4089266+01:00",
             "summary": "Memory index updated - 1 new page (BATS paper trade), 2 new threads, 2 refreshed",
             "content": "- Last updated -> 2026-11-25\n- Finance row: new paper-trading/trades/2026-11-25-BATS page (Strategy E)\n- Meta row: wiki-thinker at 111 runs\n- Open Threads added: BATS entry / ITX trim (select-strategy A screen repeated held names; BATS stored in pence); thinker idea that option marks ignore implied vol (NBIS put last trade $29.85 vs $21.00 mark)\n- Open Threads refreshed: 11-24 briefing replaced by 11-25 (~EUR 23,225; ORCL put decision, GIS starter, PRX fell on results day); company scanner now lists 11-25 adds (CNH, ET, ATR, THO, DKS)\n- No threads resolved; no naming-convention or key-decision changes"
-        },
-        {
-            "runAt": "2026-11-24T23:54:54.719722+01:00",
-            "summary": "Memory index updated - 18 new pages (8 podcasts, 8 finance sources, 1 game design, 1 paper trade), 3 new threads, 1 resolved, 1 superseded",
-            "content": "- Second run of 11-24, covering the changes since the 16:02 snapshot; date unchanged (2026-11-24)\n- Podcasts: 8 new summary pages replace the \"listening list without pages\" note\n- Finance: 8 clippings source pages (3 Morningstar, 5 Burry), Burry pipeline rows now 196-227, mf-update, trackers through 11-23, TJX entered / VLO trimmed (net P&L +$1,414)\n- Games: new game-design-principles page; Meta: wiki-thinker at 110 runs\n- Open Threads added: ORCL/NBIS puts and pending strategy proposals; Sheet row-172 read limit and rows 182-227 check; company scanner (CBRS, SEC User-Agent)\n- Open Threads superseded: 11-16 briefing replaced by 11-24 23:40 (~EUR 22,702)\n- Open Threads narrowed: outage (catch-up started on all affected tasks; five tasks still without a model, four of them due 12-01), AI rebalancing trigger, 10-14 scheduler gap (only email-to-clipping unconfirmed)\n- Open Threads removed: 11-09 sector P/E (tracker note says P/E changes now broadly match prices, including ICLN)\n- No naming-convention or key-decision changes"
         }
     ]
 }
