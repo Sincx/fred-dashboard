@@ -5,6 +5,12 @@
   "icon": "📈",
   "runs": [
     {
+      "runAt": "2026-11-26T23:36:07.6320059+01:00",
+      "summary": "No trade (US Thanksgiving holiday)",
+      "picks": {},
+      "content": "US markets closed for Thanksgiving, so no trade was entered; price-update-only run with no stop/T1/T2/signal triggers, AUTO and BATS repriced to LSE closes, Net P&L +$1,474 (+1.47%), €1,743 cap headroom."
+    },
+    {
       "runAt": "2026-11-25T23:39:50.6149113+01:00",
       "summary": "BATS (E)",
       "picks": {
@@ -18,21 +24,6 @@
         }
       },
       "content": "Staples lead the quarter and BAT trades at ~11.8x forward earnings with a ~5.6% yield and a running £1.3bn buyback, 8% below its 52-week high (prices in GBX; ITX trimmed for capacity)."
-    },
-    {
-      "runAt": "2026-11-24T16:11:15.424483+01:00",
-      "summary": "TJX (D)",
-      "picks": {
-        "p1": {
-          "ticker": "TJX",
-          "strategy": "D — Earnings Catalyst",
-          "entry": 139.25,
-          "stop": 118.36,
-          "t1": 174.06,
-          "t2": 208.88
-        }
-      },
-      "content": "TJX beat its Q3 plan with 4% comps and adjusted EPS of $1.34, raised its FY27 comp guide to 4%, and trades 17% below its 52-week high as an off-price trade-down beneficiary; VLO was trimmed for capacity at −12.15%."
     }
   ]
 }

@@ -3,7 +3,7 @@ title: Paper Trading — Performance Analytics
 domain: finance
 type: live
 tags: [paper-trading, performance, analytics, simulation]
-updated: 2026-11-25
+updated: 2026-11-26
 ---
 
 
@@ -155,9 +155,9 @@ updated: 2026-11-25
 
 ---
 
-## Open Book Snapshot (unrealised, updated 2026-11-25)
+## Open Book Snapshot (unrealised, updated 2026-11-26)
 
-*For reference only; not included in realised P&L tracking. Prices are 2026-11-25 closes via the `yfinance` Python library.*
+*For reference only; not included in realised P&L tracking. Prices are 2026-11-25 closes for US holdings (US closed 11-26 for Thanksgiving) and 2026-11-26 closes for AUTO/BATS, via the `yfinance` Python library.*
 
 | Ticker | Entry | Curr | P&L% | Open P&L $ | Notes |
 |---|---|---|---|---|---|
@@ -166,8 +166,8 @@ updated: 2026-11-25
 | CRWD | $165.87* | $209.30 | +26.18% | +$87 | T1+T2 hit; NDX-put overlap, WATCH |
 | CVX | $174.01 | $210.95 | +21.23% | +$142 | T1 hit |
 | AMGN | $390.02 | $469.24 | +20.31% | +$203 |  |
+| AUTO | 452.80p | 538.20p | +18.86% | +$126 | T1 hit |
 | VRTX | $477.08 | $564.12 | +18.24% | +$182 |  |
-| AUTO | 452.80p | 532.20p | +17.54% | +$117 | T1 hit |
 | COP | $115.04 | $135.02 | +17.37% | +$116 | T1 hit |
 | PII | $59.41 | $67.97 | +14.41% | +$144 |  |
 | TMO | $603.18 | $685.52 | +13.65% | +$137 |  |
@@ -192,11 +192,13 @@ updated: 2026-11-25
 | JPM | $310.89 | $316.74 | +1.88% | +$19 |  |
 | DUK | $130.59 | $131.90 | +1.00% | +$10 |  |
 | SAP | $209.14 | $209.37 | +0.11% | +$1 |  |
-| BATS | 4,556.00p | 4,556.00p | +0.00% | $0 | New 2026-11-25 (E — Sector Rotation) |
+| BATS | 4,556.00p | 4,531.00p | −0.55% | −$5 | Entered 2026-11-25 (E — Sector Rotation) |
 | CMCL | $17.33 | $17.04 | −1.67% | −$6 | T1+T2 hit |
 | FTV | $67.89 | $66.11 | −2.62% | −$26 |  |
 | UNH | $377.76 | $346.19 | −8.36% | −$84 | CMS Medicare Advantage audit proposal |
-| **Open book total** | | | | **+$3,246** | |
+| **Open book total** | | | | **+$3,250** | |
+
+*2026-11-26: No trade — US markets closed for Thanksgiving (price-update-only run, per the 09-07 Labor Day precedent). Only AUTO (538.20p, +18.86%) and BATS (4,531.00p, −0.55%) repriced on a FTSE +1.75% day; no stop/T1/T2/signal triggers, no realised events, no discretionary action. Open book +$3,250, Net P&L +$1,474 (+1.47%). Cap €28,256.67, €1,743.33 headroom.*
 
 *2026-11-25: No stop/T1/T2 triggers on a defensive day (SPY −0.3%, QQQ −0.7%, VIX 26.4→28.3; staples, utilities and financials rose). ITX (−3.69%, −$36.88) was exited via a Step 3F capacity trim when BATS's entry would have made 36 open: weakest position, a week before its 12-02 Q3 results. BATS entered (Strategy E — Sector Rotation; staples lead the quarter, ~11.8x forward earnings, ~5.6% yield, buyback running). Open book +$3,246, Net P&L +$1,471 (+1.47%). Cap €28,234.80, €1,765.20 headroom.*
 
